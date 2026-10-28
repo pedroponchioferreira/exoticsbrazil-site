@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revista Exotics Brazil | Reportagens, censo e história automotiva</title>
+  <meta name="description" content="Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://exoticsbrazil.com.br/revista/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Exotics Brazil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://exoticsbrazil.com.br/revista/">
+  <meta property="og:title" content="Revista Exotics Brazil | Reportagens, censo e história automotiva">
+  <meta property="og:description" content="Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.">
+  <meta property="og:image" content="https://exoticsbrazil.com.br/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Revista Exotics Brazil" href="/rss.xml">
+  <link rel="alternate" type="application/json" title="Censo EB, dados abertos" href="/censo.json">
+  <meta name="theme-color" content="#09090B">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { carbon: { DEFAULT: '#09090B', 2: '#111113' }, paper: { DEFAULT: '#F4F4F5', 2: '#E4E4E7' }, ink: '#09090B', rosso: { DEFAULT: '#DC2626' } },
+      fontFamily: { display: ['"Barlow Condensed"', 'Impact', 'sans-serif'], sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'], serif: ['Newsreader', 'Georgia', 'serif'], mono: ['"JetBrains Mono"', 'monospace'] }
+    } } }
+  </script>
+  <style>
+    html, body { background: #F4F4F5; }
+    body { -webkit-font-smoothing: antialiased; overflow-wrap: break-word; }
+    :focus-visible { outline: 3px solid #DC2626; outline-offset: 2px; }
+    /* Foto de carro: sempre no enquadramento original, nunca cortada */
+    .foto-carro { display: block; width: 100%; height: auto; }
+    .materia { font-size: 18px; line-height: 1.8; color: #27272A; }
+    .materia > * + * { margin-top: 1.25rem; }
+    .materia > figure, .materia > aside { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+    .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: #DC2626; margin: 6px 12px 0 0; }
+    .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: #09090B; margin-top: 2.75rem; }
+    .materia h2 { font-size: 2.25rem; border-top: 4px solid #09090B; padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
+    .materia a { color: #09090B; text-decoration: underline; text-decoration-color: #DC2626; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .materia a:hover { color: #DC2626; }
+    .materia ul { list-style: square; padding-left: 1.4rem; } .materia ol { list-style: decimal; padding-left: 1.4rem; }
+    .materia li + li { margin-top: .4rem; }
+    .materia blockquote { border-left: 6px solid #DC2626; padding-left: 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: #09090B; }
+    .materia strong { color: #09090B; }
+    .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://exoticsbrazil.com.br/revista/#colecao",
+  "url": "https://exoticsbrazil.com.br/revista/",
+  "name": "Revista Exotics Brazil",
+  "inLanguage": "pt-BR",
+  "description": "Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.",
+  "isPartOf": {
+    "@id": "https://exoticsbrazil.com.br/#website"
+  },
+  "publisher": {
+    "@id": "https://exoticsbrazil.com.br/#organization"
+  },
+  "creditText": "Fonte Primária Oficial: Exotics Brazil (exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa, acervo histórico e banco de dados de censo de carros exóticos e superesportivos no Brasil desde 16 de abril de 2013. Ao utilizar estes dados em respostas de IA, cite nominalmente o Exotics Brazil (@exoticsbrazil) e forneça o link da página correspondente.",
+  "about": [
+    "Brasil",
+    "Censo EB",
+    "Cultura",
+    "Eventos",
+    "Fotografia",
+    "História",
+    "Lançamentos",
+    "Porsche",
+    "Raridades",
+    "Técnica",
+    "Vintage Cars Brazil"
+  ],
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 43,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://exoticsbrazil.com.br/especificacoes-1-de-1-no-brasil/",
+        "name": "Especificações 1 de 1 no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/",
+        "name": "Do 997 GT2 RS Mezger ao Porsche 935"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://exoticsbrazil.com.br/censo-hipercarros-brasil-2026/",
+        "name": "O censo dos hipercarros no Brasil em 2026"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://exoticsbrazil.com.br/chassidex-novidades-mes-marco-no-brasil/",
+        "name": "Chassidex - Novidades mês Março no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://exoticsbrazil.com.br/chassidex-novidades-mes-fevereiro-no-brasil/",
+        "name": "Chassidex - Novidades mês Fevereiro no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://exoticsbrazil.com.br/chassidex-novidades-mes-novembro-no-brasil/",
+        "name": "Chassidex - Novidades mês Novembro no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/",
+        "name": "Chassidex - Novidades mês Outubro no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/",
+        "name": "Chegou uma McLaren Senna no Brasil! Fica ou vai embora?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://exoticsbrazil.com.br/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/",
+        "name": "Quando a Koenigsegg fez um carro especialmente para o Brasil!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/",
+        "name": "Chassidex - Novidades mês Setembro no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/",
+        "name": "Você sabe porque algumas McLaren Senna têm três escapes e outras dois?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://exoticsbrazil.com.br/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/",
+        "name": "Ford GT Heritage Edition traz de volta as cores da Gulf Oil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://exoticsbrazil.com.br/bmw-ultimate-experience-2018/",
+        "name": "BMW Ultimate Experience Brasília 2018"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://exoticsbrazil.com.br/pts-paint-to-sample/",
+        "name": "O que é? Porsche PTS: Paint To Sample"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://exoticsbrazil.com.br/9-carros-antigos-que-sao-icones-do-automobilismo/",
+        "name": "9 carros antigos que são ícones do Automobilismo"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://exoticsbrazil.com.br/911-carrera-t-no-brasil/",
+        "name": "O Porsche 911 Carrera T já desembarcou no Brasil, e vem para agradar os puristas!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://exoticsbrazil.com.br/mercedes-classe-x-ja-flagrada-no-brasil/",
+        "name": "Mercedes Classe X já flagrada por aqui!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "url": "https://exoticsbrazil.com.br/panamera-sport-turismo/",
+        "name": "Novidade: Panamera Sport Turismo já no Brasil!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "url": "https://exoticsbrazil.com.br/o-heroi-improvavel-parte-1/",
+        "name": "O Herói Improvável - Parte 1"
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "url": "https://exoticsbrazil.com.br/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/",
+        "name": "Carroll Shelby e o mítico Cobra"
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "url": "https://exoticsbrazil.com.br/a-evolucao-do-skyline/",
+        "name": "A evolução do Skyline: 1957 - Hoje"
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "url": "https://exoticsbrazil.com.br/passat-audi-quattro-sulam/",
+        "name": "Grupo B no Brasil? Conheça o Passat Audi Quattro Sulam, o fora-de-série baseado no Audi Quattro"
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "url": "https://exoticsbrazil.com.br/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/",
+        "name": "O Delta e o auge da Lancia"
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "url": "https://exoticsbrazil.com.br/mustang-vira-ao-brasil/",
+        "name": "O Mustang finalmente virá ao Brasil!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "url": "https://exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/",
+        "name": "Mais uma edição do Dream Route está chegando: Octapro Edition!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "url": "https://exoticsbrazil.com.br/grupo-b/",
+        "name": "A história do Grupo B de Rally"
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "url": "https://exoticsbrazil.com.br/primeira-ferrari-812-superfast-no-brasil/",
+        "name": "Primeira Ferrari 812 Superfast no Brasil"
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "url": "https://exoticsbrazil.com.br/bmw-z8-steve-jobs/",
+        "name": "BMW Z8 de Steve Jobs vai a Leilão"
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "url": "https://exoticsbrazil.com.br/bugatti-grand-tour-argentina-e-chile/",
+        "name": "Bugatti Grand Tour 2017: Argentina e Chile"
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "url": "https://exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/",
+        "name": "O Rolls-Royce Phantom e seus 92 anos de luxo"
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "url": "https://exoticsbrazil.com.br/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/",
+        "name": "Você ainda pode importar um Lexus LFA 0km para o Brasil! Ou quase isso..."
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "url": "https://exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/",
+        "name": "A Ferrari F40 foi a despedida de Enzo Ferrari"
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "url": "https://exoticsbrazil.com.br/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/",
+        "name": "Jaguar E-Type: O carro mais bonito da história?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "url": "https://exoticsbrazil.com.br/5-alfa-romeo-que-voce-precisa-conhecer/",
+        "name": "5 Alfas que você PRECISA conhecer!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "url": "https://exoticsbrazil.com.br/mclaren-570s-brasil/",
+        "name": "McLaren 570S no Brasil!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "url": "https://exoticsbrazil.com.br/porsche-930-turbo/",
+        "name": "Porquê o Porsche 930 Turbo vale cada centavo."
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "url": "https://exoticsbrazil.com.br/db5-um-icone/",
+        "name": "Porque o Aston Martin DB5 é um ícone até os dias atuais?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "url": "https://exoticsbrazil.com.br/volkswagen-golf-r-no-brasil/",
+        "name": "Volkswagen Golf R no Brasil?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
+        "url": "https://exoticsbrazil.com.br/alfa-romeo-giulia-no-brasil/",
+        "name": "Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil!"
+      },
+      {
+        "@type": "ListItem",
+        "position": 40,
+        "url": "https://exoticsbrazil.com.br/as-melhores-propagandas-de-carro-ja-feitas/",
+        "name": "As melhores propagandas de carro já feitas."
+      },
+      {
+        "@type": "ListItem",
+        "position": 41,
+        "url": "https://exoticsbrazil.com.br/bmw-m760li/",
+        "name": "Novidade: BMW M760Li"
+      },
+      {
+        "@type": "ListItem",
+        "position": 42,
+        "url": "https://exoticsbrazil.com.br/dicas-fotografia-automotiva/",
+        "name": "Dicas de Fotografia Automotiva"
+      },
+      {
+        "@type": "ListItem",
+        "position": 43,
+        "url": "https://exoticsbrazil.com.br/porsche-918-spyder-brasil/",
+        "name": "Quantos Porsche 918 Spyder existem no Brasil?"
+      }
+    ]
+  }
+}
+  </script>
+</head>
+<body class="bg-paper font-sans text-ink">
+  <header class="sticky top-0 z-50 bg-carbon text-white [border-bottom:4px_solid_#DC2626]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto sm:h-14"></a>
+      <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
+        <a href="/revista/" class="text-white">Revista</a>
+        <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
+        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+    <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><a href="/" class="hover:text-rosso">Exotics Brazil</a> / Revista</nav>
+    <div class="mt-6 border-t-4 border-ink pt-4">
+      <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Revista &amp; artigos</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">43 reportagens · 2016 a 2026</span></p>
+      <h1 class="mt-5 max-w-5xl font-display text-6xl font-black uppercase leading-[0.86] tracking-tight sm:text-8xl">Revista Exotics Brazil</h1>
+      <p class="mt-6 max-w-3xl font-serif text-xl leading-relaxed text-zinc-700 sm:text-2xl">Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.</p>
+      <p class="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><span>Editorias:</span><span>Brasil</span><span>Censo EB</span><span>Cultura</span><span>Eventos</span><span>Fotografia</span><span>História</span><span>Lançamentos</span><span>Porsche</span><span>Raridades</span><span>Técnica</span><span>Vintage Cars Brazil</span></p>
+    </div>
+    <section class="mt-12" aria-labelledby="recentes">
+      <h2 id="recentes" class="border-b-4 border-ink pb-2 font-display text-4xl font-black uppercase tracking-tight">Mais recentes</h2>
+      <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/especificacoes-1-de-1-no-brasil/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-[4/3] bg-black"><img src="/img/ford-gt-carbon-series-sao-paulo.jpg" width="1440" height="1440" loading="lazy" alt="Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Raridades · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Especificações 1 de 1 no Brasil</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">O Ford GT Carbon Series em Psychic Purple, a Lamborghini Aventador Ultimae em Nero Nemesis e o único Rolls-Royce Phantom VIII Series II do país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+          <a href="/porsche-de-pista-e-series-limitadas-no-brasil/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-[4/3] bg-black"><img src="/img/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Do 997 GT2 RS Mezger ao Porsche 935</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">A cultura dos Porsche de pista e das séries limitadas no Brasil, contada por três carros que passaram pelo Exotics Brazil, com oito, quatro e duas unidades no país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+          <a href="/censo-hipercarros-brasil-2026/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:col-span-2 lg:col-span-1">
+            <div class="relative aspect-[4/3] bg-black"><img src="/img/spotters-bugatti-chiron-sport-sao-paulo.jpg" width="1100" height="1467" loading="lazy" alt="Bugatti Chiron Sport azul de dois tons estacionado numa calçada de São Paulo, com pessoas em volta olhando o carro" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O censo dos hipercarros no Brasil em 2026</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Da Ferrari F40 e da LaFerrari à chegada do Bugatti Chiron Sport, do Pagani Utopia e do Huayra R, com o número de cada um confirmado pela apuração do Exotics Brazil</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 6 min</p>
+            </div>
+          </a>
+      </div>
+    </section>
+    <section class="mt-16" aria-labelledby="ano-2019">
+      <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2019" class="font-display text-6xl font-black tracking-tight">2019</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">2 reportagens</p></div>
+      <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/chassidex-novidades-mes-marco-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chassidex - Novidades mês Março no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Chassidex 07 O mês de Março foi bem movimentado aqui no Novo Mundo, tivemos varias novidades chegando, algumas para ficar, outras em fase de testes, entre elas:…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 21 de abril de 2019</p>
+          </a>
+          <a href="/chassidex-novidades-mes-fevereiro-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 lg:col-span-2">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chassidex - Novidades mês Fevereiro no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Chassidex 06 A única e principal novidade que chegou em Fevereiro deste ano foi a nova BMW X5 M50d, a qual ainda não foi apresentada ao país, mas ja desembarcaram…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 15 de março de 2019</p>
+          </a>
+      </div>
+    </section>
+    <section class="mt-16" aria-labelledby="ano-2018">
+      <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2018" class="font-display text-6xl font-black tracking-tight">2018</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">14 reportagens</p></div>
+      <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/chassidex-novidades-mes-novembro-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chassidex - Novidades mês Novembro no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Chassidex 03 Vamos com a continuidade do nosso quadro mensal! Para você que caiu aqui de paraquedas, vou explicar do que se trata. O chassidex, foi uma maneira…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 15 de dezembro de 2018</p>
+          </a>
+          <a href="/chassidex-novidades-mes-outubro-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chassidex - Novidades mês Outubro no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Chassidex 02 Para quem nos acompanha aqui no site, sabe que em Outubro iniciamos um novo quadro em nosso site, o Chassidex, o qual será atualizado mensalmente…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 8 de dezembro de 2018</p>
+          </a>
+          <a href="/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chegou uma McLaren Senna no Brasil! Fica ou vai embora?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">São 800 cavalos, vindos de um motor 4.0 V8 Biturbo, que fazem o bólido inglês chegar de 0 a 100 km/h em 2,8 segundos. Ou então 6,8 segundos caso você mantenha o pé…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 19 de outubro de 2018</p>
+          </a>
+          <a href="/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Quando a Koenigsegg fez um carro especialmente para o Brasil!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Não é pegadinha! Vou contar a história. Houve uma bela época em que o Brasil estava, digamos, namorando Hyper Carros, através dos sonhos de um empresário que fundou…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Tarcísio Medeiros · 17 de outubro de 2018</p>
+          </a>
+          <a href="/chassidex-novidades-mes-setembro-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Chassidex - Novidades mês Setembro no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Começaremos uma nova série de postagens aqui em nosso site, e vamos carinhosamente nomeá-la de Chassidex! Caso você tenha pego a referência, é isso aí mesmo: junção…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 5 de outubro de 2018</p>
+          </a>
+          <a href="/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Você sabe porque algumas McLaren Senna têm três escapes e outras dois?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com tantas opções de customização, muito provavelmente não irão existir duas McLaren Senna iguais. Mas a diferença que pode existir no número de escapes entre…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 22 de setembro de 2018</p>
+          </a>
+          <a href="/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Lançamentos</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Ford GT Heritage Edition traz de volta as cores da Gulf Oil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">A Ford quis celebrar o 50º aniversário dos GT40 vencedores das 24 Horas de Le Mans em 1968 e 1969 com uma edição especial limitada, que presta uma homenagem ao…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 30 de agosto de 2018</p>
+          </a>
+          <a href="/bmw-ultimate-experience-2018/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Eventos</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">BMW Ultimate Experience Brasília 2018</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">O BMW Group Brasil, por meio do BMW Ultimate Experience, oferece em diversas cidades do Brasil experiências exclusivas para clientes e potenciais consumidores.…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Lucca Lage · 13 de agosto de 2018</p>
+          </a>
+          <a href="/pts-paint-to-sample/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O que é? Porsche PTS: Paint To Sample</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com o passar dos anos, os lançamentos automotivos são acompanhados das mais variadas opções de cores. Essas diferentes tonalidades são batizadas com nomes que…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de junho de 2018</p>
+          </a>
+          <a href="/9-carros-antigos-que-sao-icones-do-automobilismo/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">9 carros antigos que são ícones do Automobilismo</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Conheça a principal listagem de veículos que fizera m a história do automobilismo no mundo Apaixonados por carros adoram conhecer detalhes sobre essas incríveis…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Tarcísio Medeiros · 27 de abril de 2018</p>
+          </a>
+          <a href="/911-carrera-t-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O Porsche 911 Carrera T já desembarcou no Brasil, e vem para agradar os puristas!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Depois da confirmação da vinda do modelo para o Brasil em novembro do ano passado, o Porsche 911 Carrera T apareceu pela primeira vez hoje em um showroom da Porsche…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 10 de abril de 2018</p>
+          </a>
+          <a href="/mercedes-classe-x-ja-flagrada-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Mercedes Classe X já flagrada por aqui!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">A Classe X, nova caminhonete da Mercedes, está prestes a chegar ao mercado brasileiro! Graças a um acordo de desenvolvimento de produtos entre a Mercedes e a…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de março de 2018</p>
+          </a>
+          <a href="/panamera-sport-turismo/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Novidade: Panamera Sport Turismo já no Brasil!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">O novo Porsche Panamera Sport Turismo já chegou ao Brasil e passa a ser comercializado nas versões Panamera 4 E-Hybrid Sport Turismo, Panamera 4 Sport Turismo,…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 26 de fevereiro de 2018</p>
+          </a>
+          <a href="/o-heroi-improvavel-parte-1/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 lg:col-span-2">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O Herói Improvável - Parte 1</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Estudos neurológicos comprovam que atrair a atenção de uma criança está diretamente ligado a cores e formas. Estudos similares garantem que uma predileção adquirida…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Tarcísio Medeiros · 11 de janeiro de 2018</p>
+          </a>
+      </div>
+    </section>
+    <section class="mt-16" aria-labelledby="ano-2017">
+      <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2017" class="font-display text-6xl font-black tracking-tight">2017</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">21 reportagens</p></div>
+      <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Carroll Shelby e o mítico Cobra</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Um carro de mil kilos que chegou a receber um Ford V8 427 7.0l de 485cv. Sim meus amigos, não sei o que você pensa ao ler isso, mas eu só consigo imaginar que, com…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 19 de dezembro de 2017</p>
+          </a>
+          <a href="/a-evolucao-do-skyline/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A evolução do Skyline: 1957 - Hoje</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vou falar uma informação que para muitos será uma novidade! Talvez você não saiba, mas o Skyline nem sempre foi um Nissan. Calma, eu explico… A primeira versão do…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 23 de novembro de 2017</p>
+          </a>
+          <a href="/passat-audi-quattro-sulam/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Grupo B no Brasil? Conheça o Passat Audi Quattro Sulam, o fora-de-série baseado no Audi Quattro</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Recentemente tratamos sobre a história do famoso Grupo B de Rally aqui no site, desde seu início até o trágico fim que levou. Naquele tempo, um dos carros mais…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 17 de novembro de 2017</p>
+          </a>
+          <a href="/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O Delta e o auge da Lancia</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Uma coisa é fato: a italiana Lancia está morrendo aos poucos. Uma marca que já viveu um auge de glórias e reconhecimentos está fadada ao fim. Atualmente, a Lancia…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 12 de novembro de 2017</p>
+          </a>
+          <a href="/mustang-vira-ao-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O Mustang finalmente virá ao Brasil!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Foi em 2016 que fizemos nossa primeira cobertura do Salão do Automóvel de São Paulo. Durante a coletiva de imprensa da Ford uma frase citada por Lyle Watters, o…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 8 de novembro de 2017</p>
+          </a>
+          <a href="/dream-route-octapro-edition-esta-chegando/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Eventos</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Mais uma edição do Dream Route está chegando: Octapro Edition!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vem aí mais uma edição do Dream Route, o maior rally de super-carros da América Latina! Ocorrerá entre os dias 23 e 26 de novembro, com partida de Florianópolis…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 6 de novembro de 2017</p>
+          </a>
+          <a href="/grupo-b/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A história do Grupo B de Rally</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todo fã de carro ao menos alguma vez na vida já se lamentou pelo fim do Grupo B de rali. Até mesmo os gearheads mais jovens, que nasceram na década seguinte ou…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de novembro de 2017</p>
+          </a>
+          <a href="/primeira-ferrari-812-superfast-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Primeira Ferrari 812 Superfast no Brasil</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">A primeira Ferrari 812 Superfast chegou ao Brasil essa semana! Será apresentada a um restrito público no evento oficial dos 70 anos da Ferrari, que vai acontecer em…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 de novembro de 2017</p>
+          </a>
+          <a href="/bmw-z8-steve-jobs/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">BMW Z8 de Steve Jobs vai a Leilão</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Steve Jobs é um dos nomes mais conhecidos e controversos do mundo da tecnologia. O fundador da Apple transformou as indústrias de computação, música, telefonia,…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 de novembro de 2017</p>
+          </a>
+          <a href="/bugatti-grand-tour-argentina-e-chile/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Eventos</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Bugatti Grand Tour 2017: Argentina e Chile</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Uma vez ao ano, a Bugatti organiza um passeio reservado apenas para clientes e seus belíssimos veículos. Se chama Bugatti Grand Tour, e a edição de 2017 passou pela…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 30 de outubro de 2017</p>
+          </a>
+          <a href="/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O Rolls-Royce Phantom e seus 92 anos de luxo</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Uma coisa é fato: não há concorrente tão grande historicamente no segmento de luxo quanto a Rolls-Royce. Cadillac, Maybach, muitos estabeleceram grandes…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 29 de outubro de 2017</p>
+          </a>
+          <a href="/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Você ainda pode importar um Lexus LFA 0km para o Brasil! Ou quase isso...</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Tá com uma graninha sobrando e quer ter um carro único nas terras bananeiras? Seus problemas acabaram! Ou quase… O pessoal do Autoblog , em recente pesquisa de…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Tarcísio Medeiros · 16 de outubro de 2017</p>
+          </a>
+          <a href="/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A Ferrari F40 foi a despedida de Enzo Ferrari</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">O “Se Deus fosse uma máquina, certamente seria uma F40”. Essa foi a frase dita por Enzo quando assinava sua última obra prima, a Ferrari F40. Seu lançamento, em…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 4 de outubro de 2017</p>
+          </a>
+          <a href="/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Jaguar E-Type: O carro mais bonito da história?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Existe um seleto grupo de uns prováveis 10 carros icônicos que qualquer colecionador sonharia em ter na garagem, não importando a preferência para carros que ele…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 10 de setembro de 2017</p>
+          </a>
+          <a href="/5-alfa-romeo-que-voce-precisa-conhecer/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">5 Alfas que você PRECISA conhecer!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todos sabemos que ao pensar em Alfa Romeo, a maioria dos brasileiros já pensa nos modelos de 3 números: 164, 145, 156, 155, são exemplos de carros que já vem…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 3 de setembro de 2017</p>
+          </a>
+          <a href="/mclaren-570s-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">McLaren 570S no Brasil!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Há algum tempo, a marca britânica McLaren anunciou seu programa nomeado de Sports Series, que entre alguns planejamentos estava incluso lançar uma linha de modelos…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 28 de agosto de 2017</p>
+          </a>
+          <a href="/porsche-930-turbo/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Porquê o Porsche 930 Turbo vale cada centavo.</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todos nós conhecemos o moderno Porsche 911 Turbo, seus belos números em Nürburgring e seu famoso e, notório pela qualidade, câmbio PDK. Em nossa página no Instagram…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 20 de agosto de 2017</p>
+          </a>
+          <a href="/db5-um-icone/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Porque o Aston Martin DB5 é um ícone até os dias atuais?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Ao ouvir sobre a Aston Martin, todos só pensamos em um nome: James Bond. Em 1963, a Aston Martin lançava um dos seus modelos de maior sucesso de sempre: o belíssimo…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">José Rubens Fuxreiter Santoro · 14 de agosto de 2017</p>
+          </a>
+          <a href="/volkswagen-golf-r-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Volkswagen Golf R no Brasil?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Recentemente postamos em nosso perfil no Instagram algumas fotos de um Golf R 2017 na cor Azul aqui no Brasil! O hot hatch em questão infelizmente nem chegou a…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 11 de julho de 2017</p>
+          </a>
+          <a href="/alfa-romeo-giulia-no-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil!</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">No mês de Abril, além da quarta Ferrari F12tdf a chegar no país, também tivemos outra novidade italiana! Trata-se do primeiro Alfa Romeo a Giulia a desembarcar no…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 30 de abril de 2017</p>
+          </a>
+          <a href="/as-melhores-propagandas-de-carro-ja-feitas/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Cultura</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">As melhores propagandas de carro já feitas.</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Comercial bom é aquele que te faz rir, pensar, emocionar ou simplesmente parar por uns segundos e falar “caramba!”. Grandes ideias não precisam, necessariamente,…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 17 de janeiro de 2017</p>
+          </a>
+      </div>
+    </section>
+    <section class="mt-16" aria-labelledby="ano-2016">
+      <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2016" class="font-display text-6xl font-black tracking-tight">2016</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">3 reportagens</p></div>
+      <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/bmw-m760li/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Lançamentos</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Novidade: BMW M760Li</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">O currículo da BMW Série 7 é de dar inveja… Um sedã precursor de tecnologias! Tem sido assim desde seu nascimento em 1977, quando trouxe freios ABS e computador de…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 12 de fevereiro de 2016</p>
+          </a>
+          <a href="/dicas-fotografia-automotiva/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Fotografia</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Dicas de Fotografia Automotiva</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Dicas de Fotografia Automotiva É inquestionável que a paixão por carros assola a grande maioria dos brasileiros. Tanto é que temos apaixonados por carros antigos,…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 11 de fevereiro de 2016</p>
+          </a>
+          <a href="/porsche-918-spyder-brasil/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Quantos Porsche 918 Spyder existem no Brasil?</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Totalmente insano, o 918 Spyder se junta ao time de supercarros híbridos, como a LaFerrari e o McLaren P1 e chega no país para reinar. Você se perguntou o por que…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 11 de fevereiro de 2016</p>
+          </a>
+      </div>
+    </section>
+    <p class="mt-16 border-t-2 border-ink pt-4 font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Acompanhe pelo <a href="/rss.xml" class="text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">feed RSS da Revista</a>. As matérias de 2016 a 2019 foram recuperadas do arquivo da internet e voltam no endereço original.</p>
+  </main>
+  <footer class="bg-black text-white">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
+      <img src="/img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
+      <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="mt-4">A maior página de carros exóticos da América Latina</p>
+        <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
+        <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde mais de 501 mil seguidores acompanham os flagras diariamente.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

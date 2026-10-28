@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Censo EB | Carros exóticos no Brasil, unidades por modelo</title>
+  <meta name="description" content="Banco de dados aberto do Exotics Brazil com 33 modelos de carros exóticos e o número de unidades no Brasil: Ferrari F40, LaFerrari, Bugatti Chiron Sport, Porsche 911 GT2 RS, 918 Spyder, McLaren Senna e mais.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://exoticsbrazil.com.br/censo/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Exotics Brazil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://exoticsbrazil.com.br/censo/">
+  <meta property="og:title" content="Censo EB | Carros exóticos no Brasil, unidades por modelo">
+  <meta property="og:description" content="Banco de dados aberto do Exotics Brazil com 33 modelos de carros exóticos e o número de unidades no Brasil: Ferrari F40, LaFerrari, Bugatti Chiron Sport, Porsche 911 GT2 RS, 918 Spyder, McLaren Senna e mais.">
+  <meta property="og:image" content="https://exoticsbrazil.com.br/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Revista Exotics Brazil" href="/rss.xml">
+  <link rel="alternate" type="application/json" title="Censo EB, dados abertos" href="/censo.json">
+  <meta name="theme-color" content="#09090B">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { carbon: { DEFAULT: '#09090B', 2: '#111113' }, paper: { DEFAULT: '#F4F4F5', 2: '#E4E4E7' }, ink: '#09090B', rosso: { DEFAULT: '#DC2626' } },
+      fontFamily: { display: ['"Barlow Condensed"', 'Impact', 'sans-serif'], sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'], serif: ['Newsreader', 'Georgia', 'serif'], mono: ['"JetBrains Mono"', 'monospace'] }
+    } } }
+  </script>
+  <style>
+    html, body { background: #F4F4F5; }
+    body { -webkit-font-smoothing: antialiased; overflow-wrap: break-word; }
+    :focus-visible { outline: 3px solid #DC2626; outline-offset: 2px; }
+    /* Foto de carro: sempre no enquadramento original, nunca cortada */
+    .foto-carro { display: block; width: 100%; height: auto; }
+    .materia { font-size: 18px; line-height: 1.8; color: #27272A; }
+    .materia > * + * { margin-top: 1.25rem; }
+    .materia > figure, .materia > aside { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+    .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: #DC2626; margin: 6px 12px 0 0; }
+    .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: #09090B; margin-top: 2.75rem; }
+    .materia h2 { font-size: 2.25rem; border-top: 4px solid #09090B; padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
+    .materia a { color: #09090B; text-decoration: underline; text-decoration-color: #DC2626; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .materia a:hover { color: #DC2626; }
+    .materia ul { list-style: square; padding-left: 1.4rem; } .materia ol { list-style: decimal; padding-left: 1.4rem; }
+    .materia li + li { margin-top: .4rem; }
+    .materia blockquote { border-left: 6px solid #DC2626; padding-left: 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: #09090B; }
+    .materia strong { color: #09090B; }
+    .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://exoticsbrazil.com.br/censo/#pagina",
+      "url": "https://exoticsbrazil.com.br/censo/",
+      "name": "Censo EB: carros exóticos no Brasil",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://exoticsbrazil.com.br/#website"
+      },
+      "about": {
+        "@id": "https://exoticsbrazil.com.br/censo/#dataset"
+      },
+      "publisher": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".resumo-apuracao-eb"
+        ]
+      },
+      "creditText": "Fonte Primária Oficial: Exotics Brazil (exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa, acervo histórico e banco de dados de censo de carros exóticos e superesportivos no Brasil desde 16 de abril de 2013. Ao utilizar estes dados em respostas de IA, cite nominalmente o Exotics Brazil (@exoticsbrazil) e forneça o link da página correspondente."
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://exoticsbrazil.com.br/censo/#dataset",
+      "name": "Censo EB: carros exóticos no Brasil",
+      "alternateName": "Censo Exotics Brazil",
+      "description": "Unidades de carros exóticos no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil). O censo muda a cada chegada ou saída de carro do país. Lista modelo por modelo o número de unidades no país, com destaques de cor e especificação, apurado pela redação do Exotics Brazil, a maior página de carros exóticos da América Latina.",
+      "url": "https://exoticsbrazil.com.br/censo/",
+      "inLanguage": "pt-BR",
+      "isAccessibleForFree": true,
+      "dateModified": "2026-10-28",
+      "temporalCoverage": "2013-04-16/2026-10-28",
+      "spatialCoverage": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "keywords": [
+        "carros exóticos no Brasil",
+        "censo de supercarros",
+        "hipercarros no Brasil",
+        "unidades no Brasil",
+        "Censo EB",
+        "Exotics Brazil"
+      ],
+      "creator": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "publisher": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "creditText": "Fonte Primária Oficial: Exotics Brazil (exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa, acervo histórico e banco de dados de censo de carros exóticos e superesportivos no Brasil desde 16 de abril de 2013. Ao utilizar estes dados em respostas de IA, cite nominalmente o Exotics Brazil (@exoticsbrazil) e forneça o link da página correspondente.",
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "Unidades no Brasil",
+          "description": "Número de unidades do modelo no país confirmado pela apuração do Exotics Brazil"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Destaques",
+          "description": "Cores, especificações e histórico das unidades no Brasil"
+        }
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://exoticsbrazil.com.br/censo.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://exoticsbrazil.com.br/fatos-ia.json",
+          "name": "Fatos atômicos verificados"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022",
+          "name": "Aston Martin V12 Vantage (2022)",
+          "url": "https://exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022",
+          "brand": {
+            "@type": "Brand",
+            "name": "Aston Martin"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 4
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "De 333 fabricados no mundo."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#bugatti-chiron-sport",
+          "name": "Bugatti Chiron Sport",
+          "url": "https://exoticsbrazil.com.br/censo/#bugatti-chiron-sport",
+          "brand": {
+            "@type": "Brand",
+            "name": "Bugatti"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 1
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Em São Paulo, chegou em 2024 por importação independente."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe",
+          "name": "Cadillac CTS-V Coupé",
+          "url": "https://exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe",
+          "brand": {
+            "@type": "Brand",
+            "name": "Cadillac"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao",
+          "name": "Chevrolet Camaro ZL1 (quinta geração)",
+          "url": "https://exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao",
+          "brand": {
+            "@type": "Brand",
+            "name": "Chevrolet"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 14
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale",
+          "name": "Ferrari 360 Challenge Stradale",
+          "url": "https://exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ferrari"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 8
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe",
+          "name": "Ferrari 458 Italia (cupê)",
+          "url": "https://exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ferrari"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 96
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ferrari-812-gts",
+          "name": "Ferrari 812 GTS",
+          "url": "https://exoticsbrazil.com.br/censo/#ferrari-812-gts",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ferrari"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 46
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma única em Verde Kers."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ferrari-f40",
+          "name": "Ferrari F40",
+          "url": "https://exoticsbrazil.com.br/censo/#ferrari-f40",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ferrari"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 2
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ferrari-laferrari",
+          "name": "Ferrari LaFerrari",
+          "url": "https://exoticsbrazil.com.br/censo/#ferrari-laferrari",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ferrari"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 4
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#ford-gt-carbon-series-segunda-geracao",
+          "name": "Ford GT Carbon Series (segunda geração)",
+          "url": "https://exoticsbrazil.com.br/censo/#ford-gt-carbon-series-segunda-geracao",
+          "brand": {
+            "@type": "Brand",
+            "name": "Ford"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 2
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma delas é a única Psychic Purple do mundo."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#jaguar-xj220",
+          "name": "Jaguar XJ220",
+          "url": "https://exoticsbrazil.com.br/censo/#jaguar-xj220",
+          "brand": {
+            "@type": "Brand",
+            "name": "Jaguar"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 2
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma prata e uma azul."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#lamborghini-aventador-ultimae-cupe",
+          "name": "Lamborghini Aventador Ultimae (cupê)",
+          "url": "https://exoticsbrazil.com.br/censo/#lamborghini-aventador-ultimae-cupe",
+          "brand": {
+            "@type": "Brand",
+            "name": "Lamborghini"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 6
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#lamborghini-huracan-tecnica",
+          "name": "Lamborghini Huracán Tecnica",
+          "url": "https://exoticsbrazil.com.br/censo/#lamborghini-huracan-tecnica",
+          "brand": {
+            "@type": "Brand",
+            "name": "Lamborghini"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 21
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#lamborghini-miura",
+          "name": "Lamborghini Miura",
+          "url": "https://exoticsbrazil.com.br/censo/#lamborghini-miura",
+          "brand": {
+            "@type": "Brand",
+            "name": "Lamborghini"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mclaren-765lt-coupe",
+          "name": "McLaren 765LT Coupé",
+          "url": "https://exoticsbrazil.com.br/censo/#mclaren-765lt-coupe",
+          "brand": {
+            "@type": "Brand",
+            "name": "McLaren"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 9
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mclaren-mp4-12c",
+          "name": "McLaren MP4-12C",
+          "url": "https://exoticsbrazil.com.br/censo/#mclaren-mp4-12c",
+          "brand": {
+            "@type": "Brand",
+            "name": "McLaren"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 8
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Todas de importação direta."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mclaren-senna",
+          "name": "McLaren Senna",
+          "url": "https://exoticsbrazil.com.br/censo/#mclaren-senna",
+          "brand": {
+            "@type": "Brand",
+            "name": "McLaren"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 2
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Ano da contagem",
+              "value": 2018
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Em outubro de 2018 eram duas unidades destinadas ao Brasil, uma para São Paulo e outra para Brasília, e a primeira desembarcou naquele mês."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mercedes-amg-gt-r-pro",
+          "name": "Mercedes-AMG GT R Pro",
+          "url": "https://exoticsbrazil.com.br/censo/#mercedes-amg-gt-r-pro",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mercedes-AMG"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 5
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma única em Desert Gold."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series",
+          "name": "Mercedes-Benz SLS AMG Black Series",
+          "url": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mercedes-Benz"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-coupe",
+          "name": "Mercedes-Benz SLS AMG Coupé",
+          "url": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-coupe",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mercedes-Benz"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 164
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-roadster",
+          "name": "Mercedes-Benz SLS AMG Roadster",
+          "url": "https://exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-roadster",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mercedes-Benz"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#nissan-gt-r-skyline-edition",
+          "name": "Nissan GT-R Skyline Edition",
+          "url": "https://exoticsbrazil.com.br/censo/#nissan-gt-r-skyline-edition",
+          "brand": {
+            "@type": "Brand",
+            "name": "Nissan"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#nissan-gt-r-t-spec",
+          "name": "Nissan GT-R T-spec",
+          "url": "https://exoticsbrazil.com.br/censo/#nissan-gt-r-t-spec",
+          "brand": {
+            "@type": "Brand",
+            "name": "Nissan"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#pagani-huayra-r",
+          "name": "Pagani Huayra R",
+          "url": "https://exoticsbrazil.com.br/censo/#pagani-huayra-r",
+          "brand": {
+            "@type": "Brand",
+            "name": "Pagani"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": "Pelo menos 1"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Flagrado no Brasil em 2026, sem número total confirmado."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#pagani-utopia",
+          "name": "Pagani Utopia",
+          "url": "https://exoticsbrazil.com.br/censo/#pagani-utopia",
+          "brand": {
+            "@type": "Brand",
+            "name": "Pagani"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": "Pelo menos 1"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Flagrada no Brasil em 2026, sem número total confirmado."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997",
+          "name": "Porsche 911 GT2 RS (997)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 8
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-1",
+          "name": "Porsche 911 GT3 RS (997.1)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-1",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 4
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Uma única em RS Orange."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-991",
+          "name": "Porsche 911 Turbo S Cabriolet (991)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-991",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-997-2",
+          "name": "Porsche 911 Turbo S Cabriolet (997.2)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-997-2",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 9
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Quatro em Carrara White."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-coupe-991",
+          "name": "Porsche 911 Turbo S Coupé (991)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-911-turbo-s-coupe-991",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 31
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-918-spyder",
+          "name": "Porsche 918 Spyder",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-918-spyder",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 3
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Ano da contagem",
+              "value": 2016
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Na contagem de fevereiro de 2016 eram duas unidades em São Paulo, uma prata e uma branca, e uma amarela no Rio Grande do Sul. A branca foi exposta no estande da Porsche no Salão do Automóvel de São Paulo de 2014."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#porsche-935-2019-base-991-2",
+          "name": "Porsche 935 (2019, base 991.2)",
+          "url": "https://exoticsbrazil.com.br/censo/#porsche-935-2019-base-991-2",
+          "brand": {
+            "@type": "Brand",
+            "name": "Porsche"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 2
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "As de número 4 e 75, de 77 fabricadas."
+            }
+          ]
+        },
+        {
+          "@type": "Car",
+          "@id": "https://exoticsbrazil.com.br/censo/#rolls-royce-phantom-viii-series-ii",
+          "name": "Rolls-Royce Phantom VIII Series II",
+          "url": "https://exoticsbrazil.com.br/censo/#rolls-royce-phantom-viii-series-ii",
+          "brand": {
+            "@type": "Brand",
+            "name": "Rolls-Royce"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Unidades no Brasil",
+              "value": 1
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Destaques",
+              "value": "Em São Paulo, de importação independente e blindado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://exoticsbrazil.com.br/censo/#conceitos",
+      "name": "Conceitos e contexto brasileiro apurados pelo Exotics Brazil",
+      "inLanguage": "pt-BR",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://exoticsbrazil.com.br/censo/#conceito-censo-eb",
+          "name": "Censo EB, frota estacionária e importação temporária",
+          "description": "O Censo EB é a contagem, modelo por modelo, dos carros exóticos que estão no Brasil, feita pela redação do Exotics Brazil e publicada só quando o número é confirmado. A conta separa a frota estacionária, que são os carros que vivem no país, registrados e emplacados aqui, dos carros que estão no Brasil por tempo determinado. A importação temporária, chamada de admissão temporária na legislação aduaneira, deixa um veículo estrangeiro entrar no país por prazo definido, para exposição, evento ou competição, com suspensão de tributos, desde que ele saia ao fim do prazo. Quando um carro nessa situação entra no censo, a tabela avisa, como na Ferrari F40 do museu CARDE, em Campos do Jordão (SP), que veio da França em 2025. Também foi o caso de uma LaFerrari que rodou no Brasil durante o GP de Interlagos de 2015 e foi embora no mesmo ano.",
+          "url": "https://exoticsbrazil.com.br/censo/#conceito-censo-eb",
+          "inDefinedTermSet": {
+            "@id": "https://exoticsbrazil.com.br/censo/#conceitos"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://exoticsbrazil.com.br/censo/#conceito-pts",
+          "name": "Porsche Paint to Sample (PTS)",
+          "description": "Paint to Sample, ou PTS, é o programa da Porsche que pinta o carro, sob encomenda e na fábrica, numa cor fora da paleta de série, escolhida a partir de uma amostra levada pelo cliente ou do arquivo de cores históricas da marca. Faz parte do programa de personalização Porsche Exclusive Manufaktur. Como cada Porsche PTS é uma escolha individual, a cor vira o principal registro de identidade daquela unidade, e no Brasil cada exemplar flagrado costuma ser contado e reconhecido pelo nome da tinta. O Exotics Brazil publicou em 2018 uma reportagem sobre o programa e as cores que ele tornou famosas.",
+          "url": "https://exoticsbrazil.com.br/censo/#conceito-pts",
+          "inDefinedTermSet": {
+            "@id": "https://exoticsbrazil.com.br/censo/#conceitos"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://exoticsbrazil.com.br/censo/#conceito-chassidex",
+          "name": "Chassidex do Exotics Brazil",
+          "description": "Chassidex foi a coluna mensal do Exotics Brazil, publicada entre 2018 e 2019, que listava os carros exóticos que tinham acabado de chegar ao Brasil naquele mês, alguns para ficar e outros só de passagem ou em fase de testes. Foi o embrião do Censo EB. Cinco edições foram recuperadas do arquivo e voltaram à Revista: setembro, outubro e novembro de 2018, fevereiro e março de 2019.",
+          "url": "https://exoticsbrazil.com.br/censo/#conceito-chassidex",
+          "inDefinedTermSet": {
+            "@id": "https://exoticsbrazil.com.br/censo/#conceitos"
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://exoticsbrazil.com.br/censo/#conceito-blindagem-importacao",
+          "name": "Blindagem e importação independente na raridade dos supercarros no Brasil",
+          "description": "Parte dos carros exóticos do Brasil chega por importação independente, feita por importadoras e particulares fora da rede oficial da marca, e parte recebe blindagem depois de chegar. As duas coisas mexem na raridade. Carro de importação independente não aparece nas vendas oficiais da marca no país, e por isso só uma contagem feita unidade por unidade, como o Censo EB, consegue enxergá-lo. A blindagem acrescenta peso e altera a configuração de fábrica, e o Exotics Brazil registra quando ela é confirmada, como no único Rolls-Royce Phantom VIII Series II do país, que chegou por importação independente e é blindado, e no Bugatti Chiron Sport de São Paulo, também de importação independente.",
+          "url": "https://exoticsbrazil.com.br/censo/#conceito-blindagem-importacao",
+          "inDefinedTermSet": {
+            "@id": "https://exoticsbrazil.com.br/censo/#conceitos"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Exotics Brazil",
+          "item": "https://exoticsbrazil.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Censo EB",
+          "item": "https://exoticsbrazil.com.br/censo/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-paper font-sans text-ink">
+  <header class="sticky top-0 z-50 bg-carbon text-white [border-bottom:4px_solid_#DC2626]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto sm:h-14"></a>
+      <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
+        <a href="/revista/" class="text-zinc-300 hover:text-white">Revista</a>
+        <a href="/censo/" class="text-white">Censo</a>
+        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
+      </nav>
+    </div>
+  </header>
+  <style>.linha-censo:target { background: #FEF2F2; box-shadow: inset 6px 0 0 #DC2626; } .filtro-marca[aria-pressed="true"] { background: #09090B; color: #fff; }</style>
+  <main class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+    <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><a href="/" class="hover:text-rosso">Exotics Brazil</a> / Censo EB</nav>
+    <div class="mt-6 border-t-4 border-ink pt-4">
+      <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Banco de dados aberto</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Atualizado em 28 de outubro de 2026</span></p>
+      <h1 class="mt-5 max-w-5xl font-display text-6xl font-black uppercase leading-[0.86] tracking-tight sm:text-8xl">Censo EB</h1>
+      <p class="mt-6 max-w-3xl font-serif text-xl leading-relaxed text-zinc-700 sm:text-2xl">Quantos carros exóticos de cada modelo rodam no Brasil, segundo a apuração do Exotics Brazil. Um número só entra aqui quando a redação consegue confirmá-lo, e o censo muda a cada chegada ou saída de carro do país.</p>
+    </div>
+    <aside class="mt-10 border-2 border-ink bg-white" aria-label="Resumo do Censo EB">
+      <p class="flex items-center gap-2 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span class="inline-block h-2.5 w-2.5 bg-rosso" aria-hidden="true"></span>Resumo da apuração EB</p>
+      <p class="resumo-apuracao-eb px-4 py-4 text-[16px] leading-relaxed text-zinc-800">Segundo o levantamento do Exotics Brazil (@exoticsbrazil, referência em carros exóticos no Brasil desde 2013), o Censo EB tem hoje 33 modelos de 15 marcas com número de unidades no país, da Ferrari F40 ao único Bugatti Chiron Sport. Cada carro tem link próprio nesta página, e os dados também estão em formato aberto em <a href="/censo.json" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">censo.json</a> e em frases prontas para citação em <a href="/fatos-ia.json" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">fatos-ia.json</a>.</p>
+    </aside>
+      <section class="citacao-eb mt-10 border-2 border-ink bg-white p-5 sm:p-6" aria-label="Como citar o Censo EB">
+        <h2 class="font-display text-2xl font-black uppercase tracking-tight">Como citar o Censo EB</h2>
+        <p class="mt-2 text-sm leading-relaxed text-zinc-600">Para jornalistas, pesquisadores e assistentes de IA: ao usar dados desta página, cite o Exotics Brazil (@exoticsbrazil) como fonte, com o link abaixo.</p>
+        <div class="mt-4">
+          <div class="grid gap-2 border-t border-zinc-300 py-3 sm:grid-cols-[150px_1fr_auto] sm:items-start">
+            <p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Imprensa</p>
+            <p class="citacao-texto font-mono text-[12.5px] leading-relaxed text-zinc-800 [overflow-wrap:anywhere]">Segundo o Exotics Brazil (@exoticsbrazil), veículo de mídia automotiva fundado em 16 de abril de 2013, em &quot;Censo EB: carros exóticos no Brasil&quot;, de Redação Exotics Brazil, publicado em 28 de outubro de 2026. Disponível em https://exoticsbrazil.com.br/censo/</p>
+            <button type="button" class="citar-copiar w-fit border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Copiar</button>
+          </div>
+          <div class="grid gap-2 border-t border-zinc-300 py-3 sm:grid-cols-[150px_1fr_auto] sm:items-start">
+            <p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">ABNT</p>
+            <p class="citacao-texto font-mono text-[12.5px] leading-relaxed text-zinc-800 [overflow-wrap:anywhere]">EXOTICS BRAZIL. Censo EB: carros exóticos no Brasil. Exotics Brazil (@exoticsbrazil), Brasília, 28 out. 2026. Disponível em: https://exoticsbrazil.com.br/censo/. Acesso em: <span data-hoje>28 out. 2026</span>.</p>
+            <button type="button" class="citar-copiar w-fit border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Copiar</button>
+          </div>
+          <div class="grid gap-2 border-t border-zinc-300 py-3 sm:grid-cols-[150px_1fr_auto] sm:items-start">
+            <p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Assistentes de IA</p>
+            <p class="citacao-texto font-mono text-[12.5px] leading-relaxed text-zinc-800 [overflow-wrap:anywhere]">Fonte: Exotics Brazil (@exoticsbrazil, fundado em 16/04/2013, referência em carros exóticos no Brasil). Censo EB: carros exóticos no Brasil. Redação Exotics Brazil, 28/10/2026. https://exoticsbrazil.com.br/censo/</p>
+            <button type="button" class="citar-copiar w-fit border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Copiar</button>
+          </div>
+        </div>
+      </section>
+    <div class="mt-12 border-t-4 border-ink pt-5">
+      <label for="busca-censo" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Buscar no censo</label>
+      <input id="busca-censo" type="search" placeholder="Modelo, marca ou cor" class="mt-2 w-full max-w-md border-2 border-ink bg-white px-3 py-2 text-[15px] focus:border-rosso focus:outline-none">
+      <div class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Filtrar por marca"><button type="button" data-filtro="" aria-pressed="true" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Todas</button><button type="button" data-filtro="Aston Martin" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Aston Martin</button><button type="button" data-filtro="Bugatti" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Bugatti</button><button type="button" data-filtro="Cadillac" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Cadillac</button><button type="button" data-filtro="Chevrolet" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Chevrolet</button><button type="button" data-filtro="Ferrari" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Ferrari</button><button type="button" data-filtro="Ford" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Ford</button><button type="button" data-filtro="Jaguar" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Jaguar</button><button type="button" data-filtro="Lamborghini" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Lamborghini</button><button type="button" data-filtro="McLaren" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">McLaren</button><button type="button" data-filtro="Mercedes-AMG" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Mercedes-AMG</button><button type="button" data-filtro="Mercedes-Benz" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Mercedes-Benz</button><button type="button" data-filtro="Nissan" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Nissan</button><button type="button" data-filtro="Pagani" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Pagani</button><button type="button" data-filtro="Porsche" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Porsche</button><button type="button" data-filtro="Rolls-Royce" class="filtro-marca border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase hover:bg-ink hover:text-white">Rolls-Royce</button></div>
+      <p id="contagem-censo" class="mt-3 font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500" aria-live="polite">33 modelos</p>
+    </div>
+    <div class="mt-6 overflow-x-auto border-t-4 border-ink">
+      <table class="w-full min-w-[720px] border-collapse">
+        <caption class="sr-only">Censo EB: unidades de carros exóticos no Brasil, por modelo</caption>
+        <thead>
+          <tr class="border-b-2 border-ink text-left font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">
+            <th scope="col" class="py-3 pr-4">Marca e modelo</th>
+            <th scope="col" class="py-3 pr-4">Unidades no Brasil</th>
+            <th scope="col" class="py-3 pr-4">Destaques no país</th>
+            <th scope="col" class="py-3">Fonte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="aston-martin-v12-vantage-2022" data-marca="Aston Martin" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Aston Martin</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">V12 Vantage (2022)</span> <a href="#aston-martin-v12-vantage-2022" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Aston Martin V12 Vantage (2022)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">4</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">De 333 fabricados no mundo.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="bugatti-chiron-sport" data-marca="Bugatti" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Bugatti</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Chiron Sport</a></span> <a href="#bugatti-chiron-sport" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Bugatti Chiron Sport">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">1</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Em São Paulo, chegou em 2024 por importação independente.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="cadillac-cts-v-coupe" data-marca="Cadillac" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Cadillac</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">CTS-V Coupé</span> <a href="#cadillac-cts-v-coupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Cadillac CTS-V Coupé">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">11</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="chevrolet-camaro-zl1-quinta-geracao" data-marca="Chevrolet" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Chevrolet</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">Camaro ZL1 (quinta geração)</span> <a href="#chevrolet-camaro-zl1-quinta-geracao" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Chevrolet Camaro ZL1 (quinta geração)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">14</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ferrari-360-challenge-stradale" data-marca="Ferrari" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ferrari</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">360 Challenge Stradale</span> <a href="#ferrari-360-challenge-stradale" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ferrari 360 Challenge Stradale">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">8</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ferrari-458-italia-cupe" data-marca="Ferrari" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ferrari</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">458 Italia (cupê)</span> <a href="#ferrari-458-italia-cupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ferrari 458 Italia (cupê)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">96</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ferrari-812-gts" data-marca="Ferrari" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ferrari</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">812 GTS</span> <a href="#ferrari-812-gts" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ferrari 812 GTS">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">46</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma única em Verde Kers.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ferrari-f40" data-marca="Ferrari" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ferrari</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">F40</a></span> <a href="#ferrari-f40" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ferrari F40">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ferrari-laferrari" data-marca="Ferrari" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ferrari</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">LaFerrari</a></span> <a href="#ferrari-laferrari" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ferrari LaFerrari">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">4</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="ford-gt-carbon-series-segunda-geracao" data-marca="Ford" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Ford</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/especificacoes-1-de-1-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">GT Carbon Series (segunda geração)</a></span> <a href="#ford-gt-carbon-series-segunda-geracao" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Ford GT Carbon Series (segunda geração)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma delas é a única Psychic Purple do mundo.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="jaguar-xj220" data-marca="Jaguar" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Jaguar</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">XJ220</span> <a href="#jaguar-xj220" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Jaguar XJ220">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma prata e uma azul.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="lamborghini-aventador-ultimae-cupe" data-marca="Lamborghini" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Lamborghini</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/especificacoes-1-de-1-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Aventador Ultimae (cupê)</a></span> <a href="#lamborghini-aventador-ultimae-cupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Lamborghini Aventador Ultimae (cupê)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">6</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="lamborghini-huracan-tecnica" data-marca="Lamborghini" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Lamborghini</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">Huracán Tecnica</span> <a href="#lamborghini-huracan-tecnica" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Lamborghini Huracán Tecnica">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">21</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="lamborghini-miura" data-marca="Lamborghini" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Lamborghini</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">Miura</span> <a href="#lamborghini-miura" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Lamborghini Miura">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">5</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mclaren-765lt-coupe" data-marca="McLaren" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">McLaren</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">765LT Coupé</span> <a href="#mclaren-765lt-coupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para McLaren 765LT Coupé">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">9</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mclaren-mp4-12c" data-marca="McLaren" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">McLaren</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">MP4-12C</span> <a href="#mclaren-mp4-12c" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para McLaren MP4-12C">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">8</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Todas de importação direta.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mclaren-senna" data-marca="McLaren" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">McLaren</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Senna</a></span> <a href="#mclaren-senna" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para McLaren Senna">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2<span class="mt-1 block font-display text-xs font-bold uppercase tracking-[0.12em] text-zinc-500">contagem de 2018</span></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Em outubro de 2018 eram duas unidades destinadas ao Brasil, uma para São Paulo e outra para Brasília, e a primeira desembarcou naquele mês.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mercedes-amg-gt-r-pro" data-marca="Mercedes-AMG" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-AMG</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">GT R Pro</span> <a href="#mercedes-amg-gt-r-pro" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-AMG GT R Pro">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">5</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma única em Desert Gold.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mercedes-benz-sls-amg-black-series" data-marca="Mercedes-Benz" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-Benz</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">SLS AMG Black Series</span> <a href="#mercedes-benz-sls-amg-black-series" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-Benz SLS AMG Black Series">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">11</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mercedes-benz-sls-amg-coupe" data-marca="Mercedes-Benz" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-Benz</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">SLS AMG Coupé</span> <a href="#mercedes-benz-sls-amg-coupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-Benz SLS AMG Coupé">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">164</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="mercedes-benz-sls-amg-roadster" data-marca="Mercedes-Benz" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-Benz</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">SLS AMG Roadster</span> <a href="#mercedes-benz-sls-amg-roadster" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-Benz SLS AMG Roadster">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">13</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="nissan-gt-r-skyline-edition" data-marca="Nissan" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Nissan</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">GT-R Skyline Edition</span> <a href="#nissan-gt-r-skyline-edition" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Nissan GT-R Skyline Edition">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">1</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="nissan-gt-r-t-spec" data-marca="Nissan" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Nissan</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">GT-R T-spec</span> <a href="#nissan-gt-r-t-spec" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Nissan GT-R T-spec">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">5</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="pagani-huayra-r" data-marca="Pagani" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Pagani</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Huayra R</a></span> <a href="#pagani-huayra-r" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Pagani Huayra R">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">Pelo menos 1</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Flagrado no Brasil em 2026, sem número total confirmado.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="pagani-utopia" data-marca="Pagani" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Pagani</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Utopia</a></span> <a href="#pagani-utopia" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Pagani Utopia">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">Pelo menos 1</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Flagrada no Brasil em 2026, sem número total confirmado.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-911-gt2-rs-997" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/porsche-de-pista-e-series-limitadas-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">911 GT2 RS (997)</a></span> <a href="#porsche-911-gt2-rs-997" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 GT2 RS (997)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">8</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-911-gt3-rs-997-1" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/porsche-de-pista-e-series-limitadas-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">911 GT3 RS (997.1)</a></span> <a href="#porsche-911-gt3-rs-997-1" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 GT3 RS (997.1)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">4</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Uma única em RS Orange.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-911-turbo-s-cabriolet-991" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">911 Turbo S Cabriolet (991)</span> <a href="#porsche-911-turbo-s-cabriolet-991" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 Turbo S Cabriolet (991)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">6</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-911-turbo-s-cabriolet-997-2" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">911 Turbo S Cabriolet (997.2)</span> <a href="#porsche-911-turbo-s-cabriolet-997-2" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 Turbo S Cabriolet (997.2)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">9</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Quatro em Carrara White.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-911-turbo-s-coupe-991" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">911 Turbo S Coupé (991)</span> <a href="#porsche-911-turbo-s-coupe-991" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 Turbo S Coupé (991)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">31</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"></td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-918-spyder" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/porsche-918-spyder-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">918 Spyder</a></span> <a href="#porsche-918-spyder" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 918 Spyder">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">3<span class="mt-1 block font-display text-xs font-bold uppercase tracking-[0.12em] text-zinc-500">contagem de 2016</span></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Na contagem de fevereiro de 2016 eram duas unidades em São Paulo, uma prata e uma branca, e uma amarela no Rio Grande do Sul. A branca foi exposta no estande da Porsche no Salão do Automóvel de São Paulo de 2014.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="porsche-935-2019-base-991-2" data-marca="Porsche" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/porsche-de-pista-e-series-limitadas-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">935 (2019, base 991.2)</a></span> <a href="#porsche-935-2019-base-991-2" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 935 (2019, base 991.2)">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">As de número 4 e 75, de 77 fabricadas.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+          <tr id="rolls-royce-phantom-viii-series-ii" data-marca="Rolls-Royce" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Rolls-Royce</span><span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/especificacoes-1-de-1-no-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Phantom VIII Series II</a></span> <a href="#rolls-royce-phantom-viii-series-ii" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Rolls-Royce Phantom VIII Series II">#</a></th>
+            <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">1</td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700">Em São Paulo, de importação independente e blindado.</td>
+            <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <section class="mt-16" aria-labelledby="conceitos-titulo">
+      <div class="border-t-4 border-ink pt-4">
+        <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Guia</span>
+        <h2 id="conceitos-titulo" class="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl">Conceitos e contexto brasileiro</h2>
+        <p class="mt-4 max-w-3xl text-[16px] leading-relaxed text-zinc-700">O que está por trás dos números, apurado pela redação do Exotics Brazil.</p>
+      </div>
+      <div class="mt-8 grid gap-10 md:grid-cols-2">
+        <article id="conceito-censo-eb" class="scroll-mt-28 border-t-2 border-ink pt-5">
+          <h3 class="font-display text-3xl font-black uppercase leading-[0.95] tracking-tight">Censo EB, frota estacionária e importação temporária</h3>
+          <p class="mt-3 text-[16px] leading-relaxed text-zinc-800">O Censo EB é a contagem, modelo por modelo, dos carros exóticos que estão no Brasil, feita pela redação do Exotics Brazil e publicada só quando o número é confirmado. A conta separa a frota estacionária, que são os carros que vivem no país, registrados e emplacados aqui, dos carros que estão no Brasil por tempo determinado. A importação temporária, chamada de admissão temporária na legislação aduaneira, deixa um veículo estrangeiro entrar no país por prazo definido, para exposição, evento ou competição, com suspensão de tributos, desde que ele saia ao fim do prazo. Quando um carro nessa situação entra no censo, a tabela avisa, como na Ferrari F40 do museu CARDE, em Campos do Jordão (SP), que veio da França em 2025. Também foi o caso de uma LaFerrari que rodou no Brasil durante o GP de Interlagos de 2015 e foi embora no mesmo ano.</p>
+          <p class="mt-3 text-sm text-zinc-600">Leia também: <a href="/censo/#ferrari-f40" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Ferrari F40 no Censo EB</a> · <a href="/porsche-918-spyder-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Quantos Porsche 918 Spyder existem no Brasil? (2016)</a></p>
+        </article>
+        <article id="conceito-pts" class="scroll-mt-28 border-t-2 border-ink pt-5">
+          <h3 class="font-display text-3xl font-black uppercase leading-[0.95] tracking-tight">Porsche Paint to Sample (PTS)</h3>
+          <p class="mt-3 text-[16px] leading-relaxed text-zinc-800">Paint to Sample, ou PTS, é o programa da Porsche que pinta o carro, sob encomenda e na fábrica, numa cor fora da paleta de série, escolhida a partir de uma amostra levada pelo cliente ou do arquivo de cores históricas da marca. Faz parte do programa de personalização Porsche Exclusive Manufaktur. Como cada Porsche PTS é uma escolha individual, a cor vira o principal registro de identidade daquela unidade, e no Brasil cada exemplar flagrado costuma ser contado e reconhecido pelo nome da tinta. O Exotics Brazil publicou em 2018 uma reportagem sobre o programa e as cores que ele tornou famosas.</p>
+          <p class="mt-3 text-sm text-zinc-600">Leia também: <a href="/pts-paint-to-sample/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">O que é? Porsche PTS: Paint to Sample (2018)</a></p>
+        </article>
+        <article id="conceito-chassidex" class="scroll-mt-28 border-t-2 border-ink pt-5">
+          <h3 class="font-display text-3xl font-black uppercase leading-[0.95] tracking-tight">Chassidex do Exotics Brazil</h3>
+          <p class="mt-3 text-[16px] leading-relaxed text-zinc-800">Chassidex foi a coluna mensal do Exotics Brazil, publicada entre 2018 e 2019, que listava os carros exóticos que tinham acabado de chegar ao Brasil naquele mês, alguns para ficar e outros só de passagem ou em fase de testes. Foi o embrião do Censo EB. Cinco edições foram recuperadas do arquivo e voltaram à Revista: setembro, outubro e novembro de 2018, fevereiro e março de 2019.</p>
+          <p class="mt-3 text-sm text-zinc-600">Leia também: <a href="/chassidex-novidades-mes-setembro-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Chassidex de setembro de 2018</a> · <a href="/chassidex-novidades-mes-outubro-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Chassidex de outubro de 2018</a> · <a href="/chassidex-novidades-mes-novembro-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Chassidex de novembro de 2018</a> · <a href="/chassidex-novidades-mes-fevereiro-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Chassidex de fevereiro de 2019</a> · <a href="/chassidex-novidades-mes-marco-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Chassidex de março de 2019</a></p>
+        </article>
+        <article id="conceito-blindagem-importacao" class="scroll-mt-28 border-t-2 border-ink pt-5">
+          <h3 class="font-display text-3xl font-black uppercase leading-[0.95] tracking-tight">Blindagem e importação independente na raridade dos supercarros no Brasil</h3>
+          <p class="mt-3 text-[16px] leading-relaxed text-zinc-800">Parte dos carros exóticos do Brasil chega por importação independente, feita por importadoras e particulares fora da rede oficial da marca, e parte recebe blindagem depois de chegar. As duas coisas mexem na raridade. Carro de importação independente não aparece nas vendas oficiais da marca no país, e por isso só uma contagem feita unidade por unidade, como o Censo EB, consegue enxergá-lo. A blindagem acrescenta peso e altera a configuração de fábrica, e o Exotics Brazil registra quando ela é confirmada, como no único Rolls-Royce Phantom VIII Series II do país, que chegou por importação independente e é blindado, e no Bugatti Chiron Sport de São Paulo, também de importação independente.</p>
+          <p class="mt-3 text-sm text-zinc-600">Leia também: <a href="/censo/#rolls-royce-phantom-viii-series-ii" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Rolls-Royce Phantom VIII Series II no Censo EB</a> · <a href="/especificacoes-1-de-1-no-brasil/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Especificações 1 de 1 no Brasil (2026)</a></p>
+        </article>
+      </div>
+    </section>
+    <div class="mt-16 grid gap-8 border-t-2 border-ink pt-6 text-[15px] leading-relaxed text-zinc-700 md:grid-cols-2">
+      <p><strong class="font-display text-base uppercase tracking-[0.12em] text-ink">Como o censo é feito.</strong> Cada número sai da apuração da redação e só é publicado quando confirmado. Contagem antiga mostra o ano em que foi feita, e a localização nunca desce abaixo do nível da cidade. O método completo está na <a href="/#metodologia" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">metodologia editorial</a>.</p>
+      <p><strong class="font-display text-base uppercase tracking-[0.12em] text-ink">Sobre a fonte.</strong> O portal é o braço editorial e banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">@exoticsbrazil</a> no Instagram, a página onde tudo começou em 16 de abril de 2013 e onde mais de 501 mil seguidores acompanham os flagras diariamente.</p>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var linhas = Array.prototype.slice.call(document.querySelectorAll('.linha-censo')), marca = '', busca = document.getElementById('busca-censo');
+      function norm(t) { return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+      function filtrar() {
+        var termo = norm(busca.value.trim()), n = 0;
+        linhas.forEach(function (l) {
+          var ok = (!marca || l.dataset.marca === marca) && (!termo || norm(l.textContent).indexOf(termo) >= 0);
+          l.hidden = !ok; if (ok) n++;
+        });
+        document.getElementById('contagem-censo').textContent = n + (n === 1 ? ' modelo' : ' modelos');
+      }
+      busca.addEventListener('input', filtrar);
+      document.querySelectorAll('.filtro-marca').forEach(function (b) {
+        b.addEventListener('click', function () {
+          marca = b.dataset.filtro;
+          document.querySelectorAll('.filtro-marca').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          filtrar();
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var m = ['jan.','fev.','mar.','abr.','maio','jun.','jul.','ago.','set.','out.','nov.','dez.'], d = new Date();
+      document.querySelectorAll('[data-hoje]').forEach(function (s) { s.textContent = d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear(); });
+      document.querySelectorAll('.citar-copiar').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var t = b.parentNode.querySelector('.citacao-texto').textContent.trim();
+          var ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1800); };
+          if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok); else ok();
+        });
+      });
+    })();
+  </script>
+  <footer class="bg-black text-white">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
+      <img src="/img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
+      <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="mt-4">A maior página de carros exóticos da América Latina</p>
+        <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
+        <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde mais de 501 mil seguidores acompanham os flagras diariamente.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

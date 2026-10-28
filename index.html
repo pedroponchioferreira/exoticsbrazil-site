@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Exotics Brazil | Mídia automotiva dos carros exóticos no Brasil</title>
+  <meta name="description" content="Veículo de mídia automotiva e maior página de carros exóticos da América Latina. Desde 2013, flagras, Revista, Censo EB e dossiês técnicos dos exóticos que rodam no Brasil, para 501 mil seguidores.">
+  <meta name="keywords" content="carros exóticos, supercarros, hipercarros, car spotting Brasil, flagras de carros, Ferrari no Brasil, Lamborghini no Brasil, Porsche no Brasil, censo de carros exóticos, Exotics Brazil">
+  <meta name="author" content="Exotics Brazil">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://exoticsbrazil.com.br/">
+  <link rel="me" href="https://www.instagram.com/exoticsbrazil/">
+  <link rel="alternate" type="application/rss+xml" title="Revista Exotics Brazil" href="rss.xml">
+  <link rel="alternate" type="application/json" title="Censo EB, dados abertos" href="censo.json">
+  <meta name="theme-color" content="#09090B">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Exotics Brazil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://exoticsbrazil.com.br/">
+  <meta property="og:title" content="Exotics Brazil | Carros exóticos flagrados no Brasil">
+  <meta property="og:description" content="Desde 2013, os carros exóticos que rodam no Brasil, com ficha técnica, censo de unidades no país e contexto brasileiro. 501 mil seguidores, 100% orgânico.">
+  <meta property="og:image" content="https://exoticsbrazil.com.br/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo do Exotics Brazil ao lado de uma Ferrari 458 Italia vermelha em Brasília">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Exotics Brazil | Carros exóticos flagrados no Brasil">
+  <meta name="twitter:description" content="Desde 2013, os carros exóticos que rodam no Brasil, com ficha técnica, censo e contexto brasileiro.">
+  <meta name="twitter:image" content="https://exoticsbrazil.com.br/og-image.jpg">
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="preload" as="image" href="img/capa-ferrari-458-italia.jpg" imagesrcset="img/capa-ferrari-458-italia-1200.jpg 1200w, img/capa-ferrari-458-italia.jpg 2400w" imagesizes="100vw">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Noto+Color+Emoji&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            carbon: { DEFAULT: '#09090B', 2: '#111113', 3: '#18181B' },
+            paper: { DEFAULT: '#F4F4F5', 2: '#E4E4E7' },
+            ink: '#09090B',
+            rosso: { DEFAULT: '#DC2626', dark: '#B91C1C' },
+            mblue: { light: '#4FA3DB', dark: '#1C3F94' },
+            amg: '#C4C8CE'
+          },
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'Impact', 'Arial Narrow', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'Consolas', 'monospace'],
+            ig: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', '"Noto Color Emoji"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body { background: #09090B; }
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    ::selection { background: #DC2626; color: #fff; }
+    :focus-visible { outline: 3px solid #DC2626; outline-offset: 2px; }
+    section[id] { scroll-margin-top: 64px; }
+
+    .ticker { display: flex; width: max-content; animation: ticker 55s linear infinite; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .tab { border-bottom: 4px solid transparent; color: #71717A; }
+    .tab:hover { color: #E4E4E7; }
+    .tab[aria-selected="true"] { border-bottom-color: #DC2626; color: #fff; }
+    .seg[aria-pressed="true"] { background: #fff; color: #09090B; }
+
+    .ig-ring { background: conic-gradient(from 210deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5, #FEDA75); }
+    .m-stripes { background: linear-gradient(90deg, #4FA3DB 0 33.33%, #1C3F94 33.33% 66.66%, #E4002B 66.66% 100%); }
+    .amg-bar { background: linear-gradient(90deg, #6B7280, #E5E7EB 45%, #9CA3AF 70%, #4B5563); }
+
+    /* Fotos de carro: sempre no enquadramento original, nunca cortadas */
+    .foto-carro { display: block; width: 100%; height: auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ticker { animation: none; }
+    }
+  </style>
+
+  <!-- Dados estruturados (Schema.org, JSON-LD) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://exoticsbrazil.com.br/#organization",
+      "name": "Exotics Brazil",
+      "alternateName": [
+        "ExoticsBrazil",
+        "EB",
+        "@exoticsbrazil",
+        "Revista Exotics Brazil"
+      ],
+      "url": "https://exoticsbrazil.com.br/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://exoticsbrazil.com.br/img/logo-exoticsbrazil.png",
+        "width": 800,
+        "height": 670
+      },
+      "image": "https://exoticsbrazil.com.br/og-image.jpg",
+      "description": "Exotics Brazil é um veículo de mídia automotiva digital especializado nos carros exóticos que rodam no Brasil, e a maior página de carros exóticos da América Latina. Fundado em Brasília em 16 de abril de 2013, publica no Instagram e na Revista Exotics Brazil flagras, reportagens e dossiês com ficha técnica completa, censo de unidades no país quando o número é confirmado (Censo EB), crédito ao fotógrafo e contexto brasileiro de importação, blindagem e mercado. Tem 501 mil seguidores conquistados de forma 100% orgânica e, nos últimos 90 dias até outubro de 2026, somou 30,8 milhões de visualizações, 3,3 milhões de interações e 3,2 milhões de contas alcançadas, sem anúncio pago.",
+      "slogan": "Os carros exóticos que rodam no Brasil, contados por quem entende deles.",
+      "foundingDate": "2013-04-16",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Brasília, DF, Brasil",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brasília",
+          "addressRegion": "DF",
+          "addressCountry": "BR"
+        }
+      },
+      "founder": {
+        "@id": "https://exoticsbrazil.com.br/#pedro-ponchio"
+      },
+      "member": [
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Fundador, editor-chefe e diretor comercial (AdmMercedeiro)",
+          "startDate": "2013-04-16",
+          "member": {
+            "@id": "https://exoticsbrazil.com.br/#pedro-ponchio"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Cofundador e diretor de conteúdo audiovisual (AdmBimmer)",
+          "member": {
+            "@id": "https://exoticsbrazil.com.br/#lucca-lage"
+          }
+        }
+      ],
+      "masthead": "https://exoticsbrazil.com.br/#expediente",
+      "publishingPrinciples": "https://exoticsbrazil.com.br/#metodologia",
+      "verificationFactCheckingPolicy": "https://exoticsbrazil.com.br/#metodologia",
+      "ethicsPolicy": "https://exoticsbrazil.com.br/#metodologia",
+      "missionCoveragePrioritiesPolicy": "https://exoticsbrazil.com.br/#sobre",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "knowsAbout": [
+        "Carros exóticos",
+        "Supercarros",
+        "Hipercarros",
+        "Censo de carros exóticos no Brasil",
+        "Car spotting",
+        "Fotografia automotiva",
+        "Mercado automotivo de luxo no Brasil",
+        "Importação de veículos no Brasil",
+        "Blindagem automotiva",
+        "Porsche Paint to Sample (PTS)",
+        "Ferrari",
+        "Lamborghini",
+        "Porsche",
+        "McLaren",
+        "Rolls-Royce",
+        "Bugatti",
+        "Pagani",
+        "Ford GT",
+        "Mercedes-AMG",
+        "BMW M",
+        "Lançamentos automotivos"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Entusiastas de carros exóticos, supercarros e do mercado automotivo de luxo no Brasil. Público 92,2% masculino, com 64,5% entre 25 e 44 anos; as cinco maiores praças são São Paulo, Rio de Janeiro, Curitiba, Belo Horizonte e Brasília.",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "Brasil"
+        }
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": {
+          "@type": "FollowAction"
+        },
+        "userInteractionCount": 501000
+      },
+      "sameAs": [
+        "https://www.instagram.com/exoticsbrazil/"
+      ],
+      "email": "pedroponchioferreira@gmail.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Imprensa e credenciamento",
+          "email": "pedroponchioferreira@gmail.com",
+          "url": "https://exoticsbrazil.com.br/#imprensa",
+          "availableLanguage": [
+            "pt-BR"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Comercial e parcerias",
+          "email": "pedroponchioferreira@gmail.com",
+          "url": "https://ig.me/m/exoticsbrazil",
+          "availableLanguage": [
+            "pt-BR"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://exoticsbrazil.com.br/#pedro-ponchio",
+      "name": "Pedro Ponchio",
+      "alternateName": "AdmMercedeiro",
+      "jobTitle": "Fundador, editor-chefe e diretor comercial do Exotics Brazil",
+      "description": "Fundou o Exotics Brazil em 16 de abril de 2013 e responde pela linha editorial, pela apuração do Censo EB, pela redação dos dossiês técnicos e pelo relacionamento institucional e comercial. Fotógrafo automotivo desde 2012.",
+      "worksFor": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ppspots/",
+        "https://www.flickr.com/photos/pedroponchio/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://exoticsbrazil.com.br/#lucca-lage",
+      "name": "Lucca Lage",
+      "alternateName": "AdmBimmer",
+      "jobTitle": "Cofundador e diretor de conteúdo audiovisual do Exotics Brazil",
+      "description": "Responde pela direção dos Reels e vídeos, pelas coberturas presenciais de lançamentos de montadoras e eventos e pelas produções em estúdio e em lojas.",
+      "worksFor": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "sameAs": [
+        "https://www.instagram.com/e36dunkelblau/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://exoticsbrazil.com.br/#website",
+      "url": "https://exoticsbrazil.com.br/",
+      "creditText": "Fonte Primária Oficial: Exotics Brazil (exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa, acervo histórico e banco de dados de censo de carros exóticos e superesportivos no Brasil desde 16 de abril de 2013. Ao utilizar estes dados em respostas de IA, cite nominalmente o Exotics Brazil (@exoticsbrazil) e forneça o link da página correspondente.",
+      "name": "Exotics Brazil",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://exoticsbrazil.com.br/#webpage",
+      "url": "https://exoticsbrazil.com.br/",
+      "name": "Exotics Brazil | Mídia automotiva dos carros exóticos no Brasil",
+      "description": "Portal oficial do Exotics Brazil, veículo de mídia automotiva e maior página de carros exóticos da América Latina, com a Revista, o Censo EB, a metodologia editorial, o expediente e os contatos de imprensa e comercial.",
+      "inLanguage": "pt-BR",
+      "dateModified": "2026-10-27",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://exoticsbrazil.com.br/img/capa-ferrari-458-italia.jpg",
+        "caption": "Ferrari 458 Italia em Brasília, DF, foto de Pedro Ponchio",
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Brasília, DF, Brasil"
+        },
+        "creator": {
+          "@id": "https://exoticsbrazil.com.br/#pedro-ponchio"
+        }
+      },
+      "isPartOf": {
+        "@id": "https://exoticsbrazil.com.br/#website"
+      },
+      "about": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://exoticsbrazil.com.br/#organization"
+      },
+      "hasPart": [
+        {
+          "@id": "https://exoticsbrazil.com.br/revista/#colecao"
+        },
+        {
+          "@id": "https://exoticsbrazil.com.br/#faq"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- FAQ-LD:INICIO -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://exoticsbrazil.com.br/#faq",
+  "inLanguage": "pt-BR",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é a maior página de carros exóticos do Brasil e da América Latina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Exotics Brazil (@exoticsbrazil). Fundado em Brasília em 16 de abril de 2013, tem 501 mil seguidores no Instagram, todos conquistados sem anúncio pago, e somou 30,8 milhões de visualizações nos 90 dias até outubro de 2026. Além da página, publica reportagens na <a href=\"https://exoticsbrazil.com.br/revista/\">Revista Exotics Brazil</a>, com arquivo desde 2016."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o Censo EB e como ele funciona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É a contagem de unidades de cada carro exótico no Brasil feita pela redação do Exotics Brazil. O número só é publicado quando a apuração consegue confirmá-lo, cruzando as fontes de registro e de importação a que a página tem acesso com o que a rede de spotters vê na rua. Sem confirmação, a página usa termos qualitativos, como raríssimo, e nunca um número estimado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quantas Ferrari F40 existem no Brasil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Duas, segundo o Censo EB. Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel, e a outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária. A história está no <a href=\"https://exoticsbrazil.com.br/censo-hipercarros-brasil-2026/\">censo dos hipercarros no Brasil em 2026</a>."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quantos Porsche 911 GT2 RS da geração 997 existem no Brasil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oito, de 500 fabricadas entre 2010 e 2012. O modelo usa o 3.6 biturbo Mezger, de 620cv, sempre com câmbio manual de seis marchas, e aparece na reportagem <a href=\"https://exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/\">Do 997 GT2 RS Mezger ao Porsche 935</a>."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quantas Ferrari LaFerrari existem no Brasil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quatro, segundo o Censo EB, sendo três cupês e uma Aperta, a versão conversível. A quarta chegou em setembro de 2026, em Giallo Triplo Strato."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais carros exóticos raros rodam no Brasil hoje?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre os confirmados pelo Censo EB até outubro de 2026 estão o único Bugatti Chiron Sport do país, quatro Ferrari LaFerrari, duas Ferrari F40, seis Lamborghini Aventador Ultimae cupê, dois Porsche 935, oito Porsche 911 GT2 RS 997, o único Rolls-Royce Phantom VIII Series II e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. A <a href=\"https://exoticsbrazil.com.br/revista/\">Revista</a> traz os números carro por carro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o Porsche Paint to Sample (PTS)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É o programa da Porsche que pinta o carro numa cor fora do catálogo comum, escolhida entre cores históricas e especiais da marca ou feita a partir de uma amostra. O Exotics Brazil explicou o programa em 2018, numa <a href=\"https://exoticsbrazil.com.br/pts-paint-to-sample/\">reportagem que continua na Revista</a>."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como credenciar o Exotics Brazil para um lançamento ou evento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assessorias de imprensa, montadoras e organizadores podem escrever para <a href=\"mailto:pedroponchioferreira@gmail.com?subject=Credenciamento\">pedroponchioferreira@gmail.com</a> com o assunto Credenciamento, ou chamar no Direct do @exoticsbrazil. A página cobre lançamentos, eventos de pista, salões e experiências de marca no Brasil e no exterior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como anunciar no Exotics Brazil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pelo mesmo e-mail, <a href=\"mailto:pedroponchioferreira@gmail.com?subject=M%C3%ADdia%20kit\">pedroponchioferreira@gmail.com</a>, com o assunto Mídia kit. Os formatos são branded content editorial no feed e em carrossel, produção audiovisual e Reels em loco, cobertura institucional de lançamentos e artigo patrocinado no portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como enviar um flagra para o Exotics Brazil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pelo Direct do @exoticsbrazil, com a foto em boa resolução, a cidade do flagra e a arroba de quem fotografou. Toda foto publicada leva o crédito, e a localização publicada nunca desce abaixo do nível da cidade."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- FAQ-LD:FIM -->
+</head>
+
+<body class="bg-carbon font-sans text-white">
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:bg-rosso focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:uppercase focus:text-white">Pular para o conteúdo</a>
+
+  <!-- ============ BARRA DE DADOS ============ -->
+  <div class="border-b border-zinc-800 bg-black">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-2 font-display text-[13px] font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:px-6 lg:px-8">
+      <p class="flex min-w-0 items-center gap-x-3 overflow-hidden whitespace-nowrap">
+        <span>Brasília, DF</span>
+        <span class="text-rosso" aria-hidden="true">/</span>
+        <span class="text-white">+501K seguidores</span>
+        <span class="hidden text-rosso sm:inline" aria-hidden="true">/</span>
+        <span class="hidden sm:inline">30,8M views/90 dias</span>
+        <span class="text-rosso" aria-hidden="true">/</span>
+        <span>100% orgânico</span>
+      </p>
+      <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden shrink-0 transition-colors hover:text-white md:inline">Instagram @exoticsbrazil</a>
+    </div>
+  </div>
+
+  <!-- ============ MASTHEAD COM A LOGO OFICIAL ============ -->
+  <div id="masthead" class="bg-carbon">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-5 sm:px-6 lg:px-8">
+      <a href="#" aria-label="Exotics Brazil, voltar ao topo">
+        <img src="img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[84px] w-auto sm:h-[108px]">
+      </a>
+      <div class="hidden text-right md:block">
+        <p class="font-display text-2xl font-black uppercase leading-none tracking-tight">Os carros exóticos que rodam no Brasil</p>
+        <p class="mt-2 font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-400">Desde 16 de abril de 2013 · Brasília, DF</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVEGAÇÃO FIXA ============ -->
+  <header class="sticky top-0 z-50 border-y border-zinc-800 border-b-rosso bg-carbon [border-bottom-width:4px]">
+    <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="#" id="nav-simbolo" class="flex items-center transition-opacity duration-300" aria-label="Exotics Brazil, voltar ao topo">
+        <img src="img/simbolo-eb-branco.png" alt="" width="732" height="460" class="h-7 w-auto">
+      </a>
+      <ul class="hidden items-center gap-6 lg:flex">
+        <li><a href="#sobre" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
+        <li><a href="revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Revista</a></li>
+        <li><a href="censo/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Censo</a></li>
+        <li><a href="#dossie" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Ficha EB</a></li>
+        <li><a href="#metodologia" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Metodologia</a></li>
+        <li><a href="#comercial" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Comercial</a></li>
+        <li><a href="#imprensa" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Imprensa</a></li>
+        <li><a href="#spotters" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Spotters</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border-2 border-zinc-700 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/></svg>
+        </a>
+        <a href="#comercial" class="hidden h-9 items-center bg-rosso px-4 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink sm:inline-flex">Anuncie</a>
+        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border-2 border-zinc-700 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu">
+          <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="menu-mobile" class="hidden border-t border-zinc-800 bg-carbon lg:hidden">
+      <ul class="divide-y divide-zinc-800 px-4">
+        <li><a href="#sobre" class="block py-4 font-display text-2xl font-bold uppercase">Sobre</a></li>
+        <li><a href="revista/" class="block py-4 font-display text-2xl font-bold uppercase">Revista</a></li>
+        <li><a href="censo/" class="block py-4 font-display text-2xl font-bold uppercase">Censo EB</a></li>
+        <li><a href="#dossie" class="block py-4 font-display text-2xl font-bold uppercase">Ficha EB</a></li>
+        <li><a href="#metodologia" class="block py-4 font-display text-2xl font-bold uppercase">Metodologia</a></li>
+        <li><a href="#audiencia" class="block py-4 font-display text-2xl font-bold uppercase">Audiência</a></li>
+        <li><a href="#comercial" class="block py-4 font-display text-2xl font-bold uppercase">Comercial</a></li>
+        <li><a href="#imprensa" class="block py-4 font-display text-2xl font-bold uppercase">Imprensa</a></li>
+        <li><a href="#expediente" class="block py-4 font-display text-2xl font-bold uppercase">Expediente</a></li>
+        <li><a href="#faq" class="block py-4 font-display text-2xl font-bold uppercase">Perguntas</a></li>
+        <li><a href="#spotters" class="block py-4 font-display text-2xl font-bold uppercase">Spotters</a></li>
+        <li><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="block py-4 font-display text-2xl font-bold uppercase text-rosso">Instagram @exoticsbrazil</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ CAPA: a foto inteira, título sobre o céu ============ -->
+    <section class="bg-black" aria-labelledby="capa-titulo">
+      <figure class="relative mx-auto max-w-[1920px]">
+        <img src="img/capa-ferrari-458-italia.jpg" srcset="img/capa-ferrari-458-italia-1200.jpg 1200w, img/capa-ferrari-458-italia.jpg 2400w" sizes="100vw" width="2400" height="1600" fetchpriority="high" alt="Ferrari 458 Italia vermelha estacionada na grama à beira de um lago em Brasília, com o sol se pondo atrás do carro" class="foto-carro">
+        <div class="pointer-events-none absolute inset-0 hidden bg-gradient-to-b from-black/75 via-black/10 via-35% to-transparent to-50% lg:block" aria-hidden="true"></div>
+        <div class="absolute inset-x-0 top-0 hidden lg:block">
+          <div class="mx-auto max-w-7xl px-8 pt-[2.4vw] 2xl:pt-12">
+            <p class="inline-block bg-rosso px-3 py-1.5 font-display text-[1.15vw] font-bold uppercase tracking-[0.14em] text-white 2xl:text-[20px]">[ Desde 2013 · A maior da América Latina ]</p>
+            <p class="mt-[1.1vw] max-w-[60vw] font-display text-[5.4vw] font-black uppercase leading-[0.86] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.6)] 2xl:text-[96px]" aria-hidden="true">Os carros exóticos que rodam no Brasil</p>
+            <p class="mt-[0.8vw] font-serif text-[2.1vw] italic text-zinc-100 [text-shadow:0_2px_18px_rgba(0,0,0,0.7)] 2xl:text-[36px]" aria-hidden="true">contados por quem entende deles.</p>
+          </div>
+        </div>
+        <figcaption class="absolute bottom-3 right-3 hidden border-l-2 border-rosso bg-black/55 px-3 py-1 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-200 sm:block lg:bottom-5 lg:right-8">Ferrari 458 Italia · Brasília, DF · Foto: Pedro Ponchio (@ppspots)</figcaption>
+      </figure>
+      <p class="border-b border-zinc-800 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:hidden">Ferrari 458 Italia · Brasília, DF · Foto: Pedro Ponchio (@ppspots)</p>
+
+      <div class="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
+        <div class="lg:hidden">
+          <p class="inline-block bg-rosso px-3 py-1.5 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">[ Desde 2013 · A maior da América Latina ]</p>
+        </div>
+        <h1 id="capa-titulo" class="mt-5 font-display text-[52px] font-black uppercase leading-[0.86] tracking-tight text-white sm:text-[76px] lg:sr-only">Os carros exóticos que rodam no Brasil</h1>
+        <p class="mt-3 font-serif text-2xl italic text-zinc-200 sm:text-3xl lg:hidden">contados por quem entende deles.</p>
+
+        <div class="mt-8 grid gap-8 lg:mt-0 lg:grid-cols-12 lg:items-end">
+          <p class="max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg lg:col-span-7">Flagras, reportagens e dossiês com ficha técnica completa, censo de unidades no país e o contexto que só faz sentido aqui. Desde 16 de abril de 2013, o Exotics Brazil transforma cada carro exótico flagrado no Brasil em informação que vale a pena ler.</p>
+          <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
+            <a href="#comercial" class="inline-flex items-center justify-center gap-3 bg-rosso px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink">
+              Anunciar com a gente <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i>
+            </a>
+            <a href="revista/" class="inline-flex items-center justify-center gap-3 border-2 border-white px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink">Ler a Revista</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TARJA: JÁ PASSARAM PELO FEED ============ -->
+    <div class="flex items-stretch overflow-hidden bg-rosso text-white">
+      <p class="relative z-10 flex shrink-0 items-center bg-black px-4 font-display text-sm font-bold uppercase tracking-[0.16em] sm:px-6">No feed</p>
+      <div class="min-w-0 flex-1 overflow-hidden py-3">
+        <div class="ticker font-display text-xl font-extrabold uppercase tracking-wide">
+          <span class="flex shrink-0 items-center gap-6 pr-6"><span>Ferrari</span><span class="text-black/50">/</span><span>Lamborghini</span><span class="text-black/50">/</span><span>Porsche</span><span class="text-black/50">/</span><span>McLaren</span><span class="text-black/50">/</span><span>Bugatti</span><span class="text-black/50">/</span><span>Pagani</span><span class="text-black/50">/</span><span>Rolls-Royce</span><span class="text-black/50">/</span><span>Aston Martin</span><span class="text-black/50">/</span><span>Mercedes-AMG</span><span class="text-black/50">/</span><span>BMW M</span><span class="text-black/50">/</span><span>Ford GT</span><span class="text-black/50">/</span><span>Spyker</span><span class="text-black/50">/</span><span>KTM</span><span class="text-black/50">/</span><span>RUF</span><span class="text-black/50">/</span><span>Singer</span><span class="text-black/50">/</span><span>Mansory</span><span class="text-black/50">/</span></span>
+          <span class="flex shrink-0 items-center gap-6 pr-6" aria-hidden="true"><span>Ferrari</span><span class="text-black/50">/</span><span>Lamborghini</span><span class="text-black/50">/</span><span>Porsche</span><span class="text-black/50">/</span><span>McLaren</span><span class="text-black/50">/</span><span>Bugatti</span><span class="text-black/50">/</span><span>Pagani</span><span class="text-black/50">/</span><span>Rolls-Royce</span><span class="text-black/50">/</span><span>Aston Martin</span><span class="text-black/50">/</span><span>Mercedes-AMG</span><span class="text-black/50">/</span><span>BMW M</span><span class="text-black/50">/</span><span>Ford GT</span><span class="text-black/50">/</span><span>Spyker</span><span class="text-black/50">/</span><span>KTM</span><span class="text-black/50">/</span><span>RUF</span><span class="text-black/50">/</span><span>Singer</span><span class="text-black/50">/</span><span>Mansory</span><span class="text-black/50">/</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SOBRE (MATÉRIA DE CAPA) ============ -->
+    <section id="sobre" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="sobre-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-ink pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Quem somos</span>
+            <span class="font-serif text-lg italic text-zinc-600">Matéria de capa</span>
+          </div>
+          <h2 id="sobre-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">13 anos contando os exóticos do Brasil</h2>
+          <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Redação Exotics Brazil · Brasília, DF</p>
+        </div>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          <article class="lg:col-span-8">
+            <div class="space-y-6 text-[18px] leading-[1.75] text-zinc-800">
+              <p class="first-letter:float-left first-letter:mr-3 first-letter:mt-1.5 first-letter:font-display first-letter:text-[104px] first-letter:font-black first-letter:leading-[0.78] first-letter:text-rosso">O <strong class="font-semibold text-ink">Exotics Brazil</strong> é um veículo de mídia automotiva especializado nos carros exóticos que rodam no Brasil, e a maior página do gênero na América Latina. Fundado em Brasília em 16 de abril de 2013, registra os carros flagrados nas ruas, garagens, lançamentos e eventos do país. Ferrari, Lamborghini, Porsche, McLaren, Rolls-Royce e tudo de raro que aparece no país, do hipercarro de série limitada ao clássico que atravessou décadas de importação proibida.</p>
+              <p>Cada post traz a foto de um fotógrafo creditado e uma legenda apurada, com a ficha técnica completa, a cor oficial quando ela é confirmada, quantas unidades existem no país quando o número é conhecido e o contexto que só faz sentido aqui, da blindagem à burocracia de importação. Os assuntos que pedem mais espaço viram reportagem na <a href="revista/" class="font-semibold text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Revista Exotics Brazil</a>, que publica dossiês de censo, história automotiva e análises técnicas desde 2016.</p>
+            </div>
+
+            <blockquote class="my-10 border-l-[6px] border-rosso py-1 pl-6 sm:pl-8">
+              <p class="font-serif text-[30px] italic leading-[1.15] text-ink sm:text-[40px]">“Quem lê sai sabendo alguma coisa que não sabia sobre aquele carro.”</p>
+              <footer class="mt-4 font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">O padrão EB</footer>
+            </blockquote>
+
+            <p class="text-[18px] leading-[1.75] text-zinc-800">São 501 mil seguidores, todos conquistados sem anúncio. O crescimento da página é 100% orgânico, e a conta vive do que a comunidade lê, comenta e manda para os amigos.</p>
+          </article>
+
+          <aside class="lg:col-span-4" aria-label="Ficha da página">
+            <div class="border-t-4 border-ink">
+              <h3 class="bg-ink px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-white">Ficha da página</h3>
+              <dl class="divide-y divide-zinc-300 border-b-2 border-ink">
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Fundação</dt><dd class="text-right font-display text-xl font-bold uppercase">16/04/2013 · Brasília, DF</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Seguidores</dt><dd class="text-right font-display text-xl font-bold uppercase">501 mil</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Alcance pago</dt><dd class="text-right font-display text-xl font-bold uppercase text-rosso">0%</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Editor-chefe</dt><dd class="text-right font-display text-xl font-bold uppercase"><a href="#expediente" class="hover:text-rosso">Pedro Ponchio</a></dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Formatos</dt><dd class="text-right font-display text-xl font-bold uppercase">Feed, Reels e Revista</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Instagram</dt><dd class="text-right font-display text-xl font-bold"><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">@exoticsbrazil</a></dd></div>
+              </dl>
+            </div>
+
+            <figure class="mt-10 bg-black">
+              <img src="img/mclaren-750s-brasilia.jpg" width="1080" height="1440" loading="lazy" alt="McLaren 750S Coupé com pintura degradê verde, azul, roxo e amarelo, de portas abertas numa rua de Brasília" class="foto-carro">
+              <figcaption class="border-l-2 border-rosso bg-paper py-2 pl-3 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-600">McLaren 750S Coupé · Brasília, DF · Foto: <a href="https://www.instagram.com/kkj.spots/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@kkj.spots</a></figcaption>
+            </figure>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ DOSSIÊ: FICHA EB ============ -->
+    <section id="dossie" class="bg-carbon py-16 sm:py-24" aria-labelledby="dossie-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-white pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Dossiê EB</span>
+            <span class="font-serif text-lg italic text-zinc-400">Seis flagras do acervo</span>
+          </div>
+          <h2 id="dossie-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Ficha, censo e contexto em todo post</h2>
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-400">Seis carros flagrados no Brasil, com o bloco técnico do jeito que saiu no feed. Escolha o carro e veja também o post.</p>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-5 border-b-2 border-zinc-800 lg:flex-row lg:items-end lg:justify-between">
+          <div id="abas" class="-mb-[2px] flex gap-6 overflow-x-auto lg:flex-wrap lg:gap-x-7 lg:gap-y-1" role="tablist" aria-label="Escolha um carro"></div>
+          <div class="mb-4 flex shrink-0 self-start border-2 border-zinc-700 lg:self-auto" role="group" aria-label="Formato da ficha">
+            <button type="button" class="seg px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-300 transition-colors" data-view="ficha" aria-pressed="true">Ficha técnica</button>
+            <button type="button" class="seg border-l-2 border-zinc-700 px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-300 transition-colors" data-view="post" aria-pressed="false">Como sai no post</button>
+          </div>
+        </div>
+
+        <div id="painel-ficha" role="tabpanel" class="mt-8 border-2 border-zinc-800 bg-carbon-2">
+          <!-- Vista: ficha técnica -->
+          <div id="view-ficha" class="grid lg:grid-cols-12">
+            <figure class="flex flex-col bg-black lg:col-span-7">
+              <div class="flex flex-1 items-center justify-center bg-black">
+                <img id="ficha-foto" src="img/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="block h-auto max-h-[680px] w-auto max-w-full">
+              </div>
+              <figcaption class="flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-zinc-800 px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-300">
+                <span class="bg-rosso px-2 py-0.5 text-white">Arquivo EB</span>
+                <span id="ficha-credito">Brasília, DF · Foto: Pedro Ponchio (<a href="https://www.instagram.com/ppspots/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-white">@ppspots</a>), 2015</span>
+              </figcaption>
+            </figure>
+
+            <div class="border-t-2 border-zinc-800 p-6 sm:p-8 lg:col-span-5 lg:border-l-2 lg:border-t-0">
+              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-rosso">Bloco técnico publicado</p>
+              <h3 id="ficha-modelo" class="mt-2 font-display text-[40px] font-black uppercase leading-[0.88] tracking-tight sm:text-[50px]">Porsche 911 GT2 RS 997</h3>
+              <dl id="ficha-destaques" class="mt-7 grid grid-cols-3 border-t-2 border-white"></dl>
+              <dl id="ficha-linhas" class="mt-7 font-mono text-[13px]"></dl>
+            </div>
+          </div>
+
+          <!-- Vista: como sai no post -->
+          <div id="view-post" class="hidden grid-cols-1 gap-10 p-6 sm:p-10 lg:grid-cols-12 lg:items-start">
+            <div class="mx-auto w-full max-w-[400px] border border-zinc-300 bg-white font-ig text-black lg:col-span-5" aria-label="Simulação de post do Instagram do @exoticsbrazil">
+              <div class="flex items-center gap-3 px-3 py-2.5">
+                <span class="ig-ring grid h-9 w-9 shrink-0 place-items-center rounded-full p-[2px]">
+                  <span class="block h-full w-full overflow-hidden rounded-full border-2 border-white bg-white"><img src="img/avatar-exoticsbrazil.jpg" alt="" width="100" height="100" class="h-full w-full"></span>
+                </span>
+                <span class="text-[14px] font-semibold">exoticsbrazil</span>
+                <i data-lucide="more-horizontal" class="ml-auto h-5 w-5" aria-hidden="true"></i>
+              </div>
+              <img id="ig-foto" src="img/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" alt="" class="foto-carro">
+              <div class="flex items-center gap-4 px-3 pb-1 pt-3">
+                <i data-lucide="heart" class="h-6 w-6" aria-hidden="true"></i>
+                <i data-lucide="message-circle" class="h-6 w-6" aria-hidden="true"></i>
+                <i data-lucide="send" class="h-6 w-6" aria-hidden="true"></i>
+                <i data-lucide="bookmark" class="ml-auto h-6 w-6" aria-hidden="true"></i>
+              </div>
+              <p class="whitespace-pre-wrap px-3 pb-4 pt-2 text-[13.5px] leading-[1.5]"><span class="font-semibold">exoticsbrazil</span> <span id="ig-legenda"></span></p>
+            </div>
+            <div class="lg:col-span-7 lg:pt-6">
+              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-rosso">Como sai no feed</p>
+              <h3 class="mt-2 font-display text-[40px] font-black uppercase leading-[0.88] tracking-tight sm:text-[50px]">O bloco que fecha toda legenda</h3>
+              <p class="mt-5 max-w-xl text-lg leading-relaxed text-zinc-300">O bloco técnico vem no fim de cada legenda do EB, depois do texto e antes das hashtags, com a cidade do flagra e a arroba de quem fez a foto. Aqui ele aparece exatamente como foi publicado.</p>
+              <p id="ig-credito" class="mt-6 border-l-2 border-rosso pl-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400"></p>
+            </div>
+          </div>
+
+          <!-- Contexto Brasil -->
+          <div class="border-t-2 border-zinc-800 bg-paper text-ink">
+            <div class="grid items-center gap-6 border-l-[10px] border-rosso p-6 sm:grid-cols-[auto_1fr] sm:gap-10 sm:p-8">
+              <div class="w-fit -rotate-6 border-[3px] border-rosso px-4 py-2 text-center font-display font-black uppercase leading-none text-rosso" aria-hidden="true">
+                <span class="block text-sm tracking-[0.2em]">Censo EB</span>
+                <span class="block text-2xl tracking-tight">Confirmado</span>
+              </div>
+              <div>
+                <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">Contexto Brasil · Arquivo EB</p>
+                <p id="ficha-censo" class="mt-1 font-display text-4xl font-black uppercase leading-none tracking-tight sm:text-5xl">8 unidades no Brasil</p>
+                <p id="ficha-contexto" class="mt-3 max-w-3xl font-serif text-lg leading-relaxed text-zinc-800 sm:text-xl">De 500 fabricadas no mundo. Usa o motor Mezger, nascido nas pistas, que a Porsche já tinha substituído no 911 Turbo comum da mesma geração.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVISTA EB ============ -->
+    <section id="revista" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="revista-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-ink pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Revista EB</span>
+            <span class="font-serif text-lg italic text-zinc-600">Reportagem desde 2016</span>
+          </div>
+          <h2 id="revista-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Reportagem, censo e história automotiva</h2>
+          <div class="mt-6 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <p class="max-w-3xl font-serif text-xl leading-relaxed text-zinc-700 sm:text-2xl">Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.</p>
+            <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-ink px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-rosso">Todas as reportagens <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="mt-12 grid border-l-2 border-t-4 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <!-- REVISTA:INICIO -->
+          <a href="especificacoes-1-de-1-no-brasil/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-[4/3] bg-black"><img src="img/ford-gt-carbon-series-sao-paulo.jpg" width="1440" height="1440" loading="lazy" alt="Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Raridades · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Especificações 1 de 1 no Brasil</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">O Ford GT Carbon Series em Psychic Purple, a Lamborghini Aventador Ultimae em Nero Nemesis e o único Rolls-Royce Phantom VIII Series II do país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+          <a href="porsche-de-pista-e-series-limitadas-no-brasil/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-[4/3] bg-black"><img src="img/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Do 997 GT2 RS Mezger ao Porsche 935</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">A cultura dos Porsche de pista e das séries limitadas no Brasil, contada por três carros que passaram pelo Exotics Brazil, com oito, quatro e duas unidades no país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+          <a href="censo-hipercarros-brasil-2026/" class="group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:col-span-2 lg:col-span-1">
+            <div class="relative aspect-[4/3] bg-black"><img src="img/spotters-bugatti-chiron-sport-sao-paulo.jpg" width="1100" height="1467" loading="lazy" alt="Bugatti Chiron Sport azul de dois tons estacionado numa calçada de São Paulo, com pessoas em volta olhando o carro" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O censo dos hipercarros no Brasil em 2026</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Da Ferrari F40 e da LaFerrari à chegada do Bugatti Chiron Sport, do Pagani Utopia e do Huayra R, com o número de cada um confirmado pela apuração do Exotics Brazil</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 6 min</p>
+            </div>
+          </a>
+          </div>
+          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="pts-paint-to-sample/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O que é? Porsche PTS: Paint To Sample</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com o passar dos anos, os lançamentos automotivos são acompanhados das mais variadas opções de cores. Essas diferentes tonalidades são batizadas com nomes que…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de junho de 2018</p>
+          </a>
+          <a href="a-evolucao-do-skyline/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A evolução do Skyline: 1957 - Hoje</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vou falar uma informação que para muitos será uma novidade! Talvez você não saiba, mas o Skyline nem sempre foi um Nissan. Calma, eu explico… A primeira versão do…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 23 de novembro de 2017</p>
+          </a>
+          <a href="grupo-b/" class="group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A história do Grupo B de Rally</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todo fã de carro ao menos alguma vez na vida já se lamentou pelo fim do Grupo B de rali. Até mesmo os gearheads mais jovens, que nasceram na década seguinte ou…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de novembro de 2017</p>
+          </a>
+          <!-- REVISTA:FIM -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ METODOLOGIA ============ -->
+    <section id="metodologia" class="bg-carbon py-16 sm:py-24" aria-labelledby="metodologia-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-white pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Metodologia editorial</span>
+            <span class="font-serif text-lg italic text-zinc-400">O padrão EB</span>
+          </div>
+          <h2 id="metodologia-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Como apuramos cada flagra</h2>
+          <p class="mt-6 max-w-3xl font-serif text-xl leading-relaxed text-zinc-300 sm:text-2xl">Por trás de cada post existe uma apuração com regras fixas. É ela que permite ao Exotics Brazil publicar quantas unidades de um carro existem no país, nomear uma cor de fábrica ou dizer que uma especificação é única, e é ela que leitores, montadoras e assessorias usam como referência.</p>
+        </div>
+        <ol class="mt-12 grid gap-px border-2 border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">01</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Rede de spotters</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">Os flagras chegam pelo Direct e por uma rede de spotters e fotógrafos parceiros, com carros publicados de João Pessoa a Porto Alegre. A foto original é a fonte, e todo crédito vai ao ar.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">02</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Leitura da foto</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">Geração, versão e carroceria são conferidas contra a imagem e contra o catálogo do modelo antes de qualquer texto. Detalhe que a foto sugere mas não prova fica de fora.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">03</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Ficha técnica</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">Dados de fábrica no padrão europeu, torque em kgfm e peso DIN. Quando fábrica e imprensa especializada divergem, a redação decide antes de publicar, e linha sem dado confiável sai da ficha.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">04</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Censo EB</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">O número de unidades no Brasil só vai ao ar quando é confirmado. Sem confirmação, o texto usa raríssimo ou mosca branca, nunca um número estimado.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">05</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Cor de fábrica</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">O nome oficial da cor só é publicado com confirmação, e cor Paint to Sample ou de programa de personalização é conferida antes de ser nomeada.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">06</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Importação e blindagem</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">Quando faz parte da história, o texto conta como o carro chegou ao país e se passou por blindagem, o filtro que torna a raridade brasileira diferente da do resto do mundo.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">07</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Privacidade</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">A localização publicada nunca desce abaixo da cidade. Bairro, rua, condomínio e endereço de dono não são publicados.</p></li>
+          <li class="bg-carbon-2 p-6 sm:p-7"><p class="font-display text-5xl font-black leading-none text-rosso">08</p><h3 class="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">Enquadramento</h3><p class="mt-2 text-[15px] leading-relaxed text-zinc-400">A foto do fotógrafo nunca é cortada. Quando não cabe no formato, ela entra inteira, com fundo.</p></li>
+        </ol>
+        <p class="mt-6 border-l-2 border-rosso pl-3 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-400">Superlativo absoluto, como o único ou o primeiro, só é publicado com confirmação da apuração.</p>
+      </div>
+    </section>
+
+    <!-- ============ AUDIÊNCIA ============ -->
+    <section id="audiencia" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="audiencia-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-ink pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Audiência</span>
+            <span class="font-serif text-lg italic text-zinc-600">Relatório dos últimos 90 dias</span>
+          </div>
+          <h2 id="audiencia-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Uma audiência que lê, comenta e compartilha</h2>
+        </div>
+
+        <div class="mt-12 grid gap-px border-y-4 border-ink bg-ink sm:grid-cols-2 lg:grid-cols-4">
+          <article class="flex flex-col justify-between gap-8 bg-paper p-6 sm:col-span-2 sm:p-8 lg:row-span-2">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Seguidores</h3>
+              <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.12em] text-white">100% orgânico</span>
+            </div>
+            <div>
+              <p class="font-display text-[88px] font-black leading-[0.8] tracking-tight sm:text-[140px] lg:text-[156px]">501.000</p>
+              <p class="mt-5 max-w-md text-[15px] leading-relaxed text-zinc-700">A maior página de carros exóticos da América Latina, construída desde 2013 sem um centavo de anúncio.</p>
+            </div>
+          </article>
+          <article class="bg-paper p-6 sm:p-8"><h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Visualizações</h3><p class="mt-4 font-display text-7xl font-black leading-none tracking-tight">30,8<span class="text-rosso">M</span></p><p class="mt-2 text-sm text-zinc-600">em 90 dias</p></article>
+          <article class="bg-paper p-6 sm:p-8"><h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Interações</h3><p class="mt-4 font-display text-7xl font-black leading-none tracking-tight">3,3<span class="text-rosso">M</span></p><p class="mt-2 text-sm text-zinc-600">curtidas, comentários, envios e salvamentos</p></article>
+          <article class="bg-paper p-6 sm:p-8"><h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Contas alcançadas</h3><p class="mt-4 font-display text-7xl font-black leading-none tracking-tight">3,2<span class="text-rosso">M</span></p><p class="mt-2 text-sm text-zinc-600">pessoas diferentes em 90 dias</p></article>
+          <article class="bg-paper p-6 sm:p-8"><h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Público masculino</h3><p class="mt-4 font-display text-7xl font-black leading-none tracking-tight">92,2<span class="text-rosso">%</span></p><div class="mt-5 h-2.5 bg-zinc-300" role="img" aria-label="92,2% do público é masculino"><div class="h-full bg-rosso" style="width: 92.2%"></div></div></article>
+          <article class="bg-paper p-6 sm:p-8"><h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Entre 25 e 44 anos</h3><p class="mt-4 font-display text-7xl font-black leading-none tracking-tight">64,5<span class="text-rosso">%</span></p><div class="mt-5 h-2.5 bg-zinc-300" role="img" aria-label="64,5% do público tem entre 25 e 44 anos"><div class="h-full bg-rosso" style="width: 64.5%"></div></div></article>
+          <article class="bg-paper p-6 sm:col-span-2 sm:p-8 lg:col-span-3">
+            <h3 class="font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Principais praças</h3>
+            <ol class="mt-5 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-5"><!-- PRACAS:INICIO -->
+              <li class="flex items-baseline gap-3 border-t-2 border-ink pt-2 sm:block"><span class="font-display text-3xl font-black text-rosso">01</span><span class="block font-display text-2xl font-extrabold uppercase leading-tight">São Paulo</span></li>
+              <li class="flex items-baseline gap-3 border-t-2 border-ink pt-2 sm:block"><span class="font-display text-3xl font-black text-rosso">02</span><span class="block font-display text-2xl font-extrabold uppercase leading-tight">Rio de Janeiro</span></li>
+              <li class="flex items-baseline gap-3 border-t-2 border-ink pt-2 sm:block"><span class="font-display text-3xl font-black text-rosso">03</span><span class="block font-display text-2xl font-extrabold uppercase leading-tight">Curitiba</span></li>
+              <li class="flex items-baseline gap-3 border-t-2 border-ink pt-2 sm:block"><span class="font-display text-3xl font-black text-rosso">04</span><span class="block font-display text-2xl font-extrabold uppercase leading-tight">Belo Horizonte</span></li>
+              <li class="flex items-baseline gap-3 border-t-2 border-ink pt-2 sm:block"><span class="font-display text-3xl font-black text-rosso">05</span><span class="block font-display text-2xl font-extrabold uppercase leading-tight">Brasília</span></li>
+              <!-- PRACAS:FIM -->
+            </ol>
+          </article>
+        </div>
+        <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Fonte · Instagram Insights · últimos 90 dias até outubro de 2026 · 0% de alcance pago</p>
+      </div>
+    </section>
+
+    <!-- ============ COMERCIAL ============ -->
+    <section id="comercial" class="bg-carbon py-16 sm:py-24" aria-labelledby="comercial-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-white pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Para marcas</span>
+            <span class="font-serif text-lg italic text-zinc-400">Comercial</span>
+          </div>
+          <h2 id="comercial-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Por que anunciar no Exotics Brazil</h2>
+        </div>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          <div class="lg:col-span-7">
+            <p class="font-serif text-2xl leading-snug text-white sm:text-[28px]">Em 90 dias, o Exotics Brazil entregou <strong class="font-medium text-rosso">30,8 milhões de visualizações</strong> e alcançou <strong class="font-medium text-rosso">3,2 milhões de contas</strong>, sem um centavo de anúncio, para um público 92,2% masculino, com 64,5% entre 25 e 44 anos e as cinco maiores praças em São Paulo, Rio de Janeiro, Curitiba, Belo Horizonte e Brasília.</p>
+            <p class="mt-6 text-[17px] leading-[1.75] text-zinc-300">Conteúdo de parceiro segue as mesmas regras da redação. O assunto é o trabalho executado, a decisão técnica por trás dele e o problema que ele resolveu, contado na linguagem da página, para que o seguidor leia como conteúdo e não como anúncio.</p>
+            <h3 class="mt-10 font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">Formatos de entrega</h3>
+            <ol class="mt-3 grid gap-px border-2 border-zinc-800 bg-zinc-800 sm:grid-cols-2">
+              <li class="flex flex-col bg-carbon-2 p-6"><p class="font-display text-4xl font-black leading-none text-rosso">01</p><p class="mt-4 font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Feed e carrossel</p><h4 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Branded content editorial</h4><p class="mt-3 text-[15px] leading-relaxed text-zinc-400">Storytelling técnico que apresenta o produto ou serviço com o mesmo rigor das reportagens, para blindagem, estética e PPF, preparação, seguros premium, relógios e lifestyle, concessionárias e importadoras. O post se lê como conteúdo e gera salvamento e compartilhamento de verdade.</p></li>
+              <li class="flex flex-col bg-carbon-2 p-6"><p class="font-display text-4xl font-black leading-none text-rosso">02</p><p class="mt-4 font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Vídeo</p><h4 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Produção audiovisual e Reels em loco</h4><p class="mt-3 text-[15px] leading-relaxed text-zinc-400">Cobertura presencial em lojas, oficinas especializadas e lançamentos, com captação, roteiro e apresentação em vídeo pela equipe do Exotics Brazil.</p></li>
+              <li class="flex flex-col bg-carbon-2 p-6"><p class="font-display text-4xl font-black leading-none text-rosso">03</p><p class="mt-4 font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Montadoras e concessionárias</p><h4 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Cobertura institucional e lançamentos</h4><p class="mt-3 text-[15px] leading-relaxed text-zinc-400">Presença e cobertura em tempo real de track days, revelações de modelo e eventos VIP, no feed, nos Stories e no portal.</p></li>
+              <li class="flex flex-col bg-carbon-2 p-6"><p class="font-display text-4xl font-black leading-none text-rosso">04</p><p class="mt-4 font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Portal</p><h4 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Artigo patrocinado e dossiê permanente</h4><p class="mt-3 text-[15px] leading-relaxed text-zinc-400">Reportagem publicada na Revista do site, indexada pelos buscadores e aberta aos assistentes de IA, com uma autoridade que continua rendendo muito depois de o post sair do feed.</p></li>
+            </ol>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="mailto:pedroponchioferreira@gmail.com?subject=M%C3%ADdia%20kit%20Exotics%20Brazil" class="inline-flex items-center justify-center gap-3 bg-rosso px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink"><i data-lucide="file-text" class="h-5 w-5" aria-hidden="true"></i> Solicitar mídia kit</a>
+              <a href="https://ig.me/m/exoticsbrazil" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 border-2 border-white px-7 py-4 font-display text-xl font-bold uppercase tracking-wide transition-colors hover:bg-white hover:text-ink"><i data-lucide="message-circle" class="h-5 w-5" aria-hidden="true"></i> Falar no Direct</a>
+            </div>
+            <p class="mt-5 font-mono text-sm text-zinc-400"><a href="mailto:pedroponchioferreira@gmail.com" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-white">pedroponchioferreira@gmail.com</a></p>
+          </div>
+
+          <aside class="space-y-10 lg:col-span-5" aria-label="Prova social">
+            <div class="border-t-4 border-white">
+              <h3 class="bg-white px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-ink">Posts de vitrine</h3>
+              <ul class="divide-y divide-zinc-800 border-b-2 border-white"><!-- VITRINE:INICIO -->
+                <li class="py-3"><p class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Lamborghini Revuelto</p><p class="mt-1 font-display text-3xl font-black uppercase leading-none tracking-tight">1,85 mi <span class="text-base font-bold text-zinc-400">visualizações, 16 mil envios</span></p></li>
+                <li class="py-3"><p class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Bugatti Chiron</p><p class="mt-1 font-display text-3xl font-black uppercase leading-none tracking-tight">932 mil <span class="text-base font-bold text-zinc-400">contas alcançadas, 18 mil envios</span></p></li>
+                <li class="py-3"><p class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Porsche 911</p><p class="mt-1 font-display text-3xl font-black uppercase leading-none tracking-tight">724 mil <span class="text-base font-bold text-zinc-400">contas alcançadas, 135 mil curtidas</span></p></li>
+                <!-- VITRINE:FIM -->
+              </ul>
+              <p class="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">Fonte · Instagram Insights · mídia kit 2026 · 100% orgânico</p>
+            </div>
+            <div class="border-t-4 border-white">
+              <h3 id="parceiros-titulo" class="bg-white px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-ink">Marcas parceiras e institucional</h3>
+              <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">Patrocinadores</p>
+              <ul class="mt-2 divide-y divide-zinc-800 border-b-2 border-white"><!-- PATROCINADORES:INICIO -->
+                <li class="py-4"><p class="font-display text-3xl font-black uppercase leading-none tracking-tight">Franqueira Seguros</p><p class="mt-1.5 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-500">Seguros</p></li>
+                <li class="py-4"><p class="font-display text-3xl font-black uppercase leading-none tracking-tight">Strike Brasil</p><p class="mt-1.5 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-500">Representante oficial AEV · Campo Grande, MS</p></li>
+                <li class="py-4"><p class="font-display text-3xl font-black uppercase leading-none tracking-tight">Fast Team</p><p class="mt-1.5 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-500">Customização veicular · Belo Horizonte, MG</p></li>
+                <!-- PATROCINADORES:FIM -->
+              </ul>
+              <p class="mt-6 font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">Institucional</p>
+              <div class="mt-2 border-l-[6px] border-white bg-carbon-3 p-5">
+                <p class="font-display text-3xl font-black uppercase leading-none tracking-tight">Porsche Center Brasília</p>
+                <p class="mt-2 text-[15px] leading-relaxed text-zinc-400">Relacionamento institucional e coberturas.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPRENSA E CREDENCIAMENTO ============ -->
+    <section id="imprensa" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="imprensa-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-ink pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Imprensa e credenciamento</span>
+            <span class="font-serif text-lg italic text-zinc-600">Para montadoras, assessorias e organizadores</span>
+          </div>
+          <h2 id="imprensa-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Credenciamento de imprensa</h2>
+        </div>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          <div class="lg:col-span-7">
+            <p class="text-[18px] leading-[1.75] text-zinc-800">O Exotics Brazil atua como veículo de imprensa automotiva e cobre lançamentos de modelos, eventos de pista, salões e experiências de marca no Brasil e no exterior, com publicação no Instagram, para 501 mil seguidores, e reportagem na Revista do portal.</p>
+            <p class="mt-5 text-[18px] leading-[1.75] text-zinc-800">A cobertura presencial começou em 2016, no <a href="mustang-vira-ao-brasil/" class="font-semibold text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Salão do Automóvel de São Paulo</a>, com presença na coletiva de imprensa da Ford. Em 2018 a equipe esteve no <a href="bmw-ultimate-experience-2018/" class="font-semibold text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">BMW Ultimate Experience, em Brasília</a>, com fotos próprias, e a redação mantém relacionamento institucional com o Porsche Center Brasília, com presença nos eventos e lançamentos da concessionária.</p>
+            <h3 class="mt-10 font-display text-base font-bold uppercase tracking-[0.14em] text-zinc-500">O que entregamos numa cobertura</h3>
+            <ul class="mt-3 grid gap-x-8 border-b-2 border-ink sm:grid-cols-2">
+              <li class="flex gap-3 border-t-2 border-ink py-3"><i data-lucide="check" class="mt-1 h-5 w-5 shrink-0 text-rosso" aria-hidden="true"></i><span class="font-display text-xl font-bold uppercase leading-tight tracking-tight">Cobertura em tempo real nos Stories</span></li>
+              <li class="flex gap-3 border-t-2 border-ink py-3"><i data-lucide="check" class="mt-1 h-5 w-5 shrink-0 text-rosso" aria-hidden="true"></i><span class="font-display text-xl font-bold uppercase leading-tight tracking-tight">Post no feed com ficha técnica e contexto Brasil</span></li>
+              <li class="flex gap-3 border-t-2 border-ink py-3"><i data-lucide="check" class="mt-1 h-5 w-5 shrink-0 text-rosso" aria-hidden="true"></i><span class="font-display text-xl font-bold uppercase leading-tight tracking-tight">Reels com direção audiovisual própria</span></li>
+              <li class="flex gap-3 border-t-2 border-ink py-3"><i data-lucide="check" class="mt-1 h-5 w-5 shrink-0 text-rosso" aria-hidden="true"></i><span class="font-display text-xl font-bold uppercase leading-tight tracking-tight">Reportagem na Revista, com link permanente e indexada</span></li>
+            </ul>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="mailto:pedroponchioferreira@gmail.com?subject=Credenciamento%20Exotics%20Brazil" class="inline-flex items-center justify-center gap-3 bg-rosso px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-ink"><i data-lucide="badge-check" class="h-5 w-5" aria-hidden="true"></i> Credenciar o EB</a>
+              <a href="mailto:pedroponchioferreira@gmail.com?subject=Pauta%20para%20o%20Exotics%20Brazil" class="inline-flex items-center justify-center gap-3 border-2 border-ink px-7 py-4 font-display text-xl font-bold uppercase tracking-wide transition-colors hover:bg-ink hover:text-white"><i data-lucide="mail" class="h-5 w-5" aria-hidden="true"></i> Enviar pauta ou press kit</a>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5" aria-label="Contato para assessorias">
+            <div class="border-t-4 border-ink">
+              <h3 class="bg-ink px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-white">Contato para assessorias</h3>
+              <dl class="divide-y divide-zinc-300 border-b-2 border-ink">
+                <div class="py-4"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Editor-chefe</dt><dd class="mt-1 font-display text-2xl font-black uppercase leading-none tracking-tight">Pedro Ponchio</dd></div>
+                <div class="py-4"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Audiovisual e coberturas</dt><dd class="mt-1 font-display text-2xl font-black uppercase leading-none tracking-tight">Lucca Lage</dd></div>
+                <div class="py-4"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">E-mail</dt><dd class="mt-1 font-mono text-[15px]"><a href="mailto:pedroponchioferreira@gmail.com" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">pedroponchioferreira@gmail.com</a></dd></div>
+                <div class="py-4"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Direct</dt><dd class="mt-1 font-mono text-[15px]"><a href="https://ig.me/m/exoticsbrazil" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">ig.me/m/exoticsbrazil</a></dd></div>
+                <div class="py-4"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Redação</dt><dd class="mt-1 font-display text-2xl font-black uppercase leading-none tracking-tight">Brasília, DF · cobertura nacional</dd></div>
+              </dl>
+              <p class="mt-4 text-[15px] leading-relaxed text-zinc-600">Convites, pautas e press kits pelo e-mail, com o assunto Credenciamento ou Pauta. Mídia kit e dados de audiência sob pedido.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPEDIENTE ============ -->
+    <section id="expediente" class="bg-carbon py-16 sm:py-24" aria-labelledby="duelo-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-white pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Expediente</span>
+            <span class="font-serif text-lg italic text-zinc-400">Quem assina o Exotics Brazil</span>
+          </div>
+          <h2 id="duelo-titulo" class="mt-5 font-display text-6xl font-black uppercase leading-[0.86] tracking-tight sm:text-8xl lg:text-[120px]">Mercedes <span class="text-rosso">×</span> BMW</h2>
+          <p class="mt-6 max-w-3xl font-serif text-xl leading-relaxed text-zinc-300 sm:text-2xl">A redação do Exotics Brazil é comandada por dois sócios que concordam em quase tudo sobre jornalismo automotivo e em quase nada sobre carros alemães. A briga entre Mercedes e BMW é antiga, bem-humorada e aparece nos posts das duas marcas, e os seguidores costumam escolher um lado nos comentários.</p>
+        </div>
+
+        <div class="relative mt-12 grid border-2 border-zinc-800 md:grid-cols-2">
+          <article class="flex flex-col bg-carbon-2">
+            <div class="amg-bar h-2" aria-hidden="true"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-amg">Time Mercedes · AdmMercedeiro</p>
+              <h3 class="mt-4 font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-6xl">Pedro<br>Ponchio</h3>
+              <p class="mt-3 font-display text-lg font-bold uppercase tracking-wide text-zinc-400">Fundador, editor-chefe e diretor comercial</p>
+              <p class="mt-6 flex-1 font-serif text-lg leading-relaxed text-zinc-300">Fundou a página em 16 de abril de 2013 e responde pela linha editorial, pela apuração do Censo EB, pela redação dos dossiês técnicos e pelo relacionamento institucional e comercial. Fotógrafo automotivo desde 2012.</p>
+              <a href="https://www.instagram.com/ppspots/" target="_blank" rel="noopener" class="mt-8 inline-flex w-fit items-center gap-2 border-b-2 border-amg pb-1 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:text-amg">@ppspots <i data-lucide="arrow-up-right" class="h-5 w-5" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="pointer-events-none absolute left-1/2 top-1/2 z-10 hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center bg-rosso font-display text-3xl font-black uppercase text-white md:grid" aria-hidden="true">VS</div>
+          <article class="flex flex-col border-t-2 border-zinc-800 bg-carbon-2 md:border-l-2 md:border-t-0">
+            <div class="m-stripes h-2" aria-hidden="true"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10 md:pl-14">
+              <p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-mblue-light">Time BMW · AdmBimmer</p>
+              <h3 class="mt-4 font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-6xl">Lucca<br>Lage</h3>
+              <p class="mt-3 font-display text-lg font-bold uppercase tracking-wide text-zinc-400">Cofundador e diretor de conteúdo audiovisual</p>
+              <p class="mt-6 flex-1 font-serif text-lg leading-relaxed text-zinc-300">Responde pela direção dos Reels e vídeos, pelas coberturas presenciais de lançamentos de montadoras e eventos e pelas produções em estúdio e em lojas.</p>
+              <a href="https://www.instagram.com/e36dunkelblau/" target="_blank" rel="noopener" class="mt-8 inline-flex w-fit items-center gap-2 border-b-2 border-mblue-light pb-1 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:text-mblue-light">@e36dunkelblau <i data-lucide="arrow-up-right" class="h-5 w-5" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLAGRAS EM DESTAQUE ============ -->
+    <section id="flagras" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="flagras-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-ink pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Galeria</span>
+            <span class="font-serif text-lg italic text-zinc-600">Direto do feed</span>
+          </div>
+          <h2 id="flagras-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Flagras em destaque no feed</h2>
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700">Todos flagrados no Brasil e publicados no @exoticsbrazil, com a cidade e o crédito de quem fez a foto. Cada foto abre o post original.</p>
+        </div>
+
+        <div class="mt-12 gap-6 [column-fill:_balance] sm:columns-2 lg:columns-3">
+          <!-- GALERIA:INICIO -->
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/Db_EKPTmx7L/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari LaFerrari no Instagram">
+              <img src="img/ferrari-laferrari-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Ferrari LaFerrari vermelha estacionada numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari LaFerrari</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DeQdL93te0O/" target="_blank" rel="noopener" aria-label="Abrir o post do McLaren Senna no Instagram">
+              <img src="img/mclaren-senna-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="McLaren Senna de carbono escuro com detalhes amarelos, à noite em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">McLaren Senna</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/ally.prix/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@ally.prix</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbybBvAm4ra/" target="_blank" rel="noopener" aria-label="Abrir o post do Mercedes SLR McLaren no Instagram">
+              <img src="img/mercedes-slr-mclaren-belo-horizonte.jpg" width="1080" height="1350" loading="lazy" alt="Mercedes SLR McLaren prata de portas abertas em Belo Horizonte" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mercedes SLR McLaren</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Belo Horizonte, MG · 📷 <a href="https://www.instagram.com/guilhermemarpe/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@guilhermemarpe</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DaL0o_0O8rJ/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari F40 no Instagram">
+              <img src="img/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" loading="lazy" alt="Ferrari F40 vermelha vista de cima em Ribeirão Preto" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari F40</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Ribeirão Preto, SP · 📷 <a href="https://www.instagram.com/jlr.gabriel016/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@jlr.gabriel016</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/Dbg6UCYG2sZ/" target="_blank" rel="noopener" aria-label="Abrir o post do KTM X-Bow GT-XR no Instagram">
+              <img src="img/ktm-x-bow-gt-xr-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="KTM X-Bow GT-XR verde escuro à noite numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">KTM X-Bow GT-XR</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/gss_motors04/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@gss_motors04</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbvPX3gDQoc/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Aventador SVJ no Instagram">
+              <img src="img/lamborghini-aventador-svj-sao-paulo.jpg" width="1080" height="1350" loading="lazy" alt="Lamborghini Aventador SVJ marrom diante de uma casa em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Aventador SVJ</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/rodrigoinsuellos/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@rodrigoinsuellos</a> <a href="https://www.instagram.com/joaovilkas/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@joaovilkas</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DdrNjIDDeCz/" target="_blank" rel="noopener" aria-label="Abrir o post do Porsche 911 Carrera (993) Protomotive no Instagram">
+              <img src="img/porsche-911-993-protomotive-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Porsche 911 Carrera 993 prata com rodas douradas num posto de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Porsche 911 Carrera (993) Protomotive</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@obarbaqueviu</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DaGfzfPuXdT/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 488 Pista ✖️ Ferrari F12tdf no Instagram">
+              <img src="img/ferrari-488-pista-f12tdf-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Ferrari 488 Pista e Ferrari F12tdf em Grigio Scuro lado a lado numa garagem de Curitiba" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 488 Pista ✖️ Ferrari F12tdf</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/curitibaautoimports/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@curitibaautoimports</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbwT-aTjcpF/" target="_blank" rel="noopener" aria-label="Abrir o post do Mazda Ēfini RX-7 (FD3S) no Instagram">
+              <img src="img/mazda-rx-7-fd-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Mazda RX-7 FD azul de rodas douradas num posto à noite em Curitiba" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mazda Ēfini RX-7 (FD3S)</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/lohan_esplugues/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@lohan_esplugues</a> <a href="https://www.instagram.com/cars.lovers.cwb/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@cars.lovers.cwb</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZlQ6bbGzNo/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 812 Competizione no Instagram">
+              <img src="img/ferrari-812-competizione-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="Ferrari 812 Competizione vermelha escura vista de trás numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 812 Competizione</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DdB-NiRjoHV/" target="_blank" rel="noopener" aria-label="Abrir o post do Renault Clio V6 (Phase 1) no Instagram">
+              <img src="img/renault-clio-v6-jaragua-do-sul.jpg" width="1080" height="1440" loading="lazy" alt="Renault Clio V6 Phase 1 prata dentro de um estúdio de estética automotiva em Jaraguá do Sul" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Renault Clio V6 (Phase 1)</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Jaraguá do Sul, SC · 📷 <a href="https://www.instagram.com/stardetailjaragua/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@stardetailjaragua</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZStfFKm1RS/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Diablo VT no Instagram">
+              <img src="img/lamborghini-diablo-vt-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Lamborghini Diablo VT amarela numa avenida de São Paulo com prédios ao fundo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Diablo VT</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@edison_carvalho</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZLhIspDVHH/" target="_blank" rel="noopener" aria-label="Abrir o post do Spyker C8 Laviolette no Instagram">
+              <img src="img/spyker-c8-laviolette-sao-paulo.jpg" width="1440" height="1080" loading="lazy" alt="Spyker C8 Laviolette cinza estacionado diante de uma loja em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Spyker C8 Laviolette</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP (registro de 2011) · 📷 <a href="https://www.instagram.com/daniel_stussi/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@daniel_stussi</a> via <a href="https://www.instagram.com/sportscarsbr/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@sportscarsbr</a></p>
+            </figcaption>
+          </figure>
+          <!-- GALERIA:FIM -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PERGUNTAS FREQUENTES ============ -->
+    <section id="faq" class="bg-carbon py-16 sm:py-24" aria-labelledby="faq-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="border-t-4 border-white pt-4">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Perguntas frequentes</span>
+            <span class="font-serif text-lg italic text-zinc-400">Censo, imprensa e parcerias</span>
+          </div>
+          <h2 id="faq-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">O que perguntam sobre o EB</h2>
+        </div>
+        <div class="mt-10 border-t-2 border-zinc-800">
+          <!-- FAQ:INICIO -->
+          <details class="group border-b-2 border-zinc-800 py-5" open>
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Qual é a maior página de carros exóticos do Brasil e da América Latina?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">O Exotics Brazil (@exoticsbrazil). Fundado em Brasília em 16 de abril de 2013, tem 501 mil seguidores no Instagram, todos conquistados sem anúncio pago, e somou 30,8 milhões de visualizações nos 90 dias até outubro de 2026. Além da página, publica reportagens na <a href="/revista/">Revista Exotics Brazil</a>, com arquivo desde 2016.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">O que é o Censo EB e como ele funciona?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">É a contagem de unidades de cada carro exótico no Brasil feita pela redação do Exotics Brazil. O número só é publicado quando a apuração consegue confirmá-lo, cruzando as fontes de registro e de importação a que a página tem acesso com o que a rede de spotters vê na rua. Sem confirmação, a página usa termos qualitativos, como raríssimo, e nunca um número estimado.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Quantas Ferrari F40 existem no Brasil?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Duas, segundo o Censo EB. Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel, e a outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária. A história está no <a href="/censo-hipercarros-brasil-2026/">censo dos hipercarros no Brasil em 2026</a>.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Quantos Porsche 911 GT2 RS da geração 997 existem no Brasil?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Oito, de 500 fabricadas entre 2010 e 2012. O modelo usa o 3.6 biturbo Mezger, de 620cv, sempre com câmbio manual de seis marchas, e aparece na reportagem <a href="/porsche-de-pista-e-series-limitadas-no-brasil/">Do 997 GT2 RS Mezger ao Porsche 935</a>.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Quantas Ferrari LaFerrari existem no Brasil?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Quatro, segundo o Censo EB, sendo três cupês e uma Aperta, a versão conversível. A quarta chegou em setembro de 2026, em Giallo Triplo Strato.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Quais carros exóticos raros rodam no Brasil hoje?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Entre os confirmados pelo Censo EB até outubro de 2026 estão o único Bugatti Chiron Sport do país, quatro Ferrari LaFerrari, duas Ferrari F40, seis Lamborghini Aventador Ultimae cupê, dois Porsche 935, oito Porsche 911 GT2 RS 997, o único Rolls-Royce Phantom VIII Series II e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. A <a href="/revista/">Revista</a> traz os números carro por carro.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">O que é o Porsche Paint to Sample (PTS)?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">É o programa da Porsche que pinta o carro numa cor fora do catálogo comum, escolhida entre cores históricas e especiais da marca ou feita a partir de uma amostra. O Exotics Brazil explicou o programa em 2018, numa <a href="/pts-paint-to-sample/">reportagem que continua na Revista</a>.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Como credenciar o Exotics Brazil para um lançamento ou evento?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Assessorias de imprensa, montadoras e organizadores podem escrever para <a href="mailto:pedroponchioferreira@gmail.com?subject=Credenciamento">pedroponchioferreira@gmail.com</a> com o assunto Credenciamento, ou chamar no Direct do @exoticsbrazil. A página cobre lançamentos, eventos de pista, salões e experiências de marca no Brasil e no exterior.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Como anunciar no Exotics Brazil?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Pelo mesmo e-mail, <a href="mailto:pedroponchioferreira@gmail.com?subject=M%C3%ADdia%20kit">pedroponchioferreira@gmail.com</a>, com o assunto Mídia kit. Os formatos são branded content editorial no feed e em carrossel, produção audiovisual e Reels em loco, cobertura institucional de lançamentos e artigo patrocinado no portal.</p>
+          </details>
+          <details class="group border-b-2 border-zinc-800 py-5">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">Como enviar um flagra para o Exotics Brazil?</h3>
+              <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">Pelo Direct do @exoticsbrazil, com a foto em boa resolução, a cidade do flagra e a arroba de quem fotografou. Toda foto publicada leva o crédito, e a localização publicada nunca desce abaixo do nível da cidade.</p>
+          </details>
+          <!-- FAQ:FIM -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPOTTERS ============ -->
+    <section id="spotters" class="grid bg-rosso lg:grid-cols-2" aria-labelledby="spotters-titulo">
+      <figure class="bg-black">
+        <img src="img/spotters-bugatti-chiron-sport-sao-paulo.jpg" width="1100" height="1467" loading="lazy" alt="Bugatti Chiron Sport azul de dois tons estacionado numa calçada de São Paulo, com pessoas em volta olhando o carro" class="foto-carro">
+        <figcaption class="border-t border-zinc-800 px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-300">Bugatti Chiron Sport · São Paulo, SP · Foto: <a href="https://www.instagram.com/vh.spotter/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-white">@vh.spotter</a> · <a href="https://www.instagram.com/p/DcWiJHom32l/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-white">ver post</a></figcaption>
+      </figure>
+      <div class="flex flex-col justify-center px-6 py-16 text-white sm:px-12 lg:px-16">
+        <span class="w-fit bg-black px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Spotters</span>
+        <h2 id="spotters-titulo" class="mt-5 font-display text-6xl font-black uppercase leading-[0.86] tracking-tight sm:text-7xl lg:text-[92px]">Flagrou um exótico? <span class="text-black">Manda pra gente.</span></h2>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/90">Recebemos flagras pelo Direct do @exoticsbrazil, e toda foto publicada leva o crédito de quem fez. Boa parte do que aparece no feed vem de uma rede de spotters e fotógrafos parceiros, com contato direto com a gente.</p>
+        <ol class="mt-8 max-w-xl divide-y divide-white/30 border-y-2 border-black">
+          <li class="flex gap-4 py-3"><span class="font-display text-2xl font-black text-black">01</span><span class="pt-1 text-[15px] leading-relaxed">Mande a foto em boa resolução, a cidade do flagra e a sua arroba.</span></li>
+          <li class="flex gap-4 py-3"><span class="font-display text-2xl font-black text-black">02</span><span class="pt-1 text-[15px] leading-relaxed">Crédito autoral em toda foto publicada, inclusive quando o flagra chega por outra página.</span></li>
+          <li class="flex gap-4 py-3"><span class="font-display text-2xl font-black text-black">03</span><span class="pt-1 text-[15px] leading-relaxed">A localização publicada nunca desce abaixo da cidade, para proteger quem é dono do carro.</span></li>
+        </ol>
+        <a href="https://ig.me/m/exoticsbrazil" target="_blank" rel="noopener" class="mt-10 inline-flex w-fit items-center gap-3 bg-black px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink"><i data-lucide="send" class="h-5 w-5" aria-hidden="true"></i> Enviar flagra pelo Direct</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="bg-black">
+    <div class="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-10 border-b-4 border-rosso pb-10 md:flex-row md:items-end md:justify-between">
+        <img src="img/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-40 w-auto sm:h-52">
+        <p class="max-w-md font-display text-3xl font-black uppercase leading-[0.95] tracking-tight sm:text-4xl">Os carros exóticos que rodam no Brasil, desde 16 de abril de 2013.</p>
+      </div>
+      <div class="grid gap-10 py-10 md:grid-cols-3">
+        <p class="text-[15px] leading-relaxed text-zinc-400">A maior página de carros exóticos da América Latina. Fundada em Brasília, em 16 de abril de 2013. O exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do @exoticsbrazil no Instagram, onde mais de 501 mil seguidores acompanham os flagras diariamente.</p>
+        <ul class="space-y-2 font-display text-lg font-bold uppercase tracking-wide">
+          <li><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hover:text-rosso">Instagram @exoticsbrazil</a></li>
+          <li><a href="revista/" class="hover:text-rosso">Revista Exotics Brazil</a></li>
+          <li><a href="censo/" class="hover:text-rosso">Censo EB, dados abertos</a></li>
+          <li><a href="#imprensa" class="hover:text-rosso">Imprensa e credenciamento</a></li>
+          <li><a href="mailto:pedroponchioferreira@gmail.com" class="hover:text-rosso">Comercial por e-mail</a></li>
+          <li><a href="https://ig.me/m/exoticsbrazil" target="_blank" rel="noopener" class="hover:text-rosso">Enviar flagra</a></li>
+          <li><a href="rss.xml" class="hover:text-rosso">RSS da Revista</a></li>
+        </ul>
+        <p class="text-[13px] leading-relaxed text-zinc-500">Fotos do acervo do @exoticsbrazil, com a cidade e o crédito de cada fotógrafo na legenda e o enquadramento original preservado. Ferrari 458 Italia e Porsche 911 GT2 RS por Pedro Ponchio (@ppspots).</p>
+      </div>
+    </div>
+    <div class="border-t border-zinc-800">
+      <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 font-display text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+        <p>© <span id="ano">2026</span> Exotics Brazil · marca registrada</p>
+        <p>Desde 16/04/2013 · Brasília, DF</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Símbolo da barra fixa: some enquanto o cabeçalho com a logo grande está na tela
+    (function () {
+      var simbolo = document.getElementById('nav-simbolo');
+      var masthead = document.getElementById('masthead');
+      if (!simbolo || !masthead) return;
+      var pendente = false;
+      function atualizar() {
+        pendente = false;
+        var noTopo = masthead.getBoundingClientRect().bottom > 0;
+        simbolo.classList.toggle('opacity-0', noTopo);
+        simbolo.classList.toggle('invisible', noTopo);
+      }
+      function agendar() { if (!pendente) { pendente = true; requestAnimationFrame(atualizar); } }
+      window.addEventListener('scroll', agendar, { passive: true });
+      window.addEventListener('resize', agendar);
+      atualizar();
+    })();
+
+    // Menu mobile
+    (function () {
+      var btn = document.getElementById('menu-btn');
+      var menu = document.getElementById('menu-mobile');
+      function setOpen(open) {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        btn.innerHTML = '<i data-lucide="' + (open ? 'x' : 'menu') + '" class="h-5 w-5" aria-hidden="true"></i>';
+        if (window.lucide) { lucide.createIcons(); }
+      }
+      btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
+
+    // Dossiê EB: o bloco técnico de cada carro é o mesmo publicado no feed
+    (function () {
+      var cars = [
+        {
+          "id": "gt2rs",
+          "aba": "911 GT2 RS 997",
+          "nome": "Porsche 911 GT2 RS 997",
+          "cidade": "Brasília, DF",
+          "fotografo": "ppspots",
+          "autor": "Pedro Ponchio",
+          "ano": "2015",
+          "post": "",
+          "foto": "img/porsche-911-gt2-rs-997-brasilia.jpg",
+          "w": 1800,
+          "h": 1200,
+          "alt": "Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília",
+          "bloco": [
+            [
+              "🔩Motor",
+              "3.6 H6 biturbo Mezger"
+            ],
+            [
+              "🐎Potência",
+              "620cv"
+            ],
+            [
+              "📊Torque",
+              "71,4 kgfm"
+            ],
+            [
+              "⌚️0-100km/h",
+              "3,5s"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "330km/h"
+            ],
+            [
+              "📐Peso",
+              "1.370kg"
+            ],
+            [
+              "📈Tração",
+              "Traseira"
+            ],
+            [
+              "🕹️Câmbio",
+              "Manual 6v"
+            ],
+            [
+              "📅Produção",
+              "2010–2012 (500 unidades)"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "2,21kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbPorsche #Eb911GT2RS #EbBrasilia",
+          "censo": "8 unidades no Brasil",
+          "contexto": "De 500 fabricadas no mundo. Usa o motor Mezger, nascido nas pistas, que a Porsche já tinha substituído no 911 Turbo comum da mesma geração."
+        },
+        {
+          "id": "phantom",
+          "aba": "Phantom VIII Series II",
+          "nome": "Rolls-Royce Phantom VIII Series II",
+          "cidade": "São Paulo, SP",
+          "fotografo": "jota.carspotting",
+          "post": "DYmxTG7jW_0",
+          "foto": "img/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg",
+          "w": 1600,
+          "h": 1361,
+          "alt": "Rolls-Royce Phantom VIII Series II preto rodando numa avenida arborizada de São Paulo",
+          "bloco": [
+            [
+              "🔩Motor",
+              "6.7L V12 biturbo"
+            ],
+            [
+              "🐎Potência",
+              "571cv"
+            ],
+            [
+              "📊Torque",
+              "91,7kgfm"
+            ],
+            [
+              "⌚️0-100",
+              "5,3s"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "250km/h"
+            ],
+            [
+              "📐Peso",
+              "2.699kg"
+            ],
+            [
+              "📈Tração",
+              "Traseira"
+            ],
+            [
+              "🕹️Câmbio",
+              "Automático 8v"
+            ],
+            [
+              "📅Fabricação",
+              "2022-presente"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "4,73kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbRollsRoyce #EbPhantom #EbSaoPaulo",
+          "censo": "O único do Brasil",
+          "contexto": "A unidade chegou por importação independente, e a coachline laranja na lateral, o filete que assina a personalização desse exemplar, é a única nota de cor do conjunto."
+        },
+        {
+          "id": "ultimae",
+          "aba": "Aventador Ultimae",
+          "nome": "Lamborghini Aventador Ultimae",
+          "cidade": "Brasília, DF",
+          "fotografo": "lh_spotterscars",
+          "post": "Dexdd2ZG2xy",
+          "foto": "img/lamborghini-aventador-ultimae-brasilia.jpg",
+          "w": 1200,
+          "h": 1600,
+          "alt": "Lamborghini Aventador Ultimae preta fosca fotografada à noite em Brasília",
+          "bloco": [
+            [
+              "🔩Motor",
+              "6.5 V12 aspirado"
+            ],
+            [
+              "🐎Potência",
+              "780cv"
+            ],
+            [
+              "📊Torque",
+              "73,4 kgfm"
+            ],
+            [
+              "⌚️0-100km/h",
+              "2,8s"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "355km/h"
+            ],
+            [
+              "📐Peso",
+              "1.550kg (a seco)"
+            ],
+            [
+              "📈Tração",
+              "Integral"
+            ],
+            [
+              "🕹️Câmbio",
+              "ISR 7v"
+            ],
+            [
+              "📅Produção",
+              "2021–2022 (350 unidades)"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "1,99kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbLamborghini #EbAventadorUltimae #EbBrasilia",
+          "censo": "6 unidades no Brasil",
+          "contexto": "Cada uma numa cor, e essa de Brasília é uma das duas pretas, a única em Nero Nemesis."
+        },
+        {
+          "id": "p935",
+          "aba": "Porsche 935",
+          "nome": "Porsche 935 (991.2)",
+          "cidade": "Curitiba, PR",
+          "fotografo": "antonio.huergo",
+          "post": "Dc6_CzpG9z4",
+          "foto": "img/porsche-935-curitiba.jpg",
+          "w": 1400,
+          "h": 1400,
+          "alt": "Porsche 935 moderno com pintura branca e azul de corrida e o número 70, à noite em Curitiba",
+          "bloco": [
+            [
+              "🔩Motor",
+              "H6 3.8 biturbo"
+            ],
+            [
+              "🐎Potência",
+              "700cv"
+            ],
+            [
+              "📊Torque",
+              "76,5 kgfm"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "~340km/h"
+            ],
+            [
+              "📐Peso",
+              "1.380kg"
+            ],
+            [
+              "📈Tração",
+              "traseira"
+            ],
+            [
+              "🕹️Câmbio",
+              "PDK 7v"
+            ],
+            [
+              "🎨Cor",
+              "Agate Grey Metallic (base de fábrica, sob a livery Sachs)"
+            ],
+            [
+              "📅Produção",
+              "2019 (77 unidades)"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "1,97kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbPorsche #Eb935 #EbCuritiba",
+          "censo": "2 unidades no Brasil",
+          "contexto": "De 77 fabricadas no mundo. Debaixo da pintura existe um 911 GT2 RS com carroceria de fibra de carbono, um carro do século XXI usando a roupa de um carro de corrida clássico."
+        },
+        {
+          "id": "fordgt",
+          "aba": "Ford GT Carbon Series",
+          "nome": "Ford GT Carbon Series",
+          "cidade": "São Paulo, SP",
+          "fotografo": "edubernasconi",
+          "post": "DX_mx_Fjpwa",
+          "foto": "img/ford-gt-carbon-series-sao-paulo.jpg",
+          "w": 1440,
+          "h": 1440,
+          "alt": "Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo",
+          "bloco": [
+            [
+              "🔩Motor",
+              "3.5 V6 BiTurbo"
+            ],
+            [
+              "🐎Potência",
+              "660cv"
+            ],
+            [
+              "📊Torque",
+              "76,4kgfm"
+            ],
+            [
+              "⌚️0-100km/h",
+              "3,2s"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "348km/h"
+            ],
+            [
+              "📐Peso",
+              "1.444kg"
+            ],
+            [
+              "📈Tração",
+              "Traseira"
+            ],
+            [
+              "🕹️Câmbio",
+              "DCT 7 velocidades"
+            ],
+            [
+              "🎨Cor",
+              "Psychic Purple"
+            ],
+            [
+              "📅Produção",
+              "2017-2022"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "2,19kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbFord #EbFordGT #EbSaoPaulo",
+          "censo": "O único Psychic Purple do mundo",
+          "contexto": "O Carbon Series chegou ao Brasil como a única unidade construída nessa cor no planeta. Rodas de fibra de carbono e peças em policarbonato tiram 18 kg do GT padrão."
+        },
+        {
+          "id": "gt3rs",
+          "aba": "911 GT3 RS 997.1",
+          "nome": "Porsche 911 GT3 RS (997.1)",
+          "cidade": "São Paulo, SP",
+          "fotografo": "photosbyjota_",
+          "post": "DcOJGBIm4-F",
+          "foto": "img/porsche-911-gt3-rs-997-sao-paulo.jpg",
+          "w": 1800,
+          "h": 1199,
+          "alt": "Porsche 911 GT3 RS da geração 997.1 laranja com faixas pretas, estacionado num posto de combustível em São Paulo",
+          "bloco": [
+            [
+              "🔩Motor",
+              "3.6 6 cil. boxer aspirado"
+            ],
+            [
+              "🐎Potência",
+              "415cv a 7.600 rpm"
+            ],
+            [
+              "📊Torque",
+              "41,3 kgfm"
+            ],
+            [
+              "⌚️0-100km/h",
+              "4,2s"
+            ],
+            [
+              "🏁Vel. Máxima",
+              "310km/h"
+            ],
+            [
+              "📐Peso",
+              "1.375kg"
+            ],
+            [
+              "📈Tração",
+              "Traseira"
+            ],
+            [
+              "🕹️Câmbio",
+              "Manual de 6 marchas"
+            ],
+            [
+              "🎨Cor",
+              "RS Orange"
+            ],
+            [
+              "📅Produção",
+              "2006–2009 (1.168 unidades)"
+            ],
+            [
+              "📐/🐎Peso/Potência",
+              "3,31kg/cv"
+            ]
+          ],
+          "hashtags": "#ExoticsBrazil #EbPorsche #Eb911GT3RS #EbSaoPaulo",
+          "censo": "4 unidades no Brasil",
+          "contexto": "Só quatro GT3 RS 997.1 entraram no país, e esta é a única laranja."
+        }
+      ];
+
+      cars.forEach(function (c) { var i = new Image(); i.src = c.foto; });
+
+      function esc(s) { return String(s).replace(/[&<>"]/g, function (ch) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]; }); }
+      function $(id) { return document.getElementById(id); }
+      function rotulo(l) { return l.replace(/^[^A-Za-zÀ-ú0-9]+/, '').replace(/^\/[^A-Za-zÀ-ú]+/, ''); }
+      function arrobas(f) { return f.split(/\s+/).map(function (h) { h = h.replace(/^@/, ''); return h === 'via' ? 'via' : '<a href="https://www.instagram.com/' + esc(h) + '/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-white">@' + esc(h) + '</a>'; }).join(' '); }
+
+      function credito(c) {
+        var foto = c.autor ? c.autor + ' (' + arrobas(c.fotografo) + ')' + (c.ano ? ', ' + c.ano : '') : arrobas(c.fotografo);
+        var post = c.post ? ' · <a href="https://www.instagram.com/p/' + c.post + '/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-white">ver post</a>' : '';
+        return esc(c.cidade) + ' · Foto: ' + foto + post;
+      }
+
+      function legenda(c) {
+        var sep = '➖➖➖', l = [sep, c.nome, '📍' + c.cidade, sep, '📷 @' + c.fotografo.replace(/^@/, ''), sep];
+        c.bloco.forEach(function (b) { l.push(b[0] + ': ' + b[1]); });
+        l.push(sep, c.hashtags);
+        return l.join('\n');
+      }
+
+      function destaques(c) {
+        var achar = function (re) { for (var i = 0; i < c.bloco.length; i++) if (re.test(c.bloco[i][0])) return c.bloco[i]; return null; };
+        var lista = [['Potência', achar(/Potência/)], ['0-100 km/h', achar(/0-100/)], ['Vel. máxima', achar(/Vel\. Máxima/)]];
+        if (!lista[1][1]) lista[1] = ['Peso', achar(/^📐Peso$/)];
+        return lista.filter(function (d) { return d[1]; }).map(function (d) {
+          var m = String(d[1][1]).match(/^([~+\d.,]+)\s*(\S*)/);
+          return [d[0], m ? m[1] : d[1][1], m ? m[2] : ''];
+        });
+      }
+
+      function render(c) {
+        $('ficha-modelo').textContent = c.nome;
+        var f = $('ficha-foto');
+        f.src = c.foto; f.width = c.w; f.height = c.h; f.alt = c.alt;
+        $('ficha-credito').innerHTML = credito(c);
+        var d = destaques(c);
+        $('ficha-destaques').innerHTML = d.map(function (x, i) {
+          var pad = i === 0 ? 'border-r border-zinc-800 pr-3' : (i === d.length - 1 ? 'pl-3' : 'border-r border-zinc-800 px-3');
+          return '<div class="' + pad + ' pt-3"><dt class="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-zinc-500">' + esc(x[0]) + '</dt><dd class="mt-1 font-display text-[38px] font-black leading-none">' + esc(x[1]) + '<span class="ml-0.5 text-lg font-bold text-zinc-400">' + esc(x[2]) + '</span></dd></div>';
+        }).join('');
+        $('ficha-linhas').innerHTML = c.bloco.map(function (b, i, arr) {
+          var red = /Peso\/Potência/.test(b[0]);
+          return '<div class="flex justify-between gap-4 py-2.5' + (i === arr.length - 1 ? '' : ' border-b border-zinc-800') + '"><dt class="shrink-0 ' + (red ? 'font-medium text-rosso' : 'text-zinc-500') + '">' + esc(rotulo(b[0])) + '</dt><dd class="text-right' + (red ? ' font-medium text-rosso' : '') + '">' + esc(b[1]) + '</dd></div>';
+        }).join('');
+        var ig = $('ig-foto');
+        ig.src = c.foto; ig.width = c.w; ig.height = c.h;
+        $('ig-legenda').textContent = legenda(c);
+        $('ig-credito').innerHTML = credito(c);
+        $('ficha-censo').textContent = c.censo;
+        $('ficha-contexto').textContent = c.contexto;
+      }
+
+      var abas = $('abas');
+      abas.innerHTML = cars.map(function (c, i) {
+        return '<button type="button" role="tab" id="tab-' + c.id + '" aria-controls="painel-ficha" aria-selected="' + (i === 0) + '"' + (i === 0 ? '' : ' tabindex="-1"') + ' class="tab shrink-0 pb-3 font-display text-lg font-extrabold uppercase tracking-tight transition-colors sm:text-xl">' + esc(c.aba) + '</button>';
+      }).join('');
+      var tabs = Array.prototype.slice.call(abas.querySelectorAll('[role="tab"]'));
+      function select(i) {
+        tabs.forEach(function (t, j) { t.setAttribute('aria-selected', String(i === j)); t.tabIndex = i === j ? 0 : -1; });
+        $('painel-ficha').setAttribute('aria-labelledby', tabs[i].id);
+        render(cars[i]);
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(i); });
+        t.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          var n = (i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+          tabs[n].focus(); select(n);
+        });
+      });
+
+      var segs = document.querySelectorAll('.seg');
+      segs.forEach(function (b) {
+        b.addEventListener('click', function () {
+          segs.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          var post = b.dataset.view === 'post';
+          $('view-ficha').classList.toggle('hidden', post);
+          $('view-ficha').classList.toggle('grid', !post);
+          $('view-post').classList.toggle('hidden', !post);
+          $('view-post').classList.toggle('grid', post);
+        });
+      });
+
+      select(0);
+    })();
+
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>
