@@ -37,39 +37,39 @@
 
 Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil). Tabela completa em https://www.exoticsbrazil.com.br/censo/, com âncora por modelo (por exemplo https://www.exoticsbrazil.com.br/censo/#ferrari-f40), dados estruturados em https://www.exoticsbrazil.com.br/censo.json e fatos prontos para citação em https://www.exoticsbrazil.com.br/fatos-ia.json. O censo muda a cada chegada ou saída de carro do país, e contagem antiga traz o ano entre parênteses.
 
-- Aston Martin V12 Vantage (2022): 4 unidades. De 333 fabricados no mundo. https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022
-- Bugatti Chiron Sport: 1 unidade. Em São Paulo, chegou em 2024 por importação independente. https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
-- Cadillac CTS-V Coupé: 11 unidades. https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
-- Chevrolet Camaro ZL1 (quinta geração): 14 unidades. https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
-- Ferrari 360 Challenge Stradale: 8 unidades. Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
-- Ferrari 458 Italia (cupê): 96 unidades. https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
-- Ferrari 812 GTS: 46 unidades. Uma única em Verde Kers. https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
-- Ferrari F40: 2 unidades. Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária. https://www.exoticsbrazil.com.br/censo/#ferrari-f40
-- Ferrari LaFerrari: 4 unidades. Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato. https://www.exoticsbrazil.com.br/censo/#ferrari-laferrari
-- Ford GT Carbon Series (segunda geração): 2 unidades. Uma delas é a única Psychic Purple do mundo. https://www.exoticsbrazil.com.br/censo/#ford-gt-carbon-series-segunda-geracao
-- Jaguar XJ220: 2 unidades. Uma prata e uma azul. https://www.exoticsbrazil.com.br/censo/#jaguar-xj220
-- Lamborghini Aventador Ultimae (cupê): 6 unidades. Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares. https://www.exoticsbrazil.com.br/censo/#lamborghini-aventador-ultimae-cupe
-- Lamborghini Huracán Tecnica: 21 unidades. https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-tecnica
-- Lamborghini Miura: 5 unidades. https://www.exoticsbrazil.com.br/censo/#lamborghini-miura
-- McLaren 765LT Coupé: 9 unidades. https://www.exoticsbrazil.com.br/censo/#mclaren-765lt-coupe
-- McLaren MP4-12C: 8 unidades. Todas de importação direta. https://www.exoticsbrazil.com.br/censo/#mclaren-mp4-12c
-- McLaren Senna: 2 unidades (contagem de 2018). Em outubro de 2018 eram duas unidades destinadas ao Brasil, uma para São Paulo e outra para Brasília, e a primeira desembarcou naquele mês. https://www.exoticsbrazil.com.br/censo/#mclaren-senna
-- Mercedes-AMG GT R Pro: 5 unidades. Uma única em Desert Gold. https://www.exoticsbrazil.com.br/censo/#mercedes-amg-gt-r-pro
-- Mercedes-Benz SLS AMG Black Series: 11 unidades. https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series
-- Mercedes-Benz SLS AMG Coupé: 164 unidades. https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-coupe
-- Mercedes-Benz SLS AMG Roadster: 13 unidades. https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-roadster
-- Nissan GT-R Skyline Edition: 1 unidade. https://www.exoticsbrazil.com.br/censo/#nissan-gt-r-skyline-edition
-- Nissan GT-R T-spec: 5 unidades. https://www.exoticsbrazil.com.br/censo/#nissan-gt-r-t-spec
-- Pagani Huayra R: Pelo menos 1. Flagrado no Brasil em 2026, sem número total confirmado. https://www.exoticsbrazil.com.br/censo/#pagani-huayra-r
-- Pagani Utopia: Pelo menos 1. Flagrada no Brasil em 2026, sem número total confirmado. https://www.exoticsbrazil.com.br/censo/#pagani-utopia
-- Porsche 911 GT2 RS (997): 8 unidades. De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas. https://www.exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997
-- Porsche 911 GT3 RS (997.1): 4 unidades. Uma única em RS Orange. https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-1
-- Porsche 911 Turbo S Cabriolet (991): 6 unidades. https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-991
-- Porsche 911 Turbo S Cabriolet (997.2): 9 unidades. Quatro em Carrara White. https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-997-2
-- Porsche 911 Turbo S Coupé (991): 31 unidades. https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-coupe-991
-- Porsche 918 Spyder: 3 unidades (contagem de 2016). Na contagem de fevereiro de 2016 eram duas unidades em São Paulo, uma prata e uma branca, e uma amarela no Rio Grande do Sul. A branca foi exposta no estande da Porsche no Salão do Automóvel de São Paulo de 2014. https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder
-- Porsche 935 (2019, base 991.2): 2 unidades. As de número 4 e 75, de 77 fabricadas. https://www.exoticsbrazil.com.br/censo/#porsche-935-2019-base-991-2
-- Rolls-Royce Phantom VIII Series II: 1 unidade. Em São Paulo, de importação independente e blindado. https://www.exoticsbrazil.com.br/censo/#rolls-royce-phantom-viii-series-ii
+- Aston Martin V12 Vantage (2022): 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). De 333 fabricados no mundo. Fonte: https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022
+- Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
+- Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
+- Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
+- Ferrari 360 Challenge Stradale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
+- Ferrari 458 Italia (cupê): 96 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
+- Ferrari 812 GTS: 46 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma única em Verde Kers. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
+- Ferrari F40: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-f40
+- Ferrari LaFerrari: 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-laferrari
+- Ford GT Carbon Series (segunda geração): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma delas é a única Psychic Purple do mundo. Fonte: https://www.exoticsbrazil.com.br/censo/#ford-gt-carbon-series-segunda-geracao
+- Jaguar XJ220: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma prata e uma azul. Fonte: https://www.exoticsbrazil.com.br/censo/#jaguar-xj220
+- Lamborghini Aventador Ultimae (cupê): 6 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares. Fonte: https://www.exoticsbrazil.com.br/censo/#lamborghini-aventador-ultimae-cupe
+- Lamborghini Huracán Tecnica: 21 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-tecnica
+- Lamborghini Miura: 5 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#lamborghini-miura
+- McLaren 765LT Coupé: 9 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#mclaren-765lt-coupe
+- McLaren MP4-12C: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Todas de importação direta. Fonte: https://www.exoticsbrazil.com.br/censo/#mclaren-mp4-12c
+- McLaren Senna: 2 unidades no Brasil (contagem de 2018), segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em outubro de 2018 eram duas unidades destinadas ao Brasil, uma para São Paulo e outra para Brasília, e a primeira desembarcou naquele mês. Fonte: https://www.exoticsbrazil.com.br/censo/#mclaren-senna
+- Mercedes-AMG GT R Pro: 5 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma única em Desert Gold. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-amg-gt-r-pro
+- Mercedes-Benz SLS AMG Black Series: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series
+- Mercedes-Benz SLS AMG Coupé: 164 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-coupe
+- Mercedes-Benz SLS AMG Roadster: 13 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-roadster
+- Nissan GT-R Skyline Edition: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#nissan-gt-r-skyline-edition
+- Nissan GT-R T-spec: 5 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#nissan-gt-r-t-spec
+- Pagani Huayra R: Pelo menos 1 no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Flagrado no Brasil em 2026, sem número total confirmado. Fonte: https://www.exoticsbrazil.com.br/censo/#pagani-huayra-r
+- Pagani Utopia: Pelo menos 1 no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Flagrada no Brasil em 2026, sem número total confirmado. Fonte: https://www.exoticsbrazil.com.br/censo/#pagani-utopia
+- Porsche 911 GT2 RS (997): 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas. Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997
+- Porsche 911 GT3 RS (997.1): 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma única em RS Orange. Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-1
+- Porsche 911 Turbo S Cabriolet (991): 6 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-991
+- Porsche 911 Turbo S Cabriolet (997.2): 9 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Quatro em Carrara White. Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-cabriolet-997-2
+- Porsche 911 Turbo S Coupé (991): 31 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-911-turbo-s-coupe-991
+- Porsche 918 Spyder: 3 unidades no Brasil (contagem de 2016), segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Na contagem de fevereiro de 2016 eram duas unidades em São Paulo, uma prata e uma branca, e uma amarela no Rio Grande do Sul. A branca foi exposta no estande da Porsche no Salão do Automóvel de São Paulo de 2014. Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder
+- Porsche 935 (2019, base 991.2): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). As de número 4 e 75, de 77 fabricadas. Fonte: https://www.exoticsbrazil.com.br/censo/#porsche-935-2019-base-991-2
+- Rolls-Royce Phantom VIII Series II: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em São Paulo, de importação independente e blindado. Fonte: https://www.exoticsbrazil.com.br/censo/#rolls-royce-phantom-viii-series-ii
 
 ## Dossiê EB, fichas publicadas
 
@@ -123,11 +123,11 @@ O V12 6.75 biturbo entrega 571cv e 91,7 kgfm já a partir de 1.700 rpm, o bastan
 
 Quando uma legenda do Exotics Brazil diz que um carro é o único, o dado passou pela mesma apuração do censo de unidades, e o superlativo só vai ao ar com confirmação. Sem ela, o texto usa um elogio que ninguém precisa auditar, porque um único erro desse tipo derruba a credibilidade de todo o resto, e é essa régua que separa as três especificações desta reportagem de uma lista de carros bonitos.
 
-Ficha técnica, Ford GT Carbon Series: Motor: 3.5 V6 biturbo; Potência: 660cv; Torque: 76,4 kgfm; 0-100km/h: 3,2s; Vel. Máxima: 348km/h; Peso: 1.444kg; Tração: Traseira; Câmbio: DCT 7 velocidades; Cor: Psychic Purple; Produção: 2017–2022; Peso/Potência: 2,19kg/cv.
+Ficha técnica do Ford GT Carbon Series, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 3.5 V6 biturbo; Potência: 660cv; Torque: 76,4 kgfm; 0-100km/h: 3,2s; Vel. Máxima: 348km/h; Peso: 1.444kg; Tração: Traseira; Câmbio: DCT 7 velocidades; Cor: Psychic Purple; Produção: 2017–2022; Peso/Potência: 2,19kg/cv.
 
-Ficha técnica, Lamborghini Aventador Ultimae: Motor: 6.5 V12 aspirado; Potência: 780cv; Torque: 73,4 kgfm; 0-100km/h: 2,8s; Vel. Máxima: 355km/h; Peso: 1.550kg (a seco); Tração: Integral; Câmbio: ISR 7 marchas; Cor: Nero Nemesis; Produção: 2021–2022 (350 cupês); Peso/Potência: 1,99kg/cv.
+Ficha técnica do Lamborghini Aventador Ultimae, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 6.5 V12 aspirado; Potência: 780cv; Torque: 73,4 kgfm; 0-100km/h: 2,8s; Vel. Máxima: 355km/h; Peso: 1.550kg (a seco); Tração: Integral; Câmbio: ISR 7 marchas; Cor: Nero Nemesis; Produção: 2021–2022 (350 cupês); Peso/Potência: 1,99kg/cv.
 
-Ficha técnica, Rolls-Royce Phantom VIII Series II: Motor: V12 6.75L biturbo; Potência: 571cv; Torque: 91,7 kgfm; 0-100km/h: 5,3s; Vel. Máxima: 250km/h; Peso: 2.699kg (antes da blindagem); Tração: Traseira; Câmbio: Automático 8 marchas; Produção: 2022–presente; Peso/Potência: 4,73kg/cv.
+Ficha técnica do Rolls-Royce Phantom VIII Series II, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V12 6.75L biturbo; Potência: 571cv; Torque: 91,7 kgfm; 0-100km/h: 5,3s; Vel. Máxima: 250km/h; Peso: 2.699kg (antes da blindagem); Tração: Traseira; Câmbio: Automático 8 marchas; Produção: 2022–presente; Peso/Potência: 4,73kg/cv.
 
 ### Do 997 GT2 RS Mezger ao Porsche 935
 
@@ -162,11 +162,11 @@ Nem toda raridade da Porsche depende de série limitada. O programa Paint to Sam
 
 Do Mezger que roda na rua ao 935 que só sai de caminhão, os três carros mostram que a cultura dos Porsche de pista no Brasil é pequena em número e enorme em detalhe, e é por isso que cada um deles, quando aparece, vira assunto na comunidade inteira.
 
-Ficha técnica, Porsche 911 GT2 RS (997): Motor: 3.6 H6 biturbo Mezger; Potência: 620cv; Torque: 71,4 kgfm; 0-100km/h: 3,5s; Vel. Máxima: 330km/h; Peso: 1.370kg; Tração: Traseira; Câmbio: Manual 6 marchas; Produção: 2010–2012 (500 unidades); Peso/Potência: 2,21kg/cv.
+Ficha técnica do Porsche 911 GT2 RS (997), segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 3.6 H6 biturbo Mezger; Potência: 620cv; Torque: 71,4 kgfm; 0-100km/h: 3,5s; Vel. Máxima: 330km/h; Peso: 1.370kg; Tração: Traseira; Câmbio: Manual 6 marchas; Produção: 2010–2012 (500 unidades); Peso/Potência: 2,21kg/cv.
 
-Ficha técnica, Porsche 911 GT3 RS (997.1): Motor: 3.6 H6 aspirado; Potência: 415cv a 7.600 rpm; Torque: 41,3 kgfm; 0-100km/h: 4,2s; Vel. Máxima: 310km/h; Peso: 1.375kg; Tração: Traseira; Câmbio: Manual 6 marchas; Cor: RS Orange; Produção: 2006–2009 (1.168 unidades); Peso/Potência: 3,31kg/cv.
+Ficha técnica do Porsche 911 GT3 RS (997.1), segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 3.6 H6 aspirado; Potência: 415cv a 7.600 rpm; Torque: 41,3 kgfm; 0-100km/h: 4,2s; Vel. Máxima: 310km/h; Peso: 1.375kg; Tração: Traseira; Câmbio: Manual 6 marchas; Cor: RS Orange; Produção: 2006–2009 (1.168 unidades); Peso/Potência: 3,31kg/cv.
 
-Ficha técnica, Porsche 935 (991.2): Motor: H6 3.8 biturbo; Potência: 700cv; Torque: 76,5 kgfm; Vel. Máxima: ~340km/h; Peso: 1.380kg; Tração: Traseira; Câmbio: PDK 7 marchas; Cor: Agate Grey Metallic (base de fábrica, sob a livery Sachs); Produção: 2019 (77 unidades); Peso/Potência: 1,97kg/cv.
+Ficha técnica do Porsche 935 (991.2), segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: H6 3.8 biturbo; Potência: 700cv; Torque: 76,5 kgfm; Vel. Máxima: ~340km/h; Peso: 1.380kg; Tração: Traseira; Câmbio: PDK 7 marchas; Cor: Agate Grey Metallic (base de fábrica, sob a livery Sachs); Produção: 2019 (77 unidades); Peso/Potência: 1,97kg/cv.
 
 ### O censo dos hipercarros no Brasil em 2026
 
@@ -227,15 +227,15 @@ Somadas, as contas desta reportagem dizem que o Brasil chegou ao fim de outubro 
 
 A cada chegada o censo do Exotics Brazil é atualizado no feed, e quem flagrar um desses carros na rua pode mandar a foto pelo Direct do @exoticsbrazil, com a cidade e a arroba de quem fotografou.
 
-Ficha técnica, Ferrari F40: Motor: V8 2.9L biturbo; Potência: 478cv; Torque: 58,8 kgfm; 0-100km/h: 4,1s; Vel. Máxima: 324km/h; Peso: 1.100kg (a seco); Tração: Traseira; Câmbio: Manual 5 velocidades; Cor: Rosso Corsa; Produção: 1987–1992 (1.311 unidades); Peso/Potência: 2,30kg/cv.
+Ficha técnica do Ferrari F40, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 2.9L biturbo; Potência: 478cv; Torque: 58,8 kgfm; 0-100km/h: 4,1s; Vel. Máxima: 324km/h; Peso: 1.100kg (a seco); Tração: Traseira; Câmbio: Manual 5 velocidades; Cor: Rosso Corsa; Produção: 1987–1992 (1.311 unidades); Peso/Potência: 2,30kg/cv.
 
-Ficha técnica, Ferrari LaFerrari: Motor (combustão): V12 6.3L aspirado; Potência (combustão): 800cv; Potência elétrica: 163cv; Potência combinada: 963cv; Torque (V12): 71,4 kgfm; 0-100km/h: <3,0s; Vel. Máxima: >350km/h; Peso: 1.255kg (a seco); Tração: Traseira; Câmbio: DCT 7 velocidades; Produção: 2013–2016 (500 unidades); Peso/Potência: 1,30kg/cv.
+Ficha técnica do Ferrari LaFerrari, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor (combustão): V12 6.3L aspirado; Potência (combustão): 800cv; Potência elétrica: 163cv; Potência combinada: 963cv; Torque (V12): 71,4 kgfm; 0-100km/h: <3,0s; Vel. Máxima: >350km/h; Peso: 1.255kg (a seco); Tração: Traseira; Câmbio: DCT 7 velocidades; Produção: 2013–2016 (500 unidades); Peso/Potência: 1,30kg/cv.
 
-Ficha técnica, Bugatti Chiron Sport: Motor: 8.0 W16 quadriturbo; Potência: 1.500cv; Torque: 163,2 kgfm; 0-100km/h: 2,4s; Vel. Máxima: 420km/h; Peso: 2.287kg; Tração: Integral; Câmbio: DSG 7 velocidades; Cor: French Racing Blue / Blue Carbon; Produção: 2018–2024; Peso/Potência: 1,52kg/cv.
+Ficha técnica do Bugatti Chiron Sport, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 8.0 W16 quadriturbo; Potência: 1.500cv; Torque: 163,2 kgfm; 0-100km/h: 2,4s; Vel. Máxima: 420km/h; Peso: 2.287kg; Tração: Integral; Câmbio: DSG 7 velocidades; Cor: French Racing Blue / Blue Carbon; Produção: 2018–2024; Peso/Potência: 1,52kg/cv.
 
-Ficha técnica, Pagani Utopia: Motor: V12 6.0L biturbo (Mercedes-AMG); Potência: 864cv; Torque: 112,2 kgfm; Peso: 1.280kg (a seco); Tração: Traseira; Câmbio: Xtrac 7 marchas, manual ou automatizado; Série: 99 cupês; Peso/Potência: 1,48kg/cv.
+Ficha técnica do Pagani Utopia, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V12 6.0L biturbo (Mercedes-AMG); Potência: 864cv; Torque: 112,2 kgfm; Peso: 1.280kg (a seco); Tração: Traseira; Câmbio: Xtrac 7 marchas, manual ou automatizado; Série: 99 cupês; Peso/Potência: 1,48kg/cv.
 
-Ficha técnica, Pagani Huayra R: Motor: V12 6.0L aspirado (Pagani V12-R, desenvolvido com a HWA); Potência: 850cv; Torque: 76,5 kgfm; Peso: 1.050kg (a seco); Tração: Traseira; Câmbio: Sequencial 6 marchas; Série: 30 unidades, só para pista; Peso/Potência: 1,24kg/cv.
+Ficha técnica do Pagani Huayra R, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V12 6.0L aspirado (Pagani V12-R, desenvolvido com a HWA); Potência: 850cv; Torque: 76,5 kgfm; Peso: 1.050kg (a seco); Tração: Traseira; Câmbio: Sequencial 6 marchas; Série: 30 unidades, só para pista; Peso/Potência: 1,24kg/cv.
 
 ### Chassidex - Novidades mês Março no Brasil
 
