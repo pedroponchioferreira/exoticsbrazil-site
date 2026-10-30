@@ -5,8 +5,8 @@
   "fonte": "Exotics Brazil (@exoticsbrazil)",
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
-  "atualizado": "2026-10-28",
-  "total": 46,
+  "atualizado": "2026-10-30",
+  "total": 77,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -34,8 +34,152 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/"
     },
     {
+      "id": "censo-audi-r8-gt-coupe-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 3 unidades do AUDI R8 GT COUPÉ (TYPE 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 2 Samoa Orange + 1 Suzuka Grey Matte",
+      "entidade": "AUDI R8 GT COUPÉ (TYPE 42)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-coupe-type-42"
+    },
+    {
+      "id": "censo-audi-r8-v10-coupe-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 58 unidades do AUDI R8 V10 COUPÉ (TYPE 42) no Brasil.",
+      "entidade": "AUDI R8 V10 COUPÉ (TYPE 42)",
+      "valor": 58,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-42"
+    },
+    {
+      "id": "censo-audi-r8-v10-coupe-type-42-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 36 unidades do AUDI R8 V10 COUPÉ (TYPE 42.2) no Brasil.",
+      "entidade": "AUDI R8 V10 COUPÉ (TYPE 42.2)",
+      "valor": 36,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-42-2"
+    },
+    {
+      "id": "censo-audi-r8-v10-coupe-type-4s-facelift",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 66 unidades do AUDI R8 V10 COUPÉ (TYPE 4S FACELIFT) no Brasil.",
+      "entidade": "AUDI R8 V10 COUPÉ (TYPE 4S FACELIFT)",
+      "valor": 66,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-4s-facelift"
+    },
+    {
+      "id": "censo-audi-r8-v10-spyder-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 34 unidades do AUDI R8 V10 SPYDER (TYPE 42) no Brasil.",
+      "entidade": "AUDI R8 V10 SPYDER (TYPE 42)",
+      "valor": 34,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-spyder-type-42"
+    },
+    {
+      "id": "censo-audi-rs3-sportback-8p-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 31 unidades do AUDI RS3 SPORTBACK (8P.2) no Brasil.",
+      "entidade": "AUDI RS3 SPORTBACK (8P.2)",
+      "valor": 31,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs3-sportback-8p-2"
+    },
+    {
+      "id": "censo-audi-rs3-sportback-8y-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 67 unidades do AUDI RS3 SPORTBACK (8Y.2) no Brasil.",
+      "entidade": "AUDI RS3 SPORTBACK (8Y.2)",
+      "valor": 67,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs3-sportback-8y-2"
+    },
+    {
+      "id": "censo-audi-rs4-avant-b5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 33 unidades do AUDI RS4 AVANT (B5) no Brasil.",
+      "entidade": "AUDI RS4 AVANT (B5)",
+      "valor": 33,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b5"
+    },
+    {
+      "id": "censo-audi-rs5-coupe-b9",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 39 unidades do AUDI RS5 COUPÉ (B9) no Brasil.",
+      "entidade": "AUDI RS5 COUPÉ (B9)",
+      "valor": 39,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs5-coupe-b9"
+    },
+    {
+      "id": "censo-audi-rs6-avant-c5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 8 unidades do AUDI RS6 AVANT (C5) no Brasil.",
+      "entidade": "AUDI RS6 AVANT (C5)",
+      "valor": 8,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs6-avant-c5"
+    },
+    {
+      "id": "censo-audi-rs6-avant-gt-c8",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 10 unidades do AUDI RS6 AVANT GT (C8) no Brasil.",
+      "entidade": "AUDI RS6 AVANT GT (C8)",
+      "valor": 10,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs6-avant-gt-c8"
+    },
+    {
+      "id": "censo-audi-rs6-avant-performance-c7-5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 76 unidades do AUDI RS6 AVANT PERFORMANCE (C7.5) no Brasil.",
+      "entidade": "AUDI RS6 AVANT PERFORMANCE (C7.5)",
+      "valor": 76,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs6-avant-performance-c7-5"
+    },
+    {
+      "id": "censo-audi-rs6-sedan-c5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 20 unidades do AUDI RS6 SEDAN (C5) no Brasil.",
+      "entidade": "AUDI RS6 SEDAN (C5)",
+      "valor": 20,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs6-sedan-c5"
+    },
+    {
+      "id": "censo-audi-s4-avant-b7",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 3 unidades do AUDI S4 AVANT (B7) no Brasil.",
+      "entidade": "AUDI S4 AVANT (B7)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-s4-avant-b7"
+    },
+    {
+      "id": "censo-audi-s5-coupe-b8",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 12 unidades do AUDI S5 COUPÉ (B8) no Brasil.",
+      "entidade": "AUDI S5 COUPÉ (B8)",
+      "valor": 12,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-s5-coupe-b8"
+    },
+    {
+      "id": "censo-audi-s8-plus-d4-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 3 unidades do AUDI S8 PLUS (D4.2) no Brasil.",
+      "entidade": "AUDI S8 PLUS (D4.2)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-s8-plus-d4-2"
+    },
+    {
+      "id": "censo-audi-tt-rs-8s-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 52 unidades do AUDI TT RS (8S.1) no Brasil.",
+      "entidade": "AUDI TT RS (8S.1)",
+      "valor": 52,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-8s-1"
+    },
+    {
+      "id": "censo-audi-r8-4-2-v8-special-edition-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 15 unidades do AUDI r8 4.2 v8 special edition (type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando \"Special Edition\"",
+      "entidade": "AUDI r8 4.2 v8 special edition (type 42)",
+      "valor": 15,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-special-edition-type-42"
+    },
+    {
       "id": "censo-aston-martin-v12-vantage-2022",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 4 unidades do Aston Martin V12 Vantage (2022) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 333 fabricados no mundo.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 4 unidades do Aston Martin V12 Vantage (2022) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 333 fabricados no mundo.",
       "entidade": "Aston Martin V12 Vantage (2022)",
       "valor": 4,
       "ano": 2026,
@@ -43,7 +187,7 @@
     },
     {
       "id": "censo-bugatti-chiron-sport",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existe 1 unidade do Bugatti Chiron Sport no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em São Paulo, chegou em 2024 por importação independente.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do Bugatti Chiron Sport no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em São Paulo, chegou em 2024 por importação independente.",
       "entidade": "Bugatti Chiron Sport",
       "valor": 1,
       "ano": 2026,
@@ -51,7 +195,7 @@
     },
     {
       "id": "censo-cadillac-cts-v-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 11 unidades do Cadillac CTS-V Coupé no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 11 unidades do Cadillac CTS-V Coupé no Brasil.",
       "entidade": "Cadillac CTS-V Coupé",
       "valor": 11,
       "ano": 2026,
@@ -59,7 +203,7 @@
     },
     {
       "id": "censo-chevrolet-camaro-zl1-quinta-geracao",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 14 unidades do Chevrolet Camaro ZL1 (quinta geração) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 14 unidades do Chevrolet Camaro ZL1 (quinta geração) no Brasil.",
       "entidade": "Chevrolet Camaro ZL1 (quinta geração)",
       "valor": 14,
       "ano": 2026,
@@ -67,7 +211,7 @@
     },
     {
       "id": "censo-ferrari-360-challenge-stradale",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 8 unidades do Ferrari 360 Challenge Stradale no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 8 unidades do Ferrari 360 Challenge Stradale no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul.",
       "entidade": "Ferrari 360 Challenge Stradale",
       "valor": 8,
       "ano": 2026,
@@ -75,7 +219,7 @@
     },
     {
       "id": "censo-ferrari-458-italia-cupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 96 unidades do Ferrari 458 Italia (cupê) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 96 unidades do Ferrari 458 Italia (cupê) no Brasil.",
       "entidade": "Ferrari 458 Italia (cupê)",
       "valor": 96,
       "ano": 2026,
@@ -83,7 +227,7 @@
     },
     {
       "id": "censo-ferrari-812-gts",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 46 unidades do Ferrari 812 GTS no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Verde Kers.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 46 unidades do Ferrari 812 GTS no Brasil.",
       "entidade": "Ferrari 812 GTS",
       "valor": 46,
       "ano": 2026,
@@ -91,7 +235,7 @@
     },
     {
       "id": "censo-ferrari-f40",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 2 unidades do Ferrari F40 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do Ferrari F40 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária.",
       "entidade": "Ferrari F40",
       "valor": 2,
       "ano": 2026,
@@ -99,7 +243,7 @@
     },
     {
       "id": "censo-ferrari-laferrari",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 4 unidades do Ferrari LaFerrari no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 4 unidades do Ferrari LaFerrari no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato.",
       "entidade": "Ferrari LaFerrari",
       "valor": 4,
       "ano": 2026,
@@ -107,7 +251,7 @@
     },
     {
       "id": "censo-ford-gt-carbon-series-segunda-geracao",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 2 unidades do Ford GT Carbon Series (segunda geração) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma delas é a única Psychic Purple do mundo.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do Ford GT Carbon Series (segunda geração) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma delas é a única Psychic Purple do mundo.",
       "entidade": "Ford GT Carbon Series (segunda geração)",
       "valor": 2,
       "ano": 2026,
@@ -115,7 +259,7 @@
     },
     {
       "id": "censo-jaguar-xj220",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 2 unidades do Jaguar XJ220 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma prata e uma azul.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do Jaguar XJ220 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma prata e uma azul. Uma delas sempre fica exposta no CARDE, em Campos do Jordão.",
       "entidade": "Jaguar XJ220",
       "valor": 2,
       "ano": 2026,
@@ -123,7 +267,7 @@
     },
     {
       "id": "censo-lamborghini-aventador-ultimae-cupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 6 unidades do Lamborghini Aventador Ultimae (cupê) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 6 unidades do Lamborghini Aventador Ultimae (cupê) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma de cada cor: Grigio Titans, Bianco Asopo, Grigio Acheso, Nero Nemesis, Nero Noctis e Verde Lares.",
       "entidade": "Lamborghini Aventador Ultimae (cupê)",
       "valor": 6,
       "ano": 2026,
@@ -131,7 +275,7 @@
     },
     {
       "id": "censo-lamborghini-huracan-tecnica",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 21 unidades do Lamborghini Huracán Tecnica no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 21 unidades do Lamborghini Huracán Tecnica no Brasil.",
       "entidade": "Lamborghini Huracán Tecnica",
       "valor": 21,
       "ano": 2026,
@@ -139,7 +283,7 @@
     },
     {
       "id": "censo-lamborghini-miura",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 5 unidades do Lamborghini Miura no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 5 unidades do Lamborghini Miura no Brasil.",
       "entidade": "Lamborghini Miura",
       "valor": 5,
       "ano": 2026,
@@ -147,7 +291,7 @@
     },
     {
       "id": "censo-mclaren-765lt-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 9 unidades do McLaren 765LT Coupé no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 9 unidades do McLaren 765LT Coupé no Brasil.",
       "entidade": "McLaren 765LT Coupé",
       "valor": 9,
       "ano": 2026,
@@ -155,7 +299,7 @@
     },
     {
       "id": "censo-mclaren-mp4-12c",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 8 unidades do McLaren MP4-12C no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Todas de importação direta.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 8 unidades do McLaren MP4-12C no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Todas de importação direta.",
       "entidade": "McLaren MP4-12C",
       "valor": 8,
       "ano": 2026,
@@ -163,15 +307,15 @@
     },
     {
       "id": "censo-mclaren-senna",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2018 havia 2 unidades do McLaren Senna no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em outubro de 2018 eram duas unidades destinadas ao Brasil, uma para São Paulo e outra para Brasília, e a primeira desembarcou naquele mês.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 10 unidades do McLaren Senna no Brasil.",
       "entidade": "McLaren Senna",
-      "valor": 2,
-      "ano": 2018,
+      "valor": 10,
+      "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mclaren-senna"
     },
     {
       "id": "censo-mercedes-amg-gt-r-pro",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 5 unidades do Mercedes-AMG GT R Pro no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Desert Gold.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 5 unidades do Mercedes-AMG GT R Pro no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Desert Gold.",
       "entidade": "Mercedes-AMG GT R Pro",
       "valor": 5,
       "ano": 2026,
@@ -179,7 +323,7 @@
     },
     {
       "id": "censo-mercedes-benz-sls-amg-black-series",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 11 unidades do Mercedes-Benz SLS AMG Black Series no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 11 unidades do Mercedes-Benz SLS AMG Black Series no Brasil.",
       "entidade": "Mercedes-Benz SLS AMG Black Series",
       "valor": 11,
       "ano": 2026,
@@ -187,7 +331,7 @@
     },
     {
       "id": "censo-mercedes-benz-sls-amg-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 164 unidades do Mercedes-Benz SLS AMG Coupé no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 164 unidades do Mercedes-Benz SLS AMG Coupé no Brasil.",
       "entidade": "Mercedes-Benz SLS AMG Coupé",
       "valor": 164,
       "ano": 2026,
@@ -195,7 +339,7 @@
     },
     {
       "id": "censo-mercedes-benz-sls-amg-roadster",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 13 unidades do Mercedes-Benz SLS AMG Roadster no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 13 unidades do Mercedes-Benz SLS AMG Roadster no Brasil.",
       "entidade": "Mercedes-Benz SLS AMG Roadster",
       "valor": 13,
       "ano": 2026,
@@ -203,7 +347,7 @@
     },
     {
       "id": "censo-nissan-gt-r-skyline-edition",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existe 1 unidade do Nissan GT-R Skyline Edition no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do Nissan GT-R Skyline Edition no Brasil.",
       "entidade": "Nissan GT-R Skyline Edition",
       "valor": 1,
       "ano": 2026,
@@ -211,7 +355,7 @@
     },
     {
       "id": "censo-nissan-gt-r-t-spec",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 5 unidades do Nissan GT-R T-spec no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 5 unidades do Nissan GT-R T-spec no Brasil.",
       "entidade": "Nissan GT-R T-spec",
       "valor": 5,
       "ano": 2026,
@@ -219,23 +363,23 @@
     },
     {
       "id": "censo-pagani-huayra-r",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, o Pagani Huayra R tem pelo menos 1 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Flagrado no Brasil em 2026, sem número total confirmado.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do Pagani Huayra R no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Unidade de corrida, vista poucas vezes em eventos no autódromo de Interlagos.",
       "entidade": "Pagani Huayra R",
-      "valor": null,
+      "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#pagani-huayra-r"
     },
     {
       "id": "censo-pagani-utopia",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, o Pagani Utopia tem pelo menos 1 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Flagrada no Brasil em 2026, sem número total confirmado.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do Pagani Utopia no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Nunca emplacado, supostamente em admissão temporária",
       "entidade": "Pagani Utopia",
-      "valor": null,
+      "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#pagani-utopia"
     },
     {
       "id": "censo-porsche-911-gt2-rs-997",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 8 unidades do Porsche 911 GT2 RS (997) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 8 unidades do Porsche 911 GT2 RS (997) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 500 fabricadas no mundo. Motor Mezger, câmbio manual de 6 marchas.",
       "entidade": "Porsche 911 GT2 RS (997)",
       "valor": 8,
       "ano": 2026,
@@ -243,7 +387,7 @@
     },
     {
       "id": "censo-porsche-911-gt3-rs-997-1",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 4 unidades do Porsche 911 GT3 RS (997.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em RS Orange.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 4 unidades do Porsche 911 GT3 RS (997.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em RS Orange.",
       "entidade": "Porsche 911 GT3 RS (997.1)",
       "valor": 4,
       "ano": 2026,
@@ -251,7 +395,7 @@
     },
     {
       "id": "censo-porsche-911-turbo-s-cabriolet-991",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 6 unidades do Porsche 911 Turbo S Cabriolet (991) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 6 unidades do Porsche 911 Turbo S Cabriolet (991) no Brasil.",
       "entidade": "Porsche 911 Turbo S Cabriolet (991)",
       "valor": 6,
       "ano": 2026,
@@ -259,7 +403,7 @@
     },
     {
       "id": "censo-porsche-911-turbo-s-cabriolet-997-2",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 9 unidades do Porsche 911 Turbo S Cabriolet (997.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Quatro em Carrara White.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 9 unidades do Porsche 911 Turbo S Cabriolet (997.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Quatro em Carrara White.",
       "entidade": "Porsche 911 Turbo S Cabriolet (997.2)",
       "valor": 9,
       "ano": 2026,
@@ -267,7 +411,7 @@
     },
     {
       "id": "censo-porsche-911-turbo-s-coupe-991",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 31 unidades do Porsche 911 Turbo S Coupé (991) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 31 unidades do Porsche 911 Turbo S Coupé (991) no Brasil.",
       "entidade": "Porsche 911 Turbo S Coupé (991)",
       "valor": 31,
       "ano": 2026,
@@ -275,15 +419,15 @@
     },
     {
       "id": "censo-porsche-918-spyder",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2016 havia 3 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Na contagem de fevereiro de 2016 eram duas unidades em São Paulo, uma prata e uma branca, e uma amarela no Rio Grande do Sul. A branca foi exposta no estande da Porsche no Salão do Automóvel de São Paulo de 2014.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em fevereiro de 2016 vierem 3 unidades oficialmente, uma prata, uma branca e uma amarela. Depois chegaram as outras todas por importação independente.",
       "entidade": "Porsche 918 Spyder",
-      "valor": 3,
-      "ano": 2016,
+      "valor": 13,
+      "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder"
     },
     {
       "id": "censo-porsche-935-2019-base-991-2",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existem 2 unidades do Porsche 935 (2019, base 991.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: As de número 4 e 75, de 77 fabricadas.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do Porsche 935 (2019, base 991.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: As de número 4 e 75, de 77 fabricadas.",
       "entidade": "Porsche 935 (2019, base 991.2)",
       "valor": 2,
       "ano": 2026,
@@ -291,11 +435,115 @@
     },
     {
       "id": "censo-rolls-royce-phantom-viii-series-ii",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 28 de outubro de 2026, existe 1 unidade do Rolls-Royce Phantom VIII Series II no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em São Paulo, de importação independente e blindado.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do Rolls-Royce Phantom VIII Series II no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em São Paulo, de importação independente e blindado.",
       "entidade": "Rolls-Royce Phantom VIII Series II",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#rolls-royce-phantom-viii-series-ii"
+    },
+    {
+      "id": "censo-audi-a1-quattro",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do audi a1 quattro no Brasil.",
+      "entidade": "audi a1 quattro",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-a1-quattro"
+    },
+    {
+      "id": "censo-audi-r8-4-2-v8-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 31 unidades do audi r8 4.2 v8 (type 42) no Brasil.",
+      "entidade": "audi r8 4.2 v8 (type 42)",
+      "valor": 31,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-type-42"
+    },
+    {
+      "id": "censo-audi-r8-gt-spyder-type-42",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 2 unidades do audi r8 gt spyder (type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 2 Glacier White Metallic + 1 Suzuka Grey Metallic",
+      "entidade": "audi r8 gt spyder (type 42)",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42"
+    },
+    {
+      "id": "censo-audi-r8-spyder-v10-type-42-facelift",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 25 unidades do audi r8 spyder v10 (type 42 facelift) no Brasil.",
+      "entidade": "audi r8 spyder v10 (type 42 facelift)",
+      "valor": 25,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-42-facelift"
+    },
+    {
+      "id": "censo-audi-r8-spyder-v10-type-4s",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existe 1 unidade do audi r8 spyder v10 (type 4s) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: O único R8 da \"última\" geração na configuração Spyder do Brasil",
+      "entidade": "audi r8 spyder v10 (type 4s)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s"
+    },
+    {
+      "id": "censo-audi-r8-v10-plus-coupe-type-4s",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 36 unidades do audi r8 v10 plus COUPÉ (type 4S) no Brasil.",
+      "entidade": "audi r8 v10 plus COUPÉ (type 4S)",
+      "valor": 36,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-plus-coupe-type-4s"
+    },
+    {
+      "id": "censo-audi-rs4-avant-b5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 32 unidades do audi rs4 avant (b5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Eram 33 mas uma das unidades  (Black) foi exportada",
+      "entidade": "audi rs4 avant (b5)",
+      "valor": 32,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b5"
+    },
+    {
+      "id": "censo-audi-rs4-avant-b8",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 22 unidades do audi rs4 avant (b8) no Brasil.",
+      "entidade": "audi rs4 avant (b8)",
+      "valor": 22,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b8"
+    },
+    {
+      "id": "censo-audi-rs6-avant-c6",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 11 unidades do audi rs6 avant (c6) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 8 delas são na versão \"Plus\", limitada a 500 carros no mundo.",
+      "entidade": "audi rs6 avant (c6)",
+      "valor": 11,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs6-avant-c6"
+    },
+    {
+      "id": "censo-audi-rs7-sportback-c7-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 8 unidades do audi rs7 sportback (c7.1) no Brasil.",
+      "entidade": "audi rs7 sportback (c7.1)",
+      "valor": 8,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs7-sportback-c7-1"
+    },
+    {
+      "id": "censo-audi-rs7-sportback-performance-c7-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 13 unidades do audi rs7 sportback performance (c7.2) no Brasil.",
+      "entidade": "audi rs7 sportback performance (c7.2)",
+      "valor": 13,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs7-sportback-performance-c7-2"
+    },
+    {
+      "id": "censo-audi-tt-rs-8j-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 11 unidades do audi tt rs (8j.2) no Brasil.",
+      "entidade": "audi tt rs (8j.2)",
+      "valor": 11,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-8j-2"
+    },
+    {
+      "id": "censo-audi-tt-rs-roadster-8j-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 30 de outubro de 2026, existem 4 unidades do audi tt rs roadster (8j.2) no Brasil.",
+      "entidade": "audi tt rs roadster (8j.2)",
+      "valor": 4,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-roadster-8j-2"
     },
     {
       "id": "conceito-censo-eb",
