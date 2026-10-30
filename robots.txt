@@ -1,4 +1,4 @@
-# Exotics Brazil · exoticsbrazil.com.br
+# Exotics Brazil · www.exoticsbrazil.com.br
 # Buscadores e assistentes de IA são bem-vindos.
 
 User-agent: *
@@ -28,4 +28,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://exoticsbrazil.com.br/sitemap.xml
+Sitemap: https://www.exoticsbrazil.com.br/sitemap.xml

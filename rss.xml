@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Revista Exotics Brazil</title>
-    <link>https://exoticsbrazil.com.br/revista/</link>
-    <atom:link href="https://exoticsbrazil.com.br/rss.xml" rel="self" type="application/rss+xml"/>
+    <link>https://www.exoticsbrazil.com.br/revista/</link>
+    <atom:link href="https://www.exoticsbrazil.com.br/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil, a maior página de carros exóticos da América Latina.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Wed, 28 Oct 2026 18:09:05 -0300</lastBuildDate>
-    <image><url>https://exoticsbrazil.com.br/img/icone-192.png</url><title>Revista Exotics Brazil</title><link>https://exoticsbrazil.com.br/revista/</link></image>
+    <lastBuildDate>Fri, 30 Oct 2026 10:06:30 -0300</lastBuildDate>
+    <image><url>https://www.exoticsbrazil.com.br/img/icone-192.png</url><title>Revista Exotics Brazil</title><link>https://www.exoticsbrazil.com.br/revista/</link></image>
     <item>
       <title>Especificações 1 de 1 no Brasil</title>
-      <link>https://exoticsbrazil.com.br/especificacoes-1-de-1-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/especificacoes-1-de-1-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/especificacoes-1-de-1-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/especificacoes-1-de-1-no-brasil/</guid>
       <pubDate>Tue, 27 Oct 2026 11:00:00 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Raridades</category>
       <description>O Ford GT Carbon Series em Psychic Purple, a Lamborghini Aventador Ultimae em Nero Nemesis e o único Rolls-Royce Phantom VIII Series II do país</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/ford-gt-carbon-series-sao-paulo.jpg" length="361954" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/ford-gt-carbon-series-sao-paulo.jpg" length="361954" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>Raridade tem camadas. Existe a do número de produção, existe a do censo de cada país e existe uma terceira, mais difícil de achar, que é a da configuração, quando a combinação de modelo, versão e cor só existe uma vez no lugar onde o carro está. O Exotics Brazil chama isso de especificação 1 de 1, e em 2026 a página confirmou três casos no Brasil, todos fotografados na rua e publicados no feed com o crédito de quem fez a foto.</p>
 <h2>Ford GT Carbon Series, o único Psychic Purple do mundo</h2>
 <p>O Ford GT da segunda geração já nasceu raro, com uma produção em que a própria Ford escolhia os compradores um a um, e com a credencial de ter vencido a categoria GTE Pro das 24 Horas de Le Mans em 2016, exatamente 50 anos depois da vitória do GT40 em 1966. O Carbon Series é a versão mais leve da família, com rodas de fibra de carbono, faixas de carbono exposto na carroceria e peças em policarbonato que tiram 18 kg do carro padrão.</p>
@@ -40,7 +40,7 @@
 </aside>
 <h2>Lamborghini Aventador Ultimae, a única Nero Nemesis</h2>
 <figure class="border-2 border-ink bg-black mx-auto max-w-md">
-  <img src="https://exoticsbrazil.com.br/img/lamborghini-aventador-ultimae-brasilia.jpg" width="1200" height="1600" alt="Lamborghini Aventador Ultimae preta fosca fotografada à noite em Brasília" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/lamborghini-aventador-ultimae-brasilia.jpg" width="1200" height="1600" alt="Lamborghini Aventador Ultimae preta fosca fotografada à noite em Brasília" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Lamborghini Aventador Ultimae · Brasília, DF · 📷 <a href="https://www.instagram.com/lh_spotterscars/" target="_blank" rel="noopener">@lh_spotterscars</a> · a única Nero Nemesis das seis do Brasil</figcaption>
 </figure>
 <p>A Aventador Ultimae foi a despedida do V12 aspirado puro na Lamborghini. O nome quer dizer última em latim, e é literal, porque a última das 11.465 Aventador fabricadas, em setembro de 2022, foi uma Ultimae Roadster. No mundo foram 350 cupês e 250 roadsters, todos com o V12 6.5 de 780cv que fez dela a Aventador mais potente já produzida, antes de a marca partir para o V12 eletrificado do Revuelto.</p>
@@ -64,12 +64,12 @@
 </aside>
 <h2>Rolls-Royce Phantom VIII Series II, o único do país</h2>
 <figure class="border-2 border-ink bg-black">
-  <img src="https://exoticsbrazil.com.br/img/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" width="1600" height="1361" alt="Rolls-Royce Phantom VIII Series II preto rodando numa avenida arborizada de São Paulo" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" width="1600" height="1361" alt="Rolls-Royce Phantom VIII Series II preto rodando numa avenida arborizada de São Paulo" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Rolls-Royce Phantom VIII Series II · São Paulo, SP · 📷 <a href="https://www.instagram.com/jota.carspotting/" target="_blank" rel="noopener">@jota.carspotting</a> · o único do Brasil</figcaption>
 </figure>
 <p>O Phantom da oitava geração ganhou em 2022 a atualização Series II, com a luz diurna dos faróis redesenhada e, pela primeira vez, a grade Pantheon iluminada. O Brasil tem uma única unidade nessa versão, flagrada em São Paulo em maio de 2026, e ela resume o que a importação independente faz com um carro desses, porque chegou ao país por esse caminho e passou por blindagem depois do desembarque, somando proteção balística a um carro que já sai da fábrica com quase 2,7 toneladas.</p>
 <p>O detalhe que assina esse exemplar é a coachline laranja, o filete fino que corre pela lateral e é a única nota de cor no conjunto preto. Na Rolls-Royce esse filete é pintado à mão, com pincel, na fábrica de Goodwood, e é o tipo de personalização que transforma uma unidade única no país numa unidade única de verdade.</p>
-<p>O V12 6.75 biturbo entrega 571cv e 91,7 kgfm já a partir de 1.700 rpm, o bastante para levar o carro de 0 a 100 km/h em 5,3 segundos. A história do nome Phantom, que atravessa quase um século, está contada numa <a href="https://exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/">reportagem do arquivo da revista</a>.</p>
+<p>O V12 6.75 biturbo entrega 571cv e 91,7 kgfm já a partir de 1.700 rpm, o bastante para levar o carro de 0 a 100 km/h em 5,3 segundos. A história do nome Phantom, que atravessa quase um século, está contada numa <a href="https://www.exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/">reportagem do arquivo da revista</a>.</p>
 <aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: Rolls-Royce Phantom VIII Series II">
   <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
   <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">Rolls-Royce Phantom VIII Series II</p>
@@ -91,13 +91,13 @@
     </item>
     <item>
       <title>Do 997 GT2 RS Mezger ao Porsche 935</title>
-      <link>https://exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/porsche-de-pista-e-series-limitadas-no-brasil/</guid>
       <pubDate>Tue, 27 Oct 2026 10:00:00 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Porsche</category>
       <description>A cultura dos Porsche de pista e das séries limitadas no Brasil, contada por três carros que passaram pelo Exotics Brazil, com oito, quatro e duas unidades no país</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/porsche-911-gt2-rs-997-brasilia.jpg" length="325436" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/porsche-911-gt2-rs-997-brasilia.jpg" length="325436" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>Dentro da Porsche existe uma fábrica que pensa diferente do resto da marca. É no centro de desenvolvimento de Weissach que nascem os carros de sobrenome GT e RS, os que o purista procura primeiro no anúncio e os que menos aparecem nas ruas brasileiras. O Exotics Brazil acompanha esses carros há anos, e três deles resumem bem a cultura dos Porsche de pista no país, cada um num degrau diferente de exclusividade.</p>
 <h2>911 GT2 RS (997), oito no Brasil</h2>
 <p>O 911 GT2 RS da geração 997 foi o capítulo final daquela família, feito entre 2010 e 2012 em 500 unidades, e o Brasil tem oito delas segundo o censo da página. A foto que abre esta reportagem é do acervo do fundador do Exotics Brazil, Pedro Ponchio, feita em Brasília em 2015.</p>
@@ -120,7 +120,7 @@
 </aside>
 <h2>911 GT3 RS (997.1), quatro no Brasil e um só laranja</h2>
 <figure class="border-2 border-ink bg-black">
-  <img src="https://exoticsbrazil.com.br/img/porsche-911-gt3-rs-997-sao-paulo.jpg" width="1800" height="1199" alt="Porsche 911 GT3 RS da geração 997.1 laranja com faixas pretas, estacionado num posto de combustível em São Paulo" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/porsche-911-gt3-rs-997-sao-paulo.jpg" width="1800" height="1199" alt="Porsche 911 GT3 RS da geração 997.1 laranja com faixas pretas, estacionado num posto de combustível em São Paulo" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Porsche 911 GT3 RS (997.1) · São Paulo, SP · 📷 <a href="https://www.instagram.com/photosbyjota_/" target="_blank" rel="noopener">@photosbyjota_</a> · a única laranja das quatro do Brasil</figcaption>
 </figure>
 <p>Se o GT2 RS é força bruta, o GT3 RS 997.1 é dieta. Lançado em 2006, ele usa a carroceria mais larga do Carrera 4 para abrir a bitola traseira, troca o vidro traseiro por policarbonato, ganha asa de fibra de carbono e perde boa parte do isolamento acústico, e o resultado são 20 kg a menos que o GT3 comum, câmbio manual de seis marchas e um 3.6 aspirado de 415cv que só entrega tudo perto do corte, a 7.600 rpm.</p>
@@ -144,7 +144,7 @@
 </aside>
 <h2>Porsche 935, dois no Brasil e nenhum na rua</h2>
 <figure class="border-2 border-ink bg-black">
-  <img src="https://exoticsbrazil.com.br/img/porsche-935-curitiba.jpg" width="1400" height="1400" alt="Porsche 935 moderno com pintura branca e azul de corrida e o número 70, à noite em Curitiba" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/porsche-935-curitiba.jpg" width="1400" height="1400" alt="Porsche 935 moderno com pintura branca e azul de corrida e o número 70, à noite em Curitiba" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Porsche 935 (991.2) · Curitiba, PR · 📷 <a href="https://www.instagram.com/antonio.huergo/" target="_blank" rel="noopener">@antonio.huergo</a> · unidade número 4 de 77</figcaption>
 </figure>
 <p>O degrau mais alto é um carro que nem pode rodar na rua. O 935 moderno foi apresentado em 2018 e produzido em 2019, em 77 unidades, sobre a base do 911 GT2 RS da geração 991.2, com a carroceria trocada por painéis de fibra de carbono que homenageiam o 935/78 de corrida, o Moby Dick. Ele não tem homologação de rua nem de categoria nenhuma, então vive entre a garagem, o caminhão e o autódromo.</p>
@@ -166,18 +166,18 @@
   </dl>
 </aside>
 <h2>A outra exclusividade, a cor</h2>
-<p>Nem toda raridade da Porsche depende de série limitada. O programa Paint to Sample, o PTS, permite pintar um 911 de linha numa cor fora do catálogo, e isso cria carros únicos a partir de modelos que a fábrica produz aos milhares. Em 2026 o feed mostrou um 911 Carrera GTS em Mint Green, um verde que passou quase 30 anos fora do catálogo da marca, flagrado em Florianópolis. O que é o PTS, como ele funciona e por que virou obsessão de colecionador está explicado na <a href="https://exoticsbrazil.com.br/pts-paint-to-sample/">matéria da revista sobre o Paint to Sample</a>, publicada pelo Exotics Brazil em 2018.</p>
+<p>Nem toda raridade da Porsche depende de série limitada. O programa Paint to Sample, o PTS, permite pintar um 911 de linha numa cor fora do catálogo, e isso cria carros únicos a partir de modelos que a fábrica produz aos milhares. Em 2026 o feed mostrou um 911 Carrera GTS em Mint Green, um verde que passou quase 30 anos fora do catálogo da marca, flagrado em Florianópolis. O que é o PTS, como ele funciona e por que virou obsessão de colecionador está explicado na <a href="https://www.exoticsbrazil.com.br/pts-paint-to-sample/">matéria da revista sobre o Paint to Sample</a>, publicada pelo Exotics Brazil em 2018.</p>
 <p>Do Mezger que roda na rua ao 935 que só sai de caminhão, os três carros mostram que a cultura dos Porsche de pista no Brasil é pequena em número e enorme em detalhe, e é por isso que cada um deles, quando aparece, vira assunto na comunidade inteira.</p>]]></content:encoded>
     </item>
     <item>
       <title>O censo dos hipercarros no Brasil em 2026</title>
-      <link>https://exoticsbrazil.com.br/censo-hipercarros-brasil-2026/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/censo-hipercarros-brasil-2026/</guid>
+      <link>https://www.exoticsbrazil.com.br/censo-hipercarros-brasil-2026/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/censo-hipercarros-brasil-2026/</guid>
       <pubDate>Tue, 27 Oct 2026 09:00:00 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Censo EB</category>
       <description>Da Ferrari F40 e da LaFerrari à chegada do Bugatti Chiron Sport, do Pagani Utopia e do Huayra R, com o número de cada um confirmado pela apuração do Exotics Brazil</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/spotters-bugatti-chiron-sport-sao-paulo.jpg" length="377238" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/spotters-bugatti-chiron-sport-sao-paulo.jpg" length="377238" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>Hipercarro no Brasil se conta nos dedos, e é justamente por isso que alguém precisa contar. Desde 2013 o Exotics Brazil publica, junto de cada flagra, quantas unidades daquele carro existem no país, e 2026 foi um ano em que essa conta mexeu de verdade, com a quarta LaFerrari desembarcando por aqui, o único Bugatti Chiron Sport trocando de dono e indo para a rua, e dois Pagani aparecendo no feed no mesmo mês de agosto.</p>
 <p>Esta reportagem reúne o que o censo da página confirmou até outubro de 2026, carro por carro, com a ficha técnica de cada um e a foto de quem fez o flagra.</p>
 <h2>Como funciona o Censo EB</h2>
@@ -185,11 +185,11 @@
 <p>Por isso o censo também envelhece, e a página atualiza a conta a cada chegada. A LaFerrari, mais abaixo, mostra como isso funciona na prática.</p>
 <h2>Ferrari F40, duas unidades</h2>
 <figure class="border-2 border-ink bg-black">
-  <img src="https://exoticsbrazil.com.br/img/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" alt="Ferrari F40 vermelha vista de cima em Ribeirão Preto" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" alt="Ferrari F40 vermelha vista de cima em Ribeirão Preto" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Ferrari F40 · Ribeirão Preto, SP · 📷 <a href="https://www.instagram.com/jlr.gabriel016/" target="_blank" rel="noopener">@jlr.gabriel016</a> · uma das duas F40 do Brasil, flagrada em junho de 2026</figcaption>
 </figure>
 <p>O Brasil tem duas Ferrari F40, e as duas chegaram por caminhos que contam a história da importação no país. A primeira veio em 1990, trazida pela Fiat para o Salão do Automóvel, no mesmo ano em que a importação de carros foi liberada, e antes da exposição ainda passou pelas mãos do então presidente Fernando Collor, que deu uma volta de cerca de 8 km com ela em Brasília. Desde então ela nunca saiu do país.</p>
-<p>A segunda pertence ao acervo do CARDE, o museu de Campos do Jordão, e veio da França em 2025 por importação temporária, sem emplacamento. Uma das duas foi flagrada em Ribeirão Preto em junho de 2026, e a história do modelo, a última Ferrari aprovada pessoalmente por Enzo Ferrari, está contada numa <a href="https://exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/">reportagem do arquivo da revista</a>.</p>
+<p>A segunda pertence ao acervo do CARDE, o museu de Campos do Jordão, e veio da França em 2025 por importação temporária, sem emplacamento. Uma das duas foi flagrada em Ribeirão Preto em junho de 2026, e a história do modelo, a última Ferrari aprovada pessoalmente por Enzo Ferrari, está contada numa <a href="https://www.exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/">reportagem do arquivo da revista</a>.</p>
 <aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: Ferrari F40">
   <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
   <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">Ferrari F40</p>
@@ -209,7 +209,7 @@
 </aside>
 <h2>Ferrari LaFerrari, quatro unidades</h2>
 <figure class="border-2 border-ink bg-black mx-auto max-w-md">
-  <img src="https://exoticsbrazil.com.br/img/ferrari-laferrari-giallo-araras.jpg" width="1400" height="1746" alt="Ferrari LaFerrari amarela vista de frente num estúdio de fundo branco" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/ferrari-laferrari-giallo-araras.jpg" width="1400" height="1746" alt="Ferrari LaFerrari amarela vista de frente num estúdio de fundo branco" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Ferrari LaFerrari · Araras, SP · 📷 <a href="https://www.instagram.com/paitoimports/" target="_blank" rel="noopener">@paitoimports</a> · a quarta LaFerrari do Brasil, em Giallo Triplo Strato</figcaption>
 </figure>
 <p>A conta da LaFerrari é a que mais andou em 2026. Em setembro chegou a quarta unidade brasileira, e o censo fechou em três cupês e uma Aperta, a versão conversível. A recém-chegada veio em Giallo Triplo Strato, e a escolha tem história, porque o amarelo é a cor pessoal de Enzo Ferrari, tirada do gonfalão de Modena, a cidade onde ele nasceu, e está até hoje no fundo do escudo do cavallino em todo carro que sai de Maranello.</p>
@@ -255,7 +255,7 @@
 </aside>
 <h2>Pagani Utopia, com o destino em aberto</h2>
 <figure class="border-2 border-ink bg-black mx-auto max-w-md">
-  <img src="https://exoticsbrazil.com.br/img/pagani-utopia-itu.jpg" width="1400" height="1569" alt="Pagani Utopia branco e Bugatti Chiron azul estacionados lado a lado em Itu, com palmeiras ao fundo" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/pagani-utopia-itu.jpg" width="1400" height="1569" alt="Pagani Utopia branco e Bugatti Chiron azul estacionados lado a lado em Itu, com palmeiras ao fundo" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Pagani Utopia · Itu, SP · 📸 <a href="https://www.instagram.com/jr_private_collection/" target="_blank" rel="noopener">@jr_private_collection</a></figcaption>
 </figure>
 <p>O Pagani Utopia apareceu no feed em agosto de 2026, em Itu, no interior de São Paulo, fotografado ao lado de um Bugatti Chiron. O carro fazia parte de uma coleção particular que vinha sendo vendida, e quando o flagra foi publicado o destino dele ainda estava em aberto, com a exportação como possibilidade real, o que faz do Utopia a presença mais frágil desta lista.</p>
@@ -276,7 +276,7 @@
 </aside>
 <h2>Pagani Huayra R, só para pista</h2>
 <figure class="border-2 border-ink bg-black mx-auto max-w-md">
-  <img src="https://exoticsbrazil.com.br/img/pagani-huayra-r-mogi-guacu.jpg" width="1440" height="1800" alt="Pagani Huayra R verde com faixa tricolor italiana e o número 19 numa pista em Mogi Guaçu, com espectadores fotografando atrás da grade" loading="lazy" class="foto-carro">
+  <img src="https://www.exoticsbrazil.com.br/img/pagani-huayra-r-mogi-guacu.jpg" width="1440" height="1800" alt="Pagani Huayra R verde com faixa tricolor italiana e o número 19 numa pista em Mogi Guaçu, com espectadores fotografando atrás da grade" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Pagani Huayra R · Mogi Guaçu, SP · 📸 <a href="https://www.instagram.com/bataginifotografias/" target="_blank" rel="noopener">@bataginifotografias</a></figcaption>
 </figure>
 <p>O Huayra R divide o nome e boa parte da silhueta com o Huayra de rua, e quase nada além disso. Ele foi feito para andar só em autódromo, sem homologação de rua e sem as concessões que um carro de uso comum exige, e por isso troca o V12 biturbo da versão de rua por um V12 6.0 aspirado desenvolvido sob medida com a HWA, que gira até 9.000 rpm e entrega 850cv. A série tem 30 unidades no mundo, e uma delas foi flagrada em agosto de 2026 numa pista em Mogi Guaçu, no interior paulista.</p>
@@ -296,15 +296,15 @@
   </dl>
 </aside>
 <h2>Também no radar de 2026</h2>
-<p>Fora desta lista, o feed de 2026 registrou uma McLaren Senna numa quinta-feira à noite em São Paulo e uma Ferrari SF90 XX Stradale na mesma cidade, dois carros que ainda não têm número confirmado pelo censo da página e por isso aparecem aqui sem contagem. A chegada da primeira Senna ao país, em 2018, foi notícia no site do Exotics Brazil, e a <a href="https://exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/">reportagem daquela época</a> continua no arquivo da revista.</p>
+<p>Fora desta lista, o feed de 2026 registrou uma McLaren Senna numa quinta-feira à noite em São Paulo e uma Ferrari SF90 XX Stradale na mesma cidade, dois carros que ainda não têm número confirmado pelo censo da página e por isso aparecem aqui sem contagem. A chegada da primeira Senna ao país, em 2018, foi notícia no site do Exotics Brazil, e a <a href="https://www.exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/">reportagem daquela época</a> continua no arquivo da revista.</p>
 <h2>O que o censo de 2026 mostra</h2>
 <p>Somadas, as contas desta reportagem dizem que o Brasil chegou ao fim de outubro de 2026 com duas F40, quatro LaFerrari, um Chiron Sport e pelo menos um Utopia e um Huayra R, e que nenhum desses números é definitivo, porque o país continua recebendo hipercarro por importação independente e perdendo alguns para a exportação.</p>
 <p>A cada chegada o censo do Exotics Brazil é atualizado no feed, e quem flagrar um desses carros na rua pode mandar a foto pelo Direct do <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener">@exoticsbrazil</a>, com a cidade e a arroba de quem fotografou.</p>]]></content:encoded>
     </item>
     <item>
       <title>Chassidex - Novidades mês Março no Brasil</title>
-      <link>https://exoticsbrazil.com.br/chassidex-novidades-mes-marco-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chassidex-novidades-mes-marco-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/chassidex-novidades-mes-marco-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chassidex-novidades-mes-marco-no-brasil/</guid>
       <pubDate>Sun, 21 Apr 2019 06:25:06 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Censo EB</category>
@@ -333,8 +333,8 @@
     </item>
     <item>
       <title>Chassidex - Novidades mês Fevereiro no Brasil</title>
-      <link>https://exoticsbrazil.com.br/chassidex-novidades-mes-fevereiro-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chassidex-novidades-mes-fevereiro-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/chassidex-novidades-mes-fevereiro-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chassidex-novidades-mes-fevereiro-no-brasil/</guid>
       <pubDate>Fri, 15 Mar 2019 02:30:47 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Censo EB</category>
@@ -355,8 +355,8 @@
     </item>
     <item>
       <title>Chassidex - Novidades mês Novembro no Brasil</title>
-      <link>https://exoticsbrazil.com.br/chassidex-novidades-mes-novembro-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chassidex-novidades-mes-novembro-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/chassidex-novidades-mes-novembro-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chassidex-novidades-mes-novembro-no-brasil/</guid>
       <pubDate>Sat, 15 Dec 2018 15:08:55 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Censo EB</category>
@@ -364,7 +364,7 @@
       <content:encoded><![CDATA[<p><strong>Chassidex 03</strong></p>
 <p>Vamos com a continuidade do nosso quadro mensal!</p>
 <p>Para você que caiu aqui de paraquedas, vou explicar do que se trata. O chassidex, foi uma maneira criada por nós, com ajuda do nosso amigo <a href="http://www.pictame.com/user/valenca_photography/1331072548" target="_blank" rel="noopener">Raphael Valença</a>, com o objetivo de mostrar a vocês quantos e quais carros chegam ao Brasil todos os meses.</p>
-<p>Iniciado em Outubro, nosso primeiro quadro foi mostrando os <a href="https://exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/">carros que chegaram ao Brasil em Setembro de 2018</a>, o segundo com os <a href="https://exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/">carros de Outubro</a> e seguindo firmes e fortes.</p>
+<p>Iniciado em Outubro, nosso primeiro quadro foi mostrando os <a href="https://www.exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/">carros que chegaram ao Brasil em Setembro de 2018</a>, o segundo com os <a href="https://www.exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/">carros de Outubro</a> e seguindo firmes e fortes.</p>
 <p>Bom, mas vamos ao que vocês vieram aqui para ver, o Chassidex:</p>
 <p><strong>NOVIDADES NO BRASIL – NOVEMBRO 2018</strong></p>
 <ul><li>1x Alfa Romeo Stelvio TI (preto) #1</li><li>8x Audi RS4 Avant</li><li>1x BMW 325i Cabriolet (E30) #2</li><li>1x BMW 633 CSI (E24) (cinza) #3</li><li>11x BMW i3</li><li>32x BMW M2 Competition (F87)</li><li>9x BMW M5 (F90)</li><li>3x BMW X4 M40i</li><li>4x BMW X6M (F86)</li><li>1x Cadillac Eldorado Coupé 1978 #4</li><li>1x Chevrolet Corvette C3 1978 #5</li><li>1x Chevrolet Corvette C7 Stingray</li><li>1x Chevrolet El Camino 1972 (azul) #6</li><li>1x Dodge Ramcharger 1988 #7</li><li>1x Ferrari 488 GTB</li><li>1x Ferrari Mondial 3.2 1988 (vermelha) #8</li><li>1x Ford F150 Raptor</li><li>1x Ford Mustang Hardtop 1965 (vermelho) #9</li><li>1x Ford Mustang Fastback 1969 (verde) #10</li><li>4x Ford Mustang GT</li><li>1x Humvee H1 1986 #11</li><li>1x Humvee H1 1987 #11</li><li>2x Humvee H1 1988 #11</li><li>1x Jaguar XK120 conversível 1952 (vermelho) #12</li><li>1x Jaguar E-Type 1969 #13 (carro a ser restaurado)</li><li>27x Jaguar F-Type P300 R-Dynamic Coupé</li><li>1x Lamborghini Huracan Perfomante Spyder</li><li>2x Land Rover Range Rover Sport SVR</li><li>1x Land Rover Range Rover Sport SV Autobiography</li><li>1x Lincoln Premiere 1957 (preto) #14</li><li>3x Maserati Levante Grandsport S</li><li>1x McLaren 570 GT</li><li>1x McLaren 570S</li><li>1x McLaren 570S Spider</li><li>1x Mercedes-Benz 560 SL 1987 (dourada) #15</li><li>1x Mercedes-AMG GTR</li><li>1x Mercedes-AMG CLA45</li><li>1x Mercedes-AMG E63S</li><li>5x Mercedes-AMG G63</li><li>2x Mercedes-AMG GLC43</li><li>7x Mercedes-AMG GLC43 Coupé</li><li>17x Mercedes-AMG GLC63 S Coupé</li><li>3x Mercedes-AMG GLE43 Coupé</li><li>2x Mercedes-AMG GLE63 Coupé</li><li>2x Mercedes-AMG S63</li><li>1x Mercedes-AMG S63 Coupe</li><li>1x Mercedes-AMG S65</li><li>1x Mercury Marquis 1972 (preto) #16</li><li>1x Oldsmobile 98 1966 #17</li><li>1x Oldsmobile Toronado (prata) 1969 #18</li><li>1x Porsche 356 Coupé 1965 (cinza) #19</li><li>21x Porsche 718 Boxster</li><li>2x Porsche 718 Boxster S</li><li>4x Porsche 718 Boxster GTS</li><li>6x Porsche 718 Cayman</li><li>5x Porsche 718 Cayman GTS</li><li>1x Porsche 911E Coupé 1968</li><li>4x Porsche 911 Carrera Cabrio (991)</li><li>3x Porsche 911 Carrera GTS (991)</li><li>3x Porsche 911 Targa 4GTS (991)</li><li>3x Porsche 911 GT3 (991)</li><li>5x Porsche 911 GT3 RS (991)</li><li>3x Porsche 911 GT2 RS (991)</li><li>25x Porsche Cayenne</li><li>6x Porsche Cayenne S</li><li>4x Porsche Cayenne Turbo</li><li>1x Porsche Macan</li><li>42x Porsche Panamera E-Hybrid</li><li>1x Porsche Panamera E-Hybrid Executive</li><li>4x Porsche Panamera E-Hybrid Sport Turismo</li><li>1x Rolls-Royce Phanton</li><li>1x Tesla Model 3</li><li>1x Tesla Model X</li></ul>
@@ -381,8 +381,8 @@
     </item>
     <item>
       <title>Chassidex - Novidades mês Outubro no Brasil</title>
-      <link>https://exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chassidex-novidades-mes-outubro-no-brasil/</guid>
       <pubDate>Sat, 08 Dec 2018 15:17:32 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Censo EB</category>
@@ -409,18 +409,18 @@
     </item>
     <item>
       <title>Chegou uma McLaren Senna no Brasil! Fica ou vai embora?</title>
-      <link>https://exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/</guid>
+      <link>https://www.exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/</guid>
       <pubDate>Fri, 19 Oct 2018 19:59:39 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
       <description>São 800 cavalos, vindos de um motor 4.0 V8 Biturbo, que fazem o bólido inglês chegar de 0 a 100 km/h em 2,8 segundos. Ou então 6,8 segundos caso você mantenha o pé…</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/mclaren-senna-sao-paulo.jpg" length="354788" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/mclaren-senna-sao-paulo.jpg" length="354788" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>São 800 cavalos, vindos de um motor 4.0 V8 Biturbo, que fazem o bólido inglês chegar de 0 a 100 km/h em 2,8 segundos. Ou então 6,8 segundos caso você mantenha o pé pisando fundo no acelerador até os 200 km/h. São números extremamente incríveis, que remetem a um carro com o nome de um dos maiores ídolos de todo o Brasil: McLaren Senna.</p>
 <p>
 Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metros. São números dignos de carro de corrida, ainda que o McLaren Senna seja na teoria um carro de rua. Mas não dá para disfarçar: ele é um carro de corrida.
 </p>
-<p>Esse carro de corrida que paga IPVA foi projetado para deslocar a alma do seu corpo toda vez que você provoca o motor, que fica posicionado apenas 2 palmos atrás dos assentos! O motor M840TR é uma variante da motorização da 720S e está conectado a uma transmissão de dupla embreagem de sete marchas. Há uma singularidade muito curiosa quando se fala de seu escape: podem ser 2 ou 3 saídas (explicamos essa diferença <a href="https://exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/">aqui</a>) .</p>
+<p>Esse carro de corrida que paga IPVA foi projetado para deslocar a alma do seu corpo toda vez que você provoca o motor, que fica posicionado apenas 2 palmos atrás dos assentos! O motor M840TR é uma variante da motorização da 720S e está conectado a uma transmissão de dupla embreagem de sete marchas. Há uma singularidade muito curiosa quando se fala de seu escape: podem ser 2 ou 3 saídas (explicamos essa diferença <a href="https://www.exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/">aqui</a>) .</p>
 <h4>Ficha técnica – <strong>McLaren Senna</strong></h4>
 <ul><li><strong>Preço:</strong> R$ 8.000.000</li><li><strong>Motor:</strong> gasolina, traseira, longitudinal, V8, 32V, Biturbo, 3.994 cm3, 800 cv de 7.250 rpm, 81,6 mkgf de 5.500 a 6.700 rpm</li><li><strong>Câmbio: </strong>automatizado, 7 marchas,<br>tração traseira </li><li><strong>Suspensão: </strong>braços duplos (dianteiro e traseiro.)</li><li><strong>Freios:</strong> disco ventilado de cerâmica nas quatro rodas</li><li><strong>Direção: </strong>eletro-hidráulica, diâmetro de giro, 12,9 m</li><li><strong>Pneus: </strong>245/35 R19 (dianteira) e 315/30 R20 (traseira)</li><li><strong>Dimensões:</strong> comprimento 474,4 cm; largura 215,3 cm; altura 122,9 cm; entre-eixos 267 cm; peso 1.198 kg</li></ul>
 <h3>McLaren Senna no Brasil</h3>
@@ -442,8 +442,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Quando a Koenigsegg fez um carro especialmente para o Brasil!</title>
-      <link>https://exoticsbrazil.com.br/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/</guid>
       <pubDate>Wed, 17 Oct 2018 13:25:34 +0000</pubDate>
       <dc:creator>Tarcísio Medeiros</dc:creator>
       <category>Brasil</category>
@@ -469,8 +469,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Chassidex - Novidades mês Setembro no Brasil</title>
-      <link>https://exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/chassidex-novidades-mes-setembro-no-brasil/</guid>
       <pubDate>Fri, 05 Oct 2018 20:32:29 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Censo EB</category>
@@ -486,13 +486,13 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Você sabe porque algumas McLaren Senna têm três escapes e outras dois?</title>
-      <link>https://exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/</guid>
+      <link>https://www.exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/</guid>
       <pubDate>Sat, 22 Sep 2018 15:00:11 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Técnica</category>
       <description>Com tantas opções de customização, muito provavelmente não irão existir duas McLaren Senna iguais. Mas a diferença que pode existir no número de escapes entre…</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/mclaren-senna-sao-paulo.jpg" length="354788" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/mclaren-senna-sao-paulo.jpg" length="354788" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>Com tantas opções de customização, muito provavelmente não irão existir duas McLaren Senna iguais. Mas a diferença que pode existir no número de escapes entre algumas delas tem outra razão de existir!</p>
 <p>Com certeza os mais curiosos já repararam que a McLaren Senna parece ter duas opções para os seus escapes. Porém isso não é uma escolha que os clientes podem fazer. Aqueles que compram a Senna na Europa, acabam recebendo um esportivo com <strong>três escapes</strong>, enquanto no resto do mundo, com apenas <strong>dois escapes</strong>. O porque disso se deve a homologação do bólido na União Europeia, que possui regulamentos mais exigentes sobre o ruído produzido pelos automóveis.</p>
 <p>O terceiro escape nas McLaren Senna registados na Europa existe para atenuar o ronco monstruoso do V8 Biturbo que equipa o coração dessa obra de arte sobre rodas. É por ele que saem os gases das baixas rotações, que são obrigados a passar por um silenciador adicional. Em rotações mais elevadas, os gases são redirecionados para os dois escapes superiores, não tendo de passar pelo silenciador, dessa forma, elevando o som a um nível mais condizente aos números do motor em questão.</p>
@@ -503,8 +503,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Ford GT Heritage Edition traz de volta as cores da Gulf Oil</title>
-      <link>https://exoticsbrazil.com.br/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/</guid>
+      <link>https://www.exoticsbrazil.com.br/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/</guid>
       <pubDate>Thu, 30 Aug 2018 21:20:21 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Lançamentos</category>
@@ -524,8 +524,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>BMW Ultimate Experience Brasília 2018</title>
-      <link>https://exoticsbrazil.com.br/bmw-ultimate-experience-2018/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/bmw-ultimate-experience-2018/</guid>
+      <link>https://www.exoticsbrazil.com.br/bmw-ultimate-experience-2018/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/bmw-ultimate-experience-2018/</guid>
       <pubDate>Mon, 13 Aug 2018 14:56:54 +0000</pubDate>
       <dc:creator>Lucca Lage</dc:creator>
       <category>Eventos</category>
@@ -544,8 +544,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>O que é? Porsche PTS: Paint To Sample</title>
-      <link>https://exoticsbrazil.com.br/pts-paint-to-sample/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/pts-paint-to-sample/</guid>
+      <link>https://www.exoticsbrazil.com.br/pts-paint-to-sample/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/pts-paint-to-sample/</guid>
       <pubDate>Sun, 03 Jun 2018 00:57:14 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Técnica</category>
@@ -587,8 +587,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>9 carros antigos que são ícones do Automobilismo</title>
-      <link>https://exoticsbrazil.com.br/9-carros-antigos-que-sao-icones-do-automobilismo/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/9-carros-antigos-que-sao-icones-do-automobilismo/</guid>
+      <link>https://www.exoticsbrazil.com.br/9-carros-antigos-que-sao-icones-do-automobilismo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/9-carros-antigos-que-sao-icones-do-automobilismo/</guid>
       <pubDate>Fri, 27 Apr 2018 00:31:12 -0300</pubDate>
       <dc:creator>Tarcísio Medeiros</dc:creator>
       <category>História</category>
@@ -637,8 +637,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>O Porsche 911 Carrera T já desembarcou no Brasil, e vem para agradar os puristas!</title>
-      <link>https://exoticsbrazil.com.br/911-carrera-t-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/911-carrera-t-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/911-carrera-t-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/911-carrera-t-no-brasil/</guid>
       <pubDate>Tue, 10 Apr 2018 19:58:13 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -702,8 +702,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Mercedes Classe X já flagrada por aqui!</title>
-      <link>https://exoticsbrazil.com.br/mercedes-classe-x-ja-flagrada-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/mercedes-classe-x-ja-flagrada-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/mercedes-classe-x-ja-flagrada-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/mercedes-classe-x-ja-flagrada-no-brasil/</guid>
       <pubDate>Sat, 03 Mar 2018 01:32:54 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -727,8 +727,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>Novidade: Panamera Sport Turismo já no Brasil!</title>
-      <link>https://exoticsbrazil.com.br/panamera-sport-turismo/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/panamera-sport-turismo/</guid>
+      <link>https://www.exoticsbrazil.com.br/panamera-sport-turismo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/panamera-sport-turismo/</guid>
       <pubDate>Mon, 26 Feb 2018 21:42:20 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -784,8 +784,8 @@ Igualmente surpreendente é a capacidade de frenagem: 200 a 0 em meros 100 metro
     </item>
     <item>
       <title>O Herói Improvável - Parte 1</title>
-      <link>https://exoticsbrazil.com.br/o-heroi-improvavel-parte-1/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/o-heroi-improvavel-parte-1/</guid>
+      <link>https://www.exoticsbrazil.com.br/o-heroi-improvavel-parte-1/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/o-heroi-improvavel-parte-1/</guid>
       <pubDate>Thu, 11 Jan 2018 21:51:14 +0000</pubDate>
       <dc:creator>Tarcísio Medeiros</dc:creator>
       <category>História</category>
@@ -804,8 +804,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Carroll Shelby e o mítico Cobra</title>
-      <link>https://exoticsbrazil.com.br/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/</guid>
+      <link>https://www.exoticsbrazil.com.br/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/</guid>
       <pubDate>Tue, 19 Dec 2017 03:51:47 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -831,8 +831,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>A evolução do Skyline: 1957 - Hoje</title>
-      <link>https://exoticsbrazil.com.br/a-evolucao-do-skyline/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/a-evolucao-do-skyline/</guid>
+      <link>https://www.exoticsbrazil.com.br/a-evolucao-do-skyline/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/a-evolucao-do-skyline/</guid>
       <pubDate>Thu, 23 Nov 2017 22:31:36 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>História</category>
@@ -867,15 +867,15 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Grupo B no Brasil? Conheça o Passat Audi Quattro Sulam, o fora-de-série baseado no Audi Quattro</title>
-      <link>https://exoticsbrazil.com.br/passat-audi-quattro-sulam/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/passat-audi-quattro-sulam/</guid>
+      <link>https://www.exoticsbrazil.com.br/passat-audi-quattro-sulam/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/passat-audi-quattro-sulam/</guid>
       <pubDate>Fri, 17 Nov 2017 20:00:12 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
       <description>Recentemente tratamos sobre a história do famoso Grupo B de Rally aqui no site, desde seu início até o trágico fim que levou. Naquele tempo, um dos carros mais…</description>
-      <content:encoded><![CDATA[<p>Recentemente tratamos sobre a história do famoso <a href="https://exoticsbrazil.com.br/grupo-b/">Grupo B de Rally</a> aqui no site, desde seu início até o trágico fim que levou. Naquele tempo, um dos carros mais famosos das competições de rally era o Audi Quattro.</p>
+      <content:encoded><![CDATA[<p>Recentemente tratamos sobre a história do famoso <a href="https://www.exoticsbrazil.com.br/grupo-b/">Grupo B de Rally</a> aqui no site, desde seu início até o trágico fim que levou. Naquele tempo, um dos carros mais famosos das competições de rally era o Audi Quattro.</p>
 <p>O carro da Audi é uma das maiores lendas da história do rally. Sua estreia aconteceu na década de 80, e o sistema de tração integral quattro trazido por ele causou uma revolução. Até então os rallys eram disputados, em sua grande maioria, por carros de tração traseira. Porém, todos sabemos que rallys são disputados na terra…</p>
-<p>Sendo assim, os antigos carros do antigo Grupo 4 (que o <a href="https://exoticsbrazil.com.br/grupo-b/">Grupo B</a> substituiu), como o Lancia Stratos HF e o Ford Escort RS1800, de repente ficaram obsoletos quando o grip extra dos Audi de tração integral chegou aos estágios de rally naquele tempo.</p>
+<p>Sendo assim, os antigos carros do antigo Grupo 4 (que o <a href="https://www.exoticsbrazil.com.br/grupo-b/">Grupo B</a> substituiu), como o Lancia Stratos HF e o Ford Escort RS1800, de repente ficaram obsoletos quando o grip extra dos Audi de tração integral chegou aos estágios de rally naquele tempo.</p>
 <p>O regulamento estabelecido na época pela Federação Internacional de Automobilismo determinava que os carros de competição deveriam ser baseados nos modelos de rua e o Audi Quattro de rally não era exceção.</p>
 
 <p>O Audi Quattro teve sua comercialização iniciada em 1980 e foi descontinuado apenas em 1991. O modelo compartilhou muitas partes e componentes da versão Coupé do Audi 80 (geração B2).</p>
@@ -904,8 +904,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>O Delta e o auge da Lancia</title>
-      <link>https://exoticsbrazil.com.br/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/</guid>
+      <link>https://www.exoticsbrazil.com.br/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/</guid>
       <pubDate>Sun, 12 Nov 2017 18:58:03 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -917,7 +917,7 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
 <p>Mas deixando o assunto triste de lado, vamos conhecer um pouco sobre o carro mais icônico da marca e desejado mundo afora: O DELTA!</p>
 <p>O delta começou em 1979, um hatchback desenhado pelo lendário Giorgetto Giugiaro, chegou até a ganhar o prêmio de ‘European Car Of The Year’ em 1980, chegando a vender mais de 60 mil unidades em seu primeiro ano de produção e 100 mil no segundo. Em seus primeiros anos era oferecido um 4 cilindros de 1.3l ou 1.5l, derivado dos Fiats da época.</p>
 <p>Em 1982 sofreu um pequeno facelift para em 1983 ter sua primeira versão turbo lançada: o Delta HF. HF era a sigla utilizada pela Lancia desde 1966 para seus carros performance, significando “High Fidelity”. O modelo tinha embaixo do capô um motor 1.6 turbo que entregava 128cv para as rodas dianteiras. O carro até ganhou em 1984 a versão especial “HF Martini”, para comemorar a vitória do Lancia-Martini Rally 037 no Group B de rally, onde futuramente esse hatchback acima ganharia o mundo.</p>
-<p>Vale citar que em 1985 e 1986 a Lancia lançou no mercado, por questões de homologação, 200 unidades do Delta S4. O S4 foi o monstruoso rei dos últimos anos de Group B, que com sua tração integral e mais de 400 cavalos, destruiu a competição em 1985 e 1986. O S4 Rallye também foi o “responsável” pelo fim do grupo B, após o piloto campeão finlandês Henry Toivonen e seu co-piloto morrerem em um terrível acidente. A história do Group B pode ser conferida nessa bela matéria postada no site<a href="https://exoticsbrazil.com.br/grupo-b/"> clicando aqui</a>.</p>
+<p>Vale citar que em 1985 e 1986 a Lancia lançou no mercado, por questões de homologação, 200 unidades do Delta S4. O S4 foi o monstruoso rei dos últimos anos de Group B, que com sua tração integral e mais de 400 cavalos, destruiu a competição em 1985 e 1986. O S4 Rallye também foi o “responsável” pelo fim do grupo B, após o piloto campeão finlandês Henry Toivonen e seu co-piloto morrerem em um terrível acidente. A história do Group B pode ser conferida nessa bela matéria postada no site<a href="https://www.exoticsbrazil.com.br/grupo-b/"> clicando aqui</a>.</p>
 <p>A versão Stradale de rua, um pouco mais “singela”, entregava 248hp nas mãos e pés de quem o dirigia através de seu motor 1.8 turbo e supercharger.</p>
 <p>Em 1986 a Lancia tentou algo novo, e acertou na mosca. Lançou o HF 4WD, com o motor 2.0 turbo e tração integral e um facelift. No ano seguinte eles já decidiram chamar pelo nome que todos conhecem atualmente, o “Lancia Delta HF Integrale”.</p>
 <p>Até 1989, o Integrale tinha um 4 cilindros 2.0 turbo de 8 válvulas, que produzia 178 cavalos. Era um carro completo: forte, pequeno, ágil e fazia curvas como ninguém! Um dos melhores carros do final dos anos 80 era produzido pela Lancia. Incrível imaginar onde eles estão hoje…</p>
@@ -930,8 +930,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>O Mustang finalmente virá ao Brasil!</title>
-      <link>https://exoticsbrazil.com.br/mustang-vira-ao-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/mustang-vira-ao-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/mustang-vira-ao-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/mustang-vira-ao-brasil/</guid>
       <pubDate>Wed, 08 Nov 2017 10:53:46 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -967,8 +967,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Mais uma edição do Dream Route está chegando: Octapro Edition!</title>
-      <link>https://exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/</guid>
+      <link>https://www.exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/</guid>
       <pubDate>Mon, 06 Nov 2017 12:45:29 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Eventos</category>
@@ -1006,8 +1006,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>A história do Grupo B de Rally</title>
-      <link>https://exoticsbrazil.com.br/grupo-b/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/grupo-b/</guid>
+      <link>https://www.exoticsbrazil.com.br/grupo-b/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/grupo-b/</guid>
       <pubDate>Fri, 03 Nov 2017 20:24:34 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>História</category>
@@ -1094,8 +1094,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Primeira Ferrari 812 Superfast no Brasil</title>
-      <link>https://exoticsbrazil.com.br/primeira-ferrari-812-superfast-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/primeira-ferrari-812-superfast-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/primeira-ferrari-812-superfast-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/primeira-ferrari-812-superfast-no-brasil/</guid>
       <pubDate>Thu, 02 Nov 2017 20:17:15 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -1146,8 +1146,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>BMW Z8 de Steve Jobs vai a Leilão</title>
-      <link>https://exoticsbrazil.com.br/bmw-z8-steve-jobs/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/bmw-z8-steve-jobs/</guid>
+      <link>https://www.exoticsbrazil.com.br/bmw-z8-steve-jobs/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/bmw-z8-steve-jobs/</guid>
       <pubDate>Wed, 01 Nov 2017 11:01:01 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>História</category>
@@ -1252,8 +1252,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Bugatti Grand Tour 2017: Argentina e Chile</title>
-      <link>https://exoticsbrazil.com.br/bugatti-grand-tour-argentina-e-chile/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/bugatti-grand-tour-argentina-e-chile/</guid>
+      <link>https://www.exoticsbrazil.com.br/bugatti-grand-tour-argentina-e-chile/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/bugatti-grand-tour-argentina-e-chile/</guid>
       <pubDate>Mon, 30 Oct 2017 01:35:32 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Eventos</category>
@@ -1434,13 +1434,13 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>O Rolls-Royce Phantom e seus 92 anos de luxo</title>
-      <link>https://exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/</guid>
+      <link>https://www.exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/</guid>
       <pubDate>Sun, 29 Oct 2017 17:58:07 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
       <description>Uma coisa é fato: não há concorrente tão grande historicamente no segmento de luxo quanto a Rolls-Royce. Cadillac, Maybach, muitos estabeleceram grandes…</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" length="375781" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" length="375781" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>Uma coisa é fato: não há concorrente tão grande historicamente no segmento de luxo quanto a Rolls-Royce. Cadillac, Maybach, muitos estabeleceram grandes concorrências, porém em determinadas épocas. Somente uma marca esteve lá no topo desde sempre, e sempre vai estar: a Rolls-Royce!!!</p>
 <p>E dentro dessa gigante do mundo dos automóveis de luxo, ninguém está representando a mais tempo que o Phantom. Em sua oitava geração, vamos conhecer um pouquinho de todas:</p>
 <p><em><strong> 1) Phantom I (1925-1931)</strong></em></p>
@@ -1463,8 +1463,8 @@ Alma. E eu só conseguiria entendê-la anos mais tarde…</p>
     </item>
     <item>
       <title>Você ainda pode importar um Lexus LFA 0km para o Brasil! Ou quase isso...</title>
-      <link>https://exoticsbrazil.com.br/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/</guid>
+      <link>https://www.exoticsbrazil.com.br/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/</guid>
       <pubDate>Mon, 16 Oct 2017 01:47:37 +0000</pubDate>
       <dc:creator>Tarcísio Medeiros</dc:creator>
       <category>Brasil</category>
@@ -1494,13 +1494,13 @@ Acha que acabou nesses 12? Rumores indicavam que haviam ainda mais LFA’s sem r
     </item>
     <item>
       <title>A Ferrari F40 foi a despedida de Enzo Ferrari</title>
-      <link>https://exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/</guid>
+      <link>https://www.exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/</guid>
       <pubDate>Wed, 04 Oct 2017 03:07:55 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
       <description>O “Se Deus fosse uma máquina, certamente seria uma F40”. Essa foi a frase dita por Enzo quando assinava sua última obra prima, a Ferrari F40. Seu lançamento, em…</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/ferrari-f40-ribeirao-preto.jpg" length="211389" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/ferrari-f40-ribeirao-preto.jpg" length="211389" type="image/jpeg"/>
       <content:encoded><![CDATA[<p><em>O “Se Deus fosse uma máquina, certamente seria uma F40”. </em>Essa foi a frase dita por Enzo quando assinava sua última obra prima, a Ferrari F40. Seu lançamento, em 1987, foi marcado pela já expectativa da morte de seu criador, que sofria de doença renal crônica e acabou por falecer no ano seguinte.</p>
 <p>Considerada como um dos 5 supercarros da Ferrari (ao lado da 288 GTO, F50, Enzo e LaFerrari), ou seja, aquelas Ferraris que são mais especiais, caras e raras que as outras, a F40 veio justamente para tomar o lugar da 288 GTO em Maranello. Estava em desenvolvimento a 288 GTO Evoluzione, visando bater de frente com o icônico Porsche 959 no Group B. Porém, em 1986, a FIA extinguiu essa categoria e deixou Enzo com 5 Evoluziones em desenvolvimento e nenhuma categoria para usá-las no motorsport.</p>
 <p>Foi aí que entrou a vontade do já doente Enzo de deixar um último supercarro para o mundo, continuando o projeto da extinta 288 GTO Evoluzione para que ela se tornasse uma última obra de arte para as ruas. Seu desejo de construir um carro de corrida para as ruas era explícito, uma famosa “ferrari de verdade”, como era dito pelos bastidores de Maranello.</p>
@@ -1548,8 +1548,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>Jaguar E-Type: O carro mais bonito da história?</title>
-      <link>https://exoticsbrazil.com.br/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/</guid>
+      <link>https://www.exoticsbrazil.com.br/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/</guid>
       <pubDate>Sun, 10 Sep 2017 21:27:57 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -1565,8 +1565,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>5 Alfas que você PRECISA conhecer!</title>
-      <link>https://exoticsbrazil.com.br/5-alfa-romeo-que-voce-precisa-conhecer/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/5-alfa-romeo-que-voce-precisa-conhecer/</guid>
+      <link>https://www.exoticsbrazil.com.br/5-alfa-romeo-que-voce-precisa-conhecer/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/5-alfa-romeo-que-voce-precisa-conhecer/</guid>
       <pubDate>Sun, 03 Sep 2017 02:58:44 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -1616,8 +1616,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>McLaren 570S no Brasil!</title>
-      <link>https://exoticsbrazil.com.br/mclaren-570s-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/mclaren-570s-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/mclaren-570s-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/mclaren-570s-brasil/</guid>
       <pubDate>Mon, 28 Aug 2017 12:12:24 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -1677,8 +1677,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>Porquê o Porsche 930 Turbo vale cada centavo.</title>
-      <link>https://exoticsbrazil.com.br/porsche-930-turbo/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/porsche-930-turbo/</guid>
+      <link>https://www.exoticsbrazil.com.br/porsche-930-turbo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/porsche-930-turbo/</guid>
       <pubDate>Sun, 20 Aug 2017 19:19:42 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -1713,8 +1713,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>Porque o Aston Martin DB5 é um ícone até os dias atuais?</title>
-      <link>https://exoticsbrazil.com.br/db5-um-icone/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/db5-um-icone/</guid>
+      <link>https://www.exoticsbrazil.com.br/db5-um-icone/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/db5-um-icone/</guid>
       <pubDate>Mon, 14 Aug 2017 00:19:29 +0000</pubDate>
       <dc:creator>José Rubens Fuxreiter Santoro</dc:creator>
       <category>Vintage Cars Brazil</category>
@@ -1748,8 +1748,8 @@ like it. Search google for: dracko’s tricks</p>
     </item>
     <item>
       <title>Volkswagen Golf R no Brasil?</title>
-      <link>https://exoticsbrazil.com.br/volkswagen-golf-r-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/volkswagen-golf-r-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/volkswagen-golf-r-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/volkswagen-golf-r-no-brasil/</guid>
       <pubDate>Tue, 11 Jul 2017 13:48:38 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -1812,8 +1812,8 @@ https://www.youtube.com/watch?v=EfHgyFNjuKw&amp;<br>
     </item>
     <item>
       <title>Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil!</title>
-      <link>https://exoticsbrazil.com.br/alfa-romeo-giulia-no-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/alfa-romeo-giulia-no-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/alfa-romeo-giulia-no-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/alfa-romeo-giulia-no-brasil/</guid>
       <pubDate>Sun, 30 Apr 2017 18:27:41 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
@@ -1845,8 +1845,8 @@ https://www.youtube.com/watch?v=4-4c6E77obs</p>
     </item>
     <item>
       <title>As melhores propagandas de carro já feitas.</title>
-      <link>https://exoticsbrazil.com.br/as-melhores-propagandas-de-carro-ja-feitas/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/as-melhores-propagandas-de-carro-ja-feitas/</guid>
+      <link>https://www.exoticsbrazil.com.br/as-melhores-propagandas-de-carro-ja-feitas/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/as-melhores-propagandas-de-carro-ja-feitas/</guid>
       <pubDate>Tue, 17 Jan 2017 17:06:25 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Cultura</category>
@@ -1906,8 +1906,8 @@ https://www.youtube.com/watch?v=4-4c6E77obs</p>
     </item>
     <item>
       <title>Novidade: BMW M760Li</title>
-      <link>https://exoticsbrazil.com.br/bmw-m760li/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/bmw-m760li/</guid>
+      <link>https://www.exoticsbrazil.com.br/bmw-m760li/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/bmw-m760li/</guid>
       <pubDate>Fri, 12 Feb 2016 15:57:16 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Lançamentos</category>
@@ -1991,13 +1991,13 @@ https://www.youtube.com/watch?v=4-4c6E77obs</p>
     </item>
     <item>
       <title>Dicas de Fotografia Automotiva</title>
-      <link>https://exoticsbrazil.com.br/dicas-fotografia-automotiva/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/dicas-fotografia-automotiva/</guid>
+      <link>https://www.exoticsbrazil.com.br/dicas-fotografia-automotiva/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/dicas-fotografia-automotiva/</guid>
       <pubDate>Thu, 11 Feb 2016 12:00:00 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Fotografia</category>
       <description>Dicas de Fotografia Automotiva É inquestionável que a paixão por carros assola a grande maioria dos brasileiros. Tanto é que temos apaixonados por carros antigos,…</description>
-      <enclosure url="https://exoticsbrazil.com.br/img/porsche-911-gt2-rs-997-brasilia.jpg" length="325436" type="image/jpeg"/>
+      <enclosure url="https://www.exoticsbrazil.com.br/img/porsche-911-gt2-rs-997-brasilia.jpg" length="325436" type="image/jpeg"/>
       <content:encoded><![CDATA[<h2>Dicas de Fotografia Automotiva</h2><p>É inquestionável que a paixão por carros assola a grande maioria dos brasileiros. Tanto é que temos apaixonados por carros antigos, carros esportivos, por determinadas marcas específicas ou até mesmo por carros em miniatura.</p>
 <p>Quem ama os carros, pode procurar uma diferente forma de se envolver com o esse fascinante mundo. É através do não menos fascinante mundo da fotografia.</p>
 <p>Porém, fotografar carros não é tão simples como fotografar pessoas ou paisagens. É necessária certa dose de técnica e conhecimentos um pouco mais aprofundados da arte da fotografia, para que o resultado das fotos realmente seja bom.</p>
@@ -2022,8 +2022,8 @@ Confira se você ou algum objeto não está refletido na lataria ou espelhos. Se
     </item>
     <item>
       <title>Quantos Porsche 918 Spyder existem no Brasil?</title>
-      <link>https://exoticsbrazil.com.br/porsche-918-spyder-brasil/</link>
-      <guid isPermaLink="true">https://exoticsbrazil.com.br/porsche-918-spyder-brasil/</guid>
+      <link>https://www.exoticsbrazil.com.br/porsche-918-spyder-brasil/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/porsche-918-spyder-brasil/</guid>
       <pubDate>Thu, 11 Feb 2016 06:18:58 +0000</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Brasil</category>
