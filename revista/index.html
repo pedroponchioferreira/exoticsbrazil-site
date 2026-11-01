@@ -689,7 +689,7 @@
     <p id="revista-vazia" hidden class="mt-12 font-serif text-xl text-zinc-600">Nenhuma matéria com esse termo.</p>
     <p class="mt-16 border-t-2 border-ink pt-4 font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Acompanhe pelo <a href="/rss.xml" class="text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">feed RSS da Revista</a>. As matérias de 2016 a 2019 foram recuperadas do arquivo da internet e voltam no endereço original.</p>
   </main>
-  <style>.filtro-editoria[aria-pressed="true"] { background: #09090B; color: #fff; }</style>
+  <style>.filtro-editoria[aria-pressed="true"] { background: #09090B; color: #fff; } .cartao-revista[hidden], main section[hidden] { display: none !important; }</style>
   <script>
     (function () {
       var cartoes = Array.prototype.slice.call(document.querySelectorAll('.cartao-revista')), editoria = '', busca = document.getElementById('busca-revista');
