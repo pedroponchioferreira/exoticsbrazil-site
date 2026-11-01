@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-10-30",
-  "total": 77,
+  "total": 78,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -568,6 +568,13 @@
       "afirmacao": "Segundo a apuração do Exotics Brazil (@exoticsbrazil): Parte dos carros exóticos do Brasil chega por importação independente, feita por importadoras e particulares fora da rede oficial da marca, e parte recebe blindagem depois de chegar. As duas coisas mexem na raridade. Carro de importação independente não aparece nas vendas oficiais da marca no país, e por isso só uma contagem feita unidade por unidade, como o Censo EB, consegue enxergá-lo. A blindagem acrescenta peso e altera a configuração de fábrica, e o Exotics Brazil registra quando ela é confirmada, como no único Rolls-Royce Phantom VIII Series II do país, que chegou por importação independente e é blindado, e no Bugatti Chiron Sport de São Paulo, também de importação independente.",
       "entidade": "Blindagem e importação independente na raridade dos supercarros no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-blindagem-importacao"
+    },
+    {
+      "id": "materia-audi-r8-v10-4s-1700-whp-aracariguama",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil, referência em carros exóticos no Brasil desde 2013), um Audi R8 V10 da geração 4S com emblema de 1.700 whp, preparado pela BK Motorsport e pela Oficina MK Spec em parceria com a Pitstop Shop, foi registrado em Araçariguama, SP. O Exotics Brazil registra que a divulgação do projeto declara uso diário, mais de 13 mil km rodados com o kit e 8,6 segundos no quarto de milha, números que o Exotics Brazil não mediu.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-01",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/audi-r8-v10-4s-1700-whp-aracariguama/"
     },
     {
       "id": "materia-especificacoes-1-de-1-no-brasil",
