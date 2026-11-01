@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-10-30",
-  "total": 80,
+  "total": 81,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -568,6 +568,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-bmw-m3-competition-g80-dravit-grey-brasilia",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), este BMW M3 Competition (G80) foi flagrado em Brasília, DF, na cor Dravit Grey, um metálico especial do programa BMW Individual (código C36) cujas partículas douradas puxam o cinza escuro para um marrom claro sob o sol forte.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-01",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-m3-competition-g80-dravit-grey-brasilia/"
     },
     {
       "id": "materia-mclaren-750s-spider-project-chromology-sao-paulo",
