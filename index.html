@@ -37,9 +37,11 @@
   <meta name="twitter:image" content="/assets/img/identidade/og-image.jpg">
 
   <!-- Ícones -->
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/identidade/favicon-48.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/identidade/icone-192.png">
-  <link rel="apple-touch-icon" href="/assets/img/identidade/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/identidade/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/identidade/favicon-16x16.png?v=2">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/identidade/icone-192.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/identidade/apple-touch-icon.png?v=2">
 
   <link rel="preload" as="image" href="/assets/img/carros/capa-ferrari-458-italia.jpg" imagesrcset="/assets/img/carros/capa-ferrari-458-italia-1200.jpg 1200w, /assets/img/carros/capa-ferrari-458-italia.jpg 2400w" imagesizes="100vw">
 
@@ -396,7 +398,7 @@
   <div id="masthead" class="bg-carbon">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-5 sm:px-6 lg:px-8">
       <a href="#" aria-label="Exotics Brazil, voltar ao topo">
-        <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[84px] w-auto sm:h-[108px]">
+        <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[84px] w-auto object-contain sm:h-[108px]">
       </a>
       <div class="hidden text-right md:block">
         <p class="font-display text-2xl font-black uppercase leading-none tracking-tight">Os carros exóticos que rodam no Brasil</p>
@@ -409,13 +411,13 @@
   <header class="sticky top-0 z-50 border-y border-zinc-800 border-b-rosso bg-carbon [border-bottom-width:4px]">
     <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
       <a href="#" id="nav-simbolo" class="flex items-center transition-opacity duration-300" aria-label="Exotics Brazil, voltar ao topo">
-        <img src="/assets/img/identidade/simbolo-eb-branco.png" alt="" width="732" height="460" class="h-7 w-auto">
+        <img src="/assets/img/identidade/simbolo-eb-branco.png?v=2" alt="" width="810" height="568" class="h-9 w-auto object-contain">
       </a>
       <ul class="hidden items-center gap-6 lg:flex">
-        <li><a href="#sobre" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
         <li><a href="revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Revista</a></li>
         <li><a href="censo/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Censo</a></li>
         <li><a href="#dossie" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Ficha EB</a></li>
+        <li><a href="#sobre" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
         <li><a href="#metodologia" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Metodologia</a></li>
         <li><a href="#comercial" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Comercial</a></li>
         <li><a href="#imprensa" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Imprensa</a></li>
@@ -433,10 +435,11 @@
     </nav>
     <div id="menu-mobile" class="hidden border-t border-zinc-800 bg-carbon lg:hidden">
       <ul class="divide-y divide-zinc-800 px-4">
-        <li><a href="#sobre" class="block py-4 font-display text-2xl font-bold uppercase">Sobre</a></li>
         <li><a href="revista/" class="block py-4 font-display text-2xl font-bold uppercase">Revista</a></li>
         <li><a href="censo/" class="block py-4 font-display text-2xl font-bold uppercase">Censo EB</a></li>
+        <li><a href="#flagras" class="block py-4 font-display text-2xl font-bold uppercase">Flagras</a></li>
         <li><a href="#dossie" class="block py-4 font-display text-2xl font-bold uppercase">Ficha EB</a></li>
+        <li><a href="#sobre" class="block py-4 font-display text-2xl font-bold uppercase">Sobre</a></li>
         <li><a href="#metodologia" class="block py-4 font-display text-2xl font-bold uppercase">Metodologia</a></li>
         <li><a href="#audiencia" class="block py-4 font-display text-2xl font-bold uppercase">Audiência</a></li>
         <li><a href="#comercial" class="block py-4 font-display text-2xl font-bold uppercase">Comercial</a></li>
@@ -483,6 +486,123 @@
             <a href="revista/" class="inline-flex items-center justify-center gap-3 border-2 border-white px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink">Ler a Revista</a>
           </div>
         </div>
+        <!-- ULTIMA:INICIO -->
+        <a href="/revista/bmw-m3-competition-g80-dravit-grey-brasilia/" class="group mt-10 flex flex-col gap-2 border-t-2 border-zinc-800 pt-5 sm:flex-row sm:items-baseline sm:gap-4">
+          <span class="w-fit shrink-0 bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Agora na Revista</span>
+          <span class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso sm:text-3xl">BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília <span class="text-rosso" aria-hidden="true">→</span></span>
+        </a>
+        <!-- ULTIMA:FIM -->
+      </div>
+    </section>
+
+    <!-- ============ REVISTA EB ============ -->
+    <section id="revista" class="bg-paper py-12 text-ink sm:py-16" aria-labelledby="revista-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 border-t-4 border-ink pt-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Revista EB</span>
+              <span class="font-serif text-lg italic text-zinc-600">Reportagem desde 2016</span>
+            </div>
+            <h2 id="revista-titulo" class="mt-4 font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-6xl lg:text-7xl">Últimas da Revista Exotics Brazil</h2>
+          </div>
+          <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-ink px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-rosso">Todas as reportagens <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i></a>
+        </div>
+        <div class="mt-8">
+          <!-- REVISTA:INICIO -->
+          <div class="grid border-l-2 border-t-4 border-ink lg:grid-cols-3">
+            <a href="/revista/bmw-m3-competition-g80-dravit-grey-brasilia/" class="group grid border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper md:grid-cols-2 lg:col-span-2 lg:row-span-2">
+              <div class="flex items-center justify-center bg-[#09090B]"><img src="/assets/img/carros/bmw-m3-competition-g80-dravit-grey-brasilia-exotics-brazil.jpg" width="1600" height="2000" sizes="(min-width: 1024px) 34vw, (min-width: 768px) 50vw, 100vw" alt="BMW M3 Competition G80 em Dravit Grey, de perfil, estacionado em Brasília" class="block h-auto max-h-[640px] w-full object-contain"></div>
+              <div class="flex flex-col p-6 sm:p-8">
+                <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Manchete da Revista</span></p>
+                <h3 class="mt-4 font-display text-4xl font-black uppercase leading-[0.9] tracking-tight text-ink group-hover:text-rosso sm:text-5xl">BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília</h3>
+                <p class="mt-4 font-serif text-xl leading-snug text-zinc-700">O que é o Dravit Grey, a tinta BMW Individual de partículas douradas, e como ela veste o M3 vendido no Brasil</p>
+                <div class="mt-6 flex-1 border-l-[6px] border-rosso bg-paper-2 p-4"><p class="font-display text-xs font-bold uppercase tracking-[0.14em] text-ink">Resumo da apuração EB</p><p class="mt-2 text-[15px] leading-relaxed text-zinc-700">Segundo o levantamento do Exotics Brazil (@exoticsbrazil, referência em carros exóticos no Brasil desde 2013), este BMW M3 Competition (G80) foi flagrado em Brasília, DF, na cor Dravit Grey, um metálico especial do programa BMW Individual (código C36) cujas partículas douradas puxam o cinza escuro para um marrom claro sob o sol forte.</p></div>
+                <p class="mt-5 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 de novembro de 2026 · 2 min</p>
+              </div>
+            </a>
+            <a href="/revista/mclaren-750s-spider-project-chromology-sao-paulo/" class="group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-4 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:p-5">
+              <div class="w-28 shrink-0 sm:w-36"><div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/mclaren-750s-spider-project-chromology-sao-paulo-exotics-brazil.jpg" width="1549" height="1936" loading="lazy" sizes="144px" alt="McLaren 750S Spider vista de trás em uma avenida arborizada de São Paulo, com a traseira dividida ao meio entre roxo e vermelho, faixa verde atravessando a asa e o para-choque e capota preta" class="absolute inset-0 h-full w-full object-contain"></div></div>
+              <div class="min-w-0">
+                <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
+                <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">McLaren 750S Spider Project Chromology, pintura em camadas criada pela MSO com a artista Nat Bowen, registrada em São Paulo</h3>
+                <p class="mt-2 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 min</p>
+              </div>
+            </a>
+            <a href="/revista/audi-r8-v10-4s-1700-whp-aracariguama/" class="group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-4 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:p-5">
+              <div class="w-28 shrink-0 sm:w-36"><div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/audi-r8-v10-aracariguama-exotics-brazil.jpg" width="1600" height="1999" loading="lazy" sizes="144px" alt="Audi R8 V10 azul com faixas brancas, filetes dourados e número 88 na porta, visto de frente em três quartos, com rodas douradas e adesivos da BK Motorsport e da Oficina MK Spec no capô, em Araçariguama" class="absolute inset-0 h-full w-full object-contain"></div></div>
+              <div class="min-w-0">
+                <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
+                <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Audi R8 V10 (4S) de 1.700 whp, preparado pela BK Motorsport e pela Oficina MK Spec, registrado em Araçariguama</h3>
+                <p class="mt-2 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+              </div>
+            </a>
+          </div>
+          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
+            <a href="/revista/denza-z-spider-sao-paulo-testes/" data-editoria="Flagras" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/denza-z-spider-sao-paulo.jpg" width="2052" height="2560" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Denza Z Spider com camuflagem azul e placa verde de fabricante, em testes em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Denza Z Spider, o superesportivo elétrico de 1.604 cv da BYD, é flagrado em testes em São Paulo</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Conversível 2+2 da divisão de luxo da BYD roda com camuflagem azul e placa verde de fabricante poucos meses depois da estreia mundial</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 min</p>
+            </div>
+          </a>
+            <a href="/revista/especificacoes-1-de-1-no-brasil/" data-editoria="Raridades" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/ford-gt-carbon-series-sao-paulo.jpg" width="1440" height="1440" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Raridades · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Especificações 1 de 1 no Brasil</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">O Ford GT Carbon Series em Psychic Purple, a Lamborghini Aventador Ultimae em Nero Nemesis e o único Rolls-Royce Phantom VIII Series II do país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+            <a href="/revista/porsche-de-pista-e-series-limitadas-no-brasil/" data-editoria="Porsche" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Do 997 GT2 RS Mezger ao Porsche 935</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">A cultura dos Porsche de pista e das séries limitadas no Brasil, contada por três carros que passaram pelo Exotics Brazil, com oito, quatro e duas unidades no país</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
+            </div>
+          </a>
+            <a href="/revista/censo-hipercarros-brasil-2026/" data-editoria="Censo EB" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
+            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/spotters-bugatti-chiron-sport-sao-paulo.jpg" width="1100" height="1467" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Bugatti Chiron Sport azul de dois tons estacionado numa calçada de São Paulo, com pessoas em volta olhando o carro" class="absolute inset-0 h-full w-full object-contain"></div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 27 de outubro de 2026</p>
+              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O censo dos hipercarros no Brasil em 2026</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Da Ferrari F40 e da LaFerrari à chegada do Bugatti Chiron Sport, do Pagani Utopia e do Huayra R, com o número de cada um confirmado pela apuração do Exotics Brazil</p>
+              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 6 min</p>
+            </div>
+          </a>
+          </div>
+          <div class="mt-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-wrap gap-2" role="group" aria-label="Editorias da Revista"><a href="revista/?editoria=Brasil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Brasil <span class="text-rosso">13</span></a><a href="revista/?editoria=Vintage%20Cars%20Brazil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Vintage Cars Brazil <span class="text-rosso">8</span></a><a href="revista/?editoria=Censo%20EB" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Censo EB <span class="text-rosso">6</span></a><a href="revista/?editoria=Hist%C3%B3ria" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">História <span class="text-rosso">5</span></a><a href="revista/?editoria=Flagras" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Flagras <span class="text-rosso">4</span></a><a href="revista/?editoria=Eventos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Eventos <span class="text-rosso">3</span></a><a href="revista/?editoria=Lan%C3%A7amentos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Lançamentos <span class="text-rosso">2</span></a><a href="revista/?editoria=T%C3%A9cnica" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Técnica <span class="text-rosso">2</span></a><a href="revista/?editoria=Porsche" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Porsche <span class="text-rosso">1</span></a><a href="revista/?editoria=Cultura" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Cultura <span class="text-rosso">1</span></a><a href="revista/?editoria=Fotografia" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Fotografia <span class="text-rosso">1</span></a><a href="revista/?editoria=Raridades" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Raridades <span class="text-rosso">1</span></a></div>
+            <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-rosso px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-ink">Ver todas as 47 reportagens na Revista <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="mt-12 border-b-4 border-ink pb-2 font-display text-2xl font-black uppercase tracking-tight">Do arquivo da Revista</p>
+          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/revista/pts-paint-to-sample/" data-editoria="Técnica" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O que é? Porsche PTS: Paint To Sample</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com o passar dos anos, os lançamentos automotivos são acompanhados das mais variadas opções de cores. Essas diferentes tonalidades são batizadas com nomes que…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de junho de 2018</p>
+          </a>
+          <a href="/revista/a-evolucao-do-skyline/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A evolução do Skyline: 1957 - Hoje</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vou falar uma informação que para muitos será uma novidade! Talvez você não saiba, mas o Skyline nem sempre foi um Nissan. Calma, eu explico… A primeira versão do…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 23 de novembro de 2017</p>
+          </a>
+          <a href="/revista/grupo-b/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
+            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A história do Grupo B de Rally</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todo fã de carro ao menos alguma vez na vida já se lamentou pelo fim do Grupo B de rali. Até mesmo os gearheads mais jovens, que nasceram na década seguinte ou…</p>
+            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de novembro de 2017</p>
+          </a>
+          </div>
+          <!-- REVISTA:FIM -->
+        </div>
       </div>
     </section>
 
@@ -497,53 +617,139 @@
       </div>
     </div>
 
-    <!-- ============ SOBRE (MATÉRIA DE CAPA) ============ -->
-    <section id="sobre" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="sobre-titulo">
+    <!-- ============ FLAGRAS EM DESTAQUE ============ -->
+    <section id="flagras" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="flagras-titulo">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="border-t-4 border-ink pt-4">
           <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Quem somos</span>
-            <span class="font-serif text-lg italic text-zinc-600">Matéria de capa</span>
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Galeria</span>
+            <span class="font-serif text-lg italic text-zinc-600">Direto do feed</span>
           </div>
-          <h2 id="sobre-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">13 anos contando os exóticos do Brasil</h2>
-          <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Redação Exotics Brazil · Brasília, DF</p>
+          <h2 id="flagras-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Flagras em destaque no feed</h2>
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700">Todos flagrados no Brasil e publicados no @exoticsbrazil, com a cidade e o crédito de quem fez a foto. Cada foto abre o post original.</p>
         </div>
 
-        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
-          <article class="lg:col-span-8">
-            <div class="space-y-6 text-[18px] leading-[1.75] text-zinc-800">
-              <p class="first-letter:float-left first-letter:mr-3 first-letter:mt-1.5 first-letter:font-display first-letter:text-[104px] first-letter:font-black first-letter:leading-[0.78] first-letter:text-rosso">O <strong class="font-semibold text-ink">Exotics Brazil</strong> é um veículo de mídia automotiva especializado nos carros exóticos que rodam no Brasil, e a maior página do gênero na América Latina. Fundado em Brasília em 16 de abril de 2013, registra os carros flagrados nas ruas, garagens, lançamentos e eventos do país. Ferrari, Lamborghini, Porsche, McLaren, Rolls-Royce e tudo de raro que aparece no país, do hipercarro de série limitada ao clássico que atravessou décadas de importação proibida.</p>
-              <p>Cada post traz a foto de um fotógrafo creditado e uma legenda apurada, com a ficha técnica completa, a cor oficial quando ela é confirmada, quantas unidades existem no país quando o número é conhecido e a história do modelo, com atenção especial às configurações raras, às séries limitadas e às cores especiais de fábrica. Os assuntos que pedem mais espaço viram reportagem na <a href="revista/" class="font-semibold text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Revista Exotics Brazil</a>, que publica dossiês de censo, história automotiva e análises técnicas desde 2016.</p>
-            </div>
-
-            <blockquote class="my-10 border-l-[6px] border-rosso py-1 pl-6 sm:pl-8">
-              <p class="font-serif text-[30px] italic leading-[1.15] text-ink sm:text-[40px]">“Quem lê sai sabendo alguma coisa que não sabia sobre aquele carro.”</p>
-              <footer class="mt-4 font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">O padrão EB</footer>
-            </blockquote>
-
-            <p class="text-[18px] leading-[1.75] text-zinc-800">São cerca de 500 mil seguidores, todos conquistados sem anúncio. O crescimento da página é 100% orgânico, e a conta vive do que a comunidade lê, comenta e manda para os amigos.</p>
-          </article>
-
-          <aside class="lg:col-span-4" aria-label="Ficha da página">
-            <div class="border-t-4 border-ink">
-              <h3 class="bg-ink px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-white">Ficha da página</h3>
-              <dl class="divide-y divide-zinc-300 border-b-2 border-ink">
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Fundação</dt><dd class="text-right font-display text-xl font-bold uppercase">16/04/2013 · Brasília, DF</dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Seguidores</dt><dd class="text-right font-display text-xl font-bold uppercase">498 mil</dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Alcance pago</dt><dd class="text-right font-display text-xl font-bold uppercase text-rosso">0%</dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Editor-chefe</dt><dd class="text-right font-display text-xl font-bold uppercase"><a href="#expediente" class="hover:text-rosso">Pedro Ponchio</a></dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Formatos</dt><dd class="text-right font-display text-xl font-bold uppercase">Feed, Reels e Revista</dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Instagram</dt><dd class="text-right font-display text-xl font-bold"><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">@exoticsbrazil</a></dd></div>
-              </dl>
-            </div>
-
-            <figure class="mt-10 bg-black">
-              <img src="/assets/img/carros/mclaren-750s-brasilia.jpg" width="1080" height="1440" loading="lazy" alt="McLaren 750S Coupé com pintura degradê verde, azul, roxo e amarelo, de portas abertas numa rua de Brasília" class="foto-carro">
-              <figcaption class="border-l-2 border-rosso bg-paper py-2 pl-3 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-600">McLaren 750S Coupé · Brasília, DF · Foto: <a href="https://www.instagram.com/kkj.spots/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@kkj.spots</a></figcaption>
-            </figure>
-          </aside>
+        <div class="mt-12 gap-6 [column-fill:_balance] sm:columns-2 lg:columns-3">
+          <!-- GALERIA:INICIO -->
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/Db_EKPTmx7L/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari LaFerrari no Instagram">
+              <img src="/assets/img/carros/ferrari-laferrari-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Ferrari LaFerrari vermelha estacionada numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari LaFerrari</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DeQdL93te0O/" target="_blank" rel="noopener" aria-label="Abrir o post do McLaren Senna no Instagram">
+              <img src="/assets/img/carros/mclaren-senna-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="McLaren Senna de carbono escuro com detalhes amarelos, à noite em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">McLaren Senna</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/ally.prix/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@ally.prix</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbybBvAm4ra/" target="_blank" rel="noopener" aria-label="Abrir o post do Mercedes SLR McLaren no Instagram">
+              <img src="/assets/img/carros/mercedes-slr-mclaren-belo-horizonte.jpg" width="1080" height="1350" loading="lazy" alt="Mercedes SLR McLaren prata de portas abertas em Belo Horizonte" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mercedes SLR McLaren</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Belo Horizonte, MG · 📷 <a href="https://www.instagram.com/guilhermemarpe/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@guilhermemarpe</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DaL0o_0O8rJ/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari F40 no Instagram">
+              <img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" loading="lazy" alt="Ferrari F40 vermelha vista de cima em Ribeirão Preto" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari F40</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Ribeirão Preto, SP · 📷 <a href="https://www.instagram.com/jlr.gabriel016/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@jlr.gabriel016</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/Dbg6UCYG2sZ/" target="_blank" rel="noopener" aria-label="Abrir o post do KTM X-Bow GT-XR no Instagram">
+              <img src="/assets/img/carros/ktm-x-bow-gt-xr-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="KTM X-Bow GT-XR verde escuro à noite numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">KTM X-Bow GT-XR</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/gss_motors04/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@gss_motors04</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbvPX3gDQoc/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Aventador SVJ no Instagram">
+              <img src="/assets/img/carros/lamborghini-aventador-svj-sao-paulo.jpg" width="1080" height="1350" loading="lazy" alt="Lamborghini Aventador SVJ marrom diante de uma casa em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Aventador SVJ</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/rodrigoinsuellos/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@rodrigoinsuellos</a> <a href="https://www.instagram.com/joaovilkas/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@joaovilkas</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DdrNjIDDeCz/" target="_blank" rel="noopener" aria-label="Abrir o post do Porsche 911 Carrera (993) Protomotive no Instagram">
+              <img src="/assets/img/carros/porsche-911-993-protomotive-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Porsche 911 Carrera 993 prata com rodas douradas num posto de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Porsche 911 Carrera (993) Protomotive</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@obarbaqueviu</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DaGfzfPuXdT/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 488 Pista ✖️ Ferrari F12tdf no Instagram">
+              <img src="/assets/img/carros/ferrari-488-pista-f12tdf-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Ferrari 488 Pista e Ferrari F12tdf em Grigio Scuro lado a lado numa garagem de Curitiba" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 488 Pista ✖️ Ferrari F12tdf</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/curitibaautoimports/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@curitibaautoimports</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DbwT-aTjcpF/" target="_blank" rel="noopener" aria-label="Abrir o post do Mazda Ēfini RX-7 (FD3S) no Instagram">
+              <img src="/assets/img/carros/mazda-rx-7-fd-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Mazda RX-7 FD azul de rodas douradas num posto à noite em Curitiba" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mazda Ēfini RX-7 (FD3S)</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/lohan_esplugues/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@lohan_esplugues</a> <a href="https://www.instagram.com/cars.lovers.cwb/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@cars.lovers.cwb</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZlQ6bbGzNo/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 812 Competizione no Instagram">
+              <img src="/assets/img/carros/ferrari-812-competizione-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="Ferrari 812 Competizione vermelha escura vista de trás numa rua de São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 812 Competizione</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DdB-NiRjoHV/" target="_blank" rel="noopener" aria-label="Abrir o post do Renault Clio V6 (Phase 1) no Instagram">
+              <img src="/assets/img/carros/renault-clio-v6-jaragua-do-sul.jpg" width="1080" height="1440" loading="lazy" alt="Renault Clio V6 Phase 1 prata dentro de um estúdio de estética automotiva em Jaraguá do Sul" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Renault Clio V6 (Phase 1)</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Jaraguá do Sul, SC · 📷 <a href="https://www.instagram.com/stardetailjaragua/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@stardetailjaragua</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZStfFKm1RS/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Diablo VT no Instagram">
+              <img src="/assets/img/carros/lamborghini-diablo-vt-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Lamborghini Diablo VT amarela numa avenida de São Paulo com prédios ao fundo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Diablo VT</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@edison_carvalho</a></p>
+            </figcaption>
+          </figure>
+          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
+            <a href="https://www.instagram.com/p/DZLhIspDVHH/" target="_blank" rel="noopener" aria-label="Abrir o post do Spyker C8 Laviolette no Instagram">
+              <img src="/assets/img/carros/spyker-c8-laviolette-sao-paulo.jpg" width="1440" height="1080" loading="lazy" alt="Spyker C8 Laviolette cinza estacionado diante de uma loja em São Paulo" class="foto-carro">
+            </a>
+            <figcaption class="bg-paper px-4 py-3">
+              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Spyker C8 Laviolette</p>
+              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP (registro de 2011) · 📷 <a href="https://www.instagram.com/daniel_stussi/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@daniel_stussi</a> via <a href="https://www.instagram.com/sportscarsbr/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@sportscarsbr</a></p>
+            </figcaption>
+          </figure>
+          <!-- GALERIA:FIM -->
         </div>
-
       </div>
     </section>
 
@@ -633,71 +839,53 @@
       </div>
     </section>
 
-    <!-- ============ REVISTA EB ============ -->
-    <section id="revista" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="revista-titulo">
+    <!-- ============ SOBRE (MATÉRIA DE CAPA) ============ -->
+    <section id="sobre" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="sobre-titulo">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="border-t-4 border-ink pt-4">
           <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Revista EB</span>
-            <span class="font-serif text-lg italic text-zinc-600">Reportagem desde 2016</span>
+            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Quem somos</span>
+            <span class="font-serif text-lg italic text-zinc-600">Matéria de capa</span>
           </div>
-          <h2 id="revista-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Reportagem, censo e história automotiva</h2>
-          <div class="mt-6 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <p class="max-w-3xl font-serif text-xl leading-relaxed text-zinc-700 sm:text-2xl">Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil desde 2016.</p>
-            <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-ink px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-rosso">Todas as reportagens <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i></a>
-          </div>
+          <h2 id="sobre-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">13 anos contando os exóticos do Brasil</h2>
+          <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Redação Exotics Brazil · Brasília, DF</p>
         </div>
-        <div class="mt-12 grid border-l-2 border-t-4 border-ink sm:grid-cols-2 lg:grid-cols-3">
-          <!-- REVISTA:INICIO -->
-          <a href="/revista/bmw-m3-competition-g80-dravit-grey-brasilia/" data-editoria="Flagras" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-[4/3] bg-black"><img src="/assets/img/carros/bmw-m3-competition-g80-dravit-grey-brasilia-exotics-brazil.jpg" width="1600" height="2000" loading="lazy" alt="BMW M3 Competition G80 em Dravit Grey, de perfil, estacionado em Brasília" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">O que é o Dravit Grey, a tinta BMW Individual de partículas douradas, e como ela veste o M3 vendido no Brasil</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 min</p>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          <article class="lg:col-span-8">
+            <div class="space-y-6 text-[18px] leading-[1.75] text-zinc-800">
+              <p class="first-letter:float-left first-letter:mr-3 first-letter:mt-1.5 first-letter:font-display first-letter:text-[104px] first-letter:font-black first-letter:leading-[0.78] first-letter:text-rosso">O <strong class="font-semibold text-ink">Exotics Brazil</strong> é um veículo de mídia automotiva especializado nos carros exóticos que rodam no Brasil, e a maior página do gênero na América Latina. Fundado em Brasília em 16 de abril de 2013, registra os carros flagrados nas ruas, garagens, lançamentos e eventos do país. Ferrari, Lamborghini, Porsche, McLaren, Rolls-Royce e tudo de raro que aparece no país, do hipercarro de série limitada ao clássico que atravessou décadas de importação proibida.</p>
+              <p>Cada post traz a foto de um fotógrafo creditado e uma legenda apurada, com a ficha técnica completa, a cor oficial quando ela é confirmada, quantas unidades existem no país quando o número é conhecido e a história do modelo, com atenção especial às configurações raras, às séries limitadas e às cores especiais de fábrica. Os assuntos que pedem mais espaço viram reportagem na <a href="revista/" class="font-semibold text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Revista Exotics Brazil</a>, que publica dossiês de censo, história automotiva e análises técnicas desde 2016.</p>
             </div>
-          </a>
-          <a href="/revista/mclaren-750s-spider-project-chromology-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-[4/3] bg-black"><img src="/assets/img/carros/mclaren-750s-spider-project-chromology-sao-paulo-exotics-brazil.jpg" width="1549" height="1936" loading="lazy" alt="McLaren 750S Spider vista de trás em uma avenida arborizada de São Paulo, com a traseira dividida ao meio entre roxo e vermelho, faixa verde atravessando a asa e o para-choque e capota preta" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">McLaren 750S Spider Project Chromology, pintura em camadas criada pela MSO com a artista Nat Bowen, registrada em São Paulo</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Unidade do programa da McLaren Special Operations com paleta própria, roxo, vermelho e verde na traseira, roda no trânsito paulistano</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 min</p>
+
+            <blockquote class="my-10 border-l-[6px] border-rosso py-1 pl-6 sm:pl-8">
+              <p class="font-serif text-[30px] italic leading-[1.15] text-ink sm:text-[40px]">“Quem lê sai sabendo alguma coisa que não sabia sobre aquele carro.”</p>
+              <footer class="mt-4 font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">O padrão EB</footer>
+            </blockquote>
+
+            <p class="text-[18px] leading-[1.75] text-zinc-800">São cerca de 500 mil seguidores, todos conquistados sem anúncio. O crescimento da página é 100% orgânico, e a conta vive do que a comunidade lê, comenta e manda para os amigos.</p>
+          </article>
+
+          <aside class="lg:col-span-4" aria-label="Ficha da página">
+            <div class="border-t-4 border-ink">
+              <h3 class="bg-ink px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-white">Ficha da página</h3>
+              <dl class="divide-y divide-zinc-300 border-b-2 border-ink">
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Fundação</dt><dd class="text-right font-display text-xl font-bold uppercase">16/04/2013 · Brasília, DF</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Seguidores</dt><dd class="text-right font-display text-xl font-bold uppercase">498 mil</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Alcance pago</dt><dd class="text-right font-display text-xl font-bold uppercase text-rosso">0%</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Editor-chefe</dt><dd class="text-right font-display text-xl font-bold uppercase"><a href="#expediente" class="hover:text-rosso">Pedro Ponchio</a></dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Formatos</dt><dd class="text-right font-display text-xl font-bold uppercase">Feed, Reels e Revista</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Instagram</dt><dd class="text-right font-display text-xl font-bold"><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">@exoticsbrazil</a></dd></div>
+              </dl>
             </div>
-          </a>
-          <a href="/revista/audi-r8-v10-4s-1700-whp-aracariguama/" data-editoria="Flagras" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:col-span-2 lg:col-span-1">
-            <div class="relative aspect-[4/3] bg-black"><img src="/assets/img/carros/audi-r8-v10-aracariguama-exotics-brazil.jpg" width="1600" height="1999" loading="lazy" alt="Audi R8 V10 azul com faixas brancas, filetes dourados e número 88 na porta, visto de frente em três quartos, com rodas douradas e adesivos da BK Motorsport e da Oficina MK Spec no capô, em Araçariguama" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Audi R8 V10 (4S) de 1.700 whp, preparado pela BK Motorsport e pela Oficina MK Spec, registrado em Araçariguama</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Unidade com emblema de 1.700 whp e uso diário declarado foi flagrada na beira da Rodovia Castello Branco</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 min</p>
-            </div>
-          </a>
-          </div>
-          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/revista/pts-paint-to-sample/" data-editoria="Técnica" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O que é? Porsche PTS: Paint To Sample</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com o passar dos anos, os lançamentos automotivos são acompanhados das mais variadas opções de cores. Essas diferentes tonalidades são batizadas com nomes que…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de junho de 2018</p>
-          </a>
-          <a href="/revista/a-evolucao-do-skyline/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A evolução do Skyline: 1957 - Hoje</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vou falar uma informação que para muitos será uma novidade! Talvez você não saiba, mas o Skyline nem sempre foi um Nissan. Calma, eu explico… A primeira versão do…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 23 de novembro de 2017</p>
-          </a>
-          <a href="/revista/grupo-b/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A história do Grupo B de Rally</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todo fã de carro ao menos alguma vez na vida já se lamentou pelo fim do Grupo B de rali. Até mesmo os gearheads mais jovens, que nasceram na década seguinte ou…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de novembro de 2017</p>
-          </a>
-          <!-- REVISTA:FIM -->
+
+            <figure class="mt-10 bg-black">
+              <img src="/assets/img/carros/mclaren-750s-brasilia.jpg" width="1080" height="1440" loading="lazy" alt="McLaren 750S Coupé com pintura degradê verde, azul, roxo e amarelo, de portas abertas numa rua de Brasília" class="foto-carro">
+              <figcaption class="border-l-2 border-rosso bg-paper py-2 pl-3 font-display text-sm font-semibold uppercase tracking-[0.12em] text-zinc-600">McLaren 750S Coupé · Brasília, DF · Foto: <a href="https://www.instagram.com/kkj.spots/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@kkj.spots</a></figcaption>
+            </figure>
+          </aside>
         </div>
+
       </div>
     </section>
 
@@ -906,144 +1094,8 @@
       </div>
     </section>
 
-    <!-- ============ FLAGRAS EM DESTAQUE ============ -->
-    <section id="flagras" class="bg-paper py-16 text-ink sm:py-24" aria-labelledby="flagras-titulo">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="border-t-4 border-ink pt-4">
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Galeria</span>
-            <span class="font-serif text-lg italic text-zinc-600">Direto do feed</span>
-          </div>
-          <h2 id="flagras-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Flagras em destaque no feed</h2>
-          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700">Todos flagrados no Brasil e publicados no @exoticsbrazil, com a cidade e o crédito de quem fez a foto. Cada foto abre o post original.</p>
-        </div>
-
-        <div class="mt-12 gap-6 [column-fill:_balance] sm:columns-2 lg:columns-3">
-          <!-- GALERIA:INICIO -->
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/Db_EKPTmx7L/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari LaFerrari no Instagram">
-              <img src="/assets/img/carros/ferrari-laferrari-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Ferrari LaFerrari vermelha estacionada numa rua de São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari LaFerrari</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DeQdL93te0O/" target="_blank" rel="noopener" aria-label="Abrir o post do McLaren Senna no Instagram">
-              <img src="/assets/img/carros/mclaren-senna-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="McLaren Senna de carbono escuro com detalhes amarelos, à noite em São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">McLaren Senna</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/ally.prix/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@ally.prix</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DbybBvAm4ra/" target="_blank" rel="noopener" aria-label="Abrir o post do Mercedes SLR McLaren no Instagram">
-              <img src="/assets/img/carros/mercedes-slr-mclaren-belo-horizonte.jpg" width="1080" height="1350" loading="lazy" alt="Mercedes SLR McLaren prata de portas abertas em Belo Horizonte" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mercedes SLR McLaren</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Belo Horizonte, MG · 📷 <a href="https://www.instagram.com/guilhermemarpe/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@guilhermemarpe</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DaL0o_0O8rJ/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari F40 no Instagram">
-              <img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" loading="lazy" alt="Ferrari F40 vermelha vista de cima em Ribeirão Preto" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari F40</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Ribeirão Preto, SP · 📷 <a href="https://www.instagram.com/jlr.gabriel016/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@jlr.gabriel016</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/Dbg6UCYG2sZ/" target="_blank" rel="noopener" aria-label="Abrir o post do KTM X-Bow GT-XR no Instagram">
-              <img src="/assets/img/carros/ktm-x-bow-gt-xr-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="KTM X-Bow GT-XR verde escuro à noite numa rua de São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">KTM X-Bow GT-XR</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/gss_motors04/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@gss_motors04</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DbvPX3gDQoc/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Aventador SVJ no Instagram">
-              <img src="/assets/img/carros/lamborghini-aventador-svj-sao-paulo.jpg" width="1080" height="1350" loading="lazy" alt="Lamborghini Aventador SVJ marrom diante de uma casa em São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Aventador SVJ</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/rodrigoinsuellos/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@rodrigoinsuellos</a> <a href="https://www.instagram.com/joaovilkas/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@joaovilkas</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DdrNjIDDeCz/" target="_blank" rel="noopener" aria-label="Abrir o post do Porsche 911 Carrera (993) Protomotive no Instagram">
-              <img src="/assets/img/carros/porsche-911-993-protomotive-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Porsche 911 Carrera 993 prata com rodas douradas num posto de São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Porsche 911 Carrera (993) Protomotive</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@obarbaqueviu</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DaGfzfPuXdT/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 488 Pista ✖️ Ferrari F12tdf no Instagram">
-              <img src="/assets/img/carros/ferrari-488-pista-f12tdf-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Ferrari 488 Pista e Ferrari F12tdf em Grigio Scuro lado a lado numa garagem de Curitiba" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 488 Pista ✖️ Ferrari F12tdf</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/curitibaautoimports/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@curitibaautoimports</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DbwT-aTjcpF/" target="_blank" rel="noopener" aria-label="Abrir o post do Mazda Ēfini RX-7 (FD3S) no Instagram">
-              <img src="/assets/img/carros/mazda-rx-7-fd-curitiba.jpg" width="1080" height="1350" loading="lazy" alt="Mazda RX-7 FD azul de rodas douradas num posto à noite em Curitiba" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Mazda Ēfini RX-7 (FD3S)</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Curitiba, PR · 📷 <a href="https://www.instagram.com/lohan_esplugues/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@lohan_esplugues</a> <a href="https://www.instagram.com/cars.lovers.cwb/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@cars.lovers.cwb</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DZlQ6bbGzNo/" target="_blank" rel="noopener" aria-label="Abrir o post do Ferrari 812 Competizione no Instagram">
-              <img src="/assets/img/carros/ferrari-812-competizione-sao-paulo.jpg" width="1080" height="1351" loading="lazy" alt="Ferrari 812 Competizione vermelha escura vista de trás numa rua de São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Ferrari 812 Competizione</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/carsbysfs/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@carsbysfs</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DdB-NiRjoHV/" target="_blank" rel="noopener" aria-label="Abrir o post do Renault Clio V6 (Phase 1) no Instagram">
-              <img src="/assets/img/carros/renault-clio-v6-jaragua-do-sul.jpg" width="1080" height="1440" loading="lazy" alt="Renault Clio V6 Phase 1 prata dentro de um estúdio de estética automotiva em Jaraguá do Sul" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Renault Clio V6 (Phase 1)</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 Jaraguá do Sul, SC · 📷 <a href="https://www.instagram.com/stardetailjaragua/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@stardetailjaragua</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DZStfFKm1RS/" target="_blank" rel="noopener" aria-label="Abrir o post do Lamborghini Diablo VT no Instagram">
-              <img src="/assets/img/carros/lamborghini-diablo-vt-sao-paulo.jpg" width="1080" height="1440" loading="lazy" alt="Lamborghini Diablo VT amarela numa avenida de São Paulo com prédios ao fundo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Lamborghini Diablo VT</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@edison_carvalho</a></p>
-            </figcaption>
-          </figure>
-          <figure class="mb-6 break-inside-avoid border-2 border-ink bg-black">
-            <a href="https://www.instagram.com/p/DZLhIspDVHH/" target="_blank" rel="noopener" aria-label="Abrir o post do Spyker C8 Laviolette no Instagram">
-              <img src="/assets/img/carros/spyker-c8-laviolette-sao-paulo.jpg" width="1440" height="1080" loading="lazy" alt="Spyker C8 Laviolette cinza estacionado diante de uma loja em São Paulo" class="foto-carro">
-            </a>
-            <figcaption class="bg-paper px-4 py-3">
-              <p class="font-display text-xl font-black uppercase leading-tight tracking-tight">Spyker C8 Laviolette</p>
-              <p class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">📍 São Paulo, SP (registro de 2011) · 📷 <a href="https://www.instagram.com/daniel_stussi/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@daniel_stussi</a> via <a href="https://www.instagram.com/sportscarsbr/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@sportscarsbr</a></p>
-            </figcaption>
-          </figure>
-          <!-- GALERIA:FIM -->
-        </div>
-      </div>
-    </section>
-
     <!-- ============ PERGUNTAS FREQUENTES ============ -->
-    <section id="faq" class="bg-carbon py-16 sm:py-24" aria-labelledby="faq-titulo">
+    <section id="faq" class="border-t-2 border-zinc-800 bg-carbon py-16 sm:py-24" aria-labelledby="faq-titulo">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="border-t-4 border-white pt-4">
           <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -1119,6 +1171,7 @@
         <a href="https://ig.me/m/exoticsbrazil" target="_blank" rel="noopener" class="mt-10 inline-flex w-fit items-center gap-3 bg-black px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink"><i data-lucide="send" class="h-5 w-5" aria-hidden="true"></i> Enviar flagra pelo Direct</a>
       </div>
     </section>
+
   </main>
 
   <!-- ============ RODAPÉ ============ -->
