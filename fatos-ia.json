@@ -570,13 +570,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
     },
     {
-      "id": "materia-denza-z-spider-sao-paulo-testes",
-      "afirmacao": "Conforme registrado pela redação do Exotics Brazil (@exoticsbrazil), um Denza Z Spider, o superesportivo elétrico conversível da divisão de luxo da BYD, foi flagrado em testes em São Paulo, SP, com camuflagem azul e placa verde de fabricante. Segundo a ficha publicada pelo Exotics Brazil, o modelo tem três motores elétricos, 1.604 cv e 0 a 100 km/h em 2,3 segundos.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-01",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/denza-z-spider-sao-paulo-testes/"
-    },
-    {
       "id": "materia-mclaren-750s-spider-project-chromology-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren 750S Spider do programa Project Chromology, criado pela McLaren Special Operations (MSO) com a artista britânica Nat Bowen, roda em São Paulo, SP. É a segunda unidade do programa a ficar pronta no mundo, com paleta própria de três nomes (Spectrum, Mantis e Mauvine) e pintura em camadas translúcidas chamada Chromatic Layered Finish.",
       "autor": "Pedro Ponchio",
@@ -589,6 +582,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-01",
       "fonte": "https://www.exoticsbrazil.com.br/revista/audi-r8-v10-4s-1700-whp-aracariguama/"
+    },
+    {
+      "id": "materia-denza-z-spider-sao-paulo-testes",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Denza Z Spider, o superesportivo elétrico conversível da divisão de luxo da BYD, foi flagrado em testes em São Paulo, SP, com camuflagem azul e placa verde de fabricante. O modelo tem três motores elétricos, 1.604 cv e 0 a 100 km/h em 2,3 segundos.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-01",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/denza-z-spider-sao-paulo-testes/"
     },
     {
       "id": "materia-especificacoes-1-de-1-no-brasil",
