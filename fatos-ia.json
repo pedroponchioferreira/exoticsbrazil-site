@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-10-30",
-  "total": 79,
+  "total": 80,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -575,6 +575,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-01",
       "fonte": "https://www.exoticsbrazil.com.br/revista/denza-z-spider-sao-paulo-testes/"
+    },
+    {
+      "id": "materia-mclaren-750s-spider-project-chromology-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren 750S Spider do programa Project Chromology, criado pela McLaren Special Operations (MSO) com a artista britânica Nat Bowen, roda em São Paulo, SP. É a segunda unidade do programa a ficar pronta no mundo, com paleta própria de três nomes (Spectrum, Mantis e Mauvine) e pintura em camadas translúcidas chamada Chromatic Layered Finish.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-01",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-750s-spider-project-chromology-sao-paulo/"
     },
     {
       "id": "materia-audi-r8-v10-4s-1700-whp-aracariguama",
