@@ -586,18 +586,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
     },
     {
-      "id": "materia-mercedes-amg-s65-coupe-facelift-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem apenas três Mercedes-AMG S 65 Coupé (C217) no país, uma pré-facelift e duas facelift, como a flagrada em São Paulo com o V12 6.0 biturbo de 630 cv.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-02",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-s65-coupe-facelift-sao-paulo/"
-    },
-    {
       "id": "materia-ferrari-gtc4lusso-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 6 Ferrari da família GTC4 registradas no país, 3 com o V12 da GTC4Lusso e 3 com o V8 biturbo da GTC4Lusso T. Uma das V12, azul, foi flagrada à noite em São Paulo, SP.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-02",
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-gtc4lusso-sao-paulo/"
+    },
+    {
+      "id": "materia-mercedes-amg-s65-coupe-facelift-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem apenas três Mercedes-AMG S 65 Coupé (C217) no país, uma pré-facelift e duas facelift, como a flagrada em São Paulo com o V12 6.0 biturbo de 630 cv.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-02",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-s65-coupe-facelift-sao-paulo/"
     },
     {
       "id": "materia-aston-martin-dbs-770-ultimate-coupe-curitiba",
