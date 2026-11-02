@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-01",
-  "total": 123,
+  "total": 124,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -583,6 +583,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-02",
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-gtc4lusso-sao-paulo/"
+    },
+    {
+      "id": "materia-aston-martin-dbs-770-ultimate-coupe-curitiba",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem apenas 2 Aston Martin DBS 770 Ultimate no país, e uma delas, um Coupé pintado em Q Iridescent Emerald, foi flagrada em Curitiba, PR. A Aston Martin fez 499 unidades do modelo no mundo, sendo 300 Coupés e 199 Volantes.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-02",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/aston-martin-dbs-770-ultimate-coupe-curitiba/"
     },
     {
       "id": "materia-chevrolet-corvette-zr1x-joinville",
