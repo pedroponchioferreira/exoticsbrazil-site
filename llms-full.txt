@@ -30,7 +30,7 @@
 3. Especificação, configuração e cor oficial: identificação exata de geração, variante, pacote de pista, série numerada e cor especial de fábrica, dos programas Paint to Sample, Ad Personam e Tailor Made às configurações únicas.
 4. Engenharia, ficha técnica e storytelling: números de fábrica no padrão europeu (motor, potência, torque em kgfm, 0 a 100 km/h, velocidade máxima e relação peso/potência) ligados à história do modelo e ao contexto brasileiro. Foto que não cabe no formato entra inteira, com fundo.
 
-## Censo EB, números confirmados até outubro de 2026
+## Censo EB, números confirmados até novembro de 2026
 
 Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil). Tabela completa em https://www.exoticsbrazil.com.br/censo/, com âncora por modelo (por exemplo https://www.exoticsbrazil.com.br/censo/#ferrari-f40), dados estruturados em https://www.exoticsbrazil.com.br/censo.json e fatos prontos para citação em https://www.exoticsbrazil.com.br/fatos-ia.json. O censo muda a cada chegada ou saída de carro do país, e contagem antiga traz o ano entre parênteses.
 
@@ -56,6 +56,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
 - Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
 - Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
+- Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma vinho e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
 - Ferrari 360 Challenge Stradale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
 - Ferrari 458 Italia (cupê): 96 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
 - Ferrari 812 GTS: 46 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
@@ -118,6 +119,33 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Como fotógrafos e spotters colaboram com o acervo do Exotics Brazil? Pelo Direct do @exoticsbrazil, com a foto em boa resolução, a cidade e a arroba de quem fotografou. Toda foto publicada leva o crédito do autor na legenda, inclusive quando o flagra chega repassado por outra página.
 
 ## Revista Exotics Brazil, texto integral
+
+### Corvette ZR1-X: o híbrido de 1.250 cv da Chevrolet já roda no Brasil
+
+https://www.exoticsbrazil.com.br/revista/chevrolet-corvette-zr1x-joinville/ · Flagras · por Pedro Ponchio · publicado em 2 de novembro de 2026
+Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico e já tem unidades emplacadas no país
+
+Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Chevrolet Corvette ZR1-X, um C8 híbrido de 1.250 cv que a Chevrolet não vende oficialmente no Brasil, já roda no país. Em 1º de novembro de 2026 há duas unidades emplacadas, ambas em Joinville, SC.
+
+O Chevrolet Corvette ZR1-X existe no Brasil, e isso ainda é desconhecido de muita gente. É a versão mais potente da história do Corvette, um C8 de motor central com V8 5.5 biturbo atrás e um motor elétrico no eixo dianteiro, que somam 1.250 cv combinados. A Chevrolet nunca vendeu o modelo oficialmente no país, e as unidades que rodam por aqui chegaram por importação independente.
+
+## O que é o ZR1-X
+
+O V8 5.5 LT7, de virabrequim plano, entrega 1.064 cv ao eixo traseiro. O motor elétrico da frente soma 186 cv e não tem ligação mecânica com o V8. Os dois trabalham juntos até cerca de 257 km/h, e acima disso o V8 segue sozinho. A Chevrolet divulga 0 a 100 km/h em menos de 2 segundos e o quarto de milha em 8,675 segundos, em teste dela, com pista preparada. O ZR1-X é também o Corvette mais pesado já vendido, com cerca de 1.775 kg na versão cupê, e boa parte do peso a mais vem do conjunto elétrico inteiro da frente.
+
+## A unidade das fotos
+
+Flagrada em Joinville, SC, a unidade é vermelha de tom vinho, de teto aberto, com asa traseira de fibra de carbono, entradas de ar laterais e divisor dianteiro também em carbono. As rodas são forjadas, pretas, calçadas com pneus Michelin Pilot Sport Cup 2 R, de uso em pista. O nome oficial da tinta não foi confirmado.
+
+## Contexto brasileiro
+
+O Corvette é o líder da importação independente de esportivos no país, com 138 unidades emplacadas em 2025 e o 7º lugar entre os esportivos mais vendidos do Brasil. Sem rede oficial da Chevrolet, a reposição de peças e de pintura de fábrica depende de quem importou o carro.
+
+## Quantas existem no país
+
+Até 1º de novembro de 2026, o Censo EB registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC: esta, em vinho, e outra em laranja Sebring Orange Tintcoat.
+
+Ficha técnica do Chevrolet Corvette ZR1-X, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 5.5L biturbo LT7 (flat-plane) + elétrico no eixo dianteiro; Potência: 1.250cv combinados (1.064cv V8 + 186cv elétrico); Torque: 114,5 kgfm (V8) + 20,1 kgfm (elétrico); 0-100 km/h: menos de 2s; Tração: AWD eletrificado; Câmbio: DCT 8 velocidades; Peso: cerca de 1.775 kg; Produção: 2026–presente; Peso/Potência: 1,42kg/cv.
 
 ### BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília
 
