@@ -56,7 +56,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
 - Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
 - Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
-- Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma vinho e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
+- Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
 - Ferrari 360 Challenge Stradale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
 - Ferrari 458 Italia (cupê): 96 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
 - Ferrari 812 GTS: 46 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
@@ -135,7 +135,7 @@ O V8 5.5 LT7, de virabrequim plano, entrega 1.064 cv ao eixo traseiro. O motor e
 
 ## A unidade das fotos
 
-Flagrada em Joinville, SC, a unidade é vermelha de tom vinho, de teto aberto, com asa traseira de fibra de carbono, entradas de ar laterais e divisor dianteiro também em carbono. As rodas são forjadas, pretas, calçadas com pneus Michelin Pilot Sport Cup 2 R, de uso em pista. O nome oficial da tinta não foi confirmado.
+Flagrada em Joinville, SC, a unidade está pintada em Red Mist Metallic Tintcoat, um vermelho de tom vinho, e aparece de teto aberto, com asa traseira de fibra de carbono, entradas de ar laterais e divisor dianteiro também em carbono. As rodas são forjadas, pretas, calçadas com pneus Michelin Pilot Sport Cup 2 R, de uso em pista.
 
 ## Contexto brasileiro
 
@@ -143,9 +143,9 @@ O Corvette é o líder da importação independente de esportivos no país, com 
 
 ## Quantas existem no país
 
-Até 1º de novembro de 2026, o Censo EB registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC: esta, em vinho, e outra em laranja Sebring Orange Tintcoat.
+Até 1º de novembro de 2026, o Censo EB registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC: esta, em Red Mist Metallic Tintcoat, e outra em laranja Sebring Orange Tintcoat.
 
-Ficha técnica do Chevrolet Corvette ZR1-X, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 5.5L biturbo LT7 (flat-plane) + elétrico no eixo dianteiro; Potência: 1.250cv combinados (1.064cv V8 + 186cv elétrico); Torque: 114,5 kgfm (V8) + 20,1 kgfm (elétrico); 0-100 km/h: menos de 2s; Tração: AWD eletrificado; Câmbio: DCT 8 velocidades; Peso: cerca de 1.775 kg; Produção: 2026–presente; Peso/Potência: 1,42kg/cv.
+Ficha técnica do Chevrolet Corvette ZR1-X, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 5.5L biturbo LT7 (flat-plane) + elétrico no eixo dianteiro; Potência: 1.250cv combinados (1.064cv V8 + 186cv elétrico); Torque: 114,5 kgfm (V8) + 20,1 kgfm (elétrico); 0-100 km/h: menos de 2s; Tração: AWD eletrificado; Câmbio: DCT 8 velocidades; Cor: Red Mist Metallic Tintcoat; Peso: cerca de 1.775 kg; Produção: 2026–presente; Peso/Potência: 1,42kg/cv.
 
 ### BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília
 
