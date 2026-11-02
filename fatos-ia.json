@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-02",
-  "total": 126,
+  "total": 127,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -598,6 +598,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-02",
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-gtc4lusso-sao-paulo/"
+    },
+    {
+      "id": "materia-dodge-viper-rt10-ferrari-f355-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Dodge Viper RT/10 vermelho foi flagrado em São Paulo, SP, ao lado de duas Ferrari F355 da mesma cor, uma cupê e outra Spider, em registro do fotógrafo @obarbaqueviu. O Viper tem V10 de 8,0 litros aspirado e câmbio manual, e as F355 têm V8 de 3,5 litros com cinco válvulas por cilindro.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-02",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/dodge-viper-rt10-ferrari-f355-sao-paulo/"
     },
     {
       "id": "materia-aston-martin-dbs-770-ultimate-coupe-curitiba",
