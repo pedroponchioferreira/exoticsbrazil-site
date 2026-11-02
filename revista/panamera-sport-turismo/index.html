@@ -286,7 +286,7 @@
         <p class="text-[13px] leading-relaxed tracking-wide text-zinc-500">Fonte primária e apuração: <span class="font-semibold text-zinc-800">Exotics Brazil</span> (@exoticsbrazil) · <a href="https://www.exoticsbrazil.com.br/revista/panamera-sport-turismo/" class="underline decoration-zinc-300 underline-offset-2 hover:text-rosso">exoticsbrazil.com.br</a></p>
         <button type="button" class="citar-copiar font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500 hover:text-rosso" data-citacao="EXOTICS BRAZIL (@exoticsbrazil). Novidade: Panamera Sport Turismo já no Brasil!. Pedro Ponchio, 26 de fevereiro de 2018. Disponível em: https://www.exoticsbrazil.com.br/revista/panamera-sport-turismo/. Acesso em: ">[ Copiar referência ]</button>
       </div>
-      <section id="comentarios-eb" data-slug="panamera-sport-turismo" data-motor="firebase" data-config="{&quot;apiKey&quot;: &quot;AIzaSyDHXo1ctdGKLc9sWKFJAO1zpH3kgMaDfm4&quot;, &quot;authDomain&quot;: &quot;exotics-brazil-comentarios.firebaseapp.com&quot;, &quot;projectId&quot;: &quot;exotics-brazil-comentarios&quot;, &quot;appId&quot;: &quot;1:411382367269:web:c261424761453f47fc2bcc&quot;}" data-editor="6faad4cc75dd83f915926215fd60a4c3f944fac0a856fb262faaccf8555f482a" data-sdk="10.14.1" class="mt-14 bg-carbon p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
+      <section id="comentarios-eb" data-slug="panamera-sport-turismo" data-motor="firebase" data-config="eyJhcGlLZXkiOiAiQUl6YVN5REhYbzFjdGRHS0xjOXNXS0ZKQU8xenBIM2tnTWFEZm00IiwgImF1dGhEb21haW4iOiAiZXhvdGljcy1icmF6aWwtY29tZW50YXJpb3MuZmlyZWJhc2VhcHAuY29tIiwgInByb2plY3RJZCI6ICJleG90aWNzLWJyYXppbC1jb21lbnRhcmlvcyIsICJhcHBJZCI6ICIxOjQxMTM4MjM2NzI2OTp3ZWI6YzI2MTQyNDc2MTQ1M2Y0N2ZjMmJjYyJ9" data-editor="6faad4cc75dd83f915926215fd60a4c3f944fac0a856fb262faaccf8555f482a" data-sdk="10.14.1" class="mt-14 bg-carbon p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
         <div class="flex flex-wrap items-center justify-between gap-3 border-b-4 border-rosso pb-3">
           <h2 id="comentarios-titulo" class="font-display text-3xl font-black uppercase tracking-tight text-white">Comentários da comunidade</h2>
           <span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Login com conta Google</span>
@@ -314,7 +314,7 @@
       async function iniciar() {
         var B = 'https://www.gstatic.com/firebasejs/' + s.dataset.sdk + '/';
         var m = await Promise.all([import(B + 'firebase-app.js'), import(B + 'firebase-auth.js'), import(B + 'firebase-firestore.js')]);
-        var app = m[0].initializeApp(JSON.parse(s.dataset.config)), A = m[1], F = m[2];
+        var app = m[0].initializeApp(JSON.parse(atob(s.dataset.config))), A = m[1], F = m[2];
         var auth = A.getAuth(app), db = F.getFirestore(app), slug = s.dataset.slug, eu = null, souEditor = false;
         if (window.ebEvento) window.ebEvento('comentarios_carregados', { motor: 'firebase' });
         function desenharConta() {
