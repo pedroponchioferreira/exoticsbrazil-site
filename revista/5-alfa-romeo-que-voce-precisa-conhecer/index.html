@@ -279,15 +279,89 @@
         <p class="text-[13px] leading-relaxed tracking-wide text-zinc-500">Fonte primária e apuração: <span class="font-semibold text-zinc-800">Exotics Brazil</span> (@exoticsbrazil) · <a href="https://www.exoticsbrazil.com.br/revista/5-alfa-romeo-que-voce-precisa-conhecer/" class="underline decoration-zinc-300 underline-offset-2 hover:text-rosso">exoticsbrazil.com.br</a></p>
         <button type="button" class="citar-copiar font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500 hover:text-rosso" data-citacao="EXOTICS BRAZIL (@exoticsbrazil). 5 Alfas que você PRECISA conhecer!. José Rubens Fuxreiter Santoro, 3 de setembro de 2017. Disponível em: https://www.exoticsbrazil.com.br/revista/5-alfa-romeo-que-voce-precisa-conhecer/. Acesso em: ">[ Copiar referência ]</button>
       </div>
-      <section id="comentarios-eb" data-slug="5-alfa-romeo-que-voce-precisa-conhecer" class="mt-14 bg-carbon p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
+      <section id="comentarios-eb" data-slug="5-alfa-romeo-que-voce-precisa-conhecer" data-motor="firebase" data-config="{&quot;apiKey&quot;: &quot;AIzaSyDHXo1ctdGKLc9sWKFJAO1zpH3kgMaDfm4&quot;, &quot;authDomain&quot;: &quot;exotics-brazil-comentarios.firebaseapp.com&quot;, &quot;projectId&quot;: &quot;exotics-brazil-comentarios&quot;, &quot;appId&quot;: &quot;1:411382367269:web:c261424761453f47fc2bcc&quot;}" data-editor="6faad4cc75dd83f915926215fd60a4c3f944fac0a856fb262faaccf8555f482a" data-sdk="10.14.1" class="mt-14 bg-carbon p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
         <div class="flex flex-wrap items-center justify-between gap-3 border-b-4 border-rosso pb-3">
           <h2 id="comentarios-titulo" class="font-display text-3xl font-black uppercase tracking-tight text-white">Comentários da comunidade</h2>
           <span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Login com conta Google</span>
         </div>
-        <p class="mt-4 text-[16px] leading-relaxed text-zinc-300">Os comentários das reportagens abrem em breve, com login pela conta Google. Enquanto isso, a conversa continua no <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="text-white underline decoration-rosso decoration-2 underline-offset-4">@exoticsbrazil</a>.</p>
+        <div id="comentarios-conta" class="mt-6 flex flex-wrap items-center gap-3"></div>
+        <form id="comentarios-form" class="mt-4" hidden>
+          <label for="comentarios-texto" class="sr-only">Seu comentário</label>
+          <textarea id="comentarios-texto" rows="4" maxlength="1500" required class="w-full border-2 border-zinc-700 bg-carbon-2 p-3 text-[16px] text-white placeholder:text-zinc-500 focus:border-rosso focus:outline-none" placeholder="Escreva o seu comentário"></textarea>
+          <div class="mt-2 flex flex-wrap items-center justify-between gap-3"><p id="comentarios-aviso" class="text-xs text-zinc-500" aria-live="polite">Até 1.500 caracteres, um comentário a cada 30 segundos.</p><button type="submit" class="bg-rosso px-5 py-2 font-display text-lg font-bold uppercase tracking-wide text-white hover:bg-white hover:text-ink">Publicar comentário</button></div>
+        </form>
+        <ol id="comentarios-lista" class="mt-8 divide-y divide-zinc-800 border-t-2 border-zinc-800"><li class="py-5 text-sm text-zinc-500">Carregando os comentários…</li></ol>
         <p class="mt-6 text-xs leading-relaxed text-zinc-500">Comentário é opinião de quem assina, não apuração do Exotics Brazil. Ofensa, spam e dado pessoal de terceiros (endereço, placa, onde o carro fica guardado) são apagados.</p>
       </section>
-
+  <script>
+    (function () {
+      var s = document.getElementById('comentarios-eb'); if (!s || !('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (es) {
+        if (!es.some(function (e) { return e.isIntersecting; })) return; io.disconnect(); iniciar().catch(function (e) { falha(e); });
+      }, { rootMargin: '600px' });
+      io.observe(s);
+      var lista = document.getElementById('comentarios-lista'), conta = document.getElementById('comentarios-conta'), form = document.getElementById('comentarios-form'), aviso = document.getElementById('comentarios-aviso');
+      function falha(e) { lista.innerHTML = '<li class="py-5 text-sm text-zinc-500">Os comentários não carregaram agora. Tente de novo mais tarde.</li>'; if (window.console) console.warn(e); }
+      function el(tag, cls, txt) { var x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; }
+      function hash(t) { return crypto.subtle.digest('SHA-256', new TextEncoder().encode(t.trim().toLowerCase())).then(function (b) { return Array.prototype.map.call(new Uint8Array(b), function (x) { return ('0' + x.toString(16)).slice(-2); }).join(''); }); }
+      async function iniciar() {
+        var B = 'https://www.gstatic.com/firebasejs/' + s.dataset.sdk + '/';
+        var m = await Promise.all([import(B + 'firebase-app.js'), import(B + 'firebase-auth.js'), import(B + 'firebase-firestore.js')]);
+        var app = m[0].initializeApp(JSON.parse(s.dataset.config)), A = m[1], F = m[2];
+        var auth = A.getAuth(app), db = F.getFirestore(app), slug = s.dataset.slug, eu = null, souEditor = false;
+        if (window.ebEvento) window.ebEvento('comentarios_carregados', { motor: 'firebase' });
+        function desenharConta() {
+          conta.textContent = '';
+          if (!eu) {
+            var b = el('button', 'inline-flex items-center gap-3 border-2 border-white px-5 py-2 font-display text-lg font-bold uppercase tracking-wide text-white hover:bg-white hover:text-ink', 'Entrar com conta Google para comentar');
+            b.type = 'button';
+            b.onclick = function () { A.signInWithPopup(auth, new A.GoogleAuthProvider()).catch(function (e) { aviso.textContent = 'O login não terminou. Tente de novo.'; }); };
+            conta.appendChild(b); form.hidden = true; return;
+          }
+          if (eu.photoURL) { var f = el('img', 'h-9 w-9 rounded-full border border-zinc-700'); f.src = eu.photoURL; f.alt = ''; f.referrerPolicy = 'no-referrer'; conta.appendChild(f); }
+          conta.appendChild(el('span', 'font-display text-lg font-bold uppercase text-white', eu.displayName || 'Leitor'));
+          if (souEditor) conta.appendChild(el('span', 'bg-rosso px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em] text-white', 'Editor-chefe EB'));
+          var sair = el('button', 'ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-400 hover:text-white', '[ Sair ]'); sair.type = 'button'; sair.onclick = function () { A.signOut(auth); };
+          conta.appendChild(sair); form.hidden = false;
+        }
+        A.onAuthStateChanged(auth, async function (u) {
+          eu = u; souEditor = !!(u && u.email && u.emailVerified && s.dataset.editor && (await hash(u.email)) === s.dataset.editor);
+          desenharConta(); desenhar();
+        });
+        var itens = [];
+        function desenhar() {
+          lista.textContent = '';
+          if (!itens.length) { lista.appendChild(el('li', 'py-5 text-sm text-zinc-500', 'Ninguém comentou ainda. Abra a conversa.')); return; }
+          itens.forEach(function (d) {
+            var c = d.data(), li = el('li', 'py-5'), topo = el('div', 'flex flex-wrap items-center gap-3');
+            if (c.foto) { var f = el('img', 'h-8 w-8 rounded-full border border-zinc-700'); f.src = c.foto; f.alt = ''; f.referrerPolicy = 'no-referrer'; f.loading = 'lazy'; topo.appendChild(f); }
+            topo.appendChild(el('span', 'font-display text-base font-bold uppercase text-white', c.nome || 'Leitor'));
+            if (c.editor) topo.appendChild(el('span', 'bg-rosso px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em] text-white', 'Editor-chefe EB'));
+            if (c.criado && c.criado.toDate) topo.appendChild(el('span', 'font-mono text-[11px] uppercase tracking-[0.12em] text-zinc-500', c.criado.toDate().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })));
+            if (eu && (souEditor || c.uid === eu.uid)) {
+              var x = el('button', 'ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-400 hover:text-rosso', '[ Excluir ]'); x.type = 'button';
+              x.onclick = function () { if (confirm('Excluir este comentário?')) F.deleteDoc(d.ref); };
+              topo.appendChild(x);
+            }
+            li.appendChild(topo); li.appendChild(el('p', 'mt-2 whitespace-pre-line text-[16px] leading-relaxed text-zinc-200', c.texto));
+            lista.appendChild(li);
+          });
+        }
+        var q = F.query(F.collection(db, 'comentarios', slug, 'itens'), F.orderBy('criado', 'asc'), F.limit(300));
+        F.onSnapshot(q, function (snap) { itens = snap.docs; desenhar(); }, falha);
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); if (!eu) return;
+          var campo = document.getElementById('comentarios-texto'), texto = campo.value.trim();
+          if (texto.length < 2) return;
+          var lote = F.writeBatch(db), novo = F.doc(F.collection(db, 'comentarios', slug, 'itens'));
+          lote.set(novo, { uid: eu.uid, nome: (eu.displayName || 'Leitor').slice(0, 80), foto: eu.photoURL || '', texto: texto.slice(0, 1500), criado: F.serverTimestamp(), editor: souEditor });
+          lote.set(F.doc(db, 'limites', eu.uid), { ultimo: F.serverTimestamp() });
+          lote.commit().then(function () { campo.value = ''; aviso.textContent = 'Comentário publicado.'; if (window.ebEvento) window.ebEvento('comentario_publicado', { pagina: location.pathname }); })
+            .catch(function () { aviso.textContent = 'Não publicou. Espere 30 segundos entre um comentário e outro e tente de novo.'; });
+        });
+      }
+    })();
+  </script>
     </article>
     <section class="border-t-4 border-ink bg-ink" aria-label="Mais da Revista">
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
