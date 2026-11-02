@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-01",
-  "total": 84,
+  "total": 123,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -641,11 +641,284 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/censo-hipercarros-brasil-2026/"
     },
     {
+      "id": "materia-chassidex-novidades-mes-marco-no-brasil",
+      "afirmacao": "Segundo o Chassidex de março de 2019 do Exotics Brazil (@exoticsbrazil), o mês trouxe ao Brasil a BMW X2 M35i, um Jaguar F-Pace SVR camuflado em testes, dois tratores Lamborghini e várias unidades do Renault Zoe elétrico, anunciado por 150 mil reais.",
+      "autor": "Lucca Lage",
+      "data": "2019-04-21",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chassidex-novidades-mes-marco-no-brasil/"
+    },
+    {
+      "id": "materia-chassidex-novidades-mes-fevereiro-no-brasil",
+      "afirmacao": "Segundo o Chassidex de fevereiro de 2019 do Exotics Brazil (@exoticsbrazil), a principal novidade do mês foi a BMW X5 M50d, que chegou ao Brasil antes da apresentação oficial e somava 49 unidades até o fim de fevereiro.",
+      "autor": "Lucca Lage",
+      "data": "2019-03-15",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chassidex-novidades-mes-fevereiro-no-brasil/"
+    },
+    {
+      "id": "materia-chassidex-novidades-mes-novembro-no-brasil",
+      "afirmacao": "O Chassidex de novembro de 2018 é a terceira edição do levantamento mensal do Exotics Brazil (@exoticsbrazil), criado em outubro de 2018 para mostrar quantos e quais carros esportivos e de luxo chegam ao Brasil a cada mês.",
+      "autor": "Lucca Lage",
+      "data": "2018-12-15",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chassidex-novidades-mes-novembro-no-brasil/"
+    },
+    {
+      "id": "materia-chassidex-novidades-mes-outubro-no-brasil",
+      "afirmacao": "O Chassidex de outubro de 2018 é a segunda edição do levantamento mensal do Exotics Brazil (@exoticsbrazil), que registra os carros esportivos que entraram no Brasil no mês anterior.",
+      "autor": "Lucca Lage",
+      "data": "2018-12-08",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chassidex-novidades-mes-outubro-no-brasil/"
+    },
+    {
+      "id": "materia-chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora",
+      "afirmacao": "Em 2018, o Exotics Brazil (@exoticsbrazil) registrou a chegada de uma McLaren Senna ao Brasil, com motor 4.0 V8 biturbo de 800 cv, 0 a 100 km/h em 2,8 segundos, 0 a 200 km/h em 6,8 segundos e frenagem de 200 a 0 km/h em 100 metros.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-10-19",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chegou-uma-mclaren-senna-no-brasil-fica-ou-vai-embora/"
+    },
+    {
+      "id": "materia-quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Koenigsegg CCX-R E100 Platinuss Edition foi feito para o Brasil em parceria com a loja Platinuss, de São Paulo, e usava etanol para chegar a 1.100 cv, com 0 a 100 km/h em 2,9 segundos e máxima de 415 km/h.",
+      "autor": "Tarcísio Medeiros",
+      "data": "2018-10-17",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/quando-a-koenigsegg-fez-um-carro-especialmente-para-o-brasil/"
+    },
+    {
+      "id": "materia-chassidex-novidades-mes-setembro-no-brasil",
+      "afirmacao": "O Chassidex de setembro de 2018 abre a série do Exotics Brazil (@exoticsbrazil) que registra, mês a mês, os carros esportivos e de luxo que chegam ao Brasil; o nome junta as palavras chassi e Pokédex.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-10-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chassidex-novidades-mes-setembro-no-brasil/"
+    },
+    {
+      "id": "materia-voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), a McLaren Senna vendida na Europa tem três saídas de escape e a do resto do mundo tem duas, porque o terceiro escape existe para atenuar o ronco do V8 biturbo.",
+      "autor": "Lucca Lage",
+      "data": "2018-09-22",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/voce-sabe-porque-algumas-mclaren-senna-tem-tres-escapes-e-outras-dois/"
+    },
+    {
+      "id": "materia-ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Ford GT Heritage Edition 2019 celebra os 50 anos das vitórias do GT40 em Le Mans em 1968 e 1969 com a pintura azul e laranja da Gulf Oil e o número 9 do chassi 1075.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-08-30",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ford-gt-heritage-edition-traz-de-volta-as-cores-da-gulf-oil/"
+    },
+    {
+      "id": "materia-bmw-ultimate-experience-2018",
+      "afirmacao": "O Exotics Brazil (@exoticsbrazil) cobriu o BMW Ultimate Experience de Brasília em 11 de agosto de 2018, promovido pela Eurobike, com test drive de modelos como M3 F80, M4 F82, M5 F90, X5 M, X6 M e i8.",
+      "autor": "Lucca Lage",
+      "data": "2018-08-13",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-ultimate-experience-2018/"
+    },
+    {
+      "id": "materia-pts-paint-to-sample",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Paint to Sample é o programa de cor sob encomenda da Porsche, chamado de Special Ordering Program até 1986, que no 911 custava US$ 6.950 na época da reportagem.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-06-03",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/pts-paint-to-sample/"
+    },
+    {
+      "id": "materia-9-carros-antigos-que-sao-icones-do-automobilismo",
+      "afirmacao": "Na lista do Exotics Brazil (@exoticsbrazil) de carros antigos que marcaram a história estão o Ford T, produzido de 1908 a 1927, o Mustang de 1964, o Pontiac Firebird Trans Am de 1967 e o Fusca, fabricado de 1938 a 2003.",
+      "autor": "Tarcísio Medeiros",
+      "data": "2018-04-27",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/9-carros-antigos-que-sao-icones-do-automobilismo/"
+    },
+    {
+      "id": "materia-911-carrera-t-no-brasil",
+      "afirmacao": "Em 2018, o Exotics Brazil (@exoticsbrazil) registrou a primeira aparição do Porsche 911 Carrera T num showroom brasileiro, ao lado de um 911 T de 1968; o modelo tem 3.0 biturbo de 370 cv, câmbio manual de seis marchas e 0 a 100 km/h em 4,5 segundos.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-04-10",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/911-carrera-t-no-brasil/"
+    },
+    {
+      "id": "materia-mercedes-classe-x-ja-flagrada-no-brasil",
+      "afirmacao": "Em 2018, o Exotics Brazil (@exoticsbrazil) registrou a Mercedes-Benz Classe X no Brasil antes do lançamento; a picape divide a base com a Renault Alaskan e a Nissan Frontier, num acordo entre a Mercedes e a Aliança Renault-Nissan.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-03-03",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-classe-x-ja-flagrada-no-brasil/"
+    },
+    {
+      "id": "materia-panamera-sport-turismo",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Porsche Panamera Sport Turismo chegou ao Brasil em 2018 em quatro versões, de R$ 529.000 a R$ 1.212.000, com porta-malas de 520 a 1.390 litros e o primeiro terceiro assento traseiro da linha Panamera.",
+      "autor": "Pedro Ponchio",
+      "data": "2018-02-26",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/panamera-sport-turismo/"
+    },
+    {
+      "id": "materia-o-heroi-improvavel-parte-1",
+      "afirmacao": "Crônica publicada pelo Exotics Brazil (@exoticsbrazil) em 2018 sobre como uma criança escolhe o seu carro favorito folheando o catálogo de lançamentos do ano, primeira parte da série O Herói Improvável.",
+      "autor": "Tarcísio Medeiros",
+      "data": "2018-01-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/o-heroi-improvavel-parte-1/"
+    },
+    {
+      "id": "materia-carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), Carroll Shelby venceu as 24 Horas de Le Mans em 1959 e, a partir de 1961, transformou o inglês AC Ace no Cobra, que chegou a receber um Ford V8 427 de 7.0 litros e 485 cv.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-12-19",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/carroll-shelby-e-o-mitico-cobra-vintage-cars-brazil/"
+    },
+    {
+      "id": "materia-a-evolucao-do-skyline",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Skyline nasceu em 1957 como carro da Prince, passou à Nissan na fusão de 1966, ganhou a sigla GT-R em 1972 e a recuperou cerca de uma década depois de 1977 com o R32, o Godzilla.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-23",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/a-evolucao-do-skyline/"
+    },
+    {
+      "id": "materia-passat-audi-quattro-sulam",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), a Sulam, revenda Volkswagen de São Paulo, criou nos anos 80 o Passat Audi Quattro, inspirado no Audi Quattro de rali, produzido de 1980 a 1991 em 11.452 unidades.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-17",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/passat-audi-quattro-sulam/"
+    },
+    {
+      "id": "materia-o-delta-e-o-auge-da-lancia-vintage-cars-brazil",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), o Lancia Delta estreou em 1979 com desenho de Giorgetto Giugiaro, foi Carro do Ano na Europa em 1980 e ganhou a primeira versão turbo, a HF de 1.6 litro e 128 cv, em 1983.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-11-12",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/"
+    },
+    {
+      "id": "materia-mustang-vira-ao-brasil",
+      "afirmacao": "Em 2017, o Exotics Brazil (@exoticsbrazil) noticiou a confirmação da venda do Ford Mustang no Brasil, anunciada no Salão do Automóvel de São Paulo de 2016, com o Mustang GT de motor V8 de 466 cv e preço estimado entre R$ 300.000 e R$ 320.000.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-08",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mustang-vira-ao-brasil/"
+    },
+    {
+      "id": "materia-dream-route-octapro-edition-esta-chegando",
+      "afirmacao": "Segundo o Exotics Brazil (@exoticsbrazil), a edição Octapro do Dream Route, rali de supercarros, foi marcada para 23 a 26 de novembro de 2017, de Florianópolis a Porto Alegre, passando por Caxias do Sul e pelo autódromo Velopark.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-06",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/"
+    },
+    {
+      "id": "materia-grupo-b",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Grupo B do rali vigorou de 1982 a 1986, exigia apenas 200 unidades de rua para homologação e viu a potência dos carros subir de 250 cv para perto de 700 a 800 cv ao fim da categoria.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-03",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/grupo-b/"
+    },
+    {
+      "id": "materia-primeira-ferrari-812-superfast-no-brasil",
+      "afirmacao": "Em 2017, o Exotics Brazil (@exoticsbrazil) registrou a chegada da primeira Ferrari 812 Superfast ao Brasil, substituta da F12berlinetta, com V12 aspirado de 6,5 litros e 800 cv a 8.500 rpm, apresentada no evento dos 70 anos da Ferrari em São Paulo.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-02",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/primeira-ferrari-812-superfast-no-brasil/"
+    },
+    {
+      "id": "materia-bmw-z8-steve-jobs",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o BMW Z8 de Steve Jobs, entregue a ele em 6 de outubro de 2000 como a 85ª unidade produzida, foi a leilão em 2017 com menos de 25 mil quilômetros rodados.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-11-01",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-z8-steve-jobs/"
+    },
+    {
+      "id": "materia-bugatti-grand-tour-argentina-e-chile",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), o Bugatti Grand Tour 2017 passou por Argentina e Chile de 12 a 22 de outubro, com ao menos 15 Bugatti modernos, entre eles mais de 10 Veyron, EB110 e Chiron.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-10-30",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bugatti-grand-tour-argentina-e-chile/"
+    },
+    {
+      "id": "materia-o-rolls-royce-phantom-e-seus-92-anos-de-luxo",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), o Rolls-Royce Phantom está na oitava geração, numa linhagem que começou com o Phantom I de 1925, substituto do Silver Ghost.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-10-29",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/"
+    },
+    {
       "id": "materia-voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso",
       "afirmacao": "Reportagem do Exotics Brazil (@exoticsbrazil), publicada em outubro de 2017, sobre os Lexus LFA que continuavam zero quilômetro, sem registro, em concessionárias dos Estados Unidos em 2017, cinco anos depois do início das vendas. O LFA teve 500 unidades produzidas, e a lista levantada pela imprensa americana na época somava 12 carros novos parados em lojas, um deles da Nürburgring Edition.",
       "autor": "Tarcísio Medeiros",
       "data": "2017-10-16",
       "fonte": "https://www.exoticsbrazil.com.br/revista/voce-ainda-pode-importar-um-lexus-lfa-0km-para-o-brasil-ou-quase-isso/"
+    },
+    {
+      "id": "materia-a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), a Ferrari F40, lançada em 1987, foi o último carro assinado por Enzo Ferrari, que morreu no ano seguinte, e ocupou o lugar da 288 GTO depois que a FIA extinguiu o Grupo B em 1986.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-10-04",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/"
+    },
+    {
+      "id": "materia-jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), o Jaguar E-Type foi lançado em 1961, derivado do D-Type tricampeão de Le Mans, e a primeira geração usou seis cilindros de 3,8 e de 4,2 litros.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-09-10",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/jaguar-e-type-o-carro-mais-bonito-da-historia-vintage-cars-brazil/"
+    },
+    {
+      "id": "materia-5-alfa-romeo-que-voce-precisa-conhecer",
+      "afirmacao": "A coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil) apresenta cinco Alfa Romeo clássicos pouco conhecidos no Brasil, entre eles a versão GTAm, que tirava 240 cv de um motor 2.0 para mover 940 kg.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-09-03",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/5-alfa-romeo-que-voce-precisa-conhecer/"
+    },
+    {
+      "id": "materia-mclaren-570s-brasil",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), a McLaren 570S, lançada em 2015 na linha Sports Series, tem 3.8 V8 biturbo de 570 cv e 61 kgfm, câmbio de dupla embreagem de 7 marchas, 0 a 100 km/h em 3,2 segundos e máxima de 328 km/h.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-08-28",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-570s-brasil/"
+    },
+    {
+      "id": "materia-porsche-930-turbo",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), o Porsche 930, primeiro 911 Turbo, surgiu em 1974 com motor boxer de seis cilindros e 3,0 litros, e o turbo elevou a potência de 200 para 260 cv.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-08-20",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-930-turbo/"
+    },
+    {
+      "id": "materia-db5-um-icone",
+      "afirmacao": "Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), o Aston Martin DB5 foi lançado em 1963 e estreou como carro de James Bond em Goldfinger, de 1964, voltando em Thunderball, de 1965, e em GoldenEye, de 1995.",
+      "autor": "José Rubens Fuxreiter Santoro",
+      "data": "2017-08-14",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/db5-um-icone/"
+    },
+    {
+      "id": "materia-volkswagen-golf-r-no-brasil",
+      "afirmacao": "Em 2017, o Exotics Brazil (@exoticsbrazil) registrou um Volkswagen Golf R azul no aeroporto de Viracopos, em Campinas, a caminho do Salão de Buenos Aires; o modelo tem 2.0 turbo de 310 cv, tração integral 4Motion e 0 a 100 km/h em 4,6 segundos.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-07-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/volkswagen-golf-r-no-brasil/"
+    },
+    {
+      "id": "materia-alfa-romeo-giulia-no-brasil",
+      "afirmacao": "Em 2017, o Exotics Brazil (@exoticsbrazil) registrou em Curitiba, PR, o primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil, com 2.9 V6 biturbo de 510 cv, 0 a 100 km/h em 3,9 segundos e volta em Nürburgring em 7min39s.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-04-30",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/alfa-romeo-giulia-no-brasil/"
+    },
+    {
+      "id": "materia-as-melhores-propagandas-de-carro-ja-feitas",
+      "afirmacao": "Seleção do Exotics Brazil (@exoticsbrazil) com os comerciais de carro que entraram para a cultura popular, como o da Kombi de 1997 e o do Golf reestilizado de 2007 inspirado em Forrest Gump.",
+      "autor": "Pedro Ponchio",
+      "data": "2017-01-17",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/as-melhores-propagandas-de-carro-ja-feitas/"
+    },
+    {
+      "id": "materia-bmw-m760li",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), a sexta geração da BMW Série 7, lançada em setembro de 2015 no Salão de Frankfurt, ficou cerca de 130 kg mais leve que a anterior e ganhou a versão esportiva M760Li.",
+      "autor": "Pedro Ponchio",
+      "data": "2016-02-12",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-m760li/"
+    },
+    {
+      "id": "materia-dicas-fotografia-automotiva",
+      "afirmacao": "Guia do Exotics Brazil (@exoticsbrazil), publicado em 2016, com dicas de técnica e de conhecimento para quem quer fotografar carros.",
+      "autor": "Pedro Ponchio",
+      "data": "2016-02-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/dicas-fotografia-automotiva/"
+    },
+    {
+      "id": "materia-porsche-918-spyder-brasil",
+      "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil), em 2016 havia 3 unidades do Porsche 918 Spyder no Brasil, cada uma vendida por cerca de R$ 4 milhões segundo a Porsche, com V8 4.6 de 608 cv combinado a dois motores elétricos.",
+      "autor": "Pedro Ponchio",
+      "data": "2016-02-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-918-spyder-brasil/"
     }
   ]
 }
