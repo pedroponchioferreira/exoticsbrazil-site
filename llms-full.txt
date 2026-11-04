@@ -135,7 +135,7 @@ Em 2018, quando a Dodge lançou o Demon original, o carro vinha com 2 chaves: a 
 
 ## O combustível manda
 
-Um sensor de etanol na galeria de combustível lê a mistura que está no tanque, e a central ajusta injeção e ignição. O V8 6.2 com supercharger entrega 1.025cv e 130,7 kgfm com E85, e 900cv com gasolina de 91 octanas. O 170 do nome é a graduação alcoólica do E85. No Brasil a gasolina comum sai da bomba com cerca de 30% de etanol, uma mistura que o sensor do carro sabe ler.
+Um sensor de etanol na galeria de combustível lê a mistura que está no tanque, e a central ajusta injeção e ignição. O V8 6.2 com supercharger entrega 1.025cv e 130,7 kgfm com E85, e 900cv com gasolina de 91 octanas. O 170 do nome é a graduação alcoólica do E85. No Brasil a gasolina comum sai da bomba com 32% de etanol desde 1º de agosto de 2026 (a chamada E32, medida temporária de 180 dias), uma mistura que o sensor do carro sabe ler.
 
 ## Os números
 
