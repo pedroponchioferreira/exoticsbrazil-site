@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-03",
-  "total": 131,
+  "total": 132,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -592,6 +592,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-gaucho-trail-motor-challenge-2026-brasil",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o comboio de carros antigos com placa estrangeira visto em Santa Cruz do Sul (RS) em 3 de novembro de 2026 é o HERO-ERA Gaucho Trail Motor Challenge, rali de regularidade organizado pela britânica HERO-ERA, com 42 carros fabricados entre 1923 e 1980 e tripulações de 16 países. A prova começou em Montevidéu em 2 de novembro, percorre cerca de 11.000 km por Uruguai, Brasil, Paraguai, Argentina e Chile, e termina na capital uruguaia em 28 de novembro.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-04",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/gaucho-trail-motor-challenge-2026-brasil/"
     },
     {
       "id": "materia-dodge-challenger-srt-demon-170-rio-de-janeiro",
