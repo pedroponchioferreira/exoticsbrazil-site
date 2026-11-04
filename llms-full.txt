@@ -70,6 +70,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
 - Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
 - Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
+- Dodge Challenger SRT Demon 170: 18 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Importação independente, sem venda oficial no país. Número em 03/11/2026, ainda pode subir. Produção global de no máximo 3.300 unidades. Fonte: https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170
 - Ferrari 360 Challenge Stradale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
 - Ferrari 458 Italia (cupê): 96 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
 - Ferrari 812 GTS: 46 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
@@ -120,6 +121,35 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Como fotógrafos e spotters colaboram com o acervo do Exotics Brazil? Pelo Direct do @exoticsbrazil, com a foto em boa resolução, a cidade e a arroba de quem fotografou. Toda foto publicada leva o crédito do autor na legenda, inclusive quando o flagra chega repassado por outra página.
 
 ## Revista Exotics Brazil, texto integral
+
+### Dodge Challenger SRT Demon 170 vermelho aparece no Rio de Janeiro, um dos 18 do Brasil
+
+https://www.exoticsbrazil.com.br/revista/dodge-challenger-srt-demon-170-rio-de-janeiro/ · Flagras · por Pedro Ponchio · publicado em 3 de novembro de 2026
+A chave preta do Demon original foi banida, a vermelha é a única, e quem decide a potência é o combustível
+
+Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 18 Dodge Challenger SRT Demon 170 no país em 03/11/2026, e um deles foi flagrado em vermelho no Rio de Janeiro. É a versão final do Challenger, com 1.025cv quando abastecida com E85, e a única da família Demon que sai de fábrica só com chave vermelha.
+
+Um Dodge Challenger SRT Demon 170 vermelho foi flagrado no Rio de Janeiro pelo @pedroporscherio, e ele só tem chave vermelha, porque a preta foi banida.
+
+Em 2018, quando a Dodge lançou o Demon original, o carro vinha com 2 chaves: a preta segurava o motor em 500cv e a vermelha liberava o resto. No Demon 170 a preta deixou de existir, e a vermelha da foto, com a inscrição Demon, é a única, porque agora quem decide quanto o carro entrega é o combustível usado.
+
+## O combustível manda
+
+Um sensor de etanol na galeria de combustível lê a mistura que está no tanque, e a central ajusta injeção e ignição. O V8 6.2 com supercharger entrega 1.025cv e 130,7 kgfm com E85, e 900cv com gasolina de 91 octanas. O 170 do nome é a graduação alcoólica do E85. No Brasil a gasolina comum sai da bomba com cerca de 30% de etanol, uma mistura que o sensor do carro sabe ler.
+
+## Os números
+
+Para empurrar 1.941 kg (4.280 libras, peso americano, sem condutor) são 1,89 kg/cv. O resultado é 1,66 segundo de 0 a 60 mph (cerca de 96 km/h) e 8,91 segundos no quarto de milha a 151,17 mph (cerca de 243 km/h), tempo certificado pela NHRA. A transmissão é o automático TorqueFlite de oito marchas, a tração é traseira e a Dodge não divulga velocidade máxima.
+
+## Feito para a arrancada, barrado nela
+
+A Dodge informa que o Demon 170 não pode correr nos quartos de milha da NHRA, a federação americana de arrancada, porque abaixo de 9 segundos a entidade exige gaiola de proteção e paraquedas, itens que a Dodge vende à parte. O pneu traseiro da unidade é um Mickey Thompson, de arrancada, e o comprador assina um termo reconhecendo que ele não é indicado para frio nem pista molhada. Só o eixo traseiro é widebody. É o sétimo e último carro da série Last Call da Dodge, que despediu o Challenger de V8.
+
+## O Demon 170 no Brasil
+
+A Dodge nunca vendeu o Challenger oficialmente no país, então todo Demon 170 daqui chegou por importação independente. A produção global foi limitada a no máximo 3.300 unidades (3.000 para os Estados Unidos e 300 para o Canadá), e o Censo EB conta 18 delas no Brasil em 03/11/2026. O número ainda pode subir, porque unidades zero quilômetro continuam chegando ao país.
+
+Ficha técnica do Dodge Challenger SRT Demon 170, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 6.2 Hemi supercharger, 90 graus, 6.166 cm³; Compressão: 9,5:1; Potência: 1.025cv a 6.500 rpm (E85) · 900cv (gasolina 91 octanas); Torque: 130,7 kgfm a 4.200 rpm (E85) · 112 kgfm (gasolina 91 octanas); Câmbio: automático TorqueFlite 8HP90 de 8 marchas; Tração: traseira, diferencial autoblocante; Freios: Brembo, discos de 360 mm (frente) e 350 mm (trás), pinças de 4 pistões; Rodas e pneus: 18 pol. na frente (245/55R18) e 17 pol. atrás (315/50R17, Mickey Thompson); Entre-eixos: 2.950 mm; Comprimento: 5.016 mm; Largura: 2.001 mm (sem retrovisores); Altura: 1.459 mm; Peso: 1.941kg; Distribuição de peso: 58% na frente e 42% atrás; Tanque: 70 litros; Produção: 2023 (até 3.300 unidades); Peso/Potência: 1,89kg/cv.
 
 ### Toyota GR Yaris com rodas brancas de rali em Florianópolis
 
