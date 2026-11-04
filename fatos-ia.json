@@ -434,20 +434,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mclaren-senna"
     },
     {
-      "id": "censo-mercedes-amg-gt-r-pro",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 3 de novembro de 2026, existem 5 unidades do Mercedes-AMG GT R Pro no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Desert Gold.",
-      "entidade": "Mercedes-AMG GT R Pro",
+      "id": "censo-mercedes-benz-amg-gt-r-pro",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 3 de novembro de 2026, existem 5 unidades do Mercedes-Benz AMG GT R Pro no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Desert Gold.",
+      "entidade": "Mercedes-Benz AMG GT R Pro",
       "valor": 5,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-amg-gt-r-pro"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-gt-r-pro"
     },
     {
-      "id": "censo-mercedes-amg-s-65-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 3 de novembro de 2026, existem 3 unidades do Mercedes-AMG S 65 Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Duas facelift e uma pré-facelift, a única do país nessa versão.",
-      "entidade": "Mercedes-AMG S 65 Coupé",
+      "id": "censo-mercedes-benz-amg-s-65-coupe",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 3 de novembro de 2026, existem 3 unidades do Mercedes-Benz AMG S 65 Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Duas facelift e uma pré-facelift, a única do país nessa versão.",
+      "entidade": "Mercedes-Benz AMG S 65 Coupé",
       "valor": 3,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-amg-s-65-coupe"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-s-65-coupe"
     },
     {
       "id": "censo-mercedes-benz-sls-amg-black-series",
