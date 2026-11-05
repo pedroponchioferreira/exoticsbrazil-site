@@ -6,43 +6,45 @@
     <atom:link href="https://www.exoticsbrazil.com.br/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil, a maior página de carros exóticos da América Latina.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 05 Nov 2026 12:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 19:55:00 -0300</lastBuildDate>
     <image><url>https://www.exoticsbrazil.com.br/assets/img/identidade/icone-192.png</url><title>Revista Exotics Brazil</title><link>https://www.exoticsbrazil.com.br/revista/</link></image>
     <item>
-      <title>McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</title>
-      <link>https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/</link>
-      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/</guid>
-      <pubDate>Thu, 05 Nov 2026 12:00:00 -0300</pubDate>
+      <title>BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</title>
+      <link>https://www.exoticsbrazil.com.br/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/</guid>
+      <pubDate>Thu, 05 Nov 2026 19:55:00 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
-      <category>Censo EB</category>
-      <description>Supercarro híbrido da McLaren aparece em Roraima, longe do eixo que concentra a maior parte dos flagras de exóticos no país.</description>
-      <enclosure url="https://www.exoticsbrazil.com.br/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" length="411667" type="image/jpeg"/>
-      <content:encoded><![CDATA[<p>Uma McLaren Artura Coupé em Lantana Purple foi flagrada em Boa Vista, capital de Roraima, pelas lentes do <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a>. Os registros de exóticos no país se concentram em poucas cidades, e o flagra no extremo norte mostra que esse tipo de carro também roda fora do eixo mais conhecido.</p>
-<h2>O carro</h2>
-<p>A Artura é o primeiro supercarro híbrido de série da McLaren, lançado em 2021. O conjunto combina um V6 3.0 biturbo de 585cv com um motor elétrico de 95cv, somando 680cv na configuração de lançamento, com câmbio de dupla embreagem de 8 marchas e tração traseira. O sistema híbrido inteiro, com bateria, motor e cabeamento, pesa 130 kg. A McLaren elevou depois a potência combinada para 700cv por recalibração de software, e o ano da unidade registrada em Roraima não foi informado, por isso a ficha abaixo traz a configuração de lançamento.</p>
-<aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: McLaren Artura Coupé">
+      <category>Flagras</category>
+      <description>Série limitada a 350 unidades no mundo para os 35 anos do M5, com o mesmo V8 de 625 cv do Competition e a configuração como diferencial.</description>
+      <enclosure url="https://www.exoticsbrazil.com.br/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" length="230167" type="image/jpeg"/>
+      <content:encoded><![CDATA[<p>A BMW fez só 350 unidades da M5 Edition 35 Jahre para os 35 anos do modelo, e duas delas vieram ao Brasil. O BMW M5 Competition Edition 35 Jahre flagrado em São Paulo pelo <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a> nasceu em 2019 para marcar três décadas e meia de uma linhagem que começou em 1984, com um sedã de seis cilindros em linha saído da divisão M.</p>
+<p>Por baixo é um M5 Competition, com o V8 4.4 biturbo de 625 cv e 76,5 kgfm, câmbio automático de 8 marchas e tração integral M xDrive. Quem esperava mais potência por causa da data ficou sem: o ganho da edição está na configuração.</p>
+<h2>A configuração da edição</h2>
+<p>A pintura é Frozen Dark Grey II, um cinza fosco da BMW Individual, as rodas aro 20 de raios em Y vêm em grafite e o interior ganhou acabamento dourado com trama de carbono, espalhado pelo console e pelo painel. Nas rodas aparecem pinças douradas, que nessa edição ainda contam com o freio de carbono-cerâmica opcional.</p>
+<figure class="border-2 border-ink bg-black mx-auto max-w-md">
+  <img src="https://www.exoticsbrazil.com.br/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-4.jpg" width="1200" height="1600" alt="Console central dourado com trama de carbono e a gravação a laser Edition 35 Jahre 1/350" loading="lazy" class="foto-carro">
+  <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Gravação Edition 35 Jahre 1/350 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
+</figure>
+<p>No console, uma gravação a laser traz o nome da edição e a fração 1/350. É nesse tipo de detalhe que o colecionador se agarra, porque de longe a unidade parece um M5 cinza muito bem escolhido, e só quem chega perto descobre que existem apenas duas assim no país.</p>
+<h2>Quantas existem no Brasil</h2>
+<p>Segundo o Censo EB do portal Exotics Brazil (<a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener">@exoticsbrazil</a>), são 2 unidades da M5 Edition 35 Jahre no país, de uma série de 350 no mundo.</p>
+<aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: BMW M5 Competition Edition 35 Jahre (F90)">
   <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
-  <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">McLaren Artura Coupé</p>
+  <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">BMW M5 Competition Edition 35 Jahre (F90)</p>
   <dl class="px-4 pb-3 pt-2 font-mono text-[13px] leading-snug">
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Motor</dt><dd class="text-right">3.0 V6 biturbo</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência de combustão</dt><dd class="text-right">585cv</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência elétrica</dt><dd class="text-right">95cv</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência combinada</dt><dd class="text-right">680cv</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Torque</dt><dd class="text-right">73,4 kgfm</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">0 a 100 km/h</dt><dd class="text-right">3,0s</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Velocidade máxima</dt><dd class="text-right">330km/h</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Peso</dt><dd class="text-right">1.498kg</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Tração</dt><dd class="text-right">traseira</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Câmbio</dt><dd class="text-right">SSG de 8 marchas</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Cor</dt><dd class="text-right">Lantana Purple</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Produção</dt><dd class="text-right">2021–presente</dd></div>
-    <div class="flex justify-between gap-4 py-2"><dt class="shrink-0 font-medium text-rosso">Peso/Potência</dt><dd class="text-right font-medium text-rosso">2,20kg/cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Motor</dt><dd class="text-right">4.4 V8 biturbo</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência</dt><dd class="text-right">625cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Torque</dt><dd class="text-right">76,5 kgfm</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">0-100km/h</dt><dd class="text-right">3,3s</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Vel. Máxima</dt><dd class="text-right">250km/h</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Peso</dt><dd class="text-right">1.855kg</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Tração</dt><dd class="text-right">Integral (M xDrive)</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Câmbio</dt><dd class="text-right">automático 8v</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Cor</dt><dd class="text-right">Frozen Dark Grey II</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Produção</dt><dd class="text-right">2019 (350 unidades)</dd></div>
+    <div class="flex justify-between gap-4 py-2"><dt class="shrink-0 font-medium text-rosso">Peso/Potência</dt><dd class="text-right font-medium text-rosso">2,97kg/cv</dd></div>
   </dl>
-</aside>
-<h2>A cor</h2>
-<p>A unidade aparece em Lantana Purple, roxo carregado com o interior preto e detalhes alaranjados, pinças de freio laranja e rodas prata. O nome lembra a lantana, planta de flor conhecida no Brasil como camará.</p>
-<h2>O lugar do flagra</h2>
-<p>Boa Vista fica a pouco menos de 3 graus do Equador e é a única capital brasileira inteira no hemisfério norte. A cidade nasceu de um concurso de projetos de 1944, vencido pelo engenheiro Darcy Aleixo, com avenidas em leque que partem do Centro Cívico. A BR-174 liga a capital a Manaus, a mais de 700 km, e atravessa uma reserva indígena onde o tráfego é fechado à noite, das 18h às 6h, para a maioria dos veículos.</p>]]></content:encoded>
+</aside>]]></content:encoded>
     </item>
     <item>
       <title>Porsche 911 GT3 (992.2) dividido ao meio entre preto e amarelo aparece em showroom de São Paulo</title>
@@ -80,6 +82,42 @@
 <p>Pela regra do Contran, carro sem cor predominante é registrado como “fantasia”, e um GT3 dividido meio a meio entre preto e amarelo é candidato óbvio a ter a palavra no cadastro. O que consta no documento desta unidade não é conhecido, e o que vale aqui é só a regra.</p>
 <h2>A trilha que já existia</h2>
 <p>O preto e amarelo tem uma música própria. O rapper Wiz Khalifa lançou Black and Yellow em 2010, e ela chegou ao primeiro lugar da Billboard Hot 100 em fevereiro de 2011, o primeiro número 1 da carreira dele, virando hino dos torcedores do Pittsburgh Steelers. Em entrevista ao HipHopDX, Wiz Khalifa disse que a música nasceu de um carro, o Dodge Challenger preto e amarelo de fábrica que ele pediu para a concessionária procurar.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</title>
+      <link>https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/</guid>
+      <pubDate>Thu, 05 Nov 2026 12:00:00 -0300</pubDate>
+      <dc:creator>Pedro Ponchio</dc:creator>
+      <category>Censo EB</category>
+      <description>Supercarro híbrido da McLaren aparece em Roraima, longe do eixo que concentra a maior parte dos flagras de exóticos no país.</description>
+      <enclosure url="https://www.exoticsbrazil.com.br/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" length="411667" type="image/jpeg"/>
+      <content:encoded><![CDATA[<p>Uma McLaren Artura Coupé em Lantana Purple foi flagrada em Boa Vista, capital de Roraima, pelas lentes do <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a>. Os registros de exóticos no país se concentram em poucas cidades, e o flagra no extremo norte mostra que esse tipo de carro também roda fora do eixo mais conhecido.</p>
+<h2>O carro</h2>
+<p>A Artura é o primeiro supercarro híbrido de série da McLaren, lançado em 2021. O conjunto combina um V6 3.0 biturbo de 585cv com um motor elétrico de 95cv, somando 680cv na configuração de lançamento, com câmbio de dupla embreagem de 8 marchas e tração traseira. O sistema híbrido inteiro, com bateria, motor e cabeamento, pesa 130 kg. A McLaren elevou depois a potência combinada para 700cv por recalibração de software, e o ano da unidade registrada em Roraima não foi informado, por isso a ficha abaixo traz a configuração de lançamento.</p>
+<aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: McLaren Artura Coupé">
+  <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
+  <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">McLaren Artura Coupé</p>
+  <dl class="px-4 pb-3 pt-2 font-mono text-[13px] leading-snug">
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Motor</dt><dd class="text-right">3.0 V6 biturbo</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência de combustão</dt><dd class="text-right">585cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência elétrica</dt><dd class="text-right">95cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência combinada</dt><dd class="text-right">680cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Torque</dt><dd class="text-right">73,4 kgfm</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">0 a 100 km/h</dt><dd class="text-right">3,0s</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Velocidade máxima</dt><dd class="text-right">330km/h</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Peso</dt><dd class="text-right">1.498kg</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Tração</dt><dd class="text-right">traseira</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Câmbio</dt><dd class="text-right">SSG de 8 marchas</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Cor</dt><dd class="text-right">Lantana Purple</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Produção</dt><dd class="text-right">2021–presente</dd></div>
+    <div class="flex justify-between gap-4 py-2"><dt class="shrink-0 font-medium text-rosso">Peso/Potência</dt><dd class="text-right font-medium text-rosso">2,20kg/cv</dd></div>
+  </dl>
+</aside>
+<h2>A cor</h2>
+<p>A unidade aparece em Lantana Purple, roxo carregado com o interior preto e detalhes alaranjados, pinças de freio laranja e rodas prata. O nome lembra a lantana, planta de flor conhecida no Brasil como camará.</p>
+<h2>O lugar do flagra</h2>
+<p>Boa Vista fica a pouco menos de 3 graus do Equador e é a única capital brasileira inteira no hemisfério norte. A cidade nasceu de um concurso de projetos de 1944, vencido pelo engenheiro Darcy Aleixo, com avenidas em leque que partem do Centro Cívico. A BR-174 liga a capital a Manaus, a mais de 700 km, e atravessa uma reserva indígena onde o tráfego é fechado à noite, das 18h às 6h, para a maioria dos veículos.</p>]]></content:encoded>
     </item>
     <item>
       <title>Driver Experience Top Speed 2009: 208 carros de São Paulo a Limeira, e um Pagani Zonda F Roadster ClubSport que não ficou no Brasil</title>
