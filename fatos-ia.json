@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-05",
-  "total": 137,
+  "total": 138,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -609,11 +609,11 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/"
     },
     {
-      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
+      "id": "materia-mercedes-amg-g63-olive-metallic-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma Mercedes-AMG G 63 em Olive Metallic, tinta listada como opção do programa G MANUFAKTUR, foi registrada em São Paulo com rodas monoblock polidas. A G 63 usa um V8 4.0 biturbo de 585cv com gerador de partida integrado a um sistema híbrido leve de 48V.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
       "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
@@ -621,6 +621,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
+    },
+    {
+      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
