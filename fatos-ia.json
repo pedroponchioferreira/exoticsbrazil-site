@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-05",
-  "total": 138,
+  "total": 139,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -600,6 +600,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-lotus-emeya-900-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Lotus Emeya 900 é o sedã elétrico de quatro portas que a Lotus classifica como Hyper-GT, com 918 cv, 100,4 kgfm e bateria de 102 kWh, vendido oficialmente no Brasil só nessa versão, por R$ 975 mil na tabela de lançamento. A unidade desta reportagem foi fotografada em São Paulo.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-06",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/lotus-emeya-900-sao-paulo/"
     },
     {
       "id": "materia-bmw-m5-competition-edition-35-jahre-sao-paulo",
