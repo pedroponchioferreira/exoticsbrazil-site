@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-05",
-  "total": 139,
+  "total": 145,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -522,12 +522,60 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997"
     },
     {
+      "id": "censo-porsche-911-gt3-rs-991-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 19 unidades do Porsche 911 GT3 RS (991.1) no Brasil.",
+      "entidade": "Porsche 911 GT3 RS (991.1)",
+      "valor": 19,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-991-1"
+    },
+    {
+      "id": "censo-porsche-911-gt3-rs-991-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 27 unidades do Porsche 911 GT3 RS (991.2) no Brasil.",
+      "entidade": "Porsche 911 GT3 RS (991.2)",
+      "valor": 27,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-991-2"
+    },
+    {
+      "id": "censo-porsche-911-gt3-rs-992-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 94 unidades do Porsche 911 GT3 RS (992.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Mais numeroso que todas as gerações anteriores de GT3 RS somadas, que dão 60.",
+      "entidade": "Porsche 911 GT3 RS (992.1)",
+      "valor": 94,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-992-1"
+    },
+    {
+      "id": "censo-porsche-911-gt3-rs-996-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existe 1 unidade do Porsche 911 GT3 RS (996.2) no Brasil.",
+      "entidade": "Porsche 911 GT3 RS (996.2)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-996-2"
+    },
+    {
       "id": "censo-porsche-911-gt3-rs-997-1",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 4 unidades do Porsche 911 GT3 RS (997.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em RS Orange.",
       "entidade": "Porsche 911 GT3 RS (997.1)",
       "valor": 4,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-1"
+    },
+    {
+      "id": "censo-porsche-911-gt3-rs-997-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 6 unidades do Porsche 911 GT3 RS (997.2) no Brasil.",
+      "entidade": "Porsche 911 GT3 RS (997.2)",
+      "valor": 6,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-2"
+    },
+    {
+      "id": "censo-porsche-911-gt3-rs-4-0-997-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 5 de novembro de 2026, existem 3 unidades do Porsche 911 GT3 RS 4.0 (997.2) no Brasil.",
+      "entidade": "Porsche 911 GT3 RS 4.0 (997.2)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-4-0-997-2"
     },
     {
       "id": "censo-porsche-911-turbo-s-cabriolet-991",
