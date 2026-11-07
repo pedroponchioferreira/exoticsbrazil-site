@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-07",
-  "total": 148,
+  "total": 149,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -296,7 +296,7 @@
     },
     {
       "id": "censo-bugatti-chiron-sport",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Bugatti Chiron Sport no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Em São Paulo, chegou em 2024 por importação independente.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Bugatti Chiron Sport no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Único Bugatti moderno do Brasil. Em São Paulo, chegou em 2024 por importação independente.",
       "entidade": "Bugatti Chiron Sport",
       "valor": 1,
       "ano": 2026,
@@ -661,6 +661,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Bugatti Chiron Sport de São Paulo é o único Bugatti moderno do Brasil. A unidade, em French Racing Blue sobre Blue Carbon, chegou em 2024 por importação independente e foi fotografada por @carsbysfs num posto da capital paulista no sábado do GP de São Paulo de Fórmula 1, à espera da lavagem.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-07",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/"
     },
     {
       "id": "materia-lotus-emeya-900-sao-paulo",

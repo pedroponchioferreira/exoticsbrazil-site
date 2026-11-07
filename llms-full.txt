@@ -67,7 +67,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Audi tt rs (8j.2): 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-8j-2
 - Audi tt rs roadster (8j.2): 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-roadster-8j-2
 - BMW M5 Competition Edition 35 Jahre (F90): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). De 350 fabricados no mundo. Fonte: https://www.exoticsbrazil.com.br/censo/#bmw-m5-competition-edition-35-jahre-f90
-- Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
+- Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Único Bugatti moderno do Brasil. Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
 - Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
 - Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
 - Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
@@ -130,6 +130,29 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Como fotógrafos e spotters colaboram com o acervo do Exotics Brazil? Pelo Direct do @exoticsbrazil, com a foto em boa resolução, a cidade e a arroba de quem fotografou. Toda foto publicada leva o crédito do autor na legenda, inclusive quando o flagra chega repassado por outra página.
 
 ## Revista Exotics Brazil, texto integral
+
+### Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1
+
+https://www.exoticsbrazil.com.br/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/ · Flagras · por Pedro Ponchio · publicado em 7 de novembro de 2026
+Em French Racing Blue sobre Blue Carbon, a única unidade do país foi vista à espera da lavagem enquanto a cidade acompanhava o GP de São Paulo.
+
+Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Bugatti Chiron Sport de São Paulo é o único Bugatti moderno do Brasil. A unidade, em French Racing Blue sobre Blue Carbon, chegou em 2024 por importação independente e foi fotografada por @carsbysfs num posto da capital paulista no sábado do GP de São Paulo de Fórmula 1, à espera da lavagem.
+
+O Bugatti Chiron Sport de São Paulo foi fotografado num posto da capital paulista no sábado do GP de São Paulo de Fórmula 1, parado à espera da lavagem e cercado de gente filmando com o celular. A unidade usa French Racing Blue na frente e nas portas e Blue Carbon, a fibra de carbono com pintura translúcida azul, no teto, nas laterais e na traseira.
+
+## O único Bugatti moderno do país
+
+Segundo o Censo EB, o Chiron Sport é o único Bugatti moderno que existe no Brasil. A unidade está em São Paulo e chegou em 2024 por importação independente. A família Chiron, somando todas as versões, encerrou a produção em 2024 com 500 unidades no mundo, sem número público só da versão Sport.
+
+A versão Sport foi apresentada em 2018, no Salão de Genebra. De costas, ela se reconhece pelas quatro saídas de escapamento redondas lado a lado, visíveis nas fotos deste flagra.
+
+## Bugatti e Fórmula 1
+
+A única largada da Bugatti no Mundial de Fórmula 1 aconteceu no GP da França de 1956, em Reims, com um Type 251 inscrito para Maurice Trintignant, que abandonou depois de 18 voltas por falha mecânica. O nome do carro homenageia Louis Chiron, piloto monegasco que é até hoje o mais velho a largar numa corrida de F1, com 55 anos e 292 dias no GP de Mônaco de 1955, onde terminou em sexto.
+
+Em 2017, Juan Pablo Montoya, vencedor do GP do Brasil de 2004 em Interlagos, levou um Chiron de 0 a 400 km/h e de volta à imobilidade em 41,96 segundos, prova cronometrada por certificadora independente na pista de Ehra-Lessien, na Alemanha.
+
+Ficha técnica do Bugatti Chiron Sport, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 8.0 W16 quadriturbo; Potência: 1.500cv; Torque: 163,2 kgfm; 0-100km/h: 2,4s; Velocidade máxima: 420km/h; Peso: 2.287kg; Tração: integral; Câmbio: DSG de 7 velocidades; Cor: French Racing Blue / Blue Carbon; Produção: 2018–2024; Peso/Potência: 1,52kg/cv.
 
 ### Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo
 
