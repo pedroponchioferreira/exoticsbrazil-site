@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-07",
-  "total": 149,
+  "total": 148,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -15,7 +15,7 @@
     },
     {
       "id": "org-seguidores",
-      "afirmacao": "O Exotics Brazil (@exoticsbrazil) tem 498 mil seguidores no Instagram, todos conquistados sem anúncio pago.",
+      "afirmacao": "O Exotics Brazil (@exoticsbrazil) tem 499 mil seguidores no Instagram, todos conquistados sem anúncio pago.",
       "fonte": "https://www.exoticsbrazil.com.br/"
     },
     {
@@ -104,11 +104,19 @@
     },
     {
       "id": "censo-audi-rs4-avant-b5",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 33 unidades do Audi RS4 AVANT (B5) no Brasil.",
-      "entidade": "Audi RS4 AVANT (B5)",
-      "valor": 33,
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 32 unidades do Audi RS4 Avant (B5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Eram 33, mas uma das unidades (Black) foi exportada.",
+      "entidade": "Audi RS4 Avant (B5)",
+      "valor": 32,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b5"
+    },
+    {
+      "id": "censo-audi-rs4-avant-b8",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 22 unidades do Audi RS4 Avant (B8) no Brasil.",
+      "entidade": "Audi RS4 Avant (B8)",
+      "valor": 22,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b8"
     },
     {
       "id": "censo-audi-rs5-coupe-b9",
@@ -237,22 +245,6 @@
       "valor": 36,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-plus-coupe-type-4s"
-    },
-    {
-      "id": "censo-audi-rs4-avant-b5",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 32 unidades do Audi rs4 avant (b5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Eram 33 mas uma das unidades  (Black) foi exportada",
-      "entidade": "Audi rs4 avant (b5)",
-      "valor": 32,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b5"
-    },
-    {
-      "id": "censo-audi-rs4-avant-b8",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 22 unidades do Audi rs4 avant (b8) no Brasil.",
-      "entidade": "Audi rs4 avant (b8)",
-      "valor": 22,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-rs4-avant-b8"
     },
     {
       "id": "censo-audi-rs6-avant-c6",
@@ -624,7 +616,7 @@
     },
     {
       "id": "censo-porsche-918-spyder",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Cores e números de chassi: Meteor Grey Metallic (523 e 388), Liquid Metal Silver (344 e 431), GT Silver Metallic (151 e 133), Rhodium Silver Metallic (513), White (155 e 456), Black (233), Racing Yellow (499), Riviera Blue PTS (862) e Signal Green PTS (895). Três têm o Weissach Package de fábrica: a White 155, a Rhodium Silver 513 e a Riviera Blue PTS 862. As primeiras a chegar foram a 151, a 155 e a 499, pela importação oficial, para São Paulo e Porto Alegre. As outras dez vieram por importação independente, e a mais recente é a Rhodium Silver 513. A 155 está hoje envelopada em preto fosco.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Chegaram em duas ondas. Na primeira, entre 2015 e o início de 2016, vieram só 3 unidades pela importação oficial da Stuttgart Porsche, para São Paulo e Porto Alegre: a 151 em GT Silver Metallic, a 155 em White com Weissach Package e a 499 em Racing Yellow. Na segunda, a demanda reprimida trouxe outras 10 por importação independente, mais que o triplo da leva oficial, começando pela 456 em White e chegando à mais recente, a 513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (523 e 388), Liquid Metal Silver (344 e 431), GT Silver Metallic (151 e 133), Rhodium Silver Metallic (513), White (155 e 456), Black (233), Racing Yellow (499), Riviera Blue PTS (862) e Signal Green PTS (895). Três têm o Weissach Package de fábrica: a 155, a 513 e a Riviera Blue PTS 862. A 155 está hoje envelopada em preto fosco.",
       "entidade": "Porsche 918 Spyder",
       "valor": 13,
       "ano": 2026,
