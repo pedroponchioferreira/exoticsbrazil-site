@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-08",
-  "total": 154,
+  "total": 155,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -341,6 +341,14 @@
       "valor": 18,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170"
+    },
+    {
+      "id": "censo-ferrari-296-speciale",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 8 de novembro de 2026, existem 8 unidades do Ferrari 296 Speciale no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: A 8ª do Brasil é a unidade vermelha em Rosso Supercar, a cor de lançamento do F80, de São Paulo, chegada por importação oficial.",
+      "entidade": "Ferrari 296 Speciale",
+      "valor": 8,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-296-speciale"
     },
     {
       "id": "censo-ferrari-360-challenge-stradale",
@@ -688,7 +696,7 @@
     },
     {
       "id": "materia-ferrari-296-speciale-vermelha-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 296, somando todas as variações, já superou o 458 e virou a Ferrari mais vendida do Brasil. A 296 Speciale vermelha de São Paulo, com 880cv e 1.410 kg a seco, é a versão semi pista da família, com bancos de concha de carbono, rodas forjadas e aletas laterais na traseira.",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 296, somando todas as variações, já superou o 458 e virou a Ferrari mais vendida do Brasil. A 296 Speciale vermelha de São Paulo é a 8ª do país e a versão semi pista da família, com 880cv, 1.410 kg a seco e pintura Rosso Supercar, a cor de lançamento do hypercar F80.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-08",
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/"
