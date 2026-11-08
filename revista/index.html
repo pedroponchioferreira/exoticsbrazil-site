@@ -59,6 +59,8 @@
     .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
@@ -105,7 +107,7 @@
         "@type": "ListItem",
         "position": 1,
         "url": "https://www.exoticsbrazil.com.br/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/",
-        "name": "Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1"
+        "name": "Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1"
       },
       {
         "@type": "ListItem",
@@ -147,7 +149,7 @@
         "@type": "ListItem",
         "position": 8,
         "url": "https://www.exoticsbrazil.com.br/revista/driver-experience-top-speed-2009-limeira/",
-        "name": "Driver Experience Top Speed 2009: 208 carros de São Paulo a Limeira, e um Pagani Zonda F Roadster ClubSport que não ficou no Brasil"
+        "name": "Driver Experience Top Speed 2009: 208 carros rumo a Limeira e um Pagani Zonda que não ficou no Brasil"
       },
       {
         "@type": "ListItem",
@@ -497,7 +499,7 @@
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
         <a href="/revista/" class="text-white">Revista</a>
         <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
-        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
       </nav>
@@ -523,18 +525,18 @@
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Em French Racing Blue sobre Blue Carbon, a única unidade do país foi vista à espera da lavagem enquanto a cidade acompanhava o GP de São Paulo.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/lotus-emeya-900-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível, com rodas pretas"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya 900 em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível em São Paulo, com rodas pretas"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 6 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">O sedã de quatro portas da Lotus, vendido oficialmente no Brasil só na versão 900, mostra por dentro a personalidade de um elétrico com assinatura de Lotus, com faixa de luz amarela no painel, volante quadrado arredondado e bancos traseiros individuais.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/porsche-911-gt3-rs-992-1-brasil-censo/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -543,7 +545,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Porsche 911 GT3 RS (992.1) rosa em São Paulo, ao lado de um GT4 RS, e o censo do modelo no Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Uma unidade com adesivo rosa combinando com o de um 718 Cayman GT4 RS, e o total de GT3 RS no país por geração.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
       </div>
@@ -557,7 +559,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Série limitada a 350 unidades no mundo para os 35 anos do M5, com o mesmo V8 de 625 cv do Competition e a configuração como diferencial.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/mercedes-amg-g63-olive-metallic-sao-paulo/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -566,7 +568,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Mercedes-AMG G 63 em Olive Metallic, o verde do G MANUFAKTUR, é flagrada em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Classe G aparece com a tinta metálica verde-oliva e rodas monoblock polidas de cinco raios, em fotos de avenida e de rua.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/mclaren-artura-coupe-lantana-purple-boa-vista/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -575,7 +577,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Supercarro híbrido da McLaren aparece em Roraima, longe do eixo que concentra a maior parte dos flagras de exóticos no país.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/" data-editoria="Porsche" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -584,16 +586,16 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Porsche 911 GT3 (992.2) dividido ao meio entre preto e amarelo aparece em showroom de São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Unidade com acabamento fosco, faixa do capô à asa e rodas que seguem a cor de cada lado, flagrada em São Paulo pelo @vh.spotter.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/driver-experience-top-speed-2009-limeira/" data-editoria="TbtDoEb" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" loading="lazy" decoding="async" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" loading="lazy" decoding="async" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">TbtDoEb · 5 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Driver Experience Top Speed 2009: 208 carros de São Paulo a Limeira, e um Pagani Zonda F Roadster ClubSport que não ficou no Brasil</h3>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Driver Experience Top Speed 2009: 208 carros rumo a Limeira e um Pagani Zonda que não ficou no Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Em 07/03/2009, o evento da Revista Driver Brasil levou Ferrari, Porsche, Lamborghini, Audi R8 e Nissan GT-R por uma pista oval de testes em Limeira, SP, junto com um Zonda F Roadster ClubSport que veio para ser vendido e foi embora sem comprador.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 4 min</p>
             </div>
           </a>
           <a href="/revista/gaucho-trail-motor-challenge-2026-brasil/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -611,7 +613,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 3 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dodge Challenger SRT Demon 170 vermelho aparece no Rio de Janeiro, um dos 18 do Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">A chave preta do Demon original foi banida, a vermelha é a única, e quem decide a potência é o combustível</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/toyota-gr-yaris-roda-branca-florianopolis/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -620,7 +622,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 3 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Toyota GR Yaris com rodas brancas de rali em Florianópolis</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Quem compra um GR Yaris já tem personalidade, e quem coloca roda branca de rali nele sobe o sarrafo, com a OZ Racing Rally Racing e a discussão que ela abriu</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/lamborghini-temerario-arancio-anthaeus-balneario-camboriu/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -629,7 +631,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lamborghini Temerario em Arancio Anthaeus é fotografado em Balneário Camboriú</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">O sucessor da Huracán, com V8 4.0 biturbo e três motores elétricos, ganha ensaio de dia e à noite com o mar, o morro e a roda-gigante da cidade catarinense</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/mercedes-amg-s65-coupe-facelift-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -638,7 +640,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Mercedes-AMG S 65 Coupé facelift: um dos três V12 biturbo cupê do Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">A S 65 Coupé facelift flagrada em São Paulo é uma de apenas duas unidades da versão no país, ao lado de uma pré-facelift ainda mais rara.</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/ferrari-gtc4lusso-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -647,7 +649,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Ferrari GTC4Lusso azul, a V12 de quatro lugares, flagrada à noite em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">A GTC4Lusso reúne V12 aspirado de 690 cv, quatro lugares e a primeira Ferrari com tração integral e esterço traseiro juntos</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/dodge-viper-rt10-ferrari-f355-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -656,7 +658,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dodge Viper RT/10 e duas Ferrari F355 vermelhas se encontram em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Um V10 de 8,0 litros sem controle de tração ao lado de dois V8 de 3,5 litros, uma F355 cupê e outra Spider, flagrados juntos na capital paulista</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/aston-martin-dbs-770-ultimate-coupe-curitiba/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -665,7 +667,7 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Aston Martin DBS 770 Ultimate Coupé em Q Iridescent Emerald roda em Curitiba</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Uma das duas DBS 770 Ultimate registradas no Brasil, o último DBS de 770cv, aparece em verde Iridescent Emerald com contornos Lime Essence</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/chevrolet-corvette-zr1x-joinville/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -674,16 +676,16 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Corvette ZR1-X: o híbrido de 1.250 cv da Chevrolet já roda no Brasil</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico e já tem unidades emplacadas no país</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/bmw-m3-competition-g80-dravit-grey-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bmw-m3-competition-g80-dravit-grey-brasilia-exotics-brazil.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="BMW M3 Competition G80 em Dravit Grey, de perfil, estacionado em Brasília"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bmw-m3-competition-g80-dravit-grey-brasilia-exotics-brazil.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="BMW M3 Competition (G80) em Dravit Grey, de perfil, estacionado em Brasília, DF"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">O que é o Dravit Grey, a tinta BMW Individual de partículas douradas, e como ela veste o M3 vendido no Brasil</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/mclaren-750s-spider-project-chromology-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -692,11 +694,11 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">McLaren 750S Spider Project Chromology, pintura em camadas da MSO com a artista Nat Bowen, em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Unidade do programa da McLaren Special Operations com paleta própria, roxo, vermelho e verde na traseira, roda no trânsito paulistano</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 4 min</p>
             </div>
           </a>
           <a href="/revista/audi-r8-v10-4s-1700-whp-aracariguama/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/audi-r8-v10-aracariguama-exotics-brazil.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Audi R8 V10 azul com faixas brancas, filetes dourados e número 88 na porta, visto de frente em três quartos, com rodas douradas e adesivos da BK Motorsport e da Oficina MK Spec no capô, em Araçariguama"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/audi-r8-v10-aracariguama-exotics-brazil.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Audi R8 V10 (4S) azul com faixas brancas, filetes dourados e número 88 na porta, visto de frente em três quartos, com rodas douradas e adesivos da BK Motorsport e da Oficina MK Spec no capô, em Araçariguama"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Audi R8 V10 (4S) de 1.700 whp, preparado pela BK Motorsport e pela Oficina MK Spec, registrado em Araçariguama</h3>
@@ -710,11 +712,11 @@
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Denza Z Spider, o superesportivo elétrico de 1.604 cv da BYD, é flagrado em testes em São Paulo</h3>
               <p class="mt-3 hidden text-[15px] leading-relaxed text-zinc-700 sm:block">Conversível 2+2 da divisão de luxo da BYD roda com camuflagem azul e placa verde de fabricante poucos meses depois da estreia mundial</p>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/especificacoes-1-de-1-no-brasil/" data-editoria="Raridades" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ford-gt-carbon-series-sao-paulo.jpg" width="1440" height="1440" loading="lazy" decoding="async" alt="Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/ford-gt-carbon-series-sao-paulo.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/ford-gt-carbon-series-sao-paulo.jpg" width="1440" height="1440" loading="lazy" decoding="async" alt="Ford GT Carbon Series roxo com faixas de carbono expostas, de portas abertas em São Paulo" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Raridades · 27 de outubro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Especificações 1 de 1 no Brasil</h3>
@@ -723,7 +725,7 @@
             </div>
           </a>
           <a href="/revista/porsche-de-pista-e-series-limitadas-no-brasil/" data-editoria="Porsche" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 27 de outubro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Do 997 GT2 RS Mezger ao Porsche 935</h3>
@@ -769,7 +771,7 @@
       <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2017" class="font-display text-6xl font-black tracking-tight">2017</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">3 reportagens</p></div>
       <div class="grid border-l-2 border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
           <a href="/revista/mustang-vira-ao-brasil/" data-editoria="Brasil" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil · 8 de novembro de 2017</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">O Mustang finalmente virá ao Brasil!</h3>
@@ -778,7 +780,7 @@
             </div>
           </a>
           <a href="/revista/o-rolls-royce-phantom-e-seus-92-anos-de-luxo/" data-editoria="Vintage Cars Brazil" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" width="1600" height="1361" loading="lazy" decoding="async" alt="Rolls-Royce Phantom VIII Series II preto em São Paulo"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/rolls-royce-phantom-viii-series-ii-sao-paulo.jpg" width="1600" height="1361" loading="lazy" decoding="async" alt="Rolls-Royce Phantom VIII Series II preto em São Paulo" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil · 29 de outubro de 2017</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">O Rolls-Royce Phantom e seus 92 anos de luxo</h3>
@@ -787,7 +789,7 @@
             </div>
           </a>
           <a href="/revista/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/" data-editoria="Vintage Cars Brazil" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" loading="lazy" decoding="async" alt="Ferrari F40 vermelha em Ribeirão Preto"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" loading="lazy" decoding="async" alt="Ferrari F40 vermelha em Ribeirão Preto" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Vintage Cars Brazil · 4 de outubro de 2017</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">A Ferrari F40 foi a despedida de Enzo Ferrari</h3>
@@ -801,7 +803,7 @@
       <div class="flex items-end justify-between gap-4 border-b-4 border-ink pb-2"><h2 id="ano-2016" class="font-display text-6xl font-black tracking-tight">2016</h2><p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">1 reportagem</p></div>
       <div class="grid border-l-2 border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
           <a href="/revista/dicas-fotografia-automotiva/" data-editoria="Fotografia" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS (997) preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS (997) preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Fotografia · 11 de fevereiro de 2016</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dicas de Fotografia Automotiva</h3>
@@ -1142,7 +1144,7 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
         <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
         <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>

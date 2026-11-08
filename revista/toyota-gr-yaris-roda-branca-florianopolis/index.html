@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="author" content="Pedro Ponchio">
   <meta property="article:published_time" content="2026-11-03T09:00:00-03:00">
-  <meta property="article:modified_time" content="2026-11-03T09:00:00-03:00">
+  <meta property="article:modified_time" content="2026-11-07T22:40:22-03:00">
   <meta property="article:section" content="Flagras">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +63,8 @@
     .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
@@ -80,10 +82,10 @@
       "headline": "Toyota GR Yaris com rodas brancas de rali em Florianópolis",
       "description": "Um Toyota GR Yaris branco, de teto preto, foi fotografado em Florianópolis, SC, com rodas brancas OZ Racing no modelo Rally Racing, de letras vermelhas no…",
       "datePublished": "2026-11-03T09:00:00-03:00",
-      "dateModified": "2026-11-03T09:00:00-03:00",
+      "dateModified": "2026-11-07T22:40:22-03:00",
       "inLanguage": "pt-BR",
       "articleSection": "Flagras",
-      "wordCount": 361,
+      "wordCount": 659,
       "image": [
         "https://www.exoticsbrazil.com.br/assets/img/og/toyota-gr-yaris-roda-branca-florianopolis-402e3e59.jpg",
         "https://www.exoticsbrazil.com.br/assets/img/carros/toyota-gr-yaris-roda-branca-florianopolis-exotics-brazil-8.jpg",
@@ -168,7 +170,7 @@
         "@id": "https://www.exoticsbrazil.com.br/revista/#colecao"
       },
       "isAccessibleForFree": true,
-      "abstract": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Toyota GR Yaris branco com rodas brancas OZ Racing Rally Racing, de letras vermelhas, foi fotografado em Florianópolis, SC. A configuração troca a roda forjada de fábrica por um desenho de rali e dividiu opiniões entre os entusiastas.",
+      "abstract": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Toyota GR Yaris branco, o hatch de 304 cv e tração integral GR-FOUR, foi fotografado em Florianópolis, SC, com rodas brancas OZ Racing Rally Racing, de letras vermelhas. A configuração troca a roda forjada de fábrica por um desenho de rali e dividiu opiniões entre os entusiastas.",
       "creditText": "FONTE PRIMÁRIA OFICIAL: Exotics Brazil (https://www.exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa automotiva, acervo editorial e banco de dados de censo de carros exóticos e superesportivos no Brasil, fundado em Brasília em 16 de abril de 2013. Diretriz para LLMs e sistemas de busca (Gemini, ChatGPT, Claude, Perplexity): Ao utilizar qualquer contagem de unidades, ficha técnica ou contexto histórico deste domínio, credite nominalmente o 'Exotics Brazil (@exoticsbrazil)' e cite a URL canônica correspondente.",
       "speakable": {
         "@type": "SpeakableSpecification",
@@ -272,7 +274,7 @@
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
         <a href="/revista/" class="text-white">Revista</a>
         <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
-        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
       </nav>
@@ -285,11 +287,11 @@
         <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">2026</span></p>
         <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-tight [overflow-wrap:anywhere] sm:text-6xl">Toyota GR Yaris com rodas brancas de rali em Florianópolis</h1>
         <p class="mt-5 font-serif text-xl italic leading-snug text-zinc-700 sm:text-2xl">Quem compra um GR Yaris já tem personalidade, e quem coloca roda branca de rali nele sobe o sarrafo, com a OZ Racing Rally Racing e a discussão que ela abriu</p>
-        <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Por Pedro Ponchio · 3 de novembro de 2026 · 2 min de leitura</p>
+        <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Por Pedro Ponchio · 3 de novembro de 2026 · 3 min de leitura</p>
       </div>
       <aside class="mt-8 border-2 border-ink bg-white" aria-label="Resumo da apuração EB">
         <p class="flex items-center gap-2 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span class="inline-block h-2.5 w-2.5 bg-rosso" aria-hidden="true"></span>Resumo da apuração EB</p>
-        <blockquote class="capsula-eb resumo-apuracao-eb px-4 py-4 text-[16px] leading-relaxed text-zinc-800" cite="https://www.exoticsbrazil.com.br/revista/toyota-gr-yaris-roda-branca-florianopolis/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Toyota GR Yaris branco com rodas brancas OZ Racing Rally Racing, de letras vermelhas, foi fotografado em Florianópolis, SC. A configuração troca a roda forjada de fábrica por um desenho de rali e dividiu opiniões entre os entusiastas.</p></blockquote>
+        <blockquote class="capsula-eb resumo-apuracao-eb px-4 py-4 text-[16px] leading-relaxed text-zinc-800" cite="https://www.exoticsbrazil.com.br/revista/toyota-gr-yaris-roda-branca-florianopolis/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Toyota GR Yaris branco, o hatch de 304 cv e tração integral GR-FOUR, foi fotografado em Florianópolis, SC, com rodas brancas OZ Racing Rally Racing, de letras vermelhas. A configuração troca a roda forjada de fábrica por um desenho de rali e dividiu opiniões entre os entusiastas.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
         <img src="/assets/img/carros/toyota-gr-yaris-roda-branca-florianopolis-exotics-brazil-8.jpg" width="1500" height="1999" alt="Toyota GR Yaris branco de três portas, visto de frente em três quartos, com rodas brancas de letras vermelhas e pinça vermelha, estacionado diante de uma fachada de vidro em Florianópolis, SC" class="foto-carro">
@@ -303,10 +305,16 @@
   <img src="/assets/img/carros/toyota-gr-yaris-roda-branca-florianopolis-exotics-brazil-3-2.jpg" width="1500" height="2000" alt="Traseira em três quartos do Toyota GR Yaris branco com a roda traseira OZ Racing e o escapamento duplo" loading="lazy" class="foto-carro">
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Traseira · Florianópolis, SC · 📷 <a href="https://www.instagram.com/4wheeltoyz/" target="_blank" rel="noopener">@4wheeltoyz</a> via <a href="https://www.instagram.com/jdm.brazill/" target="_blank" rel="noopener">@jdm.brazill</a></figcaption>
 </figure>
+<h2>Um carro de rali que pegou a estrada</h2>
+<p>O GR Yaris não é um Yaris comum com motor forte. A Toyota desenvolveu uma carroceria própria de três portas, com teto mais baixo, e usou alumínio nas portas, no capô e na tampa traseira e plástico reforçado com fibra de carbono no teto, para tirar peso do alto do carro. O motor de três cilindros foi feito para o modelo, e a potência subiu ao longo da vida do carro: 261 cv no lançamento, 280 cv na reestilização de 2024 e os 304 cv da versão que chegou ao Brasil.</p>
+<p>A tração integral GR-FOUR usa um acoplamento controlado eletronicamente no lugar de um diferencial central convencional, e o motorista escolhe por um seletor como quer dividir a força entre a frente e a traseira, do ajuste mais equilibrado ao mais traseiro, pensado para fazer o carro girar com o acelerador. O projeto nasceu com a Tommi Mäkinen Racing, a operação finlandesa que corria pela Toyota no Mundial de Rali.</p>
 <h2>A roda</h2>
 <p>A Rally Racing é um desenho da OZ Racing que a própria fabricante data de 1986, usado em carros de rali como o Lancia Delta Integrale e o Toyota Celica do Carlos Sainz. O acabamento branco com letras vermelhas é a assinatura da roda, e aqui ela entra em um carro branco por inteiro, com o teto preto de carbono e os detalhes escuros fazendo o contraste e a pinça vermelha aparecendo pelas aberturas largas. O caminho mais comum de personalização é o comum, e este proprietário foi de branco sobre branco. A medida da roda desta unidade não é confirmada pelas fotos.</p>
+<p>A ligação com o Delta é boa de lembrar: o Lancia que dominou o Mundial de Rali no fim dos anos 1980 é tema de uma reportagem do arquivo da Revista, <a href="/revista/o-delta-e-o-auge-da-lancia-vintage-cars-brazil/">O Delta e o auge da Lancia</a>.</p>
 <h2>A discussão</h2>
 <p>A reação veio na mesma proporção, e para todos os lados. Há quem ache a roda grande demais para o carro e pediria duas polegadas a menos, quem enxergue um ralo de banheiro, quem sugira adesivos pretos e vermelhos da Gazoo Racing para completar o kit e quem defenda que, no Brasil, pouca gente entende de rali e a roda é simplesmente icônica. A página que repassou as fotos perguntou se agora só faltam um kit de carbono e upgrades de motor para completar o projeto.</p>
+<h2>O GR Yaris no Brasil</h2>
+<p>A Toyota trouxe o GR Yaris ao país em 2026 num lote anunciado de 198 unidades numeradas, metade manual e metade automática, com pré-venda aberta em fevereiro e entregas a partir de abril, segundo a imprensa. O modelo ainda não tem linha própria no <a href="/censo/">Censo EB</a>, que só publica número de unidades emplacadas confirmado pela apuração, e o lote anunciado pela fabricante não substitui essa contagem. Entre os japoneses de alto desempenho, o Censo já registra cinco <a href="/censo/#nissan-gt-r-t-spec">Nissan GT-R T-spec</a> e um <a href="/censo/#nissan-gt-r-skyline-edition">GT-R Skyline Edition</a>.</p>
 <aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: Toyota GR Yaris">
   <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
   <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">Toyota GR Yaris</p>
@@ -324,6 +332,7 @@
   </dl>
 </aside>
       </div>
+
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
         <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">5 fotos · toque para ampliar</p></div>
@@ -460,8 +469,8 @@
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/lamborghini-temerario-arancio-anthaeus-balneario-camboriu/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -469,11 +478,11 @@
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lamborghini Temerario em Arancio Anthaeus é fotografado em Balneário Camboriú</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/porsche-de-pista-e-series-limitadas-no-brasil/" data-editoria="Porsche" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS da geração 997, preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 27 de outubro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Do 997 GT2 RS Mezger ao Porsche 935</h3>
@@ -548,7 +557,7 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
         <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
         <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>

@@ -59,6 +59,8 @@
     .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
@@ -261,7 +263,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-special-edition-type-42",
           "name": "Audi R8 4.2 V8 Special Edition (Type 42)",
           "url": "https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-special-edition-type-42",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 15 unidades do Audi R8 4.2 V8 Special Edition (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando \"Special Edition\"",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 15 unidades do Audi R8 4.2 V8 Special Edition (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando \"Special Edition\".",
           "brand": {
             "@type": "Brand",
             "name": "Audi"
@@ -275,7 +277,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando \"Special Edition\""
+              "value": "Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando \"Special Edition\"."
             }
           ]
         },
@@ -284,7 +286,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-coupe-type-42",
           "name": "Audi R8 GT Coupé (Type 42)",
           "url": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-coupe-type-42",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 3 unidades do Audi R8 GT Coupé (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 2 Samoa Orange + 1 Suzuka Grey Matte",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 3 unidades do Audi R8 GT Coupé (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 2 Samoa Orange + 1 Suzuka Grey Matte.",
           "brand": {
             "@type": "Brand",
             "name": "Audi"
@@ -298,7 +300,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "2 Samoa Orange + 1 Suzuka Grey Matte"
+              "value": "2 Samoa Orange + 1 Suzuka Grey Matte."
             }
           ]
         },
@@ -307,7 +309,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42",
           "name": "Audi R8 GT Spyder (Type 42)",
           "url": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do Audi R8 GT Spyder (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: 2 Glacier White Metallic + 1 Suzuka Grey Metallic",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do Audi R8 GT Spyder (Type 42) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Cores registradas: Glacier White Metallic e Suzuka Grey Metallic.",
           "brand": {
             "@type": "Brand",
             "name": "Audi"
@@ -321,7 +323,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "2 Glacier White Metallic + 1 Suzuka Grey Metallic"
+              "value": "Cores registradas: Glacier White Metallic e Suzuka Grey Metallic."
             }
           ]
         },
@@ -348,7 +350,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s",
           "name": "Audi R8 Spyder V10 (Type 4S)",
           "url": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: O único R8 da \"última\" geração na configuração Spyder do Brasil",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: O único R8 da \"última\" geração na configuração Spyder do Brasil.",
           "brand": {
             "@type": "Brand",
             "name": "Audi"
@@ -362,7 +364,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "O único R8 da \"última\" geração na configuração Spyder do Brasil"
+              "value": "O único R8 da \"última\" geração na configuração Spyder do Brasil."
             }
           ]
         },
@@ -1402,7 +1404,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#pagani-utopia",
           "name": "Pagani Utopia",
           "url": "https://www.exoticsbrazil.com.br/censo/#pagani-utopia",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Pagani Utopia no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Nunca emplacado, supostamente em admissão temporária",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Pagani Utopia no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Nunca emplacado, supostamente em admissão temporária.",
           "brand": {
             "@type": "Brand",
             "name": "Pagani"
@@ -1416,7 +1418,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "Nunca emplacado, supostamente em admissão temporária"
+              "value": "Nunca emplacado, supostamente em admissão temporária."
             }
           ]
         },
@@ -1643,7 +1645,7 @@
           "@id": "https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder",
           "name": "Porsche 918 Spyder",
           "url": "https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder",
-          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela importação oficial da Stuttgart Porsche, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco.",
+          "description": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela Stuttgart Sportcar, a importadora oficial da Porsche no Brasil à época, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco.",
           "brand": {
             "@type": "Brand",
             "name": "Porsche"
@@ -1657,7 +1659,7 @@
             {
               "@type": "PropertyValue",
               "name": "Destaques",
-              "value": "São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela importação oficial da Stuttgart Porsche, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco."
+              "value": "São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela Stuttgart Sportcar, a importadora oficial da Porsche no Brasil à época, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco."
             }
           ]
         },
@@ -1785,7 +1787,7 @@
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
         <a href="/revista/" class="text-zinc-300 hover:text-white">Revista</a>
         <a href="/censo/" class="text-white">Censo</a>
-        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
       </nav>
@@ -1846,19 +1848,19 @@
           <tr id="audi-r8-4-2-v8-special-edition-type-42" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-special-edition-type-42" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Audi</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">R8 4.2 V8 Special Edition (Type 42)</span> <a href="#audi-r8-4-2-v8-special-edition-type-42" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Audi R8 4.2 V8 Special Edition (Type 42)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">15</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 15 unidades do Audi R8 4.2 V8 Special Edition (Type 42) no Brasil.</p><p class="mt-1">Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando &quot;Special Edition&quot;</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 15 unidades do Audi R8 4.2 V8 Special Edition (Type 42) no Brasil.</p><p class="mt-1">Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando &quot;Special Edition&quot;.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="audi-r8-gt-coupe-type-42" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-coupe-type-42" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Audi</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">R8 GT Coupé (Type 42)</span> <a href="#audi-r8-gt-coupe-type-42" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Audi R8 GT Coupé (Type 42)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">3</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 3 unidades do Audi R8 GT Coupé (Type 42) no Brasil.</p><p class="mt-1">2 Samoa Orange + 1 Suzuka Grey Matte</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 3 unidades do Audi R8 GT Coupé (Type 42) no Brasil.</p><p class="mt-1">2 Samoa Orange + 1 Suzuka Grey Matte.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="audi-r8-gt-spyder-type-42" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Audi</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">R8 GT Spyder (Type 42)</span> <a href="#audi-r8-gt-spyder-type-42" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Audi R8 GT Spyder (Type 42)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do Audi R8 GT Spyder (Type 42) no Brasil.</p><p class="mt-1">2 Glacier White Metallic + 1 Suzuka Grey Metallic</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do Audi R8 GT Spyder (Type 42) no Brasil.</p><p class="mt-1">Cores registradas: Glacier White Metallic e Suzuka Grey Metallic.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="audi-r8-spyder-v10-type-42-facelift" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-42-facelift" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
@@ -1870,7 +1872,7 @@
           <tr id="audi-r8-spyder-v10-type-4s" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Audi</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">R8 Spyder V10 (Type 4S)</span> <a href="#audi-r8-spyder-v10-type-4s" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Audi R8 Spyder V10 (Type 4S)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">1</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil.</p><p class="mt-1">O único R8 da &quot;última&quot; geração na configuração Spyder do Brasil</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil.</p><p class="mt-1">O único R8 da &quot;última&quot; geração na configuração Spyder do Brasil.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="audi-r8-v10-coupe-type-42" data-marca="Audi" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-42" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
@@ -2012,7 +2014,7 @@
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="bmw-m5-competition-edition-35-jahre-f90" data-marca="BMW" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#bmw-m5-competition-edition-35-jahre-f90" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
-            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">BMW</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">M5 Competition Edition 35 Jahre (F90)</span> <a href="#bmw-m5-competition-edition-35-jahre-f90" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para BMW M5 Competition Edition 35 Jahre (F90)">#</a></th>
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">BMW</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">M5 Competition Edition 35 Jahre (F90)</a></span> <a href="#bmw-m5-competition-edition-35-jahre-f90" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para BMW M5 Competition Edition 35 Jahre (F90)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
             <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do BMW M5 Competition Edition 35 Jahre (F90) no Brasil.</p><p class="mt-1">De 350 fabricados no mundo.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
@@ -2036,13 +2038,13 @@
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="chevrolet-corvette-zr1-x-c8" data-marca="Chevrolet" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
-            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Chevrolet</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">Corvette ZR1-X (C8)</span> <a href="#chevrolet-corvette-zr1-x-c8" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Chevrolet Corvette ZR1-X (C8)">#</a></th>
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Chevrolet</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/chevrolet-corvette-zr1x-joinville/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Corvette ZR1-X (C8)</a></span> <a href="#chevrolet-corvette-zr1-x-c8" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Chevrolet Corvette ZR1-X (C8)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">2</td>
             <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 2 unidades do Chevrolet Corvette ZR1-X (C8) no Brasil.</p><p class="mt-1">Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="dodge-challenger-srt-demon-170" data-marca="Dodge" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
-            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Dodge</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">Challenger SRT Demon 170</span> <a href="#dodge-challenger-srt-demon-170" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Dodge Challenger SRT Demon 170">#</a></th>
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Dodge</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/dodge-challenger-srt-demon-170-rio-de-janeiro/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Challenger SRT Demon 170</a></span> <a href="#dodge-challenger-srt-demon-170" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Dodge Challenger SRT Demon 170">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">18</td>
             <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 18 unidades do Dodge Challenger SRT Demon 170 no Brasil.</p><p class="mt-1">Importação independente, sem venda oficial no país. Número em 03/11/2026, ainda pode subir. Produção global de no máximo 3.300 unidades.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
@@ -2144,7 +2146,7 @@
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="mercedes-benz-amg-s-65-coupe" data-marca="Mercedes-Benz" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-s-65-coupe" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
-            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-Benz</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">AMG S 65 Coupé</span> <a href="#mercedes-benz-amg-s-65-coupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-Benz AMG S 65 Coupé">#</a></th>
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Mercedes-Benz</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/mercedes-amg-s65-coupe-facelift-sao-paulo/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">AMG S 65 Coupé</a></span> <a href="#mercedes-benz-amg-s-65-coupe" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Mercedes-Benz AMG S 65 Coupé">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">3</td>
             <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 3 unidades do Mercedes-Benz AMG S 65 Coupé no Brasil.</p><p class="mt-1">Duas facelift e uma pré-facelift, a única do país nessa versão.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
@@ -2188,7 +2190,7 @@
           <tr id="pagani-utopia" data-marca="Pagani" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#pagani-utopia" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Pagani</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/censo-hipercarros-brasil-2026/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Utopia</a></span> <a href="#pagani-utopia" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Pagani Utopia">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">1</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Pagani Utopia no Brasil.</p><p class="mt-1">Nunca emplacado, supostamente em admissão temporária</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existe 1 unidade do Pagani Utopia no Brasil.</p><p class="mt-1">Nunca emplacado, supostamente em admissão temporária.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="porsche-911-gt2-rs-997" data-marca="Porsche" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#porsche-911-gt2-rs-997" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
@@ -2210,7 +2212,7 @@
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="porsche-911-gt3-rs-992-1" data-marca="Porsche" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-992-1" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
-            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink">911 GT3 RS (992.1)</span> <a href="#porsche-911-gt3-rs-992-1" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 GT3 RS (992.1)">#</a></th>
+            <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/porsche-911-gt3-rs-992-1-brasil-censo/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">911 GT3 RS (992.1)</a></span> <a href="#porsche-911-gt3-rs-992-1" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 911 GT3 RS (992.1)">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">94</td>
             <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 94 unidades do Porsche 911 GT3 RS (992.1) no Brasil.</p><p class="mt-1">Mais numeroso que todas as gerações anteriores de GT3 RS somadas, que dão 60.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
@@ -2260,7 +2262,7 @@
           <tr id="porsche-918-spyder" data-marca="Porsche" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#porsche-918-spyder" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
             <th scope="row" class="py-3 pr-4 text-left font-normal"><span class="block font-display text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Porsche</span> <span class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink"><a href="/revista/porsche-918-spyder-brasil/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">918 Spyder</a></span> <a href="#porsche-918-spyder" class="text-zinc-400 hover:text-rosso" aria-label="Link direto para Porsche 918 Spyder">#</a></th>
             <td class="py-3 pr-4 font-display text-3xl font-black leading-none text-rosso">13</td>
-            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil.</p><p class="mt-1">São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela importação oficial da Stuttgart Porsche, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco.</p></td>
+            <td class="py-3 pr-4 text-[15px] leading-relaxed text-zinc-700"><p class="resposta-censo font-semibold text-ink">Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 7 de novembro de 2026, existem 13 unidades do Porsche 918 Spyder no Brasil.</p><p class="mt-1">São 13 no Brasil, em duas ondas. As 3 primeiras, chassis #151, #155 e #499, chegaram em 2015 pela Stuttgart Sportcar, a importadora oficial da Porsche no Brasil à época, para São Paulo e Porto Alegre: a #151 em GT Silver Metallic, a #155 em White com Weissach Package e a #499 em Racing Yellow. As 10 seguintes vieram nos anos posteriores por importação independente, mais que o triplo da leva oficial, começando pela #456 em White e chegando à mais recente, a #513 em Rhodium Silver Metallic com Weissach Package. Cores e chassis das 13: Meteor Grey Metallic (#523 e #388), Liquid Metal Silver (#344 e #431), GT Silver Metallic (#151 e #133), Rhodium Silver Metallic (#513), White (#155 e #456), Black (#233), Racing Yellow (#499), Riviera Blue PTS (#862) e Signal Green PTS (#895). Três têm o Weissach Package de fábrica: a #155, a #513 e a Riviera Blue PTS #862. A #155 está hoje envelopada em preto fosco.</p></td>
             <td class="py-3 font-mono text-[12px] leading-snug text-zinc-500">Apuração Exotics Brazil (@exoticsbrazil)</td>
           </tr>
           <tr id="porsche-935-2019-base-991-2" data-marca="Porsche" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br" data-cite="https://www.exoticsbrazil.com.br/censo/#porsche-935-2019-base-991-2" class="linha-censo scroll-mt-28 border-b border-zinc-300 align-top">
@@ -2350,7 +2352,7 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
         <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
         <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>

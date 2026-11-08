@@ -63,6 +63,8 @@
     .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
@@ -453,7 +455,7 @@
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
         <a href="/revista/" class="text-white">Revista</a>
         <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
-        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
       </nav>
@@ -553,6 +555,32 @@
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Pagani Huayra R · Mogi Guaçu, SP · 📸 <a href="https://www.instagram.com/bataginifotografias/" target="_blank" rel="noopener">@bataginifotografias</a></figcaption>
 </figure><p>O <a href="/censo/#pagani-huayra-r" class="link-entidade">Huayra R</a> divide o nome e boa parte da silhueta com o Huayra de rua, e quase nada além disso. Ele foi feito para andar só em autódromo, sem homologação de rua e sem as concessões que um carro de uso comum exige, e por isso troca o V12 biturbo da versão de rua por um V12 6.0 aspirado desenvolvido sob medida com a HWA, que gira até 9.000 rpm e entrega 850cv. A série tem 30 unidades no mundo, e uma delas foi flagrada em agosto de 2026 numa pista em Mogi Guaçu, no interior paulista.</p><p>O monocoque de carbono e titânio segura tudo isso pesando 1.050 kg a seco, e o câmbio é um sequencial de seis marchas sem sincronizador, o mesmo tipo de caixa usado nos carros de corrida.</p><h2>O que o censo de 2026 mostra</h2><p>Nenhum desses números é definitivo, porque o país continua recebendo hipercarro por importação independente.</p><p>A cada chegada o censo do Exotics Brazil é atualizado no feed, e quem flagrar um desses carros na rua pode mandar a foto pelo Direct do <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener">@exoticsbrazil</a>, com a cidade e a arroba de quem fotografou.</p>
       </div>
+      <aside class="censo-da-materia mt-12 border-2 border-ink bg-white" aria-label="No Censo EB">
+        <p class="flex items-center gap-2 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span class="inline-block h-2.5 w-2.5 bg-rosso" aria-hidden="true"></span>No Censo EB</p>
+        <ul class="px-4 pb-2">
+          <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-zinc-300 py-3">
+            <a href="/censo/#bugatti-chiron-sport" class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Bugatti Chiron Sport</a>
+            <span class="font-display text-2xl font-black leading-none text-rosso">1 unidade</span>
+          </li>
+          <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-zinc-300 py-3">
+            <a href="/censo/#ferrari-f40" class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Ferrari F40</a>
+            <span class="font-display text-2xl font-black leading-none text-rosso">2 unidades</span>
+          </li>
+          <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-zinc-300 py-3">
+            <a href="/censo/#ferrari-laferrari" class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Ferrari LaFerrari</a>
+            <span class="font-display text-2xl font-black leading-none text-rosso">4 unidades</span>
+          </li>
+          <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-zinc-300 py-3">
+            <a href="/censo/#pagani-huayra-r" class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Pagani Huayra R</a>
+            <span class="font-display text-2xl font-black leading-none text-rosso">1 unidade</span>
+          </li>
+          <li class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-zinc-300 py-3">
+            <a href="/censo/#pagani-utopia" class="font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink underline decoration-rosso decoration-2 underline-offset-4 hover:text-rosso">Pagani Utopia</a>
+            <span class="font-display text-2xl font-black leading-none text-rosso">1 unidade</span>
+          </li>
+        </ul>
+        <p class="border-t border-zinc-300 px-4 py-3 text-sm text-zinc-600">Unidades no Brasil, atualizado em 7 de novembro de 2026. <a href="/censo/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-rosso">Ver o Censo EB completo</a>.</p>
+      </aside>
 
 
       <aside class="mt-14 border-l-[6px] border-rosso bg-paper-2 p-5 text-[15px] leading-relaxed text-zinc-700">
@@ -655,8 +683,8 @@
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/aston-martin-dbs-770-ultimate-coupe-curitiba/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -664,7 +692,7 @@
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 2 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Aston Martin DBS 770 Ultimate Coupé em Q Iridescent Emerald roda em Curitiba</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
@@ -672,7 +700,7 @@
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 5 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
         </div>
@@ -714,7 +742,7 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
         <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
         <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>

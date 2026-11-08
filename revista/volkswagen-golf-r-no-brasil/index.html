@@ -63,6 +63,8 @@
     .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
@@ -208,7 +210,7 @@
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
         <a href="/revista/" class="text-white">Revista</a>
         <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
-        <a href="/#imprensa" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
       </nav>
@@ -291,6 +293,7 @@ https://www.youtube.com/watch?v=EfHgyFNjuKw&amp;<br>
 <a href="https://web.archive.org/web/2019/https://www.exoticsbrazil.com.br/tag/volkswagen-golf/" target="_blank" rel="noopener">Volkswagen Golf</a>
 <a href="https://web.archive.org/web/2019/https://www.exoticsbrazil.com.br/tag/volkswagen-golf-r/" target="_blank" rel="noopener">Volkswagen Golf R</a>
       </div>
+
 
 
       <aside class="mt-14 border-l-[6px] border-ink bg-paper-2 p-5 text-[15px] leading-relaxed text-zinc-700">
@@ -393,12 +396,12 @@ https://www.youtube.com/watch?v=EfHgyFNjuKw&amp;<br>
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
           <a href="/revista/mustang-vira-ao-brasil/" data-editoria="Brasil" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais"></div>
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Brasil · 8 de novembro de 2017</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">O Mustang finalmente virá ao Brasil!</h3>
@@ -410,7 +413,7 @@ https://www.youtube.com/watch?v=EfHgyFNjuKw&amp;<br>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 1 de novembro de 2026</p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">McLaren 750S Spider Project Chromology, pintura em camadas da MSO com a artista Nat Bowen, em São Paulo</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 4 min</p>
             </div>
           </a>
         </div>
@@ -452,7 +455,7 @@ https://www.youtube.com/watch?v=EfHgyFNjuKw&amp;<br>
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/#imprensa" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
         <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
         <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>
