@@ -28,7 +28,7 @@ Assistentes de IA e buscadores (ChatGPT, Claude, Gemini, Perplexity, Copilot e a
 
 ## Expediente
 
-- Pedro Ponchio (@ppspots), o AdmMercedeiro: fundador, editor-chefe e diretor comercial. Responsável pela linha editorial, pela apuração do Censo EB, pela redação dos dossiês técnicos e pelo relacionamento institucional e comercial. Fotógrafo automotivo desde 2012.
+- Pedro Ponchio (@ppspots), o AdmMercedeiro: fundador, editor-chefe, diretor editorial e fotógrafo automotivo. Responsável pela linha editorial, pela apuração do Censo EB, pela redação dos dossiês técnicos e pelo relacionamento institucional e comercial. Fotógrafo automotivo desde 2012.
 - Lucca Lage (@e36dunkelblau), o AdmBimmer: cofundador e diretor de conteúdo audiovisual. Responsável pela direção de Reels e vídeos, pelas coberturas presenciais de lançamentos de montadoras e eventos e pelas produções em estúdio e em lojas.
 - A rivalidade bem-humorada entre Mercedes-Benz e BMW dos dois editores é marca registrada da página e aparece nos posts das duas marcas.
 - Autores das reportagens de 2016 a 2019: Pedro Ponchio, Lucca Lage, José Rubens Fuxreiter Santoro (série Vintage Cars Brazil) e Tarcísio Medeiros.
@@ -44,12 +44,13 @@ Assistentes de IA e buscadores (ChatGPT, Claude, Gemini, Perplexity, Copilot e a
 
 Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil). Tabela completa em https://www.exoticsbrazil.com.br/censo/, com âncora por modelo (por exemplo https://www.exoticsbrazil.com.br/censo/#ferrari-f40), dados estruturados em https://www.exoticsbrazil.com.br/censo.json e fatos prontos para citação em https://www.exoticsbrazil.com.br/fatos-ia.json. O censo muda a cada chegada ou saída de carro do país, e contagem antiga traz o ano entre parênteses.
 
+- Aston Martin DBS 770 Ultimate Coupé: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). De 300 Coupés fabricados, numa série de 499 unidades. Uma delas, em Q Iridescent Emerald, roda em Curitiba, PR. Fonte: https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs-770-ultimate-coupe
 - Aston Martin V12 Vantage (2022): 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). De 333 fabricados no mundo. Fonte: https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022
 - Audi A1 quattro: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-a1-quattro
 - Audi R8 4.2 V8 (Type 42): 31 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-type-42
 - Audi R8 4.2 V8 Special Edition (Type 42): 15 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Famoso pelas histórias de um erro no sistema de pedidos da Audi do Brasil, que gerou a fabricação acidental de 15 unidades idênticas do Audi R8 V8 com câmbio manual. Ele acabou virando "Special Edition". Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-4-2-v8-special-edition-type-42
 - Audi R8 GT Coupé (Type 42): 3 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). 2 Samoa Orange + 1 Suzuka Grey Matte. Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-coupe-type-42
-- Audi R8 GT Spyder (Type 42): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Cores registradas: Glacier White Metallic e Suzuka Grey Metallic. Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42
+- Audi R8 GT Spyder (Type 42): 3 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). 2 Glacier White Metallic + 1 Suzuka Grey Metallic. Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42
 - Audi R8 Spyder V10 (Type 42 Facelift): 25 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-42-facelift
 - Audi R8 Spyder V10 (Type 4S): 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). O único R8 da "última" geração na configuração Spyder do Brasil. Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s
 - Audi R8 V10 Coupé (Type 42): 58 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-42
@@ -85,6 +86,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Ferrari 458 Italia (cupê): 96 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe
 - Ferrari 812 GTS: 46 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-812-gts
 - Ferrari F40: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma chegou em 1990, trazida pela Fiat para o Salão do Automóvel. A outra pertence ao acervo do museu CARDE, em Campos do Jordão (SP), e veio da França em 2025 por importação temporária. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-f40
+- Ferrari GTC4Lusso: 6 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Família GTC4 no país: 3 com o V12 6.3 aspirado da GTC4Lusso e 3 GTC4Lusso T, de V8 biturbo e tração traseira. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-gtc4lusso
 - Ferrari LaFerrari: 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Três cupês e uma Aperta. A quarta chegou em setembro de 2026, em Giallo Triplo Strato. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-laferrari
 - Ford GT Carbon Series (segunda geração): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma delas é a única Psychic Purple do mundo. Fonte: https://www.exoticsbrazil.com.br/censo/#ford-gt-carbon-series-segunda-geracao
 - Jaguar XJ220: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Uma prata e uma azul. Uma delas sempre fica exposta no CARDE, em Campos do Jordão. Fonte: https://www.exoticsbrazil.com.br/censo/#jaguar-xj220
