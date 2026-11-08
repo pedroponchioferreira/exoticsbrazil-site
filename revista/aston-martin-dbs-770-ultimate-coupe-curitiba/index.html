@@ -60,6 +60,12 @@
     .materia blockquote { border-left: 6px solid #DC2626; padding-left: 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: #09090B; }
     .materia strong { color: #09090B; }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
+    .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
+    .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
@@ -259,6 +265,7 @@
   </script>
 </head>
 <body class="bg-paper font-sans text-ink">
+  <div class="leitura-eb" aria-hidden="true"><span></span></div>
   <header class="sticky top-0 z-50 bg-carbon text-white [border-bottom:4px_solid_#DC2626]">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto object-contain sm:h-14"></a>
@@ -447,14 +454,53 @@
     <section class="border-t-4 border-ink bg-ink" aria-label="Mais da Revista">
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div class="flex flex-wrap items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight text-white">Mais da Revista</h2><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 hover:text-white">Todas as reportagens →</a></div>
-        <div class="mt-8 grid gap-px bg-ink sm:grid-cols-3">
-          <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" class="block bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white"><p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2026</p><p class="mt-2 font-display text-2xl font-black uppercase leading-[0.95] tracking-tight text-ink">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</p></a>
-          <a href="/revista/lotus-emeya-900-sao-paulo/" class="block bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white"><p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2026</p><p class="mt-2 font-display text-2xl font-black uppercase leading-[0.95] tracking-tight text-ink">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</p></a>
-          <a href="/revista/pts-paint-to-sample/" class="block bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white"><p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica · 2018</p><p class="mt-2 font-display text-2xl font-black uppercase leading-[0.95] tracking-tight text-ink">O que é? Porsche PTS: Paint To Sample</p></a>
+        <div class="mt-8 grid border-l-2 border-t-2 border-ink bg-ink sm:grid-cols-3">
+          <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/mclaren-artura-coupe-lantana-purple-boa-vista/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" loading="lazy" decoding="async" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/lotus-emeya-900-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível, com rodas pretas"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 6 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      var barra = document.querySelector('.leitura-eb > span'), texto = document.querySelector('.materia');
+      if (!barra || !texto) return;
+      var pedido = false;
+      function medir() {
+        pedido = false;
+        var caixa = texto.getBoundingClientRect(), alto = window.innerHeight || document.documentElement.clientHeight;
+        var p = (alto - caixa.top) / Math.max(1, caixa.height);
+        barra.style.transform = 'scaleX(' + Math.max(0, Math.min(1, p)) + ')';
+      }
+      function pedir() { if (!pedido) { pedido = true; requestAnimationFrame(medir); } }
+      window.addEventListener('scroll', pedir, { passive: true });
+      window.addEventListener('resize', pedir);
+      window.addEventListener('load', pedir);
+      medir();
+    })();
+  </script>
   <script>
     (function () {
       var m = ['jan.','fev.','mar.','abr.','maio','jun.','jul.','ago.','set.','out.','nov.','dez.'], d = new Date();

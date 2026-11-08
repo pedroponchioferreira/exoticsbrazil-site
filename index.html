@@ -43,7 +43,9 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/identidade/icone-192.png?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/identidade/apple-touch-icon.png?v=2">
 
-  <link rel="preload" as="image" href="/assets/img/carros/capa-ferrari-458-italia.jpg" imagesrcset="/assets/img/carros/capa-ferrari-458-italia-1200.jpg 1200w, /assets/img/carros/capa-ferrari-458-italia.jpg 2400w" imagesizes="100vw">
+  <!-- PRELOAD:INICIO -->
+  <link rel="preload" as="image" href="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" fetchpriority="high">
+  <!-- PRELOAD:FIM -->
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,8 +97,20 @@
     .m-stripes { background: linear-gradient(90deg, #4FA3DB 0 33.33%, #1C3F94 33.33% 66.66%, #E4002B 66.66% 100%); }
     .amg-bar { background: linear-gradient(90deg, #6B7280, #E5E7EB 45%, #9CA3AF 70%, #4B5563); }
 
-    /* Fotos de carro: sempre no enquadramento original, nunca cortadas */
+    /* Fotos de carro: sempre no enquadramento original, nunca cortadas (fora a miniatura de vitrine, lei 2.1) */
     .foto-carro { display: block; width: 100%; height: auto; }
+    .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
+    .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
+    .carrossel-slide { grid-area: 1 / 1; min-width: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility 0s linear .6s; }
+    .carrossel-slide.is-ativo { opacity: 1; visibility: visible; z-index: 1; transition: opacity .6s ease; }
+    .carrossel-aba.is-ativo { border-top-color: #DC2626; }
+    .carrossel-aba.is-ativo .aba-numero { color: #DC2626; }
+    .carrossel-aba.is-ativo .aba-titulo { color: #fff; }
+    @media (prefers-reduced-motion: reduce) { .carrossel-slide, .carrossel-slide.is-ativo { transition: none; } }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -323,7 +337,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "O que é o Exotics Brazil e qual o seu alcance no mercado automotivo latino-americano?",
+      "name": "O que é o Exotics Brazil e qual é o seu alcance no Brasil?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "O Exotics Brazil (@exoticsbrazil) é o veículo de mídia automotiva especializado nos carros exóticos que rodam no Brasil, e mantém o Censo EB, levantamento próprio da frota de supercarros no país. Nasceu no Instagram em 2013 e tem hoje cerca de 500 mil seguidores, todos conquistados sem anúncio pago. Nos 90 dias até outubro de 2026 somou 30,8 milhões de visualizações e 3,2 milhões de contas alcançadas. Os assuntos que pedem mais espaço viram reportagem na <a href=\"https://www.exoticsbrazil.com.br/revista/\">Revista Exotics Brazil</a>."
@@ -399,13 +413,13 @@
 
   <!-- ============ MASTHEAD COM A LOGO OFICIAL ============ -->
   <div id="masthead" class="bg-carbon">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-5 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
       <a href="#" aria-label="Exotics Brazil, voltar ao topo">
-        <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[84px] w-auto object-contain sm:h-[108px]">
+        <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[64px] w-auto object-contain sm:h-[96px]">
       </a>
-      <div class="hidden text-right md:block">
-        <p class="font-display text-2xl font-black uppercase leading-none tracking-tight">Os carros exóticos que rodam no Brasil</p>
-        <p class="mt-2 font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-400">Desde 16 de abril de 2013 · Brasília, DF</p>
+      <div class="text-right">
+        <h1 class="sr-only font-display text-2xl font-black uppercase leading-none tracking-tight md:not-sr-only">Os carros exóticos que rodam no Brasil</h1>
+        <p class="hidden font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-400 md:mt-2 md:block">Desde 16 de abril de 2013 · Brasília, DF</p>
       </div>
     </div>
   </div>
@@ -457,49 +471,158 @@
 
   <main id="conteudo">
 
-    <!-- ============ CAPA: a foto inteira, título sobre o céu ============ -->
-    <section class="bg-black" aria-labelledby="capa-titulo">
-      <figure class="relative mx-auto max-w-[1920px]">
-        <img src="/assets/img/carros/capa-ferrari-458-italia.jpg" srcset="/assets/img/carros/capa-ferrari-458-italia-1200.jpg 1200w, /assets/img/carros/capa-ferrari-458-italia.jpg 2400w" sizes="100vw" width="2400" height="1600" fetchpriority="high" alt="Ferrari 458 Italia vermelha estacionada na grama à beira de um lago em Brasília, com o sol se pondo atrás do carro" class="foto-carro">
-        <div class="pointer-events-none absolute inset-0 hidden bg-gradient-to-b from-black/75 via-black/10 via-35% to-transparent to-50% lg:block" aria-hidden="true"></div>
-        <div class="absolute inset-x-0 top-0 hidden lg:block">
-          <div class="mx-auto max-w-7xl px-8 pt-[2.4vw] 2xl:pt-12">
-            <p class="inline-block bg-rosso px-3 py-1.5 font-display text-[1.15vw] font-bold uppercase tracking-[0.14em] text-white 2xl:text-[20px]">[ Desde 2013 · A maior da América Latina ]</p>
-            <p class="mt-[1.1vw] max-w-[60vw] font-display text-[5.4vw] font-black uppercase leading-[0.86] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.6)] 2xl:text-[96px]" aria-hidden="true">Os carros exóticos que rodam no Brasil</p>
-            <p class="mt-[0.8vw] font-serif text-[2.1vw] italic text-zinc-100 [text-shadow:0_2px_18px_rgba(0,0,0,0.7)] 2xl:text-[36px]" aria-hidden="true">contados por quem entende deles.</p>
+    <!-- ============ REVISTA EB: o site abre nas manchetes ============ -->
+    <section id="revista" class="bg-carbon pb-10 pt-6 text-white sm:pb-14 sm:pt-8" aria-labelledby="revista-titulo">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-4 flex items-center justify-between gap-4 sm:mb-5">
+          <div class="flex min-w-0 items-center gap-x-4">
+            <span class="hidden bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white sm:inline-block">Revista EB</span>
+            <h2 id="revista-titulo" class="font-display text-2xl font-black uppercase leading-none tracking-tight sm:text-4xl">Revista <span class="text-rosso sm:text-white">Exotics Brazil</span></h2>
           </div>
+          <a href="revista/" class="inline-flex shrink-0 items-center gap-2 font-display text-sm font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white sm:text-base">Todas <span class="hidden sm:inline">as reportagens</span> <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
         </div>
-        <figcaption class="absolute bottom-3 right-3 hidden border-l-2 border-rosso bg-black/55 px-3 py-1 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-200 sm:block lg:bottom-5 lg:right-8">Ferrari 458 Italia · Brasília, DF · Foto: Pedro Ponchio (@ppspots)</figcaption>
-      </figure>
-      <p class="border-b border-zinc-800 px-4 py-2 font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:hidden">Ferrari 458 Italia · Brasília, DF · Foto: Pedro Ponchio (@ppspots)</p>
-
-      <div class="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
-        <div class="lg:hidden">
-          <p class="inline-block bg-rosso px-3 py-1.5 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">[ Desde 2013 · A maior da América Latina ]</p>
-        </div>
-        <h1 id="capa-titulo" class="mt-5 font-display text-[52px] font-black uppercase leading-[0.86] tracking-tight text-white sm:text-[76px] lg:sr-only">Os carros exóticos que rodam no Brasil</h1>
-        <p class="mt-3 font-serif text-2xl italic text-zinc-200 sm:text-3xl lg:hidden">contados por quem entende deles.</p>
-
-        <div class="mt-8 grid gap-8 lg:mt-0 lg:grid-cols-12 lg:items-end">
-          <p class="max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg lg:col-span-7">Flagras, reportagens e dossiês com ficha técnica completa, censo de unidades no país e o contexto que só faz sentido aqui. O Exotics Brazil transforma cada carro exótico flagrado no Brasil em informação que vale a pena ler.</p>
-          <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
-            <a href="#comercial" class="inline-flex items-center justify-center gap-3 bg-rosso px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink">
-              Anunciar com a gente <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i>
-            </a>
-            <a href="revista/" class="inline-flex items-center justify-center gap-3 border-2 border-white px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-ink">Ler a Revista</a>
+          <!-- CARROSSEL:INICIO -->
+          <div class="carrossel-eb" data-carrossel data-intervalo="4000" role="region" aria-roledescription="carrossel" aria-label="Manchetes da Revista Exotics Brazil">
+            <div class="carrossel-trilho grid md:h-[440px] lg:h-[min(72vh,600px)]">
+            <article class="carrossel-slide is-ativo" data-indice="0" aria-roledescription="slide" aria-label="1 de 5">
+              <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" class="group grid h-full bg-carbon-2 md:grid-cols-12">
+                <div class="miniatura-eb aspect-square md:col-span-5 md:aspect-auto md:h-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" fetchpriority="high" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
+                <div class="flex min-w-0 flex-col justify-start p-5 sm:p-8 md:justify-end lg:p-10 md:col-span-7">
+                  <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Manchete 01 de 05</span></p>
+                  <h3 class="mt-4 font-display text-[28px] font-black uppercase leading-[0.92] tracking-tight text-white [overflow-wrap:anywhere] group-hover:text-rosso sm:text-4xl lg:text-5xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
+                  <p class="mt-4 hidden font-serif text-lg leading-snug text-zinc-300 [-webkit-box-orient:vertical] [-webkit-line-clamp:3] [display:-webkit-box] overflow-hidden sm:block lg:text-xl">Em French Racing Blue sobre Blue Carbon, a única unidade do país foi vista à espera da lavagem enquanto a cidade acompanhava o GP de São Paulo.</p>
+                  <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:mt-5">Pedro Ponchio · 7 de novembro de 2026 · 1 min</p>
+                  <span class="mt-6 hidden w-fit items-center gap-3 bg-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide text-ink transition-colors group-hover:bg-rosso group-hover:text-white sm:inline-flex">Ler a reportagem <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+            <article class="carrossel-slide" data-indice="1" aria-roledescription="slide" aria-label="2 de 5" aria-hidden="true" inert>
+              <a href="/revista/lotus-emeya-900-sao-paulo/" class="group grid h-full bg-carbon-2 md:grid-cols-12">
+                <div class="miniatura-eb aspect-square md:col-span-5 md:aspect-auto md:h-full"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível, com rodas pretas"></div>
+                <div class="flex min-w-0 flex-col justify-start p-5 sm:p-8 md:justify-end lg:p-10 md:col-span-7">
+                  <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Manchete 02 de 05</span></p>
+                  <h3 class="mt-4 font-display text-[28px] font-black uppercase leading-[0.92] tracking-tight text-white [overflow-wrap:anywhere] group-hover:text-rosso sm:text-4xl lg:text-5xl">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
+                  <p class="mt-4 hidden font-serif text-lg leading-snug text-zinc-300 [-webkit-box-orient:vertical] [-webkit-line-clamp:3] [display:-webkit-box] overflow-hidden sm:block lg:text-xl">O sedã de quatro portas da Lotus, vendido oficialmente no Brasil só na versão 900, mostra por dentro a personalidade de um elétrico com assinatura de Lotus, com faixa de luz amarela no painel, volante quadrado arredondado e bancos traseiros individuais.</p>
+                  <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:mt-5">Pedro Ponchio · 6 de novembro de 2026 · 1 min</p>
+                  <span class="mt-6 hidden w-fit items-center gap-3 bg-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide text-ink transition-colors group-hover:bg-rosso group-hover:text-white sm:inline-flex">Ler a reportagem <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+            <article class="carrossel-slide" data-indice="2" aria-roledescription="slide" aria-label="3 de 5" aria-hidden="true" inert>
+              <a href="/revista/porsche-911-gt3-rs-992-1-brasil-censo/" class="group grid h-full bg-carbon-2 md:grid-cols-12">
+                <div class="miniatura-eb aspect-square md:col-span-5 md:aspect-auto md:h-full"><img src="/assets/img/carros/porsche-911-gt3-rs-992-sao-paulo-exotics-brazil-7.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Porsche 911 GT3 RS (992.1) cinza escuro com capô, rodas e faixa lateral rosa, visto de frente e de lado à noite, com o chão molhado, em um posto de combustível com luz azul em São Paulo"></div>
+                <div class="flex min-w-0 flex-col justify-start p-5 sm:p-8 md:justify-end lg:p-10 md:col-span-7">
+                  <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Censo EB</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Manchete 03 de 05</span></p>
+                  <h3 class="mt-4 font-display text-[28px] font-black uppercase leading-[0.92] tracking-tight text-white [overflow-wrap:anywhere] group-hover:text-rosso sm:text-4xl lg:text-5xl">Porsche 911 GT3 RS (992.1) rosa em São Paulo, ao lado de um GT4 RS, e o censo do modelo no Brasil</h3>
+                  <p class="mt-4 hidden font-serif text-lg leading-snug text-zinc-300 [-webkit-box-orient:vertical] [-webkit-line-clamp:3] [display:-webkit-box] overflow-hidden sm:block lg:text-xl">Uma unidade com adesivo rosa combinando com o de um 718 Cayman GT4 RS, e o total de GT3 RS no país por geração.</p>
+                  <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:mt-5">Pedro Ponchio · 5 de novembro de 2026 · 1 min</p>
+                  <span class="mt-6 hidden w-fit items-center gap-3 bg-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide text-ink transition-colors group-hover:bg-rosso group-hover:text-white sm:inline-flex">Ler a reportagem <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+            <article class="carrossel-slide" data-indice="3" aria-roledescription="slide" aria-label="4 de 5" aria-hidden="true" inert>
+              <a href="/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" class="group grid h-full bg-carbon-2 md:grid-cols-12">
+                <div class="miniatura-eb aspect-square md:col-span-5 md:aspect-auto md:h-full"><img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo"></div>
+                <div class="flex min-w-0 flex-col justify-start p-5 sm:p-8 md:justify-end lg:p-10 md:col-span-7">
+                  <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Manchete 04 de 05</span></p>
+                  <h3 class="mt-4 font-display text-[28px] font-black uppercase leading-[0.92] tracking-tight text-white [overflow-wrap:anywhere] group-hover:text-rosso sm:text-4xl lg:text-5xl">BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</h3>
+                  <p class="mt-4 hidden font-serif text-lg leading-snug text-zinc-300 [-webkit-box-orient:vertical] [-webkit-line-clamp:3] [display:-webkit-box] overflow-hidden sm:block lg:text-xl">Série limitada a 350 unidades no mundo para os 35 anos do M5, com o mesmo V8 de 625 cv do Competition e a configuração como diferencial.</p>
+                  <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:mt-5">Pedro Ponchio · 5 de novembro de 2026 · 1 min</p>
+                  <span class="mt-6 hidden w-fit items-center gap-3 bg-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide text-ink transition-colors group-hover:bg-rosso group-hover:text-white sm:inline-flex">Ler a reportagem <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+            <article class="carrossel-slide" data-indice="4" aria-roledescription="slide" aria-label="5 de 5" aria-hidden="true" inert>
+              <a href="/revista/mercedes-amg-g63-olive-metallic-sao-paulo/" class="group grid h-full bg-carbon-2 md:grid-cols-12">
+                <div class="miniatura-eb aspect-square md:col-span-5 md:aspect-auto md:h-full"><img src="/assets/img/carros/mercedes-amg-g63-olive-metallic-sao-paulo-exotics-brazil.jpg" width="1335" height="1999" loading="lazy" decoding="async" alt="Mercedes-AMG G 63 verde-oliva metálico em movimento numa avenida de São Paulo, visto em três quartos pela frente, com rodas polidas de cinco raios, grade preta e uma torre de transmissão de energia ao fundo"></div>
+                <div class="flex min-w-0 flex-col justify-start p-5 sm:p-8 md:justify-end lg:p-10 md:col-span-7">
+                  <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Censo EB</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Manchete 05 de 05</span></p>
+                  <h3 class="mt-4 font-display text-[28px] font-black uppercase leading-[0.92] tracking-tight text-white [overflow-wrap:anywhere] group-hover:text-rosso sm:text-4xl lg:text-5xl">Mercedes-AMG G 63 em Olive Metallic, o verde do G MANUFAKTUR, é flagrada em São Paulo</h3>
+                  <p class="mt-4 hidden font-serif text-lg leading-snug text-zinc-300 [-webkit-box-orient:vertical] [-webkit-line-clamp:3] [display:-webkit-box] overflow-hidden sm:block lg:text-xl">Classe G aparece com a tinta metálica verde-oliva e rodas monoblock polidas de cinco raios, em fotos de avenida e de rua.</p>
+                  <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:mt-5">Pedro Ponchio · 5 de novembro de 2026 · 1 min</p>
+                  <span class="mt-6 hidden w-fit items-center gap-3 bg-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide text-ink transition-colors group-hover:bg-rosso group-hover:text-white sm:inline-flex">Ler a reportagem <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+            </div>
+            <div class="h-1 bg-zinc-800" aria-hidden="true"><div class="carrossel-progresso h-full w-full bg-rosso" style="transform: scaleX(0); transform-origin: 0 50%;"></div></div>
+            <div class="flex items-center justify-between gap-4 py-3">
+              <p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-400"><span data-contador class="text-white">01</span> / 05 · Manchetes da Revista</p>
+              <div class="flex items-center gap-2">
+                <button type="button" data-anterior class="grid h-9 w-9 place-items-center border-2 border-zinc-700 font-display text-2xl leading-none text-white transition-colors hover:border-white" aria-label="Manchete anterior">‹</button>
+                <button type="button" data-pausa aria-pressed="false" class="h-9 border-2 border-zinc-700 px-3 font-display text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-white">Pausar</button>
+                <button type="button" data-proxima class="grid h-9 w-9 place-items-center border-2 border-zinc-700 font-display text-2xl leading-none text-white transition-colors hover:border-white" aria-label="Próxima manchete">›</button>
+              </div>
+            </div>
+            <ol class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-5 md:overflow-visible md:px-0" aria-label="Escolha a manchete">
+              <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
+                <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" data-ir="0" class="carrossel-aba group flex h-full flex-col border-t-4 border-zinc-800 pt-3 transition-colors hover:border-zinc-500 is-ativo" aria-current="true">
+                  <span class="flex items-center gap-3">
+                    <div class="miniatura-eb aspect-square w-14 shrink-0 sm:w-16"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
+                    <span class="min-w-0">
+                      <span class="aba-numero block font-display text-3xl font-black leading-none text-zinc-600">01</span>
+                      <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.14em] text-rosso">Flagras</span>
+                    </span>
+                  </span>
+                  <span class="aba-titulo mt-2 font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-zinc-400 line-clamp-3 group-hover:text-white">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</span>
+                </a>
+              </li>
+              <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
+                <a href="/revista/lotus-emeya-900-sao-paulo/" data-ir="1" class="carrossel-aba group flex h-full flex-col border-t-4 border-zinc-800 pt-3 transition-colors hover:border-zinc-500">
+                  <span class="flex items-center gap-3">
+                    <div class="miniatura-eb aspect-square w-14 shrink-0 sm:w-16"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível, com rodas pretas"></div>
+                    <span class="min-w-0">
+                      <span class="aba-numero block font-display text-3xl font-black leading-none text-zinc-600">02</span>
+                      <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.14em] text-rosso">Flagras</span>
+                    </span>
+                  </span>
+                  <span class="aba-titulo mt-2 font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-zinc-400 line-clamp-3 group-hover:text-white">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</span>
+                </a>
+              </li>
+              <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
+                <a href="/revista/porsche-911-gt3-rs-992-1-brasil-censo/" data-ir="2" class="carrossel-aba group flex h-full flex-col border-t-4 border-zinc-800 pt-3 transition-colors hover:border-zinc-500">
+                  <span class="flex items-center gap-3">
+                    <div class="miniatura-eb aspect-square w-14 shrink-0 sm:w-16"><img src="/assets/img/carros/porsche-911-gt3-rs-992-sao-paulo-exotics-brazil-7.jpg" width="1600" height="2000" loading="lazy" decoding="async" alt="Porsche 911 GT3 RS (992.1) cinza escuro com capô, rodas e faixa lateral rosa, visto de frente e de lado à noite, com o chão molhado, em um posto de combustível com luz azul em São Paulo"></div>
+                    <span class="min-w-0">
+                      <span class="aba-numero block font-display text-3xl font-black leading-none text-zinc-600">03</span>
+                      <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.14em] text-rosso">Censo EB</span>
+                    </span>
+                  </span>
+                  <span class="aba-titulo mt-2 font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-zinc-400 line-clamp-3 group-hover:text-white">Porsche 911 GT3 RS (992.1) rosa em São Paulo, ao lado de um GT4 RS, e o censo do modelo no Brasil</span>
+                </a>
+              </li>
+              <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
+                <a href="/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" data-ir="3" class="carrossel-aba group flex h-full flex-col border-t-4 border-zinc-800 pt-3 transition-colors hover:border-zinc-500">
+                  <span class="flex items-center gap-3">
+                    <div class="miniatura-eb aspect-square w-14 shrink-0 sm:w-16"><img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo"></div>
+                    <span class="min-w-0">
+                      <span class="aba-numero block font-display text-3xl font-black leading-none text-zinc-600">04</span>
+                      <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.14em] text-rosso">Flagras</span>
+                    </span>
+                  </span>
+                  <span class="aba-titulo mt-2 font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-zinc-400 line-clamp-3 group-hover:text-white">BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</span>
+                </a>
+              </li>
+              <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
+                <a href="/revista/mercedes-amg-g63-olive-metallic-sao-paulo/" data-ir="4" class="carrossel-aba group flex h-full flex-col border-t-4 border-zinc-800 pt-3 transition-colors hover:border-zinc-500">
+                  <span class="flex items-center gap-3">
+                    <div class="miniatura-eb aspect-square w-14 shrink-0 sm:w-16"><img src="/assets/img/carros/mercedes-amg-g63-olive-metallic-sao-paulo-exotics-brazil.jpg" width="1335" height="1999" loading="lazy" decoding="async" alt="Mercedes-AMG G 63 verde-oliva metálico em movimento numa avenida de São Paulo, visto em três quartos pela frente, com rodas polidas de cinco raios, grade preta e uma torre de transmissão de energia ao fundo"></div>
+                    <span class="min-w-0">
+                      <span class="aba-numero block font-display text-3xl font-black leading-none text-zinc-600">05</span>
+                      <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.14em] text-rosso">Censo EB</span>
+                    </span>
+                  </span>
+                  <span class="aba-titulo mt-2 font-display text-[15px] font-extrabold uppercase leading-tight tracking-tight text-zinc-400 line-clamp-3 group-hover:text-white">Mercedes-AMG G 63 em Olive Metallic, o verde do G MANUFAKTUR, é flagrada em São Paulo</span>
+                </a>
+              </li>
+            </ol>
           </div>
-        </div>
-        <!-- ULTIMA:INICIO -->
-        <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" class="group mt-10 flex flex-col gap-2 border-t-2 border-zinc-800 pt-5 sm:flex-row sm:items-baseline sm:gap-4">
-          <span class="w-fit shrink-0 bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Agora na Revista</span>
-          <span class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1 <span class="text-rosso" aria-hidden="true">→</span></span>
-        </a>
-        <!-- ULTIMA:FIM -->
+          <!-- CARROSSEL:FIM -->
       </div>
     </section>
 
-    <!-- ============ REVISTA EB ============ -->
-    <section id="revista" class="bg-paper py-12 text-ink sm:py-16" aria-labelledby="revista-titulo">
+    <!-- ============ ÚLTIMAS DA REVISTA, CENSO E ARQUIVO ============ -->
+    <section id="ultimas" class="bg-paper py-12 text-ink sm:py-16" aria-labelledby="ultimas-titulo">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-4 border-t-4 border-ink pt-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -507,102 +630,198 @@
               <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Revista EB</span>
               <span class="font-serif text-lg italic text-zinc-600">Reportagem desde 2016</span>
             </div>
-            <h2 id="revista-titulo" class="mt-4 font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-6xl lg:text-7xl">Últimas da Revista Exotics Brazil</h2>
+            <h2 id="ultimas-titulo" class="mt-4 font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-6xl lg:text-7xl">Últimas da Revista</h2>
           </div>
-          <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-ink px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-rosso">Todas as reportagens <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i></a>
         </div>
-        <div class="mt-8">
+        <div class="mt-6">
           <!-- REVISTA:INICIO -->
-          <div class="grid border-l-2 border-t-4 border-ink lg:grid-cols-3">
-            <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" class="group grid border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper md:grid-cols-2 lg:col-span-2 lg:row-span-2">
-              <div class="flex items-center justify-center bg-[#09090B]"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" sizes="(min-width: 1024px) 34vw, (min-width: 768px) 50vw, 100vw" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo" class="block h-auto max-h-[640px] w-full object-contain"></div>
-              <div class="flex flex-col p-6 sm:p-8">
-                <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Flagras</span><span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Manchete da Revista</span></p>
-                <h3 class="mt-4 font-display text-4xl font-black uppercase leading-[0.9] tracking-tight text-ink group-hover:text-rosso sm:text-5xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado de Fórmula 1</h3>
-                <p class="mt-4 font-serif text-xl leading-snug text-zinc-700">Em French Racing Blue sobre Blue Carbon, a única unidade do país foi vista à espera da lavagem enquanto a cidade acompanhava o GP de São Paulo.</p>
-                <div class="mt-6 flex-1 border-l-[6px] border-rosso bg-paper-2 p-4"><p class="font-display text-xs font-bold uppercase tracking-[0.14em] text-ink">Resumo da apuração EB</p><p class="mt-2 text-[15px] leading-relaxed text-zinc-700">Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Bugatti Chiron Sport de São Paulo é o único Bugatti moderno do Brasil. A unidade, em French Racing Blue sobre Blue Carbon, chegou em 2024 por importação independente e foi fotografada por @carsbysfs num posto da capital paulista no sábado do GP de São Paulo de Fórmula 1, à espera da lavagem.</p></div>
-                <p class="mt-5 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 7 de novembro de 2026 · 1 min</p>
-              </div>
-            </a>
-            <a href="/revista/lotus-emeya-900-sao-paulo/" class="group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-4 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:p-5">
-              <div class="w-28 shrink-0 sm:w-36"><div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" sizes="144px" alt="Lotus Emeya em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível, com rodas pretas" class="absolute inset-0 h-full w-full object-contain"></div></div>
-              <div class="min-w-0">
-                <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 6 de novembro de 2026</p>
-                <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
-                <p class="mt-2 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 min</p>
-              </div>
-            </a>
-            <a href="/revista/porsche-911-gt3-rs-992-1-brasil-censo/" class="group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-4 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:p-5">
-              <div class="w-28 shrink-0 sm:w-36"><div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/porsche-911-gt3-rs-992-sao-paulo-exotics-brazil-7.jpg" width="1600" height="2000" loading="lazy" sizes="144px" alt="Porsche 911 GT3 RS (992.1) cinza escuro com capô, rodas e faixa lateral rosa, visto de frente e de lado à noite, com o chão molhado, em um posto de combustível com luz azul em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div></div>
-              <div class="min-w-0">
-                <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
-                <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Porsche 911 GT3 RS (992.1) rosa em São Paulo, ao lado de um GT4 RS, e o censo do modelo no Brasil</h3>
-                <p class="mt-2 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 min</p>
-              </div>
-            </a>
+          <div class="flex flex-col gap-3 border-b-2 border-ink pb-5 lg:flex-row lg:items-center lg:justify-between">
+            <p class="shrink-0 font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Editorias</p>
+            <div class="flex flex-wrap gap-2 lg:justify-end" role="group" aria-label="Editorias da Revista"><a href="revista/" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white bg-ink text-white">Todas <span class="text-rosso">64</span></a><a href="revista/?editoria=Flagras" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Flagras <span class="text-rosso">15</span></a><a href="revista/?editoria=Brasil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Brasil <span class="text-rosso">13</span></a><a href="revista/?editoria=Censo%20EB" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Censo EB <span class="text-rosso">10</span></a><a href="revista/?editoria=Vintage%20Cars%20Brazil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Vintage Cars Brazil <span class="text-rosso">8</span></a><a href="revista/?editoria=Hist%C3%B3ria" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">História <span class="text-rosso">5</span></a><a href="revista/?editoria=Eventos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Eventos <span class="text-rosso">3</span></a><a href="revista/?editoria=Lan%C3%A7amentos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Lançamentos <span class="text-rosso">2</span></a><a href="revista/?editoria=Porsche" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Porsche <span class="text-rosso">2</span></a><a href="revista/?editoria=T%C3%A9cnica" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Técnica <span class="text-rosso">2</span></a><a href="revista/?editoria=Cultura" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Cultura <span class="text-rosso">1</span></a><a href="revista/?editoria=Fotografia" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Fotografia <span class="text-rosso">1</span></a><a href="revista/?editoria=Raridades" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Raridades <span class="text-rosso">1</span></a><a href="revista/?editoria=TbtDoEb" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">TbtDoEb <span class="text-rosso">1</span></a></div>
           </div>
-          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
-            <a href="/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 5 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">BMW M5 Competition Edition 35 Jahre, uma das duas do Brasil, flagrada em São Paulo</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Série limitada a 350 unidades no mundo para os 35 anos do M5, com o mesmo V8 de 625 cv do Competition e a configuração como diferencial.</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 min</p>
-            </div>
-          </a>
-            <a href="/revista/mercedes-amg-g63-olive-metallic-sao-paulo/" data-editoria="Censo EB" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/mercedes-amg-g63-olive-metallic-sao-paulo-exotics-brazil.jpg" width="1335" height="1999" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Mercedes-AMG G 63 verde-oliva metálico em movimento numa avenida de São Paulo, visto em três quartos pela frente, com rodas polidas de cinco raios, grade preta e uma torre de transmissão de energia ao fundo" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
+          <div class="mt-6 grid border-l-2 border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
+          <a href="/revista/mclaren-artura-coupe-lantana-purple-boa-vista/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" loading="lazy" decoding="async" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Mercedes-AMG G 63 em Olive Metallic, o verde do G MANUFAKTUR, é flagrada em São Paulo</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Classe G aparece com a tinta metálica verde-oliva e rodas monoblock polidas de cinco raios, em fotos de avenida e de rua.</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 min</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
             </div>
           </a>
-            <a href="/revista/mclaren-artura-coupe-lantana-purple-boa-vista/" data-editoria="Censo EB" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 5 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">McLaren Artura Coupé em Lantana Purple é flagrada em Boa Vista, a capital mais ao norte do Brasil</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Supercarro híbrido da McLaren aparece em Roraima, longe do eixo que concentra a maior parte dos flagras de exóticos no país.</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 1 min</p>
-            </div>
-          </a>
-            <a href="/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/" data-editoria="Porsche" class="cartao-revista group flex flex-col border-b-2 border-r-2 border-ink bg-white transition-colors [overflow-wrap:anywhere] hover:bg-paper ">
-            <div class="relative aspect-square bg-[#09090B]"><img src="/assets/img/carros/porsche-911-gt3-992-2-sao-paulo-exotics-brazil-3.jpg" width="1125" height="2000" loading="lazy" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Porsche 911 GT3 (992.2) fosco visto de frente em três quartos, com o capô e a frente amarelos de um lado e pretos do outro, num showroom em São Paulo" class="absolute inset-0 h-full w-full object-contain"></div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
+          <a href="/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/" data-editoria="Porsche" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-gt3-992-2-sao-paulo-exotics-brazil-3.jpg" width="1125" height="2000" loading="lazy" decoding="async" alt="Porsche 911 GT3 (992.2) fosco visto de frente em três quartos, com o capô e a frente amarelos de um lado e pretos do outro, num showroom em São Paulo"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Porsche · 5 de novembro de 2026</p>
-              <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">Porsche 911 GT3 (992.2) dividido ao meio entre preto e amarelo aparece em showroom de São Paulo</h3>
-              <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-700">Unidade com acabamento fosco, faixa do capô à asa e rodas que seguem a cor de cada lado, flagrada em São Paulo pelo @vh.spotter.</p>
-              <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 2 min</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Porsche 911 GT3 (992.2) dividido ao meio entre preto e amarelo aparece em showroom de São Paulo</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+            </div>
+          </a>
+          <a href="/revista/driver-experience-top-speed-2009-limeira/" data-editoria="TbtDoEb" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" loading="lazy" decoding="async" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">TbtDoEb · 5 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Driver Experience Top Speed 2009: 208 carros de São Paulo a Limeira, e um Pagani Zonda F Roadster ClubSport que não ficou no Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+            </div>
+          </a>
+          <a href="/revista/gaucho-trail-motor-challenge-2026-brasil/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-carrera-39-gaucho-trail-santa-cruz-do-sul-exotics-brazil-3.jpg" width="1500" height="1999" loading="lazy" decoding="async" alt="Porsche 911 Carrera de 1975, branco e azul com faixas vermelha e dourada, número 39, placa de Genebra, Suíça, e estepe no rack do teto, sujo de barro, estacionado entre palmeiras em Santa Cruz do Sul"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 4 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Gaucho Trail Motor Challenge 2026: o rali de clássicos estrangeiros que atravessa o Rio Grande do Sul</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 7 min</p>
+            </div>
+          </a>
+          <a href="/revista/dodge-challenger-srt-demon-170-rio-de-janeiro/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/dodge-challenger-srt-demon-170-rio-de-janeiro-exotics-brazil-10.jpg" width="1549" height="1936" loading="lazy" decoding="async" alt="Dodge Challenger SRT Demon 170 vermelho, visto de frente em três quartos, com capô preto fosco de grande entrada de ar e spoiler dianteiro de pontas vermelhas, estacionado diante de um muro rosa e palmeiras no Rio de Janeiro"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 3 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dodge Challenger SRT Demon 170 vermelho aparece no Rio de Janeiro, um dos 18 do Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+            </div>
+          </a>
+          <a href="/revista/toyota-gr-yaris-roda-branca-florianopolis/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/toyota-gr-yaris-roda-branca-florianopolis-exotics-brazil-8.jpg" width="1500" height="1999" loading="lazy" decoding="async" alt="Toyota GR Yaris branco de três portas, visto de frente em três quartos, com rodas brancas de letras vermelhas e pinça vermelha, estacionado diante de uma fachada de vidro em Florianópolis, SC"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 3 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Toyota GR Yaris com rodas brancas de rali em Florianópolis</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
+            </div>
+          </a>
+          <a href="/revista/lamborghini-temerario-arancio-anthaeus-balneario-camboriu/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lamborghini-temerario-balneario-camboriu-exotics-brazil-5-2.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Lamborghini Temerario laranja visto de frente em ângulo baixo, na beira da praia em Balneário Camboriú, com os faróis hexagonais acesos, mar e morros ao fundo sob céu nublado"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lamborghini Temerario em Arancio Anthaeus é fotografado em Balneário Camboriú</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/mercedes-amg-s65-coupe-facelift-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/mercedes-amg-s65-coupe-sao-paulo-exotics-brazil.jpg" width="1549" height="1936" loading="lazy" decoding="async" alt="Mercedes-AMG S 65 Coupé facelift em azul escuro, vista frontal em três quartos, com grade de lâminas verticais e rodas raiadas polidas, em São Paulo"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Mercedes-AMG S 65 Coupé facelift: um dos três V12 biturbo cupê do Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/ferrari-gtc4lusso-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ferrari-gtc4lusso-sao-paulo-exotics-brazil-10.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Ferrari GTC4Lusso azul escura em três quartos de frente, estacionada na rua à noite em São Paulo, com faróis acesos e lojas iluminadas ao fundo"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Ferrari GTC4Lusso azul, a V12 de quatro lugares, flagrada à noite em São Paulo</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/dodge-viper-rt10-ferrari-f355-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Dodge Viper RT/10 vermelho aberto ao lado de uma Ferrari F355 cupê também vermelha, vistos de frente numa rua com palmeiras e torres de igreja ao fundo, em São Paulo"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dodge Viper RT/10 e duas Ferrari F355 vermelhas se encontram em São Paulo</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/aston-martin-dbs-770-ultimate-coupe-curitiba/" data-editoria="Censo EB" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/aston-martin-dbs-770-ultimate-coupe-curitiba-exotics-brazil-7.jpg" width="1440" height="1919" loading="lazy" decoding="async" alt="Aston Martin DBS 770 Ultimate Coupé verde, visto de frente em três quartos, com filetes verde-limão no para-choque e nas saias, rodas de raios múltiplos e pinças verde-limão, numa rua arborizada de Curitiba"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Censo EB · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Aston Martin DBS 770 Ultimate Coupé em Q Iridescent Emerald roda em Curitiba</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 1 min</p>
+            </div>
+          </a>
+          <a href="/revista/chevrolet-corvette-zr1x-joinville/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/chevrolet-corvette-zr1x-joinville-exotics-brazil.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Chevrolet Corvette ZR1-X em Red Mist Metallic Tintcoat, vermelho de tom vinho, de teto aberto, visto de três quartos pela frente em vaga de estacionamento com faixas amarelas, com asa traseira de carbono e rodas pretas, em Joinville, SC"></div>
+            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 2 de novembro de 2026</p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Corvette ZR1-X: o híbrido de 1.250 cv da Chevrolet já roda no Brasil</h3>
+              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
             </div>
           </a>
           </div>
-          <div class="mt-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div class="flex flex-wrap gap-2" role="group" aria-label="Editorias da Revista"><a href="revista/?editoria=Flagras" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Flagras <span class="text-rosso">15</span></a><a href="revista/?editoria=Brasil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Brasil <span class="text-rosso">13</span></a><a href="revista/?editoria=Censo%20EB" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Censo EB <span class="text-rosso">10</span></a><a href="revista/?editoria=Vintage%20Cars%20Brazil" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Vintage Cars Brazil <span class="text-rosso">8</span></a><a href="revista/?editoria=Hist%C3%B3ria" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">História <span class="text-rosso">5</span></a><a href="revista/?editoria=Eventos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Eventos <span class="text-rosso">3</span></a><a href="revista/?editoria=Lan%C3%A7amentos" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Lançamentos <span class="text-rosso">2</span></a><a href="revista/?editoria=Porsche" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Porsche <span class="text-rosso">2</span></a><a href="revista/?editoria=T%C3%A9cnica" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Técnica <span class="text-rosso">2</span></a><a href="revista/?editoria=Cultura" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Cultura <span class="text-rosso">1</span></a><a href="revista/?editoria=Fotografia" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Fotografia <span class="text-rosso">1</span></a><a href="revista/?editoria=Raridades" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">Raridades <span class="text-rosso">1</span></a><a href="revista/?editoria=TbtDoEb" class="border-2 border-ink px-3 py-1 font-display text-sm font-bold uppercase transition-colors hover:bg-ink hover:text-white">TbtDoEb <span class="text-rosso">1</span></a></div>
-            <a href="revista/" class="inline-flex w-fit shrink-0 items-center gap-3 bg-rosso px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-ink">Ver todas as 64 reportagens na Revista <span aria-hidden="true">→</span></a>
+          <div class="mt-8 flex justify-center">
+            <a href="revista/" class="inline-flex w-fit items-center gap-3 bg-rosso px-6 py-3 font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:bg-ink">Ver todas as 64 reportagens na Revista <span aria-hidden="true">→</span></a>
           </div>
-          <p class="mt-12 border-b-4 border-ink pb-2 font-display text-2xl font-black uppercase tracking-tight">Do arquivo da Revista</p>
-          <div class="grid border-l-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/revista/pts-paint-to-sample/" data-editoria="Técnica" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">O que é? Porsche PTS: Paint To Sample</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Com o passar dos anos, os lançamentos automotivos são acompanhados das mais variadas opções de cores. Essas diferentes tonalidades são batizadas com nomes que…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de junho de 2018</p>
+          <section class="mt-12 bg-carbon p-5 text-white sm:p-8" aria-labelledby="censo-destaques-titulo">
+            <div class="flex flex-col gap-4 border-b-2 border-zinc-800 pb-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Censo EB</span>
+                <h3 id="censo-destaques-titulo" class="mt-4 font-display text-4xl font-black uppercase leading-[0.9] tracking-tight sm:text-5xl">Destaques do Censo EB</h3>
+              </div>
+              <a href="censo/" class="inline-flex w-fit shrink-0 items-center gap-3 border-2 border-white px-5 py-2.5 font-display text-base font-bold uppercase tracking-wide transition-colors hover:bg-white hover:text-ink">Ver os 75 modelos do Censo <span aria-hidden="true">→</span></a>
+            </div>
+            <ul class="mt-5 grid grid-cols-2 gap-px sm:grid-cols-3 lg:grid-cols-6">
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#porsche-918-spyder" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">13</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">Porsche 918 Spyder</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">unidades no Brasil</span>
+                </a>
+              </li>
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#mclaren-senna" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">12</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">McLaren Senna</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">10 Senna · 1 Senna LM · 1 Senna GTR</span>
+                </a>
+              </li>
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#ferrari-laferrari" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">4</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">Ferrari LaFerrari</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">unidades no Brasil</span>
+                </a>
+              </li>
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#dodge-challenger-srt-demon-170" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">18</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">Dodge Challenger SRT Demon 170</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">unidades no Brasil</span>
+                </a>
+              </li>
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#ferrari-f40" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">2</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">Ferrari F40</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">unidades no Brasil</span>
+                </a>
+              </li>
+              <li class="border-t-4 border-rosso bg-carbon-2">
+                <a href="censo/#bugatti-chiron-sport" class="group flex h-full flex-col p-4 sm:p-5">
+                  <span class="font-display text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">1</span>
+                  <span class="mt-2 font-display text-lg font-extrabold uppercase leading-tight tracking-tight text-white group-hover:text-rosso">Bugatti Chiron Sport</span>
+                  <span class="mt-1 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">unidade no Brasil</span>
+                </a>
+              </li>
+            </ul>
+            <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Unidades no Brasil · Censo EB atualizado em 7 de novembro de 2026</p>
+          </section>
+          <div class="mt-12 border-t-4 border-ink pt-4">
+            <p class="font-display text-2xl font-black uppercase tracking-tight">Do arquivo da Revista</p>
+            <div class="mt-2">
+          <a href="/revista/pts-paint-to-sample/" data-editoria="Técnica" class="cartao-revista group grid grid-cols-[5.5rem_1fr] gap-x-4 border-b border-zinc-300 py-4 [overflow-wrap:anywhere] sm:grid-cols-[6.5rem_1fr_auto] sm:items-baseline">
+            <p class="pt-0.5 font-mono text-[12px] leading-snug text-zinc-500">03/06/2018</p>
+            <div class="min-w-0">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Técnica</p>
+              <h3 class="mt-1 font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink group-hover:text-rosso sm:text-2xl">O que é? Porsche PTS: Paint To Sample</h3>
+            </div>
+            <p class="col-start-2 mt-1 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:col-start-auto sm:mt-0 sm:text-right">Pedro Ponchio · 4 min</p>
           </a>
-          <a href="/revista/a-evolucao-do-skyline/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 ">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A evolução do Skyline: 1957 - Hoje</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Vou falar uma informação que para muitos será uma novidade! Talvez você não saiba, mas o Skyline nem sempre foi um Nissan. Calma, eu explico… A primeira versão do…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 23 de novembro de 2017</p>
+          <a href="/revista/a-evolucao-do-skyline/" data-editoria="História" class="cartao-revista group grid grid-cols-[5.5rem_1fr] gap-x-4 border-b border-zinc-300 py-4 [overflow-wrap:anywhere] sm:grid-cols-[6.5rem_1fr_auto] sm:items-baseline">
+            <p class="pt-0.5 font-mono text-[12px] leading-snug text-zinc-500">23/11/2017</p>
+            <div class="min-w-0">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+              <h3 class="mt-1 font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink group-hover:text-rosso sm:text-2xl">A evolução do Skyline: 1957 - Hoje</h3>
+            </div>
+            <p class="col-start-2 mt-1 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:col-start-auto sm:mt-0 sm:text-right">Pedro Ponchio · 2 min</p>
           </a>
-          <a href="/revista/grupo-b/" data-editoria="História" class="cartao-revista group block border-b-2 border-r-2 border-ink bg-paper p-6 transition-colors [overflow-wrap:anywhere] hover:bg-white sm:p-8 sm:col-span-2 lg:col-span-1">
-            <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
-            <h3 class="mt-3 font-display text-3xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso">A história do Grupo B de Rally</h3>
-            <p class="mt-3 text-[15px] leading-relaxed text-zinc-700">Todo fã de carro ao menos alguma vez na vida já se lamentou pelo fim do Grupo B de rali. Até mesmo os gearheads mais jovens, que nasceram na década seguinte ou…</p>
-            <p class="mt-4 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Pedro Ponchio · 3 de novembro de 2017</p>
+          <a href="/revista/grupo-b/" data-editoria="História" class="cartao-revista group grid grid-cols-[5.5rem_1fr] gap-x-4 border-b border-zinc-300 py-4 [overflow-wrap:anywhere] sm:grid-cols-[6.5rem_1fr_auto] sm:items-baseline">
+            <p class="pt-0.5 font-mono text-[12px] leading-snug text-zinc-500">03/11/2017</p>
+            <div class="min-w-0">
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">História</p>
+              <h3 class="mt-1 font-display text-xl font-extrabold uppercase leading-tight tracking-tight text-ink group-hover:text-rosso sm:text-2xl">A história do Grupo B de Rally</h3>
+            </div>
+            <p class="col-start-2 mt-1 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:col-start-auto sm:mt-0 sm:text-right">Pedro Ponchio · 4 min</p>
           </a>
+            </div>
           </div>
           <!-- REVISTA:FIM -->
         </div>
@@ -852,6 +1071,25 @@
           </div>
           <h2 id="sobre-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">13 anos contando os exóticos do Brasil</h2>
           <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Redação Exotics Brazil · Brasília, DF</p>
+        </div>
+
+        <figure class="mt-10 border-2 border-ink bg-black">
+          <img src="/assets/img/carros/capa-ferrari-458-italia.jpg" srcset="/assets/img/carros/capa-ferrari-458-italia-1200.jpg 1200w, /assets/img/carros/capa-ferrari-458-italia.jpg 2400w" sizes="(min-width: 1280px) 1216px, 100vw" width="2400" height="1600" loading="lazy" alt="Ferrari 458 Italia vermelha estacionada na grama à beira de um lago em Brasília, com o sol se pondo atrás do carro" class="foto-carro">
+          <figcaption class="border-t-2 border-ink bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-600">Ferrari 458 Italia · Brasília, DF · Foto: Pedro Ponchio (<a href="https://www.instagram.com/ppspots/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-rosso">@ppspots</a>)</figcaption>
+        </figure>
+
+        <div class="mt-10 grid gap-8 border-b-2 border-ink pb-10 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="font-display text-4xl font-black uppercase leading-[0.9] tracking-tight sm:text-5xl">Os carros exóticos que rodam no Brasil</p>
+            <p class="mt-2 font-serif text-2xl italic text-zinc-700 sm:text-3xl">contados por quem entende deles.</p>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-zinc-700 sm:text-lg">Flagras, reportagens e dossiês com ficha técnica completa, censo de unidades no país e o contexto que só faz sentido aqui. O Exotics Brazil transforma cada carro exótico flagrado no Brasil em informação que vale a pena ler.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
+            <a href="#comercial" class="inline-flex items-center justify-center gap-3 bg-rosso px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-white transition-colors hover:bg-ink">
+              Anunciar com a gente <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i>
+            </a>
+            <a href="revista/" class="inline-flex items-center justify-center gap-3 border-2 border-ink px-7 py-4 font-display text-xl font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-white">Ler a Revista</a>
+          </div>
         </div>
 
         <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-14">
@@ -1111,7 +1349,7 @@
           <!-- FAQ:INICIO -->
           <details class="group border-b-2 border-zinc-800 py-5" open>
             <summary class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
-              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">O que é o Exotics Brazil e qual o seu alcance no mercado automotivo latino-americano?</h3>
+              <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight sm:text-3xl">O que é o Exotics Brazil e qual é o seu alcance no Brasil?</h3>
               <span class="mt-0.5 shrink-0 font-display text-3xl font-black leading-none text-rosso transition-transform group-open:rotate-45" aria-hidden="true">+</span>
             </summary>
             <p class="mt-4 max-w-3xl text-[17px] leading-relaxed text-zinc-300 [&_a]:text-white [&_a]:underline [&_a]:decoration-rosso [&_a]:decoration-2 [&_a]:underline-offset-4">O Exotics Brazil (@exoticsbrazil) é o veículo de mídia automotiva especializado nos carros exóticos que rodam no Brasil, e mantém o Censo EB, levantamento próprio da frota de supercarros no país. Nasceu no Instagram em 2013 e tem hoje cerca de 500 mil seguidores, todos conquistados sem anúncio pago. Nos 90 dias até outubro de 2026 somou 30,8 milhões de visualizações e 3,2 milhões de contas alcançadas. Os assuntos que pedem mais espaço viram reportagem na <a href="/revista/">Revista Exotics Brazil</a>.</p>
@@ -1206,6 +1444,72 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var raiz = document.querySelector('[data-carrossel]');
+      if (!raiz) return;
+      var slides = [].slice.call(raiz.querySelectorAll('.carrossel-slide')), abas = [].slice.call(raiz.querySelectorAll('.carrossel-aba'));
+      var barra = raiz.querySelector('.carrossel-progresso'), contador = raiz.querySelector('[data-contador]'), botaoPausa = raiz.querySelector('[data-pausa]');
+      var intervalo = parseInt(raiz.getAttribute('data-intervalo'), 10) || 4000, atual = 0, decorrido = 0, ultimo = null;
+      var sobre = false, tocando = false, focado = false, parado = false, visivel = true, x0 = 0, y0 = 0, arrasto = 0;
+      if (slides.length < 2) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) parado = true;
+      function pintar() { barra.style.transform = 'scaleX(' + Math.min(1, decorrido / intervalo) + ')'; }
+      function ir(i) {
+        atual = (i + slides.length) % slides.length; decorrido = 0;
+        slides.forEach(function (s, j) {
+          var ativo = j === atual;
+          s.classList.toggle('is-ativo', ativo); s.setAttribute('aria-hidden', String(!ativo));
+          if (ativo) s.removeAttribute('inert'); else s.setAttribute('inert', '');
+        });
+        abas.forEach(function (a, j) {
+          a.classList.toggle('is-ativo', j === atual);
+          if (j === atual) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        });
+        if (contador) contador.textContent = (atual + 1 < 10 ? '0' : '') + (atual + 1);
+        pintar();
+      }
+      function pausado() { return sobre || tocando || focado || parado || !visivel || document.hidden; }
+      function rodar(t) {
+        if (ultimo !== null && !pausado()) { decorrido += t - ultimo; if (decorrido >= intervalo) ir(atual + 1); }
+        ultimo = t; pintar(); window.requestAnimationFrame(rodar);
+      }
+      function marcarPausa() {
+        botaoPausa.setAttribute('aria-pressed', String(parado));
+        botaoPausa.textContent = parado ? 'Continuar' : 'Pausar';
+        botaoPausa.setAttribute('aria-label', parado ? 'Continuar a troca automática das manchetes' : 'Pausar a troca automática das manchetes');
+      }
+      raiz.addEventListener('mouseenter', function () { sobre = true; });
+      raiz.addEventListener('mouseleave', function () { sobre = false; });
+      raiz.addEventListener('focusin', function () { focado = true; });
+      raiz.addEventListener('focusout', function (e) { if (!raiz.contains(e.relatedTarget)) focado = false; });
+      var trilho = raiz.querySelector('.carrossel-trilho');
+      trilho.addEventListener('touchstart', function (e) { tocando = true; arrasto = 0; x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+      trilho.addEventListener('touchend', function (e) {
+        var t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+        tocando = false;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) ir(atual + (dx < 0 ? 1 : -1));
+      }, { passive: true });
+      trilho.addEventListener('touchmove', function (e) { arrasto = e.touches[0].clientX - x0; }, { passive: true });
+      trilho.addEventListener('touchcancel', function () { tocando = false; });
+      // Arrastar para o lado troca a manchete e nunca abre a matéria por engano.
+      trilho.addEventListener('click', function (e) { if (Math.abs(arrasto) > 40) { e.preventDefault(); arrasto = 0; } }, true);
+      raiz.querySelector('[data-anterior]').addEventListener('click', function () { ir(atual - 1); });
+      raiz.querySelector('[data-proxima]').addEventListener('click', function () { ir(atual + 1); });
+      botaoPausa.addEventListener('click', function () { parado = !parado; marcarPausa(); });
+      abas.forEach(function (a, j) {
+        a.addEventListener('click', function (e) { if (j !== atual) { e.preventDefault(); ir(j); } });
+      });
+      raiz.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { ir(atual - 1); } else if (e.key === 'ArrowRight') { ir(atual + 1); }
+      });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { visivel = es[0].isIntersecting; }).observe(raiz);
+      }
+      marcarPausa();
+      window.requestAnimationFrame(rodar);
+    })();
+  </script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script>
