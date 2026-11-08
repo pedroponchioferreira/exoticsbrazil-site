@@ -33,40 +33,116 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/identidade/apple-touch-icon.png?v=2">
   <link rel="alternate" type="application/rss+xml" title="Revista Exotics Brazil" href="/rss.xml">
   <link rel="alternate" type="application/json" title="Censo EB, dados abertos" href="/censo.json">
-  <meta name="theme-color" content="#09090B">
+  <meta name="theme-color" content="#090A0F">
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = { theme: { extend: {
-      colors: { carbon: { DEFAULT: '#09090B', 2: '#111113' }, paper: { DEFAULT: '#F4F4F5', 2: '#E4E4E7' }, ink: '#09090B', rosso: { DEFAULT: '#DC2626' } },
-      fontFamily: { display: ['"Barlow Condensed"', 'Impact', 'sans-serif'], sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'], serif: ['Newsreader', 'Georgia', 'serif'], mono: ['"JetBrains Mono"', 'monospace'] }
+      colors: {
+        carbon: { DEFAULT: '#090A0F', 2: '#11131A', 3: '#171A24' },
+        paper: { DEFAULT: '#11131A', 2: '#171A24' },
+        ink: '#F8FAFC',
+        rosso: { DEFAULT: '#10B981', dark: '#059669' },
+        verde: { DEFAULT: '#00A859', claro: '#10B981', escuro: '#059669' },
+        amarelo: { DEFAULT: '#FACC15', ouro: '#EAB308' },
+        perigo: '#F87171',
+        mblue: { light: '#4FA3DB', dark: '#1C3F94' },
+        amg: '#C4C8CE'
+      },
+      textColor: { ink: '#F8FAFC', paper: '#D1D5DB', black: '#F8FAFC', carbon: '#090A0F',
+        zinc: { 200: '#E5E7EB', 300: '#D1D5DB', 400: '#A9B4C4', 500: '#94A3B8', 600: '#94A3B8', 700: '#D1D5DB', 800: '#E5E7EB' } },
+      backgroundColor: { ink: '#171A24', white: '#11131A', rosso: { DEFAULT: '#00A859', dark: '#059669' },
+        zinc: { 200: '#171A24', 300: '#171A24', 800: '#1F2330' } },
+      borderColor: { DEFAULT: 'rgba(255,255,255,0.15)', ink: 'rgba(255,255,255,0.15)', black: 'rgba(255,255,255,0.15)', rosso: '#10B981',
+        zinc: { 300: 'rgba(255,255,255,0.08)', 400: 'rgba(255,255,255,0.15)', 500: 'rgba(255,255,255,0.24)', 700: 'rgba(255,255,255,0.15)', 800: 'rgba(255,255,255,0.08)' } },
+      divideColor: { ink: 'rgba(255,255,255,0.15)', zinc: { 300: 'rgba(255,255,255,0.08)', 800: 'rgba(255,255,255,0.08)' } },
+      textDecorationColor: { rosso: '#10B981', zinc: { 300: 'rgba(255,255,255,0.15)' } },
+      fontFamily: {
+        display: ['"Barlow Condensed"', 'Impact', 'Arial Narrow', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'Consolas', 'monospace'],
+        ig: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', '"Noto Color Emoji"', 'sans-serif']
+      }
     } } }
   </script>
   <style>
-    html, body { background: #F4F4F5; }
-    body { -webkit-font-smoothing: antialiased; overflow-wrap: break-word; }
-    :focus-visible { outline: 3px solid #DC2626; outline-offset: 2px; }
+    :root {
+      color-scheme: dark;
+      --eb-bg-canvas: #090A0F;
+      --eb-bg-surface: #11131A;
+      --eb-bg-elevated: #171A24;
+      --eb-bg-glass: rgba(17, 19, 26, 0.86);
+      --eb-text-primary: #F8FAFC;
+      --eb-text-body: #D1D5DB;
+      --eb-text-muted: #94A3B8;
+      --eb-border-subtle: rgba(255, 255, 255, 0.08);
+      --eb-border-strong: rgba(255, 255, 255, 0.15);
+      --eb-green: #00A859;
+      --eb-green-bright: #10B981;
+      --eb-green-hover: #059669;
+      --eb-green-surface: rgba(0, 168, 89, 0.14);
+      --eb-green-border: rgba(16, 185, 129, 0.35);
+      --eb-yellow: #FACC15;
+      --eb-yellow-warm: #EAB308;
+      --eb-yellow-surface: rgba(250, 204, 21, 0.12);
+      --eb-yellow-border: rgba(250, 204, 21, 0.38);
+      --eb-text-on-yellow: #090A0F;
+      --eb-gradient-signature: linear-gradient(90deg, #00A859 0%, #10B981 55%, #FACC15 100%);
+      --eb-status-danger: #F87171;
+    }
+    html, body { background: var(--eb-bg-canvas); color: var(--eb-text-body); }
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
+    :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
+    ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
+    .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+    .filete-eb, .filete-topo-eb { position: relative; }
+    .filete-eb::after, .filete-topo-eb::before { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: var(--eb-gradient-signature); pointer-events: none; }
+    .filete-eb::after { bottom: 0; } .filete-topo-eb::before { top: 0; }
+    .assinatura-eb { background: var(--eb-gradient-signature); }
+    /* Selos: amarelo sólido sempre com texto carbono em negrito; verde tonal para dado e Censo */
+    .selo-amarelo-eb { background: var(--eb-yellow); color: var(--eb-text-on-yellow); font-weight: 800; }
+    .selo-verde-eb { background: var(--eb-green-surface); color: var(--eb-green-bright); box-shadow: inset 0 0 0 1px var(--eb-green-border); }
+    .selo-editor-eb { background: var(--eb-yellow-surface); color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
+    .editoria-verde-eb { color: var(--eb-green-bright); } .editoria-amarela-eb { color: var(--eb-yellow); }
+    /* Botão primário institucional: Verde EB, texto branco em negrito, brilho esmeralda no hover */
+    .botao-verde-eb { background: var(--eb-green); color: #fff; font-weight: 700; transition: background-color .2s, box-shadow .2s; }
+    /* Branco sobre #00A859 dá 3,1:1, então o texto do botão fica sempre no porte de texto grande (WCAG AA) */
+    .botao-verde-eb.text-lg, .botao-verde-eb.text-base, .botao-verde-eb.text-sm { font-size: 1.1875rem; line-height: 1.6rem; }
+    .botao-verde-eb:hover, .botao-verde-eb:focus-visible { background: var(--eb-green-hover); color: #fff; box-shadow: 0 0 0 1px var(--eb-green-border), 0 0 22px rgba(16, 185, 129, 0.35); }
+    /* Cartões da Revista: superfície que sobe e acende a borda no hover */
+    .cartao-revista { transition: background-color .2s, border-color .2s; }
+    a.cartao-revista:hover, a.cartao-revista:focus-visible { background: var(--eb-bg-elevated); border-color: rgba(16, 185, 129, 0.4); }
+    .superficie-eb { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); }
+    /* Resumo da Apuração EB e citações: filete Amarelo Solar sobre superfície elevada */
+    .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
+    /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
+    .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    .numero-censo-eb { color: var(--eb-green-bright); }
+    .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
     .foto-carro { display: block; width: 100%; height: auto; }
-    .materia { font-size: 18px; line-height: 1.8; color: #27272A; }
+    .materia { font-size: 18px; line-height: 1.8; color: var(--eb-text-body); }
     .materia > * + * { margin-top: 1.25rem; }
     .materia > figure, .materia > aside { margin-top: 2.5rem; margin-bottom: 2.5rem; }
-    .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: #DC2626; margin: 6px 12px 0 0; }
-    .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: #09090B; margin-top: 2.75rem; }
-    .materia h2 { font-size: 2.25rem; border-top: 4px solid #09090B; padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
-    .materia a { color: #09090B; text-decoration: underline; text-decoration-color: #DC2626; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-    .materia a:hover { color: #DC2626; }
+    .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: var(--eb-yellow); margin: 6px 12px 0 0; }
+    .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: var(--eb-text-primary); margin-top: 2.75rem; }
+    .materia h2 { font-size: 2.25rem; border-top: 2px solid var(--eb-border-strong); padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
+    .materia a { color: var(--eb-green-bright); text-decoration: underline; text-decoration-color: var(--eb-green-border); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .materia a:hover { color: var(--eb-yellow); text-decoration-color: var(--eb-yellow); }
     .materia ul { list-style: square; padding-left: 1.4rem; } .materia ol { list-style: decimal; padding-left: 1.4rem; }
     .materia li + li { margin-top: .4rem; }
-    .materia blockquote { border-left: 6px solid #DC2626; padding-left: 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: #09090B; }
-    .materia strong { color: #09090B; }
+    .materia blockquote { border-left: 4px solid var(--eb-yellow); background: var(--eb-bg-elevated); padding: 1rem 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--eb-text-primary); }
+    .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
-    .miniatura-eb { position: relative; overflow: hidden; background: #09090B; }
+    .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
     .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
     .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
     .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
     .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
-    .leitura-eb > span { display: block; height: 100%; background: #DC2626; transform: scaleX(0); transform-origin: 0 50%; }
+    .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
@@ -204,7 +280,7 @@
 </head>
 <body class="bg-paper font-sans text-ink">
   <div class="leitura-eb" aria-hidden="true"><span></span></div>
-  <header class="sticky top-0 z-50 bg-carbon text-white [border-bottom:4px_solid_#DC2626]">
+  <header class="cabecalho-eb filete-eb sticky top-0 z-50 text-white">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto object-contain sm:h-14"></a>
       <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
@@ -212,24 +288,24 @@
         <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
         <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
         <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
-        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="bg-rosso px-3 py-1 text-white hover:bg-white hover:text-carbon">Instagram</a>
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="botao-verde-eb px-3 py-1 text-lg">Instagram</a>
       </nav>
     </div>
   </header>
   <main>
     <article data-eb-materia data-titulo="Mais uma edição do Dream Route está chegando: Octapro Edition!" data-editoria="Eventos" data-autor="Pedro Ponchio" class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
-      <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><a href="/" class="hover:text-rosso">Exotics Brazil</a> / <a href="/revista/" class="hover:text-rosso">Revista</a></nav>
+      <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><a href="/" class="hover:text-amarelo">Exotics Brazil</a> / <a href="/revista/" class="hover:text-amarelo">Revista</a></nav>
       <div class="mt-6 border-t-4 border-ink pt-4">
-        <p class="flex flex-wrap items-center gap-3"><span class="bg-rosso px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em] text-white">Eventos</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Arquivo · 2017</span></p>
+        <p class="flex flex-wrap items-center gap-3"><span class="selo-amarelo-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Eventos</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">Arquivo · 2017</span></p>
         <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-tight [overflow-wrap:anywhere] sm:text-6xl">Mais uma edição do Dream Route está chegando: Octapro Edition!</h1>
         <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Por Pedro Ponchio · 6 de novembro de 2017 · 1 min de leitura</p>
       </div>
-      <aside class="mt-8 border-2 border-ink bg-white" aria-label="Resumo EB · arquivo">
-        <p class="flex items-center gap-2 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span class="inline-block h-2.5 w-2.5 bg-rosso" aria-hidden="true"></span>Resumo EB · arquivo</p>
-        <blockquote class="capsula-eb resumo-apuracao-eb px-4 py-4 text-[16px] leading-relaxed text-zinc-800" cite="https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o Exotics Brazil (@exoticsbrazil), a edição Octapro do Dream Route, rali de supercarros, foi marcada para 23 a 26 de novembro de 2017, de Florianópolis a Porto Alegre, passando por Caxias do Sul e pelo autódromo Velopark.</p></blockquote>
+      <aside class="resumo-eb mt-8" aria-label="Resumo EB · arquivo">
+        <p class="flex items-center gap-2 px-4 pt-3 font-display text-sm font-bold uppercase tracking-[0.14em] text-amarelo"><span class="inline-block h-2.5 w-2.5 bg-amarelo" aria-hidden="true"></span>Resumo EB · arquivo</p>
+        <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o Exotics Brazil (@exoticsbrazil), a edição Octapro do Dream Route, rali de supercarros, foi marcada para 23 a 26 de novembro de 2017, de Florianópolis a Porto Alegre, passando por Caxias do Sul e pelo autódromo Velopark.</p></blockquote>
       </aside>
       <div class="mt-10 grid items-end gap-4 border-y-4 border-ink py-6 sm:grid-cols-[auto_1fr] sm:gap-8">
-        <p class="font-display text-[112px] font-black leading-[0.8] tracking-tight text-transparent [-webkit-text-stroke:2px_#09090B] sm:text-[168px]" aria-hidden="true">2017</p>
+        <p class="font-display text-[112px] font-black leading-[0.8] tracking-tight text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.18)] sm:text-[168px]" aria-hidden="true">2017</p>
         <div class="sm:pb-2">
           <p class="font-display text-sm font-bold uppercase tracking-[0.16em] text-rosso">Eventos</p>
           <p class="mt-2 font-display text-2xl font-black uppercase leading-none tracking-tight">Arquivo do Exotics Brazil</p>
@@ -275,20 +351,20 @@
         Matéria publicada originalmente em 6 de novembro de 2017 no site do Exotics Brazil e recuperada do arquivo da internet. O texto segue como foi publicado na época, então números, preços e previsões são daquela data. <a href="https://web.archive.org/web/2019/https://www.exoticsbrazil.com.br/dream-route-octapro-edition-esta-chegando/" target="_blank" rel="noopener" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">Ver a versão arquivada</a>. O exoticsbrazil.com.br é o braço editorial e banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2">@exoticsbrazil</a> no Instagram, onde cerca de 500 mil seguidores acompanham os flagras diariamente.
       </aside>
       <div class="citacao-eb mt-14 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-zinc-300 pt-4" aria-label="Como citar esta apuração">
-        <p class="text-[13px] leading-relaxed tracking-wide text-zinc-500">Fonte primária e apuração: <span class="font-semibold text-zinc-800">Exotics Brazil</span> (@exoticsbrazil) · <a href="https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/" class="underline decoration-zinc-300 underline-offset-2 hover:text-rosso">exoticsbrazil.com.br</a></p>
-        <button type="button" class="citar-copiar font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500 hover:text-rosso" data-citacao="EXOTICS BRAZIL (@exoticsbrazil). Mais uma edição do Dream Route está chegando: Octapro Edition!. Pedro Ponchio, 6 de novembro de 2017. Disponível em: https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/. Acesso em: ">[ Copiar referência ]</button>
+        <p class="text-[13px] leading-relaxed tracking-wide text-zinc-500">Fonte primária e apuração: <span class="font-semibold text-zinc-800">Exotics Brazil</span> (@exoticsbrazil) · <a href="https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/" class="underline decoration-zinc-300 underline-offset-2 hover:text-amarelo">exoticsbrazil.com.br</a></p>
+        <button type="button" class="citar-copiar font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500 hover:text-amarelo" data-citacao="EXOTICS BRAZIL (@exoticsbrazil). Mais uma edição do Dream Route está chegando: Octapro Edition!. Pedro Ponchio, 6 de novembro de 2017. Disponível em: https://www.exoticsbrazil.com.br/revista/dream-route-octapro-edition-esta-chegando/. Acesso em: ">[ Copiar referência ]</button>
       </div>
 
-      <section id="comentarios-eb" data-slug="dream-route-octapro-edition-esta-chegando" data-motor="firebase" data-config="eyJhcGlLZXkiOiAiQUl6YVN5REhYbzFjdGRHS0xjOXNXS0ZKQU8xenBIM2tnTWFEZm00IiwgImF1dGhEb21haW4iOiAiZXhvdGljcy1icmF6aWwtY29tZW50YXJpb3MuZmlyZWJhc2VhcHAuY29tIiwgInByb2plY3RJZCI6ICJleG90aWNzLWJyYXppbC1jb21lbnRhcmlvcyIsICJhcHBJZCI6ICIxOjQxMTM4MjM2NzI2OTp3ZWI6YzI2MTQyNDc2MTQ1M2Y0N2ZjMmJjYyJ9" data-editor="6faad4cc75dd83f915926215fd60a4c3f944fac0a856fb262faaccf8555f482a" data-sdk="10.14.1" class="mt-14 bg-carbon p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
-        <div class="flex flex-wrap items-center justify-between gap-3 border-b-4 border-rosso pb-3">
+      <section id="comentarios-eb" data-slug="dream-route-octapro-edition-esta-chegando" data-motor="firebase" data-config="eyJhcGlLZXkiOiAiQUl6YVN5REhYbzFjdGRHS0xjOXNXS0ZKQU8xenBIM2tnTWFEZm00IiwgImF1dGhEb21haW4iOiAiZXhvdGljcy1icmF6aWwtY29tZW50YXJpb3MuZmlyZWJhc2VhcHAuY29tIiwgInByb2plY3RJZCI6ICJleG90aWNzLWJyYXppbC1jb21lbnRhcmlvcyIsICJhcHBJZCI6ICIxOjQxMTM4MjM2NzI2OTp3ZWI6YzI2MTQyNDc2MTQ1M2Y0N2ZjMmJjYyJ9" data-editor="6faad4cc75dd83f915926215fd60a4c3f944fac0a856fb262faaccf8555f482a" data-sdk="10.14.1" class="superficie-eb mt-14 p-6 text-paper sm:p-8" aria-labelledby="comentarios-titulo">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800 pb-3">
           <h2 id="comentarios-titulo" class="font-display text-3xl font-black uppercase tracking-tight text-white">Comentários da comunidade</h2>
           <span class="font-display text-xs font-bold uppercase tracking-[0.16em] text-zinc-400">Login com conta Google</span>
         </div>
         <div id="comentarios-conta" class="mt-6 flex flex-wrap items-center gap-3"></div>
         <form id="comentarios-form" class="mt-4" hidden>
           <label for="comentarios-texto" class="sr-only">Seu comentário</label>
-          <textarea id="comentarios-texto" rows="4" maxlength="1500" required class="w-full border-2 border-zinc-700 bg-carbon-2 p-3 text-[16px] text-white placeholder:text-zinc-500 focus:border-rosso focus:outline-none" placeholder="Escreva o seu comentário"></textarea>
-          <div class="mt-2 flex flex-wrap items-center justify-between gap-3"><p id="comentarios-aviso" class="text-xs text-zinc-500" aria-live="polite">Até 1.500 caracteres, um comentário a cada 30 segundos.</p><button type="submit" class="bg-rosso px-5 py-2 font-display text-lg font-bold uppercase tracking-wide text-white hover:bg-white hover:text-ink">Publicar comentário</button></div>
+          <textarea id="comentarios-texto" rows="4" maxlength="1500" required class="w-full border border-zinc-700 bg-carbon-3 p-3 text-[16px] text-white placeholder:text-zinc-500 focus:border-amarelo focus:outline-none" placeholder="Escreva o seu comentário"></textarea>
+          <div class="mt-2 flex flex-wrap items-center justify-between gap-3"><p id="comentarios-aviso" class="text-xs text-zinc-500" aria-live="polite">Até 1.500 caracteres, um comentário a cada 30 segundos.</p><button type="submit" class="botao-verde-eb px-5 py-2 font-display text-lg uppercase tracking-wide">Publicar comentário</button></div>
         </form>
         <ol id="comentarios-lista" class="mt-8 divide-y divide-zinc-800 border-t-2 border-zinc-800"><li class="py-5 text-sm text-zinc-500">Carregando os comentários…</li></ol>
         <p class="mt-6 text-xs leading-relaxed text-zinc-500">Comentário é opinião de quem assina, não apuração do Exotics Brazil. Ofensa, spam e dado pessoal de terceiros (endereço, placa, onde o carro fica guardado) são apagados.</p>
@@ -320,7 +396,7 @@
           }
           if (eu.photoURL) { var f = el('img', 'h-9 w-9 rounded-full border border-zinc-700'); f.src = eu.photoURL; f.alt = ''; f.referrerPolicy = 'no-referrer'; conta.appendChild(f); }
           conta.appendChild(el('span', 'font-display text-lg font-bold uppercase text-white', eu.displayName || 'Leitor'));
-          if (souEditor) conta.appendChild(el('span', 'bg-rosso px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em] text-white', 'Editor-chefe EB'));
+          if (souEditor) conta.appendChild(el('span', 'selo-editor-eb px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em]', 'Editor-chefe EB'));
           var sair = el('button', 'ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-400 hover:text-white', '[ Sair ]'); sair.type = 'button'; sair.onclick = function () { A.signOut(auth); };
           conta.appendChild(sair); form.hidden = false;
         }
@@ -336,10 +412,10 @@
             var c = d.data(), li = el('li', 'py-5'), topo = el('div', 'flex flex-wrap items-center gap-3');
             if (c.foto) { var f = el('img', 'h-8 w-8 rounded-full border border-zinc-700'); f.src = c.foto; f.alt = ''; f.referrerPolicy = 'no-referrer'; f.loading = 'lazy'; topo.appendChild(f); }
             topo.appendChild(el('span', 'font-display text-base font-bold uppercase text-white', c.nome || 'Leitor'));
-            if (c.editor) topo.appendChild(el('span', 'bg-rosso px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em] text-white', 'Editor-chefe EB'));
+            if (c.editor) topo.appendChild(el('span', 'selo-editor-eb px-2 py-0.5 font-display text-xs font-bold uppercase tracking-[0.14em]', 'Editor-chefe EB'));
             if (c.criado && c.criado.toDate) topo.appendChild(el('span', 'font-mono text-[11px] uppercase tracking-[0.12em] text-zinc-500', c.criado.toDate().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })));
             if (eu && (souEditor || c.uid === eu.uid)) {
-              var x = el('button', 'ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-400 hover:text-rosso', '[ Excluir ]'); x.type = 'button';
+              var x = el('button', 'ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-400 hover:text-perigo', '[ Excluir ]'); x.type = 'button';
               x.onclick = function () { if (confirm('Excluir este comentário?')) F.deleteDoc(d.ref); };
               topo.appendChild(x);
             }
@@ -367,27 +443,27 @@
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div class="flex flex-wrap items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight text-white">Mais da Revista</h2><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 hover:text-white">Todas as reportagens →</a></div>
         <div class="mt-8 grid border-l-2 border-t-2 border-ink bg-ink sm:grid-cols-3">
-          <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+          <a href="/revista/bugatti-chiron-sport-sao-paulo-lavagem-sabado-f1/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/bugatti-chiron-sport-sao-paulo-exotics-brazil-6.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Bugatti Chiron Sport azul claro com laterais e teto em carbono azul escuro, de frente em três quartos, parado num posto em São Paulo com pessoas filmando ao fundo"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 7 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 7 de novembro de 2026</span></p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Bugatti Chiron Sport, o único Bugatti moderno do Brasil, flagrado num posto de São Paulo no sábado da F1</h3>
               <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
-          <a href="/revista/dicas-fotografia-automotiva/" data-editoria="Fotografia" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+          <a href="/revista/dicas-fotografia-automotiva/" data-editoria="Fotografia" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/porsche-911-gt2-rs-997-brasilia.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Porsche 911 GT2 RS (997) preto com capô de fibra de carbono e pinças amarelas, estacionado num terreno gramado em Brasília" class="foto-inteira-eb"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Fotografia · 11 de fevereiro de 2016</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Dicas de Fotografia Automotiva</h3>
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Fotografia <span class="text-zinc-500">· 11 de fevereiro de 2016</span></p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Dicas de Fotografia Automotiva</h3>
               <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 2 min</p>
             </div>
           </a>
-          <a href="/revista/lotus-emeya-900-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border-b-2 border-r-2 border-ink bg-white p-3 transition-colors [overflow-wrap:anywhere] hover:bg-paper sm:flex-col sm:gap-0 sm:p-0 ">
+          <a href="/revista/lotus-emeya-900-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lotus-emeya-sao-paulo-exotics-brazil-2-3.jpg" width="1600" height="1999" loading="lazy" decoding="async" alt="Lotus Emeya 900 em verde-água com teto preto, visto de frente em três quartos sob a cobertura de um posto de combustível em São Paulo, com rodas pretas"></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-rosso">Flagras · 6 de novembro de 2026</p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-rosso sm:mt-3 sm:text-3xl">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
+              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 6 de novembro de 2026</span></p>
+              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Lotus Emeya 900, o Hyper-GT elétrico de 918 cv, flagrado em São Paulo</h3>
               <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
             </div>
           </a>
@@ -426,14 +502,14 @@
     })();
   </script>
 
-  <footer class="bg-black text-white">
+  <footer class="filete-topo-eb bg-carbon text-white">
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
       <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
-        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-rosso">Revista</a><a href="/censo/" class="hover:text-rosso">Censo EB</a><a href="/#metodologia" class="hover:text-rosso">Metodologia</a><a href="/imprensa/" class="hover:text-rosso">Imprensa</a><a href="/#comercial" class="hover:text-rosso">Anuncie</a><a href="/rss.xml" class="hover:text-rosso">RSS</a></p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-amarelo">Revista</a><a href="/censo/" class="hover:text-amarelo">Censo EB</a><a href="/#metodologia" class="hover:text-amarelo">Metodologia</a><a href="/imprensa/" class="hover:text-amarelo">Imprensa</a><a href="/#comercial" class="hover:text-amarelo">Anuncie</a><a href="/rss.xml" class="hover:text-amarelo">RSS</a></p>
         <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
-        <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-rosso">@exoticsbrazil</a></p>
-        <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-rosso">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>
+        <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-amarelo">@exoticsbrazil</a></p>
+        <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-amarelo">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>
       </div>
     </div>
   </footer>
