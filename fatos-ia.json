@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-08",
-  "total": 155,
+  "total": 156,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -700,6 +700,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-08",
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/"
+    },
+    {
+      "id": "materia-ferrari-f40-museu-carde-raduno-ferrari-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari F40 do acervo do Museu CARDE, em Campos do Jordão (SP), é uma das duas F40 do Brasil e largou de placa verde, com escolta, entre 64 Ferraris no Raduno Ferrari 2026, em São Paulo (SP). O V8 2.9 biturbo entrega 478 cv em um carro de 1.100 kg, e a F40 foi o último modelo aprovado pessoalmente por Enzo Ferrari.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-08",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-f40-museu-carde-raduno-ferrari-sao-paulo/"
     },
     {
       "id": "materia-ferrari-812-competizione-sao-carlos",
