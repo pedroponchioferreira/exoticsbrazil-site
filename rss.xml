@@ -6,8 +6,46 @@
     <atom:link href="https://www.exoticsbrazil.com.br/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil (@exoticsbrazil), que mantém o Censo EB.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 08 Nov 2026 12:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 20:00:00 -0300</lastBuildDate>
     <image><url>https://www.exoticsbrazil.com.br/assets/img/identidade/icone-192.png</url><title>Revista Exotics Brazil</title><link>https://www.exoticsbrazil.com.br/revista/</link></image>
+    <item>
+      <title>Ferrari 296 Speciale tem 275cv a mais que a 458 Speciale, com dois cilindros a menos, e já roda em São Paulo</title>
+      <link>https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/</link>
+      <guid isPermaLink="true">https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/</guid>
+      <pubDate>Sun, 08 Nov 2026 20:00:00 -0300</pubDate>
+      <dc:creator>Pedro Ponchio</dc:creator>
+      <category>Flagras</category>
+      <description>Com 880cv, 1.410 kg a seco e suspensão mais rígida, a 296 Speciale mexe no V6 híbrido em vez de trocá-lo, e chega a São Paulo vestida de carbono, vermelho e amarelo.</description>
+      <enclosure url="https://www.exoticsbrazil.com.br/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-17.jpg" length="525354" type="image/jpeg"/>
+      <content:encoded><![CDATA[<p>A Ferrari 296 Speciale vermelha que apareceu em São Paulo chega com a credencial mais incômoda que um supercarro pode ter no Brasil, a de ser a versão de pista de um modelo que o brasileiro comprou como nenhum outro da marca. Somando todas as variações, a 296 já passou o 458 e se tornou a Ferrari mais vendida do país, posto que durante anos pertenceu ao 458, e a Speciale é o capítulo que fecha a família.</p>
+<h2>A crônica do flagra</h2>
+<p>Nas fotos, a unidade aparece parada em uma loja, com o capô de carbono preto, as três saídas de ar de cada lado do capô, as pinças amarelas atrás de rodas forjadas pretas e uma traseira cheia de carbono, do difusor ao para-choque. Por dentro, bancos de concha de carbono com cinto e faixas amarelas, volante de carbono e painel em Alcantara com costura amarela. A plaqueta de personalização fala em equipamento especial, pintura de quatro camadas e Alcantara Nero no interior, e lista item por item o que a unidade tem de carbono.</p>
+<h2>Engenharia explicada</h2>
+<p>A Speciale mexe no que o 296 já tinha em vez de trocar tudo. O motor segue sendo o V6 de 3.0 litros e ângulo de 120 graus com dois turbos, que rende 700cv sozinho, e o motor elétrico soma mais 180cv para chegar aos 880cv combinados, o maior número que a própria Ferrari registra em um carro de produção de tração traseira. Para aguentar, a biela é de titânio, o pistão é reforçado, o virabrequim é aliviado e os mapas de motor e de turbo vêm do 296 Challenge, o carro de corrida de monomarca da casa.</p>
+<p>O chassi acompanha. São 1.410 kg a seco, 60 kg a menos que a 296 GTB, com suspensão mais rígida e menor rolagem, e a aerodinâmica inspirada no Challenge entrega cerca de 20% mais downforce. O câmbio é de dupla embreagem com oito marchas, a tração é traseira e a bateria de 7,45 kWh permite rodar até 25 km só no elétrico. O torque do V6 chega a 77,0 kgfm, e o 0 a 100 km/h sai em 2,8 segundos.</p>
+<h2>História e bastidores</h2>
+<p>Quando a Ferrari revelou o 296 GTB, em 24 de junho de 2021, o V6 híbrido que a marca escolheu para o modelo dividiu a opinião de parte do público. Os 830cv e a tração traseira calaram boa parte da reclamação, e a pergunta seguinte já era quando viria a versão especial. O nome escolhido repete o Speciale do 458, apresentado em 2013, e a comparação entre as duas diz muito sobre o caminho da marca. A 458 Speciale tinha 605cv de um V8 aspirado que girava até 9.000 rpm e pesava 1.290 kg a seco. A 296 Speciale tem 275cv a mais com dois cilindros a menos, e os 120 kg de diferença na balança são do conjunto elétrico completo, não de uma bateria isolada.</p>
+<h2>O contexto no mercado brasileiro</h2>
+<p>A 296 virou a Ferrari mais vendida do país, e a Speciale mostra para onde o gosto do comprador foi depois da versão de linha. O 458, que já foi o modelo da Ferrari mais vendido do país, tem o seu lugar no <a href="https://www.exoticsbrazil.com.br/censo/#ferrari-458-italia-cupe">Censo EB</a>, e a vizinha de pauta mais recente do portal é a <a href="https://www.exoticsbrazil.com.br/revista/ferrari-812-competizione-sao-carlos/">Ferrari 812 Competizione</a>, outro carro de série especial que a marca fez para quem quer a versão mais radical.</p>
+<aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: Ferrari 296 Speciale">
+  <p class="flex items-center justify-between gap-3 bg-ink px-4 py-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-white"><span>Ficha técnica</span><span class="text-rosso">Censo EB</span></p>
+  <p class="px-4 pt-4 font-display text-2xl font-black uppercase leading-none tracking-tight text-ink">Ferrari 296 Speciale</p>
+  <dl class="px-4 pb-3 pt-2 font-mono text-[13px] leading-snug">
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Motor</dt><dd class="text-right">V6 3.0L 120° biturbo</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência (combustão)</dt><dd class="text-right">700cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência elétrica</dt><dd class="text-right">180cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Potência combinada</dt><dd class="text-right">880cv</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Torque</dt><dd class="text-right">77,0 kgfm</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">0-100km/h</dt><dd class="text-right">2,8s</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Vel. Máxima</dt><dd class="text-right">&gt;330km/h</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Peso (a seco)</dt><dd class="text-right">1.410kg</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Tração</dt><dd class="text-right">Traseira</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Câmbio</dt><dd class="text-right">DCT 8 velocidades</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Produção</dt><dd class="text-right">2025–presente</dd></div>
+    <div class="flex justify-between gap-4 py-2"><dt class="shrink-0 font-medium text-rosso">Peso/Potência</dt><dd class="text-right font-medium text-rosso">1,60kg/cv</dd></div>
+  </dl>
+</aside>]]></content:encoded>
+    </item>
     <item>
       <title>Ferrari 812 Competizione em Rosso Magma com azul por todo lado, uma das 16 do Brasil, em São Carlos</title>
       <link>https://www.exoticsbrazil.com.br/revista/ferrari-812-competizione-sao-carlos/</link>

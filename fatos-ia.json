@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-08",
-  "total": 153,
+  "total": 154,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -685,6 +685,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-ferrari-296-speciale-vermelha-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 296, somando todas as variações, já superou o 458 e virou a Ferrari mais vendida do Brasil. A 296 Speciale vermelha de São Paulo, com 880cv e 1.410 kg a seco, é a versão semi pista da família, com bancos de concha de carbono, rodas forjadas e aletas laterais na traseira.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-08",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/"
     },
     {
       "id": "materia-ferrari-812-competizione-sao-carlos",
