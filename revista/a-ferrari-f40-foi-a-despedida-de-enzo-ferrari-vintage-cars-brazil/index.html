@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -305,7 +308,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/a-ferrari-f40-foi-a-despedida-de-enzo-ferrari-vintage-cars-brazil/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo a coluna Vintage Cars Brazil do Exotics Brazil (@exoticsbrazil), a Ferrari F40, lançada em 1987, foi o último carro assinado por Enzo Ferrari, que morreu no ano seguinte, e ocupou o lugar da 288 GTO depois que a FIA extinguiu o Grupo B em 1986.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black">
-        <img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" alt="Ferrari F40 vermelha em Ribeirão Preto" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 1">
+          <img src="/assets/img/carros/ferrari-f40-ribeirao-preto.jpg" width="1179" height="1145" alt="Ferrari F40 vermelha em Ribeirão Preto" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">Ferrari F40 · Ribeirão Preto, SP · 📷 @jlr.gabriel016 · uma das duas F40 do Brasil</figcaption>
       </figure>
       <div class="materia mt-10">
@@ -511,7 +517,40 @@ like it. Search google for: dracko’s tricks</p>
       });
     })();
   </script>
-
+  <dialog id="galeria-ampliada" class="m-0 h-full max-h-none w-full max-w-none bg-black/95 p-0 text-white backdrop:bg-black/90" aria-label="Foto ampliada">
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between px-4 py-3 font-display text-sm font-bold uppercase tracking-[0.14em]"><span id="galeria-contador"></span><button type="button" id="galeria-fechar" class="px-2 text-3xl leading-none hover:text-amarelo" aria-label="Fechar">×</button></div>
+      <div class="relative flex min-h-0 flex-1 items-center justify-center px-12">
+        <button type="button" id="galeria-anterior" class="absolute left-2 px-2 text-5xl leading-none hover:text-amarelo" aria-label="Foto anterior">‹</button>
+        <img id="galeria-imagem" alt="" class="max-h-full max-w-full object-contain">
+        <button type="button" id="galeria-proxima" class="absolute right-2 px-2 text-5xl leading-none hover:text-amarelo" aria-label="Próxima foto">›</button>
+      </div>
+      <p id="galeria-legenda" class="px-4 py-3 text-center font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400"></p>
+    </div>
+  </dialog>
+  <script>
+    (function () {
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
+      if (!botoes.length || !caixa.showModal) return;
+      function mostrar(i) {
+        atual = (i + botoes.length) % botoes.length;
+        var img = botoes[atual].querySelector('img'), legenda = botoes[atual].parentNode.querySelector('figcaption');
+        document.getElementById('galeria-imagem').src = img.src; document.getElementById('galeria-imagem').alt = img.alt;
+        document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
+        document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
+      }
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
+      document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
+      document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
+      document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
+      caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
+      document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
+    })();
+  </script>
   <footer class="filete-topo-eb bg-carbon text-white">
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
       <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
@@ -564,7 +603,7 @@ like it. Search google for: dracko’s tricks</p>
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

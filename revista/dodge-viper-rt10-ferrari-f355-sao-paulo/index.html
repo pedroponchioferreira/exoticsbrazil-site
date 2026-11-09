@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -409,7 +412,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/dodge-viper-rt10-ferrari-f355-sao-paulo/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Dodge Viper RT/10 vermelho foi flagrado em São Paulo, SP, ao lado de duas Ferrari F355 da mesma cor, uma cupê e outra Spider, em registro do fotógrafo @obarbaqueviu. O Viper tem V10 de 8,0 litros aspirado e câmbio manual, e as F355 têm V8 de 3,5 litros com cinco válvulas por cilindro.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
-        <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil.jpg" width="1600" height="1999" alt="Dodge Viper RT/10 vermelho aberto ao lado de uma Ferrari F355 cupê também vermelha, vistos de frente numa rua com palmeiras e torres de igreja ao fundo, em São Paulo" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 4">
+          <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil.jpg" width="1600" height="1999" alt="Dodge Viper RT/10 vermelho aberto ao lado de uma Ferrari F355 cupê também vermelha, vistos de frente numa rua com palmeiras e torres de igreja ao fundo, em São Paulo" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">Dodge Viper RT/10 e Ferrari F355 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -463,22 +469,28 @@
 
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">3 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">4 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 3">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 4">
+              <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil.jpg" width="1600" height="1999" alt="Dodge Viper RT/10 vermelho aberto ao lado de uma Ferrari F355 cupê também vermelha, vistos de frente numa rua com palmeiras e torres de igreja ao fundo, em São Paulo" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Dodge Viper RT/10 e Ferrari F355 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 4">
               <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil-2.jpg" width="1600" height="1999" alt="Traseira de uma Ferrari F355 Spider vermelha com o Dodge Viper RT/10 vermelho logo atrás, numa rua de São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari F355 Spider e Dodge Viper RT/10 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 3">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 4">
               <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil-3.jpg" width="1549" height="1936" alt="Dodge Viper RT/10 e Ferrari F355 cupê vermelhos lado a lado, vistos por trás, num cruzamento de São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Dodge Viper RT/10 e Ferrari F355 cupê · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 3">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 4">
               <img src="/assets/img/carros/dodge-viper-rt10-ferrari-f355-sao-paulo-exotics-brazil-4.jpg" width="1548" height="1937" alt="Ferrari F355 Spider e Dodge Viper RT/10 vermelhos rodando lado a lado numa avenida de São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari F355 Spider e Dodge Viper RT/10 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
@@ -652,7 +664,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -661,12 +674,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -721,7 +737,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

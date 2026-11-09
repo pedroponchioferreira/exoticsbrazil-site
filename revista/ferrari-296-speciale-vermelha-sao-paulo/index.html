@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -395,7 +398,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/ferrari-296-speciale-vermelha-sao-paulo/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 296, somando todas as variações, já superou o 458 e virou a Ferrari mais vendida do Brasil. A 296 Speciale vermelha de São Paulo é a 8ª do país e a versão semi pista da família, com 880cv, 1.410 kg a seco e pintura Rosso Supercar, a cor de lançamento do hypercar F80.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
-        <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-17.jpg" width="1600" height="1999" alt="Ferrari 296 Speciale vermelha vista em três quartos frontal, com capô de carbono preto e tomadas de ar no capô, em loja de São Paulo" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 16">
+          <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-17.jpg" width="1600" height="1999" alt="Ferrari 296 Speciale vermelha vista em três quartos frontal, com capô de carbono preto e tomadas de ar no capô, em loja de São Paulo" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -441,94 +447,100 @@
       </aside>
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">15 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">16 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 16">
+              <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-17.jpg" width="1600" height="1999" alt="Ferrari 296 Speciale vermelha vista em três quartos frontal, com capô de carbono preto e tomadas de ar no capô, em loja de São Paulo" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-2.jpg" width="1600" height="1999" alt="Traseira da Ferrari 296 Speciale vermelha, com difusor, para-choque e aerofólio de carbono, em São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-3.jpg" width="1600" height="1999" alt="Interior da Ferrari 296 Speciale com volante de carbono, painel em Alcantara e costura amarela, em São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-4.jpg" width="1600" height="1999" alt="Bancos de concha de carbono da Ferrari 296 Speciale, com cinto e faixas amarelas e cavalinho bordado no encosto de cabeça" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="3" aria-label="Ampliar foto 4 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="4" aria-label="Ampliar foto 5 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-5.jpg" width="1600" height="1999" alt="Emblema 296 Speciale aplicado ao painel de Alcantara da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="4" aria-label="Ampliar foto 5 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="5" aria-label="Ampliar foto 6 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-6-2.jpg" width="1600" height="1999" alt="Frente da Ferrari 296 Speciale vermelha com tomadas de ar no capô e tampa de ar de carbono, em São Paulo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="5" aria-label="Ampliar foto 6 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto 7 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-7-2.jpg" width="1600" height="1999" alt="Cofre do motor da Ferrari 296 Speciale com coberturas de carbono e cabos de alta tensão laranja" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="6" aria-label="Ampliar foto 7 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto 8 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-8.jpg" width="1600" height="1999" alt="Tampa de entrada de ar em carbono na frente do para-brisa da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="7" aria-label="Ampliar foto 8 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="8" aria-label="Ampliar foto 9 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-9-2.jpg" width="1600" height="1999" alt="Plaqueta de personalização da Ferrari 296 Speciale com a lista de opcionais da unidade" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="8" aria-label="Ampliar foto 9 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="9" aria-label="Ampliar foto 10 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-10.jpg" width="1500" height="2000" alt="Roda forjada preta com aro diamantado, pinça amarela de carbono-cerâmica e pneu Michelin Pilot Sport Cup 2 da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="9" aria-label="Ampliar foto 10 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="10" aria-label="Ampliar foto 11 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-11-2.jpg" width="1500" height="2000" alt="Painel de porta de carbono da Ferrari 296 Speciale com a porta aberta" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="10" aria-label="Ampliar foto 11 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="11" aria-label="Ampliar foto 12 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-12.jpg" width="1600" height="1999" alt="Três saídas de ar no capô da Ferrari 296 Speciale vermelha" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="11" aria-label="Ampliar foto 12 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="12" aria-label="Ampliar foto 13 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-13.jpg" width="1500" height="2000" alt="Escudo Scuderia Ferrari no para-lama e roda da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="12" aria-label="Ampliar foto 13 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="13" aria-label="Ampliar foto 14 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-14.jpg" width="1600" height="1999" alt="Lanterna traseira, aleta lateral e grade de colmeia da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="13" aria-label="Ampliar foto 14 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="14" aria-label="Ampliar foto 15 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-15.jpg" width="1500" height="2000" alt="Ponteira de escapamento e cavalinho prateado na traseira de carbono da Ferrari 296 Speciale" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="14" aria-label="Ampliar foto 15 de 15">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="15" aria-label="Ampliar foto 16 de 16">
               <img src="/assets/img/carros/ferrari-296-speciale-sao-paulo-exotics-brazil-16.jpg" width="1500" height="2000" alt="Emblema Ferrari amarelo na frente da Ferrari 296 Speciale vermelha" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 296 Speciale · São Paulo, SP · 📷 <a href="https://www.instagram.com/edison_carvalho/" target="_blank" rel="noopener">@edison_carvalho</a></figcaption>
@@ -702,7 +714,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -711,12 +724,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -771,7 +787,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

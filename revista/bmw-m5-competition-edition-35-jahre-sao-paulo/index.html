@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -377,7 +380,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/bmw-m5-competition-edition-35-jahre-sao-paulo/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o BMW M5 Competition Edition 35 Jahre flagrado em São Paulo é uma de apenas duas unidades da série limitada a 350 exemplares que existem no Brasil. Lançada em 2019 para os 35 anos do M5, mantém o V8 4.4 biturbo de 625 cv do Competition e se diferencia pela pintura Frozen Dark Grey II e pelo interior dourado.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
-        <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 8">
+          <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">BMW M5 Competition Edition 35 Jahre · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -430,46 +436,52 @@
       </aside>
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">7 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">8 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 8">
+              <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil.jpg" width="1200" height="1600" alt="BMW M5 Competition Edition 35 Jahre cinza fosco visto de trás, com escapamentos quádruplos e emblema M5 competition na tampa do porta-malas, em loja de carros em São Paulo" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">BMW M5 Competition Edition 35 Jahre · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-2.jpg" width="970" height="1293" alt="Frente do BMW M5 Competition Edition 35 Jahre em cinza fosco, com grade preta e rodas em grafite" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Frente · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-3.jpg" width="1200" height="1600" alt="Roda aro 20 de raios em Y em grafite com pinça dourada do freio, no para-lama dianteiro do M5" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Roda aro 20 e pinça dourada · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-4.jpg" width="1200" height="1600" alt="Console central dourado com trama de carbono e a gravação a laser Edition 35 Jahre 1/350" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Gravação Edition 35 Jahre 1/350 · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="3" aria-label="Ampliar foto 4 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="4" aria-label="Ampliar foto 5 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-5.jpg" width="1200" height="1600" alt="Interior do M5 com volante de Alcantara, painel digital e console dourado com trama de carbono" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Interior · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="4" aria-label="Ampliar foto 5 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="5" aria-label="Ampliar foto 6 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-6.jpg" width="1200" height="1600" alt="Detalhe do emblema M5 competition e da lanterna traseira do BMW M5 em cinza fosco" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Emblema M5 competition · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="5" aria-label="Ampliar foto 6 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto 7 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-7.jpg" width="1200" height="1600" alt="Teto de fibra de carbono com trama aparente do BMW M5 Competition" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Teto de carbono · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="6" aria-label="Ampliar foto 7 de 7">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto 8 de 8">
               <img src="/assets/img/carros/bmw-m5-competition-edition-35-jahre-sao-paulo-exotics-brazil-8.jpg" width="1200" height="1600" alt="Volante com aro de Alcantara e detalhe vermelho, painel digital com o logotipo M5 e a tela central" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Volante e painel · São Paulo, SP · 📷 <a href="https://www.instagram.com/obarbaqueviu/" target="_blank" rel="noopener">@obarbaqueviu</a></figcaption>
@@ -643,7 +655,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -652,12 +665,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -712,7 +728,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -391,7 +394,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
-        <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 12">
+          <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">McLaren Artura Coupé · Boa Vista, RR · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -432,70 +438,76 @@
 
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">11 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">12 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 12">
+              <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-13.jpg" width="1500" height="1999" alt="McLaren Artura Coupé roxa, vista de frente, com as duas portas diedrais abertas para cima diante de uma parede de ripas de madeira, em Boa Vista, Roraima" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">McLaren Artura Coupé · Boa Vista, RR · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-2-2.jpg" width="1500" height="2000" alt="McLaren Artura Coupé roxa em três quartos pela frente, com palmeira, folhagem e uma obra ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">McLaren Artura Coupé · Boa Vista, RR · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-3-2.jpg" width="1500" height="2000" alt="Roda prata dianteira da McLaren Artura Coupé com pinça laranja escrita McLaren e disco de freio furado" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Detalhe da roda e da pinça · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-4-2.jpg" width="1500" height="2000" alt="Volante com aros de carbono, console do painel e display digital em português da McLaren Artura Coupé" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Volante e painel · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="3" aria-label="Ampliar foto 4 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="4" aria-label="Ampliar foto 5 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-5-2.jpg" width="1500" height="2000" alt="Soleira de carbono com o logotipo McLaren, banco e cinto de segurança coloridos vistos pela porta aberta" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Soleira e interior · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="4" aria-label="Ampliar foto 5 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="5" aria-label="Ampliar foto 6 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-6-2.jpg" width="1500" height="2000" alt="McLaren Artura Coupé roxa em três quartos pela frente, com as portas diedrais abertas, junto a uma parede de ripas de madeira" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Portas abertas · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="5" aria-label="Ampliar foto 6 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto 7 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-7-2.jpg" width="1500" height="2000" alt="Traseira da McLaren Artura Coupé com difusor de carbono, duas saídas de escape, grade em favo e o nome Artura" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Traseira · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="6" aria-label="Ampliar foto 7 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto 8 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-8-2.jpg" width="1500" height="2000" alt="Tela vertical central da McLaren Artura Coupé com menus de navegação, telefone e mídia em português" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Central multimídia · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="7" aria-label="Ampliar foto 8 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="8" aria-label="Ampliar foto 9 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-9-2.jpg" width="1500" height="2000" alt="McLaren Artura Coupé roxa com as portas diedrais abertas diante de palmeiras e de uma obra em andamento" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Cena em Boa Vista · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="8" aria-label="Ampliar foto 9 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="9" aria-label="Ampliar foto 10 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-10-2.jpg" width="1500" height="2000" alt="Banco de couro preto com friso alaranjado e logotipo McLaren em relevo no encosto" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Banco · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="9" aria-label="Ampliar foto 10 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="10" aria-label="Ampliar foto 11 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-11-2.jpg" width="1500" height="2000" alt="Soleira de carbono com o nome McLaren, roda prata e pinça laranja da McLaren Artura Coupé" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Soleira e roda · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="10" aria-label="Ampliar foto 11 de 11">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="11" aria-label="Ampliar foto 12 de 12">
               <img src="/assets/img/carros/mclaren-artura-coupe-lantana-purple-boa-vista-exotics-brazil-12-2.jpg" width="1500" height="2000" alt="Frente da McLaren Artura Coupé em ângulo baixo, com farol, entrada de ar lateral e roda prata com pinça laranja" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Frente em ângulo baixo · 📷 <a href="https://www.instagram.com/topcars_bv/" target="_blank" rel="noopener">@topcars_bv</a></figcaption>
@@ -669,7 +681,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -678,12 +691,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -738,7 +754,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

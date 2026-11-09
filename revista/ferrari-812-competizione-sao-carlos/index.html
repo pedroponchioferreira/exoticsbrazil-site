@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -382,7 +385,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/ferrari-812-competizione-sao-carlos/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 16 unidades da Ferrari 812 Competizione no Brasil, de uma série mundial de 999 cupês. A unidade de São Carlos, interior de São Paulo, usa Rosso Magma com faixa azul de filetes brancos, cofre e cabine azuis, e foi fotografada por @culturecar_aqa.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black">
-        <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-14.jpg" width="1999" height="1122" alt="Ferrari 812 Competizione em Rosso Magma, de lado, com faixa azul e branca sobre o capô e rodas escuras de dez raios, parada num posto em São Carlos, SP, com duas pessoas ao fundo" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 13">
+          <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-14.jpg" width="1999" height="1122" alt="Ferrari 812 Competizione em Rosso Magma, de lado, com faixa azul e branca sobre o capô e rodas escuras de dez raios, parada num posto em São Carlos, SP, com duas pessoas ao fundo" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -419,76 +425,82 @@
 
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">12 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">13 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 13">
+              <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-14.jpg" width="1999" height="1122" alt="Ferrari 812 Competizione em Rosso Magma, de lado, com faixa azul e branca sobre o capô e rodas escuras de dez raios, parada num posto em São Carlos, SP, com duas pessoas ao fundo" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-2-2.jpg" width="1999" height="1123" alt="Frente em três quartos da Ferrari 812 Competizione vermelha com a faixa azul e branca cruzando o capô, ao lado de uma Ferrari 458 Speciale branca num posto em São Carlos" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-3-2.jpg" width="1999" height="1123" alt="Traseira em três quartos da Ferrari 812 Competizione em movimento numa avenida de São Carlos, com o painel de aletas no lugar do vidro traseiro e o escapamento retangular" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-4-2.jpg" width="1999" height="1123" alt="Traseira da Ferrari 812 Competizione estacionada numa rotatória de São Carlos, com a faixa azul sobre as aletas do painel traseiro e o difusor escuro" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="3" aria-label="Ampliar foto 4 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="4" aria-label="Ampliar foto 5 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-5-2.jpg" width="1999" height="1123" alt="Detalhe da lanterna dupla redonda da Ferrari 812 Competizione, com duas aletas pretas do painel traseiro e uma câmera azul na faixa" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="4" aria-label="Ampliar foto 5 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="5" aria-label="Ampliar foto 6 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-6-2.jpg" width="2000" height="1125" alt="Cofre aberto da Ferrari 812 Competizione, com o V12 de tampas vermelhas, as caixas de ar em carbono azul e o cofre todo em azul" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="5" aria-label="Ampliar foto 6 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto 7 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-7-2.jpg" width="1999" height="1123" alt="Painel em Alcantara preto da Ferrari 812 Competizione com o emblema 812 competizione e costuras azuis" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="6" aria-label="Ampliar foto 7 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto 8 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-8-2.jpg" width="1999" height="1123" alt="Painel traseiro da Ferrari 812 Competizione visto de cima, com a faixa azul de filetes brancos, as aletas, a câmera azul e a inscrição Ferrari" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="7" aria-label="Ampliar foto 8 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="8" aria-label="Ampliar foto 9 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-9-2.jpg" width="1999" height="1123" alt="Tela do painel da Ferrari 812 Competizione exibindo o logotipo 812 competizione, com o volante em carbono azul ao lado" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="8" aria-label="Ampliar foto 9 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="9" aria-label="Ampliar foto 10 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-10-2.jpg" width="1999" height="1123" alt="Volante da Ferrari 812 Competizione em couro preto e carbono azul, com as aletas do câmbio azuis, costuras azuis e o botão vermelho de partida" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="9" aria-label="Ampliar foto 10 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="10" aria-label="Ampliar foto 11 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-11-2.jpg" width="2000" height="1125" alt="Soleira com o nome Ferrari e banco azul acolchoado da Ferrari 812 Competizione, vistos pela porta aberta" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="10" aria-label="Ampliar foto 11 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="11" aria-label="Ampliar foto 12 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-12-2.jpg" width="1999" height="1123" alt="Traseira da Ferrari 812 Competizione ao lado da traseira de uma Ferrari 458 Speciale branca com rodas douradas, numa rua de São Carlos" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="11" aria-label="Ampliar foto 12 de 12">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="12" aria-label="Ampliar foto 13 de 13">
               <img src="/assets/img/carros/ferrari-812-competizione-sao-carlos-exotics-brazil-13-2.jpg" width="1999" height="1122" alt="Ferrari 458 Speciale branca em primeiro plano e a Ferrari 812 Competizione vermelha dobrando a esquina logo adiante, em São Carlos" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari 812 Competizione · São Carlos, SP · 📷 <a href="https://www.instagram.com/culturecar_aqa/" target="_blank" rel="noopener">@culturecar_aqa</a></figcaption>
@@ -662,7 +674,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -671,12 +684,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -731,7 +747,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);

@@ -119,6 +119,9 @@
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
     /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
     .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .numero-censo-eb { color: var(--eb-green-bright); }
     .texto-perigo-eb { color: var(--eb-status-danger); }
     /* Foto de carro: sempre no enquadramento original, nunca cortada */
@@ -430,7 +433,10 @@
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/driver-experience-top-speed-2009-limeira/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Driver Experience Top Speed, evento da Revista Driver Brasil realizado em 07/03/2009, reuniu 208 carros, número divulgado pelo organizador, num comboio de São Paulo até uma pista oval de testes em Limeira, SP. Entre eles estava um Pagani Zonda F Roadster ClubSport de carbono aparente, que veio ao Brasil para ser vendido, não encontrou comprador e voltou embora.</p></blockquote>
       </aside>
       <figure class="mt-10 border-2 border-ink bg-black">
-        <img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira" class="foto-carro">
+        <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 20">
+          <img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira" class="foto-carro">
+          <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+        </button>
         <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-600">Pagani Zonda F Roadster ClubSport · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
       </figure>
       <div class="materia mt-10">
@@ -483,118 +489,124 @@
 
 
       <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
-        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">19 fotos · toque para ampliar</p></div>
+        <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">20 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="0" aria-label="Ampliar foto 1 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="0" aria-label="Ampliar foto 1 de 20">
+              <img src="/assets/img/carros/pagani-zonda-f-roadster-clubsport-limeira-exotics-brazil-3.jpg" width="1997" height="1501" alt="Pagani Zonda com a carroceria em fibra de carbono aparente, visto de frente em três quartos numa pista de asfalto, com um cupê vermelho e uma Ferrari amarela ao fundo, no Driver Experience Top Speed de 2009 em Limeira" loading="lazy" class="foto-carro">
+            </button>
+            <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Pagani Zonda F Roadster ClubSport · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
+          </figure>
+          <figure class="mb-4 break-inside-avoid">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="1" aria-label="Ampliar foto 2 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-19.jpg" width="1999" height="1255" alt="Fila de carros esportivos de várias cores numa estrada cercada de árvores, com Ferrari vermelha e amarela conversíveis à frente" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Comboio no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="1" aria-label="Ampliar foto 2 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="2" aria-label="Ampliar foto 3 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-2-5.jpg" width="2000" height="1211" alt="Fila de esportivos pretos, vermelhos e amarelos acostada numa rodovia de pista dupla com faixa amarela, com um esportivo preto de faixa branca e verde no capô à frente" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Comboio no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="2" aria-label="Ampliar foto 3 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="3" aria-label="Ampliar foto 4 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-3-5.jpg" width="1999" height="1239" alt="Sequência de Ferrari vermelhas lado a lado numa pista de asfalto com faixa dupla amarela, com um Ford Mustang azul na ponta da fila" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferraris em fila no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="3" aria-label="Ampliar foto 4 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="4" aria-label="Ampliar foto 5 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-4-5.jpg" width="2000" height="1181" alt="Porsche Boxster preto com capota de lona numa rampa, com uma longa fila de carros ao fundo e outro Porsche preto ao lado" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Porsche Boxster no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="4" aria-label="Ampliar foto 5 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="5" aria-label="Ampliar foto 6 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-5-5.jpg" width="1999" height="1335" alt="BMW 335i cinza grafite, de traseira, ao lado de um Porsche 911 e de um Audi R8 escuros, em fila no gramado, com pessoas ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">BMW 335i, Porsche 911 e Audi R8 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="5" aria-label="Ampliar foto 6 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto 7 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-6-5.jpg" width="1999" height="1335" alt="Lamborghini Murciélago cinza escuro, visto de traseira, na pista ao lado de um Porsche 911 amarelo, com um Mercedes-Benz prateado ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Lamborghini Murciélago e Porsche 911 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="6" aria-label="Ampliar foto 7 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto 8 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-7-5.jpg" width="2000" height="1321" alt="Porsche 911 verde de rodas pretas, um 911 Cabriolet branco e um 911 amarelo em fila na pista, com dezenas de carros e pessoas ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Porsche 911 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="7" aria-label="Ampliar foto 8 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="8" aria-label="Ampliar foto 9 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-8-5.jpg" width="1997" height="1501" alt="Dois Audi R8, um vermelho e um preto, lado a lado num estacionamento de asfalto, com esportivos de várias cores ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Audi R8 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="8" aria-label="Ampliar foto 9 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="9" aria-label="Ampliar foto 10 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-9-5.jpg" width="1997" height="1501" alt="Fileira de Ferrari vermelhas vista de perto pela lateral, com o escudo amarelo do cavalinho no para-lama e rodas prateadas de cinco raios" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari F355 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="9" aria-label="Ampliar foto 10 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="10" aria-label="Ampliar foto 11 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-10-5.jpg" width="1999" height="1335" alt="Nissan GT-R prata visto de traseira numa pista de asfalto, com pessoas à esquerda e um carro branco ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Nissan GT-R no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="10" aria-label="Ampliar foto 11 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="11" aria-label="Ampliar foto 12 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-11-5.jpg" width="2000" height="1387" alt="Chevrolet Corvette amarelo à frente de uma Ferrari preta com faixas cinza no capô e de uma Ferrari vermelha ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Corvette e Ferrari no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="11" aria-label="Ampliar foto 12 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="12" aria-label="Ampliar foto 13 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-12-5.jpg" width="2000" height="1289" alt="Pessoas e carros esportivos reunidos numa pista de asfalto, com um Nissan GT-R prata, um Porsche preto e um Jaguar preto, e faixas ao fundo" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Largada no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="12" aria-label="Ampliar foto 13 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="13" aria-label="Ampliar foto 14 de 20">
               <img src="/assets/img/carros/driver-experience-2009-limeira-exotics-brazil-13-5.jpg" width="1997" height="1501" alt="Fileira de carros esportivos de traseira estacionados no gramado ao longo da pista, com tendas brancas ao fundo e céu azul" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Carros alinhados no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="13" aria-label="Ampliar foto 14 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="14" aria-label="Ampliar foto 15 de 20">
               <img src="/assets/img/carros/driver-experience-2009-estrada-bandeirantes-exotics-brazil.jpg" width="1549" height="1936" alt="Rodovia de pista dupla tomada por uma fila de esportivos parados no acostamento, com um Ford Mustang GT azul de faixas prateadas em primeiro plano, uma Ferrari amarela conversível e um Mercedes-Benz preto ao lado" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Comboio na estrada no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="14" aria-label="Ampliar foto 15 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="15" aria-label="Ampliar foto 16 de 20">
               <img src="/assets/img/carros/driver-experience-2009-estacionamento-ferrari-bmw-exotics-brazil.jpg" width="1997" height="1501" alt="Fileira de carros esportivos estacionados lado a lado num pátio, com uma Ferrari F430 vermelha em primeiro plano, uma Ferrari 360 preta e vários BMW brancos e pretos" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Ferrari e BMW no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="15" aria-label="Ampliar foto 16 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="16" aria-label="Ampliar foto 17 de 20">
               <img src="/assets/img/carros/driver-experience-2009-revista-driver-limeira-exotics-brazil-2.jpg" width="1549" height="1936" alt="Pátio de estacionamento com palmeiras e uma bandeirola vertical da Revista Driver, com um Porsche Boxster amarelo conversível, um Porsche preto, Audi R8 vermelho e preto e um Lamborghini laranja estacionados lado a lado" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Pátio da Revista Driver no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="16" aria-label="Ampliar foto 17 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="17" aria-label="Ampliar foto 18 de 20">
               <img src="/assets/img/carros/pagani-zonda-shelby-gt500-limeira-exotics-brazil-2.jpg" width="1999" height="1335" alt="Ford Mustang Shelby GT500 vermelho de faixas brancas ao lado de um Pagani Zonda em carbono aparente numa pista de asfalto, com tendas brancas ao fundo e uma fila de carros à direita" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Shelby GT500 e Pagani Zonda no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="17" aria-label="Ampliar foto 18 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="18" aria-label="Ampliar foto 19 de 20">
               <img src="/assets/img/carros/driver-experience-2009-mercedes-amg-limeira-exotics-brazil-2.jpg" width="2000" height="1333" alt="Fileira de Mercedes-Benz prateados, brancos e pretos, com um Porsche 911 branco no meio, estacionados lado a lado, com uma bandeira azul da marca ao fundo e árvores" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Mercedes-Benz no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
           </figure>
           <figure class="mb-4 break-inside-avoid">
-            <button type="button" class="galeria-foto block w-full bg-black" data-indice="18" aria-label="Ampliar foto 19 de 19">
+            <button type="button" class="galeria-foto block w-full cursor-zoom-in bg-black" data-indice="19" aria-label="Ampliar foto 20 de 20">
               <img src="/assets/img/carros/porsche-911-gt3-driver-experience-2009-limeira-exotics-brazil-2.jpg" width="1999" height="1335" alt="Porsche 911 verde de rodas pretas visto de frente, em fila no gramado ao lado da pista, com um BMW preto e um Mustang vermelho ao fundo e cartazes vermelhos" loading="lazy" class="foto-carro">
             </button>
             <figcaption class="mt-2 font-display text-[11px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-500">Porsche 911 no Driver Experience Top Speed, 2009 · Limeira, SP · 📷 <a href="https://www.instagram.com/2000stuningbr/" target="_blank" rel="noopener">@2000stuningbr</a></figcaption>
@@ -768,7 +780,8 @@
   </dialog>
   <script>
     (function () {
-      var botoes = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0;
+      var todos = Array.prototype.slice.call(document.querySelectorAll('.galeria-foto')), caixa = document.getElementById('galeria-ampliada'), atual = 0, botoes = [];
+      todos.forEach(function (b) { var i = +b.dataset.indice; if (!botoes[i]) botoes[i] = b; });
       if (!botoes.length || !caixa.showModal) return;
       function mostrar(i) {
         atual = (i + botoes.length) % botoes.length;
@@ -777,12 +790,15 @@
         document.getElementById('galeria-legenda').textContent = legenda ? legenda.textContent : '';
         document.getElementById('galeria-contador').textContent = (atual + 1) + ' / ' + botoes.length;
       }
-      botoes.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); caixa.showModal(); }); });
+      todos.forEach(function (b) { b.addEventListener('click', function () { mostrar(+b.dataset.indice); caixa.showModal(); }); });
       document.getElementById('galeria-fechar').addEventListener('click', function () { caixa.close(); });
       document.getElementById('galeria-anterior').addEventListener('click', function () { mostrar(atual - 1); });
       document.getElementById('galeria-proxima').addEventListener('click', function () { mostrar(atual + 1); });
       caixa.addEventListener('click', function (e) { if (e.target === caixa) caixa.close(); });
       document.addEventListener('keydown', function (e) { if (!caixa.open) return; if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+      var x0 = null;
+      caixa.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      caixa.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1)); }, { passive: true });
     })();
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
@@ -837,7 +853,7 @@
           : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
           : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
         if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
-        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: 'galeria_materia', pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
         if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
         if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
       }, true);
