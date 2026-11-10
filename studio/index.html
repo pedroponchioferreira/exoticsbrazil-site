@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EB Studio: tire a placa e assine a foto do carro | Exotics Brazil</title>
+  <meta name="description" content="Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.exoticsbrazil.com.br/studio/">
+  <meta name="author" content="Exotics Brazil (@exoticsbrazil)">
+  <meta name="copyright" content="Exotics Brazil (@exoticsbrazil), https://www.exoticsbrazil.com.br">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Exotics Brazil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.exoticsbrazil.com.br/studio/">
+  <meta property="og:title" content="EB Studio: tire a placa e assine a foto do carro | Exotics Brazil">
+  <meta property="og:description" content="Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* EB Studio: palco, pinos, lupa e painel. Cores só pelos tokens --eb-* do design_eb.py */
+    .st-rotulo { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; color: var(--eb-text-muted); }
+    .st-palco { position: relative; display: flex; justify-content: center; background: #05060A; border: 1px solid var(--eb-border-subtle); min-height: 200px; }
+    .st-palco canvas#st-cv { display: block; touch-action: none; cursor: crosshair; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    #st-lupa { position: absolute; top: 8px; width: 148px; height: 148px; border-radius: 50%; border: 2px solid var(--eb-yellow); box-shadow: 0 10px 34px rgba(0, 0, 0, .7); pointer-events: none; z-index: 5; }
+    .st-botao { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 44px; padding: .5rem .9rem; background: var(--eb-bg-elevated); color: var(--eb-text-primary); border: 1px solid var(--eb-border-strong); font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: .05em; text-transform: uppercase; line-height: 1.1; transition: background-color .15s, border-color .15s, color .15s; -webkit-tap-highlight-color: transparent; }
+    .st-botao:hover { border-color: var(--eb-green-border); }
+    .st-botao[aria-pressed="true"] { background: var(--eb-yellow); color: var(--eb-text-on-yellow); border-color: var(--eb-yellow); }
+    .st-botao:disabled { opacity: .45; cursor: not-allowed; }
+    .st-botao.st-perigo { color: var(--eb-status-danger); }
+    .st-grande { min-height: 56px; padding: .9rem 1.6rem; font-size: 1.35rem; }
+    .st-grupo { display: grid; gap: .5rem; }
+    .st-tres { grid-template-columns: repeat(3, minmax(0, 1fr)); } .st-dois { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .st-cartao { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); padding: 1rem; }
+    .st-cartao + .st-cartao { margin-top: .75rem; }
+    .st-campo { display: grid; grid-template-columns: 1fr; gap: .3rem; margin-top: .85rem; }
+    .st-campo label, .st-campo .st-nome { font-size: .875rem; color: var(--eb-text-body); }
+    .st-campo input[type="range"] { width: 100%; height: 32px; accent-color: var(--eb-yellow); }
+    .st-campo input[type="text"] { min-height: 44px; padding: .5rem .75rem; background: var(--eb-bg-canvas); border: 1px solid var(--eb-border-strong); color: var(--eb-text-primary); font-size: 16px; }
+    .st-marca { display: flex; align-items: center; gap: .6rem; margin-top: .85rem; font-size: .9rem; color: var(--eb-text-body); }
+    .st-marca input { width: 20px; height: 20px; accent-color: var(--eb-yellow); }
+    .st-amostra { height: 22px; border: 1px solid var(--eb-border-strong); }
+    #st-aviso { min-height: 1.5rem; font-size: .95rem; color: var(--eb-text-body); }
+    #st-aviso[data-tom="ok"] { color: var(--eb-green-bright); } #st-aviso[data-tom="alerta"] { color: var(--eb-yellow); } #st-aviso[data-tom="erro"] { color: var(--eb-status-danger); }
+    .st-fila { display: flex; gap: .5rem; overflow-x: auto; padding: .25rem 0 .5rem; }
+    .st-mini { flex: 0 0 auto; width: 64px; height: 64px; background: var(--eb-bg-elevated) center / cover no-repeat; border: 2px solid var(--eb-border-strong); color: var(--eb-text-muted); position: relative; }
+    .st-mini[aria-current="true"] { border-color: var(--eb-yellow); }
+    .st-mini::after { content: ""; position: absolute; right: 3px; top: 3px; width: 10px; height: 10px; border-radius: 50%; background: var(--eb-yellow); box-shadow: 0 0 0 2px rgba(9, 10, 15, .8); }
+    .st-mini[data-estado="pronta"]::after { background: var(--eb-green-bright); }
+    .st-privado { display: inline-flex; align-items: center; gap: .6rem; padding: .55rem .9rem; background: var(--eb-green-surface); box-shadow: inset 0 0 0 1px var(--eb-green-border); color: var(--eb-green-bright); font-weight: 600; font-size: .95rem; line-height: 1.35; text-align: left; }
+    .st-plano { display: block; width: 100%; text-align: left; padding: .7rem .8rem; background: var(--eb-bg-elevated); border: 1px solid var(--eb-border-strong); color: var(--eb-text-body); min-height: 44px; }
+    .st-plano strong { display: block; font-family: "Barlow Condensed", Impact, sans-serif; font-size: 1.2rem; letter-spacing: .04em; text-transform: uppercase; color: var(--eb-text-primary); line-height: 1.1; }
+    .st-plano span { font-size: .8rem; line-height: 1.3; display: block; margin-top: .2rem; }
+    .st-plano[aria-pressed="true"] { border-color: var(--eb-yellow); box-shadow: inset 3px 0 0 var(--eb-yellow); }
+    #st-solta { position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; background: rgba(9, 10, 15, .88); border: 3px dashed var(--eb-yellow); pointer-events: none; }
+    #st-solta[hidden], #st-lupa[hidden] { display: none; }
+    @media (min-width: 1024px) { .st-area { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; gap: 1.5rem; align-items: start; } .st-coluna { position: sticky; top: 5.5rem; max-height: calc(100vh - 6.5rem); overflow-y: auto; padding-right: 2px; } }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/identidade/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/identidade/favicon-16x16.png?v=2">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/identidade/icone-192.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/identidade/apple-touch-icon.png?v=2">
+  <link rel="alternate" type="application/rss+xml" title="Revista Exotics Brazil" href="/rss.xml">
+  <link rel="alternate" type="application/json" title="Censo EB, dados abertos" href="/censo.json">
+  <meta name="theme-color" content="#090A0F">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: {
+        carbon: { DEFAULT: '#090A0F', 2: '#11131A', 3: '#171A24' },
+        paper: { DEFAULT: '#11131A', 2: '#171A24' },
+        ink: '#F8FAFC',
+        rosso: { DEFAULT: '#10B981', dark: '#059669' },
+        verde: { DEFAULT: '#00A859', claro: '#10B981', escuro: '#059669' },
+        amarelo: { DEFAULT: '#FACC15', ouro: '#EAB308' },
+        perigo: '#F87171',
+        mblue: { light: '#4FA3DB', dark: '#1C3F94' },
+        amg: '#C4C8CE'
+      },
+      textColor: { ink: '#F8FAFC', paper: '#D1D5DB', black: '#F8FAFC', carbon: '#090A0F',
+        zinc: { 200: '#E5E7EB', 300: '#D1D5DB', 400: '#A9B4C4', 500: '#94A3B8', 600: '#94A3B8', 700: '#D1D5DB', 800: '#E5E7EB' } },
+      backgroundColor: { ink: '#171A24', white: '#11131A', rosso: { DEFAULT: '#00A859', dark: '#059669' },
+        zinc: { 200: '#171A24', 300: '#171A24', 800: '#1F2330' } },
+      borderColor: { DEFAULT: 'rgba(255,255,255,0.15)', ink: 'rgba(255,255,255,0.15)', black: 'rgba(255,255,255,0.15)', rosso: '#10B981',
+        zinc: { 300: 'rgba(255,255,255,0.08)', 400: 'rgba(255,255,255,0.15)', 500: 'rgba(255,255,255,0.24)', 700: 'rgba(255,255,255,0.15)', 800: 'rgba(255,255,255,0.08)' } },
+      divideColor: { ink: 'rgba(255,255,255,0.15)', zinc: { 300: 'rgba(255,255,255,0.08)', 800: 'rgba(255,255,255,0.08)' } },
+      textDecorationColor: { rosso: '#10B981', zinc: { 300: 'rgba(255,255,255,0.15)' } },
+      fontFamily: {
+        display: ['"Barlow Condensed"', 'Impact', 'Arial Narrow', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'Consolas', 'monospace'],
+        ig: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', '"Noto Color Emoji"', 'sans-serif']
+      }
+    } } }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --eb-bg-canvas: #090A0F;
+      --eb-bg-surface: #11131A;
+      --eb-bg-elevated: #171A24;
+      --eb-bg-glass: rgba(17, 19, 26, 0.86);
+      --eb-text-primary: #F8FAFC;
+      --eb-text-body: #D1D5DB;
+      --eb-text-muted: #94A3B8;
+      --eb-border-subtle: rgba(255, 255, 255, 0.08);
+      --eb-border-strong: rgba(255, 255, 255, 0.15);
+      --eb-green: #00A859;
+      --eb-green-bright: #10B981;
+      --eb-green-hover: #059669;
+      --eb-green-surface: rgba(0, 168, 89, 0.14);
+      --eb-green-border: rgba(16, 185, 129, 0.35);
+      --eb-yellow: #FACC15;
+      --eb-yellow-warm: #EAB308;
+      --eb-yellow-surface: rgba(250, 204, 21, 0.12);
+      --eb-yellow-border: rgba(250, 204, 21, 0.38);
+      --eb-text-on-yellow: #090A0F;
+      --eb-gradient-signature: linear-gradient(90deg, #00A859 0%, #10B981 55%, #FACC15 100%);
+      --eb-status-danger: #F87171;
+    }
+    html, body { background: var(--eb-bg-canvas); color: var(--eb-text-body); }
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
+    :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
+    ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
+    .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+    .filete-eb, .filete-topo-eb { position: relative; }
+    .filete-eb::after, .filete-topo-eb::before { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: var(--eb-gradient-signature); pointer-events: none; }
+    .filete-eb::after { bottom: 0; } .filete-topo-eb::before { top: 0; }
+    .assinatura-eb { background: var(--eb-gradient-signature); }
+    /* Selos: amarelo sólido sempre com texto carbono em negrito; verde tonal para dado e Censo */
+    .selo-amarelo-eb { background: var(--eb-yellow); color: var(--eb-text-on-yellow); font-weight: 800; }
+    .selo-verde-eb { background: var(--eb-green-surface); color: var(--eb-green-bright); box-shadow: inset 0 0 0 1px var(--eb-green-border); }
+    .selo-editor-eb { background: var(--eb-yellow-surface); color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
+    .editoria-verde-eb { color: var(--eb-green-bright); } .editoria-amarela-eb { color: var(--eb-yellow); }
+    /* Botão primário institucional: Verde EB, texto branco em negrito, brilho esmeralda no hover */
+    .botao-verde-eb { background: var(--eb-green); color: #fff; font-weight: 700; transition: background-color .2s, box-shadow .2s; }
+    /* Branco sobre #00A859 dá 3,1:1, então o texto do botão fica sempre no porte de texto grande (WCAG AA) */
+    .botao-verde-eb.text-lg, .botao-verde-eb.text-base, .botao-verde-eb.text-sm { font-size: 1.1875rem; line-height: 1.6rem; }
+    .botao-verde-eb:hover, .botao-verde-eb:focus-visible { background: var(--eb-green-hover); color: #fff; box-shadow: 0 0 0 1px var(--eb-green-border), 0 0 22px rgba(16, 185, 129, 0.35); }
+    /* Cartões da Revista: superfície que sobe e acende a borda no hover */
+    .cartao-revista { transition: background-color .2s, border-color .2s; }
+    a.cartao-revista:hover, a.cartao-revista:focus-visible { background: var(--eb-bg-elevated); border-color: rgba(16, 185, 129, 0.4); }
+    .superficie-eb { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); }
+    /* Resumo da Apuração EB e citações: filete Amarelo Solar sobre superfície elevada */
+    .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
+    /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
+    .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Selo de ampliar na foto de capa da matéria */
+    .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
+    .numero-censo-eb { color: var(--eb-green-bright); }
+    .texto-perigo-eb { color: var(--eb-status-danger); }
+    /* Foto de carro: sempre no enquadramento original, nunca cortada */
+    .foto-carro { display: block; width: 100%; height: auto; }
+    .materia { font-size: 18px; line-height: 1.8; color: var(--eb-text-body); }
+    .materia > * + * { margin-top: 1.25rem; }
+    .materia > figure, .materia > aside { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+    .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: var(--eb-yellow); margin: 6px 12px 0 0; }
+    .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: var(--eb-text-primary); margin-top: 2.75rem; }
+    .materia h2 { font-size: 2.25rem; border-top: 2px solid var(--eb-border-strong); padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
+    .materia a { color: var(--eb-green-bright); text-decoration: underline; text-decoration-color: var(--eb-green-border); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .materia a:hover { color: var(--eb-yellow); text-decoration-color: var(--eb-yellow); }
+    .materia ul { list-style: square; padding-left: 1.4rem; } .materia ol { list-style: decimal; padding-left: 1.4rem; }
+    .materia li + li { margin-top: .4rem; }
+    .materia blockquote { border-left: 4px solid var(--eb-yellow); background: var(--eb-bg-elevated); padding: 1rem 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--eb-text-primary); }
+    .materia strong { color: var(--eb-text-primary); }
+    .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
+    .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
+    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
+    .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
+    .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
+  </style>
+  <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RV8BS7SV95');</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://www.exoticsbrazil.com.br/studio/#app",
+  "name": "EB Studio",
+  "url": "https://www.exoticsbrazil.com.br/studio/",
+  "description": "Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Qualquer navegador moderno",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "publisher": {
+    "@type": "NewsMediaOrganization",
+    "@id": "https://www.exoticsbrazil.com.br/#organization",
+    "name": "Exotics Brazil",
+    "alternateName": [
+      "@exoticsbrazil",
+      "EB"
+    ],
+    "url": "https://www.exoticsbrazil.com.br/",
+    "foundingDate": "2013-04-16",
+    "sameAs": [
+      "https://www.instagram.com/exoticsbrazil/"
+    ],
+    "logo": "https://www.exoticsbrazil.com.br/assets/img/identidade/logo-exoticsbrazil.png"
+  }
+}
+  </script>
+</head>
+<body class="bg-carbon font-sans text-ink">
+  <header class="cabecalho-eb filete-eb sticky top-0 z-50 text-white">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto object-contain sm:h-14"></a>
+      <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
+        <a href="/revista/" class="text-zinc-300 hover:text-white">Revista</a>
+        <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
+        <a href="/studio/" class="text-white">Studio</a>
+        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
+        <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="botao-verde-eb px-3 py-1 text-lg">Instagram</a>
+      </nav>
+    </div>
+  </header>
+  <main id="studio" class="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6">
+    <input id="st-arquivo" type="file" accept="image/*" multiple hidden>
+    <input id="st-arquivo-logo" type="file" accept="image/png,image/webp,image/svg+xml,image/jpeg" hidden>
+    <div id="st-solta" hidden><p class="font-display text-4xl font-black uppercase tracking-tight text-amarelo">Solte as fotos aqui</p></div>
+
+    <section id="st-inicio" class="mx-auto max-w-3xl py-8 text-center sm:py-14">
+      <p class="selo-editor-eb inline-block px-3 py-1 font-display text-sm font-bold uppercase tracking-[0.16em]">EB Studio · versão de testes</p>
+      <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-7xl">A placa sai, <span class="text-amarelo">a sua marca entra</span></h1>
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-zinc-300">Marque a placa do carro com um toque. O Studio apaga os caracteres com a luz real da foto e imprime a marca no lugar, na mesma perspectiva do para-choque. Rostos ao fundo saem com outro toque.</p>
+      <div class="mt-8 flex flex-col items-center gap-4">
+        <button type="button" data-escolher class="botao-verde-eb st-grande inline-flex items-center gap-3 font-display uppercase tracking-wide">Escolher fotos</button>
+        <p class="text-sm text-zinc-500">ou arraste, solte ou cole as fotos nesta página</p>
+        <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
+      </div>
+      <ol class="mt-12 grid gap-4 text-left sm:grid-cols-3">
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">01</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Toque na placa</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">O Studio fecha os quatro cantos sozinho. Se precisar, arraste os pinos com a lupa de precisão.</p></li>
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">02</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Escolha o acabamento</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Placa limpa com a marca, placa de showroom ou desfoque editorial.</p></li>
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">03</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Baixe em resolução máxima</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">A foto sai no tamanho original, sem metadados, pronta para postar.</p></li>
+      </ol>
+    </section>
+
+    <section id="st-app" hidden>
+      <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+        <div><p class="st-rotulo">EB Studio · versão de testes</p><h1 class="font-display text-4xl font-black uppercase leading-none tracking-tight text-white">Tratar a foto</h1></div>
+        <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
+      </div>
+      <div class="st-area">
+        <div>
+          <div class="mb-2 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+            <button type="button" class="st-botao" data-ferramenta="placa" aria-pressed="true">Placa</button>
+            <button type="button" class="st-botao" data-ferramenta="rosto" aria-pressed="false">Rostos</button>
+            <button type="button" class="st-botao sm:ml-auto" id="st-original" aria-pressed="false">Segure: ver original</button>
+            <button type="button" class="st-botao" id="st-guias" aria-pressed="true">Guias</button>
+          </div>
+          <div class="st-palco" id="st-palco"><canvas id="st-cv" aria-label="Foto em edição. Toque na placa para marcá-la."></canvas><canvas id="st-lupa" hidden aria-hidden="true"></canvas></div>
+          <p id="st-aviso" class="mt-2" role="status" aria-live="polite"></p>
+          <div class="mt-1 flex items-center gap-2">
+            <button type="button" class="st-botao" id="st-anterior" aria-label="Foto anterior">‹</button>
+            <button type="button" class="st-botao" id="st-proxima" aria-label="Próxima foto">›</button>
+            <p id="st-contador" class="st-rotulo"></p>
+            <button type="button" class="st-botao ml-auto" data-escolher>+ Fotos</button>
+          </div>
+          <div id="st-fila" class="st-fila mt-2" hidden></div>
+        </div>
+
+        <div class="st-coluna mt-5 lg:mt-0">
+          <div id="st-painel-placa">
+            <div class="st-cartao">
+              <p class="st-rotulo">Marcar a placa</p>
+              <div class="st-grupo st-dois mt-2">
+                <button type="button" class="st-botao" id="st-detectar">Detectar</button>
+                <button type="button" class="st-botao" id="st-marcar" aria-pressed="false">4 cantos</button>
+              </div>
+              <p id="st-sem-placa" class="mt-3 text-sm leading-relaxed text-zinc-400">Toque no fundo da placa, numa área lisa entre os caracteres. Em foto difícil ou placa preta, use “4 cantos”.</p>
+            </div>
+            <div id="st-com-placa" hidden>
+              <div class="st-cartao">
+                <p class="st-rotulo">Acabamento</p>
+                <div class="st-grupo st-tres mt-2">
+                  <button type="button" class="st-botao" data-modo="limpa">Limpa + marca</button>
+                  <button type="button" class="st-botao" data-modo="showroom">Showroom</button>
+                  <button type="button" class="st-botao" data-modo="blur">Desfoque</button>
+                </div>
+                <div data-so="limpa showroom" class="st-campo"><label for="st-tamanho">Tamanho da marca</label><input id="st-tamanho" type="range" min="30" max="100" data-campo="tamanho"></div>
+                <div data-so="limpa">
+                  <div class="st-campo"><label for="st-opacidade">Força da tinta</label><input id="st-opacidade" type="range" min="40" max="100" data-campo="opacidade"></div>
+                  <div class="st-campo"><label for="st-faixa">Faixa superior preservada</label><input id="st-faixa" type="range" min="0" max="45" data-campo="faixa"></div>
+                  <div class="st-campo"><label for="st-lateral">Margem lateral preservada</label><input id="st-lateral" type="range" min="0" max="15" data-campo="lateral"></div>
+                  <div class="st-campo"><label for="st-base">Margem inferior preservada</label><input id="st-base" type="range" min="0" max="25" data-campo="base"></div>
+                  <label class="st-marca"><input type="checkbox" data-campo="total"><span>Repintar o miolo inteiro (para placa suja ou muito reflexo)</span></label>
+                </div>
+                <div data-so="showroom">
+                  <p class="st-rotulo mt-4">Cor da placa</p>
+                  <div class="st-grupo st-tres mt-2">
+                    <button type="button" class="st-botao" data-estilo="carbono">Carbono</button>
+                    <button type="button" class="st-botao" data-estilo="fosco">Fosco</button>
+                    <button type="button" class="st-botao" data-estilo="branco">Branco</button>
+                  </div>
+                  <div class="st-campo"><label for="st-sombra">Luz e sombra da foto original</label><input id="st-sombra" type="range" min="0" max="100" data-campo="sombra"></div>
+                </div>
+                <p class="st-rotulo mt-4">Formato</p>
+                <div class="st-grupo st-dois mt-2">
+                  <button type="button" class="st-botao" data-formato="carro">Carro</button>
+                  <button type="button" class="st-botao" data-formato="moto">Moto</button>
+                </div>
+                <button type="button" class="st-botao st-perigo mt-4 w-full" id="st-tirar-placa">Remover esta placa da edição</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="st-painel-rosto" hidden>
+            <div class="st-cartao">
+              <p class="st-rotulo">Rostos ao fundo</p>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-400">Toque em cada rosto para borrar. Arraste o círculo para mover.</p>
+              <button type="button" class="st-botao mt-3 w-full" id="st-achar-rostos">Procurar rostos sozinho (beta)</button>
+              <div class="st-campo"><label for="st-raio-rosto">Tamanho do desfoque selecionado</label><input id="st-raio-rosto" type="range" min="8" max="160" disabled></div>
+              <button type="button" class="st-botao st-perigo mt-3 w-full" id="st-tirar-rosto" disabled>Remover este desfoque</button>
+            </div>
+          </div>
+
+          <div class="st-cartao">
+            <p class="st-rotulo">A marca que vai na placa</p>
+            <div class="st-grupo mt-2">
+              <button type="button" class="st-plano" data-plano="gratis" aria-pressed="true"><strong>Entusiasta · grátis</strong><span>Assinatura @ExoticsBrazil na placa. Até 5 fotos por vez.</span></button>
+              <button type="button" class="st-plano" data-plano="spotter" aria-pressed="false"><strong>Spotter Pro · demonstração</strong><span>O seu @ na placa, com o selo EB ao lado.</span></button>
+              <button type="button" class="st-plano" data-plano="loja" aria-pressed="false"><strong>Loja e concessionária · demonstração</strong><span>A logo da sua empresa na placa e lotes sem limite.</span></button>
+            </div>
+            <div data-plano-campos="gratis" class="st-grupo st-dois mt-3">
+              <button type="button" class="st-botao" data-marca="completa">eb + @</button>
+              <button type="button" class="st-botao" data-marca="simbolo">Só o símbolo</button>
+            </div>
+            <div data-plano-campos="spotter" hidden>
+              <div class="st-campo"><label for="st-handle">Seu @ no Instagram</label><input id="st-handle" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@seuperfil" maxlength="31"></div>
+            </div>
+            <div data-plano-campos="loja" hidden>
+              <div class="mt-3 flex items-center gap-3">
+                <img id="st-logo-atual" alt="Logo guardada neste navegador" hidden class="h-12 max-w-[9rem] bg-carbon-3 object-contain p-1">
+                <button type="button" class="st-botao flex-1" id="st-enviar-logo">Escolher logo (PNG)</button>
+              </div>
+              <label class="st-marca"><input id="st-mono" type="checkbox"><span>Logo em uma cor só, na tinta da placa</span></label>
+              <button type="button" class="st-botao st-perigo mt-3 w-full" id="st-tirar-logo">Apagar a logo deste navegador</button>
+              <p class="mt-3 text-xs leading-relaxed text-zinc-500">A logo fica guardada só neste navegador e nunca é enviada.</p>
+            </div>
+            <p class="mt-3 text-xs leading-relaxed text-zinc-500">Os planos pagos ainda não existem. Nesta fase de testes os três modos estão abertos, sem cobrança, para a gente ouvir quem usa.</p>
+          </div>
+
+          <div class="st-cartao">
+            <p class="st-rotulo">Salvar</p>
+            <div class="st-grupo mt-2">
+              <button type="button" class="botao-verde-eb st-grande font-display uppercase tracking-wide" id="st-baixar">Baixar a foto</button>
+              <button type="button" class="st-botao" id="st-compartilhar" hidden>Salvar ou compartilhar</button>
+              <button type="button" class="st-botao" id="st-baixar-tudo" hidden>Baixar em ZIP</button>
+            </div>
+            <p class="mt-3 text-xs leading-relaxed text-zinc-500">A foto sai no tamanho original, em JPG de alta qualidade e sem metadados de câmera ou localização. Confira sempre o resultado antes de publicar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+/* EB Studio: motor gráfico de placas e rostos, 100% no navegador.
+   Nenhuma foto é enviada a servidor nenhum. Tudo acontece em Canvas, na memória do aparelho.
+   Fonte em _redacao/studio/studio.js, embutida na página /studio/ pelo construir.py. */
+(function () {
+  'use strict';
+
+  // ───────────────────────── utilidades ─────────────────────────
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
+  const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+  const IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const AREA_MAX = IOS ? 16000000 : 50000000;   // limite de área de canvas do Safari do iPhone
+  const SIMBOLO = '/assets/img/identidade/simbolo-eb-branco.png';
+  const PROP_SIMBOLO = 810 / 568;
+  const evento = (nome, p) => { try { if (window.ebEvento) window.ebEvento(nome, p || {}); } catch (e) {} };
+
+  function tela(w, h) { const c = document.createElement('canvas'); c.width = Math.max(1, Math.round(w)); c.height = Math.max(1, Math.round(h)); return c; }
+  function semente(n) { let a = n >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function gauss(rnd) { let u = 0; while (u < 1e-9) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.283185307 * rnd()); }
+
+  // ───────────────────────── homografia planar (4 pontos) ─────────────────────────
+  function resolver(A, b) {
+    const n = b.length;
+    for (let i = 0; i < n; i++) {
+      let p = i;
+      for (let r = i + 1; r < n; r++) if (Math.abs(A[r][i]) > Math.abs(A[p][i])) p = r;
+      if (Math.abs(A[p][i]) < 1e-12) return null;
+      if (p !== i) { const t = A[i]; A[i] = A[p]; A[p] = t; const u = b[i]; b[i] = b[p]; b[p] = u; }
+      for (let r = i + 1; r < n; r++) {
+        const f = A[r][i] / A[i][i];
+        if (!f) continue;
+        for (let c = i; c < n; c++) A[r][c] -= f * A[i][c];
+        b[r] -= f * b[i];
+      }
+    }
+    const x = new Array(n);
+    for (let i = n - 1; i >= 0; i--) { let s = b[i]; for (let c = i + 1; c < n; c++) s -= A[i][c] * x[c]; x[i] = s / A[i][i]; }
+    return x;
+  }
+  // Matriz 3x3 que leva os quatro pontos de origem aos quatro de destino
+  function homografia(o, d) {
+    const A = [], b = [];
+    for (let i = 0; i < 4; i++) {
+      const x = o[i][0], y = o[i][1], X = d[i][0], Y = d[i][1];
+      A.push([x, y, 1, 0, 0, 0, -x * X, -y * X]); b.push(X);
+      A.push([0, 0, 0, x, y, 1, -x * Y, -y * Y]); b.push(Y);
+    }
+    const h = resolver(A, b);
+    return h ? [h[0], h[1], h[2], h[3], h[4], h[5], h[6], h[7], 1] : null;
+  }
+  function inverter(m) {
+    const a = m[0], b = m[1], c = m[2], d = m[3], e = m[4], f = m[5], g = m[6], h = m[7], i = m[8];
+    const A = e * i - f * h, B = -(d * i - f * g), C = d * h - e * g, det = a * A + b * B + c * C;
+    if (Math.abs(det) < 1e-14) return null;
+    return [A / det, (c * h - b * i) / det, (b * f - c * e) / det, B / det, (a * i - c * g) / det, (c * d - a * f) / det, C / det, (b * g - a * h) / det, (a * e - b * d) / det];
+  }
+  function proj(H, x, y) { const w = H[6] * x + H[7] * y + H[8]; return [(H[0] * x + H[1] * y + H[2]) / w, (H[3] * x + H[4] * y + H[5]) / w]; }
+  const retangulo = (W, A) => [[0, 0], [W, 0], [W, A], [0, A]];
+
+  // Leva a região da foto para o plano da placa (amostragem bilinear)
+  function retificar(reg, ox, oy, H, W, A) {
+    const s = reg.data, sw = reg.width, sh = reg.height, out = new Uint8ClampedArray(W * A * 4);
+    const h0 = H[0], h1 = H[1], h2 = H[2], h3 = H[3], h4 = H[4], h5 = H[5], h6 = H[6], h7 = H[7], h8 = H[8];
+    for (let v = 0, o = 0; v < A; v++) {
+      const vv = v + 0.5;
+      for (let u = 0; u < W; u++, o += 4) {
+        const uu = u + 0.5, w = h6 * uu + h7 * vv + h8;
+        let x = (h0 * uu + h1 * vv + h2) / w - ox - 0.5, y = (h3 * uu + h4 * vv + h5) / w - oy - 0.5;
+        x = x < 0 ? 0 : x > sw - 1.001 ? sw - 1.001 : x; y = y < 0 ? 0 : y > sh - 1.001 ? sh - 1.001 : y;
+        const xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi, i = (yi * sw + xi) * 4, j = i + sw * 4;
+        const a = (1 - fx) * (1 - fy), b = fx * (1 - fy), c = (1 - fx) * fy, d = fx * fy;
+        out[o] = s[i] * a + s[i + 4] * b + s[j] * c + s[j + 4] * d;
+        out[o + 1] = s[i + 1] * a + s[i + 5] * b + s[j + 1] * c + s[j + 5] * d;
+        out[o + 2] = s[i + 2] * a + s[i + 6] * b + s[j + 2] * c + s[j + 6] * d;
+        out[o + 3] = 255;
+      }
+    }
+    return out;
+  }
+
+  // Devolve o remendo do plano da placa para a foto, na perspectiva dos quatro cantos,
+  // com borda suavizada e mistura pela opacidade do remendo
+  function projetar(reg, ox, oy, Hi, p, W, A, esc) {
+    const d = reg.data, w = reg.width, h = reg.height;
+    const h0 = Hi[0], h1 = Hi[1], h2 = Hi[2], h3 = Hi[3], h4 = Hi[4], h5 = Hi[5], h6 = Hi[6], h7 = Hi[7], h8 = Hi[8];
+    for (let py = 0, o = 0; py < h; py++) {
+      const Y = oy + py + 0.5;
+      for (let px = 0; px < w; px++, o += 4) {
+        const X = ox + px + 0.5, ww = h6 * X + h7 * Y + h8;
+        if (ww <= 1e-9) continue;
+        const u = (h0 * X + h1 * Y + h2) / ww, v = (h3 * X + h4 * Y + h5) / ww;
+        let borda = Math.min(u, W - u, v, A - v) / esc + 0.5;
+        if (borda <= 0) continue;
+        if (borda > 1) borda = 1;
+        let x = u - 0.5, y = v - 0.5;
+        x = x < 0 ? 0 : x > W - 1.001 ? W - 1.001 : x; y = y < 0 ? 0 : y > A - 1.001 ? A - 1.001 : y;
+        const xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi, i = (yi * W + xi) * 4, j = i + W * 4;
+        const a = (1 - fx) * (1 - fy) * p[i + 3], b = fx * (1 - fy) * p[i + 7], c = (1 - fx) * fy * p[j + 3], e = fx * fy * p[j + 7];
+        const soma = a + b + c + e;
+        if (soma < 0.5) continue;
+        const al = soma / 255 * borda, k = al / soma;
+        d[o] = d[o] * (1 - al) + (p[i] * a + p[i + 4] * b + p[j] * c + p[j + 4] * e) * k;
+        d[o + 1] = d[o + 1] * (1 - al) + (p[i + 1] * a + p[i + 5] * b + p[j + 1] * c + p[j + 5] * e) * k;
+        d[o + 2] = d[o + 2] * (1 - al) + (p[i + 2] * a + p[i + 6] * b + p[j + 2] * c + p[j + 6] * e) * k;
+      }
+    }
+  }
+
+  // Desfoque de caixa separável, com borda zerada (serve de convolução normalizada)
+  function borrar(src, W, A, r, passes) {
+    let a = src, b = new Float32Array(W * A), c = new Float32Array(W * A);
+    const jan = 2 * r + 1;
+    for (let p = 0; p < (passes || 1); p++) {
+      for (let y = 0; y < A; y++) {
+        const l = y * W; let s = 0;
+        for (let x = 0; x <= r && x < W; x++) s += a[l + x];
+        for (let x = 0; x < W; x++) { b[l + x] = s / jan; const e = x + r + 1, q = x - r; if (e < W) s += a[l + e]; if (q >= 0) s -= a[l + q]; }
+      }
+      for (let x = 0; x < W; x++) {
+        let s = 0;
+        for (let y = 0; y <= r && y < A; y++) s += b[y * W + x];
+        for (let y = 0; y < A; y++) { c[y * W + x] = s / jan; const e = y + r + 1, q = y - r; if (e < A) s += b[e * W + x]; if (q >= 0) s -= b[q * W + x]; }
+      }
+      if (p === 0) a = new Float32Array(W * A);
+      a.set(c);
+    }
+    return a;
+  }
+  function otsu(hist, total) {
+    let soma = 0; for (let i = 0; i < 256; i++) soma += i * hist[i];
+    let sB = 0, wB = 0, melhor = 0, t = 127;
+    for (let i = 0; i < 256; i++) {
+      wB += hist[i]; if (!wB) continue; const wF = total - wB; if (!wF) break;
+      sB += i * hist[i]; const mB = sB / wB, mF = (soma - sB) / wF, v = wB * wF * (mB - mF) * (mB - mF);
+      if (v > melhor) { melhor = v; t = i; }
+    }
+    return t;
+  }
+
+  // ───────────────────────── a assinatura que vai na placa ─────────────────────────
+  const imagens = { simbolo: null, loja: null };
+  const cacheTinta = new Map();
+  function tingir(img, chave, tinta, tudo) {
+    const k = chave + '|' + tinta.join(',') + '|' + (tudo ? 1 : 0);
+    if (cacheTinta.has(k)) return cacheTinta.get(k);
+    const c = tela(img.naturalWidth || img.width, img.naturalHeight || img.height), x = c.getContext('2d');
+    x.drawImage(img, 0, 0);
+    const d = x.getImageData(0, 0, c.width, c.height), p = d.data;
+    for (let i = 0; i < p.length; i += 4) {
+      if (!p[i + 3]) continue;
+      const mx = Math.max(p[i], p[i + 1], p[i + 2]), mn = Math.min(p[i], p[i + 1], p[i + 2]);
+      if (tudo || mx - mn < 48) { p[i] = tinta[0]; p[i + 1] = tinta[1]; p[i + 2] = tinta[2]; }   // a bandeirinha verde e amarela fica como é
+    }
+    x.putImageData(d, 0, 0);
+    if (cacheTinta.size > 40) cacheTinta.clear();
+    cacheTinta.set(k, c);
+    return c;
+  }
+  function conter(x, img, bx, by, bw, bh) {
+    const iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height, k = Math.min(bw / iw, bh / ih);
+    x.drawImage(img, bx + (bw - iw * k) / 2, by + (bh - ih * k) / 2, iw * k, ih * k);
+  }
+  // Desenha a marca (EB, @ do spotter ou logo da loja) dentro da caixa, no plano reto da placa
+  function conteudo(W, A, bx, by, bw, bh, tinta, pl) {
+    const c = tela(W, A), x = c.getContext('2d'), P = prefs;
+    x.imageSmoothingQuality = 'high';
+    const k = clamp(pl.tamanho, 0.3, 1);
+    bx += bw * (1 - k) / 2; by += bh * (1 - k) / 2; bw *= k; bh *= k;
+    const cor = 'rgb(' + tinta.join(',') + ')';
+    const grupo = (texto, propTexto, propSelo, seloAntes) => {
+      const th = bh * propTexto, sh = bh * propSelo, sw = sh * PROP_SIMBOLO, vao = bh * 0.16;
+      x.font = '800 ' + th + 'px "Barlow Condensed", "Arial Narrow", Impact, sans-serif';
+      const tw = x.measureText(texto).width, total = tw + vao + sw, e = Math.min(1, bw / total);
+      x.save(); x.translate(bx + bw / 2, by + bh / 2); x.scale(e, e);
+      const selo = imagens.simbolo ? tingir(imagens.simbolo, 'eb', tinta, false) : null;
+      const xs = seloAntes ? -total / 2 : -total / 2 + tw + vao, xt = seloAntes ? -total / 2 + sw + vao : -total / 2;
+      if (selo) x.drawImage(selo, xs, -sh / 2, sw, sh);
+      x.fillStyle = cor; x.textBaseline = 'middle'; x.textAlign = 'left';
+      x.fillText(texto, xt, th * 0.045);
+      x.restore();
+    };
+    if (P.plano === 'loja' && imagens.loja) {
+      conter(x, P.logoMono ? tingir(imagens.loja, 'loja' + P.logoVersao, tinta, true) : imagens.loja, bx, by, bw, bh);
+    } else if (P.plano === 'spotter' && P.handle) {
+      grupo('@' + P.handle.replace(/^@+/, '').toUpperCase(), 0.8, 0.5, false);
+    } else if (P.marcaEB === 'simbolo') {
+      if (imagens.simbolo) conter(x, tingir(imagens.simbolo, 'eb', tinta, false), bx, by, bw, bh);
+    } else {
+      grupo('@EXOTICSBRAZIL', 0.62, 1, true);
+    }
+    return x.getImageData(0, 0, W, A).data;
+  }
+
+  // ───────────────────────── os três tratamentos da placa ─────────────────────────
+  // 1. Limpa + logo: apaga só os caracteres, com a cor e a luz reais do fundo, e imprime a marca
+  function modoLimpa(orig, W, A, pl, rnd) {
+    const n = W * A, L = new Float32Array(n), lg = new Float32Array(n), dentro = new Float32Array(n);
+    const x0 = Math.round(pl.lateral * W), x1 = W - x0, y0 = Math.round(pl.faixa * A), y1 = A - Math.round(pl.base * A);
+    const hist = new Uint32Array(256); let tot = 0;
+    for (let i = 0, o = 0; i < n; i++, o += 4) { L[i] = 0.299 * orig[o] + 0.587 * orig[o + 1] + 0.114 * orig[o + 2]; lg[i] = Math.log(L[i] + 6); }
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const i = y * W + x; dentro[i] = 1; hist[L[i] | 0]++; tot++; }
+    if (tot < 16) return new Uint8ClampedArray(n * 4);
+    const t = otsu(hist, tot); let nClaro = 0; for (let i = t + 1; i < 256; i++) nClaro += hist[i];
+    const claro = nClaro >= tot - nClaro;    // o fundo é a maioria dos pixels do miolo
+    // caractere = pixel que foge da média local da luz, na direção oposta à do fundo
+    const r1 = Math.max(3, Math.round(A * 0.2)), ml = new Float32Array(n);
+    for (let i = 0; i < n; i++) ml[i] = lg[i] * dentro[i];
+    const num = borrar(ml, W, A, r1, 2), den = borrar(dentro, W, A, r1, 2);
+    const car = new Float32Array(n); let nCar = 0, nForte = 0, tr = 0, tg = 0, tb = 0;
+    for (let i = 0; i < n; i++) {
+      if (!dentro[i]) continue;
+      const dif = (claro ? num[i] / den[i] - lg[i] : lg[i] - num[i] / den[i]);
+      if (dif > 0.2) { car[i] = 1; nCar++; if (dif > 0.45) { tr += orig[i * 4]; tg += orig[i * 4 + 1]; tb += orig[i * 4 + 2]; nForte++; } }
+    }
+    // Marca pequena cortada pela borda do miolo (o "BR" do canto, um parafuso) fica inteira, para não
+    // sobrar meia letra. Caractere grande é apagado sempre, mesmo encostado na borda.
+    if (!pl.total) {
+      const rot = new Uint8Array(n), pilha = new Int32Array(n), altMax = (y1 - y0) * 0.4;
+      for (let s = 0; s < n; s++) {
+        if (!car[s] || rot[s]) continue;
+        let topo = 0, ini = 0, toca = false, ya = A, yb = 0; pilha[topo++] = s; rot[s] = 1;
+        while (ini < topo) {
+          const i = pilha[ini++], x = i % W, y = (i / W) | 0;
+          if (y < ya) ya = y; if (y > yb) yb = y;
+          if (x <= x0 + 1 || x >= x1 - 2 || y <= y0 + 1 || y >= y1 - 2) toca = true;
+          for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { const X = x + dx, Y = y + dy; if (X < x0 || X >= x1 || Y < y0 || Y >= y1) continue; const j = Y * W + X; if (car[j] && !rot[j]) { rot[j] = 1; pilha[topo++] = j; } }
+        }
+        if (toca && yb - ya < altMax) for (let k = 0; k < topo; k++) car[pilha[k]] = 0;
+      }
+    }
+    const dil = borrar(car, W, A, Math.max(2, Math.round(A * 0.032)), 1), fundo = new Float32Array(n);
+    let nF = 0, mr = 0, mg = 0, mb = 0;
+    for (let i = 0; i < n; i++) {
+      dil[i] = dentro[i] && dil[i] > 0.0005 ? 1 : 0;
+      if (dentro[i] && !dil[i]) { fundo[i] = 1; nF++; mr += orig[i * 4]; mg += orig[i * 4 + 1]; mb += orig[i * 4 + 2]; }
+    }
+    if (!nF) { for (let i = 0; i < n; i++) if (dentro[i]) { fundo[i] = 1; nF++; mr += orig[i * 4]; mg += orig[i * 4 + 1]; mb += orig[i * 4 + 2]; } }
+    mr /= nF; mg /= nF; mb /= nF;
+    // cor do fundo em cada ponto: convolução normalizada só dos pixels de fundo (carrega sol, sombra e degradê)
+    const R = Math.max(4, Math.round(A * 0.14)), dF = borrar(fundo, W, A, R, 2), F = [null, null, null], tmp = new Float32Array(n);
+    for (let c = 0; c < 3; c++) { for (let i = 0; i < n; i++) tmp[i] = fundo[i] * orig[i * 4 + c]; F[c] = borrar(tmp, W, A, R, 2); }
+    const medias = [mr, mg, mb]; let s2 = 0, lf = 0, nl = 0;
+    for (let i = 0; i < n; i++) {
+      if (!dentro[i]) continue;
+      for (let c = 0; c < 3; c++) F[c][i] = dF[i] > 0.004 ? F[c][i] / dF[i] : medias[c];
+      const l = 0.299 * F[0][i] + 0.587 * F[1][i] + 0.114 * F[2][i]; lf += l; nl++;
+    }
+    lf /= nl;
+    // grão da própria foto, medido entre pixels vizinhos do fundo, para o fundo novo não ficar chapado
+    let nv = 0; for (let i = 0; i < n - 1; i++) if (fundo[i] && fundo[i + 1]) { const e = L[i] - L[i + 1]; s2 += e * e; nv++; }
+    const ruido = clamp(Math.sqrt(s2 / Math.max(1, nv) / 2) * 1.3, 0.4, 5);
+    const suave = Math.max(1, Math.round(A * 0.022));
+    const fa = pl.total ? dentro : borrar(dil, W, A, suave, 2);
+    // tinta: a cor média dos próprios caracteres da placa, para a marca parecer impressa com a mesma tinta
+    let tinta = claro ? [22, 24, 30] : [236, 237, 240];
+    if (nForte > tot * 0.008) tinta = [tr / nForte, tg / nForte, tb / nForte].map(Math.round);
+    const ax = (x1 - x0) * 0.05, ay = (y1 - y0) * 0.1;
+    const logo = conteudo(W, A, x0 + ax, y0 + ay, x1 - x0 - 2 * ax, y1 - y0 - 2 * ay, tinta, pl);
+    const out = new Uint8ClampedArray(n * 4), pena = Math.max(1.5, A * 0.02);
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) {
+      const i = y * W + x, o = i * 4;
+      const f = Math.min(1, fa[i] * (pl.total ? 1 : 1.6)), a = logo[o + 3] / 255 * pl.opacidade;
+      const al = 1 - (1 - f) * (1 - a);
+      if (al < 0.004) continue;
+      const g = gauss(rnd) * ruido, lz = clamp((0.299 * F[0][i] + 0.587 * F[1][i] + 0.114 * F[2][i]) / lf, 0.55, 1.5);
+      for (let c = 0; c < 3; c++) out[o + c] = ((F[c][i] + g) * f * (1 - a) + (logo[o + c] * lz + g * 0.6) * a) / al;
+      const b = Math.min(x - x0, x1 - 1 - x, y - y0, y1 - 1 - y) / pena + 0.4;
+      out[o + 3] = 255 * al * (b >= 1 ? 1 : b);
+    }
+    return out;
+  }
+
+  // 2. Showroom: troca a placa inteira por uma placa de loja, com a luz da placa original por cima
+  const ESTILOS = {
+    carbono: { fundo: [13, 14, 18], borda: [62, 66, 76], tinta: [246, 247, 249] },
+    fosco: { fundo: [38, 39, 43], borda: [92, 95, 102], tinta: [236, 236, 238] },
+    branco: { fundo: [236, 237, 240], borda: [24, 26, 32], tinta: [18, 20, 26] }
+  };
+  function modoShowroom(orig, W, A, pl, rnd) {
+    const n = W * A, e = ESTILOS[pl.estilo] || ESTILOS.carbono, c = tela(W, A), x = c.getContext('2d');
+    x.fillStyle = 'rgb(' + e.fundo.join(',') + ')'; x.fillRect(0, 0, W, A);
+    const brilho = x.createLinearGradient(0, 0, 0, A); brilho.addColorStop(0, 'rgba(255,255,255,.07)'); brilho.addColorStop(0.5, 'rgba(255,255,255,0)'); brilho.addColorStop(1, 'rgba(0,0,0,.10)');
+    x.fillStyle = brilho; x.fillRect(0, 0, W, A);
+    const m = A * 0.07, esp = Math.max(1.5, A * 0.022), rr = A * 0.09;
+    x.strokeStyle = 'rgb(' + e.borda.join(',') + ')'; x.lineWidth = esp; x.beginPath();
+    if (x.roundRect) x.roundRect(m, m, W - 2 * m, A - 2 * m, rr); else x.rect(m, m, W - 2 * m, A - 2 * m);
+    x.stroke();
+    const base = x.getImageData(0, 0, W, A).data;
+    const tinta = e.tinta, logo = conteudo(W, A, W * 0.08, A * 0.2, W * 0.84, A * 0.6, tinta, pl);
+    // luz da placa original: mapa suave de claro e escuro, mais a exposição geral da cena
+    const L = new Float32Array(n), um = new Float32Array(n).fill(1), hist = new Uint32Array(256);
+    for (let i = 0, o = 0; i < n; i++, o += 4) { L[i] = 0.299 * orig[o] + 0.587 * orig[o + 1] + 0.114 * orig[o + 2]; hist[L[i] | 0]++; }
+    const r = Math.max(4, Math.round(A * 0.28)), bl = borrar(L, W, A, r, 2), bd = borrar(um, W, A, r, 2);
+    let media = 0; for (let i = 0; i < n; i++) { bl[i] /= bd[i]; media += bl[i]; } media /= n;
+    const t = otsu(hist, n); let nC = 0, sC = 0; for (let i = t + 1; i < 256; i++) { nC += hist[i]; sC += i * hist[i]; }
+    const ganho = nC >= n - nC ? clamp((sC / nC) / 222, 0.32, 1.08) : 1, s = pl.sombra;
+    const out = new Uint8ClampedArray(n * 4);
+    for (let i = 0, o = 0; i < n; i++, o += 4) {
+      const a = logo[o + 3] / 255, luz = (1 + (clamp(bl[i] / media, 0.45, 1.6) - 1) * s) * (1 + (ganho - 1) * s), g = gauss(rnd) * 2.2;
+      for (let k = 0; k < 3; k++) out[o + k] = (base[o + k] * (1 - a) + logo[o + k] * a) * luz + g;
+      out[o + 3] = 255;
+    }
+    return out;
+  }
+
+  // 3. Desfoque editorial: mosaico grosso suavizado, que não deixa caractere nenhum recuperável
+  function modoBlur(orig, W, A) {
+    const gw = 12, gh = Math.max(4, Math.round(gw * A / W * 1.6)), g = new Float32Array(gw * gh * 4);
+    for (let y = 0; y < A; y++) { const gy = Math.min(gh - 1, (y * gh / A) | 0); for (let x = 0; x < W; x++) { const gx = Math.min(gw - 1, (x * gw / W) | 0), o = (y * W + x) * 4, k = (gy * gw + gx) * 4; g[k] += orig[o]; g[k + 1] += orig[o + 1]; g[k + 2] += orig[o + 2]; g[k + 3]++; } }
+    for (let k = 0; k < g.length; k += 4) { const q = g[k + 3] || 1; g[k] /= q; g[k + 1] /= q; g[k + 2] /= q; }
+    const out = new Uint8ClampedArray(W * A * 4);
+    for (let y = 0; y < A; y++) {
+      let fy = (y + 0.5) * gh / A - 0.5; fy = clamp(fy, 0, gh - 1.001); const yi = fy | 0, ty = fy - yi;
+      for (let x = 0; x < W; x++) {
+        let fx = (x + 0.5) * gw / W - 0.5; fx = clamp(fx, 0, gw - 1.001); const xi = fx | 0, tx = fx - xi;
+        const i = (yi * gw + xi) * 4, j = i + gw * 4, o = (y * W + x) * 4;
+        for (let c = 0; c < 3; c++) out[o + c] = (g[i + c] * (1 - tx) + g[i + 4 + c] * tx) * (1 - ty) + (g[j + c] * (1 - tx) + g[j + 4 + c] * tx) * ty;
+        out[o + 3] = 255;
+      }
+    }
+    return out;
+  }
+
+  // Calcula o remendo de uma placa: um recorte pequeno da foto, já tratado, para desenhar por cima
+  function remendoPlaca(base, pl) {
+    const prop = pl.formato === 'moto' ? 170 / 200 : 130 / 400, q0 = pl.quad;
+    const larg = Math.max(dist(q0[0], q0[1]), dist(q0[3], q0[2]), 8);
+    const W = clamp(Math.round(larg * 1.3), 120, 1500), A = Math.max(24, Math.round(W * prop));
+    const folga = pl.modo === 'blur' ? 0.07 : pl.modo === 'showroom' ? 0.03 : 0;
+    let q = q0;
+    if (folga) { const H0 = homografia(retangulo(W, A), q0); if (!H0) return null; const f = folga * A; q = [proj(H0, -f, -f), proj(H0, W + f, -f), proj(H0, W + f, A + f), proj(H0, -f, A + f)]; }
+    const H = homografia(retangulo(W, A), q), Hi = H && inverter(H);
+    if (!Hi) return null;
+    const xs = q.map(p => p[0]), ys = q.map(p => p[1]);
+    const bx = clamp(Math.floor(Math.min.apply(0, xs)) - 3, 0, base.width - 1), by = clamp(Math.floor(Math.min.apply(0, ys)) - 3, 0, base.height - 1);
+    const bw = clamp(Math.ceil(Math.max.apply(0, xs)) + 3, bx + 1, base.width) - bx, bh = clamp(Math.ceil(Math.max.apply(0, ys)) + 3, by + 1, base.height) - by;
+    if (bw * bh > 9000000) return null;
+    const reg = base.getContext('2d').getImageData(bx, by, bw, bh), orig = retificar(reg, bx, by, H, W, A);
+    const rnd = semente(Math.round(q0[0][0] * 7 + q0[0][1] * 13 + q0[2][0] * 17 + q0[2][1] * 19) + 1);
+    const p = pl.modo === 'blur' ? modoBlur(orig, W, A) : pl.modo === 'showroom' ? modoShowroom(orig, W, A, pl, rnd) : modoLimpa(orig, W, A, pl, rnd);
+    projetar(reg, bx, by, Hi, p, W, A, W / larg);
+    const c = tela(bw, bh); c.getContext('2d').putImageData(reg, 0, 0);
+    return { x: bx, y: by, w: bw, h: bh, c: c };
+  }
+
+  // Desfoque circular suave de um rosto ao fundo
+  function remendoRosto(base, r) {
+    const R = Math.max(4, r.r), x0 = Math.round(r.x - R), y0 = Math.round(r.y - R), lado = Math.round(R * 2);
+    const c = tela(lado, lado), x = c.getContext('2d'), m = tela(9, 9), mx = m.getContext('2d');
+    mx.imageSmoothingQuality = 'high'; mx.drawImage(base, x0, y0, lado, lado, 0, 0, 9, 9);
+    const m2 = tela(36, 36), m2x = m2.getContext('2d'); m2x.imageSmoothingQuality = 'high'; m2x.drawImage(m, 0, 0, 36, 36);
+    x.imageSmoothingQuality = 'high'; x.drawImage(m2, 0, 0, lado, lado);
+    const g = x.createRadialGradient(lado / 2, lado / 2, lado * 0.33, lado / 2, lado / 2, lado / 2);
+    g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    x.globalCompositeOperation = 'destination-in'; x.fillStyle = g; x.fillRect(0, 0, lado, lado);
+    return { x: x0, y: y0, w: lado, h: lado, c: c };
+  }
+
+  // ───────────────────────── detecção assistida ─────────────────────────
+  // Cresce a região a partir do toque: pega o fundo da placa e para na borda e nos caracteres
+  function crescer(tr, sx, sy) {
+    const w = tr.w, h = tr.h, d = tr.d; sx = clamp(Math.round(sx), 2, w - 3); sy = clamp(Math.round(sy), 2, h - 3);
+    let rr = 0, rg = 0, rb = 0;
+    for (let y = -2; y <= 2; y++) for (let x = -2; x <= 2; x++) { const o = ((sy + y) * w + sx + x) * 4; rr += d[o]; rg += d[o + 1]; rb += d[o + 2]; }
+    rr /= 25; rg /= 25; rb /= 25;
+    const Lr = 0.299 * rr + 0.587 * rg + 0.114 * rb, tolL = Math.max(46, Lr * 0.5), cr = rr - Lr, cb = rb - Lr;
+    const vis = new Uint8Array(w * h), pilha = new Int32Array(w * h), limite = w * h * 0.1;
+    let topo = 0, n = 0, i0 = sy * w + sx; pilha[topo++] = i0; vis[i0] = 1;
+    let aS = 1e9, bS = -1e9, aD = 1e9, bD = -1e9, tl = null, br = null, bl = null, trc = null, x0 = w, x1 = 0, y0 = h, y1 = 0;
+    const lMin = new Int32Array(h).fill(w), lMax = new Int32Array(h).fill(-1), cMin = new Int32Array(w).fill(h), cMax = new Int32Array(w).fill(-1);
+    const viz = [-1, 1, -w, w];
+    while (topo) {
+      const i = pilha[--topo], x = i % w, y = (i / w) | 0, o = i * 4, r0 = d[o], g0 = d[o + 1], b0 = d[o + 2], L0 = 0.299 * r0 + 0.587 * g0 + 0.114 * b0;
+      if (++n > limite) return null;
+      const s = x + y, df = x - y;
+      if (x < lMin[y]) lMin[y] = x; if (x > lMax[y]) lMax[y] = x; if (y < cMin[x]) cMin[x] = y; if (y > cMax[x]) cMax[x] = y;
+      if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+      if (s < aS) { aS = s; tl = [x, y]; } if (s > bS) { bS = s; br = [x, y]; }
+      if (df < aD) { aD = df; bl = [x, y]; } if (df > bD) { bD = df; trc = [x, y]; }
+      for (let k = 0; k < 4; k++) {
+        const j = i + viz[k];
+        if (j < 0 || j >= w * h || vis[j]) continue;
+        if (k < 2 && ((j / w) | 0) !== y) continue;
+        const p = j * 4, r = d[p], g = d[p + 1], b = d[p + 2], L = 0.299 * r + 0.587 * g + 0.114 * b;
+        if (Math.abs(L - L0) > 12 || Math.abs(r - r0) + Math.abs(g - g0) + Math.abs(b - b0) > 34) continue;
+        if (Math.abs(L - Lr) > tolL || Math.abs(r - L - cr) > 26 || Math.abs(b - L - cb) > 26) continue;
+        vis[j] = 1; pilha[topo++] = j;
+      }
+    }
+    if (n < 80) return null;
+    // Cantos pela interseção das quatro bordas ajustadas por reta: quina arredondada, parafuso ou
+    // letra encostada no canto não puxam o pino para dentro
+    // reta dominante por consenso: testa pares de pontos e fica com a que mais pontos aceitam
+    const reta = (ini, fim, valor) => {
+      const pts = []; for (let t = ini; t <= fim; t++) { const v = valor(t); if (v !== null) pts.push([t, v]); }
+      const m = pts.length; if (m < 6) return null;
+      const passo = Math.max(1, Math.floor(m / 40)); let melhor = null, votos = 0;
+      for (let i = 0; i < m; i += passo) for (let j = i + Math.max(3, passo); j < m; j += passo) {
+        const a = (pts[j][1] - pts[i][1]) / (pts[j][0] - pts[i][0]); if (Math.abs(a) > 0.6) continue;
+        const b = pts[i][1] - a * pts[i][0]; let k = 0;
+        for (let q = 0; q < m; q++) if (Math.abs(pts[q][1] - a * pts[q][0] - b) <= 1.05) k++;
+        if (k > votos) { votos = k; melhor = [a, b]; }
+      }
+      if (!melhor || votos < Math.max(5, m * 0.25)) return null;
+      let st = 0, sv = 0, stt = 0, stv = 0, k = 0;
+      for (const p of pts) if (Math.abs(p[1] - melhor[0] * p[0] - melhor[1]) <= 1.05) { st += p[0]; sv += p[1]; stt += p[0] * p[0]; stv += p[0] * p[1]; k++; }
+      const den = k * stt - st * st; if (Math.abs(den) < 1e-9) return melhor;
+      const a = (k * stv - st * sv) / den; return [a, (sv - a * st) / k];
+    };
+    const my = 0, mx = 0;
+    const E1 = reta(y0 + my, y1 - my, t => (lMax[t] < 0 ? null : lMin[t])), D1 = reta(y0 + my, y1 - my, t => (lMax[t] < 0 ? null : lMax[t] + 1));
+    const T1 = reta(x0 + mx, x1 - mx, t => (cMax[t] < 0 ? null : cMin[t])), B1 = reta(x0 + mx, x1 - mx, t => (cMax[t] < 0 ? null : cMax[t] + 1));
+    let quad = [tl, trc, br, bl].map(p => [p[0] + 0.5, p[1] + 0.5]);
+    if (E1 && D1 && T1 && B1) {
+      const cruza = (v, hz) => { const d = 1 - v[0] * hz[0]; if (Math.abs(d) < 1e-6) return null; const x = (v[0] * hz[1] + v[1]) / d; return [x, hz[0] * x + hz[1]]; };
+      const q = [cruza(E1, T1), cruza(D1, T1), cruza(D1, B1), cruza(E1, B1)], folga = Math.max(x1 - x0, y1 - y0) * 0.35;
+      if (q.every((p, k) => p && dist(p, quad[k]) < folga)) quad = q;
+    }
+    return { quad: quad, n: n };
+  }
+  const azul = (d, o) => d[o + 2] > 58 && d[o + 2] - d[o] > 26 && d[o + 2] - d[o + 1] > 7;
+  // Do toque até os quatro cantos da placa inteira, medindo a faixa azul do padrão Mercosul quando ela existe
+  function placaPorToque(tr, sx, sy) {
+    const c = crescer(tr, sx, sy);
+    if (!c) return null;
+    const q = c.quad, larg = Math.max(dist(q[0], q[1]), dist(q[3], q[2])), alt = Math.max(dist(q[0], q[3]), dist(q[1], q[2]));
+    if (larg < 24 || alt < 8 || larg / alt < 1.05 || larg / alt > 8) return null;
+    const area = Math.abs((q[0][0] * q[1][1] - q[1][0] * q[0][1]) + (q[1][0] * q[2][1] - q[2][0] * q[1][1]) + (q[2][0] * q[3][1] - q[3][0] * q[2][1]) + (q[3][0] * q[0][1] - q[0][0] * q[3][1])) / 2;
+    if (c.n / area < 0.4 || c.n / area > 1.15) return null;
+    const H = homografia(retangulo(1, 1), q);
+    if (!H) return null;
+    let fim = 0;
+    for (let v = -0.03; v > -0.5; v -= 0.03) {
+      let az = 0, tot = 0;
+      for (let u = 0.12; u < 0.9; u += 0.04) { const p = proj(H, u, v), x = Math.round(p[0]), y = Math.round(p[1]); if (x < 0 || y < 0 || x >= tr.w || y >= tr.h) continue; tot++; if (azul(tr.d, (y * tr.w + x) * 4)) az++; }
+      if (tot && az / tot > 0.45) fim = -v; else if (fim && -v - fim > 0.07) break;
+    }
+    const mercosul = fim > 0.1, topo = mercosul ? Math.min(fim, 0.46) + 0.025 : 0.03, lat = 0.02, pe = mercosul ? 0.055 : 0.03;
+    const quad = [proj(H, -lat, -topo), proj(H, 1 + lat, -topo), proj(H, 1 + lat, 1 + pe), proj(H, -lat, 1 + pe)];
+    return { quad: quad.map(p => [p[0] * tr.f, p[1] * tr.f]), mercosul: mercosul, larg: larg * tr.f, vazios: 1 - c.n / area, prop: larg / alt,
+      faixa: mercosul ? clamp((topo + 0.025) / (topo + 1 + pe), 0.12, 0.42) : 0.04, lateral: 0.035, base: mercosul ? 0.07 : 0.05 };
+  }
+  // O dedo quase nunca cai num ponto liso: se o toque pegar um caractere, testa os vizinhos em volta
+  function placaPerto(tr, sx, sy, raio) {
+    for (const r of [0, 0.25, 0.5, 0.75, 1]) {
+      const n = r ? 8 : 1;
+      for (let k = 0; k < n; k++) {
+        const a = k / n * 6.2832 + r * 2, p = placaPorToque(tr, sx + Math.cos(a) * r * raio, sy + Math.sin(a) * r * raio);
+        if (p && dentroQuad([sx * tr.f, sy * tr.f], p.quad)) return p;
+      }
+    }
+    return null;
+  }
+  // Busca automática: acha faixas azuis de placa Mercosul e testa o fundo logo abaixo delas
+  function detectarAuto(tr) {
+    const w = tr.w, h = tr.h, d = tr.d, vis = new Uint8Array(w * h), pilha = new Int32Array(w * h), achadas = [];
+    for (let s = 0; s < w * h; s++) {
+      if (vis[s] || !azul(d, s * 4)) continue;
+      let topo = 0, n = 0, x0 = w, x1 = 0, y0 = h, y1 = 0; pilha[topo++] = s; vis[s] = 1;
+      while (topo) {
+        const i = pilha[--topo], x = i % w, y = (i / w) | 0; n++;
+        if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+        if (x > 0 && !vis[i - 1] && azul(d, (i - 1) * 4)) { vis[i - 1] = 1; pilha[topo++] = i - 1; }
+        if (x < w - 1 && !vis[i + 1] && azul(d, (i + 1) * 4)) { vis[i + 1] = 1; pilha[topo++] = i + 1; }
+        if (y > 0 && !vis[i - w] && azul(d, (i - w) * 4)) { vis[i - w] = 1; pilha[topo++] = i - w; }
+        if (y < h - 1 && !vis[i + w] && azul(d, (i + w) * 4)) { vis[i + w] = 1; pilha[topo++] = i + w; }
+      }
+      const bw = x1 - x0 + 1, bh = y1 - y0 + 1;
+      if (bw < Math.max(16, w * 0.018) || bw / bh < 2.2 || n / (bw * bh) < 0.28 || n > w * h * 0.012) continue;
+      const cx = Math.round((x0 + x1) / 2), esp = Math.max(2, n / bw);
+      let yb = y1; for (let y = y1; y >= y0; y--) if (azul(d, (y * w + cx) * 4)) { yb = y; break; }
+      for (const k of [1.3, 2.2, 0.8, 3.2]) {
+        const sy = Math.round(yb + esp * k);
+        if (sy >= h - 3 || azul(d, (sy * w + cx) * 4)) continue;
+        const p = placaPorToque(tr, cx, sy);
+        if (p && p.mercosul && p.vazios > 0.08 && p.prop > 1.7 && p.prop < 6.5 && p.larg / tr.f > bw * 0.6 && p.larg / tr.f < bw * 1.6) { achadas.push(p); break; }
+      }
+    }
+    achadas.sort((a, b) => b.larg - a.larg);
+    const unicas = [];
+    for (const p of achadas) { const c = centro(p.quad); if (!unicas.some(u => dist(centro(u.quad), c) < u.larg * 0.5)) unicas.push(p); }
+    return unicas.slice(0, 6);
+  }
+  const centro = q => [(q[0][0] + q[1][0] + q[2][0] + q[3][0]) / 4, (q[0][1] + q[1][1] + q[2][1] + q[3][1]) / 4];
+  function ordenar(pts) {
+    const c = [pts.reduce((s, p) => s + p[0], 0) / 4, pts.reduce((s, p) => s + p[1], 0) / 4];
+    const o = pts.slice().sort((a, b) => Math.atan2(a[1] - c[1], a[0] - c[0]) - Math.atan2(b[1] - c[1], b[0] - c[0]));
+    let k = 0; for (let i = 1; i < 4; i++) if (o[i][0] + o[i][1] < o[k][0] + o[k][1]) k = i;
+    return [o[k], o[(k + 1) % 4], o[(k + 2) % 4], o[(k + 3) % 4]];
+  }
+  function dentroQuad(p, q) {
+    let s = 0;
+    for (let i = 0; i < 4; i++) { const a = q[i], b = q[(i + 1) % 4], z = (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0]); if (z === 0) continue; if (s === 0) s = z > 0 ? 1 : -1; else if ((z > 0 ? 1 : -1) !== s) return false; }
+    return true;
+  }
+
+  // Rostos: detector leve do MediaPipe, baixado só quando o botão é usado. A foto continua no aparelho.
+  let detectorRostos = null;
+  async function carregarDetector() {
+    if (detectorRostos) return detectorRostos;
+    const v = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14';
+    const mp = await import(v + '/vision_bundle.mjs');
+    const fs = await mp.FilesetResolver.forVisionTasks(v + '/wasm');
+    detectorRostos = await mp.FaceDetector.createFromOptions(fs, { baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite' }, runningMode: 'IMAGE', minDetectionConfidence: 0.45 });
+    return detectorRostos;
+  }
+  async function detectarRostos(base) {
+    const det = await carregarDetector(), W = base.width, H = base.height, achados = [];
+    // a foto inteira e depois em ladrilhos, porque rosto de fundo é pequeno demais para o detector na foto reduzida
+    const partes = [[0, 0, W, H]], nx = W >= H ? 3 : 2, ny = W >= H ? 2 : 3, lw = W / nx * 1.25, lh = H / ny * 1.25;
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) partes.push([clamp(i * W / nx - lw * 0.1, 0, W - lw), clamp(j * H / ny - lh * 0.1, 0, H - lh), lw, lh]);
+    for (const [px, py, pw, ph] of partes) {
+      const k = Math.min(1, 1024 / Math.max(pw, ph)), c = tela(pw * k, ph * k);
+      c.getContext('2d').drawImage(base, px, py, pw, ph, 0, 0, c.width, c.height);
+      const r = det.detect(c);
+      for (const dt of (r.detections || [])) { const b = dt.boundingBox; if (!b) continue; achados.push({ x: px + (b.originX + b.width / 2) / k, y: py + (b.originY + b.height / 2) / k, r: Math.max(b.width, b.height) / k * 0.78 }); }
+    }
+    const unicos = [];
+    for (const a of achados.sort((p, q) => q.r - p.r)) if (!unicos.some(u => dist([u.x, u.y], [a.x, a.y]) < u.r * 0.8)) unicos.push(a);
+    return unicos;
+  }
+
+  // ───────────────────────── estado ─────────────────────────
+  const PADRAO = { plano: 'gratis', handle: '', marcaEB: 'completa', logo: '', logoMono: false, logoVersao: 0, modo: 'limpa', estilo: 'carbono', tamanho: 0.9, opacidade: 0.92, sombra: 0.7 };
+  let prefs = Object.assign({}, PADRAO);
+  try { Object.assign(prefs, JSON.parse(localStorage.getItem('eb-studio') || '{}')); } catch (e) {}
+  const guardar = () => { try { localStorage.setItem('eb-studio', JSON.stringify(prefs)); } catch (e) { aviso('O navegador não deixou guardar suas preferências.'); } };
+  const LIMITE = { gratis: 5, spotter: 5, loja: Infinity };
+
+  const E = { itens: [], atual: -1, base: null, trab: null, vista: null, s: 1, sel: -1, selRosto: -1, ferramenta: 'placa', marcando: null, cursor: null, guias: true, original: false, arrasto: null };
+  const el = {};
+  const item = () => E.itens[E.atual];
+
+  function aviso(t, tom) { el.aviso.textContent = t || ''; el.aviso.dataset.tom = tom || ''; }
+  function novaPlaca(quad, extra) {
+    return Object.assign({ quad: quad, modo: prefs.modo, formato: 'carro', faixa: 0.27, lateral: 0.045, base: 0.09, total: false,
+      tamanho: prefs.tamanho, opacidade: prefs.opacidade, estilo: prefs.estilo, sombra: prefs.sombra, rem: null }, extra || {});
+  }
+
+  // ───────────────────────── carga da foto ─────────────────────────
+  function lerImagem(arquivo) {
+    return new Promise((ok, erro) => {
+      const url = typeof arquivo === 'string' ? arquivo : URL.createObjectURL(arquivo), img = new Image();
+      img.onload = () => { ok(img); if (typeof arquivo !== 'string') setTimeout(() => URL.revokeObjectURL(url), 1000); };
+      img.onerror = () => erro(new Error('formato'));
+      img.src = url;
+    });
+  }
+  async function montarBase(it) {
+    const img = await lerImagem(it.arquivo);
+    let w = img.naturalWidth, h = img.naturalHeight, k = 1;
+    if (w * h > AREA_MAX) { k = Math.sqrt(AREA_MAX / (w * h)); w = Math.floor(w * k); h = Math.floor(h * k); }
+    const base = tela(w, h), x = base.getContext('2d', { willReadFrequently: true });
+    x.imageSmoothingQuality = 'high'; x.drawImage(img, 0, 0, w, h);
+    if (it.w && it.w !== w) { const f = w / it.w; it.placas.forEach(p => p.quad.forEach(q => { q[0] *= f; q[1] *= f; })); it.rostos.forEach(r => { r.x *= f; r.y *= f; r.r *= f; }); }
+    it.w = w; it.h = h; it.reduzida = k < 1;
+    return base;
+  }
+  function copiaDeTrabalho(base) {
+    const f = Math.max(1, Math.max(base.width, base.height) / 1280), w = Math.round(base.width / f), h = Math.round(base.height / f), c = tela(w, h), x = c.getContext('2d', { willReadFrequently: true });
+    x.imageSmoothingQuality = 'high'; x.drawImage(base, 0, 0, w, h);
+    return { w: w, h: h, d: x.getImageData(0, 0, w, h).data, f: base.width / w };
+  }
+  async function adicionar(arquivos) {
+    const fotos = Array.from(arquivos).filter(a => typeof a === 'string' || /^image\//.test(a.type) || /\.(jpe?g|png|webp|heic|heif)$/i.test(a.name || ''));
+    if (!fotos.length) return aviso('Escolha arquivos de imagem (JPG, PNG ou WebP).', 'erro');
+    const teto = LIMITE[prefs.plano], livres = teto - E.itens.length, entram = fotos.slice(0, Math.max(0, livres));
+    if (entram.length < fotos.length) aviso('O plano gratuito trata até ' + teto + ' fotos por vez. Entraram ' + entram.length + ' de ' + fotos.length + '.', 'alerta');
+    const primeiro = E.itens.length;
+    for (const a of entram) E.itens.push({ arquivo: a, nome: typeof a === 'string' ? a.split('/').pop() : a.name, placas: [], rostos: [], w: 0, h: 0, mini: '', auto: false });
+    if (!entram.length) return;
+    el.inicio.hidden = true; el.app.hidden = false;
+    await abrir(primeiro);
+    evento('studio_fotos', { quantidade: entram.length, plano: prefs.plano });
+  }
+  async function abrir(i) {
+    if (i < 0 || i >= E.itens.length) return;
+    E.atual = i; E.sel = -1; E.selRosto = -1; E.marcando = null; E.base = null;
+    const it = item();
+    aviso('Abrindo a foto…');
+    try { E.base = await montarBase(it); } catch (e) { aviso('Não consegui abrir essa foto. Tente exportar em JPG.', 'erro'); return; }
+    E.trab = copiaDeTrabalho(E.base);
+    if (!it.mini) { const m = tela(120, 120 * it.h / it.w); m.getContext('2d').drawImage(E.base, 0, 0, m.width, m.height); it.mini = m.toDataURL('image/jpeg', 0.6); }
+    it.placas.forEach(p => { p.rem = remendoPlaca(E.base, p); });
+    it.rostos.forEach(r => { r.rem = remendoRosto(E.base, r); });
+    ajustarPalco();
+    if (!it.auto && !it.placas.length) { it.auto = true; buscarPlacas(true); } else if (it.placas.length) { E.sel = 0; aviso(''); }
+    if (it.reduzida) aviso('Foto muito grande para este aparelho: ela foi reduzida para caber na memória.', 'alerta');
+    pintarTudo();
+  }
+  function buscarPlacas(silencioso) {
+    const it = item(); if (!E.base) return;
+    const achadas = detectarAuto(E.trab);
+    if (!achadas.length) { aviso(silencioso ? 'Toque no fundo da placa para marcá-la, ou use “4 cantos”.' : 'Não achei placa sozinho nesta foto. Toque no fundo da placa, ou use “4 cantos”.', silencioso ? '' : 'alerta'); return; }
+    achadas.forEach((p, k) => { if (it.placas.some(o => dist(centro(o.quad), centro(p.quad)) < p.larg * 0.5)) return; const nova = novaPlaca(p.quad, { faixa: p.faixa, lateral: p.lateral, base: p.base }); if (k > 0 && p.larg < achadas[0].larg * 0.45) nova.modo = 'blur'; nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); });
+    E.sel = 0;
+    aviso(achadas.length === 1 ? 'Placa encontrada. Confira os quatro cantos e ajuste se precisar.' : achadas.length + ' placas encontradas. As de fundo entraram em desfoque. Confira os cantos.', 'ok');
+  }
+
+  // ───────────────────────── palco, pinos e lupa ─────────────────────────
+  function ajustarPalco() {
+    if (!E.base) return;
+    const larg = el.palco.clientWidth, teto = Math.max(240, window.innerHeight * (window.innerWidth < 1024 ? 0.58 : 0.74));
+    E.s = Math.min(larg / E.base.width, teto / E.base.height);
+    const cw = Math.round(E.base.width * E.s), ch = Math.round(E.base.height * E.s), dpr = Math.min(window.devicePixelRatio || 1, 3);
+    el.cv.style.width = cw + 'px'; el.cv.style.height = ch + 'px'; el.cv.width = Math.round(cw * dpr); el.cv.height = Math.round(ch * dpr);
+    E.vista = tela(el.cv.width, el.cv.height);
+    const x = E.vista.getContext('2d'); x.imageSmoothingQuality = 'high'; x.drawImage(E.base, 0, 0, E.vista.width, E.vista.height);
+    desenhar();
+  }
+  function desenhar() {
+    if (!E.base || !E.vista) return;
+    const it = item(), x = el.cv.getContext('2d'), k = el.cv.width / E.base.width, a = E.arrasto;
+    x.setTransform(1, 0, 0, 1, 0, 0); x.imageSmoothingQuality = 'high'; x.drawImage(E.vista, 0, 0);
+    if (!E.original) {
+      it.placas.forEach((p, i) => { if (p.rem && !(a && (a.t === 'pino' || a.t === 'placa') && a.i === i)) x.drawImage(p.rem.c, p.rem.x * k, p.rem.y * k, p.rem.w * k, p.rem.h * k); });
+      it.rostos.forEach(r => { if (r.rem) x.drawImage(r.rem.c, r.rem.x * k, r.rem.y * k, r.rem.w * k, r.rem.h * k); });
+    }
+    if (!E.guias || E.original) return;
+    const dpr = el.cv.width / parseFloat(el.cv.style.width);
+    it.placas.forEach((p, i) => {
+      const sel = i === E.sel && E.ferramenta === 'placa';
+      x.beginPath(); p.quad.forEach((q, j) => (j ? x.lineTo(q[0] * k, q[1] * k) : x.moveTo(q[0] * k, q[1] * k))); x.closePath();
+      x.lineWidth = (sel ? 2 : 1.25) * dpr; x.strokeStyle = sel ? '#FACC15' : 'rgba(16,185,129,.9)'; x.stroke();
+      if (sel) { const c = centro(p.quad); p.quad.forEach(q => { const h = alca(q, c);
+        x.beginPath(); x.moveTo(q[0] * k, q[1] * k); x.lineTo(h[0] * k, h[1] * k); x.lineWidth = 1.5 * dpr; x.strokeStyle = '#FACC15'; x.stroke();
+        x.beginPath(); x.arc(h[0] * k, h[1] * k, 10 * dpr, 0, 6.2832); x.fillStyle = 'rgba(9,10,15,.7)'; x.fill(); x.lineWidth = 2 * dpr; x.stroke();
+        x.beginPath(); x.arc(q[0] * k, q[1] * k, 2.5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill(); }); }
+    });
+    if (E.ferramenta === 'rosto') it.rostos.forEach((r, i) => { x.beginPath(); x.arc(r.x * k, r.y * k, r.r * k, 0, 6.2832); x.lineWidth = (i === E.selRosto ? 2 : 1.25) * dpr; x.strokeStyle = i === E.selRosto ? '#FACC15' : 'rgba(16,185,129,.9)'; x.stroke(); });
+    if (E.marcando) {
+      const pts = E.marcando.concat(E.cursor ? [E.cursor] : []);
+      x.beginPath(); pts.forEach((q, j) => (j ? x.lineTo(q[0] * k, q[1] * k) : x.moveTo(q[0] * k, q[1] * k))); x.lineWidth = 2 * dpr; x.strokeStyle = '#FACC15'; x.stroke();
+      pts.forEach(q => { x.beginPath(); x.arc(q[0] * k, q[1] * k, 5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill(); });
+    }
+  }
+  // A alça do pino fica para fora da placa, para o dedo nunca tapar a quina que está sendo ajustada
+  function alca(q, c) { const d = dist(q, c) || 1, f = 22 / E.s; return [q[0] + (q[0] - c[0]) / d * f, q[1] + (q[1] - c[1]) / d * f]; }
+  // Lupa de precisão: mostra a foto original ampliada sob o dedo, com a mira no centro
+  function lupa(p, ev) {
+    const L = el.lupa, lado = 148, dpr = Math.min(window.devicePixelRatio || 1, 3);
+    if (!p) { L.hidden = true; return; }
+    if (L.width !== lado * dpr) { L.width = L.height = lado * dpr; }
+    const caixa = el.cv.getBoundingClientRect(), esquerda = ev.clientX - caixa.left > caixa.width / 2 || ev.clientY - caixa.top > 190;
+    L.style.left = esquerda ? '8px' : 'auto'; L.style.right = esquerda ? 'auto' : '8px'; L.hidden = false;
+    const zoom = clamp(E.s * 4.2, 1.2, 6) * dpr, meio = L.width / 2, x = L.getContext('2d'), raio = meio / zoom;
+    x.setTransform(1, 0, 0, 1, 0, 0); x.fillStyle = '#090A0F'; x.fillRect(0, 0, L.width, L.height);
+    x.imageSmoothingEnabled = zoom < 3 * dpr;
+    x.drawImage(E.base, p[0] - raio, p[1] - raio, raio * 2, raio * 2, 0, 0, L.width, L.height);
+    const it = item(), pl = E.arrasto && E.arrasto.t === 'pino' ? it.placas[E.arrasto.i] : null, pts = pl ? pl.quad : (E.marcando ? E.marcando.concat([p]) : null);
+    if (pts && pts.length > 1) { x.beginPath(); pts.forEach((q, j) => { const X = meio + (q[0] - p[0]) * zoom, Y = meio + (q[1] - p[1]) * zoom; j ? x.lineTo(X, Y) : x.moveTo(X, Y); }); if (pl) x.closePath(); x.lineWidth = 1.5 * dpr; x.strokeStyle = 'rgba(250,204,21,.85)'; x.stroke(); }
+    x.lineWidth = 1 * dpr; x.strokeStyle = '#fff'; x.beginPath(); x.moveTo(meio - 16 * dpr, meio); x.lineTo(meio - 4 * dpr, meio); x.moveTo(meio + 4 * dpr, meio); x.lineTo(meio + 16 * dpr, meio); x.moveTo(meio, meio - 16 * dpr); x.lineTo(meio, meio - 4 * dpr); x.moveTo(meio, meio + 4 * dpr); x.lineTo(meio, meio + 16 * dpr); x.stroke();
+    x.beginPath(); x.arc(meio, meio, 1.5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill();
+  }
+  function paraFoto(ev) { const c = el.cv.getBoundingClientRect(); return [clamp((ev.clientX - c.left) / E.s, 0, E.base.width), clamp((ev.clientY - c.top) / E.s, 0, E.base.height)]; }
+
+  function aoDescer(ev) {
+    if (!E.base || (ev.button && ev.button !== 0)) return;
+    ev.preventDefault(); try { el.cv.setPointerCapture(ev.pointerId); } catch (e) {}
+    const it = item(), p = paraFoto(ev), raio = (ev.pointerType === 'mouse' ? 14 : 30) / E.s;
+    if (E.marcando) { E.arrasto = { t: 'marca' }; E.cursor = p; lupa(p, ev); desenhar(); return; }
+    if (E.ferramenta === 'rosto') {
+      const k = it.rostos.findIndex(r => dist([r.x, r.y], p) < Math.max(r.r, raio));
+      if (k >= 0) { E.selRosto = k; E.arrasto = { t: 'rosto', i: k, dx: it.rostos[k].x - p[0], dy: it.rostos[k].y - p[1] }; } else E.arrasto = { t: 'toque', cx: ev.clientX, cy: ev.clientY };
+      pintarTudo(); return;
+    }
+    let melhor = null;
+    const ordem = E.sel >= 0 ? [E.sel].concat(it.placas.map((_, i) => i).filter(i => i !== E.sel)) : it.placas.map((_, i) => i);
+    for (const i of ordem) { const c = centro(it.placas[i].quad); it.placas[i].quad.forEach((q, k) => { const d = i === E.sel ? Math.min(dist(alca(q, c), p), dist(q, p) * 1.6) : dist(q, p); if (d < raio && (!melhor || d < melhor.d)) melhor = { i: i, k: k, d: d }; }); if (melhor) break; }
+    if (melhor) { const q = it.placas[melhor.i].quad[melhor.k]; E.sel = melhor.i; E.arrasto = { t: 'pino', i: melhor.i, k: melhor.k, dx: q[0] - p[0], dy: q[1] - p[1] }; lupa(q, ev); pintarTudo(); return; }
+    if (E.sel >= 0 && dentroQuad(p, it.placas[E.sel].quad)) { E.arrasto = { t: 'placa?', i: E.sel, p0: p, q0: it.placas[E.sel].quad.map(q => q.slice()), cx: ev.clientX, cy: ev.clientY }; return; }
+    E.arrasto = { t: 'toque', cx: ev.clientX, cy: ev.clientY };
+  }
+  function aoMover(ev) {
+    const a = E.arrasto; if (!a || !E.base) return;
+    const it = item(), p = paraFoto(ev);
+    if (a.t === 'marca') { E.cursor = p; lupa(p, ev); desenhar(); }
+    else if (a.t === 'pino') { const q = it.placas[a.i].quad[a.k]; q[0] = clamp(p[0] + a.dx, 0, E.base.width); q[1] = clamp(p[1] + a.dy, 0, E.base.height); lupa(q, ev); desenhar(); }
+    else if (a.t === 'placa?' || a.t === 'placa') { if (a.t === 'placa?' && Math.hypot(ev.clientX - a.cx, ev.clientY - a.cy) < 7) return; a.t = 'placa'; it.placas[a.i].quad.forEach((q, k) => { q[0] = a.q0[k][0] + p[0] - a.p0[0]; q[1] = a.q0[k][1] + p[1] - a.p0[1]; }); desenhar(); }
+    else if (a.t === 'rosto') { const r = it.rostos[a.i]; r.x = p[0] + a.dx; r.y = p[1] + a.dy; r.rem = null; desenhar(); }
+    else if (a.t === 'toque' && Math.hypot(ev.clientX - a.cx, ev.clientY - a.cy) > 10) a.cancelado = true;
+  }
+  function aoSoltar(ev) {
+    const a = E.arrasto; E.arrasto = null; lupa(null);
+    if (!a || !E.base) return;
+    const it = item(), p = paraFoto(ev);
+    if (a.t === 'marca') {
+      E.marcando.push(p); E.cursor = null;
+      if (E.marcando.length === 4) { const nova = novaPlaca(ordenar(E.marcando)); nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); E.sel = it.placas.length - 1; E.marcando = null; aviso('Placa marcada. Arraste os pinos para acertar as quinas.', 'ok'); }
+      else aviso('Canto ' + E.marcando.length + ' de 4. Segure o dedo para ver a lupa e solte na quina.');
+    }
+    else if (a.t === 'pino' || a.t === 'placa') { const pl = it.placas[a.i]; pl.rem = remendoPlaca(E.base, pl); }
+    else if (a.t === 'rosto') { const r = it.rostos[a.i]; r.rem = remendoRosto(E.base, r); }
+    else if (a.t === 'toque' && !a.cancelado) aoTocar(p);
+    pintarTudo();
+  }
+  function aoTocar(p) {
+    const it = item();
+    if (E.ferramenta === 'rosto') { const r = { x: p[0], y: p[1], r: Math.max(14, Math.min(E.base.width, E.base.height) * 0.028) }; r.rem = remendoRosto(E.base, r); it.rostos.push(r); E.selRosto = it.rostos.length - 1; aviso('Rosto borrado. Arraste para mover e use o controle de tamanho.', 'ok'); return; }
+    const k = it.placas.findIndex(pl => dentroQuad(p, pl.quad));
+    if (k >= 0) { E.sel = k; return; }
+    const achou = placaPerto(E.trab, p[0] / E.trab.f, p[1] / E.trab.f, clamp(22 / E.s / E.trab.f, 6, 40));
+    if (!achou) { aviso('Não consegui fechar a placa nesse toque. Toque numa área lisa do fundo dela, ou use “4 cantos”.', 'alerta'); return; }
+    const nova = novaPlaca(achou.quad, { faixa: achou.faixa, lateral: achou.lateral, base: achou.base });
+    nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); E.sel = it.placas.length - 1;
+    aviso('Placa marcada. Confira os quatro cantos e ajuste se precisar.', 'ok');
+  }
+
+  // ───────────────────────── painel ─────────────────────────
+  function refazer(tudo) {
+    const it = item(); if (!it || !E.base) return;
+    (tudo ? it.placas : [it.placas[E.sel]]).forEach(p => { if (p) p.rem = remendoPlaca(E.base, p); });
+    desenhar();
+  }
+  let fila = 0;
+  const refazerLogo = tudo => { cancelAnimationFrame(fila); fila = requestAnimationFrame(() => refazer(tudo)); };
+  function pintarTudo() { desenhar(); pintarPainel(); pintarFila(); }
+  function pintarPainel() {
+    const it = item(), pl = it && it.placas[E.sel], ro = it && it.rostos[E.selRosto];
+    $$('[data-ferramenta]').forEach(b => b.setAttribute('aria-pressed', b.dataset.ferramenta === E.ferramenta));
+    el.painelPlaca.hidden = E.ferramenta !== 'placa'; el.painelRosto.hidden = E.ferramenta !== 'rosto';
+    el.semPlaca.hidden = !!pl; el.comPlaca.hidden = !pl;
+    el.marcar.setAttribute('aria-pressed', !!E.marcando);
+    el.guias.setAttribute('aria-pressed', E.guias);
+    if (pl) {
+      $$('[data-modo]').forEach(b => b.setAttribute('aria-pressed', b.dataset.modo === pl.modo));
+      $$('[data-estilo]').forEach(b => b.setAttribute('aria-pressed', b.dataset.estilo === pl.estilo));
+      $$('[data-formato]').forEach(b => b.setAttribute('aria-pressed', b.dataset.formato === pl.formato));
+      $$('[data-so]').forEach(g => { g.hidden = g.dataset.so.split(' ').indexOf(pl.modo) < 0; });
+      $$('[data-campo]').forEach(c => { if (c.type === 'checkbox') c.checked = !!pl[c.dataset.campo]; else c.value = Math.round(pl[c.dataset.campo] * 100); });
+    }
+    el.raioRosto.disabled = !ro; if (ro) el.raioRosto.value = Math.round(ro.r / Math.min(E.base.width, E.base.height) * 1000);
+    el.tirarRosto.disabled = !ro;
+    $$('[data-plano]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.plano === prefs.plano); });
+    $$('[data-plano-campos]').forEach(g => { g.hidden = g.dataset.planoCampos !== prefs.plano; });
+    $$('[data-marca]').forEach(b => b.setAttribute('aria-pressed', b.dataset.marca === prefs.marcaEB));
+    el.handle.value = prefs.handle; el.mono.checked = !!prefs.logoMono;
+    el.logoAtual.hidden = !prefs.logo; if (prefs.logo) el.logoAtual.src = prefs.logo;
+    const prontas = E.itens.filter(i => i.placas.length || i.rostos.length).length;
+    el.baixarTudo.hidden = E.itens.length < 2; el.baixarTudo.textContent = 'Baixar ' + prontas + ' de ' + E.itens.length + ' em ZIP';
+    el.baixarTudo.disabled = !prontas;
+    el.contador.textContent = E.itens.length > 1 ? 'Foto ' + (E.atual + 1) + ' de ' + E.itens.length : '';
+  }
+  function pintarFila() {
+    el.fila.hidden = E.itens.length < 2;
+    if (E.itens.length < 2) return;
+    el.fila.innerHTML = '';
+    E.itens.forEach((it, i) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'st-mini'; b.setAttribute('aria-current', i === E.atual);
+      b.setAttribute('aria-label', 'Abrir a foto ' + (i + 1) + (it.placas.length || it.rostos.length ? ', já tratada' : ', sem tratamento'));
+      b.dataset.estado = it.placas.length || it.rostos.length ? 'pronta' : 'pendente';
+      if (it.mini) b.style.backgroundImage = 'url(' + it.mini + ')'; else b.textContent = i + 1;
+      b.addEventListener('click', () => { if (i !== E.atual) abrir(i); });
+      el.fila.appendChild(b);
+    });
+  }
+
+  // ───────────────────────── exportação ─────────────────────────
+  function compor(base, it) {
+    const c = tela(base.width, base.height), x = c.getContext('2d');
+    x.drawImage(base, 0, 0);
+    it.placas.forEach(p => { const r = p.rem || remendoPlaca(base, p); if (r) x.drawImage(r.c, r.x, r.y); });
+    it.rostos.forEach(r => { const m = r.rem || remendoRosto(base, r); x.drawImage(m.c, m.x, m.y); });
+    return c;
+  }
+  const paraBlob = c => new Promise(ok => c.toBlob(ok, 'image/jpeg', 0.95));
+  const nomeSaida = it => (it.nome || 'foto').replace(/\.[a-z0-9]+$/i, '').replace(/[^\w.-]+/g, '-').slice(0, 80) + '-eb-studio.jpg';
+  function baixar(blob, nome) { const a = document.createElement('a'), u = URL.createObjectURL(blob); a.href = u; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); }
+  async function exportarAtual(compartilhar) {
+    const it = item(); if (!E.base) return;
+    if (!it.placas.length && !it.rostos.length) return aviso('Marque a placa ou um rosto antes de baixar.', 'alerta');
+    aviso('Gerando a foto em resolução máxima…');
+    const blob = await paraBlob(compor(E.base, it)), nome = nomeSaida(it);
+    if (compartilhar) {
+      const f = new File([blob], nome, { type: 'image/jpeg' });
+      if (navigator.canShare && navigator.canShare({ files: [f] })) { try { await navigator.share({ files: [f] }); aviso('Pronto.', 'ok'); } catch (e) { aviso(''); } return; }
+    }
+    baixar(blob, nome);
+    aviso('Foto salva em ' + it.w + ' × ' + it.h + ' px, sem metadados.', 'ok');
+    evento('studio_exportou', { modo: it.placas[0] ? it.placas[0].modo : 'rosto', plano: prefs.plano, placas: it.placas.length, rostos: it.rostos.length });
+  }
+  const TAB_CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(u) { let c = 0xFFFFFFFF; for (let i = 0; i < u.length; i++) c = TAB_CRC[(c ^ u[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+  // ZIP sem compressão (JPG já é comprimido), montado no próprio navegador
+  function zipar(arqs) {
+    const enc = new TextEncoder(), partes = [], central = []; let pos = 0;
+    const agora = new Date(), hora = (agora.getHours() << 11) | (agora.getMinutes() << 5) | (agora.getSeconds() >> 1), dia = ((agora.getFullYear() - 1980) << 9) | ((agora.getMonth() + 1) << 5) | agora.getDate();
+    for (const a of arqs) {
+      const nome = enc.encode(a.nome), crc = crc32(a.dados), cab = new DataView(new ArrayBuffer(30));
+      cab.setUint32(0, 0x04034b50, true); cab.setUint16(4, 20, true); cab.setUint16(6, 0x0800, true); cab.setUint16(8, 0, true); cab.setUint16(10, hora, true); cab.setUint16(12, dia, true);
+      cab.setUint32(14, crc, true); cab.setUint32(18, a.dados.length, true); cab.setUint32(22, a.dados.length, true); cab.setUint16(26, nome.length, true); cab.setUint16(28, 0, true);
+      partes.push(cab.buffer, nome, a.dados);
+      const cen = new DataView(new ArrayBuffer(46));
+      cen.setUint32(0, 0x02014b50, true); cen.setUint16(4, 20, true); cen.setUint16(6, 20, true); cen.setUint16(8, 0x0800, true); cen.setUint16(10, 0, true); cen.setUint16(12, hora, true); cen.setUint16(14, dia, true);
+      cen.setUint32(16, crc, true); cen.setUint32(20, a.dados.length, true); cen.setUint32(24, a.dados.length, true); cen.setUint16(28, nome.length, true); cen.setUint32(42, pos, true);
+      central.push(cen.buffer, nome); pos += 30 + nome.length + a.dados.length;
+    }
+    const tamC = central.reduce((s, b) => s + (b.byteLength || b.length), 0), fim = new DataView(new ArrayBuffer(22));
+    fim.setUint32(0, 0x06054b50, true); fim.setUint16(8, arqs.length, true); fim.setUint16(10, arqs.length, true); fim.setUint32(12, tamC, true); fim.setUint32(16, pos, true);
+    return new Blob(partes.concat(central, [fim.buffer]), { type: 'application/zip' });
+  }
+  async function exportarTudo() {
+    const prontas = E.itens.filter(i => i.placas.length || i.rostos.length), fora = E.itens.length - prontas.length, arqs = [], usados = {};
+    if (!prontas.length) return;
+    el.baixarTudo.disabled = true;
+    for (let k = 0; k < prontas.length; k++) {
+      const it = prontas[k];
+      aviso('Gerando ' + (k + 1) + ' de ' + prontas.length + '…');
+      const base = it === item() ? E.base : await montarBase(it);
+      const blob = await paraBlob(compor(base, it));
+      let nome = nomeSaida(it); if (usados[nome]) nome = nome.replace(/\.jpg$/, '-' + (k + 1) + '.jpg'); usados[nome] = 1;
+      arqs.push({ nome: nome, dados: new Uint8Array(await blob.arrayBuffer()) });
+      await new Promise(r => setTimeout(r, 0));
+    }
+    baixar(zipar(arqs), 'eb-studio-' + prontas.length + '-fotos.zip');
+    aviso(prontas.length + ' fotos no ZIP.' + (fora ? ' ' + fora + ' ficaram de fora porque ainda não foram tratadas.' : ''), fora ? 'alerta' : 'ok');
+    el.baixarTudo.disabled = false;
+    evento('studio_exportou_lote', { quantidade: prontas.length, plano: prefs.plano });
+  }
+
+  // ───────────────────────── ligações da interface ─────────────────────────
+  async function carregarLogoLoja() {
+    imagens.loja = null;
+    if (prefs.logo) { try { imagens.loja = await lerImagem(prefs.logo); } catch (e) { prefs.logo = ''; } }
+  }
+  async function iniciar() {
+    ['inicio', 'app', 'palco', 'cv', 'lupa', 'aviso', 'painelPlaca', 'painelRosto', 'semPlaca', 'comPlaca', 'marcar', 'guias', 'raioRosto', 'tirarRosto', 'handle', 'mono', 'logoAtual', 'baixarTudo', 'contador', 'fila', 'arquivo', 'arquivoLogo', 'solta']
+      .forEach(n => { el[n] = document.getElementById('st-' + n.replace(/[A-Z]/g, m => '-' + m.toLowerCase())); });
+    try { imagens.simbolo = await lerImagem(SIMBOLO); } catch (e) {}
+    try { if (document.fonts && document.fonts.load) await document.fonts.load('800 40px "Barlow Condensed"'); } catch (e) {}
+    await carregarLogoLoja();
+
+    $$('[data-escolher]').forEach(b => b.addEventListener('click', () => el.arquivo.click()));
+    el.arquivo.addEventListener('change', () => { adicionar(el.arquivo.files); el.arquivo.value = ''; });
+    ['dragenter', 'dragover'].forEach(n => document.addEventListener(n, e => { if (e.dataTransfer && Array.from(e.dataTransfer.types || []).indexOf('Files') >= 0) { e.preventDefault(); el.solta.hidden = false; } }));
+    ['dragleave', 'drop'].forEach(n => document.addEventListener(n, e => { if (n === 'drop' || !e.relatedTarget) el.solta.hidden = true; }));
+    document.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) { e.preventDefault(); adicionar(e.dataTransfer.files); } });
+    document.addEventListener('paste', e => { const f = Array.from((e.clipboardData || {}).files || []); if (f.length) adicionar(f); });
+
+    el.cv.addEventListener('pointerdown', aoDescer); el.cv.addEventListener('pointermove', aoMover);
+    el.cv.addEventListener('pointerup', aoSoltar); el.cv.addEventListener('pointercancel', () => { E.arrasto = null; lupa(null); refazer(true); });
+    let rz = 0; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(ajustarPalco, 120); });
+
+    $$('[data-ferramenta]').forEach(b => b.addEventListener('click', () => { E.ferramenta = b.dataset.ferramenta; E.marcando = null; aviso(E.ferramenta === 'rosto' ? 'Toque em cada rosto ao fundo para borrar.' : ''); pintarTudo(); }));
+    $('#st-detectar').addEventListener('click', () => { E.ferramenta = 'placa'; buscarPlacas(false); pintarTudo(); });
+    el.marcar.addEventListener('click', () => { E.ferramenta = 'placa'; E.marcando = E.marcando ? null : []; E.sel = E.marcando ? -1 : E.sel; aviso(E.marcando ? 'Toque nos 4 cantos da placa. Segure o dedo para abrir a lupa e solte na quina.' : ''); pintarTudo(); });
+    el.guias.addEventListener('click', () => { E.guias = !E.guias; pintarTudo(); });
+    const orig = $('#st-original'), ver = v => { E.original = v; orig.setAttribute('aria-pressed', v); desenhar(); };
+    orig.addEventListener('pointerdown', e => { e.preventDefault(); ver(true); }); ['pointerup', 'pointerleave', 'pointercancel'].forEach(n => orig.addEventListener(n, () => ver(false)));
+    orig.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') ver(true); }); orig.addEventListener('keyup', () => ver(false));
+
+    $$('[data-modo]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.modo = prefs.modo = b.dataset.modo; guardar(); refazer(); pintarPainel(); }));
+    $$('[data-estilo]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.estilo = prefs.estilo = b.dataset.estilo; guardar(); refazer(); pintarPainel(); }));
+    $$('[data-formato]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.formato = b.dataset.formato; refazer(); pintarPainel(); }));
+    $$('[data-campo]').forEach(c => c.addEventListener('input', () => { const pl = item().placas[E.sel]; if (!pl) return; const k = c.dataset.campo; pl[k] = c.type === 'checkbox' ? c.checked : c.value / 100; if (k in prefs) { prefs[k] = pl[k]; guardar(); } refazerLogo(); }));
+    $('#st-tirar-placa').addEventListener('click', () => { const it = item(); if (E.sel < 0) return; it.placas.splice(E.sel, 1); E.sel = it.placas.length ? 0 : -1; aviso('Placa removida da edição.'); pintarTudo(); });
+
+    $('#st-achar-rostos').addEventListener('click', async ev => {
+      const b = ev.currentTarget; b.disabled = true; aviso('Baixando o detector de rostos e procurando… a foto continua no seu aparelho.');
+      try {
+        const it = item(), achados = await detectarRostos(E.base); let novos = 0;
+        achados.forEach(a => { if (it.rostos.some(r => dist([r.x, r.y], [a.x, a.y]) < r.r)) return; a.r = Math.max(a.r, 10); a.rem = remendoRosto(E.base, a); it.rostos.push(a); novos++; });
+        aviso(novos ? novos + (novos === 1 ? ' rosto borrado.' : ' rostos borrados.') + ' Confira a foto e toque nos que faltarem.' : 'Não achei rosto sozinho. Toque em cada um para borrar.', novos ? 'ok' : 'alerta');
+      } catch (e) { aviso('O detector automático não carregou neste aparelho. Toque em cada rosto para borrar.', 'alerta'); }
+      b.disabled = false; pintarTudo();
+    });
+    el.raioRosto.addEventListener('input', () => { const r = item().rostos[E.selRosto]; if (!r) return; r.r = Math.max(6, el.raioRosto.value / 1000 * Math.min(E.base.width, E.base.height)); r.rem = remendoRosto(E.base, r); desenhar(); });
+    el.tirarRosto.addEventListener('click', () => { const it = item(); if (E.selRosto < 0) return; it.rostos.splice(E.selRosto, 1); E.selRosto = -1; pintarTudo(); });
+
+    $$('[data-plano]').forEach(b => b.addEventListener('click', () => { prefs.plano = b.dataset.plano; guardar(); refazer(true); pintarPainel(); }));
+    $$('[data-marca]').forEach(b => b.addEventListener('click', () => { prefs.marcaEB = b.dataset.marca; guardar(); refazer(true); pintarPainel(); }));
+    el.handle.addEventListener('input', () => { prefs.handle = el.handle.value.trim().replace(/[^\w.@]/g, '').slice(0, 30); guardar(); refazerLogo(true); });
+    el.mono.addEventListener('change', () => { prefs.logoMono = el.mono.checked; guardar(); refazer(true); });
+    $('#st-enviar-logo').addEventListener('click', () => el.arquivoLogo.click());
+    el.arquivoLogo.addEventListener('change', async () => {
+      const f = el.arquivoLogo.files[0]; el.arquivoLogo.value = ''; if (!f) return;
+      try {
+        const img = await lerImagem(f), k = Math.min(1, 900 / Math.max(img.naturalWidth, img.naturalHeight)), c = tela(img.naturalWidth * k, img.naturalHeight * k);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        prefs.logo = c.toDataURL('image/png'); prefs.logoVersao = (prefs.logoVersao || 0) + 1; guardar(); await carregarLogoLoja(); refazer(true); pintarPainel();
+        aviso('Logo guardada neste navegador. Ela não foi enviada a lugar nenhum.', 'ok');
+      } catch (e) { aviso('Não consegui ler essa logo. Use PNG com fundo transparente.', 'erro'); }
+    });
+    $('#st-tirar-logo').addEventListener('click', async () => { prefs.logo = ''; guardar(); await carregarLogoLoja(); refazer(true); pintarPainel(); });
+
+    $('#st-baixar').addEventListener('click', () => exportarAtual(false));
+    const comp = $('#st-compartilhar'); comp.hidden = !(navigator.canShare && navigator.share); comp.addEventListener('click', () => exportarAtual(true));
+    el.baixarTudo.addEventListener('click', exportarTudo);
+    $('#st-anterior').addEventListener('click', () => abrir(E.atual - 1)); $('#st-proxima').addEventListener('click', () => abrir(E.atual + 1));
+    document.addEventListener('keydown', e => {
+      if (!E.base || /INPUT|TEXTAREA|SELECT/.test((e.target || {}).tagName || '')) return;
+      if (e.key === 'Delete' || e.key === 'Backspace') { if (E.ferramenta === 'rosto') el.tirarRosto.click(); else $('#st-tirar-placa').click(); }
+      if (e.key === 'Escape' && E.marcando) el.marcar.click();
+    });
+    pintarPainel();
+  }
+
+  window.EBStudio = { abrir: adicionar, estado: E, prefs: () => prefs, motor: { homografia: homografia, inverter: inverter, proj: proj, placaPorToque: placaPorToque, detectarAuto: detectarAuto } };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+  </script>
+  <footer class="filete-topo-eb bg-carbon text-white">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
+      <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" loading="lazy" class="h-28 w-auto">
+      <div class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-right">
+        <p class="flex flex-wrap gap-x-5 gap-y-1 text-base text-white sm:justify-end"><a href="/revista/" class="hover:text-amarelo">Revista</a><a href="/censo/" class="hover:text-amarelo">Censo EB</a><a href="/studio/" class="hover:text-amarelo">Studio</a><a href="/#metodologia" class="hover:text-amarelo">Metodologia</a><a href="/imprensa/" class="hover:text-amarelo">Imprensa</a><a href="/#comercial" class="hover:text-amarelo">Anuncie</a><a href="/rss.xml" class="hover:text-amarelo">RSS</a></p>
+        <p class="mt-4">Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos</p>
+        <p class="mt-1">Desde 16/04/2013 · Brasília, DF · <a href="https://www.instagram.com/exoticsbrazil/" class="text-white hover:text-amarelo">@exoticsbrazil</a></p>
+        <p class="mt-4 font-sans text-xs normal-case tracking-normal text-zinc-500 sm:ml-auto sm:max-w-md">O portal exoticsbrazil.com.br é o braço editorial e o banco de dados oficial do <a href="https://www.instagram.com/exoticsbrazil/" class="text-zinc-300 underline hover:text-amarelo">@exoticsbrazil</a> no Instagram, onde tudo começou em 16 de abril de 2013 e onde cerca de 500 mil seguidores acompanham os flagras diariamente.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      function ev(nome, p) { if (window.gtag) window.gtag('event', nome, p || {}); }
+      window.ebEvento = ev;
+      var IAS = ['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'claude.ai', 'copilot.microsoft.com', 'meta.ai', 'grok.com', 'deepseek.com', 'you.com'];
+      try {
+        var ref = document.referrer ? new URL(document.referrer).hostname.replace(/^www\./, '') : '';
+        var utm = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
+        var ia = IAS.filter(function (d) { return ref === d || ref.slice(-d.length - 1) === '.' + d || (utm && utm.indexOf(d.split('.')[0]) >= 0); })[0];
+        if (ia && !sessionStorage.getItem('eb_ia')) { sessionStorage.setItem('eb_ia', '1'); ev('origem_ia_detectada', { ia_origem: ia, referrer: ref || 'utm', pagina: location.pathname }); }
+      } catch (e) {}
+      var art = document.querySelector('article[data-eb-materia]');
+      if (art) {
+        var corpo = art.querySelector('.materia') || art, lido = false;
+        var medir = function () {
+          var r = corpo.getBoundingClientRect();
+          if (!lido && r.height && (innerHeight - r.top) / r.height >= 0.75) {
+            lido = true; removeEventListener('scroll', medir);
+            ev('leitura_artigo_completa', { titulo_materia: art.dataset.titulo, editoria: art.dataset.editoria, autor: art.dataset.autor });
+          }
+        };
+        addEventListener('scroll', medir, { passive: true }); medir();
+      }
+      [['busca-revista', 'revista'], ['busca-censo', 'censo']].forEach(function (b) {
+        var campo = document.getElementById(b[0]), espera;
+        if (campo) campo.addEventListener('input', function () {
+          clearTimeout(espera);
+          espera = setTimeout(function () { var t = campo.value.trim(); if (t.length >= 2) ev('busca_interna_eb', { local: b[1], termo: t.slice(0, 80) }); }, 1200);
+        });
+      });
+      document.addEventListener('click', function (e) {
+        var f = e.target.closest('.filtro-editoria, .filtro-marca');
+        if (f) ev('busca_interna_eb', { local: f.classList.contains('filtro-marca') ? 'censo' : 'revista', filtro: f.dataset.filtro || 'todas' });
+        var a = e.target.closest('a, button'); if (!a) return;
+        var h = a.getAttribute('href') || '', txt = (a.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+        var acao = a.classList.contains('citar-copiar') ? 'copiar_referencia'
+          : /ig\.me\//.test(h) ? 'enviar_flagra'
+          : /instagram\.com\/exoticsbrazil/.test(h) ? 'seguir_instagram'
+          : (/#imprensa/.test(h) || txt.indexOf('credenci') >= 0) ? 'credenciar_imprensa'
+          : (/#comercial|mailto:|wa\.me/.test(h) || txt.indexOf('anunci') >= 0) ? 'anuncie' : '';
+        if (acao) ev('conversao_comercial_imprensa', { acao: acao, rotulo: txt.slice(0, 60), pagina: location.pathname });
+        if (a.classList.contains('galeria-foto')) ev('visualizacao_galeria_foto', { tipo: a.dataset.capa ? 'capa_materia' : 'galeria_materia', indice: +(a.dataset.indice || 0), pagina: location.pathname });
+        if (a.dataset.view) ev('visualizacao_galeria_foto', { tipo: 'dossie_' + a.dataset.view });
+        if (a.closest('#abas')) ev('visualizacao_galeria_foto', { tipo: 'dossie_carro', rotulo: txt.slice(0, 60) });
+      }, true);
+    })();
+  </script>
+</body>
+</html>
