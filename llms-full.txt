@@ -192,6 +192,8 @@ As fotos mostram a receita completa. O teto é preto, as rodas são pretas, a gr
 
 Em carro de grande volume no país, a cor é o que separa uma unidade da outra. A M3 Competition G80 é presença frequente nas ruas e nas lojas, e uma pintura de encomenda como esta transforma o sedã comum em exemplar que ninguém mais tem.
 
+Um segundo ensaio, de @vh.spotter, mostra a mesma unidade ao ar livre, entre palmeiras e orquídeas rosa, e revela o que o showroom escondia. A cabine tem bancos esportivos claros com a área central preta perfurada e o emblema M3 no encosto, uma sobriedade que contrasta com a carroceria saturada. Na traseira, a plaqueta aparece vazia e o escapamento quádruplo se vê inteiro, com ponteiras e difusor pretos.
+
 ## Engenharia: o que existe por baixo do Ruby Star
 
 A M3 Competition usa o código de motor S58, um 3.0 de seis cilindros em linha com dois turbos. Biturbo significa que duas turbinas empurram ar para dentro dos cilindros, e o resultado na versão vendida oficialmente pela BMW no Brasil é de 510cv e 66,3 kgfm de torque, enviados apenas ao eixo traseiro, com câmbio automático de oito marchas. A fábrica declara 3,9 segundos de 0 a 100 km/h e velocidade máxima limitada eletronicamente em 250 km/h.
