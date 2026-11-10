@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EB Studio: tire a placa e assine a foto do carro | Exotics Brazil</title>
-  <meta name="description" content="Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <title>EB Studio: anonimizador inteligente de placas | Exotics Brazil</title>
+  <meta name="description" content="Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.exoticsbrazil.com.br/studio/">
   <meta name="author" content="Exotics Brazil (@exoticsbrazil)">
@@ -13,12 +13,13 @@
   <meta property="og:site_name" content="Exotics Brazil">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://www.exoticsbrazil.com.br/studio/">
-  <meta property="og:title" content="EB Studio: tire a placa e assine a foto do carro | Exotics Brazil">
-  <meta property="og:description" content="Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
-  <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-image.jpg">
+  <meta property="og:title" content="EB Studio: anonimizador inteligente de placas | Exotics Brazil">
+  <meta property="og:description" content="Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-studio.jpg?v=3">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-studio.jpg?v=3">
   <style>
     /* EB Studio: palco, pinos, lupa e painel. Cores só pelos tokens --eb-* do design_eb.py */
     .st-rotulo { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; color: var(--eb-text-muted); }
@@ -29,7 +30,12 @@
     .st-botao:hover { border-color: var(--eb-green-border); }
     .st-botao[aria-pressed="true"] { background: var(--eb-yellow); color: var(--eb-text-on-yellow); border-color: var(--eb-yellow); }
     .st-botao:disabled { opacity: .45; cursor: not-allowed; }
-    .st-botao.st-perigo { color: var(--eb-status-danger); }
+    .st-botao.st-sutil { color: var(--eb-text-muted); background: transparent; }
+    .st-botao.st-sutil:hover { color: var(--eb-yellow); border-color: var(--eb-yellow-border); }
+    .st-botao.st-pronto { background: var(--eb-yellow); color: var(--eb-text-on-yellow); border-color: var(--eb-yellow); }
+    #st-progresso { height: 6px; background: var(--eb-bg-elevated); overflow: hidden; }
+    #st-barra { height: 100%; width: 0; background: var(--eb-gradient-signature); transition: width .2s; }
+    .st-nota { font-size: .75rem; line-height: 1.5; color: var(--eb-text-muted); }
     .st-grande { min-height: 56px; padding: .9rem 1.6rem; font-size: 1.35rem; }
     .st-grupo { display: grid; gap: .5rem; }
     .st-tres { grid-template-columns: repeat(3, minmax(0, 1fr)); } .st-dois { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -43,7 +49,7 @@
     .st-marca input { width: 20px; height: 20px; accent-color: var(--eb-yellow); }
     .st-amostra { height: 22px; border: 1px solid var(--eb-border-strong); }
     #st-aviso { min-height: 1.5rem; font-size: .95rem; color: var(--eb-text-body); }
-    #st-aviso[data-tom="ok"] { color: var(--eb-green-bright); } #st-aviso[data-tom="alerta"] { color: var(--eb-yellow); } #st-aviso[data-tom="erro"] { color: var(--eb-status-danger); }
+    #st-aviso[data-tom="ok"] { color: var(--eb-green-bright); } #st-aviso[data-tom="alerta"] { color: var(--eb-yellow); } #st-aviso[data-tom="erro"] { color: var(--eb-yellow); font-weight: 600; }
     .st-fila { display: flex; gap: .5rem; overflow-x: auto; padding: .25rem 0 .5rem; }
     .st-mini { flex: 0 0 auto; width: 64px; height: 64px; background: var(--eb-bg-elevated) center / cover no-repeat; border: 2px solid var(--eb-border-strong); color: var(--eb-text-muted); position: relative; }
     .st-mini[aria-current="true"] { border-color: var(--eb-yellow); }
@@ -55,7 +61,7 @@
     .st-plano span { font-size: .8rem; line-height: 1.3; display: block; margin-top: .2rem; }
     .st-plano[aria-pressed="true"] { border-color: var(--eb-yellow); box-shadow: inset 3px 0 0 var(--eb-yellow); }
     #st-solta { position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; background: rgba(9, 10, 15, .88); border: 3px dashed var(--eb-yellow); pointer-events: none; }
-    #st-solta[hidden], #st-lupa[hidden] { display: none; }
+    #st-solta[hidden], #st-lupa[hidden], #st-progresso[hidden] { display: none; }
     @media (min-width: 1024px) { .st-area { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; gap: 1.5rem; align-items: start; } .st-coluna { position: sticky; top: 5.5rem; max-height: calc(100vh - 6.5rem); overflow-y: auto; padding-right: 2px; } }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,7 +199,7 @@
   "@id": "https://www.exoticsbrazil.com.br/studio/#app",
   "name": "EB Studio",
   "url": "https://www.exoticsbrazil.com.br/studio/",
-  "description": "Ferramenta gratuita do Exotics Brazil para limpar a placa de fotos de carros, aplicar a marca na perspectiva do para-choque e borrar rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.",
+  "description": "Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "Qualquer navegador moderno",
   "inLanguage": "pt-BR",
@@ -243,22 +249,22 @@
     <section id="st-inicio" class="mx-auto max-w-3xl py-8 text-center sm:py-14">
       <p class="selo-editor-eb inline-block px-3 py-1 font-display text-sm font-bold uppercase tracking-[0.16em]">EB Studio · versão de testes</p>
       <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-7xl">A placa sai, <span class="text-amarelo">a sua marca entra</span></h1>
-      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-zinc-300">Marque a placa do carro com um toque. O Studio apaga os caracteres com a luz real da foto e imprime a marca no lugar, na mesma perspectiva do para-choque. Rostos ao fundo saem com outro toque.</p>
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-zinc-300">Escolha as fotos da sessão inteira de uma vez. O Studio acha a placa de cada uma, apaga os caracteres com a luz real da foto e imprime a marca no lugar, na mesma perspectiva do para-choque.</p>
       <div class="mt-8 flex flex-col items-center gap-4">
         <button type="button" data-escolher class="botao-verde-eb st-grande inline-flex items-center gap-3 font-display uppercase tracking-wide">Escolher fotos</button>
-        <p class="text-sm text-zinc-500">ou arraste, solte ou cole as fotos nesta página</p>
+        <p class="text-sm text-zinc-500">uma ou muitas de uma vez · ou arraste, solte ou cole nesta página</p>
         <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
       </div>
       <ol class="mt-12 grid gap-4 text-left sm:grid-cols-3">
-        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">01</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Toque na placa</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">O Studio fecha os quatro cantos sozinho. Se precisar, arraste os pinos com a lupa de precisão.</p></li>
-        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">02</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Escolha o acabamento</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Placa limpa com a marca, placa de showroom ou desfoque editorial.</p></li>
-        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">03</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Baixe em resolução máxima</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">A foto sai no tamanho original, sem metadados, pronta para postar.</p></li>
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">01</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Escolha as fotos</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">O Studio procura a placa sozinho em cada foto, Mercosul ou cinza antiga. Placa de carro ao fundo entra em desfoque.</p></li>
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">02</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Confira e ajuste</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Placa limpa com a marca, placa de showroom ou desfoque. As alças e o zoom acertam a quina em placa pequena.</p></li>
+        <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">03</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Salve em resolução original</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">No celular, as fotos vão direto para a galeria. A foto sai no tamanho da câmera, sem metadados.</p></li>
       </ol>
     </section>
 
     <section id="st-app" hidden>
       <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
-        <div><p class="st-rotulo">EB Studio · versão de testes</p><h1 class="font-display text-4xl font-black uppercase leading-none tracking-tight text-white">Tratar a foto</h1></div>
+        <div><p class="st-rotulo">EB Studio · versão de testes</p><h1 class="font-display text-4xl font-black uppercase leading-none tracking-tight text-white">Tratar as fotos</h1></div>
         <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
       </div>
       <div class="st-area">
@@ -266,15 +272,16 @@
           <div class="mb-2 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
             <button type="button" class="st-botao" data-ferramenta="placa" aria-pressed="true">Placa</button>
             <button type="button" class="st-botao" data-ferramenta="rosto" aria-pressed="false">Rostos</button>
-            <button type="button" class="st-botao sm:ml-auto" id="st-original" aria-pressed="false">Segure: ver original</button>
-            <button type="button" class="st-botao" id="st-guias" aria-pressed="true">Guias</button>
+            <button type="button" class="st-botao sm:ml-auto" id="st-zoom" aria-pressed="false" disabled>Zoom na placa</button>
+            <button type="button" class="st-botao" id="st-original" aria-pressed="false">Segure: ver original</button>
           </div>
-          <div class="st-palco" id="st-palco"><canvas id="st-cv" aria-label="Foto em edição. Toque na placa para marcá-la."></canvas><canvas id="st-lupa" hidden aria-hidden="true"></canvas></div>
+          <div id="st-progresso" hidden><div id="st-barra"></div></div>
+          <div class="st-palco" id="st-palco"><canvas id="st-cv" aria-label="Foto em edição. A placa é marcada sozinha; toque nela se faltar."></canvas><canvas id="st-lupa" hidden aria-hidden="true"></canvas></div>
           <p id="st-aviso" class="mt-2" role="status" aria-live="polite"></p>
-          <div class="mt-1 flex items-center gap-2">
+          <div class="mt-1 flex flex-wrap items-center gap-2">
             <button type="button" class="st-botao" id="st-anterior" aria-label="Foto anterior">‹</button>
             <button type="button" class="st-botao" id="st-proxima" aria-label="Próxima foto">›</button>
-            <p id="st-contador" class="st-rotulo"></p>
+            <p class="st-rotulo"><span id="st-contador"></span> <span id="st-resolucao" class="normal-case tracking-normal"></span></p>
             <button type="button" class="st-botao ml-auto" data-escolher>+ Fotos</button>
           </div>
           <div id="st-fila" class="st-fila mt-2" hidden></div>
@@ -283,12 +290,14 @@
         <div class="st-coluna mt-5 lg:mt-0">
           <div id="st-painel-placa">
             <div class="st-cartao">
-              <p class="st-rotulo">Marcar a placa</p>
-              <div class="st-grupo st-dois mt-2">
+              <p class="st-rotulo">Placas desta foto</p>
+              <div class="st-grupo st-tres mt-2">
                 <button type="button" class="st-botao" id="st-detectar">Detectar</button>
-                <button type="button" class="st-botao" id="st-marcar" aria-pressed="false">4 cantos</button>
+                <button type="button" class="st-botao" id="st-marcar" aria-pressed="false">+ Placa</button>
+                <button type="button" class="st-botao" id="st-guias" aria-pressed="true">Guias</button>
               </div>
-              <p id="st-sem-placa" class="mt-3 text-sm leading-relaxed text-zinc-400">Toque no fundo da placa, numa área lisa entre os caracteres. Em foto difícil ou placa preta, use “4 cantos”.</p>
+              <p id="st-sem-placa" class="mt-3 text-sm leading-relaxed text-zinc-400">Nenhuma placa marcada nesta foto. Toque em cima da placa, ou use “+ Placa” e marque os 4 cantos.</p>
+              <p class="st-nota mt-3">O × acima de cada placa tira ela da edição com um toque.</p>
             </div>
             <div id="st-com-placa" hidden>
               <div class="st-cartao">
@@ -298,13 +307,20 @@
                   <button type="button" class="st-botao" data-modo="showroom">Showroom</button>
                   <button type="button" class="st-botao" data-modo="blur">Desfoque</button>
                 </div>
+                <div data-so="limpa">
+                  <p class="st-rotulo mt-4">Tipo de placa</p>
+                  <div class="st-grupo st-dois mt-2">
+                    <button type="button" class="st-botao" data-tipo="mercosul">Mercosul</button>
+                    <button type="button" class="st-botao" data-tipo="cinza">Cinza / antiga</button>
+                  </div>
+                </div>
                 <div data-so="limpa showroom" class="st-campo"><label for="st-tamanho">Tamanho da marca</label><input id="st-tamanho" type="range" min="30" max="100" data-campo="tamanho"></div>
                 <div data-so="limpa">
                   <div class="st-campo"><label for="st-opacidade">Força da tinta</label><input id="st-opacidade" type="range" min="40" max="100" data-campo="opacidade"></div>
                   <div class="st-campo"><label for="st-faixa">Faixa superior preservada</label><input id="st-faixa" type="range" min="0" max="45" data-campo="faixa"></div>
                   <div class="st-campo"><label for="st-lateral">Margem lateral preservada</label><input id="st-lateral" type="range" min="0" max="15" data-campo="lateral"></div>
                   <div class="st-campo"><label for="st-base">Margem inferior preservada</label><input id="st-base" type="range" min="0" max="25" data-campo="base"></div>
-                  <label class="st-marca"><input type="checkbox" data-campo="total"><span>Repintar o miolo inteiro (para placa suja ou muito reflexo)</span></label>
+                  <label class="st-marca"><input type="checkbox" data-campo="total"><span>Repintar o miolo inteiro (padrão na placa cinza; útil em placa suja ou com reflexo)</span></label>
                 </div>
                 <div data-so="showroom">
                   <p class="st-rotulo mt-4">Cor da placa</p>
@@ -320,7 +336,7 @@
                   <button type="button" class="st-botao" data-formato="carro">Carro</button>
                   <button type="button" class="st-botao" data-formato="moto">Moto</button>
                 </div>
-                <button type="button" class="st-botao st-perigo mt-4 w-full" id="st-tirar-placa">Remover esta placa da edição</button>
+                <button type="button" class="st-botao st-sutil mt-4 w-full" id="st-tirar-placa">Remover esta placa da edição</button>
               </div>
             </div>
           </div>
@@ -331,23 +347,32 @@
               <p class="mt-2 text-sm leading-relaxed text-zinc-400">Toque em cada rosto para borrar. Arraste o círculo para mover.</p>
               <button type="button" class="st-botao mt-3 w-full" id="st-achar-rostos">Procurar rostos sozinho (beta)</button>
               <div class="st-campo"><label for="st-raio-rosto">Tamanho do desfoque selecionado</label><input id="st-raio-rosto" type="range" min="8" max="160" disabled></div>
-              <button type="button" class="st-botao st-perigo mt-3 w-full" id="st-tirar-rosto" disabled>Remover este desfoque</button>
+              <button type="button" class="st-botao st-sutil mt-3 w-full" id="st-tirar-rosto" disabled>Remover este desfoque</button>
             </div>
           </div>
 
           <div class="st-cartao">
             <p class="st-rotulo">A marca que vai na placa</p>
             <div class="st-grupo mt-2">
-              <button type="button" class="st-plano" data-plano="gratis" aria-pressed="true"><strong>Entusiasta · grátis</strong><span>Assinatura @ExoticsBrazil na placa. Até 5 fotos por vez.</span></button>
-              <button type="button" class="st-plano" data-plano="spotter" aria-pressed="false"><strong>Spotter Pro · demonstração</strong><span>O seu @ na placa, com o selo EB ao lado.</span></button>
-              <button type="button" class="st-plano" data-plano="loja" aria-pressed="false"><strong>Loja e concessionária · demonstração</strong><span>A logo da sua empresa na placa e lotes sem limite.</span></button>
+              <button type="button" class="st-plano" data-plano="gratis" aria-pressed="true"><strong>Entusiasta · grátis</strong><span>A logo oficial da Exotics Brazil na placa.</span></button>
+              <button type="button" class="st-plano" data-plano="spotter" aria-pressed="false"><strong>Spotter · demonstração</strong><span>O seu @ na placa, junto da logo oficial da Exotics Brazil.</span></button>
+              <button type="button" class="st-plano" data-plano="loja" aria-pressed="false"><strong>Loja e concessionária · demonstração</strong><span>A logo da sua empresa na placa.</span></button>
             </div>
-            <div data-plano-campos="gratis" class="st-grupo st-dois mt-3">
-              <button type="button" class="st-botao" data-marca="completa">eb + @</button>
-              <button type="button" class="st-botao" data-marca="simbolo">Só o símbolo</button>
+            <div data-plano-campos="gratis" class="st-grupo st-tres mt-3">
+              <button type="button" class="st-botao" data-marca="completa">Logo oficial</button>
+              <button type="button" class="st-botao" data-marca="arroba">eb + @</button>
+              <button type="button" class="st-botao" data-marca="simbolo">Símbolo</button>
             </div>
             <div data-plano-campos="spotter" hidden>
               <div class="st-campo"><label for="st-handle">Seu @ no Instagram</label><input id="st-handle" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@seuperfil" maxlength="31"></div>
+              <div class="st-grupo st-dois mt-3">
+                <button type="button" class="st-botao" data-layout="placa">@ + logo na placa</button>
+                <button type="button" class="st-botao" data-layout="canto">@ na placa, logo no canto</button>
+              </div>
+              <div data-so-layout="canto" class="st-grupo st-dois mt-2" hidden>
+                <button type="button" class="st-botao" data-canto="esq">Canto esquerdo</button>
+                <button type="button" class="st-botao" data-canto="dir">Canto direito</button>
+              </div>
             </div>
             <div data-plano-campos="loja" hidden>
               <div class="mt-3 flex items-center gap-3">
@@ -355,20 +380,26 @@
                 <button type="button" class="st-botao flex-1" id="st-enviar-logo">Escolher logo (PNG)</button>
               </div>
               <label class="st-marca"><input id="st-mono" type="checkbox"><span>Logo em uma cor só, na tinta da placa</span></label>
-              <button type="button" class="st-botao st-perigo mt-3 w-full" id="st-tirar-logo">Apagar a logo deste navegador</button>
-              <p class="mt-3 text-xs leading-relaxed text-zinc-500">A logo fica guardada só neste navegador e nunca é enviada.</p>
+              <button type="button" class="st-botao st-sutil mt-3 w-full" id="st-tirar-logo">Apagar a logo deste navegador</button>
+              <p class="st-nota mt-3">A logo fica guardada só neste navegador e nunca é enviada.</p>
             </div>
-            <p class="mt-3 text-xs leading-relaxed text-zinc-500">Os planos pagos ainda não existem. Nesta fase de testes os três modos estão abertos, sem cobrança, para a gente ouvir quem usa.</p>
+            <p class="st-nota mt-3">Os planos pagos ainda não existem. Nesta fase de testes os três modos estão abertos, sem cobrança, para a gente ouvir quem usa.</p>
           </div>
 
           <div class="st-cartao">
             <p class="st-rotulo">Salvar</p>
             <div class="st-grupo mt-2">
-              <button type="button" class="botao-verde-eb st-grande font-display uppercase tracking-wide" id="st-baixar">Baixar a foto</button>
-              <button type="button" class="st-botao" id="st-compartilhar" hidden>Salvar ou compartilhar</button>
-              <button type="button" class="st-botao" id="st-baixar-tudo" hidden>Baixar em ZIP</button>
+              <button type="button" class="botao-verde-eb st-grande font-display uppercase tracking-wide" id="st-salvar">Salvar a foto</button>
+              <button type="button" class="st-botao st-pronto st-grande" id="st-salvar-pronto" hidden>Fotos prontas: toque para salvar</button>
+              <button type="button" class="st-botao" id="st-salvar-esta" hidden>Salvar só esta foto</button>
+              <button type="button" class="st-botao st-sutil" id="st-baixar-tudo" hidden>Baixar tudo em .ZIP</button>
             </div>
-            <p class="mt-3 text-xs leading-relaxed text-zinc-500">A foto sai no tamanho original, em JPG de alta qualidade e sem metadados de câmera ou localização. Confira sempre o resultado antes de publicar.</p>
+            <p class="st-rotulo mt-4">Formato do arquivo</p>
+            <div class="st-grupo st-dois mt-2">
+              <button type="button" class="st-botao" data-saida="jpg">JPG máximo</button>
+              <button type="button" class="st-botao" data-saida="png">PNG sem perdas</button>
+            </div>
+            <p class="st-nota mt-3">A foto sai na resolução original da câmera, sem metadados de câmera ou localização, e só a placa, os rostos borrados e a marca mudam. O PNG não perde nada e pesa bem mais. Confira sempre o resultado antes de publicar.</p>
           </div>
         </div>
       </div>
@@ -376,907 +407,7 @@
   </main>
 
   <script>
-/* EB Studio: motor gráfico de placas e rostos, 100% no navegador.
-   Nenhuma foto é enviada a servidor nenhum. Tudo acontece em Canvas, na memória do aparelho.
-   Fonte em _redacao/studio/studio.js, embutida na página /studio/ pelo construir.py. */
-(function () {
-  'use strict';
-
-  // ───────────────────────── utilidades ─────────────────────────
-  const $ = (s, r) => (r || document).querySelector(s);
-  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
-  const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
-  const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
-  const IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  const AREA_MAX = IOS ? 16000000 : 50000000;   // limite de área de canvas do Safari do iPhone
-  const SIMBOLO = '/assets/img/identidade/simbolo-eb-branco.png';
-  const PROP_SIMBOLO = 810 / 568;
-  const evento = (nome, p) => { try { if (window.ebEvento) window.ebEvento(nome, p || {}); } catch (e) {} };
-
-  function tela(w, h) { const c = document.createElement('canvas'); c.width = Math.max(1, Math.round(w)); c.height = Math.max(1, Math.round(h)); return c; }
-  function semente(n) { let a = n >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-  function gauss(rnd) { let u = 0; while (u < 1e-9) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.283185307 * rnd()); }
-
-  // ───────────────────────── homografia planar (4 pontos) ─────────────────────────
-  function resolver(A, b) {
-    const n = b.length;
-    for (let i = 0; i < n; i++) {
-      let p = i;
-      for (let r = i + 1; r < n; r++) if (Math.abs(A[r][i]) > Math.abs(A[p][i])) p = r;
-      if (Math.abs(A[p][i]) < 1e-12) return null;
-      if (p !== i) { const t = A[i]; A[i] = A[p]; A[p] = t; const u = b[i]; b[i] = b[p]; b[p] = u; }
-      for (let r = i + 1; r < n; r++) {
-        const f = A[r][i] / A[i][i];
-        if (!f) continue;
-        for (let c = i; c < n; c++) A[r][c] -= f * A[i][c];
-        b[r] -= f * b[i];
-      }
-    }
-    const x = new Array(n);
-    for (let i = n - 1; i >= 0; i--) { let s = b[i]; for (let c = i + 1; c < n; c++) s -= A[i][c] * x[c]; x[i] = s / A[i][i]; }
-    return x;
-  }
-  // Matriz 3x3 que leva os quatro pontos de origem aos quatro de destino
-  function homografia(o, d) {
-    const A = [], b = [];
-    for (let i = 0; i < 4; i++) {
-      const x = o[i][0], y = o[i][1], X = d[i][0], Y = d[i][1];
-      A.push([x, y, 1, 0, 0, 0, -x * X, -y * X]); b.push(X);
-      A.push([0, 0, 0, x, y, 1, -x * Y, -y * Y]); b.push(Y);
-    }
-    const h = resolver(A, b);
-    return h ? [h[0], h[1], h[2], h[3], h[4], h[5], h[6], h[7], 1] : null;
-  }
-  function inverter(m) {
-    const a = m[0], b = m[1], c = m[2], d = m[3], e = m[4], f = m[5], g = m[6], h = m[7], i = m[8];
-    const A = e * i - f * h, B = -(d * i - f * g), C = d * h - e * g, det = a * A + b * B + c * C;
-    if (Math.abs(det) < 1e-14) return null;
-    return [A / det, (c * h - b * i) / det, (b * f - c * e) / det, B / det, (a * i - c * g) / det, (c * d - a * f) / det, C / det, (b * g - a * h) / det, (a * e - b * d) / det];
-  }
-  function proj(H, x, y) { const w = H[6] * x + H[7] * y + H[8]; return [(H[0] * x + H[1] * y + H[2]) / w, (H[3] * x + H[4] * y + H[5]) / w]; }
-  const retangulo = (W, A) => [[0, 0], [W, 0], [W, A], [0, A]];
-
-  // Leva a região da foto para o plano da placa (amostragem bilinear)
-  function retificar(reg, ox, oy, H, W, A) {
-    const s = reg.data, sw = reg.width, sh = reg.height, out = new Uint8ClampedArray(W * A * 4);
-    const h0 = H[0], h1 = H[1], h2 = H[2], h3 = H[3], h4 = H[4], h5 = H[5], h6 = H[6], h7 = H[7], h8 = H[8];
-    for (let v = 0, o = 0; v < A; v++) {
-      const vv = v + 0.5;
-      for (let u = 0; u < W; u++, o += 4) {
-        const uu = u + 0.5, w = h6 * uu + h7 * vv + h8;
-        let x = (h0 * uu + h1 * vv + h2) / w - ox - 0.5, y = (h3 * uu + h4 * vv + h5) / w - oy - 0.5;
-        x = x < 0 ? 0 : x > sw - 1.001 ? sw - 1.001 : x; y = y < 0 ? 0 : y > sh - 1.001 ? sh - 1.001 : y;
-        const xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi, i = (yi * sw + xi) * 4, j = i + sw * 4;
-        const a = (1 - fx) * (1 - fy), b = fx * (1 - fy), c = (1 - fx) * fy, d = fx * fy;
-        out[o] = s[i] * a + s[i + 4] * b + s[j] * c + s[j + 4] * d;
-        out[o + 1] = s[i + 1] * a + s[i + 5] * b + s[j + 1] * c + s[j + 5] * d;
-        out[o + 2] = s[i + 2] * a + s[i + 6] * b + s[j + 2] * c + s[j + 6] * d;
-        out[o + 3] = 255;
-      }
-    }
-    return out;
-  }
-
-  // Devolve o remendo do plano da placa para a foto, na perspectiva dos quatro cantos,
-  // com borda suavizada e mistura pela opacidade do remendo
-  function projetar(reg, ox, oy, Hi, p, W, A, esc) {
-    const d = reg.data, w = reg.width, h = reg.height;
-    const h0 = Hi[0], h1 = Hi[1], h2 = Hi[2], h3 = Hi[3], h4 = Hi[4], h5 = Hi[5], h6 = Hi[6], h7 = Hi[7], h8 = Hi[8];
-    for (let py = 0, o = 0; py < h; py++) {
-      const Y = oy + py + 0.5;
-      for (let px = 0; px < w; px++, o += 4) {
-        const X = ox + px + 0.5, ww = h6 * X + h7 * Y + h8;
-        if (ww <= 1e-9) continue;
-        const u = (h0 * X + h1 * Y + h2) / ww, v = (h3 * X + h4 * Y + h5) / ww;
-        let borda = Math.min(u, W - u, v, A - v) / esc + 0.5;
-        if (borda <= 0) continue;
-        if (borda > 1) borda = 1;
-        let x = u - 0.5, y = v - 0.5;
-        x = x < 0 ? 0 : x > W - 1.001 ? W - 1.001 : x; y = y < 0 ? 0 : y > A - 1.001 ? A - 1.001 : y;
-        const xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi, i = (yi * W + xi) * 4, j = i + W * 4;
-        const a = (1 - fx) * (1 - fy) * p[i + 3], b = fx * (1 - fy) * p[i + 7], c = (1 - fx) * fy * p[j + 3], e = fx * fy * p[j + 7];
-        const soma = a + b + c + e;
-        if (soma < 0.5) continue;
-        const al = soma / 255 * borda, k = al / soma;
-        d[o] = d[o] * (1 - al) + (p[i] * a + p[i + 4] * b + p[j] * c + p[j + 4] * e) * k;
-        d[o + 1] = d[o + 1] * (1 - al) + (p[i + 1] * a + p[i + 5] * b + p[j + 1] * c + p[j + 5] * e) * k;
-        d[o + 2] = d[o + 2] * (1 - al) + (p[i + 2] * a + p[i + 6] * b + p[j + 2] * c + p[j + 6] * e) * k;
-      }
-    }
-  }
-
-  // Desfoque de caixa separável, com borda zerada (serve de convolução normalizada)
-  function borrar(src, W, A, r, passes) {
-    let a = src, b = new Float32Array(W * A), c = new Float32Array(W * A);
-    const jan = 2 * r + 1;
-    for (let p = 0; p < (passes || 1); p++) {
-      for (let y = 0; y < A; y++) {
-        const l = y * W; let s = 0;
-        for (let x = 0; x <= r && x < W; x++) s += a[l + x];
-        for (let x = 0; x < W; x++) { b[l + x] = s / jan; const e = x + r + 1, q = x - r; if (e < W) s += a[l + e]; if (q >= 0) s -= a[l + q]; }
-      }
-      for (let x = 0; x < W; x++) {
-        let s = 0;
-        for (let y = 0; y <= r && y < A; y++) s += b[y * W + x];
-        for (let y = 0; y < A; y++) { c[y * W + x] = s / jan; const e = y + r + 1, q = y - r; if (e < A) s += b[e * W + x]; if (q >= 0) s -= b[q * W + x]; }
-      }
-      if (p === 0) a = new Float32Array(W * A);
-      a.set(c);
-    }
-    return a;
-  }
-  function otsu(hist, total) {
-    let soma = 0; for (let i = 0; i < 256; i++) soma += i * hist[i];
-    let sB = 0, wB = 0, melhor = 0, t = 127;
-    for (let i = 0; i < 256; i++) {
-      wB += hist[i]; if (!wB) continue; const wF = total - wB; if (!wF) break;
-      sB += i * hist[i]; const mB = sB / wB, mF = (soma - sB) / wF, v = wB * wF * (mB - mF) * (mB - mF);
-      if (v > melhor) { melhor = v; t = i; }
-    }
-    return t;
-  }
-
-  // ───────────────────────── a assinatura que vai na placa ─────────────────────────
-  const imagens = { simbolo: null, loja: null };
-  const cacheTinta = new Map();
-  function tingir(img, chave, tinta, tudo) {
-    const k = chave + '|' + tinta.join(',') + '|' + (tudo ? 1 : 0);
-    if (cacheTinta.has(k)) return cacheTinta.get(k);
-    const c = tela(img.naturalWidth || img.width, img.naturalHeight || img.height), x = c.getContext('2d');
-    x.drawImage(img, 0, 0);
-    const d = x.getImageData(0, 0, c.width, c.height), p = d.data;
-    for (let i = 0; i < p.length; i += 4) {
-      if (!p[i + 3]) continue;
-      const mx = Math.max(p[i], p[i + 1], p[i + 2]), mn = Math.min(p[i], p[i + 1], p[i + 2]);
-      if (tudo || mx - mn < 48) { p[i] = tinta[0]; p[i + 1] = tinta[1]; p[i + 2] = tinta[2]; }   // a bandeirinha verde e amarela fica como é
-    }
-    x.putImageData(d, 0, 0);
-    if (cacheTinta.size > 40) cacheTinta.clear();
-    cacheTinta.set(k, c);
-    return c;
-  }
-  function conter(x, img, bx, by, bw, bh) {
-    const iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height, k = Math.min(bw / iw, bh / ih);
-    x.drawImage(img, bx + (bw - iw * k) / 2, by + (bh - ih * k) / 2, iw * k, ih * k);
-  }
-  // Desenha a marca (EB, @ do spotter ou logo da loja) dentro da caixa, no plano reto da placa
-  function conteudo(W, A, bx, by, bw, bh, tinta, pl) {
-    const c = tela(W, A), x = c.getContext('2d'), P = prefs;
-    x.imageSmoothingQuality = 'high';
-    const k = clamp(pl.tamanho, 0.3, 1);
-    bx += bw * (1 - k) / 2; by += bh * (1 - k) / 2; bw *= k; bh *= k;
-    const cor = 'rgb(' + tinta.join(',') + ')';
-    const grupo = (texto, propTexto, propSelo, seloAntes) => {
-      const th = bh * propTexto, sh = bh * propSelo, sw = sh * PROP_SIMBOLO, vao = bh * 0.16;
-      x.font = '800 ' + th + 'px "Barlow Condensed", "Arial Narrow", Impact, sans-serif';
-      const tw = x.measureText(texto).width, total = tw + vao + sw, e = Math.min(1, bw / total);
-      x.save(); x.translate(bx + bw / 2, by + bh / 2); x.scale(e, e);
-      const selo = imagens.simbolo ? tingir(imagens.simbolo, 'eb', tinta, false) : null;
-      const xs = seloAntes ? -total / 2 : -total / 2 + tw + vao, xt = seloAntes ? -total / 2 + sw + vao : -total / 2;
-      if (selo) x.drawImage(selo, xs, -sh / 2, sw, sh);
-      x.fillStyle = cor; x.textBaseline = 'middle'; x.textAlign = 'left';
-      x.fillText(texto, xt, th * 0.045);
-      x.restore();
-    };
-    if (P.plano === 'loja' && imagens.loja) {
-      conter(x, P.logoMono ? tingir(imagens.loja, 'loja' + P.logoVersao, tinta, true) : imagens.loja, bx, by, bw, bh);
-    } else if (P.plano === 'spotter' && P.handle) {
-      grupo('@' + P.handle.replace(/^@+/, '').toUpperCase(), 0.8, 0.5, false);
-    } else if (P.marcaEB === 'simbolo') {
-      if (imagens.simbolo) conter(x, tingir(imagens.simbolo, 'eb', tinta, false), bx, by, bw, bh);
-    } else {
-      grupo('@EXOTICSBRAZIL', 0.62, 1, true);
-    }
-    return x.getImageData(0, 0, W, A).data;
-  }
-
-  // ───────────────────────── os três tratamentos da placa ─────────────────────────
-  // 1. Limpa + logo: apaga só os caracteres, com a cor e a luz reais do fundo, e imprime a marca
-  function modoLimpa(orig, W, A, pl, rnd) {
-    const n = W * A, L = new Float32Array(n), lg = new Float32Array(n), dentro = new Float32Array(n);
-    const x0 = Math.round(pl.lateral * W), x1 = W - x0, y0 = Math.round(pl.faixa * A), y1 = A - Math.round(pl.base * A);
-    const hist = new Uint32Array(256); let tot = 0;
-    for (let i = 0, o = 0; i < n; i++, o += 4) { L[i] = 0.299 * orig[o] + 0.587 * orig[o + 1] + 0.114 * orig[o + 2]; lg[i] = Math.log(L[i] + 6); }
-    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const i = y * W + x; dentro[i] = 1; hist[L[i] | 0]++; tot++; }
-    if (tot < 16) return new Uint8ClampedArray(n * 4);
-    const t = otsu(hist, tot); let nClaro = 0; for (let i = t + 1; i < 256; i++) nClaro += hist[i];
-    const claro = nClaro >= tot - nClaro;    // o fundo é a maioria dos pixels do miolo
-    // caractere = pixel que foge da média local da luz, na direção oposta à do fundo
-    const r1 = Math.max(3, Math.round(A * 0.2)), ml = new Float32Array(n);
-    for (let i = 0; i < n; i++) ml[i] = lg[i] * dentro[i];
-    const num = borrar(ml, W, A, r1, 2), den = borrar(dentro, W, A, r1, 2);
-    const car = new Float32Array(n); let nCar = 0, nForte = 0, tr = 0, tg = 0, tb = 0;
-    for (let i = 0; i < n; i++) {
-      if (!dentro[i]) continue;
-      const dif = (claro ? num[i] / den[i] - lg[i] : lg[i] - num[i] / den[i]);
-      if (dif > 0.2) { car[i] = 1; nCar++; if (dif > 0.45) { tr += orig[i * 4]; tg += orig[i * 4 + 1]; tb += orig[i * 4 + 2]; nForte++; } }
-    }
-    // Marca pequena cortada pela borda do miolo (o "BR" do canto, um parafuso) fica inteira, para não
-    // sobrar meia letra. Caractere grande é apagado sempre, mesmo encostado na borda.
-    if (!pl.total) {
-      const rot = new Uint8Array(n), pilha = new Int32Array(n), altMax = (y1 - y0) * 0.4;
-      for (let s = 0; s < n; s++) {
-        if (!car[s] || rot[s]) continue;
-        let topo = 0, ini = 0, toca = false, ya = A, yb = 0; pilha[topo++] = s; rot[s] = 1;
-        while (ini < topo) {
-          const i = pilha[ini++], x = i % W, y = (i / W) | 0;
-          if (y < ya) ya = y; if (y > yb) yb = y;
-          if (x <= x0 + 1 || x >= x1 - 2 || y <= y0 + 1 || y >= y1 - 2) toca = true;
-          for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { const X = x + dx, Y = y + dy; if (X < x0 || X >= x1 || Y < y0 || Y >= y1) continue; const j = Y * W + X; if (car[j] && !rot[j]) { rot[j] = 1; pilha[topo++] = j; } }
-        }
-        if (toca && yb - ya < altMax) for (let k = 0; k < topo; k++) car[pilha[k]] = 0;
-      }
-    }
-    const dil = borrar(car, W, A, Math.max(2, Math.round(A * 0.032)), 1), fundo = new Float32Array(n);
-    let nF = 0, mr = 0, mg = 0, mb = 0;
-    for (let i = 0; i < n; i++) {
-      dil[i] = dentro[i] && dil[i] > 0.0005 ? 1 : 0;
-      if (dentro[i] && !dil[i]) { fundo[i] = 1; nF++; mr += orig[i * 4]; mg += orig[i * 4 + 1]; mb += orig[i * 4 + 2]; }
-    }
-    if (!nF) { for (let i = 0; i < n; i++) if (dentro[i]) { fundo[i] = 1; nF++; mr += orig[i * 4]; mg += orig[i * 4 + 1]; mb += orig[i * 4 + 2]; } }
-    mr /= nF; mg /= nF; mb /= nF;
-    // cor do fundo em cada ponto: convolução normalizada só dos pixels de fundo (carrega sol, sombra e degradê)
-    const R = Math.max(4, Math.round(A * 0.14)), dF = borrar(fundo, W, A, R, 2), F = [null, null, null], tmp = new Float32Array(n);
-    for (let c = 0; c < 3; c++) { for (let i = 0; i < n; i++) tmp[i] = fundo[i] * orig[i * 4 + c]; F[c] = borrar(tmp, W, A, R, 2); }
-    const medias = [mr, mg, mb]; let s2 = 0, lf = 0, nl = 0;
-    for (let i = 0; i < n; i++) {
-      if (!dentro[i]) continue;
-      for (let c = 0; c < 3; c++) F[c][i] = dF[i] > 0.004 ? F[c][i] / dF[i] : medias[c];
-      const l = 0.299 * F[0][i] + 0.587 * F[1][i] + 0.114 * F[2][i]; lf += l; nl++;
-    }
-    lf /= nl;
-    // grão da própria foto, medido entre pixels vizinhos do fundo, para o fundo novo não ficar chapado
-    let nv = 0; for (let i = 0; i < n - 1; i++) if (fundo[i] && fundo[i + 1]) { const e = L[i] - L[i + 1]; s2 += e * e; nv++; }
-    const ruido = clamp(Math.sqrt(s2 / Math.max(1, nv) / 2) * 1.3, 0.4, 5);
-    const suave = Math.max(1, Math.round(A * 0.022));
-    const fa = pl.total ? dentro : borrar(dil, W, A, suave, 2);
-    // tinta: a cor média dos próprios caracteres da placa, para a marca parecer impressa com a mesma tinta
-    let tinta = claro ? [22, 24, 30] : [236, 237, 240];
-    if (nForte > tot * 0.008) tinta = [tr / nForte, tg / nForte, tb / nForte].map(Math.round);
-    const ax = (x1 - x0) * 0.05, ay = (y1 - y0) * 0.1;
-    const logo = conteudo(W, A, x0 + ax, y0 + ay, x1 - x0 - 2 * ax, y1 - y0 - 2 * ay, tinta, pl);
-    const out = new Uint8ClampedArray(n * 4), pena = Math.max(1.5, A * 0.02);
-    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) {
-      const i = y * W + x, o = i * 4;
-      const f = Math.min(1, fa[i] * (pl.total ? 1 : 1.6)), a = logo[o + 3] / 255 * pl.opacidade;
-      const al = 1 - (1 - f) * (1 - a);
-      if (al < 0.004) continue;
-      const g = gauss(rnd) * ruido, lz = clamp((0.299 * F[0][i] + 0.587 * F[1][i] + 0.114 * F[2][i]) / lf, 0.55, 1.5);
-      for (let c = 0; c < 3; c++) out[o + c] = ((F[c][i] + g) * f * (1 - a) + (logo[o + c] * lz + g * 0.6) * a) / al;
-      const b = Math.min(x - x0, x1 - 1 - x, y - y0, y1 - 1 - y) / pena + 0.4;
-      out[o + 3] = 255 * al * (b >= 1 ? 1 : b);
-    }
-    return out;
-  }
-
-  // 2. Showroom: troca a placa inteira por uma placa de loja, com a luz da placa original por cima
-  const ESTILOS = {
-    carbono: { fundo: [13, 14, 18], borda: [62, 66, 76], tinta: [246, 247, 249] },
-    fosco: { fundo: [38, 39, 43], borda: [92, 95, 102], tinta: [236, 236, 238] },
-    branco: { fundo: [236, 237, 240], borda: [24, 26, 32], tinta: [18, 20, 26] }
-  };
-  function modoShowroom(orig, W, A, pl, rnd) {
-    const n = W * A, e = ESTILOS[pl.estilo] || ESTILOS.carbono, c = tela(W, A), x = c.getContext('2d');
-    x.fillStyle = 'rgb(' + e.fundo.join(',') + ')'; x.fillRect(0, 0, W, A);
-    const brilho = x.createLinearGradient(0, 0, 0, A); brilho.addColorStop(0, 'rgba(255,255,255,.07)'); brilho.addColorStop(0.5, 'rgba(255,255,255,0)'); brilho.addColorStop(1, 'rgba(0,0,0,.10)');
-    x.fillStyle = brilho; x.fillRect(0, 0, W, A);
-    const m = A * 0.07, esp = Math.max(1.5, A * 0.022), rr = A * 0.09;
-    x.strokeStyle = 'rgb(' + e.borda.join(',') + ')'; x.lineWidth = esp; x.beginPath();
-    if (x.roundRect) x.roundRect(m, m, W - 2 * m, A - 2 * m, rr); else x.rect(m, m, W - 2 * m, A - 2 * m);
-    x.stroke();
-    const base = x.getImageData(0, 0, W, A).data;
-    const tinta = e.tinta, logo = conteudo(W, A, W * 0.08, A * 0.2, W * 0.84, A * 0.6, tinta, pl);
-    // luz da placa original: mapa suave de claro e escuro, mais a exposição geral da cena
-    const L = new Float32Array(n), um = new Float32Array(n).fill(1), hist = new Uint32Array(256);
-    for (let i = 0, o = 0; i < n; i++, o += 4) { L[i] = 0.299 * orig[o] + 0.587 * orig[o + 1] + 0.114 * orig[o + 2]; hist[L[i] | 0]++; }
-    const r = Math.max(4, Math.round(A * 0.28)), bl = borrar(L, W, A, r, 2), bd = borrar(um, W, A, r, 2);
-    let media = 0; for (let i = 0; i < n; i++) { bl[i] /= bd[i]; media += bl[i]; } media /= n;
-    const t = otsu(hist, n); let nC = 0, sC = 0; for (let i = t + 1; i < 256; i++) { nC += hist[i]; sC += i * hist[i]; }
-    const ganho = nC >= n - nC ? clamp((sC / nC) / 222, 0.32, 1.08) : 1, s = pl.sombra;
-    const out = new Uint8ClampedArray(n * 4);
-    for (let i = 0, o = 0; i < n; i++, o += 4) {
-      const a = logo[o + 3] / 255, luz = (1 + (clamp(bl[i] / media, 0.45, 1.6) - 1) * s) * (1 + (ganho - 1) * s), g = gauss(rnd) * 2.2;
-      for (let k = 0; k < 3; k++) out[o + k] = (base[o + k] * (1 - a) + logo[o + k] * a) * luz + g;
-      out[o + 3] = 255;
-    }
-    return out;
-  }
-
-  // 3. Desfoque editorial: mosaico grosso suavizado, que não deixa caractere nenhum recuperável
-  function modoBlur(orig, W, A) {
-    const gw = 12, gh = Math.max(4, Math.round(gw * A / W * 1.6)), g = new Float32Array(gw * gh * 4);
-    for (let y = 0; y < A; y++) { const gy = Math.min(gh - 1, (y * gh / A) | 0); for (let x = 0; x < W; x++) { const gx = Math.min(gw - 1, (x * gw / W) | 0), o = (y * W + x) * 4, k = (gy * gw + gx) * 4; g[k] += orig[o]; g[k + 1] += orig[o + 1]; g[k + 2] += orig[o + 2]; g[k + 3]++; } }
-    for (let k = 0; k < g.length; k += 4) { const q = g[k + 3] || 1; g[k] /= q; g[k + 1] /= q; g[k + 2] /= q; }
-    const out = new Uint8ClampedArray(W * A * 4);
-    for (let y = 0; y < A; y++) {
-      let fy = (y + 0.5) * gh / A - 0.5; fy = clamp(fy, 0, gh - 1.001); const yi = fy | 0, ty = fy - yi;
-      for (let x = 0; x < W; x++) {
-        let fx = (x + 0.5) * gw / W - 0.5; fx = clamp(fx, 0, gw - 1.001); const xi = fx | 0, tx = fx - xi;
-        const i = (yi * gw + xi) * 4, j = i + gw * 4, o = (y * W + x) * 4;
-        for (let c = 0; c < 3; c++) out[o + c] = (g[i + c] * (1 - tx) + g[i + 4 + c] * tx) * (1 - ty) + (g[j + c] * (1 - tx) + g[j + 4 + c] * tx) * ty;
-        out[o + 3] = 255;
-      }
-    }
-    return out;
-  }
-
-  // Calcula o remendo de uma placa: um recorte pequeno da foto, já tratado, para desenhar por cima
-  function remendoPlaca(base, pl) {
-    const prop = pl.formato === 'moto' ? 170 / 200 : 130 / 400, q0 = pl.quad;
-    const larg = Math.max(dist(q0[0], q0[1]), dist(q0[3], q0[2]), 8);
-    const W = clamp(Math.round(larg * 1.3), 120, 1500), A = Math.max(24, Math.round(W * prop));
-    const folga = pl.modo === 'blur' ? 0.07 : pl.modo === 'showroom' ? 0.03 : 0;
-    let q = q0;
-    if (folga) { const H0 = homografia(retangulo(W, A), q0); if (!H0) return null; const f = folga * A; q = [proj(H0, -f, -f), proj(H0, W + f, -f), proj(H0, W + f, A + f), proj(H0, -f, A + f)]; }
-    const H = homografia(retangulo(W, A), q), Hi = H && inverter(H);
-    if (!Hi) return null;
-    const xs = q.map(p => p[0]), ys = q.map(p => p[1]);
-    const bx = clamp(Math.floor(Math.min.apply(0, xs)) - 3, 0, base.width - 1), by = clamp(Math.floor(Math.min.apply(0, ys)) - 3, 0, base.height - 1);
-    const bw = clamp(Math.ceil(Math.max.apply(0, xs)) + 3, bx + 1, base.width) - bx, bh = clamp(Math.ceil(Math.max.apply(0, ys)) + 3, by + 1, base.height) - by;
-    if (bw * bh > 9000000) return null;
-    const reg = base.getContext('2d').getImageData(bx, by, bw, bh), orig = retificar(reg, bx, by, H, W, A);
-    const rnd = semente(Math.round(q0[0][0] * 7 + q0[0][1] * 13 + q0[2][0] * 17 + q0[2][1] * 19) + 1);
-    const p = pl.modo === 'blur' ? modoBlur(orig, W, A) : pl.modo === 'showroom' ? modoShowroom(orig, W, A, pl, rnd) : modoLimpa(orig, W, A, pl, rnd);
-    projetar(reg, bx, by, Hi, p, W, A, W / larg);
-    const c = tela(bw, bh); c.getContext('2d').putImageData(reg, 0, 0);
-    return { x: bx, y: by, w: bw, h: bh, c: c };
-  }
-
-  // Desfoque circular suave de um rosto ao fundo
-  function remendoRosto(base, r) {
-    const R = Math.max(4, r.r), x0 = Math.round(r.x - R), y0 = Math.round(r.y - R), lado = Math.round(R * 2);
-    const c = tela(lado, lado), x = c.getContext('2d'), m = tela(9, 9), mx = m.getContext('2d');
-    mx.imageSmoothingQuality = 'high'; mx.drawImage(base, x0, y0, lado, lado, 0, 0, 9, 9);
-    const m2 = tela(36, 36), m2x = m2.getContext('2d'); m2x.imageSmoothingQuality = 'high'; m2x.drawImage(m, 0, 0, 36, 36);
-    x.imageSmoothingQuality = 'high'; x.drawImage(m2, 0, 0, lado, lado);
-    const g = x.createRadialGradient(lado / 2, lado / 2, lado * 0.33, lado / 2, lado / 2, lado / 2);
-    g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)');
-    x.globalCompositeOperation = 'destination-in'; x.fillStyle = g; x.fillRect(0, 0, lado, lado);
-    return { x: x0, y: y0, w: lado, h: lado, c: c };
-  }
-
-  // ───────────────────────── detecção assistida ─────────────────────────
-  // Cresce a região a partir do toque: pega o fundo da placa e para na borda e nos caracteres
-  function crescer(tr, sx, sy) {
-    const w = tr.w, h = tr.h, d = tr.d; sx = clamp(Math.round(sx), 2, w - 3); sy = clamp(Math.round(sy), 2, h - 3);
-    let rr = 0, rg = 0, rb = 0;
-    for (let y = -2; y <= 2; y++) for (let x = -2; x <= 2; x++) { const o = ((sy + y) * w + sx + x) * 4; rr += d[o]; rg += d[o + 1]; rb += d[o + 2]; }
-    rr /= 25; rg /= 25; rb /= 25;
-    const Lr = 0.299 * rr + 0.587 * rg + 0.114 * rb, tolL = Math.max(46, Lr * 0.5), cr = rr - Lr, cb = rb - Lr;
-    const vis = new Uint8Array(w * h), pilha = new Int32Array(w * h), limite = w * h * 0.1;
-    let topo = 0, n = 0, i0 = sy * w + sx; pilha[topo++] = i0; vis[i0] = 1;
-    let aS = 1e9, bS = -1e9, aD = 1e9, bD = -1e9, tl = null, br = null, bl = null, trc = null, x0 = w, x1 = 0, y0 = h, y1 = 0;
-    const lMin = new Int32Array(h).fill(w), lMax = new Int32Array(h).fill(-1), cMin = new Int32Array(w).fill(h), cMax = new Int32Array(w).fill(-1);
-    const viz = [-1, 1, -w, w];
-    while (topo) {
-      const i = pilha[--topo], x = i % w, y = (i / w) | 0, o = i * 4, r0 = d[o], g0 = d[o + 1], b0 = d[o + 2], L0 = 0.299 * r0 + 0.587 * g0 + 0.114 * b0;
-      if (++n > limite) return null;
-      const s = x + y, df = x - y;
-      if (x < lMin[y]) lMin[y] = x; if (x > lMax[y]) lMax[y] = x; if (y < cMin[x]) cMin[x] = y; if (y > cMax[x]) cMax[x] = y;
-      if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
-      if (s < aS) { aS = s; tl = [x, y]; } if (s > bS) { bS = s; br = [x, y]; }
-      if (df < aD) { aD = df; bl = [x, y]; } if (df > bD) { bD = df; trc = [x, y]; }
-      for (let k = 0; k < 4; k++) {
-        const j = i + viz[k];
-        if (j < 0 || j >= w * h || vis[j]) continue;
-        if (k < 2 && ((j / w) | 0) !== y) continue;
-        const p = j * 4, r = d[p], g = d[p + 1], b = d[p + 2], L = 0.299 * r + 0.587 * g + 0.114 * b;
-        if (Math.abs(L - L0) > 12 || Math.abs(r - r0) + Math.abs(g - g0) + Math.abs(b - b0) > 34) continue;
-        if (Math.abs(L - Lr) > tolL || Math.abs(r - L - cr) > 26 || Math.abs(b - L - cb) > 26) continue;
-        vis[j] = 1; pilha[topo++] = j;
-      }
-    }
-    if (n < 80) return null;
-    // Cantos pela interseção das quatro bordas ajustadas por reta: quina arredondada, parafuso ou
-    // letra encostada no canto não puxam o pino para dentro
-    // reta dominante por consenso: testa pares de pontos e fica com a que mais pontos aceitam
-    const reta = (ini, fim, valor) => {
-      const pts = []; for (let t = ini; t <= fim; t++) { const v = valor(t); if (v !== null) pts.push([t, v]); }
-      const m = pts.length; if (m < 6) return null;
-      const passo = Math.max(1, Math.floor(m / 40)); let melhor = null, votos = 0;
-      for (let i = 0; i < m; i += passo) for (let j = i + Math.max(3, passo); j < m; j += passo) {
-        const a = (pts[j][1] - pts[i][1]) / (pts[j][0] - pts[i][0]); if (Math.abs(a) > 0.6) continue;
-        const b = pts[i][1] - a * pts[i][0]; let k = 0;
-        for (let q = 0; q < m; q++) if (Math.abs(pts[q][1] - a * pts[q][0] - b) <= 1.05) k++;
-        if (k > votos) { votos = k; melhor = [a, b]; }
-      }
-      if (!melhor || votos < Math.max(5, m * 0.25)) return null;
-      let st = 0, sv = 0, stt = 0, stv = 0, k = 0;
-      for (const p of pts) if (Math.abs(p[1] - melhor[0] * p[0] - melhor[1]) <= 1.05) { st += p[0]; sv += p[1]; stt += p[0] * p[0]; stv += p[0] * p[1]; k++; }
-      const den = k * stt - st * st; if (Math.abs(den) < 1e-9) return melhor;
-      const a = (k * stv - st * sv) / den; return [a, (sv - a * st) / k];
-    };
-    const my = 0, mx = 0;
-    const E1 = reta(y0 + my, y1 - my, t => (lMax[t] < 0 ? null : lMin[t])), D1 = reta(y0 + my, y1 - my, t => (lMax[t] < 0 ? null : lMax[t] + 1));
-    const T1 = reta(x0 + mx, x1 - mx, t => (cMax[t] < 0 ? null : cMin[t])), B1 = reta(x0 + mx, x1 - mx, t => (cMax[t] < 0 ? null : cMax[t] + 1));
-    let quad = [tl, trc, br, bl].map(p => [p[0] + 0.5, p[1] + 0.5]);
-    if (E1 && D1 && T1 && B1) {
-      const cruza = (v, hz) => { const d = 1 - v[0] * hz[0]; if (Math.abs(d) < 1e-6) return null; const x = (v[0] * hz[1] + v[1]) / d; return [x, hz[0] * x + hz[1]]; };
-      const q = [cruza(E1, T1), cruza(D1, T1), cruza(D1, B1), cruza(E1, B1)], folga = Math.max(x1 - x0, y1 - y0) * 0.35;
-      if (q.every((p, k) => p && dist(p, quad[k]) < folga)) quad = q;
-    }
-    return { quad: quad, n: n };
-  }
-  const azul = (d, o) => d[o + 2] > 58 && d[o + 2] - d[o] > 26 && d[o + 2] - d[o + 1] > 7;
-  // Do toque até os quatro cantos da placa inteira, medindo a faixa azul do padrão Mercosul quando ela existe
-  function placaPorToque(tr, sx, sy) {
-    const c = crescer(tr, sx, sy);
-    if (!c) return null;
-    const q = c.quad, larg = Math.max(dist(q[0], q[1]), dist(q[3], q[2])), alt = Math.max(dist(q[0], q[3]), dist(q[1], q[2]));
-    if (larg < 24 || alt < 8 || larg / alt < 1.05 || larg / alt > 8) return null;
-    const area = Math.abs((q[0][0] * q[1][1] - q[1][0] * q[0][1]) + (q[1][0] * q[2][1] - q[2][0] * q[1][1]) + (q[2][0] * q[3][1] - q[3][0] * q[2][1]) + (q[3][0] * q[0][1] - q[0][0] * q[3][1])) / 2;
-    if (c.n / area < 0.4 || c.n / area > 1.15) return null;
-    const H = homografia(retangulo(1, 1), q);
-    if (!H) return null;
-    let fim = 0;
-    for (let v = -0.03; v > -0.5; v -= 0.03) {
-      let az = 0, tot = 0;
-      for (let u = 0.12; u < 0.9; u += 0.04) { const p = proj(H, u, v), x = Math.round(p[0]), y = Math.round(p[1]); if (x < 0 || y < 0 || x >= tr.w || y >= tr.h) continue; tot++; if (azul(tr.d, (y * tr.w + x) * 4)) az++; }
-      if (tot && az / tot > 0.45) fim = -v; else if (fim && -v - fim > 0.07) break;
-    }
-    const mercosul = fim > 0.1, topo = mercosul ? Math.min(fim, 0.46) + 0.025 : 0.03, lat = 0.02, pe = mercosul ? 0.055 : 0.03;
-    const quad = [proj(H, -lat, -topo), proj(H, 1 + lat, -topo), proj(H, 1 + lat, 1 + pe), proj(H, -lat, 1 + pe)];
-    return { quad: quad.map(p => [p[0] * tr.f, p[1] * tr.f]), mercosul: mercosul, larg: larg * tr.f, vazios: 1 - c.n / area, prop: larg / alt,
-      faixa: mercosul ? clamp((topo + 0.025) / (topo + 1 + pe), 0.12, 0.42) : 0.04, lateral: 0.035, base: mercosul ? 0.07 : 0.05 };
-  }
-  // O dedo quase nunca cai num ponto liso: se o toque pegar um caractere, testa os vizinhos em volta
-  function placaPerto(tr, sx, sy, raio) {
-    for (const r of [0, 0.25, 0.5, 0.75, 1]) {
-      const n = r ? 8 : 1;
-      for (let k = 0; k < n; k++) {
-        const a = k / n * 6.2832 + r * 2, p = placaPorToque(tr, sx + Math.cos(a) * r * raio, sy + Math.sin(a) * r * raio);
-        if (p && dentroQuad([sx * tr.f, sy * tr.f], p.quad)) return p;
-      }
-    }
-    return null;
-  }
-  // Busca automática: acha faixas azuis de placa Mercosul e testa o fundo logo abaixo delas
-  function detectarAuto(tr) {
-    const w = tr.w, h = tr.h, d = tr.d, vis = new Uint8Array(w * h), pilha = new Int32Array(w * h), achadas = [];
-    for (let s = 0; s < w * h; s++) {
-      if (vis[s] || !azul(d, s * 4)) continue;
-      let topo = 0, n = 0, x0 = w, x1 = 0, y0 = h, y1 = 0; pilha[topo++] = s; vis[s] = 1;
-      while (topo) {
-        const i = pilha[--topo], x = i % w, y = (i / w) | 0; n++;
-        if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
-        if (x > 0 && !vis[i - 1] && azul(d, (i - 1) * 4)) { vis[i - 1] = 1; pilha[topo++] = i - 1; }
-        if (x < w - 1 && !vis[i + 1] && azul(d, (i + 1) * 4)) { vis[i + 1] = 1; pilha[topo++] = i + 1; }
-        if (y > 0 && !vis[i - w] && azul(d, (i - w) * 4)) { vis[i - w] = 1; pilha[topo++] = i - w; }
-        if (y < h - 1 && !vis[i + w] && azul(d, (i + w) * 4)) { vis[i + w] = 1; pilha[topo++] = i + w; }
-      }
-      const bw = x1 - x0 + 1, bh = y1 - y0 + 1;
-      if (bw < Math.max(16, w * 0.018) || bw / bh < 2.2 || n / (bw * bh) < 0.28 || n > w * h * 0.012) continue;
-      const cx = Math.round((x0 + x1) / 2), esp = Math.max(2, n / bw);
-      let yb = y1; for (let y = y1; y >= y0; y--) if (azul(d, (y * w + cx) * 4)) { yb = y; break; }
-      for (const k of [1.3, 2.2, 0.8, 3.2]) {
-        const sy = Math.round(yb + esp * k);
-        if (sy >= h - 3 || azul(d, (sy * w + cx) * 4)) continue;
-        const p = placaPorToque(tr, cx, sy);
-        if (p && p.mercosul && p.vazios > 0.08 && p.prop > 1.7 && p.prop < 6.5 && p.larg / tr.f > bw * 0.6 && p.larg / tr.f < bw * 1.6) { achadas.push(p); break; }
-      }
-    }
-    achadas.sort((a, b) => b.larg - a.larg);
-    const unicas = [];
-    for (const p of achadas) { const c = centro(p.quad); if (!unicas.some(u => dist(centro(u.quad), c) < u.larg * 0.5)) unicas.push(p); }
-    return unicas.slice(0, 6);
-  }
-  const centro = q => [(q[0][0] + q[1][0] + q[2][0] + q[3][0]) / 4, (q[0][1] + q[1][1] + q[2][1] + q[3][1]) / 4];
-  function ordenar(pts) {
-    const c = [pts.reduce((s, p) => s + p[0], 0) / 4, pts.reduce((s, p) => s + p[1], 0) / 4];
-    const o = pts.slice().sort((a, b) => Math.atan2(a[1] - c[1], a[0] - c[0]) - Math.atan2(b[1] - c[1], b[0] - c[0]));
-    let k = 0; for (let i = 1; i < 4; i++) if (o[i][0] + o[i][1] < o[k][0] + o[k][1]) k = i;
-    return [o[k], o[(k + 1) % 4], o[(k + 2) % 4], o[(k + 3) % 4]];
-  }
-  function dentroQuad(p, q) {
-    let s = 0;
-    for (let i = 0; i < 4; i++) { const a = q[i], b = q[(i + 1) % 4], z = (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0]); if (z === 0) continue; if (s === 0) s = z > 0 ? 1 : -1; else if ((z > 0 ? 1 : -1) !== s) return false; }
-    return true;
-  }
-
-  // Rostos: detector leve do MediaPipe, baixado só quando o botão é usado. A foto continua no aparelho.
-  let detectorRostos = null;
-  async function carregarDetector() {
-    if (detectorRostos) return detectorRostos;
-    const v = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14';
-    const mp = await import(v + '/vision_bundle.mjs');
-    const fs = await mp.FilesetResolver.forVisionTasks(v + '/wasm');
-    detectorRostos = await mp.FaceDetector.createFromOptions(fs, { baseOptions: { modelAssetPath: 'https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite' }, runningMode: 'IMAGE', minDetectionConfidence: 0.45 });
-    return detectorRostos;
-  }
-  async function detectarRostos(base) {
-    const det = await carregarDetector(), W = base.width, H = base.height, achados = [];
-    // a foto inteira e depois em ladrilhos, porque rosto de fundo é pequeno demais para o detector na foto reduzida
-    const partes = [[0, 0, W, H]], nx = W >= H ? 3 : 2, ny = W >= H ? 2 : 3, lw = W / nx * 1.25, lh = H / ny * 1.25;
-    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) partes.push([clamp(i * W / nx - lw * 0.1, 0, W - lw), clamp(j * H / ny - lh * 0.1, 0, H - lh), lw, lh]);
-    for (const [px, py, pw, ph] of partes) {
-      const k = Math.min(1, 1024 / Math.max(pw, ph)), c = tela(pw * k, ph * k);
-      c.getContext('2d').drawImage(base, px, py, pw, ph, 0, 0, c.width, c.height);
-      const r = det.detect(c);
-      for (const dt of (r.detections || [])) { const b = dt.boundingBox; if (!b) continue; achados.push({ x: px + (b.originX + b.width / 2) / k, y: py + (b.originY + b.height / 2) / k, r: Math.max(b.width, b.height) / k * 0.78 }); }
-    }
-    const unicos = [];
-    for (const a of achados.sort((p, q) => q.r - p.r)) if (!unicos.some(u => dist([u.x, u.y], [a.x, a.y]) < u.r * 0.8)) unicos.push(a);
-    return unicos;
-  }
-
-  // ───────────────────────── estado ─────────────────────────
-  const PADRAO = { plano: 'gratis', handle: '', marcaEB: 'completa', logo: '', logoMono: false, logoVersao: 0, modo: 'limpa', estilo: 'carbono', tamanho: 0.9, opacidade: 0.92, sombra: 0.7 };
-  let prefs = Object.assign({}, PADRAO);
-  try { Object.assign(prefs, JSON.parse(localStorage.getItem('eb-studio') || '{}')); } catch (e) {}
-  const guardar = () => { try { localStorage.setItem('eb-studio', JSON.stringify(prefs)); } catch (e) { aviso('O navegador não deixou guardar suas preferências.'); } };
-  const LIMITE = { gratis: 5, spotter: 5, loja: Infinity };
-
-  const E = { itens: [], atual: -1, base: null, trab: null, vista: null, s: 1, sel: -1, selRosto: -1, ferramenta: 'placa', marcando: null, cursor: null, guias: true, original: false, arrasto: null };
-  const el = {};
-  const item = () => E.itens[E.atual];
-
-  function aviso(t, tom) { el.aviso.textContent = t || ''; el.aviso.dataset.tom = tom || ''; }
-  function novaPlaca(quad, extra) {
-    return Object.assign({ quad: quad, modo: prefs.modo, formato: 'carro', faixa: 0.27, lateral: 0.045, base: 0.09, total: false,
-      tamanho: prefs.tamanho, opacidade: prefs.opacidade, estilo: prefs.estilo, sombra: prefs.sombra, rem: null }, extra || {});
-  }
-
-  // ───────────────────────── carga da foto ─────────────────────────
-  function lerImagem(arquivo) {
-    return new Promise((ok, erro) => {
-      const url = typeof arquivo === 'string' ? arquivo : URL.createObjectURL(arquivo), img = new Image();
-      img.onload = () => { ok(img); if (typeof arquivo !== 'string') setTimeout(() => URL.revokeObjectURL(url), 1000); };
-      img.onerror = () => erro(new Error('formato'));
-      img.src = url;
-    });
-  }
-  async function montarBase(it) {
-    const img = await lerImagem(it.arquivo);
-    let w = img.naturalWidth, h = img.naturalHeight, k = 1;
-    if (w * h > AREA_MAX) { k = Math.sqrt(AREA_MAX / (w * h)); w = Math.floor(w * k); h = Math.floor(h * k); }
-    const base = tela(w, h), x = base.getContext('2d', { willReadFrequently: true });
-    x.imageSmoothingQuality = 'high'; x.drawImage(img, 0, 0, w, h);
-    if (it.w && it.w !== w) { const f = w / it.w; it.placas.forEach(p => p.quad.forEach(q => { q[0] *= f; q[1] *= f; })); it.rostos.forEach(r => { r.x *= f; r.y *= f; r.r *= f; }); }
-    it.w = w; it.h = h; it.reduzida = k < 1;
-    return base;
-  }
-  function copiaDeTrabalho(base) {
-    const f = Math.max(1, Math.max(base.width, base.height) / 1280), w = Math.round(base.width / f), h = Math.round(base.height / f), c = tela(w, h), x = c.getContext('2d', { willReadFrequently: true });
-    x.imageSmoothingQuality = 'high'; x.drawImage(base, 0, 0, w, h);
-    return { w: w, h: h, d: x.getImageData(0, 0, w, h).data, f: base.width / w };
-  }
-  async function adicionar(arquivos) {
-    const fotos = Array.from(arquivos).filter(a => typeof a === 'string' || /^image\//.test(a.type) || /\.(jpe?g|png|webp|heic|heif)$/i.test(a.name || ''));
-    if (!fotos.length) return aviso('Escolha arquivos de imagem (JPG, PNG ou WebP).', 'erro');
-    const teto = LIMITE[prefs.plano], livres = teto - E.itens.length, entram = fotos.slice(0, Math.max(0, livres));
-    if (entram.length < fotos.length) aviso('O plano gratuito trata até ' + teto + ' fotos por vez. Entraram ' + entram.length + ' de ' + fotos.length + '.', 'alerta');
-    const primeiro = E.itens.length;
-    for (const a of entram) E.itens.push({ arquivo: a, nome: typeof a === 'string' ? a.split('/').pop() : a.name, placas: [], rostos: [], w: 0, h: 0, mini: '', auto: false });
-    if (!entram.length) return;
-    el.inicio.hidden = true; el.app.hidden = false;
-    await abrir(primeiro);
-    evento('studio_fotos', { quantidade: entram.length, plano: prefs.plano });
-  }
-  async function abrir(i) {
-    if (i < 0 || i >= E.itens.length) return;
-    E.atual = i; E.sel = -1; E.selRosto = -1; E.marcando = null; E.base = null;
-    const it = item();
-    aviso('Abrindo a foto…');
-    try { E.base = await montarBase(it); } catch (e) { aviso('Não consegui abrir essa foto. Tente exportar em JPG.', 'erro'); return; }
-    E.trab = copiaDeTrabalho(E.base);
-    if (!it.mini) { const m = tela(120, 120 * it.h / it.w); m.getContext('2d').drawImage(E.base, 0, 0, m.width, m.height); it.mini = m.toDataURL('image/jpeg', 0.6); }
-    it.placas.forEach(p => { p.rem = remendoPlaca(E.base, p); });
-    it.rostos.forEach(r => { r.rem = remendoRosto(E.base, r); });
-    ajustarPalco();
-    if (!it.auto && !it.placas.length) { it.auto = true; buscarPlacas(true); } else if (it.placas.length) { E.sel = 0; aviso(''); }
-    if (it.reduzida) aviso('Foto muito grande para este aparelho: ela foi reduzida para caber na memória.', 'alerta');
-    pintarTudo();
-  }
-  function buscarPlacas(silencioso) {
-    const it = item(); if (!E.base) return;
-    const achadas = detectarAuto(E.trab);
-    if (!achadas.length) { aviso(silencioso ? 'Toque no fundo da placa para marcá-la, ou use “4 cantos”.' : 'Não achei placa sozinho nesta foto. Toque no fundo da placa, ou use “4 cantos”.', silencioso ? '' : 'alerta'); return; }
-    achadas.forEach((p, k) => { if (it.placas.some(o => dist(centro(o.quad), centro(p.quad)) < p.larg * 0.5)) return; const nova = novaPlaca(p.quad, { faixa: p.faixa, lateral: p.lateral, base: p.base }); if (k > 0 && p.larg < achadas[0].larg * 0.45) nova.modo = 'blur'; nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); });
-    E.sel = 0;
-    aviso(achadas.length === 1 ? 'Placa encontrada. Confira os quatro cantos e ajuste se precisar.' : achadas.length + ' placas encontradas. As de fundo entraram em desfoque. Confira os cantos.', 'ok');
-  }
-
-  // ───────────────────────── palco, pinos e lupa ─────────────────────────
-  function ajustarPalco() {
-    if (!E.base) return;
-    const larg = el.palco.clientWidth, teto = Math.max(240, window.innerHeight * (window.innerWidth < 1024 ? 0.58 : 0.74));
-    E.s = Math.min(larg / E.base.width, teto / E.base.height);
-    const cw = Math.round(E.base.width * E.s), ch = Math.round(E.base.height * E.s), dpr = Math.min(window.devicePixelRatio || 1, 3);
-    el.cv.style.width = cw + 'px'; el.cv.style.height = ch + 'px'; el.cv.width = Math.round(cw * dpr); el.cv.height = Math.round(ch * dpr);
-    E.vista = tela(el.cv.width, el.cv.height);
-    const x = E.vista.getContext('2d'); x.imageSmoothingQuality = 'high'; x.drawImage(E.base, 0, 0, E.vista.width, E.vista.height);
-    desenhar();
-  }
-  function desenhar() {
-    if (!E.base || !E.vista) return;
-    const it = item(), x = el.cv.getContext('2d'), k = el.cv.width / E.base.width, a = E.arrasto;
-    x.setTransform(1, 0, 0, 1, 0, 0); x.imageSmoothingQuality = 'high'; x.drawImage(E.vista, 0, 0);
-    if (!E.original) {
-      it.placas.forEach((p, i) => { if (p.rem && !(a && (a.t === 'pino' || a.t === 'placa') && a.i === i)) x.drawImage(p.rem.c, p.rem.x * k, p.rem.y * k, p.rem.w * k, p.rem.h * k); });
-      it.rostos.forEach(r => { if (r.rem) x.drawImage(r.rem.c, r.rem.x * k, r.rem.y * k, r.rem.w * k, r.rem.h * k); });
-    }
-    if (!E.guias || E.original) return;
-    const dpr = el.cv.width / parseFloat(el.cv.style.width);
-    it.placas.forEach((p, i) => {
-      const sel = i === E.sel && E.ferramenta === 'placa';
-      x.beginPath(); p.quad.forEach((q, j) => (j ? x.lineTo(q[0] * k, q[1] * k) : x.moveTo(q[0] * k, q[1] * k))); x.closePath();
-      x.lineWidth = (sel ? 2 : 1.25) * dpr; x.strokeStyle = sel ? '#FACC15' : 'rgba(16,185,129,.9)'; x.stroke();
-      if (sel) { const c = centro(p.quad); p.quad.forEach(q => { const h = alca(q, c);
-        x.beginPath(); x.moveTo(q[0] * k, q[1] * k); x.lineTo(h[0] * k, h[1] * k); x.lineWidth = 1.5 * dpr; x.strokeStyle = '#FACC15'; x.stroke();
-        x.beginPath(); x.arc(h[0] * k, h[1] * k, 10 * dpr, 0, 6.2832); x.fillStyle = 'rgba(9,10,15,.7)'; x.fill(); x.lineWidth = 2 * dpr; x.stroke();
-        x.beginPath(); x.arc(q[0] * k, q[1] * k, 2.5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill(); }); }
-    });
-    if (E.ferramenta === 'rosto') it.rostos.forEach((r, i) => { x.beginPath(); x.arc(r.x * k, r.y * k, r.r * k, 0, 6.2832); x.lineWidth = (i === E.selRosto ? 2 : 1.25) * dpr; x.strokeStyle = i === E.selRosto ? '#FACC15' : 'rgba(16,185,129,.9)'; x.stroke(); });
-    if (E.marcando) {
-      const pts = E.marcando.concat(E.cursor ? [E.cursor] : []);
-      x.beginPath(); pts.forEach((q, j) => (j ? x.lineTo(q[0] * k, q[1] * k) : x.moveTo(q[0] * k, q[1] * k))); x.lineWidth = 2 * dpr; x.strokeStyle = '#FACC15'; x.stroke();
-      pts.forEach(q => { x.beginPath(); x.arc(q[0] * k, q[1] * k, 5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill(); });
-    }
-  }
-  // A alça do pino fica para fora da placa, para o dedo nunca tapar a quina que está sendo ajustada
-  function alca(q, c) { const d = dist(q, c) || 1, f = 22 / E.s; return [q[0] + (q[0] - c[0]) / d * f, q[1] + (q[1] - c[1]) / d * f]; }
-  // Lupa de precisão: mostra a foto original ampliada sob o dedo, com a mira no centro
-  function lupa(p, ev) {
-    const L = el.lupa, lado = 148, dpr = Math.min(window.devicePixelRatio || 1, 3);
-    if (!p) { L.hidden = true; return; }
-    if (L.width !== lado * dpr) { L.width = L.height = lado * dpr; }
-    const caixa = el.cv.getBoundingClientRect(), esquerda = ev.clientX - caixa.left > caixa.width / 2 || ev.clientY - caixa.top > 190;
-    L.style.left = esquerda ? '8px' : 'auto'; L.style.right = esquerda ? 'auto' : '8px'; L.hidden = false;
-    const zoom = clamp(E.s * 4.2, 1.2, 6) * dpr, meio = L.width / 2, x = L.getContext('2d'), raio = meio / zoom;
-    x.setTransform(1, 0, 0, 1, 0, 0); x.fillStyle = '#090A0F'; x.fillRect(0, 0, L.width, L.height);
-    x.imageSmoothingEnabled = zoom < 3 * dpr;
-    x.drawImage(E.base, p[0] - raio, p[1] - raio, raio * 2, raio * 2, 0, 0, L.width, L.height);
-    const it = item(), pl = E.arrasto && E.arrasto.t === 'pino' ? it.placas[E.arrasto.i] : null, pts = pl ? pl.quad : (E.marcando ? E.marcando.concat([p]) : null);
-    if (pts && pts.length > 1) { x.beginPath(); pts.forEach((q, j) => { const X = meio + (q[0] - p[0]) * zoom, Y = meio + (q[1] - p[1]) * zoom; j ? x.lineTo(X, Y) : x.moveTo(X, Y); }); if (pl) x.closePath(); x.lineWidth = 1.5 * dpr; x.strokeStyle = 'rgba(250,204,21,.85)'; x.stroke(); }
-    x.lineWidth = 1 * dpr; x.strokeStyle = '#fff'; x.beginPath(); x.moveTo(meio - 16 * dpr, meio); x.lineTo(meio - 4 * dpr, meio); x.moveTo(meio + 4 * dpr, meio); x.lineTo(meio + 16 * dpr, meio); x.moveTo(meio, meio - 16 * dpr); x.lineTo(meio, meio - 4 * dpr); x.moveTo(meio, meio + 4 * dpr); x.lineTo(meio, meio + 16 * dpr); x.stroke();
-    x.beginPath(); x.arc(meio, meio, 1.5 * dpr, 0, 6.2832); x.fillStyle = '#FACC15'; x.fill();
-  }
-  function paraFoto(ev) { const c = el.cv.getBoundingClientRect(); return [clamp((ev.clientX - c.left) / E.s, 0, E.base.width), clamp((ev.clientY - c.top) / E.s, 0, E.base.height)]; }
-
-  function aoDescer(ev) {
-    if (!E.base || (ev.button && ev.button !== 0)) return;
-    ev.preventDefault(); try { el.cv.setPointerCapture(ev.pointerId); } catch (e) {}
-    const it = item(), p = paraFoto(ev), raio = (ev.pointerType === 'mouse' ? 14 : 30) / E.s;
-    if (E.marcando) { E.arrasto = { t: 'marca' }; E.cursor = p; lupa(p, ev); desenhar(); return; }
-    if (E.ferramenta === 'rosto') {
-      const k = it.rostos.findIndex(r => dist([r.x, r.y], p) < Math.max(r.r, raio));
-      if (k >= 0) { E.selRosto = k; E.arrasto = { t: 'rosto', i: k, dx: it.rostos[k].x - p[0], dy: it.rostos[k].y - p[1] }; } else E.arrasto = { t: 'toque', cx: ev.clientX, cy: ev.clientY };
-      pintarTudo(); return;
-    }
-    let melhor = null;
-    const ordem = E.sel >= 0 ? [E.sel].concat(it.placas.map((_, i) => i).filter(i => i !== E.sel)) : it.placas.map((_, i) => i);
-    for (const i of ordem) { const c = centro(it.placas[i].quad); it.placas[i].quad.forEach((q, k) => { const d = i === E.sel ? Math.min(dist(alca(q, c), p), dist(q, p) * 1.6) : dist(q, p); if (d < raio && (!melhor || d < melhor.d)) melhor = { i: i, k: k, d: d }; }); if (melhor) break; }
-    if (melhor) { const q = it.placas[melhor.i].quad[melhor.k]; E.sel = melhor.i; E.arrasto = { t: 'pino', i: melhor.i, k: melhor.k, dx: q[0] - p[0], dy: q[1] - p[1] }; lupa(q, ev); pintarTudo(); return; }
-    if (E.sel >= 0 && dentroQuad(p, it.placas[E.sel].quad)) { E.arrasto = { t: 'placa?', i: E.sel, p0: p, q0: it.placas[E.sel].quad.map(q => q.slice()), cx: ev.clientX, cy: ev.clientY }; return; }
-    E.arrasto = { t: 'toque', cx: ev.clientX, cy: ev.clientY };
-  }
-  function aoMover(ev) {
-    const a = E.arrasto; if (!a || !E.base) return;
-    const it = item(), p = paraFoto(ev);
-    if (a.t === 'marca') { E.cursor = p; lupa(p, ev); desenhar(); }
-    else if (a.t === 'pino') { const q = it.placas[a.i].quad[a.k]; q[0] = clamp(p[0] + a.dx, 0, E.base.width); q[1] = clamp(p[1] + a.dy, 0, E.base.height); lupa(q, ev); desenhar(); }
-    else if (a.t === 'placa?' || a.t === 'placa') { if (a.t === 'placa?' && Math.hypot(ev.clientX - a.cx, ev.clientY - a.cy) < 7) return; a.t = 'placa'; it.placas[a.i].quad.forEach((q, k) => { q[0] = a.q0[k][0] + p[0] - a.p0[0]; q[1] = a.q0[k][1] + p[1] - a.p0[1]; }); desenhar(); }
-    else if (a.t === 'rosto') { const r = it.rostos[a.i]; r.x = p[0] + a.dx; r.y = p[1] + a.dy; r.rem = null; desenhar(); }
-    else if (a.t === 'toque' && Math.hypot(ev.clientX - a.cx, ev.clientY - a.cy) > 10) a.cancelado = true;
-  }
-  function aoSoltar(ev) {
-    const a = E.arrasto; E.arrasto = null; lupa(null);
-    if (!a || !E.base) return;
-    const it = item(), p = paraFoto(ev);
-    if (a.t === 'marca') {
-      E.marcando.push(p); E.cursor = null;
-      if (E.marcando.length === 4) { const nova = novaPlaca(ordenar(E.marcando)); nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); E.sel = it.placas.length - 1; E.marcando = null; aviso('Placa marcada. Arraste os pinos para acertar as quinas.', 'ok'); }
-      else aviso('Canto ' + E.marcando.length + ' de 4. Segure o dedo para ver a lupa e solte na quina.');
-    }
-    else if (a.t === 'pino' || a.t === 'placa') { const pl = it.placas[a.i]; pl.rem = remendoPlaca(E.base, pl); }
-    else if (a.t === 'rosto') { const r = it.rostos[a.i]; r.rem = remendoRosto(E.base, r); }
-    else if (a.t === 'toque' && !a.cancelado) aoTocar(p);
-    pintarTudo();
-  }
-  function aoTocar(p) {
-    const it = item();
-    if (E.ferramenta === 'rosto') { const r = { x: p[0], y: p[1], r: Math.max(14, Math.min(E.base.width, E.base.height) * 0.028) }; r.rem = remendoRosto(E.base, r); it.rostos.push(r); E.selRosto = it.rostos.length - 1; aviso('Rosto borrado. Arraste para mover e use o controle de tamanho.', 'ok'); return; }
-    const k = it.placas.findIndex(pl => dentroQuad(p, pl.quad));
-    if (k >= 0) { E.sel = k; return; }
-    const achou = placaPerto(E.trab, p[0] / E.trab.f, p[1] / E.trab.f, clamp(22 / E.s / E.trab.f, 6, 40));
-    if (!achou) { aviso('Não consegui fechar a placa nesse toque. Toque numa área lisa do fundo dela, ou use “4 cantos”.', 'alerta'); return; }
-    const nova = novaPlaca(achou.quad, { faixa: achou.faixa, lateral: achou.lateral, base: achou.base });
-    nova.rem = remendoPlaca(E.base, nova); it.placas.push(nova); E.sel = it.placas.length - 1;
-    aviso('Placa marcada. Confira os quatro cantos e ajuste se precisar.', 'ok');
-  }
-
-  // ───────────────────────── painel ─────────────────────────
-  function refazer(tudo) {
-    const it = item(); if (!it || !E.base) return;
-    (tudo ? it.placas : [it.placas[E.sel]]).forEach(p => { if (p) p.rem = remendoPlaca(E.base, p); });
-    desenhar();
-  }
-  let fila = 0;
-  const refazerLogo = tudo => { cancelAnimationFrame(fila); fila = requestAnimationFrame(() => refazer(tudo)); };
-  function pintarTudo() { desenhar(); pintarPainel(); pintarFila(); }
-  function pintarPainel() {
-    const it = item(), pl = it && it.placas[E.sel], ro = it && it.rostos[E.selRosto];
-    $$('[data-ferramenta]').forEach(b => b.setAttribute('aria-pressed', b.dataset.ferramenta === E.ferramenta));
-    el.painelPlaca.hidden = E.ferramenta !== 'placa'; el.painelRosto.hidden = E.ferramenta !== 'rosto';
-    el.semPlaca.hidden = !!pl; el.comPlaca.hidden = !pl;
-    el.marcar.setAttribute('aria-pressed', !!E.marcando);
-    el.guias.setAttribute('aria-pressed', E.guias);
-    if (pl) {
-      $$('[data-modo]').forEach(b => b.setAttribute('aria-pressed', b.dataset.modo === pl.modo));
-      $$('[data-estilo]').forEach(b => b.setAttribute('aria-pressed', b.dataset.estilo === pl.estilo));
-      $$('[data-formato]').forEach(b => b.setAttribute('aria-pressed', b.dataset.formato === pl.formato));
-      $$('[data-so]').forEach(g => { g.hidden = g.dataset.so.split(' ').indexOf(pl.modo) < 0; });
-      $$('[data-campo]').forEach(c => { if (c.type === 'checkbox') c.checked = !!pl[c.dataset.campo]; else c.value = Math.round(pl[c.dataset.campo] * 100); });
-    }
-    el.raioRosto.disabled = !ro; if (ro) el.raioRosto.value = Math.round(ro.r / Math.min(E.base.width, E.base.height) * 1000);
-    el.tirarRosto.disabled = !ro;
-    $$('[data-plano]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.plano === prefs.plano); });
-    $$('[data-plano-campos]').forEach(g => { g.hidden = g.dataset.planoCampos !== prefs.plano; });
-    $$('[data-marca]').forEach(b => b.setAttribute('aria-pressed', b.dataset.marca === prefs.marcaEB));
-    el.handle.value = prefs.handle; el.mono.checked = !!prefs.logoMono;
-    el.logoAtual.hidden = !prefs.logo; if (prefs.logo) el.logoAtual.src = prefs.logo;
-    const prontas = E.itens.filter(i => i.placas.length || i.rostos.length).length;
-    el.baixarTudo.hidden = E.itens.length < 2; el.baixarTudo.textContent = 'Baixar ' + prontas + ' de ' + E.itens.length + ' em ZIP';
-    el.baixarTudo.disabled = !prontas;
-    el.contador.textContent = E.itens.length > 1 ? 'Foto ' + (E.atual + 1) + ' de ' + E.itens.length : '';
-  }
-  function pintarFila() {
-    el.fila.hidden = E.itens.length < 2;
-    if (E.itens.length < 2) return;
-    el.fila.innerHTML = '';
-    E.itens.forEach((it, i) => {
-      const b = document.createElement('button'); b.type = 'button'; b.className = 'st-mini'; b.setAttribute('aria-current', i === E.atual);
-      b.setAttribute('aria-label', 'Abrir a foto ' + (i + 1) + (it.placas.length || it.rostos.length ? ', já tratada' : ', sem tratamento'));
-      b.dataset.estado = it.placas.length || it.rostos.length ? 'pronta' : 'pendente';
-      if (it.mini) b.style.backgroundImage = 'url(' + it.mini + ')'; else b.textContent = i + 1;
-      b.addEventListener('click', () => { if (i !== E.atual) abrir(i); });
-      el.fila.appendChild(b);
-    });
-  }
-
-  // ───────────────────────── exportação ─────────────────────────
-  function compor(base, it) {
-    const c = tela(base.width, base.height), x = c.getContext('2d');
-    x.drawImage(base, 0, 0);
-    it.placas.forEach(p => { const r = p.rem || remendoPlaca(base, p); if (r) x.drawImage(r.c, r.x, r.y); });
-    it.rostos.forEach(r => { const m = r.rem || remendoRosto(base, r); x.drawImage(m.c, m.x, m.y); });
-    return c;
-  }
-  const paraBlob = c => new Promise(ok => c.toBlob(ok, 'image/jpeg', 0.95));
-  const nomeSaida = it => (it.nome || 'foto').replace(/\.[a-z0-9]+$/i, '').replace(/[^\w.-]+/g, '-').slice(0, 80) + '-eb-studio.jpg';
-  function baixar(blob, nome) { const a = document.createElement('a'), u = URL.createObjectURL(blob); a.href = u; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); }
-  async function exportarAtual(compartilhar) {
-    const it = item(); if (!E.base) return;
-    if (!it.placas.length && !it.rostos.length) return aviso('Marque a placa ou um rosto antes de baixar.', 'alerta');
-    aviso('Gerando a foto em resolução máxima…');
-    const blob = await paraBlob(compor(E.base, it)), nome = nomeSaida(it);
-    if (compartilhar) {
-      const f = new File([blob], nome, { type: 'image/jpeg' });
-      if (navigator.canShare && navigator.canShare({ files: [f] })) { try { await navigator.share({ files: [f] }); aviso('Pronto.', 'ok'); } catch (e) { aviso(''); } return; }
-    }
-    baixar(blob, nome);
-    aviso('Foto salva em ' + it.w + ' × ' + it.h + ' px, sem metadados.', 'ok');
-    evento('studio_exportou', { modo: it.placas[0] ? it.placas[0].modo : 'rosto', plano: prefs.plano, placas: it.placas.length, rostos: it.rostos.length });
-  }
-  const TAB_CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
-  function crc32(u) { let c = 0xFFFFFFFF; for (let i = 0; i < u.length; i++) c = TAB_CRC[(c ^ u[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
-  // ZIP sem compressão (JPG já é comprimido), montado no próprio navegador
-  function zipar(arqs) {
-    const enc = new TextEncoder(), partes = [], central = []; let pos = 0;
-    const agora = new Date(), hora = (agora.getHours() << 11) | (agora.getMinutes() << 5) | (agora.getSeconds() >> 1), dia = ((agora.getFullYear() - 1980) << 9) | ((agora.getMonth() + 1) << 5) | agora.getDate();
-    for (const a of arqs) {
-      const nome = enc.encode(a.nome), crc = crc32(a.dados), cab = new DataView(new ArrayBuffer(30));
-      cab.setUint32(0, 0x04034b50, true); cab.setUint16(4, 20, true); cab.setUint16(6, 0x0800, true); cab.setUint16(8, 0, true); cab.setUint16(10, hora, true); cab.setUint16(12, dia, true);
-      cab.setUint32(14, crc, true); cab.setUint32(18, a.dados.length, true); cab.setUint32(22, a.dados.length, true); cab.setUint16(26, nome.length, true); cab.setUint16(28, 0, true);
-      partes.push(cab.buffer, nome, a.dados);
-      const cen = new DataView(new ArrayBuffer(46));
-      cen.setUint32(0, 0x02014b50, true); cen.setUint16(4, 20, true); cen.setUint16(6, 20, true); cen.setUint16(8, 0x0800, true); cen.setUint16(10, 0, true); cen.setUint16(12, hora, true); cen.setUint16(14, dia, true);
-      cen.setUint32(16, crc, true); cen.setUint32(20, a.dados.length, true); cen.setUint32(24, a.dados.length, true); cen.setUint16(28, nome.length, true); cen.setUint32(42, pos, true);
-      central.push(cen.buffer, nome); pos += 30 + nome.length + a.dados.length;
-    }
-    const tamC = central.reduce((s, b) => s + (b.byteLength || b.length), 0), fim = new DataView(new ArrayBuffer(22));
-    fim.setUint32(0, 0x06054b50, true); fim.setUint16(8, arqs.length, true); fim.setUint16(10, arqs.length, true); fim.setUint32(12, tamC, true); fim.setUint32(16, pos, true);
-    return new Blob(partes.concat(central, [fim.buffer]), { type: 'application/zip' });
-  }
-  async function exportarTudo() {
-    const prontas = E.itens.filter(i => i.placas.length || i.rostos.length), fora = E.itens.length - prontas.length, arqs = [], usados = {};
-    if (!prontas.length) return;
-    el.baixarTudo.disabled = true;
-    for (let k = 0; k < prontas.length; k++) {
-      const it = prontas[k];
-      aviso('Gerando ' + (k + 1) + ' de ' + prontas.length + '…');
-      const base = it === item() ? E.base : await montarBase(it);
-      const blob = await paraBlob(compor(base, it));
-      let nome = nomeSaida(it); if (usados[nome]) nome = nome.replace(/\.jpg$/, '-' + (k + 1) + '.jpg'); usados[nome] = 1;
-      arqs.push({ nome: nome, dados: new Uint8Array(await blob.arrayBuffer()) });
-      await new Promise(r => setTimeout(r, 0));
-    }
-    baixar(zipar(arqs), 'eb-studio-' + prontas.length + '-fotos.zip');
-    aviso(prontas.length + ' fotos no ZIP.' + (fora ? ' ' + fora + ' ficaram de fora porque ainda não foram tratadas.' : ''), fora ? 'alerta' : 'ok');
-    el.baixarTudo.disabled = false;
-    evento('studio_exportou_lote', { quantidade: prontas.length, plano: prefs.plano });
-  }
-
-  // ───────────────────────── ligações da interface ─────────────────────────
-  async function carregarLogoLoja() {
-    imagens.loja = null;
-    if (prefs.logo) { try { imagens.loja = await lerImagem(prefs.logo); } catch (e) { prefs.logo = ''; } }
-  }
-  async function iniciar() {
-    ['inicio', 'app', 'palco', 'cv', 'lupa', 'aviso', 'painelPlaca', 'painelRosto', 'semPlaca', 'comPlaca', 'marcar', 'guias', 'raioRosto', 'tirarRosto', 'handle', 'mono', 'logoAtual', 'baixarTudo', 'contador', 'fila', 'arquivo', 'arquivoLogo', 'solta']
-      .forEach(n => { el[n] = document.getElementById('st-' + n.replace(/[A-Z]/g, m => '-' + m.toLowerCase())); });
-    try { imagens.simbolo = await lerImagem(SIMBOLO); } catch (e) {}
-    try { if (document.fonts && document.fonts.load) await document.fonts.load('800 40px "Barlow Condensed"'); } catch (e) {}
-    await carregarLogoLoja();
-
-    $$('[data-escolher]').forEach(b => b.addEventListener('click', () => el.arquivo.click()));
-    el.arquivo.addEventListener('change', () => { adicionar(el.arquivo.files); el.arquivo.value = ''; });
-    ['dragenter', 'dragover'].forEach(n => document.addEventListener(n, e => { if (e.dataTransfer && Array.from(e.dataTransfer.types || []).indexOf('Files') >= 0) { e.preventDefault(); el.solta.hidden = false; } }));
-    ['dragleave', 'drop'].forEach(n => document.addEventListener(n, e => { if (n === 'drop' || !e.relatedTarget) el.solta.hidden = true; }));
-    document.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) { e.preventDefault(); adicionar(e.dataTransfer.files); } });
-    document.addEventListener('paste', e => { const f = Array.from((e.clipboardData || {}).files || []); if (f.length) adicionar(f); });
-
-    el.cv.addEventListener('pointerdown', aoDescer); el.cv.addEventListener('pointermove', aoMover);
-    el.cv.addEventListener('pointerup', aoSoltar); el.cv.addEventListener('pointercancel', () => { E.arrasto = null; lupa(null); refazer(true); });
-    let rz = 0; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(ajustarPalco, 120); });
-
-    $$('[data-ferramenta]').forEach(b => b.addEventListener('click', () => { E.ferramenta = b.dataset.ferramenta; E.marcando = null; aviso(E.ferramenta === 'rosto' ? 'Toque em cada rosto ao fundo para borrar.' : ''); pintarTudo(); }));
-    $('#st-detectar').addEventListener('click', () => { E.ferramenta = 'placa'; buscarPlacas(false); pintarTudo(); });
-    el.marcar.addEventListener('click', () => { E.ferramenta = 'placa'; E.marcando = E.marcando ? null : []; E.sel = E.marcando ? -1 : E.sel; aviso(E.marcando ? 'Toque nos 4 cantos da placa. Segure o dedo para abrir a lupa e solte na quina.' : ''); pintarTudo(); });
-    el.guias.addEventListener('click', () => { E.guias = !E.guias; pintarTudo(); });
-    const orig = $('#st-original'), ver = v => { E.original = v; orig.setAttribute('aria-pressed', v); desenhar(); };
-    orig.addEventListener('pointerdown', e => { e.preventDefault(); ver(true); }); ['pointerup', 'pointerleave', 'pointercancel'].forEach(n => orig.addEventListener(n, () => ver(false)));
-    orig.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') ver(true); }); orig.addEventListener('keyup', () => ver(false));
-
-    $$('[data-modo]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.modo = prefs.modo = b.dataset.modo; guardar(); refazer(); pintarPainel(); }));
-    $$('[data-estilo]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.estilo = prefs.estilo = b.dataset.estilo; guardar(); refazer(); pintarPainel(); }));
-    $$('[data-formato]').forEach(b => b.addEventListener('click', () => { const pl = item().placas[E.sel]; if (!pl) return; pl.formato = b.dataset.formato; refazer(); pintarPainel(); }));
-    $$('[data-campo]').forEach(c => c.addEventListener('input', () => { const pl = item().placas[E.sel]; if (!pl) return; const k = c.dataset.campo; pl[k] = c.type === 'checkbox' ? c.checked : c.value / 100; if (k in prefs) { prefs[k] = pl[k]; guardar(); } refazerLogo(); }));
-    $('#st-tirar-placa').addEventListener('click', () => { const it = item(); if (E.sel < 0) return; it.placas.splice(E.sel, 1); E.sel = it.placas.length ? 0 : -1; aviso('Placa removida da edição.'); pintarTudo(); });
-
-    $('#st-achar-rostos').addEventListener('click', async ev => {
-      const b = ev.currentTarget; b.disabled = true; aviso('Baixando o detector de rostos e procurando… a foto continua no seu aparelho.');
-      try {
-        const it = item(), achados = await detectarRostos(E.base); let novos = 0;
-        achados.forEach(a => { if (it.rostos.some(r => dist([r.x, r.y], [a.x, a.y]) < r.r)) return; a.r = Math.max(a.r, 10); a.rem = remendoRosto(E.base, a); it.rostos.push(a); novos++; });
-        aviso(novos ? novos + (novos === 1 ? ' rosto borrado.' : ' rostos borrados.') + ' Confira a foto e toque nos que faltarem.' : 'Não achei rosto sozinho. Toque em cada um para borrar.', novos ? 'ok' : 'alerta');
-      } catch (e) { aviso('O detector automático não carregou neste aparelho. Toque em cada rosto para borrar.', 'alerta'); }
-      b.disabled = false; pintarTudo();
-    });
-    el.raioRosto.addEventListener('input', () => { const r = item().rostos[E.selRosto]; if (!r) return; r.r = Math.max(6, el.raioRosto.value / 1000 * Math.min(E.base.width, E.base.height)); r.rem = remendoRosto(E.base, r); desenhar(); });
-    el.tirarRosto.addEventListener('click', () => { const it = item(); if (E.selRosto < 0) return; it.rostos.splice(E.selRosto, 1); E.selRosto = -1; pintarTudo(); });
-
-    $$('[data-plano]').forEach(b => b.addEventListener('click', () => { prefs.plano = b.dataset.plano; guardar(); refazer(true); pintarPainel(); }));
-    $$('[data-marca]').forEach(b => b.addEventListener('click', () => { prefs.marcaEB = b.dataset.marca; guardar(); refazer(true); pintarPainel(); }));
-    el.handle.addEventListener('input', () => { prefs.handle = el.handle.value.trim().replace(/[^\w.@]/g, '').slice(0, 30); guardar(); refazerLogo(true); });
-    el.mono.addEventListener('change', () => { prefs.logoMono = el.mono.checked; guardar(); refazer(true); });
-    $('#st-enviar-logo').addEventListener('click', () => el.arquivoLogo.click());
-    el.arquivoLogo.addEventListener('change', async () => {
-      const f = el.arquivoLogo.files[0]; el.arquivoLogo.value = ''; if (!f) return;
-      try {
-        const img = await lerImagem(f), k = Math.min(1, 900 / Math.max(img.naturalWidth, img.naturalHeight)), c = tela(img.naturalWidth * k, img.naturalHeight * k);
-        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-        prefs.logo = c.toDataURL('image/png'); prefs.logoVersao = (prefs.logoVersao || 0) + 1; guardar(); await carregarLogoLoja(); refazer(true); pintarPainel();
-        aviso('Logo guardada neste navegador. Ela não foi enviada a lugar nenhum.', 'ok');
-      } catch (e) { aviso('Não consegui ler essa logo. Use PNG com fundo transparente.', 'erro'); }
-    });
-    $('#st-tirar-logo').addEventListener('click', async () => { prefs.logo = ''; guardar(); await carregarLogoLoja(); refazer(true); pintarPainel(); });
-
-    $('#st-baixar').addEventListener('click', () => exportarAtual(false));
-    const comp = $('#st-compartilhar'); comp.hidden = !(navigator.canShare && navigator.share); comp.addEventListener('click', () => exportarAtual(true));
-    el.baixarTudo.addEventListener('click', exportarTudo);
-    $('#st-anterior').addEventListener('click', () => abrir(E.atual - 1)); $('#st-proxima').addEventListener('click', () => abrir(E.atual + 1));
-    document.addEventListener('keydown', e => {
-      if (!E.base || /INPUT|TEXTAREA|SELECT/.test((e.target || {}).tagName || '')) return;
-      if (e.key === 'Delete' || e.key === 'Backspace') { if (E.ferramenta === 'rosto') el.tirarRosto.click(); else $('#st-tirar-placa').click(); }
-      if (e.key === 'Escape' && E.marcando) el.marcar.click();
-    });
-    pintarPainel();
-  }
-
-  window.EBStudio = { abrir: adicionar, estado: E, prefs: () => prefs, motor: { homografia: homografia, inverter: inverter, proj: proj, placaPorToque: placaPorToque, detectarAuto: detectarAuto } };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
-})();
+(function(e,c){function vE(e,c){return y(c- -0x3b3,e);}function vi(e,c){return y(e-0x280,c);}const L=e();while(!![]){try{const v=-parseInt(vE(-0x1c8,-0x17c))/0x1+-parseInt(vE(-0xe3,-0x83))/0x2*(-parseInt(vE(-0x2f,-0xf9))/0x3)+parseInt(vi(0x571,0x4f3))/0x4+parseInt(vi(0x4a2,0x409))/0x5+parseInt(vE(-0x25b,-0x226))/0x6+-parseInt(vi(0x4cc,0x467))/0x7+-parseInt(vE(-0x1d0,-0x23f))/0x8;if(v===c)break;else L['push'](L['shift']());}catch(N){L['push'](L['shift']());}}}(W,0xa3d68),(function(){const b=(function(){let cY=!![];return function(cH,ck){const co=cY?function(){function vg(e,c){return y(e-0x53,c);}if(ck){const cn=ck[vg(0x245,0x247)](cH,arguments);return ck=null,cn;}}:function(){};return cY=![],co;};}()),P=b(this,function(){function vu(e,c){return y(e-0x298,c);}function vh(e,c){return y(e-0x57,c);}return P[vh(0x282,0x196)]()[vu(0x438,0x500)](vu(0x4a6,0x415))[vu(0x4c3,0x570)]()[vu(0x502,0x5db)](P)[vu(0x438,0x44b)](vh(0x265,0x17a));});P();const M=(function(){let cY=!![];return function(cH,ck){const co=cY?function(){function vz(e,c){return y(e-0x122,c);}if(ck){const cn=ck[vz(0x314,0x29c)](cH,arguments);return ck=null,cn;}}:function(){};return cY=![],co;};}()),R=M(this,function(){function vP(e,c){return y(c-0x1ab,e);}const cY=function(){function vB(e,c){return y(e- -0x7a,c);}function vb(e,c){return y(e-0x179,c);}let L9;try{L9=Function(vB(0x20d,0x2a5)+vB(0x20a,0x1ef)+');')();}catch(Le){L9=window;}return L9;},cH=cY(),ck=new RegExp(vP(0x3f8,0x40e),'g'),co=vP(0x466,0x3a0)[vP(0x2a0,0x35c)](ck,'')[vM(0x5a,0xcc)](';');let cn,ct,cG,L0;const L1=function(L9,Le,Lc){if(L9[vR(0xc2,0x3)]!=Le)return![];for(let LL=0x0;LL<Le;LL++){for(let Lv=0x0;Lv<Lc[vU(0x22a,0x32b)];Lv+=0x2){if(LL==Lc[Lv]&&L9[vU(0x238,0x198)](LL)!=Lc[Lv+0x1])return![];}}function vR(e,c){return vM(e-0xf7,c);}function vU(e,c){return vM(e-0x25f,c);}return!![];};function vM(e,c){return y(e- -0x2a4,c);}const L2=function(L9,Le,Lc){return L1(Le,Lc,L9);},L3=function(L9,Le,Lc){return L2(Le,L9,Lc);},L4=function(L9,Le,Lc){return L3(Le,Lc,L9);};for(let L9 in cH){if(L1(L9,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){cn=L9;break;}}for(let Le in cH[cn]){if(L4(0x6,Le,[0x5,0x6e,0x0,0x64])){ct=Le;break;}}for(let Lc in cH[cn]){if(L3(Lc,[0x7,0x6e,0x0,0x6c],0x8)){cG=Lc;break;}}if(!('~'>ct))for(let LL in cH[cn][cG]){if(L2([0x7,0x65,0x0,0x68],LL,0x8)){L0=LL;break;}}if(!cn||!cH[cn])return;const L5=cH[cn][ct],L6=!!cH[cn][cG]&&cH[cn][cG][L0],L7=L5||L6;if(!L7)return;let L8=![];for(let Lv=0x0;Lv<co[vP(0x3c7,0x41a)];Lv++){const LN=co[Lv],Lj=LN[0x0]===String[vP(0x547,0x471)](0x2e)?LN[vP(0x421,0x403)](0x1):LN,Lq=L7[vM(-0x35,-0x118)]-Lj[vM(-0x35,-0xbf)],LW=L7[vM(-0x13f,-0x103)](Lj,Lq),Ly=LW!==-0x1&&LW===Lq;Ly&&((L7[vP(0x33b,0x41a)]==LN[vP(0x3cf,0x41a)]||LN[vM(-0x13f,-0x132)]('.')===0x0)&&(L8=!![]));}if(!L8){const Ld=new RegExp(vP(0x47f,0x3f2),'g'),LS=vP(0x45e,0x3fd)[vM(-0xf3,-0xed)](Ld,'');cH[cn][cG]=LS;}});R();const U=(function(){let cY=!![];return function(cH,ck){const co=cY?function(){function vO(e,c){return y(c-0x127,e);}if(ck){const cn=ck[vO(0x2a1,0x319)](cH,arguments);return ck=null,cn;}}:function(){};return cY=![],co;};}()),O=U(this,function(){function vf(e,c){return y(e- -0x268,c);}function vC(e,c){return y(c- -0x215,e);}const cY=function(){let cn;try{cn=Function(vV(0x306,0x3f1)+vs(0xa8,0x197)+');')();}catch(ct){cn=window;}function vs(e,c){return y(c- -0xed,e);}function vV(e,c){return y(c-0x16a,e);}return cn;},cH=cY(),ck=cH[vC(0x170,0xe5)]=cH[vf(0x92,0xe1)]||{},co=[vC(-0x19,0xaf),vC(0x130,0x84),vC(-0xa9,-0x50),vC(0x12b,0xda),vC(-0x67,-0x95),vC(0xda,0x67),vf(0xbf,0x1a2)];for(let cn=0x0;cn<co[vf(0x7,0xe8)];cn++){const ct=U[vf(0x2,0x9a)][vC(-0x6,-0xcb)][vf(-0xd1,-0x54)](U),cG=co[cn],L0=ck[cG]||ct;ct[vC(0x145,0x129)]=U[vC(-0x2a,-0x7e)](U),ct[vC(0xfe,0x16)]=L0[vC(-0xde,0x16)][vf(-0xd1,-0x19e)](L0),ck[cG]=ct;}});O();'use strict';const V=![]||/[?&]trava=1/[vp(0x238,0x28f)](location[vp(0x2fa,0x2cb)]),s=0.98,C=Math[vp(0x4b7,0x415)],f=Math[vD(0xa4,0xdd)],p=Math[vD(-0x107,-0x5)],D=Math[vD(0x6d,0x131)],x=Math[vD(-0x14b,-0x64)],X=Math[vD(-0x12c,-0x1a7)],l=Math[vp(0x468,0x368)],Q=Math[vD(0x3a,0x12)],a=Math[vD(-0x10f,-0x193)],r=Math[vp(0x1a2,0x281)],w=Math[vD(-0xd6,-0xda)],A=Math[vp(0x3c2,0x3ee)],Y=Math[vD(-0xe9,-0x1d)],H=(cY,cH)=>(cH||document)[vp(0x218,0x273)](cY),k=(cY,cH)=>Array[vp(0x2e5,0x2fa)]((cH||document)[vD(0xb7,-0x1)](cY)),o=(cY,cH,ck)=>cY<cH?cH:cY>ck?ck:cY,n=(cY,cH)=>X(cY[0x0]-cH[0x0],cY[0x1]-cH[0x1]),t=cY=>new Promise(cH=>setTimeout(cH,cY||0x0)),G=/iP(hone|ad|od)/[vD(-0x126,-0x14a)](navigator[vD(0xbc,0xed)])||navigator[vD(-0x145,-0x1ca)]===vp(0x498,0x3fe)&&navigator[vD(-0xd2,-0xe5)]>0x1,e0=G||/Android/i[vD(-0x126,-0xc4)](navigator[vp(0x467,0x471)]),e1=/^(localhost|127\.0\.0\.1)$/[vD(-0x126,-0x65)](location[vD(0x12,-0x41)]),e2=vD(0xae,0x5b),e3=(cY,cH)=>{function vX(e,c){return vD(c- -0xc7,e);}function vx(e,c){return vp(c,e- -0x423);}try{if(window[vx(-0x77,0x70)])window[vX(-0x19d,-0xd0)](cY,cH||{});}catch(ck){}};function e4(cY,cH){const ck=document[vl(-0x10d,-0x56)](vl(-0x26c,-0x17b));function vl(e,c){return vp(e,c- -0x461);}ck[vQ(0x3de,0x362)]=a(0x1,w(cY));function vQ(e,c){return vp(e,c- -0x10c);}return ck[vQ(0x1e9,0x233)]=a(0x1,w(cH)),ck;}function e5(cY){function va(e,c){return vp(c,e-0x9f);}function vr(e,c){return vp(e,c- -0x2b0);}cY&&(cY[va(0x50d,0x613)]=0x1,cY[vr(0x87,0x8f)]=0x1);}function e6(cY){let cH=cY>>>0x0;return()=>{cH|=0x0,cH=cH+0x6d2b79f5|0x0;let ck=l(cH^cH>>>0xf,0x1|cH);return ck=ck+l(ck^ck>>>0x7,0x3d|ck)^ck,((ck^ck>>>0xe)>>>0x0)/0x100000000;};}function e7(cY){let cH=0x0;while(cH<1e-9)cH=cY();return Y(-0x2*Q(cH))*D(6.283185307*cY());}function e8(cY,cH){const ck=cH[vw(-0x7,-0xda)];for(let cn=0x0;cn<ck;cn++){let ct=cn;for(let cG=cn+0x1;cG<ck;cG++)if(C(cY[cG][cn])>C(cY[ct][cn]))ct=cG;if(C(cY[ct][cn])<1e-12)return null;if(ct!==cn){const L0=cY[cn];cY[cn]=cY[ct],cY[ct]=L0;const L1=cH[cn];cH[cn]=cH[ct],cH[ct]=L1;}for(let L2=cn+0x1;L2<ck;L2++){const L3=cY[L2][cn]/cY[cn][cn];if(!L3)continue;for(let L4=cn;L4<ck;L4++)cY[L2][L4]-=L3*cY[cn][L4];cH[L2]-=L3*cH[cn];}}function vw(e,c){return vp(e,c- -0x474);}const co=new Array(ck);for(let L5=ck-0x1;L5>=0x0;L5--){let L6=cH[L5];for(let L7=L5+0x1;L7<ck;L7++)L6-=cY[L5][L7]*co[L7];co[L5]=L6/cY[L5][L5];}return co;}function e9(cY,cH){function vY(e,c){return vD(e- -0x8b,c);}const ck=[],co=[];for(let ct=0x0;ct<0x4;ct++){const cG=cY[ct][0x0],L0=cY[ct][0x1],L1=cH[ct][0x0],L2=cH[ct][0x1];ck[vA(0x106,0xb1)]([cG,L0,0x1,0x0,0x0,0x0,-cG*L1,-L0*L1]),co[vY(-0xcb,-0x4e)](L1),ck[vA(0x106,0xdd)]([0x0,0x0,0x0,cG,L0,0x1,-cG*L2,-L0*L2]),co[vA(0x106,0xd6)](L2);}const cn=e8(ck,co);function vA(e,c){return vp(c,e- -0x26f);}return cn?[cn[0x0],cn[0x1],cn[0x2],cn[0x3],cn[0x4],cn[0x5],cn[0x6],cn[0x7],0x1]:null;}function ee(cY){const cH=cY[0x0],ck=cY[0x1],co=cY[0x2],cn=cY[0x3],ct=cY[0x4],cG=cY[0x5],L0=cY[0x6],L1=cY[0x7],L2=cY[0x8],L3=ct*L2-cG*L1,L4=-(cn*L2-cG*L0),L5=cn*L1-ct*L0,L6=cH*L3+ck*L4+co*L5;if(C(L6)<1e-14)return null;return[L3/L6,(co*L1-ck*L2)/L6,(ck*cG-co*ct)/L6,L4/L6,(cH*L2-co*L0)/L6,(co*cn-cH*cG)/L6,L5/L6,(ck*L0-cH*L1)/L6,(cH*ct-ck*cn)/L6];}function ec(cY,cH,ck){const co=cY[0x6]*cH+cY[0x7]*ck+cY[0x8];return[(cY[0x0]*cH+cY[0x1]*ck+cY[0x2])/co,(cY[0x3]*cH+cY[0x4]*ck+cY[0x5])/co];}const eL=(cY,cH)=>[[0x0,0x0],[cY,0x0],[cY,cH],[0x0,cH]],ev=cY=>[(cY[0x0][0x0]+cY[0x1][0x0]+cY[0x2][0x0]+cY[0x3][0x0])/0x4,(cY[0x0][0x1]+cY[0x1][0x1]+cY[0x2][0x1]+cY[0x3][0x1])/0x4],eN=cY=>a(n(cY[0x0],cY[0x1]),n(cY[0x3],cY[0x2]));function ej(cY,cH,ck,co,cn,ct){const cG=cY[vH(-0x50,-0xfa)],L0=cY[vH(-0x39,0x25)],L1=cY[vk(0x656,0x5b2)],L2=new Uint8ClampedArray(cn*ct*0x4),L3=co[0x0],L4=co[0x1],L5=co[0x2],L6=co[0x3],L7=co[0x4],L8=co[0x5],L9=co[0x6],Le=co[0x7],Lc=co[0x8];function vH(e,c){return vp(c,e- -0x4a7);}for(let LL=0x0,Lv=0x0;LL<ct;LL++){const LN=LL+0.5;for(let Lj=0x0;Lj<cn;Lj++,Lv+=0x4){const Lq=Lj+0.5,LW=L9*Lq+Le*LN+Lc;let Ly=(L3*Lq+L4*LN+L5)/LW-cH-0.5,Ld=(L6*Lq+L7*LN+L8)/LW-ck-0.5;Ly=Ly<0x0?0x0:Ly>L0-1.001?L0-1.001:Ly,Ld=Ld<0x0?0x0:Ld>L1-1.001?L1-1.001:Ld;const LS=Ly|0x0,LF=Ld|0x0,Lm=Ly-LS,LJ=Ld-LF,LZ=(LF*L0+LS)*0x4,LI=LZ+L0*0x4,LK=(0x1-Lm)*(0x1-LJ),LT=Lm*(0x1-LJ),LE=(0x1-Lm)*LJ,Li=Lm*LJ;L2[Lv]=cG[LZ]*LK+cG[LZ+0x4]*LT+cG[LI]*LE+cG[LI+0x4]*Li,L2[Lv+0x1]=cG[LZ+0x1]*LK+cG[LZ+0x5]*LT+cG[LI+0x1]*LE+cG[LI+0x5]*Li,L2[Lv+0x2]=cG[LZ+0x2]*LK+cG[LZ+0x6]*LT+cG[LI+0x2]*LE+cG[LI+0x6]*Li,L2[Lv+0x3]=0xff;}}function vk(e,c){return vD(c-0x628,e);}return L2;}function eq(cY,cH,ck,co,cn,ct,cG,L0){function vn(e,c){return vD(c-0x592,e);}const L1=cY[vo(0x44a,0x53f)],L2=cY[vn(0x6ec,0x64b)],L3=cY[vn(0x4de,0x51c)];function vo(e,c){return vD(c-0x49d,e);}const L4=co[0x0],L5=co[0x1],L6=co[0x2],L7=co[0x3],L8=co[0x4],L9=co[0x5],Le=co[0x6],Lc=co[0x7],LL=co[0x8];for(let Lv=0x0,LN=0x0;Lv<L3;Lv++){const Lj=ck+Lv+0.5;for(let Lq=0x0;Lq<L2;Lq++,LN+=0x4){const LW=cH+Lq+0.5,Ly=Le*LW+Lc*Lj+LL;if(Ly<=1e-9)continue;const Ld=(L4*LW+L5*Lj+L6)/Ly,LS=(L7*LW+L8*Lj+L9)/Ly;let LF=r(Ld,ct-Ld,LS,cG-LS)/L0+0.5;if(LF<=0x0)continue;if(LF>0x1)LF=0x1;let Lm=Ld-0.5,LJ=LS-0.5;Lm=Lm<0x0?0x0:Lm>ct-1.001?ct-1.001:Lm,LJ=LJ<0x0?0x0:LJ>cG-1.001?cG-1.001:LJ;const LZ=Lm|0x0,LI=LJ|0x0,LK=Lm-LZ,LT=LJ-LI,LE=(LI*ct+LZ)*0x4,Li=LE+ct*0x4,Lg=(0x1-LK)*(0x1-LT)*cn[LE+0x3],Lh=LK*(0x1-LT)*cn[LE+0x7],Lu=(0x1-LK)*LT*cn[Li+0x3],Lz=LK*LT*cn[Li+0x7],LB=Lg+Lh+Lu+Lz;if(LB<0.5)continue;const Lb=LB/0xff*LF,LP=Lb/LB;L1[LN]=L1[LN]*(0x1-Lb)+(cn[LE]*Lg+cn[LE+0x4]*Lh+cn[Li]*Lu+cn[Li+0x4]*Lz)*LP,L1[LN+0x1]=L1[LN+0x1]*(0x1-Lb)+(cn[LE+0x1]*Lg+cn[LE+0x5]*Lh+cn[Li+0x1]*Lu+cn[Li+0x5]*Lz)*LP,L1[LN+0x2]=L1[LN+0x2]*(0x1-Lb)+(cn[LE+0x2]*Lg+cn[LE+0x6]*Lh+cn[Li+0x2]*Lu+cn[Li+0x6]*Lz)*LP;}}}function eW(cY,cH,ck,co,cn){let ct=cY,cG=new Float32Array(cH*ck),L0=new Float32Array(cH*ck);function vt(e,c){return vD(e-0x2ce,c);}const L1=0x2*co+0x1;for(let L2=0x0;L2<(cn||0x1);L2++){for(let L3=0x0;L3<ck;L3++){const L4=L3*cH;let L5=0x0;for(let L6=0x0;L6<=co&&L6<cH;L6++)L5+=ct[L4+L6];for(let L7=0x0;L7<cH;L7++){cG[L4+L7]=L5/L1;const L8=L7+co+0x1,L9=L7-co;if(L8<cH)L5+=ct[L4+L8];if(L9>=0x0)L5-=ct[L4+L9];}}for(let Le=0x0;Le<cH;Le++){let Lc=0x0;for(let LL=0x0;LL<=co&&LL<ck;LL++)Lc+=cG[LL*cH+Le];for(let Lv=0x0;Lv<ck;Lv++){L0[Lv*cH+Le]=Lc/L1;const LN=Lv+co+0x1,Lj=Lv-co;if(LN<ck)Lc+=cG[LN*cH+Le];if(Lj>=0x0)Lc-=cG[Lj*cH+Le];}}if(L2===0x0)ct=new Float32Array(cH*ck);ct[vt(0x223,0x1ae)](L0);}return ct;}function ey(cY,cH){let ck=0x0;for(let L0=0x0;L0<0x100;L0++)ck+=L0*cY[L0];let co=0x0,cn=0x0,ct=0x0,cG=0x7f;for(let L1=0x0;L1<0x100;L1++){cn+=cY[L1];if(!cn)continue;const L2=cH-cn;if(!L2)break;co+=L1*cY[L1];const L3=co/cn,L4=(ck-co)/L2,L5=cn*L2*(L3-L4)*(L3-L4);L5>ct&&(ct=L5,cG=L1);}return cG;}const ed={};function vD(e,c){return y(e- -0x28a,c);}ed[vD(-0x8f,0x6f)]=null,ed[vD(-0x12a,-0x47)]=null,ed[vD(0x7b,0x75)]=null,ed[vp(0x3c7,0x3a6)]=null;const eS=ed,eF=new Map();function em(cY,cH,ck,co){const cn=cH+'|'+ck[vG(0x7e,0x47)](',')+'|'+(co?0x1:0x0);if(eF[vG(0x48,0x52)](cn))return eF[vG(-0x71,-0x14a)](cn);function N0(e,c){return vp(e,c- -0x25);}function vG(e,c){return vp(c,e- -0x355);}const ct=e4(cY[N0(0x28d,0x392)]||cY[vG(0x119,0x136)],cY[N0(0x2f6,0x27e)]||cY[N0(0x287,0x31a)]),cG=ct[N0(0x2e2,0x324)]('2d');cG[N0(0x446,0x386)](cY,0x0,0x0);const L0=cG[N0(0x434,0x412)](0x0,0x0,ct[vG(0x119,0xd6)],ct[vG(-0x16,-0xb9)]),L1=L0[N0(0x38d,0x432)];for(let L2=0x0;L2<L1[vG(0x45,-0x52)];L2+=0x4){if(!L1[L2+0x3])continue;const L3=a(L1[L2],L1[L2+0x1],L1[L2+0x2]),L4=r(L1[L2],L1[L2+0x1],L1[L2+0x2]);(co||L3-L4<0x30)&&(L1[L2]=ck[0x0],L1[L2+0x1]=ck[0x1],L1[L2+0x2]=ck[0x2]);}cG[vG(0x77,-0x11)](L0,0x0,0x0);if(eF[N0(0x443,0x43a)]>0x3c)eF[vG(0xac,-0x41)]();return eF[N0(0x2a9,0x2e5)](cn,ct),ct;}function eJ(cY){const cH=cY[N1(0x24,0x76)],ck=cY[N2(0x2b2,0x314)],co=e4(cH,ck),cn=co[N2(0x2c8,0x3ba)]('2d');cn[N2(0x402,0x41c)](cY,0x0,0x0);const ct=cn[N1(0xa4,0x67)](0x0,0x0,cH,ck)[N2(0x543,0x4c8)],cG=L5=>{for(let L6=0x0;L6<cH;L6++)if(ct[(L5*cH+L6)*0x4+0x3]>0x28)return!![];return![];};let L0=ck-0x1;while(L0>0x0&&!cG(L0))L0--;let L1=L0;function N1(e,c){return vp(c,e- -0x393);}while(L1>0x0&&cG(L1-0x1))L1--;if(L1<ck*0.5||L0-L1<0x6)return null;let L2=cH,L3=0x0;function N2(e,c){return vp(e,c-0x71);}for(let L5=L1;L5<=L0;L5++)for(let L6=0x0;L6<cH;L6++)if(ct[(L5*cH+L6)*0x4+0x3]>0x28){if(L6<L2)L2=L6;if(L6>L3)L3=L6;}const L4=e4(L3-L2+0x1,L0-L1+0x1);return L4[N2(0x2d5,0x3ba)]('2d')[N1(0x18,0x10e)](co,L2,L1,L4[N2(0x4a8,0x4df)],L4[N1(-0x54,-0x112)],0x0,0x0,L4[N1(0xdb,-0x2a)],L4[N2(0x41d,0x3b0)]),L4;}function eZ(cY,cH,ck,co,cn,ct){function N3(e,c){return vD(e-0x4bf,c);}function N4(e,c){return vp(e,c-0x1d8);}const cG=cH[N3(0x4c1,0x447)]||cH[N4(0x6e9,0x646)],L0=cH[N3(0x3ad,0x2c7)]||cH[N4(0x592,0x517)],L1=r(cn/cG,ct/L0);cY[N4(0x49d,0x583)](cH,ck+(cn-cG*L1)/0x2,co+(ct-L0*L1)/0x2,cG*L1,L0*L1);}function eI(cY,cH,ck,co,cn,ct,cG,L0){function N6(e,c){return vD(c- -0xdd,e);}const L1=e4(cY,cH),L2=L1[N5(0x30,0x3)]('2d'),L3=eY;L2[N5(0x61,0x47)]=N6(-0xcd,-0x63);const L4=o(L0[N6(-0x1b7,-0x19f)],0.3,0x1);ck+=cn*(0x1-L4)/0x2,co+=ct*(0x1-L4)/0x2,cn*=L4,ct*=L4;const L5=N5(0xa1,0xbc)+cG[N6(-0x31,-0xbf)](',')+')',L6=Lj=>N6(-0x1e1,-0x1c1)+Lj+N5(-0x31,-0x11a),L7=eS[N5(0xd,-0x10)]&&em(eS[N6(-0x213,-0x16c)],'eb',cG,![]),L8=eS[N5(0x117,0x126)]&&em(eS[N5(0x117,0x1c6)],N5(0x117,0xfc),cG,!![]),L9=eS[N6(-0x1c2,-0x207)]&&em(eS[N6(-0x1e8,-0x207)],N6(-0x308,-0x207),cG,![]);function N5(e,c){return vD(e-0x9c,c);}const Le=Lj=>{Lj=Lj[N7(-0x4e,0xab)](Boolean);function N8(e,c){return N6(c,e-0x2fb);}if(!Lj[N8(0x203,0x13b)])return;const Lq=ct*0.17,LW=Lj[N8(0x192,0x105)]((LS,LF)=>LS+LF['w'],0x0)+Lq*(Lj[N7(0x19d,0x1c1)]-0x1),Ly=r(0x1,cn/LW);L2[N7(0x224,0x1b7)](),L2[N7(0x167,0x1ed)](ck+cn/0x2,co+ct/0x2),L2[N8(0x16f,0x23d)](Ly,Ly);function N7(e,c){return N5(c-0x140,e);}let Ld=-LW/0x2;for(const LS of Lj){LS['d'](Ld),Ld+=LS['w']+Lq;}L2[N8(0x191,0xb1)]();},Lc=(Lj,Lq,LW)=>Lj&&{'w':Lq*Lj[N5(0x155,0x178)]/Lj[N5(0x26,0x51)],'d':Ly=>L2[N5(0x92,0x39)](Lj,Ly,-Lq/0x2+(LW||0x0),Lq*Lj[N5(0x155,0x199)]/Lj[N6(-0x232,-0x153)],Lq)},LL=(Lj,Lq)=>{function N9(e,c){return N6(c,e-0xca);}function Ne(e,c){return N6(e,c-0x22c);}L2[N9(-0x13b,-0x48)]=L6(Lq);const LW=L2[N9(-0x1b,-0xd1)](Lj)[Ne(0x21e,0x208)];return{'w':LW,'d':Ly=>{L2[Nc(0x1a6,0x288)]=L6(Lq),L2[Nc(0x2ff,0x260)]=L5,L2[Nc(0x303,0x2f6)]=Nc(0x2a1,0x37d),L2[Nc(0x23b,0x24f)]=Nc(0x305,0x213);function NL(e,c){return N9(c- -0x10c,e);}function Nc(e,c){return N9(e-0x2e1,c);}L2[Nc(0x32d,0x391)](Lj,Ly,Lq*0.045);}};},Lv=()=>{const Lj=a(1.5,ct*0.022);return{'w':Lj,'d':Lq=>{function NN(e,c){return y(c-0x8,e);}function Nv(e,c){return y(e-0x3db,c);}L2[Nv(0x696,0x70c)]=L5,L2[NN(0x2b9,0x1b4)]=0.5,L2[Nv(0x680,0x5cf)](Lq,-ct*0.42,Lj,ct*0.84),L2[NN(0x288,0x1b4)]=0x1;}};},LN='@'+(L3[N5(0xcb,0xe6)]||'')[N5(-0x3d,-0x72)](/^@+/,'')[N6(-0xcb,-0x1cc)]();if(L3[N5(-0xa5,0x16)]===N6(-0x25,-0xec)&&eS[N5(0x8d,0x130)])eZ(L2,L3[N6(0x49,-0x65)]?em(eS[N5(0x8d,-0x2b)],N5(0x8d,-0x3f)+L3[N5(0xa,-0x7c)],cG,!![]):eS[N6(-0x81,-0xec)],ck,co,cn,ct);else{if(L3[N5(-0xa5,-0xd1)]===N5(0x22,0x120)&&L3[N6(-0x7e,-0xae)]){if(L3[N5(0x6,0xf7)]===N5(-0xaa,-0xcd))Le([LL(LN,ct*0.84)]);else Le([LL(LN,ct*0.62),Lv(),Lc(L9||L7,ct)]);}else{if(L3[N5(-0xa3,-0x19)]===N6(-0x1d4,-0x16c)){if(L7)eZ(L2,L7,ck,co,cn,ct);}else{if(L3[N6(-0x187,-0x21c)]===N6(-0x2c,-0x10c))Le([Lc(L7,ct),LL(N6(-0x1d0,-0x1f0),ct*0.62)]);else Le(L8?[Lc(L7,ct),Lc(L8,ct*0.42,ct*0.1)]:[Lc(L7,ct),LL(N6(-0x6a,-0xff),ct*0.5)]);}}}return L2[N6(-0x18,-0x5b)](0x0,0x0,cY,cH)[N6(-0xa8,-0x3b)];}function eK(cY){if(!(eY[Nj(-0xf1,-0x6f)]===Nj(-0x2c,0x58)&&eY[Nq(0x71d,0x686)]&&eY[Nj(0xc,0x3c)]===Nq(0x54e,0x511)&&eS[Nj(0x9c,-0x58)]))return null;const cH=cY[Nq(0x71d,0x710)],ck=cY[Nq(0x4ff,0x5e1)],co=r(cH,ck),cn=w(co*0.125),ct=w(cn*eS[Nq(0x4e5,0x52d)][Nj(-0xd9,-0x40)]/eS[Nj(-0x4c,-0x58)][Nq(0x69a,0x659)]),cG=w(co*0.035),L0=w(cn*0.14),L1=e4(cn+L0*0x2,ct+L0*0x2),L2=L1[Nq(0x647,0x5eb)]('2d');L2[Nj(-0x39,0x97)]=Nq(0x66f,0x6d1),L2[Nj(0xcb,0xdd)]=Nq(0x62d,0x67e),L2[Nj(-0x87,0x67)]=L0*0.85,L2[Nj(0x51,-0xc)]=0.95;function Nj(e,c){return vD(c-0xd2,e);}L2[Nj(0x90,0xc8)](eS[Nj(-0x157,-0x58)],L0,L0,cn,ct);function Nq(e,c){return vp(e,c-0x2a2);}const L3={};return L3['x']=eY[Nj(0x19e,0x13d)]===Nq(0x600,0x697)?cG-L0:cH-cG-cn-L0,L3['y']=ck-cG-ct-L0,L3['w']=L1[Nq(0x753,0x710)],L3['h']=L1[Nj(-0x62,0x5c)],L3['c']=L1,L3;}function eT(cY,cH,ck,co,cn){const ct=cH*ck,cG=new Float32Array(ct),L0=new Float32Array(ct),L1=new Float32Array(ct),L2=w(co[NW(-0x64,0x57)]*cH),L3=cH-L2,L4=w(co[Ny(0x74c,0x65a)]*ck),L5=ck-w(co[Ny(0x549,0x4f7)]*ck),L6=new Uint32Array(0x100);let L7=0x0;for(let Lf=0x0,Lp=0x0;Lf<ct;Lf++,Lp+=0x4){cG[Lf]=0.299*cY[Lp]+0.587*cY[Lp+0x1]+0.114*cY[Lp+0x2],L0[Lf]=Q(cG[Lf]+0x6);}for(let LD=L4;LD<L5;LD++)for(let Lx=L2;Lx<L3;Lx++){const LX=LD*cH+Lx;L1[LX]=0x1,L6[cG[LX]|0x0]++,L7++;}if(L7<0x10)return new Uint8ClampedArray(ct*0x4);const L8=ey(L6,L7);let L9=0x0;function Ny(e,c){return vp(e,c-0x21d);}for(let Ll=L8+0x1;Ll<0x100;Ll++)L9+=L6[Ll];const Le=L9>=L7-L9,Lc=a(0x3,w(ck*0.2)),LL=new Float32Array(ct);for(let LQ=0x0;LQ<ct;LQ++)LL[LQ]=L0[LQ]*L1[LQ];const Lv=eW(LL,cH,ck,Lc,0x2),LN=eW(L1,cH,ck,Lc,0x2),Lj=new Float32Array(ct);let Lq=0x0,LW=0x0,Ly=0x0,Ld=0x0;for(let La=0x0;La<ct;La++){if(!L1[La])continue;const Lr=Le?Lv[La]/LN[La]-L0[La]:L0[La]-Lv[La]/LN[La];Lr>0.2&&(Lj[La]=0x1,Lr>0.45&&(LW+=cY[La*0x4],Ly+=cY[La*0x4+0x1],Ld+=cY[La*0x4+0x2],Lq++));}if(!co[Ny(0x66b,0x56f)]){const Lw=new Uint8Array(ct),LA=new Int32Array(ct),LY=(L5-L4)*0.4;for(let LH=0x0;LH<ct;LH++){if(!Lj[LH]||Lw[LH])continue;let Lk=0x0,Lo=0x0,Ln=![],Lt=ck,LG=0x0;LA[Lk++]=LH,Lw[LH]=0x1;while(Lo<Lk){const v0=LA[Lo++],v1=v0%cH,v2=v0/cH|0x0;if(v2<Lt)Lt=v2;if(v2>LG)LG=v2;if(v1<=L2+0x1||v1>=L3-0x2||v2<=L4+0x1||v2>=L5-0x2)Ln=!![];for(let v3=-0x1;v3<=0x1;v3++)for(let v4=-0x1;v4<=0x1;v4++){const v5=v1+v4,v6=v2+v3;if(v5<L2||v5>=L3||v6<L4||v6>=L5)continue;const v7=v6*cH+v5;Lj[v7]&&!Lw[v7]&&(Lw[v7]=0x1,LA[Lk++]=v7);}}if(Ln&&LG-Lt<LY){for(let v8=0x0;v8<Lk;v8++)Lj[LA[v8]]=0x0;}}}const LS=eW(Lj,cH,ck,a(0x2,w(ck*0.032)),0x1),LF=new Float32Array(ct);let Lm=0x0,LJ=0x0,LZ=0x0,LI=0x0;for(let v9=0x0;v9<ct;v9++){LS[v9]=L1[v9]&&LS[v9]>0.0005?0x1:0x0,L1[v9]&&!LS[v9]&&(LF[v9]=0x1,Lm++,LJ+=cY[v9*0x4],LZ+=cY[v9*0x4+0x1],LI+=cY[v9*0x4+0x2]);}if(!Lm){for(let ve=0x0;ve<ct;ve++)L1[ve]&&(LF[ve]=0x1,Lm++,LJ+=cY[ve*0x4],LZ+=cY[ve*0x4+0x1],LI+=cY[ve*0x4+0x2]);}function NW(e,c){return vD(c-0x144,e);}LJ/=Lm,LZ/=Lm,LI/=Lm;const LK=a(0x4,w(ck*0.14)),LT=eW(LF,cH,ck,LK,0x2),LE=[null,null,null],Li=new Float32Array(ct);for(let vc=0x0;vc<0x3;vc++){for(let vL=0x0;vL<ct;vL++)Li[vL]=LF[vL]*cY[vL*0x4+vc];LE[vc]=eW(Li,cH,ck,LK,0x2);}const Lg=[LJ,LZ,LI];let Lh=0x0,Lu=0x0,Lz=0x0;for(let vv=0x0;vv<ct;vv++){if(!L1[vv])continue;for(let vN=0x0;vN<0x3;vN++)LE[vN][vv]=LT[vv]>0.004?LE[vN][vv]/LT[vv]:Lg[vN];Lu+=0.299*LE[0x0][vv]+0.587*LE[0x1][vv]+0.114*LE[0x2][vv],Lz++;}Lu/=Lz;let LB=0x0;for(let vj=0x0;vj<ct-0x1;vj++)if(LF[vj]&&LF[vj+0x1]){const vq=cG[vj]-cG[vj+0x1];Lh+=vq*vq,LB++;}const Lb=o(Y(Lh/a(0x1,LB)/0x2)*1.3,0.4,0x5),LP=a(0x1,w(ck*0.022)),LM=co[NW(0x138,0xe1)]?L1:eW(LS,cH,ck,LP,0x2);let LR=Le?[0x16,0x18,0x1e]:[0xec,0xed,0xf0];if(Lq>L7*0.008)LR=[LW/Lq,Ly/Lq,Ld/Lq][Ny(0x58d,0x50c)](Math[NW(0x11b,0x6e)]);const LU=(L3-L2)*0.05,LO=(L5-L4)*(co[NW(0x8c,0x166)]===Ny(0x681,0x57c)?0.16:0.1),LV=eI(cH,ck,L2+LU,L4+LO,L3-L2-0x2*LU,L5-L4-0x2*LO,LR,co),Ls=new Uint8ClampedArray(ct*0x4),LC=a(1.5,ck*0.02);for(let vW=L4;vW<L5;vW++)for(let vy=L2;vy<L3;vy++){const vd=vW*cH+vy,vS=vd*0x4,vF=r(0x1,LM[vd]*(co[NW(0x1e5,0xe1)]?0x1:1.6)),vm=LV[vS+0x3]/0xff*co[Ny(0x5c4,0x51f)],vJ=0x1-(0x1-vF)*(0x1-vm);if(vJ<0.004)continue;const vZ=e7(cn)*Lb,vI=o((0.299*LE[0x0][vd]+0.587*LE[0x1][vd]+0.114*LE[0x2][vd])/Lu,0.55,1.5);for(let vT=0x0;vT<0x3;vT++)Ls[vS+vT]=((LE[vT][vd]+vZ)*vF*(0x1-vm)+(LV[vS+vT]*vI+vZ*0.6)*vm)/vJ;const vK=r(vy-L2,L3-0x1-vy,vW-L4,L5-0x1-vW)/LC+0.4;Ls[vS+0x3]=0xff*vJ*(vK>=0x1?0x1:vK);}return Ls;}const eE={};eE[vD(-0x46,-0x30)]=[0xd,0xe,0x12],eE[vp(0x1c8,0x2b5)]=[0x3e,0x42,0x4c],eE[vD(-0x90,-0x9c)]=[0xf6,0xf7,0xf9];const ei={};ei[vD(-0x46,0x23)]=[0x26,0x27,0x2b],ei[vD(-0x100,-0x134)]=[0x5c,0x5f,0x66],ei[vD(-0x90,-0x12e)]=[0xec,0xec,0xee];const eg={};eg[vD(-0x46,-0x12a)]=[0xec,0xed,0xf0],eg[vp(0x3a2,0x2b5)]=[0x18,0x1a,0x20],eg[vD(-0x90,0x1)]=[0x12,0x14,0x1a];const eh={};eh[vp(0x3a3,0x43e)]=eE,eh[vD(-0xa5,-0x154)]=ei,eh[vD(0x24,0xae)]=eg;const eu=eh;function ez(cY,cH,ck,co,cn){function NS(e,c){return vD(e-0x573,c);}const ct=cH*ck,cG=eu[co[Nd(0x429,0x3a8)]]||eu[NS(0x5fc,0x590)],L0=e4(cH,ck),L1=L0[Nd(0x505,0x5db)]('2d');L1[Nd(0x5a2,0x60e)]=NS(0x578,0x546)+cG[Nd(0x52b,0x552)][Nd(0x58f,0x4a3)](',')+')',L1[NS(0x58e,0x4d1)](0x0,0x0,cH,ck);const L2=L1[NS(0x4b9,0x50c)](0x0,0x0,0x0,ck);L2[Nd(0x5ea,0x56f)](0x0,Nd(0x5b6,0x52a)),L2[NS(0x5ec,0x608)](0.5,Nd(0x4d4,0x412)),L2[Nd(0x5ea,0x651)](0x1,Nd(0x483,0x3ad)),L1[Nd(0x5a2,0x4f8)]=L2,L1[Nd(0x58c,0x53c)](0x0,0x0,cH,ck);const L3=ck*0.07,L4=a(1.5,ck*0.022),L5=ck*0.09;L1[NS(0x56e,0x61f)]=Nd(0x576,0x66c)+cG[NS(0x473,0x4de)][Nd(0x58f,0x57a)](',')+')',L1[NS(0x4fc,0x42a)]=L4,L1[Nd(0x550,0x5c4)]();if(L1[Nd(0x47b,0x4fb)])L1[Nd(0x47b,0x558)](L3,L3,cH-0x2*L3,ck-0x2*L3,L5);else L1[NS(0x475,0x388)](L3,L3,cH-0x2*L3,ck-0x2*L3);L1[Nd(0x4e3,0x4c0)]();const L6=L1[NS(0x5f5,0x61d)](0x0,0x0,cH,ck)[NS(0x615,0x6f8)],L7=eI(cH,ck,cH*0.08,ck*0.2,cH*0.84,ck*0.6,cG[Nd(0x4e1,0x5c7)],co),L8=new Float32Array(ct),L9=new Float32Array(ct)[Nd(0x472,0x4c0)](0x1),Le=new Uint32Array(0x100);for(let LF=0x0,Lm=0x0;LF<ct;LF++,Lm+=0x4){L8[LF]=0.299*cY[Lm]+0.587*cY[Lm+0x1]+0.114*cY[Lm+0x2],Le[L8[LF]|0x0]++;}const Lc=a(0x4,w(ck*0.28)),LL=eW(L8,cH,ck,Lc,0x2),Lv=eW(L9,cH,ck,Lc,0x2);let LN=0x0;function Nd(e,c){return vp(c,e-0x1bc);}for(let LJ=0x0;LJ<ct;LJ++){LL[LJ]/=Lv[LJ],LN+=LL[LJ];}LN/=ct;const Lj=ey(Le,ct);let Lq=0x0,LW=0x0;for(let LZ=Lj+0x1;LZ<0x100;LZ++){Lq+=Le[LZ],LW+=LZ*Le[LZ];}const Ly=Lq>=ct-Lq?o(LW/Lq/0xde,0.32,1.08):0x1,Ld=co[NS(0x4a8,0x504)],LS=new Uint8ClampedArray(ct*0x4);for(let LI=0x0,LK=0x0;LI<ct;LI++,LK+=0x4){const LT=L7[LK+0x3]/0xff,LE=(0x1+(o(LL[LI]/LN,0.45,1.6)-0x1)*Ld)*(0x1+(Ly-0x1)*Ld),Li=e7(cn)*2.2;for(let Lg=0x0;Lg<0x3;Lg++)LS[LK+Lg]=(L6[LK+Lg]*(0x1-LT)+L7[LK+Lg]*LT)*LE+Li;LS[LK+0x3]=0xff;}return LS;}function eB(cY,cH,ck){function NF(e,c){return vD(e-0x2f4,c);}const co=0xc,cn=a(0x4,w(co*ck/cH*1.6)),ct=new Float32Array(co*cn*0x4);for(let L0=0x0;L0<ck;L0++){const L1=r(cn-0x1,L0*cn/ck|0x0);for(let L2=0x0;L2<cH;L2++){const L3=r(co-0x1,L2*co/cH|0x0),L4=(L0*cH+L2)*0x4,L5=(L1*co+L3)*0x4;ct[L5]+=cY[L4],ct[L5+0x1]+=cY[L4+0x1],ct[L5+0x2]+=cY[L4+0x2],ct[L5+0x3]++;}}for(let L6=0x0;L6<ct[NF(0x2d9,0x361)];L6+=0x4){const L7=ct[L6+0x3]||0x1;ct[L6]/=L7,ct[L6+0x1]/=L7,ct[L6+0x2]/=L7;}const cG=new Uint8ClampedArray(cH*ck*0x4);for(let L8=0x0;L8<ck;L8++){let L9=(L8+0.5)*cn/ck-0.5;L9=o(L9,0x0,cn-1.001);const Le=L9|0x0,Lc=L9-Le;for(let LL=0x0;LL<cH;LL++){let Lv=(LL+0.5)*co/cH-0.5;Lv=o(Lv,0x0,co-1.001);const LN=Lv|0x0,Lj=Lv-LN,Lq=(Le*co+LN)*0x4,LW=Lq+co*0x4,Ly=(L8*cH+LL)*0x4;for(let Ld=0x0;Ld<0x3;Ld++)cG[Ly+Ld]=(ct[Lq+Ld]*(0x1-Lj)+ct[Lq+0x4+Ld]*Lj)*(0x1-Lc)+(ct[LW+Ld]*(0x1-Lj)+ct[LW+0x4+Ld]*Lj)*Lc;cG[Ly+0x3]=0xff;}}return cG;}function eb(cY,cH){const ck=cH[Nm(0x396,0x357)]===Nm(0x42f,0x346)?0xaa/0xc8:0x82/0x190,co=cH[NJ(0x369,0x2f6)],cn=a(eN(co),0x8),ct=o(w(cn*1.3),0x78,0x708),cG=a(0x18,w(ct*ck)),L0=cH[NJ(0x2fb,0x3fd)]===Nm(0x49f,0x437)?0.07:cH[Nm(0x3ad,0x348)]===Nm(0x465,0x469)?0.03:0x0;let L1=co;if(L0){const Lq=e9(eL(ct,cG),co);if(!Lq)return null;const LW=L0*cG;L1=[ec(Lq,-LW,-LW),ec(Lq,ct+LW,-LW),ec(Lq,ct+LW,cG+LW),ec(Lq,-LW,cG+LW)];}const L2=e9(eL(ct,cG),L1),L3=L2&&ee(L2);if(!L3)return null;const L4=L1[NJ(0x2dd,0x39c)](Ly=>Ly[0x0]),L5=L1[NJ(0x2dd,0x34a)](Ly=>Ly[0x1]),L6=o(x(Math[Nm(0x321,0x272)][Nm(0x3bd,0x47c)](0x0,L4))-0x3,0x0,cY[Nm(0x50e,0x5eb)]-0x1),L7=o(x(Math[NJ(0x26f,0x25c)][Nm(0x3bd,0x43f)](0x0,L5))-0x3,0x0,cY[NJ(0x32d,0x2ef)]-0x1),L8=o(p(Math[Nm(0x346,0x2b1)][NJ(0x30b,0x410)](0x0,L4))+0x3,L6+0x1,cY[NJ(0x45c,0x548)])-L6,L9=o(p(Math[Nm(0x346,0x355)][Nm(0x3bd,0x356)](0x0,L5))+0x3,L7+0x1,cY[Nm(0x3df,0x33f)])-L7;if(L8*L9>0xb71b00)return null;const Le=cY[Nm(0x3e9,0x476)]('2d')[Nm(0x4d7,0x540)](L6,L7,L8,L9),Lc=ej(Le,L6,L7,L2,ct,cG);function NJ(e,c){return vD(e-0x3a3,c);}const LL=e6(w(co[0x0][0x0]*0x7+co[0x0][0x1]*0xd+co[0x2][0x0]*0x11+co[0x2][0x1]*0x13)+0x1),Lv=cH[Nm(0x3ad,0x45f)]===NJ(0x3ed,0x360)?eB(Lc,ct,cG):cH[Nm(0x3ad,0x479)]===NJ(0x3b3,0x42c)?ez(Lc,ct,cG,cH,LL):eT(Lc,ct,cG,cH,LL);eq(Le,L6,L7,L3,Lv,ct,cG,ct/cn);const LN=e4(L8,L9);LN[NJ(0x337,0x270)]('2d')[NJ(0x3ba,0x32e)](Le,0x0,0x0);function Nm(e,c){return vD(e-0x455,c);}const Lj={};return Lj['x']=L6,Lj['y']=L7,Lj['w']=L8,Lj['h']=L9,Lj['c']=LN,Lj;}function eP(cY,cH){const ck=a(0x4,cH['r']),co=w(cH['x']-ck),cn=w(cH['y']-ck),ct=w(ck*0x2),cG=e4(ct,ct),L0=cG[NZ(0x3c3,0x3b9)]('2d'),L1=e4(0x9,0x9),L2=L1[NZ(0x3e3,0x3b9)]('2d');L2[NZ(0x447,0x3ea)]=NI(0x300,0x33e);function NI(e,c){return vD(c-0x2c4,e);}L2[NI(0x1f1,0x2ba)](cY,co,cn,ct,ct,0x0,0x0,0x9,0x9);const L3=e4(0x24,0x24),L4=L3[NZ(0x335,0x3b9)]('2d');L4[NZ(0x475,0x3ea)]=NZ(0x569,0x49f),L4[NZ(0x3ba,0x41b)](L1,0x0,0x0,0x24,0x24),L0[NI(0x386,0x289)]=NI(0x2a3,0x33e),L0[NZ(0x4ce,0x41b)](L3,0x0,0x0,ct,ct);const L5=L0[NZ(0x41f,0x4d1)](ct/0x2,ct/0x2,ct*0.33,ct/0x2,ct/0x2,ct/0x2);L5[NZ(0x3e5,0x49e)](0x0,NZ(0x3f5,0x3dd)),L5[NI(0x3de,0x33d)](0x1,NZ(0x30c,0x367));function NZ(e,c){return vD(c-0x425,e);}L0[NZ(0x222,0x2e1)]=NI(0x195,0x24c),L0[NI(0x396,0x2f5)]=L5,L0[NI(0x322,0x2df)](0x0,0x0,ct,ct);const L6={};return L6['x']=co,L6['y']=cn,L6['w']=ct,L6['h']=ct,L6['c']=cG,L6;}function eM(cY,cH,ck,co){const cn=cY['w'],ct=cY['h'],cG=cY['d'];cH=o(w(cH),0x2,cn-0x3),ck=o(w(ck),0x2,ct-0x3);function NK(e,c){return vp(c,e- -0x468);}let L1=0x0,L2=0x0,L3=0x0;for(let LM=-0x1;LM<=0x1;LM++)for(let LR=-0x1;LR<=0x1;LR++){const LU=((ck+LM)*cn+cH+LR)*0x4;L1+=cG[LU],L2+=cG[LU+0x1],L3+=cG[LU+0x2];}L1/=0x9,L2/=0x9,L3/=0x9;const L4=0.299*L1+0.587*L2+0.114*L3,L5=a(0x2e,L4*0.5),L6=L1-L4,L7=L3-L4,L8=cY[NK(-0x157,-0x53)]||(cY[NK(-0x157,-0x62)]=new Uint8Array(cn*ct)),L9=cY[NT(0x1e7,0x284)]||(cY[NT(0x1c8,0x284)]=new Int32Array(cn*ct)),Le=r(cn*ct*0.1,co||0xe8d4a51000);let Lc=0x0,LL=0x0,Lv=ck*cn+cH;L9[Lc++]=Lv,L8[Lv]=0x1;let LN=cn,Lj=0x0,Lq=ct,LW=0x0,Ly=![];const Ld=new Int32Array(ct)[NK(-0x1b2,-0x18a)](cn),LS=new Int32Array(ct)[NT(0x219,0x2cf)](-0x1),LF=new Int32Array(cn)[NK(-0x1b2,-0x156)](ct),Lm=new Int32Array(cn)[NT(0x30f,0x2cf)](-0x1),LJ=[-0x1,0x1,-cn,cn];while(Lc){const LO=L9[--Lc],LV=LO%cn,Ls=LO/cn|0x0,LC=LO*0x4,Lf=cG[LC],Lp=cG[LC+0x1],LD=cG[LC+0x2],Lx=0.299*Lf+0.587*Lp+0.114*LD;if(++LL>Le){Ly=!![];break;}if(LV<Ld[Ls])Ld[Ls]=LV;if(LV>LS[Ls])LS[Ls]=LV;if(Ls<LF[LV])LF[LV]=Ls;if(Ls>Lm[LV])Lm[LV]=Ls;if(LV<LN)LN=LV;if(LV>Lj)Lj=LV;if(Ls<Lq)Lq=Ls;if(Ls>LW)LW=Ls;for(let LX=0x0;LX<0x4;LX++){const Ll=LO+LJ[LX];if(Ll<0x0||Ll>=cn*ct||L8[Ll])continue;if(LX<0x2&&(Ll/cn|0x0)!==Ls)continue;const LQ=Ll*0x4,La=cG[LQ],Lw=cG[LQ+0x1],LA=cG[LQ+0x2],LY=0.299*La+0.587*Lw+0.114*LA;if(C(LY-Lx)>0xc||C(La-Lf)+C(Lw-Lp)+C(LA-LD)>0x22)continue;if(C(LY-L4)>L5||C(La-LY-L6)>0x1a||C(LA-LY-L7)>0x1a)continue;L8[Ll]=0x1,L9[Lc++]=Ll;}}const LZ=a(0x0,LN-0x2),LI=r(cn-0x1,Lj+0x2),LK=a(0x0,Lq-0x2),LT=r(ct-0x1,LW+0x2);function NT(e,c){return vD(c-0x3ce,e);}for(let LH=LK;LH<=LT;LH++)L8[NT(0x250,0x2cf)](0x0,LH*cn+LZ,LH*cn+LI+0x1);if(Ly)return L8[NT(0x33f,0x2cf)](0x0),null;if(LL<0x3c)return null;const LE=(Lk,Lo,Ln)=>{const Lt=[];for(let ve=Lk;ve<=Lo;ve++){const vc=Ln(ve);if(vc!==null)Lt[NE(0x479,0x397)]([ve,vc]);}function NE(e,c){return NK(c-0x48a,e);}const LG=Lt[Ni(0x9d,0x187)];if(LG<0x5)return null;const v0=a(0x1,x(LG/0x28));let v1=null,v2=0x0;for(let vL=0x0;vL<LG;vL+=v0)for(let vv=vL+a(0x3,v0);vv<LG;vv+=v0){const vN=(Lt[vv][0x1]-Lt[vL][0x1])/(Lt[vv][0x0]-Lt[vL][0x0]);if(C(vN)>0.7)continue;const vj=Lt[vL][0x1]-vN*Lt[vL][0x0];let vq=0x0;for(let vW=0x0;vW<LG;vW++)if(C(Lt[vW][0x1]-vN*Lt[vW][0x0]-vj)<=1.05)vq++;vq>v2&&(v2=vq,v1=[vN,vj]);}if(!v1||v2<a(0x4,LG*0.25))return null;let v3=0x0,v4=0x0,v5=0x0,v6=0x0,v7=0x0;function Ni(e,c){return NK(e-0x16b,c);}for(const vy of Lt)C(vy[0x1]-v1[0x0]*vy[0x0]-v1[0x1])<=1.05&&(v3+=vy[0x0],v4+=vy[0x1],v5+=vy[0x0]*vy[0x0],v6+=vy[0x0]*vy[0x1],v7++);const v8=v7*v5-v3*v3;if(C(v8)<1e-9)return v1;const v9=(v7*v6-v3*v4)/v8;return[v9,(v4-v9*v3)/v7];},Li=LE(Lq,LW,Lk=>LS[Lk]<0x0?null:Ld[Lk]),Lg=LE(Lq,LW,Lk=>LS[Lk]<0x0?null:LS[Lk]+0x1),Lh=LE(LN,Lj,Lk=>Lm[Lk]<0x0?null:LF[Lk]),Lu=LE(LN,Lj,Lk=>Lm[Lk]<0x0?null:Lm[Lk]+0x1);if(!(Li&&Lg&&Lh&&Lu))return null;const Lz=(Lk,Lo)=>{const Ln=0x1-Lk[0x0]*Lo[0x0];if(C(Ln)<0.000001)return null;const Lt=(Lk[0x0]*Lo[0x1]+Lk[0x1])/Ln;return[Lt,Lo[0x0]*Lt+Lo[0x1]];},LB=[Lz(Li,Lh),Lz(Lg,Lh),Lz(Lg,Lu),Lz(Li,Lu)],Lb=a(Lj-LN,LW-Lq)*0.3;if(!LB[NT(0x430,0x429)](Lk=>Lk&&Lk[0x0]>LN-Lb&&Lk[0x0]<Lj+Lb&&Lk[0x1]>Lq-Lb&&Lk[0x1]<LW+Lb))return null;const LP={};return LP[NK(-0xed,-0x13f)]=LB,LP['n']=LL,LP;}const eR=(cY,cH)=>cY[cH+0x2]>0x3a&&cY[cH+0x2]-cY[cH]>0x1a&&cY[cH+0x2]-cY[cH+0x1]>0x7,eU=cY=>C(cY[0x0][0x0]*cY[0x1][0x1]-cY[0x1][0x0]*cY[0x0][0x1]+(cY[0x1][0x0]*cY[0x2][0x1]-cY[0x2][0x0]*cY[0x1][0x1])+(cY[0x2][0x0]*cY[0x3][0x1]-cY[0x3][0x0]*cY[0x2][0x1])+(cY[0x3][0x0]*cY[0x0][0x1]-cY[0x0][0x0]*cY[0x3][0x1]))/0x2;function eO(cY,cH){let ck=0x0;for(let co=0x0;co<0x4;co++){const cn=cH[co],ct=cH[(co+0x1)%0x4],cG=(ct[0x0]-cn[0x0])*(cY[0x1]-cn[0x1])-(ct[0x1]-cn[0x1])*(cY[0x0]-cn[0x0]);if(cG===0x0)continue;if(ck===0x0)ck=cG>0x0?0x1:-0x1;else{if((cG>0x0?0x1:-0x1)!==ck)return![];}}return!![];}function eV(cY,cH){const ck=eN(cH),co=a(n(cH[0x0],cH[0x3]),n(cH[0x1],cH[0x2])),cn=0xdc,ct=o(w(cn*co/ck),0x1c,0x82),cG=e9(eL(cn,ct),cH);if(!cG)return 0x0;const L0={};L0[Ng(-0x14,0xa)]=cY['d'],L0[Nh(0x6fc,0x68a)]=cY['w'],L0[Ng(-0x1f,-0x10e)]=cY['h'];const L1=ej(L0,0x0,0x0,cG,cn,ct),L2=cn*ct,L3=new Uint8Array(L2),L4=new Uint32Array(0x100);for(let Lj=0x0;Lj<L2;Lj++){L3[Lj]=L1[Lj*0x4]*0x4d+L1[Lj*0x4+0x1]*0x96+L1[Lj*0x4+0x2]*0x1d>>0x8,L4[L3[Lj]]++;}const L5=ey(L4,L2);function Nh(e,c){return vp(c,e-0x28e);}let L6=0x0;for(let Lq=L5+0x1;Lq<0x100;Lq++)L6+=L4[Lq];const L7=L6>=L2-L6,L8=new Uint8Array(L2),L9=new Int32Array(L2),Le=[];function Ng(e,c){return vp(e,c- -0x44d);}for(let LW=0x0;LW<L2;LW++){if(L8[LW]||L3[LW]>L5===L7)continue;let Ly=0x0,Ld=0x0,LS=cn,LF=0x0,Lm=ct,LJ=0x0;L9[Ly++]=LW,L8[LW]=0x1;while(Ld<Ly){const LK=L9[Ld++],LT=LK%cn,LE=LK/cn|0x0;if(LT<LS)LS=LT;if(LT>LF)LF=LT;if(LE<Lm)Lm=LE;if(LE>LJ)LJ=LE;LT>0x0&&!L8[LK-0x1]&&L3[LK-0x1]>L5!==L7&&(L8[LK-0x1]=0x1,L9[Ly++]=LK-0x1),LT<cn-0x1&&!L8[LK+0x1]&&L3[LK+0x1]>L5!==L7&&(L8[LK+0x1]=0x1,L9[Ly++]=LK+0x1),LE>0x0&&!L8[LK-cn]&&L3[LK-cn]>L5!==L7&&(L8[LK-cn]=0x1,L9[Ly++]=LK-cn),LE<ct-0x1&&!L8[LK+cn]&&L3[LK+cn]>L5!==L7&&(L8[LK+cn]=0x1,L9[Ly++]=LK+cn);}const LZ=LJ-Lm+0x1,LI=LF-LS+0x1;if(LZ>=ct*0.33&&LZ<=ct*0.97&&LI>=cn*0.012&&LI<=cn*0.26&&Ly>=LZ)Le[Nh(0x603,0x51a)]({'h':LZ,'cy':(Lm+LJ)/0x2});}if(Le[Nh(0x628,0x581)]<0x3)return Le[Ng(-0x32,-0xb3)];const Lc=Le[Ng(-0x1a9,-0x15e)](Li=>Li['h'])[Nh(0x5f9,0x519)]((Li,Lg)=>Li-Lg),LL=Lc[Lc[Nh(0x628,0x5b6)]>>0x1],Lv=Le[Nh(0x57d,0x5eb)](Li=>Li['cy'])[Nh(0x5f9,0x5a2)]((Li,Lg)=>Li-Lg),LN=Lv[Lv[Nh(0x628,0x5c3)]>>0x1];return Le[Nh(0x512,0x5d0)](Li=>Li['h']>LL*0.72&&Li['h']<LL*1.3&&C(Li['cy']-LN)<ct*0.16)[Ng(-0xb4,-0xb3)];}function es(cY,cH,ck,co){const cn=eM(cY,cH,ck,co);if(!cn)return null;const ct=cn[Nu(-0x111,-0xc6)],cG=eN(ct),L0=a(n(ct[0x0],ct[0x3]),n(ct[0x1],ct[0x2]));function Nu(e,c){return vD(e- -0xd7,c);}if(cG<0x14||L0<0x7||cG/L0<1.05||cG/L0>0x8)return null;const L1=eU(ct);function Nz(e,c){return vD(c-0x1c6,e);}if(cn['n']/L1<0.4||cn['n']/L1>1.15)return null;const L2=e9(eL(0x1,0x1),ct);if(!L2)return null;let L3=0x0,L4=null,L5=0x0;for(let Lc=-0.06;Lc>-0.86;Lc-=0.03){let LL=0x0,Lv=0x0,LN=0x0,Lj=0x0,Lq=0x0;for(let Ld=0.12;Ld<0.9;Ld+=0.04){const LS=ec(L2,Ld,Lc),LF=w(LS[0x0]),Lm=w(LS[0x1]);if(LF<0x0||Lm<0x0||LF>=cY['w']||Lm>=cY['h'])continue;const LJ=(Lm*cY['w']+LF)*0x4;Lv++,LN+=cY['d'][LJ],Lj+=cY['d'][LJ+0x1],Lq+=cY['d'][LJ+0x2];if(eR(cY['d'],LJ))LL++;}if(!Lv)break;LN/=Lv,Lj/=Lv,Lq/=Lv;const LW=LL/Lv>0.45;LW&&L5<0x4&&(L4=L4?[L4[0x0]+LN,L4[0x1]+Lj,L4[0x2]+Lq]:[LN,Lj,Lq],L5++);const Ly=L4&&C(LN-L4[0x0]/L5)+C(Lj-L4[0x1]/L5)+C(Lq-L4[0x2]/L5)<0x46;if(LW&&Ly)L3=-Lc;else{if(L3&&-Lc-L3>0.07)break;}}if(L3>0.6)L3=0x0;if(L3){const LZ=LK=>{let LT=0x0,LE=0x0,Li=0x0;for(let Lg=0.15;Lg<0.87;Lg+=0.03){const Lh=ec(L2,Lg,LK),Lu=w(Lh[0x0]),Lz=w(Lh[0x1]);if(Lu<0x0||Lz<0x0||Lu>=cY['w']||Lz>=cY['h'])continue;const LB=(Lz*cY['w']+Lu)*0x4;Li++,LT+=0.299*cY['d'][LB]+0.587*cY['d'][LB+0x1]+0.114*cY['d'][LB+0x2];if(eR(cY['d'],LB))LE++;}return Li?[LT/Li,LE/Li]:[0xff,0x1];},LI=a(LZ(0.5)[0x0],LZ(0.9)[0x0],LZ(0.12)[0x0]);for(const LK of[-0.015,-0.035,-0.055]){const LT=LZ(LK);if(LT[0x1]<0.3&&LT[0x0]<LI*0.66){L3=0x0;break;}}}const L6=L3>0.1,L7=L6?r(L3,0.46)+0.025:0.03,L8=0.02,L9=L6?0.055:0.03,Le=[ec(L2,-L8,-L7),ec(L2,0x1+L8,-L7),ec(L2,0x1+L8,0x1+L9),ec(L2,-L8,0x1+L9)];return{'quad':Le[Nz(0x19d,0x100)](LE=>[LE[0x0]*cY['f'],LE[0x1]*cY['f']]),'miolo':ct,'tipo':L6?Nu(-0x1b4,-0x261):Nu(-0x12d,-0x15b),'larg':cG*cY['f'],'vazios':0x1-cn['n']/L1,'prop':cG/L0,'faixa':L6?o((L7+0.025)/(L7+0x1+L9),0.12,0.42):0.05};}function eC(cY){if(cY['I'])return;const cH=cY['w'],ck=cY['h'],co=cH*ck,cn=cY['d'],ct=new Uint8Array(co),cG=cH+0x1,L0=new Float64Array(cG*(ck+0x1));for(let L1=0x0,L2=0x0;L1<co;L1++,L2+=0x4)ct[L1]=cn[L2]*0x4d+cn[L2+0x1]*0x96+cn[L2+0x2]*0x1d>>0x8;function NB(e,c){return vp(c,e-0x17a);}for(let L3=0x0;L3<ck;L3++){let L4=0x0;for(let L5=0x0;L5<cH;L5++){let L6=0x0;if(L5>0x0&&L5<cH-0x1){L6=C(ct[L3*cH+L5+0x1]-ct[L3*cH+L5-0x1]);if(L6<0xe)L6=0x0;else{if(L6>0x5a)L6=0x5a;}}L4+=L6,L0[(L3+0x1)*cG+L5+0x1]=L0[L3*cG+L5+0x1]+L4;}}cY['g']=ct,cY['I']=L0,cY[NB(0x3ff,0x3de)]=L0[cG*(ck+0x1)-0x1]/co;}function ef(cY,cH){eC(cY);const ck=cY['w'],co=cY['h'],cn=ck+0x1,ct=cY['I'],cG=a(0x6,cY[Nb(-0x9d,-0x93)]*1.7),L0=[],L1=(L3,L4,L5,L6)=>ct[L6*cn+L5]-ct[L4*cn+L5]-ct[L6*cn+L3]+ct[L4*cn+L3],L2=(L3,L4)=>{const L5=r(L3['x']+L3['w'],L4['x']+L4['w'])-a(L3['x'],L4['x']),L6=r(L3['y']+L3['h'],L4['y']+L4['h'])-a(L3['y'],L4['y']);return L5>0x0&&L6>0x0?L5*L6/r(L3['w']*L3['h'],L4['w']*L4['h']):0x0;};function NP(e,c){return vp(e,c-0x43);}function Nb(e,c){return vp(c,e- -0x322);}for(let L3=a(0x22,ck*0.026);L3<=ck*0.6;L3*=1.38){const L4=L3|0x0,L5=a(0x8,L3*0.3|0x0),L6=a(0x2,L4/0x7|0x0),L7=a(0x2,L5/0x3|0x0),L8=[];for(let Le=0x0;Le+L5<co;Le+=L7)for(let Lc=0x0;Lc+L4<ck;Lc+=L6){if(cH&&(cH[0x0]<Lc||cH[0x0]>Lc+L4||cH[0x1]<Le||cH[0x1]>Le+L5))continue;const LL=L1(Lc,Le,Lc+L4,Le+L5)/(L4*L5);if(LL<cG)continue;const Lv=L4*0.5|0x0,LN=L5,Lj=a(0x0,Lc-Lv),Lq=a(0x0,Le-LN),LW=r(ck,Lc+L4+Lv),Ly=r(co,Le+L5+LN),Ld=(L1(Lj,Lq,LW,Ly)-LL*L4*L5)/a(0x1,(LW-Lj)*(Ly-Lq)-L4*L5),LS={};LS['x']=Lc,LS['y']=Le,LS['w']=L4,LS['h']=L5,LS['s']=LL-0.6*Ld,L8[Nb(0x53,0x105)](LS);}L8[NP(0x3d4,0x3ae)]((LF,Lm)=>Lm['s']-LF['s']);const L9=[];for(const LF of L8){if(L9[NP(0x437,0x3dd)]>=(cH?0x3:0x9))break;if(!L9[NP(0x4a1,0x449)](Lm=>L2(Lm,LF)>0.3))L9[NP(0x39b,0x3b8)](LF);}for(const Lm of L9)L0[Nb(0x53,-0x6a)](Lm);}return L0[Nb(0x49,-0x38)]((LJ,LZ)=>LZ['s']-LJ['s']);}function ep(cY,cH,ck){const co=cY['w'],cn=cY['g'],ct=new Uint32Array(0x100);let cG=0x0;function NM(e,c){return vp(e,c-0x1b6);}for(let L3=cH['y'];L3<cH['y']+cH['h'];L3++)for(let L4=cH['x'];L4<cH['x']+cH['w'];L4++){ct[cn[L3*co+L4]]++,cG++;}const L0=ey(ct,cG);function NR(e,c){return vD(e-0x3c3,c);}let L1=0x0;for(let L5=L0+0x1;L5<0x100;L5++)L1+=ct[L5];const L2=[(cH['x']+cH['w']/0x2)*cY['f'],(cH['y']+cH['h']/0x2)*cY['f']];for(const L6 of L1>=cG-L1?[!![],![]]:[![],!![]]){let L7=0x0;for(const L8 of[0.5,0.3,0.7,0.16,0.84])for(const L9 of[0.5,0.3,0.7,0.12,0.88,0.4,0.6]){const Le=w(cH['x']+cH['w']*L9),Lc=w(cH['y']+cH['h']*L8);if(cn[Lc*co+Le]>L0!==L6)continue;if(++L7>0x6)break;const LL=es(cY,Le,Lc,cY['w']*cY['h']*0.07);if(!LL||!eO(L2,LL[NM(0x49d,0x531)]))continue;LL[NM(0x41d,0x431)]=eV(cY,LL[NR(0x386,0x2da)]);if(LL[NR(0x289,0x2e0)]>=ck&&LL[NM(0x606,0x502)]>1.5&&LL[NM(0x4e8,0x502)]<0x7)return LL;}}return null;}function eD(cY){function NO(e,c){return vD(e-0x46b,c);}const cH=[];for(const ct of ef(cY)){const cG=[(ct['x']+ct['w']/0x2)*cY['f'],(ct['y']+ct['h']/0x2)*cY['f']];if(cH[NU(0xe7,0x14b)](L1=>eO(cG,L1[NU(0x25,0xc0)])))continue;const L0=ep(cY,ct,0x4);if(L0&&!cH[NO(0x4bc,0x44d)](L1=>n(ev(L1[NU(0x160,0xc0)]),ev(L0[NO(0x431,0x52e)]))<a(L1[NO(0x455,0x3d9)],L0[NO(0x455,0x4c8)])*0.5))cH[NO(0x42b,0x3ed)](L0);if(cH[NO(0x450,0x47e)]>=0x6)break;}const ck=cY['w']*cY['f'],co=cY['h']*cY['f'],cn=X(ck,co);function NU(e,c){return vp(e,c- -0x2bb);}return cH[NU(0x184,0x18c)](L1=>{const L2=ev(L1[NV(0x54a,0x567)]);function NV(e,c){return NU(c,e-0x48a);}function Ns(e,c){return NO(e- -0x1b2,c);}L1[NV(0x58d,0x603)]=L1[NV(0x56e,0x541)]*(0x1-0.7*n(L2,[ck*0.5,co*0.58])/cn);}),cH[NO(0x421,0x46a)]((L1,L2)=>L2[NO(0x474,0x4b0)]-L1[NU(0x16a,0x103)]),cH[NU(0x141,0x18c)]((L1,L2)=>{function NC(e,c){return NO(e- -0x1cd,c);}function Nf(e,c){return NU(c,e- -0x1db);}L1[NC(0x333,0x32a)]=L2===0x0||L1[Nf(-0xf7,-0x6e)]>cH[0x0][NC(0x288,0x352)]*0.62;}),cH;}function ex(cY,cH,ck,co){eC(cY);function Np(e,c){return vp(c,e- -0x286);}const cn=[cH*cY['f'],ck*cY['f']];for(const ct of[0x0,0.25,0.5,0.75,0x1]){const cG=ct?0x8:0x1;for(let L0=0x0;L0<cG;L0++){const L1=L0/cG*6.2832+ct*0x2,L2=es(cY,cH+D(L1)*ct*co,ck+A(L1)*ct*co);if(L2&&eO(cn,L2[Np(0xf5,0x14)])&&(L2[Np(0x151,0x1ec)]===Np(0x52,-0x59)||eV(cY,L2[ND(0x540,0x597)])>=0x3))return L2;}}for(const L3 of ef(cY,[cH,ck])){const L4=ep(cY,L3,0x3);if(L4)return L4;}function ND(e,c){return vp(c,e-0x1c8);}return null;}function eX(cY){const cH=[cY[Nx(-0xdf,-0x1d0)]((cn,ct)=>cn+ct[0x0],0x0)/0x4,cY[NX(-0x182,-0x112)]((cn,ct)=>cn+ct[0x1],0x0)/0x4];function Nx(e,c){return vp(e,c- -0x4f9);}const ck=cY[Nx(-0x14f,-0x176)]()[Nx(-0x25f,-0x18e)]((cn,ct)=>f(cn[0x1]-cH[0x1],cn[0x0]-cH[0x0])-f(ct[0x1]-cH[0x1],ct[0x0]-cH[0x0]));function NX(e,c){return vp(c,e- -0x4ab);}let co=0x0;for(let cn=0x1;cn<0x4;cn++)if(ck[cn][0x0]+ck[cn][0x1]<ck[co][0x0]+ck[co][0x1])co=cn;return[ck[co],ck[(co+0x1)%0x4],ck[(co+0x2)%0x4],ck[(co+0x3)%0x4]];}let eQ=null;async function ea(){if(eQ)return eQ;const cY=Nl(0x21e,0x1b7),cH=await import(cY+NQ(0x1b0,0x24e));function Nl(e,c){return vp(c,e- -0x11e);}const ck=await cH[NQ(0x27b,0x1ae)][NQ(0x2d9,0x1f6)](cY+NQ(0x1a9,0x264)),co={};co[NQ(0x328,0x419)]=NQ(0x314,0x3f2);const cn={};cn[Nl(0x174,0x1a1)]=co,cn[Nl(0x1eb,0x28e)]=NQ(0x27e,0x24c),cn[NQ(0x343,0x405)]=0.45,eQ=await cH[Nl(0x1d4,0x17a)][NQ(0x36f,0x399)](ck,cn);function NQ(e,c){return vD(e-0x2c0,c);}return eQ;}async function er(cY){const cH=await ea(),ck=cY[Na(0x4b0,0x4b9)],co=cY[Na(0x39c,0x38a)],cn=[],ct=[[0x0,0x0,ck,co]],cG=ck>=co?0x3:0x2,L0=ck>=co?0x2:0x3,L1=ck/cG*1.25,L2=co/L0*1.25;function Nr(e,c){return vp(c,e- -0x153);}for(let L4=0x0;L4<L0;L4++)for(let L5=0x0;L5<cG;L5++)ct[Na(0x305,0x3c0)]([o(L5*ck/cG-L1*0.1,0x0,ck-L1),o(L4*co/L0-L2*0.1,0x0,co-L2),L1,L2]);for(const [L6,L7,L8,L9]of ct){const Le=r(0x1,0x400/a(L8,L9)),Lc=e4(L8*Le,L9*Le);Lc[Na(0x3c8,0x394)]('2d')[Na(0x459,0x3f6)](cY,L6,L7,L8,L9,0x0,0x0,Lc[Na(0x57a,0x4b9)],Lc[Na(0x29f,0x38a)]);const LL=cH[Nr(0x154,0x74)](Lc);for(const Lv of LL[Na(0x389,0x484)]||[]){const LN=Lv[Na(0x3ce,0x328)];if(!LN)continue;cn[Nr(0x222,0x1a7)]({'x':L6+(LN[Nr(0x217,0x2f3)]+LN[Nr(0x31b,0x2ab)]/0x2)/Le,'y':L7+(LN[Nr(0x172,0x9a)]+LN[Na(0x3d9,0x38a)]/0x2)/Le,'r':a(LN[Na(0x526,0x4b9)],LN[Nr(0x1ec,0x229)])/Le*0.78});}e5(Lc);}const L3=[];for(const Lj of cn[Na(0x3a6,0x3b6)]((Lq,LW)=>LW['r']-Lq['r']))if(!L3[Nr(0x2b3,0x2e1)](Lq=>n([Lq['x'],Lq['y']],[Lj['x'],Lj['y']])<Lq['r']*0.8))L3[Na(0x37d,0x3c0)](Lj);function Na(e,c){return vp(e,c-0x4b);}return L3;}const ew={};ew[vD(-0x141,-0x23e)]=vD(-0xa1,-0x16),ew[vp(0x38c,0x3e4)]='',ew[vp(0x1b2,0x276)]=vD(-0x10d,-0xf9),ew[vp(0x281,0x31f)]=vp(0x39e,0x419),ew[vD(0x6b,0x167)]=vp(0x455,0x374),ew[vD(-0x12a,-0x94)]='',ew[vp(0x39e,0x42d)]=![],ew[vp(0x35d,0x323)]=0x0,ew[vp(0x3ba,0x30d)]=vD(-0xc9,-0x152),ew[vp(0x1cb,0x26d)]=vD(0x89,0x31),ew[vp(0x211,0x2f3)]=0.92,ew[vD(-0xb3,-0x175)]=0.92,ew[vp(0x233,0x2ea)]=0.7,ew[vp(0x43e,0x343)]=vD(0x18,-0x9f),ew['v']=0x2;const eA=ew;let eY=Object[vp(0x3cf,0x3b3)]({},eA);try{const cY=JSON[vp(0x296,0x277)](localStorage[vD(-0x14d,-0x163)](vD(0x63,-0xa))||'{}');cY['v']!==0x2&&(delete cY[vp(0x254,0x276)],delete cY[vD(-0xc2,-0x16a)]);const cH={};cH['v']=0x2,Object[vp(0x309,0x3b3)](eY,cY,cH);}catch(ck){}const eH=()=>{function Nw(e,c){return vp(e,c- -0x1a3);}function NA(e,c){return vD(c-0x3eb,e);}try{localStorage[Nw(0xbe,0x12c)](Nw(0x359,0x275),JSON[NA(0x394,0x29f)](eY));}catch(co){c6(Nw(0x1da,0x25d));}},ek={};ek[vp(0x47c,0x43d)]=0.27,ek[vD(-0xed,0x17)]=0.035,ek[vp(0x207,0x2da)]=0.07,ek[vD(-0x63,0xe)]=![];const eo={};eo[vp(0x4d0,0x43d)]=0.05,eo[vp(0x392,0x2c8)]=0.035,eo[vD(-0xdb,-0x155)]=0.06,eo[vD(-0x63,0x30)]=!![];const en={};en[vD(-0xdd,-0x134)]=ek,en[vp(0x36b,0x35f)]=eo;const et=en,eG={};eG['x']=0x0,eG['y']=0x0,eG['k']=0x1;const c0={};c0[vp(0x4b2,0x46f)]=[],c0[vp(0x424,0x3a3)]=-0x1,c0[vp(0x2a7,0x2da)]=null,c0[vp(0x36f,0x3d6)]=null,c0[vD(0x69,0xe1)]=null,c0['v']=eG,c0[vD(0x16,0x101)]=0x1,c0[vD(0x8e,0x18d)]=![],c0[vp(0x1f2,0x2b1)]=-0x1,c0[vD(-0xe5,-0xbb)]=-0x1,c0[vD(0xd,-0xbf)]=vp(0x448,0x419),c0[vp(0x190,0x27f)]=null,c0[vp(0x361,0x446)]=null,c0[vp(0x229,0x282)]=!![],c0[vD(0x23,0x129)]=![],c0[vp(0x2e0,0x369)]=null,c0[vD(-0xc8,0xe)]=null;function vp(e,c){return y(c-0x12b,e);}c0[vp(0x39a,0x295)]=![],c0[vD(-0x12b,-0x53)]=null;const c1=c0,c2={},c3=()=>c1[vD(0xba,0x143)][c1[vp(0x366,0x3a3)]],c4=co=>co[vp(0x33c,0x2b3)][vD(-0x1b,-0x14)]>0x0||co[vD(-0x86,-0x64)][vp(0x37c,0x39a)]>0x0,c5=()=>c1['v']['k']/c1[vp(0x369,0x3cb)];function c6(co,cn){c2[NY(0x290,0x1a8)][NH(0x3c2,0x2f1)]=co||'';function NH(e,c){return vD(c-0x37b,e);}function NY(e,c){return vp(e,c- -0x283);}c2[NY(0x1f1,0x1a8)][NH(0x39a,0x37a)][NH(0x400,0x417)]=cn||'';}function c7(co,cn,ct){c2[Nk(0x443,0x461)][Nk(0x2df,0x3e4)]=!cn;if(!cn)return;function No(e,c){return vD(e-0x55e,c);}function Nk(e,c){return vp(e,c-0xf3);}c2[No(0x43c,0x43f)][Nk(0x4ff,0x444)][Nk(0x664,0x561)]=w(co/cn*0x64)+'%',c6(ct);}function c8(co,cn){const ct=cn&&cn[Nn(0x410,0x367)]||Nn(0x1c1,0x268),cG={};cG[Nn(0x276,0x30b)]=co,cG[Nn(0x1bc,0x29d)]=eY[Nn(0x292,0x29d)],cG[Nt(0x1d3,0x12e)]=ct,cG[Nt(0xf2,0x1c)]=Nn(0x333,0x24c),cG[Nt(0xef,0xfa)]=eY[Nt(0xef,0x153)];function Nt(e,c){return vD(e-0x1b1,c);}function Nn(e,c){return vD(c-0x345,e);}return cG[Nt(0xfe,0xb6)]=eY[Nn(0x2a1,0x292)],cG[Nn(0x1a2,0x1fd)]=eY[Nn(0x1c7,0x1fd)],cG[Nn(0x188,0x27a)]=eY[Nt(0xe6,0x11a)],cG[Nn(0x360,0x285)]=null,Object[Nt(0x1af,0x170)](cG,et[ct],cn||{});}function c9(co){function NG(e,c){return vp(c,e- -0x4a9);}const cn=c8(co[NG(-0x12e,-0x130)],{'tipo':co[j0(0x174,0xf6)]});if(co[NG(-0xd2,-0xb7)]===NG(-0x1d1,-0x14d))cn[j0(0x1da,0x176)]=co[j0(0x1da,0x21b)];function j0(e,c){return vp(c,e- -0x263);}if(co[j0(0x1e7,0x23e)]===![])cn[j0(0xaa,0xb4)]=j0(0x19c,0x21f);return cn;}function ce(co){return new Promise((cn,ct)=>{const cG=typeof co===j1(0x655,0x664)?co:URL[j2(0x653,0x657)](co),L0=new Image(),L1=()=>{function j3(e,c){return j1(e-0x57,c);}function j4(e,c){return j2(e- -0x5a8,c);}if(typeof co!==j3(0x6ac,0x728))URL[j3(0x58d,0x5b8)](cG);};L0[j2(0x5f9,0x5f6)]=()=>{cn(L0),setTimeout(L1,0x1f4);};function j1(e,c){return y(e-0x373,c);}function j2(e,c){return y(e-0x322,c);}L0[j2(0x5ad,0x4f6)]=()=>{function j5(e,c){return j2(e- -0x6b3,c);}L1(),ct(new Error(j5(-0x1c6,-0x16d)));},L0[j2(0x54a,0x4ee)]=cG;});}function cc(co){function j6(e,c){return vD(c-0x2e3,e);}function j7(e,c){return vD(c- -0x12,e);}try{const cn={};cn[j6(0x2fd,0x30c)]=!![];const ct=co[j7(-0x16f,-0x7e)]('2d',cn);return ct[j7(-0x46,0x1f)]=j6(0x309,0x326),ct[j6(0x1fb,0x2fe)](co[j7(0x130,0xa7)]-0x1,co[j7(-0x91,-0x88)]-0x1,0x1,0x1),ct[j7(-0x30,0x70)](co[j7(0x6c,0xa7)]-0x1,co[j7(0x5c,-0x88)]-0x1,0x1,0x1)[j7(0x175,0x90)][0x3]===0xff;}catch(cG){return![];}}async function cL(co){const cn=await ce(co[j8(0x8,-0xa7)]),ct=cn[j9(0x66a,0x5b5)],cG=cn[j8(-0x160,-0x70)];let L0=null,L1=0x1;for(const L4 of[0x0,0x1e84800,0xf42400,0x7a1200,0x3d0900]){L1=L4&&ct*cG>L4?Y(L4/(ct*cG)):0x1;if(L4&&L1===0x1)continue;const L5=e4(x(ct*L1),x(cG*L1));if(cc(L5)){L0=L5;break;}e5(L5);}if(!L0)throw new Error(j9(0x584,0x574));function j8(e,c){return vD(c-0xa2,e);}const L2={};L2[j8(0x166,0xcb)]=!![];const L3=L0[j8(-0x18,0x36)]('2d',L2);L3[j8(0xe3,0x67)]=j9(0x6e0,0x62d),L3[j8(0x145,0x98)](cn,0x0,0x0,L0[j8(0x9e,0x15b)],L0[j8(0x4d,0x2c)]),cn[j8(-0x93,0x40)]='';if(co['w']&&co['w']!==L0[j9(0x664,0x66c)]){const L6=L0[j8(0xea,0x15b)]/co['w'];co[j8(0x6b,-0x60)][j8(0x130,0x134)](L7=>L7[j8(0x109,0x68)][j8(0xc6,0x134)](L8=>{L8[0x0]*=L6,L8[0x1]*=L6;})),co[j9(0x55c,0x52d)][j8(0x47,0x134)](L7=>{L7['x']*=L6,L7['y']*=L6,L7['r']*=L6;});}co['w']=L0[j8(0x21c,0x15b)],co['h']=L0[j8(0x75,0x2c)],co[j8(0x10e,0x86)]=[ct,cG];function j9(e,c){return vp(e,c-0x1fe);}return co[j9(0x543,0x50c)]=L1<0x1,L0;}function cv(co){const cn={};cn[je(0x445,0x47d)]=!![];const ct=a(0x1,a(co[je(0x4d5,0x458)],co[je(0x3a6,0x480)])/0x640),cG=w(co[je(0x4d5,0x578)]/ct),L0=w(co[jc(0x29f,0x28f)]/ct),L1=e4(cG,L0),L2=L1[jc(0x20a,0x299)]('2d',cn);function jc(e,c){return vp(e,c- -0xb0);}function je(e,c){return vD(e-0x41c,c);}L2[je(0x3e1,0x34d)]=je(0x496,0x408),L2[jc(0x3a1,0x2fb)](co,0x0,0x0,cG,L0);const L3={'w':cG,'h':L0,'d':L2[jc(0x362,0x387)](0x0,0x0,cG,L0)[je(0x4be,0x4d8)],'f':co[jc(0x479,0x3be)]/cG};return e5(L1),L3;}function cN(co,cn){const ct=e4(0x78,0x78*cn['h']/cn['w']);function jL(e,c){return vD(c-0x29b,e);}function jv(e,c){return vp(e,c- -0x8);}ct[jL(0x293,0x22f)]('2d')[jv(0x486,0x3a3)](co,0x0,0x0,ct[jv(0x477,0x466)],ct[jL(0x202,0x225)]),cn[jL(0x2e0,0x262)]=ct[jL(0x1a0,0x212)](jL(0x27b,0x1af),0.6),e5(ct);}async function cj(co){const cn=Array[jN(-0x3a,0xbd)](co)[jN(-0xb0,-0x178)](L2=>typeof L2===jN(0xd9,0x188)||/^image\//[jj(-0x4e,-0x154)](L2[jj(-0x79,-0x13f)])||/\.(jpe?g|png|webp|heic|heif)$/i[jj(-0x5a,-0x154)](L2[jN(0x88,0x15f)]||''));if(!cn[jN(0x66,0xd8)])return c6(jj(0x3c,0x87),jN(0xc0,0x76));if(c1[jN(-0x9f,-0x70)])return;c1[jj(-0x170,-0x14e)]=!![],c1[jj(-0x18e,-0x159)]=null;const ct=c1[jN(0x13b,0x213)][jj(-0xc9,-0x49)];for(const L2 of cn)c1[jN(0x13b,0x158)][jN(0x41,0x1c)]({'arquivo':L2,'nome':typeof L2===jN(0xd9,0xb9)?L2[jj(0x27,0x46)]('/')[jN(0x133,0x153)]():L2[jN(0x88,0x133)],'placas':[],'rostos':[],'w':0x0,'h':0x0,'mini':'','auto':![]});c2[jj(-0x49,-0xb3)][jN(-0x43,0x90)]=!![],c2[jN(0x100,0xf5)][jj(-0x1ca,-0xf2)]=![];c1[jj(-0x14,-0x109)]&&(e5(c1[jN(-0x5a,0x4)]),c1[jN(-0x5a,-0x14f)]=null);let cG=0x0,L0=0x0;for(let L3=ct;L3<c1[jN(0x13b,0x140)][jN(0x66,-0x34)];L3++){const L4=c1[jN(0x13b,0x102)][L3];c7(L3-ct,cn[jj(-0x8c,-0x49)],jN(0x139,0x14b)+(L3-ct+0x1)+jj(0x128,0x71)+cn[jN(0x66,-0x52)]+'…'),await t(0x10);try{const L5=await cL(L4),L6=cv(L5);L4[jN(-0x81,-0x42)]=eD(L6)[jN(-0x45,-0x15)](c9),L4[jj(0x65,0x2c)]=!![],cN(L5,L4),e5(L5);if(L4[jN(-0x81,-0xb0)][jN(0x66,0x137)])cG++;else L0++;}catch(L7){L4[jN(0xc0,0xd7)]=!![],L0++;}cU();}c7(0x0,0x0);function jj(e,c){return vp(e,c- -0x3e3);}c1[jj(-0x1dd,-0x14e)]=![],await cq(ct),c6(cn[jj(-0x69,-0x49)]===0x1?cG?jj(-0xba,-0x20):jj(0x7a,0x69):cG+jN(0x120,0x129)+cn[jN(0x66,0x14b)]+jj(-0x175,-0x105)+(L0?L0===0x1?jN(0x3,0x81):'\x20'+L0+jN(0x131,0x189):jN(0x12,0xf)),L0?jj(-0xa,0x7d):'ok');const L1={};function jN(e,c){return vp(c,e- -0x334);}L1[jj(0x160,0x5e)]=cn[jN(0x66,0xa9)],L1[jN(-0xb1,-0x182)]=cG,L1[jN(-0xc0,-0x132)]=eY[jN(-0xc0,0x1d)],e3(jN(0x31,-0x5d),L1);}async function cq(co){function jW(e,c){return vD(e-0x282,c);}if(co<0x0||co>=c1[jq(0x5a4,0x54c)][jW(0x267,0x340)]||c1[jq(0x3ca,0x387)])return;const cn=c3();cn&&(cn[jq(0x3e8,0x44d)][jq(0x57c,0x4f7)](cG=>{function jy(e,c){return jq(e-0xc7,c);}cG[jy(0x4f1,0x466)]=null;}),cn[jq(0x464,0x53a)][jW(0x314,0x238)](cG=>{function jd(e,c){return jW(e- -0xc3,c);}cG[jd(0xff,0x8f)]=null;}));if(c1[jW(0x1a7,0x28e)])e5(c1[jW(0x1a7,0xd6)]);c1[jq(0x4d8,0x4aa)]=co,c1[jq(0x3e6,0x3d9)]=-0x1,c1[jq(0x405,0x39c)]=-0x1,c1[jq(0x3b4,0x365)]=null,c1[jW(0x1a7,0xec)]=null,c1[jq(0x578,0x54b)]=![];const ct=c3();try{c1[jq(0x40f,0x3f8)]=await cL(ct);}catch(cG){c6(jq(0x3d6,0x4bc),jq(0x529,0x4e9));return;}c1[jW(0x2a3,0x218)]=cv(c1[jq(0x40f,0x49b)]);if(!ct[jq(0x4b1,0x564)])cN(c1[jq(0x40f,0x321)],ct);ct[jW(0x180,0x108)][jq(0x57c,0x5d1)](L0=>{function jS(e,c){return jq(e- -0x5a1,c);}function jF(e,c){return jq(e- -0x1b4,c);}L0[jS(-0x177,-0x1ce)]=eb(c1[jS(-0x192,-0x15e)],L0);}),ct[jW(0x1fc,0x296)][jW(0x314,0x236)](L0=>{function jm(e,c){return jW(e-0x29f,c);}function jJ(e,c){return jq(c- -0x121,e);}L0[jm(0x461,0x47a)]=eP(c1[jJ(0x288,0x2ee)],L0);}),c1[jq(0x422,0x45c)]=eK(c1[jW(0x1a7,0x263)]);if(ct[jq(0x3e8,0x3ad)][jW(0x267,0x252)])c1[jq(0x3e6,0x305)]=0x0;cy(),c6(ct[jW(0x1db,0x112)]?jW(0x2b4,0x1b3)+ct[jq(0x4ce,0x5b2)][0x0]+jq(0x588,0x4e7)+ct[jW(0x266,0x358)][0x1]+jW(0x20f,0x1af)+ct['w']+jW(0x320,0x2b9)+ct['h']+'.':'',ct[jq(0x443,0x4d7)]?jW(0x32d,0x2b5):'');function jq(e,c){return vD(e-0x4ea,c);}cP();}function cW(){const co=c3();if(!c1[jZ(0x45b,0x41b)])return;function jI(e,c){return vp(c,e- -0x4e8);}const cn=eD(c1[jI(-0x112,-0x67)]);let ct=0x0;function jZ(e,c){return vD(c-0x4f6,e);}cn[jI(-0xa1,-0x2b)](cG=>{if(co[jK(0x2e,0x82)][jT(0x1b7,0x1ab)](L1=>n(ev(L1[jT(0x12c,0x5a)]),ev(cG[jT(0x12c,0xd4)]))<cG[jK(0xc7,0x16e)]*0.5))return;function jK(e,c){return jZ(e,c- -0x372);}function jT(e,c){return jZ(c,e- -0x390);}const L0=c9(cG);L0[jK(-0x3a,0xc4)]=eb(c1[jK(-0x47,0xa9)],L0),co[jT(0x64,0x2f)][jK(0x22a,0x144)](L0),ct++;});if(co[jI(-0x235,-0x1ee)][jZ(0x413,0x4db)]&&c1[jI(-0x237,-0x1d8)]<0x0)c1[jI(-0x237,-0x259)]=0x0;c6(ct?ct+(ct===0x1?jZ(0x493,0x57c):jZ(0x568,0x48c))+jZ(0x544,0x45b):co[jZ(0x47c,0x3f4)][jI(-0x14e,-0x174)]?jZ(0x3f2,0x4f2):jZ(0x5f4,0x53d),ct?'ok':jI(-0x88,-0xfb));}function cy(){if(!c1[jE(0x146,0xb0)])return;function ji(e,c){return vp(c,e- -0x157);}const co=c2[ji(0x2a6,0x304)][ji(0x15b,0x138)],cn=a(0xf0,window[jE(0x11c,0x1f2)]*(window[ji(0x16d,0xdb)]<0x400?0.58:0.74)),ct=r(co/c1[ji(0x183,0x1da)][ji(0x317,0x3a9)],cn/c1[jE(0x146,0xba)][ji(0x1e8,0x24c)]),cG=w(c1[jE(0x146,0x1a3)][jE(0x2da,0x214)]*ct),L0=w(c1[jE(0x146,0xd9)][jE(0x1ab,0x265)]*ct);c1[jE(0x237,0x257)]=r(window[jE(0x1ea,0xe8)]||0x1,0x3),c2['cv'][ji(0x1fa,0x166)][jE(0x2da,0x37f)]=cG+'px',c2['cv'][ji(0x1fa,0x259)][ji(0x1e8,0x1a8)]=L0+'px',c2['cv'][ji(0x317,0x28c)]=w(cG*c1[ji(0x274,0x26a)]),c2['cv'][ji(0x1e8,0x28d)]=w(L0*c1[jE(0x237,0x178)]);if(c1[jE(0x28a,0x1f1)])e5(c1[ji(0x2c7,0x3bb)]);c1[ji(0x2c7,0x2ca)]=e4(c2['cv'][ji(0x317,0x3f8)],c2['cv'][ji(0x1e8,0x13d)]);const L1=c1[ji(0x2c7,0x241)][jE(0x1b5,0x1a9)]('2d');function jE(e,c){return vp(c,e- -0x194);}L1[jE(0x1e6,0x279)]=ji(0x2d8,0x36d),L1[ji(0x254,0x199)](c1[jE(0x146,0x13c)],0x0,0x0,c1[jE(0x28a,0x34d)][ji(0x317,0x2d6)],c1[ji(0x2c7,0x387)][jE(0x1ab,0x26c)]),cd();}function cd(){if(!c1[jg(0x52d,0x5cf)])return;const co=c3(),cn=co&&co[jg(0x506,0x46f)][c1[jg(0x504,0x5c0)]],ct=c1[jh(-0x26,-0xc1)][jg(0x6c1,0x75e)],cG=c1[jh(-0x54,-0xc1)][jg(0x592,0x4e1)];if(c1[jg(0x696,0x6a1)]&&cn){const L0=ev(cn[jh(-0x45,-0x20)]),L1=o(eN(cn[jh(-0x2e,-0x20)])*3.4,ct*0.06,ct),L2=L1*cG/ct;c1['v']={'x':o(L0[0x0]-L1/0x2,0x0,ct-L1),'y':o(L0[0x1]-L2/0x2,0x0,cG-L2),'k':c2['cv'][jg(0x6c1,0x6df)]/L1};}else{c1[jh(0x43,0xa8)]=![];const L3={};L3['x']=0x0,L3['y']=0x0,L3['k']=c2['cv'][jg(0x6c1,0x671)]/ct,c1['v']=L3;}function jg(e,c){return vD(e-0x608,c);}function jh(e,c){return vD(c-0x1a,e);}cI();}function cS(co){function ju(e,c){return vD(c-0x384,e);}const cn=eN(co[ju(0x279,0x34a)])*c5();return{'r':o(cn*0.07,3.5,0xa),'fora':o(cn*0.2,0x9,0x16)};}function cF(co,cn,ct){const cG=n(co,cn)||0x1,L0=ct/c5();return[co[0x0]+(co[0x0]-cn[0x0])/cG*L0,co[0x1]+(co[0x1]-cn[0x1])/cG*L0];}function cm(co){function jB(e,c){return vp(c,e- -0x37);}const cn=ev(co[jz(0x10d,0xd)]),ct=[(co[jz(0x10d,0xc5)][0x0][0x0]+co[jB(0x344,0x2ae)][0x1][0x0])/0x2,(co[jB(0x344,0x2fa)][0x0][0x1]+co[jB(0x344,0x245)][0x1][0x1])/0x2],cG=n(ct,cn)||0x1,L0=(cS(co)[jB(0x3f1,0x47a)]+0x10)/c5();function jz(e,c){return vp(c,e- -0x26e);}return[ct[0x0]+(ct[0x0]-cn[0x0])/cG*L0,ct[0x1]+(ct[0x1]-cn[0x1])/cG*L0];}let cJ=0x0;const cZ=()=>{if(!cJ)cJ=requestAnimationFrame(()=>{cJ=0x0,cI();});};function cI(){if(!c1[jb(0x39d,0x45e)]||!c1[jP(0x614,0x53e)])return;const co=c3(),cn=c2['cv'][jP(0x53f,0x49e)]('2d'),ct=c1['v'],cG=ct['k'],L0=c1[jb(0x42c,0x3de)],L1=c1[jP(0x5c1,0x59f)]/cG;cn[jP(0x60c,0x548)](0x1,0x0,0x0,0x1,0x0,0x0),cn[jP(0x4ea,0x5b7)]=!![];function jP(e,c){return vp(c,e-0x1f6);}cn[jP(0x570,0x590)]=jb(0x4f2,0x495);c1[jP(0x639,0x64a)]?(cn[jb(0x4a9,0x443)]=jP(0x594,0x531),cn[jP(0x5c6,0x53b)](0x0,0x0,c2['cv'][jP(0x664,0x6c9)],c2['cv'][jb(0x402,0x39c)]),cn[jP(0x60c,0x6a6)](cG,0x0,0x0,cG,-ct['x']*cG,-ct['y']*cG),cn[jb(0x3b7,0x422)]=cG<2.5,cn[jb(0x46e,0x545)](c1[jb(0x39d,0x426)],0x0,0x0)):(cn[jb(0x46e,0x55b)](c1[jb(0x4e1,0x5d8)],0x0,0x0),cn[jb(0x4d9,0x4f0)](cG,0x0,0x0,cG,0x0,0x0));if(!c1[jP(0x5ce,0x6bc)]){co[jP(0x4a9,0x3af)][jb(0x50a,0x5d1)]((L2,L3)=>{function jM(e,c){return jP(e- -0x359,c);}function jR(e,c){return jb(e- -0x539,c);}if(L2[jM(0x192,0x268)]&&!(L0&&(L0['t']===jR(-0xf5,-0x68)||L0['t']===jM(0x2b6,0x1c7))&&L0['i']===L3))cn[jR(-0xcb,-0x163)](L2[jR(-0x181,-0xcb)]['c'],L2[jM(0x192,0x176)]['x'],L2[jM(0x192,0x1cf)]['y']);}),co[jP(0x525,0x56c)][jb(0x50a,0x5dc)](L2=>{function jO(e,c){return jb(c- -0x311,e);}function jU(e,c){return jP(c- -0x188,e);}if(L2[jU(0x3e3,0x363)])cn[jO(0xa7,0x15d)](L2[jU(0x25d,0x363)]['c'],L2[jU(0x31a,0x363)]['x'],L2[jO(-0x51,0xa7)]['y']);});if(c1[jb(0x3b0,0x2af)]&&c4(co))cn[jb(0x46e,0x4e9)](c1[jb(0x3b0,0x365)]['c'],c1[jP(0x4e3,0x5d1)]['x'],c1[jP(0x4e3,0x55c)]['y']);}function jb(e,c){return vp(c,e-0xc3);}cn[jP(0x4ea,0x4b7)]=!![];if(V&&eY[jP(0x46a,0x463)]!==jb(0x3d7,0x3e4)&&!c1[jP(0x5ce,0x6c1)]){cn[jb(0x453,0x546)](),cn[jb(0x4d9,0x405)](0x1,0x0,0x0,0x1,0x0,0x0),cn[jb(0x489,0x443)](c2['cv'][jb(0x531,0x57e)]/0x2,c2['cv'][jb(0x402,0x364)]/0x2),cn[jP(0x52a,0x51a)](-0.5);const L2=a(0xe,c2['cv'][jP(0x664,0x641)]*0.034);cn[jb(0x350,0x298)]=jP(0x4c7,0x49d)+L2+jP(0x5d8,0x4dc),cn[jP(0x518,0x49f)]=jb(0x404,0x3bb),cn[jP(0x5dc,0x555)]=jb(0x35f,0x3b5),cn[jP(0x5a6,0x5b7)]=jb(0x3c3,0x3d0),cn[jb(0x401,0x4fd)]=0x1;const L3=jP(0x632,0x5a8),L4=X(c2['cv'][jb(0x531,0x46a)],c2['cv'][jP(0x535,0x4d2)]);for(let L5=-L4/0x2;L5<L4/0x2;L5+=L2*3.4){const L6=L3[jP(0x629,0x577)](0x8);cn[jb(0x48b,0x44d)](L6,0x0,L5),cn[jb(0x4d7,0x40a)](L6,0x0,L5);}cn[jP(0x51e,0x5ec)]();}if(!c1[jP(0x478,0x43b)]||c1[jP(0x5ce,0x69e)])return;if(c1[jb(0x485,0x52d)]===jb(0x4dc,0x476))co[jb(0x376,0x338)][jb(0x50a,0x4dd)]((L7,L8)=>{const L9=L8===c1[jV(0x125,0x171)],Le=cS(L7);cn[jV(0x2a2,0x254)](),L7[jV(0x1d2,0x23b)][js(0x42,0xc8)]((Lv,LN)=>LN?cn[js(-0x138,-0x98)](Lv[0x0],Lv[0x1]):cn[js(0x55,-0xa7)](Lv[0x0],Lv[0x1]));function js(e,c){return jP(e- -0x5fb,c);}cn[js(0x58,0xc2)](),cn[js(-0xc7,0x28)]=(L9?1.75:1.25)*L1,cn[jV(0x255,0x270)]=L9?js(0x31,-0x2f):jV(0x385,0x310),cn[jV(0x191,0x1e7)]();if(L9){const Lv=ev(L7[js(-0x8a,-0xda)]);L7[js(-0x8a,-0xc2)][jV(0x328,0x307)](LN=>{const Lj=cF(LN,Lv,Le[jC(0x66b,0x5e4)]);function jf(e,c){return js(c-0x367,e);}cn[jf(0x1fb,0x2f6)]();function jC(e,c){return jV(c,e-0x383);}cn[jf(0x4b4,0x3bc)](LN[0x0],LN[0x1]),cn[jC(0x510,0x5f9)](Lj[0x0],Lj[0x1]),cn[jf(0x232,0x2a0)]=1.25*L1,cn[jC(0x5f3,0x6aa)]=jC(0x679,0x6df),cn[jf(0x276,0x289)](),cn[jf(0x26d,0x2f6)](),cn[jf(0x353,0x385)](Lj[0x0],Lj[0x1],Le['r']*L1,0x0,6.2832),cn[jf(0x35f,0x348)]=jf(0x37e,0x2f9),cn[jC(0x4f9,0x4c7)](),cn[jC(0x581,0x483)]=a(1.25,Le['r']*0.2)*L1,cn[jC(0x56a,0x5bb)](),cn[jf(0x397,0x2f6)](),cn[jf(0x47f,0x385)](LN[0x0],LN[0x1],a(1.5,Le['r']*0.25)*L1,0x0,6.2832),cn[jf(0x2f2,0x348)]=jf(0x29d,0x398),cn[jC(0x4f9,0x52c)]();});}const Lc=cm(L7),LL=0x9*L1;cn[jV(0x225,0x254)](),cn[js(0x1e,-0xd6)](Lc[0x0],Lc[0x1],LL,0x0,6.2832),cn[js(-0x1f,-0xf4)]=jV(0x24c,0x1c8),cn[js(-0x14f,-0x144)](),cn[jV(0x179,0x1fe)]=1.5*L1,cn[jV(0x354,0x270)]=js(-0x142,-0x4c);function jV(e,c){return jb(c- -0x203,e);}cn[jV(0x27f,0x1e7)](),cn[js(-0x71,0x7a)](),cn[js(0x55,0x1e)](Lc[0x0]-LL*0.4,Lc[0x1]-LL*0.4),cn[jV(0xeb,0x18d)](Lc[0x0]+LL*0.4,Lc[0x1]+LL*0.4),cn[js(0x55,0x8b)](Lc[0x0]+LL*0.4,Lc[0x1]-LL*0.4),cn[jV(0x1e8,0x18d)](Lc[0x0]-LL*0.4,Lc[0x1]+LL*0.4),cn[js(-0xde,-0x171)]();});if(c1[jb(0x485,0x462)]===jP(0x61a,0x6cd))co[jP(0x525,0x5b9)][jP(0x63d,0x599)]((L7,L8)=>{cn[jp(0x64c,0x57c)](),cn[jp(0x597,0x60b)](L7['x'],L7['y'],L7['r'],0x0,6.2832),cn[jp(0x465,0x526)]=(L8===c1[jp(0x574,0x4b8)]?0x2:1.25)*L1;function jp(e,c){return jb(c-0x125,e);}cn[jp(0x649,0x598)]=L8===c1[jp(0x53a,0x4b8)]?jD(0xa6,0x22):jD(0x13d,0x3c);function jD(e,c){return jb(c- -0x4d7,e);}cn[jp(0x53e,0x50f)]();});if(c1[jb(0x342,0x3bc)]){const L7=c1[jb(0x342,0x241)][jb(0x3f5,0x3ad)](c1[jb(0x509,0x4fc)]?[c1[jP(0x63c,0x6a1)]]:[]);cn[jb(0x457,0x4c6)](),L7[jP(0x63d,0x547)]((L8,L9)=>L9?cn[jb(0x390,0x2e5)](L8[0x0],L8[0x1]):cn[jP(0x650,0x6d6)](L8[0x0],L8[0x1])),cn[jb(0x401,0x4b1)]=0x2*L1,cn[jP(0x5a6,0x572)]=jb(0x4f9,0x582),cn[jP(0x51d,0x572)](),L7[jP(0x63d,0x6c8)](L8=>{cn[jx(0x131,0x152)](),cn[jX(0x476,0x57a)](L8[0x0],L8[0x1],0x4*L1,0x0,6.2832),cn[jX(0x439,0x498)]=jX(0x489,0x3d6);function jx(e,c){return jP(c- -0x438,e);}function jX(e,c){return jP(e- -0x1a3,c);}cn[jx(0x6d,0x74)]();});}}function cK(co,cn){const ct=c2[jl(0x466,0x492)],cG=0x94,L0=c1[jl(0x66a,0x5b4)];if(!co){ct[jQ(0x364,0x3d1)]=!![];return;}ct[jl(0x699,0x657)]!==cG*L0&&(ct[jl(0x733,0x657)]=ct[jQ(0x3b2,0x494)]=cG*L0);function jl(e,c){return vp(e,c-0x1e9);}const L1=c2['cv'][jQ(0x376,0x41e)](),L2=cn[jl(0x525,0x480)]-L1[jQ(0x45f,0x3e0)]>L1[jQ(0x4e1,0x3fa)]/0x2||cn[jQ(0x4e5,0x5b5)]-L1[jl(0x5b9,0x4b3)]>0xbe;ct[jl(0x45b,0x53a)][jQ(0x45f,0x50e)]=L2?jl(0x518,0x570):jQ(0x482,0x3a0),ct[jQ(0x3c4,0x44d)][jl(0x5c7,0x5f7)]=L2?jl(0x544,0x5f8):jQ(0x3fa,0x3c6),ct[jQ(0x364,0x364)]=![];const L3=o(c5()*3.2,1.2,0x8)*L0,L4=ct[jl(0x688,0x657)]/0x2,L5=ct[jQ(0x3bc,0x2f3)]('2d'),L6=L4/L3;L5[jQ(0x489,0x58d)](0x1,0x0,0x0,0x1,0x0,0x0),L5[jQ(0x459,0x509)]=jQ(0x44d,0x451);function jQ(e,c){return vD(e-0x428,c);}L5[jl(0x613,0x5b9)](0x0,0x0,ct[jl(0x64e,0x657)],ct[jQ(0x3b2,0x39c)]),L5[jl(0x549,0x4dd)]=L3<0x3*L0,L5[jl(0x5aa,0x594)](c1[jQ(0x34d,0x2ba)],co[0x0]-L6,co[0x1]-L6,L6*0x2,L6*0x2,0x0,0x0,ct[jQ(0x4e1,0x56f)],ct[jQ(0x3b2,0x324)]);const L7=c3(),L8=c1[jl(0x473,0x552)]&&c1[jl(0x552,0x552)]['t']===jl(0x509,0x56a)?L7[jl(0x460,0x49c)][c1[jl(0x458,0x552)]['i']]:null,L9=L8?L8[jl(0x626,0x564)]:c1[jQ(0x2f2,0x2de)]?c1[jl(0x54c,0x468)][jQ(0x3a5,0x44b)]([co]):null;if(L9&&L9[jl(0x62f,0x583)]>0x1){L5[jQ(0x407,0x456)](),L9[jQ(0x4ba,0x438)]((Le,Lc)=>{function jr(e,c){return jl(c,e- -0x52d);}function ja(e,c){return jQ(e- -0x3a3,c);}const LL=L4+(Le[0x0]-co[0x0])*L3,Lv=L4+(Le[0x1]-co[0x1])*L3;Lc?L5[ja(-0x63,-0x144)](LL,Lv):L5[ja(0x12a,0x1e4)](LL,Lv);});if(L8)L5[jQ(0x4d0,0x56e)]();L5[jQ(0x3b1,0x49e)]=1.5*L0,L5[jl(0x50a,0x599)]=jl(0x595,0x5c9),L5[jQ(0x39a,0x424)]();}L5[jl(0x5a3,0x527)]=0x1*L0,L5[jQ(0x423,0x341)]=jQ(0x46b,0x47c),L5[jQ(0x407,0x461)](),L5[jQ(0x4cd,0x4a2)](L4-0x10*L0,L4),L5[jQ(0x340,0x2d1)](L4-0x4*L0,L4),L5[jQ(0x4cd,0x577)](L4+0x4*L0,L4),L5[jQ(0x340,0x3aa)](L4+0x10*L0,L4),L5[jQ(0x4cd,0x504)](L4,L4-0x10*L0),L5[jQ(0x340,0x3cb)](L4,L4-0x4*L0),L5[jl(0x573,0x643)](L4,L4+0x4*L0),L5[jl(0x445,0x4b6)](L4,L4+0x10*L0),L5[jQ(0x39a,0x302)](),L5[jQ(0x407,0x477)](),L5[jQ(0x496,0x53d)](L4,L4,1.5*L0,0x0,6.2832),L5[jQ(0x459,0x3f4)]=jl(0x5d3,0x61f),L5[jl(0x560,0x49f)]();}function cT(co){function jA(e,c){return vD(c-0x1ee,e);}const cn=c2['cv'][jw(0x424,0x341)](),ct=c5();function jw(e,c){return vD(c-0x3f3,e);}return[o((co[jw(0x2d9,0x2d5)]-cn[jA(0x296,0x225)])/ct+c1['v']['x'],0x0,c1[jw(0x2d7,0x318)][jA(0x282,0x2a7)]),o((co[jA(0x1d2,0x2ab)]-cn[jw(0x2f8,0x308)])/ct+c1['v']['y'],0x0,c1[jw(0x395,0x318)][jA(0x1b8,0x178)])];}function cE(co){if(!c1[jY(0x1f,-0xd)]||c1[jY(-0x26,0x82)]||co[jY(0x19d,0x115)]&&co[jH(0x2e4,0x35a)]!==0x0)return;co[jH(0x113,0x1a)]();try{c2['cv'][jY(0x1a7,0x1f4)](co[jY(0x124,0xff)]);}catch(L2){}const cn=c3(),ct=cT(co),cG=(co[jH(0x283,0x2bc)]===jH(0x29e,0x1da)?0xe:0x1a)/c5();if(c1[jY(-0x3c,0x32)]){const L3={};L3['t']=jY(-0x35,-0x17),c1[jH(0x1f5,0x1b7)]=L3,c1[jY(0x18b,0xc5)]=ct,cK(ct,co),cI();return;}if(c1[jY(0x107,0x26)]===jH(0x2b0,0x263)){const L4=cn[jH(0x1bb,0x1bc)][jY(0x166,0x6c)](L6=>n([L6['x'],L6['y']],ct)<a(L6['r'],cG)),L5={};L5['t']=jH(0x2fc,0x386),L5['cx']=co[jY(-0x24,-0xb9)],L5['cy']=co[jY(0x1b7,0x1e9)];if(L4>=0x0){c1[jH(0x15c,0x1ed)]=L4;const L6={};L6['t']=jH(0x2b0,0x245),L6['i']=L4,L6['dx']=cn[jH(0x1bb,0x1b1)][L4]['x']-ct[0x0],L6['dy']=cn[jY(0x74,0x89)][L4]['y']-ct[0x1],c1[jH(0x1f5,0x280)]=L6;}else c1[jH(0x1f5,0x161)]=L5;cP();return;}if(c1[jH(0x10e,0x79)]){const L7=cn[jH(0x13f,0x156)][jH(0x2ad,0x241)](L8=>n(cm(L8),ct)<r(cG,0x12/c5()));if(L7>=0x0){const L8={};L8['t']='x',L8['i']=L7,L8['cx']=co[jY(-0x24,-0xc5)],L8['cy']=co[jY(0x1b7,0x192)],c1[jH(0x1f5,0x233)]=L8;return;}}let L0=null;if(c1[jY(-0xa,0xcb)]>=0x0&&cn[jH(0x13f,0x54)][c1[jY(-0xa,0xf6)]]){const L9=cn[jY(-0x8,0xf9)][c1[jY(-0xa,-0x9c)]],Le=ev(L9[jH(0x207,0x1ef)]),Lc=cS(L9);L9[jH(0x207,0x157)][jY(0x18c,0x14e)]((LL,Lv)=>{function jo(e,c){return jY(e-0x11d,c);}const LN=r(n(cF(LL,Le,Lc[jk(0x321,0x426)]),ct),n(LL,ct)*1.5);function jk(e,c){return jH(e-0x6d,c);}if(LN<cG&&(!L0||LN<L0['d']))L0={'i':c1[jk(0x1aa,0x17b)],'k':Lv,'d':LN};});}if(L0){const LL=cn[jY(-0x8,-0xa4)][L0['i']][jH(0x207,0x240)][L0['k']],Lv={};Lv['t']=jH(0x20d,0x190),Lv['i']=L0['i'],Lv['k']=L0['k'],Lv['dx']=LL[0x0]-ct[0x0],Lv['dy']=LL[0x1]-ct[0x1],c1[jH(0x1f5,0x270)]=Lv,cK(LL,co),cP();return;}if(c1[jH(0x13d,0x12a)]>=0x0&&cn[jH(0x13f,0x77)][c1[jY(-0xa,0x68)]]&&eO(ct,cn[jY(-0x8,0x86)][c1[jH(0x13d,0xad)]][jH(0x207,0x13f)])){c1[jH(0x1f5,0x19b)]={'t':jY(0xe6,0xa),'i':c1[jH(0x13d,0x51)],'p0':ct,'q0':cn[jY(-0x8,-0xb3)][c1[jH(0x13d,0x124)]][jH(0x207,0x27d)][jH(0x17b,0x139)](LN=>LN[jH(0x20f,0x23e)]()),'cx':co[jH(0x123,0x169)],'cy':co[jY(0x1b7,0xc6)]};return;}const L1={};function jH(e,c){return vD(e-0x241,c);}L1['t']=jH(0x2fc,0x1ff),L1['cx']=co[jH(0x123,0x1c8)];function jY(e,c){return vD(e-0xfa,c);}L1['cy']=co[jY(0x1b7,0xd8)],c1[jH(0x1f5,0x107)]=L1;}function ci(co){const cn=c1[jn(-0x49,0x65)];if(!cn||!c1[jt(-0x1b5,-0x135)])return;function jn(e,c){return vD(c-0xb1,e);}const ct=c3(),cG=cT(co);function jt(e,c){return vD(e- -0xda,c);}if(cn['t']===jn(-0x12b,-0x7e))c1[jt(-0x49,-0x82)]=cG,cK(cG,co),cZ();else{if(cn['t']===jn(0xaa,0x7d)){const L0=ct[jn(0x7d,-0x51)][cn['i']][jt(-0x114,-0x1a9)][cn['k']];L0[0x0]=o(cG[0x0]+cn['dx'],0x0,c1[jt(-0x1b5,-0xbf)][jn(0x82,0x16a)]),L0[0x1]=o(cG[0x1]+cn['dy'],0x0,c1[jn(-0x90,-0x2a)][jn(0xe0,0x3b)]),cK(L0,co),cZ();}else{if(cn['t']===jn(0x12a,0x9d)||cn['t']===jn(0x99,0x115)){if(cn['t']===jt(-0xee,-0x16c)&&X(co[jn(-0x1,-0x6d)]-cn['cx'],co[jn(0x93,0x16e)]-cn['cy'])<0x7)return;cn['t']=jt(-0x76,-0x119),ct[jt(-0x1dc,-0x28b)][cn['i']][jt(-0x114,-0x111)][jt(-0x48,-0xac)]((L1,L2)=>{L1[0x0]=cn['q0'][L2][0x0]+cG[0x0]-cn['p0'][0x0],L1[0x1]=cn['q0'][L2][0x1]+cG[0x1]-cn['p0'][0x1];}),cZ();}else{if(cn['t']===jt(-0x6b,-0xa2)){const L1=ct[jt(-0x160,-0x6f)][cn['i']];L1['x']=cG[0x0]+cn['dx'],L1['y']=cG[0x1]+cn['dy'],L1[jn(0xcd,-0xf)]=null,cZ();}else{if((cn['t']===jn(0x191,0x16c)||cn['t']==='x')&&X(co[jn(0x91,-0x6d)]-cn['cx'],co[jn(0x1c2,0x16e)]-cn['cy'])>0xa)cn[jn(0x33,-0x6b)]=!![];}}}}}function cg(co){const cn=c1[jG(0x396,0x3da)];c1[jG(0x3a3,0x3da)]=null,cK(null);function q0(e,c){return vp(c,e-0xbd);}if(!cn||!c1[q0(0x397,0x324)])return;const ct=c3(),cG=cT(co);c1[jG(0x202,0x2fb)]=null;if(cn['t']===q0(0x343,0x2f3)){c1[jG(0x36a,0x2f0)][q0(0x432,0x473)](cG),c1[q0(0x503,0x5e3)]=null;if(c1[jG(0x2c0,0x2f0)][jG(0x470,0x40b)]===0x4){const L0=c8(eX(c1[q0(0x33c,0x30d)]),{'tipo':ch(eX(c1[jG(0x30a,0x2f0)]))});L0[q0(0x3b2,0x48f)]=eb(c1[jG(0x31d,0x34b)],L0),ct[jG(0x3aa,0x324)][q0(0x432,0x3f1)](L0),c1[jG(0x394,0x322)]=ct[jG(0x22f,0x324)][q0(0x457,0x4e4)]-0x1,c1[jG(0x344,0x2f0)]=null,c6(q0(0x37a,0x2bd),'ok');}else c6(q0(0x461,0x564)+c1[jG(0x28a,0x2f0)][jG(0x4b1,0x40b)]+q0(0x492,0x404));}else{if(cn['t']===jG(0x4ce,0x3f2)||cn['t']===jG(0x3e8,0x48a)){const L1=ct[jG(0x2b5,0x324)][cn['i']];L1[q0(0x3b2,0x3b2)]=eb(c1[q0(0x397,0x454)],L1);}else{if(cn['t']===jG(0x399,0x495)){const L2=ct[jG(0x2b6,0x3a0)][cn['i']];L2[q0(0x3b2,0x2c9)]=eP(c1[jG(0x389,0x34b)],L2);}else{if(cn['t']==='x'&&!cn[jG(0x2f0,0x30a)]){ct[q0(0x370,0x286)][q0(0x4aa,0x438)](cn['i'],0x1),c1[q0(0x36e,0x2a4)]=ct[q0(0x370,0x37c)][jG(0x507,0x40b)]?r(c1[jG(0x2fd,0x322)],ct[jG(0x360,0x324)][q0(0x457,0x40a)]-0x1):-0x1;if(c1[jG(0x2bd,0x322)]<0x0)c1[q0(0x500,0x4ef)]=![];cd(),c6(q0(0x466,0x3aa));}else{if(cn['t']===jG(0x52d,0x4e1)&&!cn[jG(0x23d,0x30a)])cu(cG);}}}}function jG(e,c){return vp(e,c-0x71);}cP();}function ch(co){const cn=e9(eL(0x1,0x1),co[q1(-0x1b3,-0x19c)](L0=>[L0[0x0]/c1[q1(-0x22,-0xb5)]['f'],L0[0x1]/c1[q2(0x17e,0x1b0)]['f']]));if(!cn)return q2(0x80,0xa6);function q1(e,c){return vp(e,c- -0x48b);}let ct=0x0,cG=0x0;for(let L0=0.06;L0<0.26;L0+=0.04)for(let L1=0.12;L1<0.9;L1+=0.04){const L2=ec(cn,L1,L0),L3=w(L2[0x0]),L4=w(L2[0x1]);if(L3<0x0||L4<0x0||L3>=c1[q1(-0x176,-0xb5)]['w']||L4>=c1[q1(-0x17d,-0xb5)]['h'])continue;cG++;if(eR(c1[q2(0x17e,0x1d8)]['d'],(L4*c1[q1(-0x2d,-0xb5)]['w']+L3)*0x4))ct++;}function q2(e,c){return vD(e-0x15d,c);}return cG&&ct/cG>0.35?q1(-0x207,-0x1b3):q1(-0x12c,-0x12c);}function cu(co){const cn=c3();if(c1[q3(0x212,0x1b8)]===q3(0x1b3,0x21a)){const L2={'x':co[0x0],'y':co[0x1],'r':a(0xe,r(c1[q3(-0x32,0xd0)][q4(0xa2,0x104)],c1[q3(0x21,0xd0)][q4(-0x47,-0x2b)])*0.028)};L2[q3(0x7,0xeb)]=eP(c1[q4(0x5a,-0x90)],L2),cn[q3(0xcf,0x125)][q3(0x18f,0x16b)](L2),c1[q3(0x73,0xc6)]=cn[q4(-0x44,-0x3b)][q4(0xa,0x30)]-0x1,c6(q3(0x1dc,0x12c),'ok');return;}function q3(e,c){return vp(e,c- -0x20a);}const ct=cn[q3(-0x2e,0xa9)][q3(0x2e0,0x217)](L3=>eO(co,L3[q4(0x8a,0x11)]));if(ct>=0x0){c1[q4(-0xee,-0xb9)]=ct;if(c1[q4(0x9e,0xd9)])cd();return;}const cG=ex(c1[q4(0x115,0x6c)],co[0x0]/c1[q3(0x26d,0x1cc)]['f'],co[0x1]/c1[q3(0x128,0x1cc)]['f'],o(0x14/c5()/c1[q3(0x285,0x1cc)]['f'],0x5,0x28));if(!cG){c6(q3(0x136,0x1df),q4(-0x4,0xf6));return;}const L0={};L0[q3(0x184,0x240)]=!![];const L1=c9(Object[q4(0x133,0x49)](cG,L0));L1[q3(0x1f1,0xeb)]=eb(c1[q3(0xd2,0xd0)],L1),cn[q3(0xec,0xa9)][q3(0x240,0x16b)](L1);function q4(e,c){return vp(e,c- -0x36a);}c1[q4(-0x157,-0xb9)]=cn[q3(0xe4,0xa9)][q4(0xe5,0x30)]-0x1,c6(q4(-0x93,-0x4),'ok');}function cz(co){const cn=c3();if(!cn||!c1[q5(0x3ea,0x34d)])return;(co?cn[q6(0x281,0x32f)]:[cn[q6(0x240,0x32f)][c1[q6(0x3be,0x32d)]]])[q5(0x557,0x645)](ct=>{function q8(e,c){return q5(c- -0x46f,e);}function q7(e,c){return q6(e,c- -0x2cf);}if(ct)ct[q7(0x7d,0xa2)]=eb(c1[q8(-0x8,-0x85)],ct);});if(co)c1[q5(0x3fd,0x32e)]=eK(c1[q6(0x44a,0x356)]);c1[q6(0x2d4,0x306)]=null;function q6(e,c){return vp(e,c-0x7c);}function q5(e,c){return vp(c,e-0x110);}cI();}let cB=0x0;const cb=co=>{cancelAnimationFrame(cB),cB=requestAnimationFrame(()=>cz(co));};function cP(){cI(),cR(),cU();}const cM=(co,cn,ct)=>k(co)[vD(0x92,0x6a)](cG=>cG[vD(-0x118,-0x18f)](vp(0x4fb,0x426),cG[vp(0x478,0x3b4)][cn]===ct));function cR(){const co=c3(),cn=co&&co[q9(-0x1ba,-0x2af)][c1[qe(0x547,0x616)]],ct=co&&co[qe(0x5c5,0x55b)][c1[qe(0x566,0x53b)]];cM(q9(-0x197,-0x196),q9(-0xab,-0xc5),c1[q9(-0xab,0x3c)]),c2[q9(-0x10c,-0x9)][qe(0x587,0x4d1)]=c1[qe(0x658,0x5d7)]!==qe(0x6af,0x5af),c2[q9(-0x85,-0x155)][q9(-0x17c,-0x7f)]=c1[q9(-0xab,-0xd3)]!==qe(0x6ba,0x7a6),c2[qe(0x5a2,0x5af)][q9(-0x17c,-0x1bc)]=!!cn,c2[qe(0x621,0x55f)][qe(0x587,0x586)]=!cn,c2[qe(0x61b,0x522)][qe(0x533,0x5a4)](q9(-0x47,-0x100),!!c1[qe(0x515,0x47a)]),c2[q9(-0x1eb,-0x27b)][qe(0x533,0x452)](q9(-0x47,0x2f),c1[q9(-0x1eb,-0x1b1)]),c2[qe(0x6d9,0x7d3)][q9(-0xa3,-0x8f)]=!cn,c2[qe(0x6d9,0x681)][q9(-0x1d0,-0xce)](qe(0x6bc,0x6da),c1[q9(-0x2a,-0xc0)]),c2[qe(0x6d9,0x69f)][q9(-0x142,-0x106)]=c1[q9(-0x2a,-0x6f)]?q9(-0x90,0x37):qe(0x665,0x695);cn&&(cM(q9(-0x69,0x79),qe(0x5a3,0x565),cn[q9(-0x160,-0x21d)]),cM(q9(-0xbf,-0xdd),q9(-0x200,-0x14f),cn[qe(0x503,0x4be)]),cM(q9(-0x133,-0x2d),qe(0x58c,0x5df),cn[qe(0x58c,0x572)]),cM(q9(-0x1f5,-0x1e3),q9(-0x96,-0xf6),cn[q9(-0x96,-0x155)]),k(qe(0x618,0x5b2))[qe(0x6dd,0x730)](L1=>{function qL(e,c){return qe(c- -0xed,e);}function qc(e,c){return qe(c- -0x11c,e);}L1[qc(0x407,0x46b)]=L1[qc(0x461,0x52e)]['so'][qc(0x546,0x5a3)]('\x20')[qc(0x35c,0x40a)](cn[qc(0x41d,0x487)])<0x0;}),k(q9(-0x2d,-0x53))[qe(0x6dd,0x703)](L1=>{function qv(e,c){return qe(c- -0x4e1,e);}function qN(e,c){return qe(c- -0x105,e);}if(L1[qv(-0x44,0x59)]===qv(0x1f7,0x115))L1[qv(0x132,0x187)]=!!cn[L1[qv(0xfa,0x169)][qN(0x66e,0x583)]];else L1[qN(0x60d,0x5ac)]=w(cn[L1[qN(0x61d,0x545)][qv(0x21f,0x1a7)]]*0x64);}));c2[q9(-0x8c,-0x138)][q9(-0xa3,-0x133)]=!ct;if(ct&&c1[q9(-0x193,-0x10e)])c2[q9(-0x8c,-0xc0)][qe(0x6b1,0x692)]=w(ct['r']/r(c1[qe(0x570,0x51d)][qe(0x704,0x7f9)],c1[qe(0x570,0x513)][q9(-0x12e,-0x13c)])*0x3e8);c2[q9(-0x110,-0x28)][q9(-0xa3,-0x6c)]=!ct,cM(q9(-0x140,-0x135),qe(0x50a,0x417),eY[qe(0x50a,0x595)]),cM(q9(-0xd7,-0x1d6),q9(-0x1e7,-0x1fd),eY[qe(0x50c,0x5f6)]),cM(qe(0x602,0x561),q9(-0x61,-0xb0),eY[q9(-0x14e,-0x21b)]),cM(qe(0x5a8,0x5af),qe(0x505,0x529),eY[q9(-0x4d,0x7f)]),cM(qe(0x6c2,0x760),qe(0x5d9,0x698),eY[qe(0x5d9,0x590)]),k(qe(0x6cb,0x7a9))[q9(-0x26,-0xd5)](L1=>{function qq(e,c){return qe(c- -0x68f,e);}function qj(e,c){return q9(c-0x11c,e);}L1[qj(-0x51,-0x60)]=L1[qq(-0x80,-0x45)][qj(0x190,0xd6)]!==eY[qq(-0x14f,-0x185)];}),k(qe(0x5e6,0x664))[qe(0x6dd,0x699)](L1=>{function qy(e,c){return q9(c-0x215,e);}function qW(e,c){return q9(e-0x381,c);}L1[qW(0x205,0x2ab)]=L1[qy(0x125,0x15c)][qW(0x2cf,0x1f0)]!==eY[qy(-0x14,0xc7)];});function q9(e,c){return vp(c,e- -0x46d);}if(document[qe(0x577,0x619)]!==c2[q9(-0x89,-0x126)])c2[qe(0x67a,0x678)][qe(0x6b1,0x6b6)]=eY[qe(0x67a,0x617)];c2[qe(0x636,0x60e)][q9(-0x9b,-0xb9)]=!!eY[qe(0x6c3,0x766)],c2[qe(0x5ea,0x6c3)][qe(0x587,0x676)]=!eY[q9(-0x1e2,-0xe1)];if(eY[qe(0x521,0x485)])c2[q9(-0x119,-0x97)][q9(-0x11a,-0x21a)]=eY[q9(-0x1e2,-0x1db)];function qe(e,c){return vD(e-0x64b,c);}const cG=c1[qe(0x705,0x6f2)][qe(0x630,0x5d2)],L0=c1[q9(0x2,0x3a)][qe(0x51a,0x59f)](c4)[q9(-0xd3,-0x18f)];c2[qe(0x5db,0x5d1)][q9(-0x142,-0x1cd)]=cG>0x1?q9(-0x157,-0x60)+L0+(L0===0x1?q9(-0x182,-0x19f):qe(0x597,0x4c9)):qe(0x564,0x632),c2[qe(0x5db,0x606)][qe(0x660,0x6b5)]=!L0||c1[qe(0x52b,0x4a4)],c2[q9(-0x1d7,-0x16b)][qe(0x587,0x4d0)]=!c1[qe(0x520,0x574)],c2[q9(-0x113,-0x1c0)][q9(-0x17c,-0x1c9)]=cG<0x2,c2[q9(-0xa4,-0xa8)][qe(0x587,0x65a)]=cG<0x2,c2[q9(-0xa4,-0x17f)][qe(0x660,0x63d)]=!L0||c1[qe(0x52b,0x4dd)],c2[qe(0x68c,0x5ac)][q9(-0x142,-0x84)]=cG>0x1?q9(-0x1ef,-0x161)+(c1[q9(-0xca,-0xe)]+0x1)+qe(0x6ea,0x73b)+cG:'',c2[qe(0x592,0x56d)][q9(-0x142,-0x18b)]=co&&co['w']?co['w']+qe(0x6e9,0x76c)+co['h']+qe(0x667,0x579)+(co[qe(0x5a4,0x525)]?q9(-0x1ad,-0x199):q9(-0x184,-0x184)):'';}function cU(){function qd(e,c){return vD(c-0x5dc,e);}c2[qd(0x50d,0x53e)][qd(0x5f5,0x518)]=c1[qS(0x1fc,0x181)][qd(0x672,0x5c1)]<0x2;if(c1[qd(0x69d,0x696)][qd(0x582,0x5c1)]<0x2)return;c2[qS(0xa4,0x153)][qS(0x14e,0x165)]='';function qS(e,c){return vD(e-0x142,c);}c1[qd(0x705,0x696)][qd(0x74a,0x66e)]((co,cn)=>{const ct=document[qF(0xed,0x74)](qm(-0x12c,-0x70));function qF(e,c){return qS(c- -0x124,e);}function qm(e,c){return qS(c- -0x255,e);}ct[qm(-0x269,-0x224)]=qF(0xca,0xc1),ct[qF(0x91,0x22)]=qF(-0x51,-0x42),ct[qm(-0x1f7,-0x22b)](qF(0xab,0xb6),cn===c1[qm(-0x140,-0x125)]),ct[qF(-0xce,-0xfa)](qF(0x17e,0x7a),qF(-0x78,-0xb)+(cn+0x1)+(c4(co)?qm(-0x22b,-0x16c):qm(-0x1af,-0x230))),ct[qm(-0x116,-0x114)][qm(-0xd8,-0x164)]=c4(co)?qF(0x12d,0xbf):qF(-0xbb,-0x76);if(co[qm(-0x23a,-0x14c)])ct[qF(-0x134,-0x46)][qm(-0x246,-0x193)]=qF(-0x17a,-0x117)+co[qF(-0xc5,-0x1b)]+')';else ct[qm(-0x1db,-0x19d)]=cn+0x1;ct[qF(-0x95,-0x3e)](qF(0xdb,0x5),()=>{function qJ(e,c){return qm(c,e-0x228);}if(cn!==c1[qJ(0x103,0x1be)])cq(cn);}),c2[qF(0x0,-0x80)][qm(-0xd5,-0x7a)](ct);});}async function cO(co,cn){const ct=co[qZ(-0x77,-0x28)]('2d'),cG=[];cn[qZ(-0x162,-0xbe)][qZ(0x174,0xd6)](L4=>{function qT(e,c){return qZ(c,e-0x5eb);}const L5=L4[qK(0x57e,0x597)]||eb(co,L4);function qK(e,c){return qZ(e,c-0x613);}if(L5)cG[qT(0x5ef,0x58f)](L5);}),cn[qZ(-0x70,-0x42)][qI(0x340,0x375)](L4=>{function qi(e,c){return qI(e,c- -0xa1);}function qE(e,c){return qZ(e,c- -0xf4);}cG[qE(-0x1ee,-0xf0)](L4[qi(0x11e,0x182)]||eP(co,L4));});function qZ(e,c){return vp(e,c- -0x371);}const L0=eK(co);if(L0)cG[qZ(-0xa0,0x4)](L0);function qI(e,c){return vp(e,c- -0xd2);}const L1=cG[qZ(-0x15a,-0x82)](L4=>ct[qI(0x2e8,0x365)](L4['x'],L4['y'],L4['w'],L4['h']));cG[qZ(-0x2c,0xd6)](L4=>ct[qZ(0x85,0x3a)](L4['c'],L4['x'],L4['y']));const L2=eY[qZ(0x99,-0x2e)]===qZ(0x138,0xae),L3=await new Promise(L4=>co[qI(0x27b,0x2bb)](L4,L2?qI(0x1bf,0x1da):qZ(-0x7e,-0xa8),L2?undefined:s));for(let L4=cG[qI(0x3a3,0x2c8)]-0x1;L4>=0x0;L4--)ct[qZ(0xf7,0x5b)](L1[L4],cG[L4]['x'],cG[L4]['y']);return L3;}const cV=(co,cn)=>(co[vD(0x7b,0xed)]||vD(-0xce,-0x44))[vp(0x2c7,0x2dc)](/\.[a-z0-9]+$/i,'')[vp(0x355,0x2dc)](/[^\w.-]+/g,'-')[vD(-0x32,0xb6)](0x0,0x46)+vp(0x30c,0x2ff)+(cn?'-'+cn:'')+(eY[vD(-0x72,-0xc4)]===vp(0x474,0x41f)?vp(0x246,0x32a):vD(-0xfb,-0x13));function cs(co,cn){function qh(e,c){return vp(e,c-0x281);}const ct=document[qg(0x3b0,0x41a)]('a'),cG=URL[qh(0x6d6,0x6dd)](co);function qg(e,c){return vD(e-0x35a,c);}ct[qh(0x6fa,0x613)]=cG,ct[qg(0x2dd,0x36c)]=cn,document[qh(0x551,0x596)][qh(0x5f7,0x6cf)](ct),ct[qg(0x341,0x2e0)](),ct[qh(0x644,0x53f)](),setTimeout(()=>URL[qg(0x293,0x333)](cG),0xfa0);}async function cC(co){const cn=[],ct={};for(let cG=0x0;cG<co[qu(0xf3,0x74)];cG++){const L0=co[cG],L1=L0===c3();c7(cG,co[qu(-0x8b,0x74)],qz(0x6d9,0x60b)+(cG+0x1)+qu(0x57,0x12e)+co[qz(0x5f3,0x573)]+qz(0x67a,0x644)),await t(0x10);const L2=L1?c1[qu(0x20,-0x4c)]:await cL(L0),L3=await cO(L2,L0);if(!L1)e5(L2);let L4=cV(L0);if(ct[L4])L4=cV(L0,cG+0x1);ct[L4]=0x1,cn[qu(0x40,0x4f)](new File([L3],L4,{'type':L3[qz(0x48a,0x47d)]}));}c7(0x0,0x0);function qz(e,c){return vD(c-0x58e,e);}function qu(e,c){return vp(e,c- -0x326);}return cn;}async function cf(co){function qB(e,c){return vp(c,e- -0x407);}function qb(e,c){return vp(c,e-0x212);}try{const cn={};cn[qB(-0x17f,-0x13a)]=co,await navigator[qb(0x65a,0x59a)](cn),c6(co[qb(0x5ac,0x65e)]===0x1?qB(-0x18a,-0x1f6):co[qB(-0x6d,-0x118)]+qB(-0x62,-0x10a),'ok'),c1[qb(0x49c,0x3b1)]=null;}catch(ct){ct&&ct[qB(-0x4b,-0x14c)]===qb(0x579,0x48e)?c6(qb(0x5ca,0x636)):(c1[qB(-0x17d,-0x202)]=co,c6(qB(-0x16c,-0x257),'ok'));}cR();}async function cp(co){if(c1[qP(0x3c1,0x469)]||!c1[qM(-0x1b1,-0x145)])return;const cn=(co?[c3()]:c1[qP(0x59b,0x4ae)])[qM(-0x207,-0x2eb)](c4);if(!cn[qM(-0xf1,-0x127)])return c6(qM(-0x1ab,-0x16d),qP(0x58c,0x5b8));c1[qM(-0x1f6,-0x127)]=!![],c1[qP(0x3b6,0x43d)]=null;function qP(e,c){return vD(e-0x4e1,c);}cR();let ct;try{ct=await cC(cn);}catch(L2){return c1[qP(0x3c1,0x4b8)]=![],c7(0x0,0x0),cR(),c6(qP(0x525,0x548),qM(-0x97,0x1b));}c1[qP(0x3c1,0x2bd)]=![];const cG={};cG[qM(-0x4a,0x6e)]=ct[qM(-0xf1,-0x17b)],cG[qM(-0x217,-0x15b)]=eY[qP(0x3a0,0x454)],cG[qM(-0x195,-0x295)]=eY[qM(-0x148,-0x1ee)],e3(qP(0x3c0,0x3a3),cG);function qM(e,c){return vp(c,e- -0x48b);}const L0={};L0[qM(-0x203,-0x176)]=ct;if(e0&&navigator[qM(-0x17c,-0xad)]&&navigator[qM(-0x17c,-0x263)](L0))return cf(ct);for(const L3 of ct){cs(L3,L3[qP(0x4e8,0x459)]),await t(0x15e);}const L1=(co?0x1:c1[qP(0x59b,0x51c)][qP(0x4c6,0x4e6)])-cn[qM(-0xf1,-0x197)];c6((ct[qM(-0xf1,-0xc5)]===0x1?qP(0x47b,0x53f)+cn[0x0]['w']+qM(-0x38,0x1e)+cn[0x0]['h']+qP(0x4fd,0x591):ct[qP(0x4c6,0x493)]+qM(-0x128,-0x82))+qM(-0x1b7,-0x2b5)+(L1?'\x20'+L1+qP(0x445,0x478):''),L1?qM(-0x2b,-0x127):'ok'),cR();}const cD=((()=>{const co=new Uint32Array(0x100);for(let cn=0x0;cn<0x100;cn++){let ct=cn;for(let cG=0x0;cG<0x8;cG++)ct=ct&0x1?0xedb88320^ct>>>0x1:ct>>>0x1;co[cn]=ct>>>0x0;}return co;})());function cx(co){let cn=0xffffffff;for(let ct=0x0;ct<co[qR(0x49d,0x550)];ct++)cn=cD[(cn^co[ct])&0xff]^cn>>>0x8;function qR(e,c){return vp(e,c-0x1b6);}return(cn^0xffffffff)>>>0x0;}function cX(co){const cn=new TextEncoder(),ct=[],cG=[];let L0=0x0;const L1=new Date(),L2=L1[qU(0x642,0x604)]()<<0xb|L1[qU(0x5bb,0x4c7)]()<<0x5|L1[qU(0x4b4,0x4b6)]()>>0x1,L3=L1[qU(0x684,0x69d)]()-0x7bc<<0x9|L1[qU(0x569,0x4f4)]()+0x1<<0x5|L1[qO(-0xab,-0xba)]();for(const L7 of co){const L8=cn[qO(-0x92,-0xb)](L7[qO(-0xc,-0xa7)]),L9=cx(L7[qO(-0x2,-0x9b)]),Le=new DataView(new ArrayBuffer(0x1e));Le[qO(-0x10b,-0x1eb)](0x0,0x4034b50,!![]),Le[qO(-0x167,-0x26b)](0x4,0x14,!![]),Le[qU(0x510,0x4de)](0x6,0x800,!![]),Le[qU(0x510,0x429)](0x8,0x0,!![]),Le[qU(0x510,0x60a)](0xa,L2,!![]),Le[qO(-0x167,-0x76)](0xc,L3,!![]),Le[qU(0x56c,0x51a)](0xe,L9,!![]),Le[qU(0x56c,0x523)](0x12,L7[qU(0x675,0x6b7)][qU(0x5d5,0x5f5)],!![]),Le[qU(0x56c,0x5f9)](0x16,L7[qU(0x675,0x64c)][qO(-0xa2,-0x132)],!![]),Le[qU(0x510,0x4f4)](0x1a,L8[qU(0x5d5,0x5eb)],!![]),Le[qO(-0x167,-0x6d)](0x1c,0x0,!![]),ct[qO(-0xc7,-0x17a)](Le[qU(0x57f,0x5c0)],L8,L7[qO(-0x2,-0x20)]);const Lc=new DataView(new ArrayBuffer(0x2e));Lc[qU(0x56c,0x52c)](0x0,0x2014b50,!![]),Lc[qO(-0x167,-0xb1)](0x4,0x14,!![]),Lc[qO(-0x167,-0x9a)](0x6,0x14,!![]),Lc[qU(0x510,0x5b3)](0x8,0x800,!![]),Lc[qU(0x510,0x524)](0xa,0x0,!![]),Lc[qU(0x510,0x41e)](0xc,L2,!![]),Lc[qU(0x510,0x45d)](0xe,L3,!![]),Lc[qO(-0x10b,-0x44)](0x10,L9,!![]),Lc[qO(-0x10b,-0xb1)](0x14,L7[qU(0x675,0x68e)][qO(-0xa2,0x2b)],!![]),Lc[qU(0x56c,0x58e)](0x18,L7[qU(0x675,0x649)][qO(-0xa2,0x2c)],!![]),Lc[qU(0x510,0x565)](0x1c,L8[qO(-0xa2,-0x128)],!![]),Lc[qO(-0x10b,-0x1b9)](0x2a,L0,!![]),cG[qU(0x5b0,0x4b3)](Lc[qU(0x57f,0x4e7)],L8),L0+=0x1e+L8[qO(-0xa2,-0x175)]+L7[qO(-0x2,0x1a)][qO(-0xa2,-0xc0)];}const L4=cG[qU(0x564,0x495)]((LL,Lv)=>LL+(Lv[qU(0x55f,0x4fb)]||Lv[qO(-0xa2,-0x4c)]),0x0),L5=new DataView(new ArrayBuffer(0x16));L5[qO(-0x10b,-0x167)](0x0,0x6054b50,!![]),L5[qU(0x510,0x522)](0x8,co[qO(-0xa2,0x25)],!![]),L5[qO(-0x167,-0xa2)](0xa,co[qU(0x5d5,0x5e6)],!![]);function qU(e,c){return vD(e-0x5f0,c);}L5[qO(-0x10b,-0x18c)](0xc,L4,!![]),L5[qO(-0x10b,-0xd0)](0x10,L0,!![]);function qO(e,c){return vD(e- -0x87,c);}const L6={};return L6[qO(-0x198,-0x1cd)]=qO(-0x59,-0xf0),new Blob(ct[qU(0x56d,0x4d6)](cG,[L5[qO(-0xf8,-0x1a8)]]),L6);}async function cl(){if(c1[qV(-0x169,-0x243)])return;function qV(e,c){return vp(e,c- -0x4d8);}const co=c1[qs(0x449,0x378)][qV(-0x323,-0x254)](c4);function qs(e,c){return vD(e-0x38f,c);}if(!co[qV(-0xf6,-0x13e)])return;c1[qV(-0x28a,-0x243)]=!![],cR();try{const cn=await cC(co),ct=[];for(const L0 of cn)ct[qV(-0x257,-0x163)]({'nome':L0[qV(-0x14c,-0x11c)],'dados':new Uint8Array(await L0[qV(0x12,-0x65)]())});cs(cX(ct),qs(0x3f1,0x35b)+cn[qV(-0x1a5,-0x13e)]+qV(-0x43,-0x89));const cG=c1[qV(-0x10d,-0x69)][qs(0x374,0x451)]-co[qV(-0x1ef,-0x13e)];c6(cn[qs(0x374,0x290)]+qs(0x254,0x358)+(cG?'\x20'+cG+qV(-0x1b0,-0x1bf):''),cG?qs(0x43a,0x45d):'ok');}catch(L1){c7(0x0,0x0),c6(qV(-0x108,-0x119),qs(0x3ce,0x2f4));}c1[qV(-0x2a7,-0x243)]=![],cR();}async function cQ(){function qf(e,c){return vp(e,c-0x207);}eS[qC(0xea,0x18e)]=null;function qC(e,c){return vp(e,c- -0x218);}if(eY[qf(0x58f,0x492)])try{eS[qf(0x683,0x5ad)]=await ce(eY[qf(0x47b,0x492)]);}catch(co){eY[qf(0x412,0x492)]='';}}const ca=()=>{function qD(e,c){return vD(c-0x1a5,e);}function qp(e,c){return vD(c-0x126,e);}const co=c3();return co&&co[qp(-0x27,0x24)][c1[qD(0x2a,0xa1)]];};async function cr(){[qx(-0x5d,-0x22),qX(0x172,0x20f),qx(0xa0,0xab),'cv',qX(-0x19,-0x102),qx(0x1c4,0xd9),qX(0x9f,0x169),qX(0x126,0x16e),qx(-0x117,-0x46),qX(0xc9,0x175),qx(-0x33,0x33),qX(-0x40,-0x9),qx(0x94,0xf1),qX(0x11f,0xd0),qx(-0x5e,0xb),qX(0x122,0x1ba),qx(-0x97,0x4e),qX(0x92,0x13e),qx(0xef,-0xd),qx(-0x66,-0xbc),qx(0x10c,0x8),qX(0x107,0x91),qX(0x134,0x148),qx(-0x146,-0x56),qX(0x55,0x100),qX(-0x56,-0x27),qX(0x95,0xd2),qx(0x8e,0xc1),qX(0xac,0xc9),qX(-0x2f,-0x5c)][qx(0xd6,0xf5)](L0=>{function qQ(e,c){return qX(c- -0x14a,e);}function ql(e,c){return qX(c-0x1c4,e);}c2[L0]=document[ql(0x27d,0x21d)](qQ(-0x32,-0x133)+L0[qQ(-0x140,-0x130)](/[A-Z]/g,L1=>'-'+L1[ql(0x2df,0x2a4)]()));});try{eS[qx(0x4b,-0x2c)]=await ce(e2+qx(-0x6b,-0x55));}catch(L0){}try{eS[qx(-0x5b,-0xc7)]=await ce(e2+qx(-0xdb,-0x91)),eS[qx(0x1b5,0xde)]=eJ(eS[qx(-0x14d,-0xc7)]);}catch(L1){}try{if(document[qx(-0x58,-0x4)]&&document[qX(0x8c,0x41)][qx(0x52,-0x3f)])await document[qX(0x8c,-0x6c)][qX(0x51,-0x99)](qX(0x180,0x122));}catch(L2){}await cQ(),k(qX(0x189,0x273))[qX(0x185,0x151)](L3=>L3[qx(-0xa6,0x7)](qX(0xda,0x10d),()=>c2[qX(-0x56,-0xe2)][qx(0x78,0x4a)]())),c2[qX(-0x56,-0xb1)][qx(-0x13,0x7)](qX(0xf3,0x90),()=>{cj(c2[qa(0x20,0x7d)][qa(0xca,0x99)]);function qr(e,c){return qX(e- -0x17d,c);}function qa(e,c){return qx(e,c-0x163);}c2[qa(0xb6,0x7d)][qr(-0x24,-0xa5)]='';}),[qX(0x20,0x9),qx(0x15,0x6b)][qx(0x153,0xf5)](L3=>document[qX(0x97,0x42)](L3,L4=>{function qA(e,c){return qX(c-0x44a,e);}function qw(e,c){return qx(c,e-0x69);}L4[qw(0x22,0x22)]&&Array[qA(0x4fe,0x482)](L4[qw(0x22,0xf3)][qw(-0x77,-0x74)]||[])[qA(0x3d7,0x418)](qA(0x390,0x48c))>=0x0&&(L4[qw(-0x62,-0x126)](),c2[qA(0x682,0x59b)][qA(0x52a,0x479)]=![]);}));function qX(e,c){return vD(e-0xf3,c);}[qX(0x193,0x262),qX(0x148,0x66)][qx(0x1d6,0xf5)](L3=>document[qx(0x30,0x7)](L3,L4=>{function qH(e,c){return qx(e,c- -0x7c);}function qY(e,c){return qx(e,c-0x1a3);}if(L3===qY(0x266,0x25b)||!L4[qY(0xdf,0x123)])c2[qY(0x2f2,0x264)][qY(0x1a5,0x142)]=!![];})),document[qx(0x93,0x7)](qx(0x117,0xb8),L3=>{function qo(e,c){return qX(e- -0x14d,c);}function qk(e,c){return qx(e,c-0x5eb);}L3[qk(0x538,0x5a4)]&&L3[qk(0x4f7,0x5a4)][qk(0x5e3,0x521)][qo(-0x75,0x7f)]&&(L3[qo(-0x188,-0x1b9)](),cj(L3[qo(-0x104,-0x169)][qo(-0x187,-0x210)]));}),document[qX(0x97,0x55)](qX(0x131,0x1b9),L3=>{const L4=Array[qn(-0x86,0x23)]((L3[qn(-0x19,0x4)]||{})[qn(-0x102,-0x4f)]||[]);function qn(e,c){return qx(e,c-0x7b);}function qt(e,c){return qx(c,e-0x9f);}if(L4[qn(0xae,0xc3)])cj(L4);}),c2['cv'][qx(0x34,0x7)](qx(0x12,0xb6),cE),c2['cv'][qx(-0xfd,0x7)](qx(-0x106,-0x1f),ci),c2['cv'][qx(-0x79,0x7)](qx(-0x178,-0x7f),cg),c2['cv'][qX(0x97,-0x3f)](qx(-0x2d,-0x5a),()=>{c1[qG(0x291,0x382)]=null;function qG(e,c){return qX(c-0x2db,e);}cK(null),cz(!![]);});let co=0x0;window[qX(0x97,0x4c)](qX(0xc7,0xab),()=>{clearTimeout(co),co=setTimeout(cy,0x78);}),k(qX(0x14,0x81))[qx(0x1ef,0xf5)](L3=>L3[qx(0xae,0x7)](qx(-0x71,0x4a),()=>{function W1(e,c){return qx(c,e-0x52b);}c1[W0(0xcd,0xff)]=L3[W0(0xbf,0xee)][W1(0x59b,0x527)];function W0(e,c){return qX(e- -0x33,c);}c1[W0(-0x76,-0xd7)]=null,c6(c1[W0(0xcd,0x1a5)]===W1(0x5fd,0x6bf)?W1(0x492,0x49b):''),cP();})),H(qx(-0x65,-0x97))[qX(0x97,0xa7)](qX(0xda,0x4e),()=>{if(c1[W2(0x1f9,0x2ed)])return;c1[W2(0x415,0x41a)]=W2(0x44e,0x471),cW();function W2(e,c){return qx(e,c-0x3aa);}function W3(e,c){return qX(e-0x30d,c);}cP();}),c2[qx(0x60,0x33)][qX(0x97,-0x2e)](qx(0xfd,0x4a),()=>{c1[W4(0x648,0x5a2)]=W4(0x69f,0x715),c1[W5(-0x159,-0x228)]=c1[W4(0x505,0x44b)]?null:[],c6(c1[W5(-0x159,-0x14c)]?W4(0x533,0x518):'');function W4(e,c){return qX(e-0x548,c);}function W5(e,c){return qx(c,e- -0x86);}cP();}),c2[qX(-0x40,-0x22)][qx(0x3f,0x7)](qx(0x66,0x4a),()=>{function W6(e,c){return qX(e-0x12b,c);}c1[W6(0xeb,0x3f)]=!c1[W7(0x33a,0x31e)];function W7(e,c){return qX(c-0x35e,e);}cP();}),c2[qx(0x1b,0xf1)][qX(0x97,-0x9)](qx(-0x11,0x4a),()=>{c1[W8(0x1a7,0x124)]=!c1[W9(0x213,0x17c)];function W9(e,c){return qx(c,e-0x122);}function W8(e,c){return qX(c- -0x5d,e);}cd(),cR();});const cn=H(qX(0x45,0xa1)),ct=L3=>{function We(e,c){return qx(e,c-0x445);}function Wc(e,c){return qX(c- -0x22c,e);}c1[We(0x47d,0x4cb)]=L3,cn[Wc(-0x356,-0x251)](Wc(-0x190,-0xc8),L3),cI();};cn[qX(0x97,0x1c)](qX(0x146,0xb2),L3=>{L3[WL(0x3ba,0x444)]();function WL(e,c){return qx(c,e-0x485);}ct(!![]);}),[qx(0x73,-0x7f),qX(-0x31,-0x2),qX(0x36,-0xb8)][qX(0x185,0x19b)](L3=>cn[qX(0x97,0x26)](L3,()=>ct(![]))),cn[qX(0x97,0x10)](qX(-0x13,-0x56),L3=>{function Wv(e,c){return qx(e,c- -0x13f);}function WN(e,c){return qX(c-0xcf,e);}if(L3[Wv(-0x109,-0x112)]==='\x20'||L3[WN(0x28e,0x18c)]===WN(0x15e,0x168))ct(!![]);}),cn[qX(0x97,-0x6)](qX(0x7e,-0xb),()=>ct(![])),k(qX(0x142,0x10a))[qX(0x185,0xb5)](L3=>L3[qX(0x97,-0x57)](qx(-0x1d,0x4a),()=>{const L4=ca();if(!L4)return;L4[Wj(0x1f4,0x18d)]=L3[Wq(0x1fe,0x101)][Wq(-0x5,0x5a)];if(L4[Wq(0xd1,0x5a)]!==Wj(0x33b,0x27f))eY[Wq(-0x12,0x5a)]=L4[Wj(0x1b0,0x18d)];function Wq(e,c){return qx(e,c-0x9f);}function Wj(e,c){return qX(c-0x142,e);}eH(),cz(),cR();})),k(qx(0xe3,0x5c))[qX(0x185,0x120)](L3=>L3[qx(0x4f,0x7)](qx(0x8,0x4a),()=>{const L4=ca();if(!L4)return;L4[WW(0x298,0x2be)]=eY[WW(0x298,0x218)]=L3[WW(0x3df,0x424)][Wy(0x1f,0x7c)];function WW(e,c){return qx(c,e-0x37d);}eH();function Wy(e,c){return qx(e,c-0x161);}cz(),cR();})),k(qx(0x13,-0x18))[qx(0x11a,0xf5)](L3=>L3[qx(-0x7f,0x7)](qx(0x9,0x4a),()=>{const L4=ca();function WS(e,c){return qX(e-0x303,c);}if(!L4)return;L4[Wd(0x56e,0x531)]=L3[Wd(0x58d,0x5ef)][Wd(0x533,0x531)],cz();function Wd(e,c){return qX(c-0x4fd,e);}cR();})),k(qX(-0x4a,0x1a))[qx(0x18,0xf5)](L3=>L3[qx(0xfd,0x7)](qx(-0x59,0x4a),()=>{const L4=ca();function WF(e,c){return qX(e- -0x31,c);}if(!L4)return;L4[WF(0xe4,0xe)]=L3[Wm(0x46d,0x47f)][Wm(0x48e,0x4a2)],Object[Wm(0x41d,0x47e)](L4,et[L4[WF(0xe4,0x21)]]);function Wm(e,c){return qX(c-0x38d,e);}cz(),cR();})),k(qx(0x186,0xee))[qx(0x111,0xf5)](L3=>L3[qx(0x24,0x7)](qX(0xc8,0x2a),()=>{function WJ(e,c){return qX(c- -0x18c,e);}const L4=ca();if(!L4)return;const L5=L3[WJ(-0xab,-0x9a)][WZ(0x524,0x5d5)];function WZ(e,c){return qx(c,e-0x484);}L4[L5]=L3[WJ(-0x10e,-0x1aa)]===WZ(0x492,0x3d6)?L3[WZ(0x504,0x4c9)]:L3[WJ(0x9b,-0x33)]/0x64,L5 in eY&&(eY[L5]=L4[L5],eH()),cb();})),H(qx(-0x1c,-0x9e))[qX(0x97,0x6)](qX(0xda,0xec),()=>{const L3=c3();if(c1[WI(-0x181,-0x258)]<0x0)return;L3[WK(0x21c,0x1b2)][WI(-0x45,-0x3c)](c1[WI(-0x181,-0x187)],0x1),c1[WI(-0x181,-0xbe)]=L3[WK(0x14b,0x1b2)][WK(0x366,0x299)]?0x0:-0x1;function WK(e,c){return qX(c-0x1c1,e);}c1[WI(-0x1a8,-0x188)]=null;function WI(e,c){return qX(e- -0x170,c);}cd(),c6(WI(-0x89,-0x11d)),cP();}),H(qx(0x8c,-0x54))[qX(0x97,-0x15)](qX(0xda,0x36),async L3=>{const L4=L3[WT(-0xa6,-0x130)];function WT(e,c){return qX(c- -0x206,e);}L4[WT(-0xdd,-0xfe)]=!![],c6(WE(0x36f,0x299));try{const L5=c3(),L6=await er(c1[WE(0x2ae,0x1b0)]);let L7=0x0;L6[WT(-0x10,-0x81)](L8=>{function Wi(e,c){return WT(c,e-0x2c7);}if(L5[Wi(0x12e,0x145)][Wg(0x1cb,0x2a0)](L9=>n([L9['x'],L9['y']],[L8['x'],L8['y']])<L9['r']))return;L8['r']=a(L8['r'],0xa),L8[Wi(0xf4,0x67)]=eP(c1[Wg(0x9f,0x2f)],L8);function Wg(e,c){return WT(c,e-0x28d);}L5[Wi(0x12e,0x6d)][Wi(0x174,0x13b)](L8),L7++;}),c6(L7?L7+(L7===0x1?WT(-0x216,-0x228):WE(0x432,0x417))+WT(-0x190,-0x1aa):WE(0x418,0x412),L7?'ok':WE(0x434,0x3ea));}catch(L8){c6(WE(0x31c,0x331),WE(0x434,0x444));}L4[WT(-0xdf,-0xfe)]=![];function WE(e,c){return qx(c,e-0x326);}c1[WE(0x25e,0x171)]=null,cP();}),c2[qX(0x11f,0x193)][qx(-0x62,0x7)](qX(0xc8,0x162),()=>{const L3=c3()[Wh(0x3ab,0x33a)][c1[Wh(0x34c,0x3b8)]];if(!L3)return;L3['r']=a(0x6,c2[Wh(0x45d,0x3fc)][Wu(0x9c,0x9)]/0x3e8*r(c1[Wh(0x356,0x3ca)][Wh(0x4ea,0x452)],c1[Wu(-0xa5,0x5e)][Wh(0x3bb,0x4b3)])),L3[Wh(0x371,0x2bf)]=eP(c1[Wh(0x356,0x3dc)],L3);function Wu(e,c){return qX(e- -0xbd,c);}function Wh(e,c){return qX(e-0x33e,c);}cI();}),c2[qX(0x9b,-0x48)][qx(-0xff,0x7)](qx(0xe3,0x4a),()=>{function Wz(e,c){return qX(c-0x187,e);}const L3=c3();if(c1[Wz(0x13c,0x195)]<0x0)return;function WB(e,c){return qX(c-0x3c2,e);}L3[Wz(0x220,0x1f4)][Wz(0x324,0x2b2)](c1[Wz(0x177,0x195)],0x1),c1[WB(0x343,0x3d0)]=-0x1,cP();});const cG=(L3,L4,L5)=>k(L3)[qx(0xf3,0xf5)](L6=>L6[qX(0x97,-0x47)](qx(-0x28,0x4a),()=>{function Wb(e,c){return qx(c,e-0xe8);}eY[L5]=L6[Wb(0x14a,0xca)][L4],eH(),cz(!![]),cR();}));cG(qx(-0xa4,-0x25),qX(-0x4e,-0x10d),qX(-0x4e,-0x5b)),cG(qX(0xd4,0xd0),qx(-0x1,-0xcc),qX(-0x4c,-0x82)),cG(qX(0xaa,0x2),qx(0xb1,0xba),qx(-0xc7,-0x33)),cG(qx(0x3f,-0x40),qX(-0x53,-0x23),qX(0x15e,0xc9)),k(qX(0x16a,0x21f))[qx(0x1b7,0xf5)](L3=>L3[qx(-0xbc,0x7)](qx(-0x8b,0x4a),()=>{eY[WP(0x148,0x17a)]=L3[WP(0x1df,0x1eb)][WP(0x82,0x17a)],eH();function WP(e,c){return qX(c-0xf9,e);}c1[WP(0x12e,0xc1)]=null;function WM(e,c){return qx(e,c-0x1d7);}cR();})),c2[qX(0x122,0x1ba)][qx(-0xfb,0x7)](qX(0xc8,0xf0),()=>{eY[WR(0x468,0x3dd)]=c2[WU(-0x108,-0x190)][WU(-0xd1,-0x16)][WU(-0xfc,-0x173)]()[WU(-0x210,-0x29f)](/[^\w.@]/g,'')[WU(-0x169,-0x177)](0x0,0x1e),eH();function WR(e,c){return qx(c,e-0x3d6);}function WU(e,c){return qX(e- -0x22a,c);}cb(!![]);}),c2[qX(0xde,0x177)][qx(-0x8,0x7)](qX(0xf3,0xb0),()=>{function WV(e,c){return qX(c-0x554,e);}function WO(e,c){return qX(e- -0x3,c);}eY[WO(0x168,0xc4)]=c2[WO(0xdb,0x1df)][WV(0x5db,0x664)],eH(),cz(!![]);});function qx(e,c){return vp(e,c- -0x352);}H(qx(-0xb1,-0xc4))[qx(0xa9,0x7)](qx(-0x67,0x4a),()=>c2[qx(-0x9a,0x5)][qx(0x124,0x4a)]()),c2[qx(-0xa,0x5)][qx(0x21,0x7)](qx(-0x8a,0x63),async()=>{const L3=c2[Ws(0x153,0x79)][Ws(0x84,0x147)][0x0];function Ws(e,c){return qx(c,e-0x14e);}c2[WC(0x1e7,0x259)][WC(0x2cf,0x31d)]='';function WC(e,c){return qX(c-0x1c4,e);}if(!L3)return;try{const L4=await ce(L3),L5=r(0x1,0x384/a(L4[Ws(0x1b3,0xf6)],L4[WC(0x114,0x1a5)])),L6=e4(L4[Ws(0x1b3,0x215)]*L5,L4[WC(0x20b,0x1a5)]*L5);L6[WC(0x1ee,0x24b)]('2d')[Ws(0x1a7,0x29b)](L4,0x0,0x0,L6[Ws(0x26a,0x29e)],L6[Ws(0x13b,0x53)]),eY[Ws(0x87,0x6f)]=L6[WC(0x279,0x22e)](WC(0x117,0x1ae)),eY[Ws(0x11f,0xe7)]=(eY[WC(0x2d1,0x225)]||0x0)+0x1,eH(),await cQ(),cz(!![]),cR(),c6(Ws(0x16d,0x14a),'ok');}catch(L7){c6(Ws(0x1d7,0x15f),Ws(0x1f0,0x16d));}}),H(qX(0x139,0xd1))[qX(0x97,0xb4)](qx(-0xb5,0x4a),async()=>{eY[Wf(0x2d2,0x276)]='',eH();function Wf(e,c){return qX(c-0x2ad,e);}await cQ(),cz(!![]),cR();}),c2[qx(0xe9,-0xd)][qX(0x97,0x181)](qx(0x47,0x4a),()=>cp(![])),c2[qx(0xe3,0x8)][qx(-0xa5,0x7)](qX(0xda,0x1a),()=>cp(!![])),c2[qx(-0x102,-0xbc)][qX(0x97,-0x2c)](qX(0xda,0x134),()=>{function WD(e,c){return qX(c-0xc6,e);}function Wp(e,c){return qx(c,e-0x5e1);}if(c1[Wp(0x519,0x5bd)])cf(c1[WD(0x4f,0x8e)]);}),c2[qx(0xf2,0x77)][qx(-0xba,0x7)](qx(0x19,0x4a),cl),H(qx(-0x19b,-0xe4))[qX(0x97,0x181)](qX(0xda,0x32),()=>cq(c1[qX(0xe1,0x13a)]-0x1)),H(qx(-0x130,-0x6d))[qx(0x40,0x7)](qx(0x1,0x4a),()=>cq(c1[qx(0x6d,0x51)]+0x1)),document[qX(0x97,0x51)](qx(-0x198,-0xa3),L3=>{function WX(e,c){return qx(c,e- -0xdd);}if(!c1[Wx(0x109,0xe1)]||/INPUT|TEXTAREA|SELECT/[WX(-0x1a0,-0x1f6)]((L3[Wx(0x301,0x26d)]||{})[Wx(0x93,0x100)]||''))return;function Wx(e,c){return qX(c-0xc9,e);}if(L3[Wx(0x8e,0x186)]===Wx(0x6c,0x83)||L3[WX(-0xb0,-0x9e)]===WX(-0xab,-0x18c)){if(c1[Wx(0x120,0x1c9)]===WX(-0xb,-0xa6))c2[WX(-0xd2,-0x6f)][WX(-0x93,0x49)]();else H(Wx(0x191,0xbb))[WX(-0x93,-0x37)]();}if(L3[WX(-0xb0,-0x11f)]===Wx(0x1f4,0x231)){if(c1[Wx(0x108,0x86)])c2[WX(-0xaa,-0xe5)][Wx(0x29c,0x1a3)]();else{if(c1[Wx(0x2bd,0x24a)])c2[WX(0x14,-0x62)][WX(-0x93,-0xa7)]();}}}),cR();}const cw={};cw[vp(0x306,0x35e)]=eD,cw[vp(0x1c7,0x28c)]=ex,cw[vD(-0xb0,-0x166)]=ef,cw[vD(-0x3c,-0xe4)]=eM,cw[vD(0x36,-0x7a)]=es,cw[vp(0x3f9,0x468)]=ep,cw[vp(0x3f2,0x347)]=eV,cw[vp(0x416,0x445)]=cO,cw[vD(0x7c,0x124)]=cX,cw[vp(0x2d8,0x29a)]=cv;const cA={};cA[vD(0x1f,0xf3)]=cj,cA[vp(0x45d,0x364)]=c1,cA[vD(0x4e,0x7b)]=()=>eY,cA[vD(-0x10b,-0x125)]=cw;if(e1)window[vp(0x3c8,0x358)]=cA;if(document[vp(0x41a,0x31c)]===vD(0x8a,-0x75))document[vD(-0x5c,-0x13f)](vp(0x505,0x405),cr);else cr();}()));function y(e,c){const L=W();return y=function(v,N){v=v-0x13d;let j=L[v];if(y['ScyAiI']===undefined){var q=function(m){const J='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let Z='',I='',K=Z+q;for(let T=0x0,E,i,g=0x0;i=m['charAt'](g++);~i&&(E=T%0x4?E*0x40+i:i,T++%0x4)?Z+=K['charCodeAt'](g+0xa)-0xa!==0x0?String['fromCharCode'](0xff&E>>(-0x2*T&0x6)):T:0x0){i=J['indexOf'](i);}for(let h=0x0,u=Z['length'];h<u;h++){I+='%'+('00'+Z['charCodeAt'](h)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(I);};y['xlZYNq']=q,e=arguments,y['ScyAiI']=!![];}const d=L[0x0],S=v+d,F=e[S];if(!F){const m=function(J){this['LMFqRb']=J,this['oyssPk']=[0x1,0x0,0x0],this['kJHszn']=function(){return'newState';},this['DeBrUZ']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['DYLTTN']='[\x27|\x22].+[\x27|\x22];?\x20*}';};m['prototype']['coyLOO']=function(){const J=new RegExp(this['DeBrUZ']+this['DYLTTN']),Z=J['test'](this['kJHszn']['toString']())?--this['oyssPk'][0x1]:--this['oyssPk'][0x0];return this['KFmaxI'](Z);},m['prototype']['KFmaxI']=function(J){if(!Boolean(~J))return J;return this['TXhKsv'](this['LMFqRb']);},m['prototype']['TXhKsv']=function(J){for(let Z=0x0,I=this['oyssPk']['length'];Z<I;Z++){this['oyssPk']['push'](Math['round'](Math['random']())),I=this['oyssPk']['length'];}return J(this['oyssPk'][0x0]);},new m(y)['coyLOO'](),j=y['xlZYNq'](j),e[S]=j;}else j=F;return j;},y(e,c);}function W(){const Wl=['ienVBMzPCMeGB3mGy2fUDg9ZlG','z2v0rwXLBwvUDej5swq','CMvHzhLtDgf0zq','yxbWBhK','ienVBMzPCMeGysbMB3rViguGDg9XDwuGBM9Zihf1zsbMywX0yxjLBs4','C3bVDhrLCKXHEw91Da','rKv1zvH2EuH4A1r1q29pshrPy1bZyNjcyu5sD1z6v2LSlMnhsfDVBvOUzgjeCLG7lK5NzxHVDfLPtwnuC0fbyNjqywzUtvb6AwWUy3bVr3fTlKTICJTSu29XvKXJywXOB3n5Dxq7mti3qs5mmhuUmc4XCvzXt0jluKrcruTkCe91twzbr1njAMT2veXfDNzAA1Hdufbvu1veugr1wevswvLdt3ztww5nD3Lgue1gz3btqNL5Dvfus0TUv0Dvrha','CgvUzgvUDgu','Dgv4DefSAwDU','Bg9NB1zLCNnHBW','yNL0zuXLBMD0Aa','DgLUDge','C2LTyM9SBW','C3rYB2TL','CMvZDg9Yzq','CMvKDwnL','lNbUzW','Dgv4DenVBNrLBNq','Dg9eyxrHvvjm','w2rHDgeTCgXHBM9D','z2v0tw9UDgG','CM9ZDg9Z','Aw5Py2LV','C2v0vwLUDdmY','y29Uy2f0','Cg9PBNrLCM1VDMu','CM90yxrL','yMfJA2DYB3vUzeLTywDL','uM9ZDg8GyM9YCMfKBY4GqxjYyxn0zsbWyxjHig1VDMvYiguGDxnLig8Gy29UDhjVBguGzguGDgfTyw5OBY4','ideGzMLJB3uGC2vTihbSywnHig1HCMnHzge6igfICMeGysbMB3rViguGDg9XDwuGBMeGCgXHy2eU','zg93BMXVywq','kcGOlISPkYKRksSK','w2rHDgeTzM9YBwf0B10','C3bVDhrLCG','Ahr0Chm6lY9Jzg4UANnKzwXPDNiUBMv0l25WBs9aBwvKAwfWAxbLl3rHC2TZlxzPC2LVBKaWlJeWlJe0','zgvZDgLUyxrPB24TAw4','BgLUzvDPzhrO','AgvPz2H0','A2v5Dxa','y2vUDgvY','ksbUW6nVignVDwjLig5Hig1LBCoZCMLHigrLC3rLigfWyxjLBgHViguGzM9PihjLzhv6AwrHihbHCMeG','C2fPzge','yNvMzMvY','C2fSDMfY','ienVBMzPCMeGy2fKysb1BweGyw50zxmGzguGC2fSDMfYlG','y29UDgfYq2fYywn0zxjLCW','tYbKzxrLy3rVCIbHDxrVBCoHDgLJBYbUW6nVignHCNjLz291ig5LC3rLigfWyxjLBgHVlIbuB3f1zsbLBsbJywrHihjVC3rVihbHCMeGyM9YCMfYlG','z2v0q29UDgv4Da','C2HHzg93qMX1CG','ihbSywnHCYbLBMnVBNrYywrHCY4','ChjVCa','ndq3nZiZnxnSweTYvW','zM9UDhm','rM90BYbZywX2ysbLBsa','w2rHDgeTC28TBgf5B3v0xq','C3r5Bgu','Dg90ywW','C3jJ','Bg9NB0f0DwfS','C3qTBwLUAq','Dg9tDhjPBMC','yxjXDwL2B0XVz28','rujtDhvKAw8','ywrKrxzLBNrmAxn0zw5LCG','C2fSDMfYrxn0yq','rw50zxi','lcbQW6eGDhjHDgfKyq','DgLYyxjsB3n0BW','zgv0zwn0yxjbDxrV','y2LUEMe','y2HLy2TIB3G','CgfPBMvSugXHy2e','mtaZndCWnMXcAMfnua','igzVDg9ZihnHBhzHCW','zxn0ywrV','C3r1zgLVx2zVDg9Z','ugXHy2eGBwfYy2fKys4Gq29UzMLYysbVCYbXDwf0CM8Gy2fUDg9ZiguGywP1C3rLihnLihbYzwnPC2fYlG','qwjVCNrfCNjVCG','Aw11Ba','yxjYyxn0BW','B3jPz2LUwa','C29YDa','w2rHDgeTBgf5B3v0xq','CMDIysGWldaSmcWXkq','ChjVz3jLC3nV','zNvUzg8','rMLSzxnLDfjLC29SDMvY','tg9NBYbNDwfYzgfKysbUzxn0zsbUyxzLz2fKB3iUievSysbUW6nVigzVAsbLBNzPywrHigeGBhvNyxiGBMvUAhvTlG','w1DbuerotwPzA3fhsLrzt0LdwfvjswTRsu5eu0Lez1r5tezuv09tufPzsLHms1LAtfzlwMzrAMPmuefksLzgrefiq1jvweTot05czNLnuKzqqL0','su1br0u','zgLY','ChvZAa','BwvTB3jPyq','ndm5otm2z0TjALrn','BwLVBg8','y3jLC2nLCG','Aw1Hz2vtBw9VDgHPBMDrDwfSAxr5','CxvHza','BwLUAq','AhrxqxrWC1beoK4Vts9QwxD3D2TXlKDkvgvzEe9VsxrPq1HvsuLRy2TZswjYtMf6AurtBeLezY5uy3LmrM9TlLrIv09Yl1nZufPzsLH0teTzwNvKAuXVl1zlwMzrAMPmuefksLzgrefiq1jvweTot05czNLnuKzqqG','zgv2AwnLugL4zwXsyxrPBW','A2v5','z2v0twLUDxrLCW','CgLUBW','w2rHDgeTC29D','C2XPy2u','qMfJA3nWywnL','BwfYy2fY','yxjYB2jH','ohb4','BwLKzgXL','CMvZAxPL','Aw5WDxq','y29TugXHy2e','qwjYAxiGysbMB3rVia','Dg9cBg9I','w0zfDvH2EuHRvhvdt0HqqK5sD1zxr0HxwMrewe5Nwu1uqufqzM5nuhbhCuTtCvzmExvbthvXvNfpqKTsrejfs0PWt3vnzKfhu0LQA3zutev2DLPRwenqufvtvurqzhvyrvjzwunpDLnzBK13EuzqtuzNCfncExL1uvrls25xr1veCf0','Bw90BW','C2f2zq','z2v0rgf0zq','AhjLzG','rvHpveLduYbcuKfAsuW','yMvNAw5qyxrO','y29UC3rYDwn0B3i','w2rHDgeTBwfYy2fD','CMDIysG5ldeWlde1lc43mIK','y3vYCMvUDfrHCMDLDa','BMf0AxzH','BgvUz3rO','qMfPEgfUzg8GBYbKzxrLy3rVCIbKzsbYB3n0B3mGzsbWCM9JDxjHBMrV4OcMigeGzM90BYbJB250Aw51ysbUBYbZzxuGyxbHCMvSAg8U','y2XPy2S','AgfZ','iZa1mdyWqq','BgfYzW','Bw9UBW','CgXHy2e/','Dg9mB3DLCKnHC2u','yxr1ywW','q2fUDg8G','igzVDg9ZigvUDhjLz3vLCYbHBYbHCgfYzwXOBY4','Bg9Qyq','DgfIBgu','y2HHCKnVzgvbDa','ugXHy2eGCMvTB3zPzgeGzgeGzwrPW6FdO28U','zw5JB2rL','zhjHD0LTywDL','zwjfDMvUDg8','BwvHC3vYzvrLEhq','w2rHDgeTzxn0AwXVxq','E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK','C3rYB2TLu3r5Bgu','tMvUAhvTysbWBgfJysbUB3zHigfSW6LTigrHCYbQW6eGBwfYy2fKyxmU','CMv0DxjUicHMDw5JDgLVBIGPia','yxnZAwDU','zgf0yxnLDa','y2HHBMDL','B25LCNjVCG','BMf0DxjHBfDPzhrO','vM9JW6OGzMvJAg91igeGAMfUzwXHigrLihnHBhzHCI4GqxmGzM90B3mGy29UDgLUDwfTihbYB250yxmU','y2XHC3noyw1L','CMDIka','C29myxLVDxq','BMfTzq','zhjHz292zxi','CgvZBW','rMfSDg91ig1LBCoZCMLHihbHCMeGBw9UDgfYig8GwKLqlIbvC2uG4OcCu2fSDMfYigzVDg9Z4OcDlG','C2HHzg93q29SB3i','Aw5Uzxjive1m','zMvYCMfTzw50yq','ugXHy2eGzw5JB250CMfKysbLihrYyxrHzgeUienVBMzPCMeGBYbYzxn1BhrHzg8U','D2fYBG','C2HVD3jVB20','DhjHBNnSyxrL','Ag9ZDg5HBwu','C3rYB2TLvgv4Da','yMfPEgfYvhvKBW','zgLZywjSzwq','zhbY','Chv0sw1Hz2veyxrH','ANbN','zM9YvMLZAw9UvgfZA3m','wM9VBsbUysbWBgfJyq','zMLSBfjLy3q','ihb4','y2HLy2TLza','AM9PBG','ywjYAxi','igrLidqUifnLz3vYzsbVigrLzg8GCgfYysb2zxiGysbSDxbHiguGC29SDguGBMeGCxvPBMeU','DhjHyG','DgLWBW','B3jPz2LUywW','yNjHBMnV','iZa5meeWrG','tSoJBYbJB25ZzwD1AsbSzxiGzxnZysbSB2DVlIbvC2uGue5hignVBsbMDw5KBYb0CMfUC3bHCMvUDguU','CMDIysGWldaSmcWUnIK','vMvYigzVDg8GAw50zwLYyq','D2LSBfjLywrgCMvXDwvUDgX5','Cg9PBNrLCKLK','CMDIysGYntaSmJa0ldiXlc44nsK','CMfPB1jVC3rV','ChGGiKjHCMXVDYbdB25Kzw5ZzwqIlcbjBxbHy3qSihnHBNmTC2vYAwy','yxbWBgLJyxrPB24VEMLW','AgfUzgXL','m0fSuvjNta','zMLSBfn0EwXL','rxn0ysbMB3rVicG','CgfPBMvSuM9ZDg8','tSoJBYbMzwnOzwKGysbWBgfJysbUzxnZzsb0B3f1zs4GvxnLiokaNcSGugXHy2hIGj0GzsbTyxjXDwuGB3mGncbJyw50B3mU','Dgv4DejHC2vSAw5L','CgXHy2fqB3jqB250BW','BgvMDa','C3bSAwnL','C2LU','Bg9N','DhjPBq','zNjVBunOyxjdB2rL','y2fTCg8','CgfZDgu','zxjYBW','zxnX','y29UDgfKB3i','Cg9PBNrLCLr5Cgu','i2zMzG','rMfSDg91ig1LBCoZCMLHihbHCMeGz2vYyxiGyxmGzM90B3mUifrLBNrLihnHBhzHCIbLBsbNCNvWB3mGBwvUB3jLCY4','CMDIysGYntuSmJu1ldi1nsWUmdCP','i3n0lxrPCMfYlwXVz28','tSoJBYbHy2HLAsbWBgfJysbZB3PPBMHVig5LC3rHigzVDg8UifrVCxvLig5LBgeGB3uGDxnLiokaNcSGugXHy2hIGj0U','CgfSy28','twfJsw50zwW','yMX1CG','tYbUyxzLz2fKB3iGBSoJBYbKzwL4B3uGz3vHCMrHCIbZDwfZihbYzwzLCSoQBMnPyxmU','y2XLyxi','B25SB2fK','ChjLzNm','w2rHDgeTBw9KB10','re9nq29UDgvUDeXVywrLza','C29Tzq','z2v0sg91CNm','Cg9PBNrLCMrVD24','Ahr0Chm6lY9ZDg9YywDLlMDVB2DSzwfWAxmUy29Tl21LzgLHCgLWzs1TB2rLBhmVzMfJzv9KzxrLy3rVCI9IBgf6zv9MywnLx3nOB3j0x3jHBMDLl2zSB2f0mtyVms9IBgf6zv9MywnLx3nOB3j0x3jHBMDLlNrMBgL0zq','zhjVCa','y3jLyxrLrwXLBwvUDa','Bgf5B3v0','C3rYAw5N','CMLNAhq','yxv0BW','zxzLCNK','yxjPys1SywjLBa','Bw91C2u','C29SDge','zMLSBfrLEhq','ywjZ','C2v0vhjHBNnMB3jT','zwiTC3r1zgLVlq','zwiTC3r1zgLV','CgXHy2e','zxjYB3i','DMfSDwu','ndu2mdu2nhDmq0n5ta','Bw9KzwXbC3nLDfbHDgG','DMLZDge','Cg5N','y2fUDg9tzwXV','zMLUzeLUzgv4','y29Z','yxjJ','CM9ZDg8','y29UC29Szq','yxjPys1WCMvZC2vK','CgXHBM9dyw1WB3m','zM9Yyq','C3bSAxq','rxnJyxbL','yxzPC28','w2rHDgeTC2fPzgfD','Bg9NB01VBM8','ywrKq29SB3jtDg9W','AgLNAa','BM9Tzq','EMLWyxi','r2vYyw5KBYbMB3rVia','CMvWzwf0','yxbW','w2rHDgeTCgXHBM8Ty2fTCg9Zxq','i0zbq0mXnq','z2v0sw1Hz2veyxrH','BwLUrgv0zwn0Aw9Uq29UzMLKzw5Jzq','zgv0zwn0Aw9UCW','zgfKB3m','ihbSywnHigvUy29UDhjHzgeU','ufjfvKLfvYdIGkiGrvHpveLduYbcuKfAsuWGu1rvreLpicaG','zMfPEge','y2fYyM9UBW','Bg9HzgLUzW','w2rHDgeTy2fTCg9D','CxvHBNrPzgfKzq','odaWidqWChGGiKjHCMXVDYbdB25Kzw5ZzwqI','EM9VBq','tSoJBYbHy2HLAsbYB3n0BYbZB3PPBMHVlIbuB3f1zsbLBsbJywrHihvTihbHCMeGyM9YCMfYlG','z2vYyxjcBg9I','y3vYC29Y','zM9YrwfJAa','C2HHCMu','z2v0rNvSBfLLyxi','ChjPBMnPCgfS','w2rHDgeTzxnJB2XOzxjD','tSoJBYbHy2HLAsbHihbSywnHihnVEMLUAg8GBMvZDgeGzM90BY4Gvg9XDwuGBMvSysbVDsb1C2uG4OcCkYbqBgfJyEkaNs4','yxjPys1JDxjYzw50','yxbWzw5Kq2HPBgq','lwzVDg9ZlNPPCa','CMDIysGXnIWXoduSmti5lc45nsK','Dg9T','DhjHy2u','imoxia','igrLia','zhjHz2XLyxzL','ChjVBNrH','zgf0yq','yNv0Dg9U','yxrHBJi','Bw92zvrV','nJi5nZm4zKTYBuTf','y3jLyxrLt2jQzwn0vvjm','y2XVC2vqyxrO','ihjVC3rVCYbIB3jYywrVCY4','C2L6zq','ywXLCNrH','y3jLyxrLuMfKAwfSr3jHzgLLBNq','C2v0ug9PBNrLCKnHChr1CMu','l2fZC2v0CY9PBwCVAwrLBNrPzgfKzs8','y3jLyxrLrNjVBu9WDgLVBNm','igzPy2fYyw0GC2vTihbSywnHig1HCMnHzge6igfICMeGy2fKysb1BweGzsb0B3f1zsbUysbWBgfJys4','DgfYz2v0','Cg9W','y29UzMvYAxi','x19WCM90B19F','rxnJB2XOysbHCNf1AxzVCYbKzsbPBwfNzw0GkePqrYWGue5hig91ifDLyLaPlG','igvTihjLC29SDCoNW6nVig3dOxHPBwhIGky','CxvLCNLtzwXLy3rVCKfSBa','uhjVy2vZC2fUzg8GzM90BYa','D2LKDgG','AxrLBNm','Dg9XDwu','DxnLCKfNzw50','y2XPzw50wq','yxjYyxLcDwzMzxi','z2v0sxrLBq','C3rYAw5NAwz5','zMXVB3i','CgLSAge','yxjXDwL2BW','zxn0AwXV','i3n0lwfUDgvYAw9Y','y2fUDg8','CgXHDgzVCM0','z2XVyMfSq29TCg9ZAxrLt3bLCMf0Aw9U','DhLWzxm','CxvLCNLtzwXLy3rVCG','CgXHBM8','ChjVDg90ExbL','BwfYy2ffqG','CgfYC2u','w2rHDgeTDgLWB10','z2v0u2vJB25KCW','igzVDg9Zig5VifPjuc4','y2fY','rgvSzxrL','rM90BYbLBNrYzwD1zsbHBYbHCgfYzwXOBY4','rM90BYa','BwfYy2fUzg8','DxjSka','BwLU','z3vPyxm','yxv0B21HDgLJyxm','zMLSDgvY','BwvKAwe','BwfYy2e','ChjLDMvUDerLzMf1Bhq','zMLSzxm','AhLWB3q','ChjVBNrVCW','Bg9NBW','CgXHy2fqzxj0BW','zM9UDa','i3n0lwvUDMLHCI1SB2DV','DgvZDa','Aw5KzxHpzG','Cg9PBNrLCMXLyxzL','yMfZzu9WDgLVBNm','yMfYCMe','C3r1zgLVx2v4Cg9YDg91','B2n1CgfKBW','C2fSDMfYuhjVBNrV','y2XPzw50wa','lcbZzw0GCgXHy2eGBwfYy2fKyq','y2fUy2vSywrV','y29WAwfezvrYywjHBgHV','vhvKBYbWCM9UDg8UifrVCxvLig5VigjVDmoJBYbHBwfYzwXVihbHCMeGC2fSDMfYig5VigfWyxjLBgHVlG','CMDIysGYntuSmJu1ldi1nsWUmIK','C2v0qxr0CMLIDxrL','l3DHC20','mtm2mtK2odHAy0XpDMe','ihjVC3rVigjVCNjHzg8U','tSoJBYbJB25ZzwD1AsbHyNjPCIbLC3nHigzVDg8GBMvZDguGyxbHCMvSAg8UifrLBNrLigv4Cg9YDmoHlwXHigvTiePqrY4','qevyt1rjq1ncuKfAsuW','BMf0DxjHBeHLAwDODa','DhLWzq','l3zPC2LVBL9IDw5KBguUBwPZ','Bwf4','zgv0zwn0','y29TCgXLDge','BhvWyq','Bw90B3i','zxHJzxb0Aw9U','Aw1Hz2uVCg5N','vg9XDwuGBM9ZidqGy2fUDg9ZigrHihbSywnHihf1zsbMywX0ys4Gu2vNDxjLig8GzgvKBYbWyxjHigfICMLYigeGBhvWysbLihnVBhrLig5Hihf1Aw5HlG','y2vPBa','A2v5zg93BG','Aw5UzxjizwLNAhq','C2vS','y2XPzw50v2LKDgG','CgXHy2fZ','i3n0lxrPCMfYlxbSywnH','yM9Yzge','zMLSBa','CMvJDa','nJCYmZGYofnvBLnyza','vg9XDwuGzw0Gy2fKysbYB3n0BYbHBYbMDw5KBYbWyxjHigjVCNjHCI4','lMPWzW','i3n0lwrLDgvJDgfY','y2fYCM8','ugXHy2eGBwfYy2fKys4GqxjYyxn0zsbHCYbHBmoNyxmGCgfYysbHy2vYDgfYigfZihf1Aw5HCY4','CMvTB3zL','CM91BMrszwn0','icHYzwr1EMLKysK','Bg9NBY1LEg90AwnZyNjHEMLSlwjYyw5JBY5WBMC','yMLUza','i0y4rKfgqW','Aw5UzxjxAwr0Aa','B3jPz2LUwq','Dg9vChbLCKnHC2u','CMDIysGWldaSmcWUmtaP','Bgf0zxjHBa','Aw1Hz2uVANbLzW','Dg9W','C2vHCMnO','C3fYDa','BgLUzvrV','u2fSDMfYigeGzM90BW','C2v0sxrLBq','C2vSuM9ZDg8','odaWia','CMvSyxrLzfrHCMDLDa','Cg9PBNrLCNvW','lcbZzw0GBwv0ywrHzg9ZlG','C2v0vwLUDde2','w2rHDgeTzMvYCMfTzw50yv0','z2XVyMfSqwXWAge','BwvYy29ZDwW','C3qT','yMfZzq','y2XPCgjVyxjKrgf0yq','CMvWBgfJzq','yM91BMrPBMDcB3G','igzVDg9ZignVBsbWBgfJysb0CMf0ywrHlG','CM91BMq','twfYCxvLigeGCgXHy2eGB3uGDw0GCM9ZDg8Gyw50zxmGzguGC2fSDMfYlG','ywn0AxzLrwXLBwvUDa','zhjHz2vUDgvY','Bwf4vg91y2HqB2LUDhm','z2v0','i3n0lxbYB3HPBwe','y2fUDMfZ','zM90BW','ChGGiKjHCMXVDYbdB25Kzw5ZzwqIlcaIqxjPywWGtMfYCM93iIWGsw1Wywn0lcbZyw5ZlxnLCMLM','lcbYzxnVBhxdP8oJBYbVCMLNAw5HBa','C29TyNjH','igzVDg8','BgLTCge','C2vSBW','CMv2B2TLt2jQzwn0vvjm','BwfW','Aw5MBW','AgLKzgvU','rMfJzurLDgvJDg9Y','DgfTyw5OBW','Aw1Hz2vtBw9VDgHPBMDfBMfIBgvK','CMvT','zM9YBwf0BW','CMDIysGWldaSmcWWkq','Cg9PBNrLCMnHBMnLBa','DgfNtMfTzq','zNjVBq','y3jLyxrLtgLUzwfYr3jHzgLLBNq','CMvZB2X1y2fV','C2LTyM9SBY1LyI1ICMfUy28UCg5N','i3n0lwfJAgfYlxjVC3rVCW','lwvIlxn0DwrPBW','CMDIysGWldaSmcWUmtGP','igzVDg9Z','B3bHy2LKywrL','z2v0qM91BMrPBMDdBgLLBNrszwn0','rMLSzxm','y2fUzgLKyxrVCW','C2nHBgu','i3n0lw9YAwDPBMfS','CMDIysG5ldeWlde1lc44nsK','CNvUBMLUz01Vzgu','C2v0','zgf0yvrYyw5ZzMvY','C2vTugXHy2e','Bw9KBW','CMvKDxPPzge','y2fUu2HHCMu','zM9Zy28','DMLZ','w2rHDgeTy2fUDg9D','Bg9Hza','z3jHDgLZ','yM9KEq','u2fSDMfYia','zMLSyq','CMDIysGYntuSmJu1ldi1nsWWkq','igzPy2fYyw0GzguGzM9YysbWB3iGBSoJBYb0zxjLBsbWBgfJysbTyxjJywrHlG'];W=function(){return Wl;};return W();}
   </script>
   <footer class="filete-topo-eb bg-carbon text-white">
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-[auto_1fr] sm:items-end sm:px-6">
