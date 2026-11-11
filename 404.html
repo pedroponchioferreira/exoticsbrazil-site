@@ -132,6 +132,17 @@
     .materia { font-size: 18px; line-height: 1.8; color: var(--eb-text-body); }
     .materia > * + * { margin-top: 1.25rem; }
     .materia > figure, .materia > aside { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+    /* Dossiê de uma unidade (matéria com 2 ou mais carros): superfície elevada, cantos retos, filete lateral com o gradiente assinatura */
+    .dossie-eb { margin: 3rem 0; padding: 1.75rem 1.5rem 2rem; background: var(--eb-bg-surface); border-width: 0 0 0 6px; border-style: solid; border-image: linear-gradient(180deg, #00A859 0%, #10B981 55%, #FACC15 100%) 1; border-radius: 0; }
+    .dossie-eb > * + * { margin-top: 1.25rem; }
+    .dossie-eyebrow { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 800; font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--eb-yellow); }
+    .materia .dossie-eb h2 { margin-top: .5rem; border-top: 0; padding-top: 0; font-size: 2.6rem; }
+    .dossie-eb aside.ficha { background: var(--eb-bg-elevated); }
+    .grade-eb { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: .75rem; margin-top: 1.75rem; }
+    .grade-eb .grade-item { width: calc((100% - .75rem) / 2); margin: 0; }
+    @media (min-width: 640px) { .grade-eb .grade-item { width: calc((100% - 1.5rem) / 3); } }
+    .grade-eb button { border: 1px solid var(--eb-border-strong); }
+    .grade-eb figcaption { margin-top: .4rem; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 600; font-size: .78rem; line-height: 1.35; letter-spacing: .1em; text-transform: uppercase; color: var(--eb-text-muted); }
     .materia > p:first-of-type::first-letter { float: left; font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; font-size: 96px; line-height: .78; color: var(--eb-yellow); margin: 6px 12px 0 0; }
     .materia h2, .materia h3, .materia h4 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.01em; color: var(--eb-text-primary); margin-top: 2.75rem; }
     .materia h2 { font-size: 2.25rem; border-top: 2px solid var(--eb-border-strong); padding-top: .75rem; } .materia h3 { font-size: 1.85rem; } .materia h4 { font-size: 1.5rem; }
