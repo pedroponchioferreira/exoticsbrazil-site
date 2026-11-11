@@ -160,15 +160,21 @@ Na Porsche, personalizar um carro tem degraus. O primeiro é o configurador, abe
 
 A escolha do GT3 Touring como base não é coincidência. Ele tem o mesmo 4.0 aspirado de 510 cv e 9.000 rpm do GT3, mas troca a asa fixa por um aerofólio retrátil e devolve ao 911 a silhueta limpa de sempre. Sem a asa para roubar a atenção, sobra a tela em branco, e é a cor e a cabine que contam a história. Os três carros abaixo mostram três jeitos completamente diferentes de contar essa história.
 
-## Unidade 01: Signal Orange, o extrovertido
+UNIDADE 01 · SONDERWUNSCH
+
+## Signal Orange, o extrovertido
 
 É o mais barulhento do trio sem precisar ligar o motor. O Signal Orange, do catálogo PTS, cobre uma carroceria que foi feita justamente para não chamar atenção, e o contraste é a graça: o Touring nasceu discreto e o dono decidiu que discrição não era com ele. Lá dentro, a cabine faz o caminho oposto ao da lataria, com bancos em couro preto e tecido tartan, e o laranja volta em detalhes pequenos, nas costuras contrastantes que percorrem bancos, portas e painel. Na soleira de fibra de carbono, a palavra Sonderwunsch aparece em amarelo, como assinatura. Até as rodas entraram no pedido, pintadas na cor Ceramic Neo e com o brasão da Porsche em Turbonite, o tipo de acabamento que só aparece de perto.
 
-## Unidade 02: Yachting Blue, a alfaiataria de viagem
+UNIDADE 02 · SONDERWUNSCH
+
+## Yachting Blue, a alfaiataria de viagem
 
 Se o laranja grita, o azul conversa. O Yachting Blue, também do catálogo PTS, é um tom sóbrio, quase náutico, que muda com a luz do showroom, e esconde uma cabine quente. O interior mistura couro cohiba com tecido tartan, com o bordado Touring nos encostos e a palavra Sonderwunsch no painel do passageiro. O dono levou a combinação até o bagageiro dianteiro, e o pedido saiu do carro: a Porsche fez uma bolsa de viagem com os mesmos materiais. É a ideia de Gran Turismo levada ao pé da letra, um GT3 para pegar estrada com a mala combinando com o banco. No console, a alavanca é de câmbio manual.
 
-## Unidade 03: Dark Olive Metallic, o manifesto purista
+UNIDADE 03 · SONDERWUNSCH
+
+## Dark Olive Metallic, o manifesto purista
 
 É o mais silencioso dos três, e o que mais guarda surpresa. Sob a luz do showroom, o Dark Olive Metallic, cor PTS, passa por preto, e só revela o verde-oliva quando o reflexo bate de lado. Por dentro, o couro Tarpanbrown divide os bancos com o clássico tecido pepita, a mesma estampa que acompanha o 911 desde os primeiros anos. O clímax está na hora de abrir a porta: na soleira iluminada, a silhueta do 911 é desenhada pelas letras da palavra "Schaltgetriebe", câmbio manual em alemão. É uma frase escrita em luz para lembrar a cada entrada que ali dentro existem três pedais e um boxer aspirado que gira até 9.000 rpm.
 
@@ -176,11 +182,11 @@ Se o laranja grita, o azul conversa. O Yachting Blue, também do catálogo PTS, 
 
 Os três estarão no Porsche Fest, que volta a Interlagos depois de reunir mais de 30 mil pessoas em 2023. A edição de 2026 celebra os 75 anos da Porsche Motorsport, tem os 500 km de Interlagos como atração principal e mais de 200 carros expostos, entre eles o 911 Targa 4 GTS (992.2) e o 911 GT3 S/C, apresentados no mesmo dia. O Censo EB ainda não registra o GT3 Touring 992.2, e a contagem só entra com número confirmado.
 
-Ficha técnica do Unidade 01: 911 GT3 Touring Sonderwunsch, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Signal Orange (PTS); Interior: couro preto com tecido tartan; Costuras: laranja contrastante; Rodas: pintadas em Ceramic Neo, brasão em Turbonite.
+Ficha técnica do 911 GT3 Touring Sonderwunsch · Signal Orange, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Signal Orange (PTS); Interior: couro preto com tecido tartan; Costuras: laranja contrastante; Rodas: pintadas em Ceramic Neo, brasão em Turbonite.
 
-Ficha técnica do Unidade 02: 911 GT3 Touring Sonderwunsch, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Yachting Blue (PTS); Interior: couro cohiba com tecido tartan; Bagageiro: revestido na mesma combinação; Extra: bolsa de viagem feita com os materiais do carro; Câmbio: manual (visível no console).
+Ficha técnica do 911 GT3 Touring Sonderwunsch · Yachting Blue, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Yachting Blue (PTS); Interior: couro cohiba com tecido tartan; Bagageiro: revestido na mesma combinação; Extra: bolsa de viagem feita com os materiais do carro; Câmbio: manual (visível no console).
 
-Ficha técnica do Unidade 03: 911 GT3 Touring Sonderwunsch, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Dark Olive Metallic (PTS); Interior: couro Tarpanbrown com tecido pepita; Soleira: iluminada, com a silhueta do 911 formada pela palavra Schaltgetriebe; Câmbio: manual.
+Ficha técnica do 911 GT3 Touring Sonderwunsch · Dark Olive Metallic, segundo a apuração do Exotics Brazil (@exoticsbrazil): Cor externa: Dark Olive Metallic (PTS); Interior: couro Tarpanbrown com tecido pepita; Soleira: iluminada, com a silhueta do 911 formada pela palavra Schaltgetriebe; Câmbio: manual.
 
 Ficha técnica do Porsche 911 GT3 Touring (992.2), segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 4.0 boxer seis cilindros aspirado; Potência: 510cv; Torque: 45,9 kgfm; Giro máximo: 9.000 rpm; 0-100km/h: 3,4s (PDK) / 3,9s (manual); Vel. máxima: 311km/h (PDK) / 313km/h (manual); Tração: traseira; Produção: 2025–presente.
 
