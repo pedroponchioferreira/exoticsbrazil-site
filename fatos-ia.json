@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-10",
-  "total": 161,
+  "total": 162,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -708,6 +708,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-11",
       "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-m3-cs-g80-sao-paulo/"
+    },
+    {
+      "id": "materia-cadillac-escalade-v-esv-santos",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Cadillac Escalade-V ESV flagrado em Santos, SP, é a versão longa do SUV de alta performance da marca, com 5,77 metros, V8 6.2 supercharged de 691 cv e 90,2 kgfm, e chegou ao país por importação independente, já que a Cadillac nunca vendeu carros oficialmente no Brasil.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/cadillac-escalade-v-esv-santos/"
     },
     {
       "id": "materia-porsche-911-gt3-sc-992-2-ribeirao-preto",
