@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-10",
-  "total": 162,
+  "total": 163,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -715,6 +715,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-11",
       "fonte": "https://www.exoticsbrazil.com.br/revista/cadillac-escalade-v-esv-santos/"
+    },
+    {
+      "id": "materia-ford-gt40-mk1-brasil-wilson-fittipaldi-greco",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Brasil não tem hoje nenhum Ford GT40 original, mas já teve um: um Mk I construído em 1969 para um cliente alemão que desistiu, vendido ao Rio de Janeiro, corrido pelos Fittipaldi e pela Equipe Greco e embarcado para os Estados Unidos em 1982.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-11",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ford-gt40-mk1-brasil-wilson-fittipaldi-greco/"
     },
     {
       "id": "materia-porsche-911-gt3-sc-992-2-ribeirao-preto",
