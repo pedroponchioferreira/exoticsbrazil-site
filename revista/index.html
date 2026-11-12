@@ -155,6 +155,9 @@
     .miniatura-eb.solido-eb { background: #090A0F; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
+    .item-beta-eb { color: #94A3B8; transition: color .2s; }
+    .item-beta-eb:hover, .item-beta-eb:focus-visible, .item-beta-eb.is-ativo { color: #F8FAFC; }
+    .selo-beta-eb { display: inline-block; margin-left: .3em; padding: .2em .4em .15em; vertical-align: super; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .12em; color: #FACC15; background: rgba(250, 204, 21, .1); box-shadow: inset 0 0 0 1px rgba(250, 204, 21, .35); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
     @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
@@ -661,18 +664,19 @@
 <body class="bg-carbon font-sans text-ink">
   <header class="cabecalho-eb filete-eb sticky top-0 z-50 text-white">
     <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
-      <a href="/" class="flex items-center" aria-label="Exotics Brazil, página inicial">
+      <a href="/" class="flex shrink-0 items-center" aria-label="Exotics Brazil, página inicial">
         <img src="/assets/img/identidade/simbolo-eb-branco.png?v=2" alt="Exotics Brazil" width="810" height="568" class="h-9 w-auto object-contain">
       </a>
-      <ul class="hidden items-center gap-6 lg:flex">
-        <li><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:text-white" aria-current="page">Revista</a></li>
-        <li><a href="/censo/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Censo</a></li>
-        <li><a href="/#dossie" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Ficha EB</a></li>
-        <li><a href="/#sobre" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
-        <li><a href="/#metodologia" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Metodologia</a></li>
-        <li><a href="/#comercial" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Comercial</a></li>
-        <li><a href="/imprensa/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Imprensa</a></li>
-        <li><a href="/#spotters" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Spotters</a></li>
+      <ul class="hidden items-center gap-5 lg:flex xl:gap-6">
+        <li><a href="/revista/" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-white transition-colors hover:text-white" aria-current="page">Revista</a></li>
+        <li><a href="/censo/" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Censo</a></li>
+        <li><a href="/#dossie" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Ficha EB</a></li>
+        <li><a href="/#sobre" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
+        <li><a href="/#metodologia" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Metodologia</a></li>
+        <li><a href="/#comercial" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Comercial</a></li>
+        <li><a href="/imprensa/" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Imprensa</a></li>
+        <li><a href="/#spotters" class="whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg text-zinc-300 transition-colors hover:text-white">Spotters</a></li>
+        <li><a href="/studio/" class="item-beta-eb whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg" aria-label="Studio (beta)">Studio<span class="selo-beta-eb" aria-hidden="true">Beta</span></a></li>
       </ul>
       <div class="flex items-center gap-2">
         <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border-2 border-zinc-700 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
@@ -696,6 +700,7 @@
         <li><a href="/#expediente" class="block py-4 font-display text-2xl font-bold uppercase">Expediente</a></li>
         <li><a href="/#faq" class="block py-4 font-display text-2xl font-bold uppercase">Perguntas</a></li>
         <li><a href="/#spotters" class="block py-4 font-display text-2xl font-bold uppercase">Spotters</a></li>
+        <li><a href="/studio/" class="item-beta-eb block py-4 font-display text-2xl font-bold uppercase" aria-label="Studio (beta)">Studio<span class="selo-beta-eb" aria-hidden="true">Beta</span></a></li>
         <li><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="block py-4 font-display text-2xl font-bold uppercase text-rosso">Instagram @exoticsbrazil</a></li>
       </ul>
     </div>
