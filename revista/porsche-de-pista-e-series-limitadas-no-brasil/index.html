@@ -152,13 +152,16 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
-    .miniatura-eb > img.foto-inteira-eb { object-fit: contain; }
-    .miniatura-eb > img.fundo-eb, .group:hover .miniatura-eb > img.fundo-eb, .group:focus-visible .miniatura-eb > img.fundo-eb { object-fit: cover; filter: blur(24px) brightness(.45); transform: scale(1.15); }
+    .miniatura-eb > img, .miniatura-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img, .group:hover .miniatura-eb > span > img, .group:focus-visible .miniatura-eb > span > img { transform: scale(1.03); }
+    .miniatura-eb.diptico-eb { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+    .miniatura-eb.diptico-eb > span { position: relative; overflow: hidden; min-height: 0; }
+    .miniatura-eb.solido-eb { background: #090A0F; }
+    .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
+    main [id] { scroll-margin-top: 5.5rem; }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
-    @media (prefers-reduced-motion: reduce) { .miniatura-eb > img { transition: none; } .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
@@ -477,17 +480,59 @@
 <body class="bg-carbon font-sans text-ink">
   <div class="leitura-eb" aria-hidden="true"><span></span></div>
   <header class="cabecalho-eb filete-eb sticky top-0 z-50 text-white">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-      <a href="/" aria-label="Exotics Brazil, página inicial"><img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-12 w-auto object-contain sm:h-14"></a>
-      <nav aria-label="Navegação" class="flex items-center gap-4 font-display text-base font-bold uppercase tracking-wide sm:gap-6 sm:text-lg">
-        <a href="/revista/" class="text-white">Revista</a>
-        <a href="/censo/" class="text-zinc-300 hover:text-white">Censo</a>
-        <a href="/studio/" class="text-zinc-300 hover:text-white">Studio</a>
-        <a href="/imprensa/" class="hidden sm:inline text-zinc-300 hover:text-white">Imprensa</a>
-        <a href="/#comercial" class="hidden sm:inline text-zinc-300 hover:text-white">Anuncie</a>
-        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="botao-verde-eb px-3 py-1 text-lg">Instagram</a>
-      </nav>
+    <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="/" class="flex items-center" aria-label="Exotics Brazil, página inicial">
+        <img src="/assets/img/identidade/simbolo-eb-branco.png?v=2" alt="Exotics Brazil" width="810" height="568" class="h-9 w-auto object-contain">
+      </a>
+      <ul class="hidden items-center gap-6 lg:flex">
+        <li><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-white transition-colors hover:text-white" aria-current="page">Revista</a></li>
+        <li><a href="/censo/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Censo</a></li>
+        <li><a href="/#dossie" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Ficha EB</a></li>
+        <li><a href="/#sobre" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Sobre</a></li>
+        <li><a href="/#metodologia" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Metodologia</a></li>
+        <li><a href="/#comercial" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Comercial</a></li>
+        <li><a href="/imprensa/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Imprensa</a></li>
+        <li><a href="/#spotters" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:text-white">Spotters</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border-2 border-zinc-700 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/></svg>
+        </a>
+        <a href="/#comercial" class="botao-verde-eb hidden h-9 items-center px-4 font-display text-lg uppercase tracking-wide sm:inline-flex">Anuncie</a>
+        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border-2 border-zinc-700 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </nav>
+    <div id="menu-mobile" class="hidden border-t border-zinc-800 bg-carbon lg:hidden">
+      <ul class="divide-y divide-zinc-800 px-4">
+        <li><a href="/revista/" class="block py-4 font-display text-2xl font-bold uppercase">Revista</a></li>
+        <li><a href="/censo/" class="block py-4 font-display text-2xl font-bold uppercase">Censo EB</a></li>
+        <li><a href="/#flagras" class="block py-4 font-display text-2xl font-bold uppercase">Flagras</a></li>
+        <li><a href="/#dossie" class="block py-4 font-display text-2xl font-bold uppercase">Ficha EB</a></li>
+        <li><a href="/#sobre" class="block py-4 font-display text-2xl font-bold uppercase">Sobre</a></li>
+        <li><a href="/#metodologia" class="block py-4 font-display text-2xl font-bold uppercase">Metodologia</a></li>
+        <li><a href="/#audiencia" class="block py-4 font-display text-2xl font-bold uppercase">Audiência</a></li>
+        <li><a href="/#comercial" class="block py-4 font-display text-2xl font-bold uppercase">Comercial</a></li>
+        <li><a href="/imprensa/" class="block py-4 font-display text-2xl font-bold uppercase">Imprensa</a></li>
+        <li><a href="/#expediente" class="block py-4 font-display text-2xl font-bold uppercase">Expediente</a></li>
+        <li><a href="/#faq" class="block py-4 font-display text-2xl font-bold uppercase">Perguntas</a></li>
+        <li><a href="/#spotters" class="block py-4 font-display text-2xl font-bold uppercase">Spotters</a></li>
+        <li><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="block py-4 font-display text-2xl font-bold uppercase text-rosso">Instagram @exoticsbrazil</a></li>
+      </ul>
     </div>
+    <script>
+      (function () {
+        var btn = document.getElementById('menu-btn'), menu = document.getElementById('menu-mobile');
+        if (!btn || !menu) return;
+        function abrir(sim) {
+          menu.classList.toggle('hidden', !sim);
+          btn.setAttribute('aria-expanded', String(sim));
+          btn.setAttribute('aria-label', sim ? 'Fechar menu' : 'Abrir menu');
+          btn.innerHTML = sim ? '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>' : '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+        }
+        btn.addEventListener('click', function () { abrir(menu.classList.contains('hidden')); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { abrir(false); }); });
+      })();
+    </script>
   </header>
   <main>
     <article data-eb-materia data-titulo="Do 997 GT2 RS Mezger ao Porsche 935" data-editoria="Porsche" data-autor="Pedro Ponchio" class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
@@ -714,7 +759,7 @@
             </div>
           </a>
           <a href="/revista/bmw-m3-competition-g80-ruby-star-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img class="fundo-eb" src="/assets/img/carros/bmw-m3-competition-g80-ruby-star-sao-paulo-exotics-brazil-5.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/assets/img/carros/bmw-m3-competition-g80-ruby-star-sao-paulo-exotics-brazil-5.jpg" width="1999" height="1500" loading="lazy" decoding="async" alt="BMW M3 Competition (G80) em Ruby Star, rosa do BMW Individual, com teto e rodas pretas, em showroom de São Paulo" class="foto-inteira-eb"></div>
+            <div class="miniatura-eb diptico-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><span><img src="/assets/img/carros/bmw-m3-competition-g80-ruby-star-sao-paulo-exotics-brazil-5.jpg" width="1999" height="1500" loading="lazy" decoding="async" alt="BMW M3 Competition (G80) em Ruby Star, rosa do BMW Individual, com teto e rodas pretas, em showroom de São Paulo"></span><span><img src="/assets/img/carros/bmw-m3-competition-g80-ruby-star-sao-paulo-exotics-brazil-2-4.jpg" width="2000" height="1499" loading="lazy" decoding="async" alt="" aria-hidden="true"></span></div>
             <div class="flex min-w-0 flex-1 flex-col sm:p-6">
               <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 8 de novembro de 2026</span></p>
               <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">BMW M3 Competition (G80) em Ruby Star, a única do Brasil nessa tonalidade, flagrada em São Paulo</h3>
