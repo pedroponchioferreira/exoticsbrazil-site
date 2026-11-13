@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-12",
-  "total": 171,
+  "total": 172,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -392,7 +392,7 @@
     },
     {
       "id": "censo-ferrari-812-gts",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 12 de novembro de 2026, existem 46 unidades do Ferrari 812 GTS no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 12 de novembro de 2026, existem 46 unidades do Ferrari 812 GTS no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Uma única em Verde Kers e uma única em Grigio Scuro, esta vista em Araçariguama (SP).",
       "entidade": "Ferrari 812 GTS",
       "valor": 46,
       "ano": 2026,
@@ -717,6 +717,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-ferrari-812-gts-grigio-scuro-aracariguama",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 812 GTS em Grigio Scuro flagrada em Araçariguama, SP, é a única nessa cor entre as 46 unidades do modelo no Brasil. O carro tem V12 6.5 aspirado de 800cv, teto rígido retrátil, rodas pretas e pinças amarelas.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-13",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-812-gts-grigio-scuro-aracariguama/"
     },
     {
       "id": "materia-bmw-m5-touring-g99-rio-de-janeiro",
