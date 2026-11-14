@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-13",
-  "total": 176,
+  "total": 177,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -734,6 +734,13 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-turbo-s-cabriolet-991-2-hre-p200-sao-paulo/"
     },
     {
+      "id": "materia-porsche-911-gt3-sc-992-2-dupla-rio-de-janeiro",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), 2 unidades do Porsche 911 GT3 S/C 992.2, uma prata e uma verde escura, foram fotografadas em uma área de inspeção no Rio de Janeiro, RJ. O S/C tem 4.0 aspirado de 510 cv, câmbio manual de 6 marchas e 1.497 kg.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-13",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-sc-992-2-dupla-rio-de-janeiro/"
+    },
+    {
       "id": "materia-ferrari-812-gts-grigio-scuro-aracariguama",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 812 GTS em Grigio Scuro flagrada em Araçariguama, SP, é a única nessa cor entre as 46 unidades do modelo no Brasil. O carro tem V12 6.5 aspirado de 800cv, teto rígido retrátil, rodas pretas e pinças amarelas.",
       "autor": "Pedro Ponchio",
@@ -895,18 +902,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
-      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
-    },
-    {
       "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
+    },
+    {
+      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
