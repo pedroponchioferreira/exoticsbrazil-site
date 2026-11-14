@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-13",
-  "total": 175,
+  "total": 176,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -727,6 +727,13 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
     },
     {
+      "id": "materia-porsche-911-turbo-s-cabriolet-991-2-hre-p200-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 6 Porsche 911 Turbo S Cabriolet (991.2) no Brasil, e esta, flagrada em São Paulo, é a única em prata, com capota vermelha, pinças amarelas do freio cerâmico e rodas HRE P200 de cubo rápido em lugar das escurecidas de fábrica.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-14",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-turbo-s-cabriolet-991-2-hre-p200-sao-paulo/"
+    },
+    {
       "id": "materia-ferrari-812-gts-grigio-scuro-aracariguama",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Ferrari 812 GTS em Grigio Scuro flagrada em Araçariguama, SP, é a única nessa cor entre as 46 unidades do modelo no Brasil. O carro tem V12 6.5 aspirado de 800cv, teto rígido retrátil, rodas pretas e pinças amarelas.",
       "autor": "Pedro Ponchio",
@@ -888,18 +895,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
-      "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
-    },
-    {
       "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
+    },
+    {
+      "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
