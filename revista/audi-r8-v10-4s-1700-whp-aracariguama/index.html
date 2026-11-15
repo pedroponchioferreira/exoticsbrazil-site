@@ -26,7 +26,7 @@
   <meta property="article:section" content="Flagras">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico?v=2" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/identidade/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/identidade/favicon-16x16.png?v=2">
@@ -60,7 +60,7 @@
       fontFamily: {
         display: ['"Barlow Condensed"', 'Impact', 'Arial Narrow', 'sans-serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'],
-        serif: ['Newsreader', 'Georgia', 'serif'],
+        serif: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'],  /* sem serifa no portal desde 15/11/2026 */
         mono: ['"JetBrains Mono"', 'ui-monospace', 'Consolas', 'monospace'],
         ig: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', '"Noto Color Emoji"', 'sans-serif']
       }
@@ -117,12 +117,25 @@
     .botao-verde-eb.text-lg, .botao-verde-eb.text-base, .botao-verde-eb.text-sm { font-size: 1.1875rem; line-height: 1.6rem; }
     .botao-verde-eb:hover, .botao-verde-eb:focus-visible { background: var(--eb-green-hover); color: #fff; box-shadow: 0 0 0 1px var(--eb-green-border), 0 0 22px rgba(16, 185, 129, 0.35); }
     /* Grade suíça de fios de 1 px (15/11/2026): as células se separam só por fios contínuos, sem caixa.
-       O fio é o contorno de 1 px de cada célula dentro do vão de 1 px, em cor opaca (o branco a 9% sobre
+       O fio é o contorno de 1 px de cada célula dentro do vão de 1 px, em cor opaca (o branco a 11% sobre
        o carbono), para dois contornos vizinhos não somarem brilho; o container corta as verticais de fora,
        e célula vazia no fim da grade (ou escondida por filtro) fica limpa, sem mancha cinza. */
-    .grade-editorial-eb { display: grid; gap: 1px; overflow: hidden; border-top: 1px solid #1F2025; border-bottom: 1px solid #1F2025; }
-    .grade-editorial-eb > * { background-color: var(--eb-bg-canvas); outline: 1px solid #1F2025; }
+    .grade-editorial-eb { display: grid; gap: 1px; overflow: hidden; border-top: 1px solid #242529; border-bottom: 1px solid #242529; }
+    .grade-editorial-eb > * { background-color: var(--eb-bg-canvas); outline: 1px solid #242529; }
     .grade-editorial-eb > *:focus-visible { outline: 2px solid var(--eb-yellow); outline-offset: -2px; }
+    /* Faixa de seção centralizada entre dois fios, abertura de seção no padrão de revista internacional (15/11/2026) */
+    .faixa-secao-eb { display: flex; align-items: center; justify-content: center; width: 100%; margin: 0; padding: 1.1rem 1rem; border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); background: var(--eb-bg-canvas); font-family: "Barlow Condensed", Impact, sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.24em; color: var(--eb-text-primary); text-align: center; }
+    /* Spread 50/50: painel de capa fixo (sticky) de um lado e seis matérias rolando do outro */
+    .spread-eb { display: grid; border-top: 1px solid #242529; border-bottom: 1px solid #242529; }
+    .spread-eb + .spread-eb { border-top: 0; }
+    .spread-eb > .grade-editorial-eb { border-top: 0; border-bottom: 0; }
+    @media (min-width: 1024px) {
+      .spread-eb { grid-template-columns: 1fr 1fr; }
+      .painel-spread-eb { position: sticky; top: 68px; height: calc(100vh - 68px); align-self: start; }
+      .painel-spread-eb .miniatura-eb { height: 100%; width: auto; max-width: 100%; aspect-ratio: 4 / 5; }
+      .spread-eb.invertido-eb > .painel-spread-eb { order: 2; border-left: 1px solid #242529; }
+      .spread-eb:not(.invertido-eb) > .painel-spread-eb { border-right: 1px solid #242529; }
+    }
     /* Cartões da Revista: fundo carbono, separados só pelos fios da grade; no hover a superfície sobe de leve */
     .cartao-revista { background-color: var(--eb-bg-canvas); transition: background-color .3s ease; }
     a.cartao-revista:hover, a.cartao-revista:focus-visible { background-color: #0E1017; }
@@ -169,7 +182,7 @@
     .materia a:hover { color: var(--eb-yellow); text-decoration-color: var(--eb-yellow); }
     .materia ul { list-style: square; padding-left: 1.4rem; } .materia ol { list-style: decimal; padding-left: 1.4rem; }
     .materia li + li { margin-top: .4rem; }
-    .materia blockquote { border-left: 4px solid var(--eb-yellow); background: var(--eb-bg-elevated); padding: 1rem 1.25rem; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--eb-text-primary); }
+    .materia blockquote { border-left: 4px solid var(--eb-yellow); background: var(--eb-bg-elevated); padding: 1rem 1.25rem; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 500; font-size: 1.3rem; line-height: 1.45; color: var(--eb-text-primary); }
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
@@ -446,7 +459,7 @@
       <div class="mt-6 border-t border-white/15 pt-4">
         <p class="flex flex-wrap items-center gap-3"><span class="selo-amarelo-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Flagras</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">2026</span></p>
         <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-tight [overflow-wrap:anywhere] sm:text-6xl">Audi R8 V10 (4S) de 1.700 whp, preparado pela BK Motorsport e pela Oficina MK Spec, registrado em Araçariguama</h1>
-        <p class="mt-5 font-serif text-xl italic leading-snug text-zinc-700 sm:text-2xl">Unidade com emblema de 1.700 whp e uso diário declarado foi flagrada na beira da Rodovia Castello Branco</p>
+        <p class="mt-5 font-sans font-normal text-xl leading-relaxed text-zinc-300 sm:text-2xl">Unidade com emblema de 1.700 whp e uso diário declarado foi flagrada na beira da Rodovia Castello Branco</p>
         <p class="mt-5 font-display text-sm font-bold uppercase tracking-[0.16em] text-zinc-500">Por Pedro Ponchio · 1 de novembro de 2026 · 3 min de leitura</p>
       </div>
       <aside class="resumo-eb mt-8" aria-label="Resumo da apuração EB">
@@ -617,35 +630,20 @@
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div class="flex flex-wrap items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight text-white">Mais da Revista</h2><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 hover:text-white">Todas as reportagens →</a></div>
         <div class="grade-editorial-eb mt-8 sm:grid-cols-3">
-          <a href="/revista/lamborghini-gallardo-lp550-2-valentino-balboni-arancio-borealis-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lamborghini-gallardo-lp550-2-valentino-balboni-brasilia-frente-tres-quartos-exotics-brazil.jpg" width="1512" height="2016" loading="lazy" decoding="async" alt="Lamborghini Gallardo LP 550-2 Valentino Balboni laranja em vista frontal de três quartos, com faixa branca e dourada sobre o capô, em estacionamento subterrâneo de Brasília, DF"></div>
-            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
-              <div>
-                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-amarela-eb">Flagras<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">14.11.2026</span></p>
-                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">Lamborghini Gallardo LP 550-2 Valentino Balboni em Arancio Borealis, uma das 7 do Brasil, aparece em Brasília</h3>
-              </div>
-              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 3 min</p>
-            </div>
+          <a href="/revista/lamborghini-gallardo-lp550-2-valentino-balboni-arancio-borealis-brasilia/" data-editoria="Flagras" class="cartao-revista group flex flex-col p-4 [overflow-wrap:anywhere] sm:p-6 lg:p-7 ">
+            <div class="miniatura-eb aspect-[4/5] w-full"><img src="/assets/img/carros/lamborghini-gallardo-lp550-2-valentino-balboni-brasilia-frente-tres-quartos-exotics-brazil.jpg" width="1512" height="2016" loading="lazy" decoding="async" alt="Lamborghini Gallardo LP 550-2 Valentino Balboni laranja em vista frontal de três quartos, com faixa branca e dourada sobre o capô, em estacionamento subterrâneo de Brasília, DF"></div>
+            <h3 class="mt-4 font-display text-[22px] font-bold uppercase leading-[1.02] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:text-[24px]">Lamborghini Gallardo LP 550-2 Valentino Balboni em Arancio Borealis, uma das 7 do Brasil, aparece em Brasília</h3>
+            <p class="mt-auto pt-4 font-sans text-[11px] font-medium tracking-[0.06em] text-zinc-500"><span class="font-semibold uppercase tracking-[0.14em] editoria-amarela-eb">Flagras</span><span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="whitespace-nowrap">14.11.2026</span><span class="mx-1.5 text-white/25" aria-hidden="true">·</span><span class="uppercase tracking-[0.1em]">Pedro Ponchio · <span class="whitespace-nowrap">3 min</span></span></p>
           </a>
-          <a href="/revista/denza-z-spider-sao-paulo-testes/" data-editoria="Flagras" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/denza-z-spider-sao-paulo.jpg" width="2052" height="2560" loading="lazy" decoding="async" alt="Denza Z Spider com camuflagem azul e placa verde de fabricante, em testes em São Paulo"></div>
-            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
-              <div>
-                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-amarela-eb">Flagras<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">01.11.2026</span></p>
-                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">Denza Z Spider, o superesportivo elétrico de 1.604 cv da BYD, é flagrado em testes em São Paulo</h3>
-              </div>
-              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 3 min</p>
-            </div>
+          <a href="/revista/denza-z-spider-sao-paulo-testes/" data-editoria="Flagras" class="cartao-revista group flex flex-col p-4 [overflow-wrap:anywhere] sm:p-6 lg:p-7 ">
+            <div class="miniatura-eb aspect-[4/5] w-full"><img src="/assets/img/carros/denza-z-spider-sao-paulo.jpg" width="2052" height="2560" loading="lazy" decoding="async" alt="Denza Z Spider com camuflagem azul e placa verde de fabricante, em testes em São Paulo"></div>
+            <h3 class="mt-4 font-display text-[22px] font-bold uppercase leading-[1.02] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:text-[24px]">Denza Z Spider, o superesportivo elétrico de 1.604 cv da BYD, é flagrado em testes em São Paulo</h3>
+            <p class="mt-auto pt-4 font-sans text-[11px] font-medium tracking-[0.06em] text-zinc-500"><span class="font-semibold uppercase tracking-[0.14em] editoria-amarela-eb">Flagras</span><span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="whitespace-nowrap">01.11.2026</span><span class="mx-1.5 text-white/25" aria-hidden="true">·</span><span class="uppercase tracking-[0.1em]">Pedro Ponchio · <span class="whitespace-nowrap">3 min</span></span></p>
           </a>
-          <a href="/revista/mustang-vira-ao-brasil/" data-editoria="Brasil" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
-            <div class="miniatura-eb solido-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais" class="foto-inteira-eb"></div>
-            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
-              <div>
-                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-verde-eb">Brasil<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">08.11.2017</span></p>
-                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">O Mustang finalmente virá ao Brasil!</h3>
-              </div>
-              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 2 min</p>
-            </div>
+          <a href="/revista/mustang-vira-ao-brasil/" data-editoria="Brasil" class="cartao-revista group flex flex-col p-4 [overflow-wrap:anywhere] sm:p-6 lg:p-7 ">
+            <div class="miniatura-eb solido-eb aspect-[4/5] w-full"><img src="/assets/img/carros/ford-mustang-gt-conversivel-s550-exotics-brazil.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Ford Mustang GT conversível vermelho da geração S550, de capota preta fechada, estacionado sobre um gramado diante de prédios comerciais" class="foto-inteira-eb"></div>
+            <h3 class="mt-4 font-display text-[22px] font-bold uppercase leading-[1.02] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:text-[24px]">O Mustang finalmente virá ao Brasil!</h3>
+            <p class="mt-auto pt-4 font-sans text-[11px] font-medium tracking-[0.06em] text-zinc-500"><span class="font-semibold uppercase tracking-[0.14em] editoria-verde-eb">Brasil</span><span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="whitespace-nowrap">08.11.2017</span><span class="mx-1.5 text-white/25" aria-hidden="true">·</span><span class="uppercase tracking-[0.1em]">Pedro Ponchio · <span class="whitespace-nowrap">2 min</span></span></p>
           </a>
         </div>
       </div>
