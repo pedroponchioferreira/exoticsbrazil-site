@@ -143,8 +143,12 @@
     .filete-eb::after { bottom: 0; } .filete-topo-eb::before { top: 0; }
     .assinatura-eb { background: var(--eb-gradient-signature); }
     /* Selos: amarelo sólido sempre com texto carbono em negrito; verde tonal para dado e Censo */
-    .selo-amarelo-eb { background: var(--eb-yellow); color: var(--eb-text-on-yellow); font-weight: 800; }
-    .selo-verde-eb { background: var(--eb-green-surface); color: var(--eb-green-bright); box-shadow: inset 0 0 0 1px var(--eb-green-border); }
+    /* Desde 15/11/2026 (Quiet Luxury Editorial, pedido dele): selo de abertura de seção é micro-tipografia
+       espaçada com um filete vertical de 2 px na cor, sem caixa acesa. */
+    .selo-amarelo-eb, .selo-verde-eb { background: none; box-shadow: none; padding-left: 0 !important; padding-right: 0 !important; letter-spacing: .2em !important; font-weight: 700; white-space: nowrap; }
+    .selo-amarelo-eb::before, .selo-verde-eb::before { content: ""; display: inline-block; width: 2px; height: 1em; margin-right: .7em; vertical-align: -.12em; background: currentColor; }
+    .selo-amarelo-eb { color: var(--eb-yellow); }
+    .selo-verde-eb { color: var(--eb-green-bright); }
     .selo-editor-eb { background: var(--eb-yellow-surface); color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .editoria-verde-eb { color: var(--eb-green-bright); } .editoria-amarela-eb { color: var(--eb-yellow); }
     /* Botão primário institucional: Verde EB, texto branco em negrito, brilho esmeralda no hover */
@@ -152,14 +156,31 @@
     /* Branco sobre #00A859 dá 3,1:1, então o texto do botão fica sempre no porte de texto grande (WCAG AA) */
     .botao-verde-eb.text-lg, .botao-verde-eb.text-base, .botao-verde-eb.text-sm { font-size: 1.1875rem; line-height: 1.6rem; }
     .botao-verde-eb:hover, .botao-verde-eb:focus-visible { background: var(--eb-green-hover); color: #fff; box-shadow: 0 0 0 1px var(--eb-green-border), 0 0 22px rgba(16, 185, 129, 0.35); }
-    /* Cartões da Revista: superfície que sobe e acende a borda no hover */
-    .cartao-revista { transition: background-color .2s, border-color .2s; }
-    a.cartao-revista:hover, a.cartao-revista:focus-visible { background: var(--eb-bg-elevated); border-color: rgba(16, 185, 129, 0.4); }
+    /* Grade suíça de fios de 1 px (15/11/2026): as células se separam só por fios contínuos, sem caixa.
+       O fio é o contorno de 1 px de cada célula dentro do vão de 1 px, em cor opaca (o branco a 9% sobre
+       o carbono), para dois contornos vizinhos não somarem brilho; o container corta as verticais de fora,
+       e célula vazia no fim da grade (ou escondida por filtro) fica limpa, sem mancha cinza. */
+    .grade-editorial-eb { display: grid; gap: 1px; overflow: hidden; border-top: 1px solid #1F2025; border-bottom: 1px solid #1F2025; }
+    .grade-editorial-eb > * { background-color: var(--eb-bg-canvas); outline: 1px solid #1F2025; }
+    .grade-editorial-eb > *:focus-visible { outline: 2px solid var(--eb-yellow); outline-offset: -2px; }
+    /* Cartões da Revista: fundo carbono, separados só pelos fios da grade; no hover a superfície sobe de leve */
+    .cartao-revista { background-color: var(--eb-bg-canvas); transition: background-color .3s ease; }
+    a.cartao-revista:hover, a.cartao-revista:focus-visible { background-color: #0E1017; }
     .superficie-eb { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); }
     /* Resumo da Apuração EB e citações: filete Amarelo Solar sobre superfície elevada */
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
-    /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
-    .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Faixa de índice editorial (editorias da Revista e da home, marcas do Censo), desde 15/11/2026: itens
+       tipográficos sem caixa; o ativo fica branco, com contador Amarelo Solar e sublinhado fino amarelo. */
+    .indice-eb { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .5rem; border-top: 1px solid rgba(255, 255, 255, 0.10); border-bottom: 1px solid rgba(255, 255, 255, 0.10); padding: .75rem 0; }
+    .item-indice-eb { border-bottom: 2px solid transparent; color: #A9B4C4; transition: color .2s, border-color .2s; }
+    .item-indice-eb:hover, .item-indice-eb:focus-visible { color: var(--eb-text-primary); }
+    .item-indice-eb .contador-eb { margin-left: .25rem; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; font-weight: 400; color: #94A3B8; }
+    .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
+    .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
+    /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
+    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
+    .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
     .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
     .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
@@ -192,11 +213,13 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img, .miniatura-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img, .group:hover .miniatura-eb > span > img, .group:focus-visible .miniatura-eb > span > img { transform: scale(1.03); }
-    .miniatura-eb.diptico-eb { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
-    .miniatura-eb.diptico-eb > span { position: relative; overflow: hidden; min-height: 0; }
-    .miniatura-eb.solido-eb { background: #090A0F; }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
+    .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
+    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
     .item-beta-eb { color: #94A3B8; transition: color .2s; }
@@ -262,11 +285,11 @@
         <li><a href="/studio/" class="item-beta-eb whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg is-ativo" aria-current="page" aria-label="Studio (beta)">Studio<span class="selo-beta-eb" aria-hidden="true">Beta</span></a></li>
       </ul>
       <div class="flex items-center gap-2">
-        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border-2 border-zinc-700 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border border-white/15 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/></svg>
         </a>
         <a href="/#comercial" class="botao-verde-eb hidden h-9 items-center px-4 font-display text-lg uppercase tracking-wide sm:inline-flex">Anuncie</a>
-        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border-2 border-zinc-700 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border border-white/15 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </nav>
     <div id="menu-mobile" class="hidden border-t border-zinc-800 bg-carbon lg:hidden">

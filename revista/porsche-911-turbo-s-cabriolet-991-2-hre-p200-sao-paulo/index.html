@@ -103,8 +103,12 @@
     .filete-eb::after { bottom: 0; } .filete-topo-eb::before { top: 0; }
     .assinatura-eb { background: var(--eb-gradient-signature); }
     /* Selos: amarelo sólido sempre com texto carbono em negrito; verde tonal para dado e Censo */
-    .selo-amarelo-eb { background: var(--eb-yellow); color: var(--eb-text-on-yellow); font-weight: 800; }
-    .selo-verde-eb { background: var(--eb-green-surface); color: var(--eb-green-bright); box-shadow: inset 0 0 0 1px var(--eb-green-border); }
+    /* Desde 15/11/2026 (Quiet Luxury Editorial, pedido dele): selo de abertura de seção é micro-tipografia
+       espaçada com um filete vertical de 2 px na cor, sem caixa acesa. */
+    .selo-amarelo-eb, .selo-verde-eb { background: none; box-shadow: none; padding-left: 0 !important; padding-right: 0 !important; letter-spacing: .2em !important; font-weight: 700; white-space: nowrap; }
+    .selo-amarelo-eb::before, .selo-verde-eb::before { content: ""; display: inline-block; width: 2px; height: 1em; margin-right: .7em; vertical-align: -.12em; background: currentColor; }
+    .selo-amarelo-eb { color: var(--eb-yellow); }
+    .selo-verde-eb { color: var(--eb-green-bright); }
     .selo-editor-eb { background: var(--eb-yellow-surface); color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
     .editoria-verde-eb { color: var(--eb-green-bright); } .editoria-amarela-eb { color: var(--eb-yellow); }
     /* Botão primário institucional: Verde EB, texto branco em negrito, brilho esmeralda no hover */
@@ -112,14 +116,31 @@
     /* Branco sobre #00A859 dá 3,1:1, então o texto do botão fica sempre no porte de texto grande (WCAG AA) */
     .botao-verde-eb.text-lg, .botao-verde-eb.text-base, .botao-verde-eb.text-sm { font-size: 1.1875rem; line-height: 1.6rem; }
     .botao-verde-eb:hover, .botao-verde-eb:focus-visible { background: var(--eb-green-hover); color: #fff; box-shadow: 0 0 0 1px var(--eb-green-border), 0 0 22px rgba(16, 185, 129, 0.35); }
-    /* Cartões da Revista: superfície que sobe e acende a borda no hover */
-    .cartao-revista { transition: background-color .2s, border-color .2s; }
-    a.cartao-revista:hover, a.cartao-revista:focus-visible { background: var(--eb-bg-elevated); border-color: rgba(16, 185, 129, 0.4); }
+    /* Grade suíça de fios de 1 px (15/11/2026): as células se separam só por fios contínuos, sem caixa.
+       O fio é o contorno de 1 px de cada célula dentro do vão de 1 px, em cor opaca (o branco a 9% sobre
+       o carbono), para dois contornos vizinhos não somarem brilho; o container corta as verticais de fora,
+       e célula vazia no fim da grade (ou escondida por filtro) fica limpa, sem mancha cinza. */
+    .grade-editorial-eb { display: grid; gap: 1px; overflow: hidden; border-top: 1px solid #1F2025; border-bottom: 1px solid #1F2025; }
+    .grade-editorial-eb > * { background-color: var(--eb-bg-canvas); outline: 1px solid #1F2025; }
+    .grade-editorial-eb > *:focus-visible { outline: 2px solid var(--eb-yellow); outline-offset: -2px; }
+    /* Cartões da Revista: fundo carbono, separados só pelos fios da grade; no hover a superfície sobe de leve */
+    .cartao-revista { background-color: var(--eb-bg-canvas); transition: background-color .3s ease; }
+    a.cartao-revista:hover, a.cartao-revista:focus-visible { background-color: #0E1017; }
     .superficie-eb { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); }
     /* Resumo da Apuração EB e citações: filete Amarelo Solar sobre superfície elevada */
     .resumo-eb { background: var(--eb-bg-elevated); border-left: 4px solid var(--eb-yellow); }
-    /* Filtro ativo (editoria da Revista, marca do Censo): Amarelo Solar com texto carbono, contador incluído */
-    .filtro-editoria[aria-pressed="true"] span, .filtro-marca[aria-pressed="true"] span { color: var(--eb-text-on-yellow); }
+    /* Faixa de índice editorial (editorias da Revista e da home, marcas do Censo), desde 15/11/2026: itens
+       tipográficos sem caixa; o ativo fica branco, com contador Amarelo Solar e sublinhado fino amarelo. */
+    .indice-eb { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .5rem; border-top: 1px solid rgba(255, 255, 255, 0.10); border-bottom: 1px solid rgba(255, 255, 255, 0.10); padding: .75rem 0; }
+    .item-indice-eb { border-bottom: 2px solid transparent; color: #A9B4C4; transition: color .2s, border-color .2s; }
+    .item-indice-eb:hover, .item-indice-eb:focus-visible { color: var(--eb-text-primary); }
+    .item-indice-eb .contador-eb { margin-left: .25rem; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; font-weight: 400; color: #94A3B8; }
+    .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
+    .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
+    /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
+    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
+    .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
     .selo-ampliar-eb { background: var(--eb-bg-glass); color: var(--eb-text-primary); box-shadow: inset 0 0 0 1px var(--eb-border-strong); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
     .galeria-foto:hover .selo-ampliar-eb, .galeria-foto:focus-visible .selo-ampliar-eb { color: var(--eb-yellow); box-shadow: inset 0 0 0 1px var(--eb-yellow-border); }
@@ -152,11 +173,13 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img, .miniatura-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .5s ease; }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img, .group:hover .miniatura-eb > span > img, .group:focus-visible .miniatura-eb > span > img { transform: scale(1.03); }
-    .miniatura-eb.diptico-eb { display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
-    .miniatura-eb.diptico-eb > span { position: relative; overflow: hidden; min-height: 0; }
-    .miniatura-eb.solido-eb { background: #090A0F; }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
+    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
+    .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
+    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
     .item-beta-eb { color: #94A3B8; transition: color .2s; }
@@ -393,11 +416,11 @@
         <li><a href="/studio/" class="item-beta-eb whitespace-nowrap font-display text-base font-bold uppercase tracking-wide xl:text-lg" aria-label="Studio (beta)">Studio<span class="selo-beta-eb" aria-hidden="true">Beta</span></a></li>
       </ul>
       <div class="flex items-center gap-2">
-        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border-2 border-zinc-700 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
+        <a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="hidden h-9 w-9 place-items-center border border-white/15 text-white transition-colors hover:border-white sm:grid" aria-label="Instagram do Exotics Brazil">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/></svg>
         </a>
         <a href="/#comercial" class="botao-verde-eb hidden h-9 items-center px-4 font-display text-lg uppercase tracking-wide sm:inline-flex">Anuncie</a>
-        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border-2 border-zinc-700 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="menu-btn" type="button" class="grid h-9 w-9 place-items-center border border-white/15 text-white lg:hidden" aria-controls="menu-mobile" aria-expanded="false" aria-label="Abrir menu"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </nav>
     <div id="menu-mobile" class="hidden border-t border-zinc-800 bg-carbon lg:hidden">
@@ -436,7 +459,7 @@
   <main>
     <article data-eb-materia data-titulo="Porsche 911 Turbo S Cabriolet (991.2) prata com rodas HRE P200 de cubo rápido aparece em São Paulo" data-editoria="Flagras" data-autor="Pedro Ponchio" class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500"><a href="/" class="hover:text-amarelo">Exotics Brazil</a> / <a href="/revista/" class="hover:text-amarelo">Revista</a></nav>
-      <div class="mt-6 border-t-4 border-ink pt-4">
+      <div class="mt-6 border-t border-white/15 pt-4">
         <p class="flex flex-wrap items-center gap-3"><span class="selo-amarelo-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Flagras</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">2026</span></p>
         <h1 class="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-tight [overflow-wrap:anywhere] sm:text-6xl">Porsche 911 Turbo S Cabriolet (991.2) prata com rodas HRE P200 de cubo rápido aparece em São Paulo</h1>
         <p class="mt-5 font-serif text-xl italic leading-snug text-zinc-700 sm:text-2xl">Uma das seis unidades do TBS Cabrio no Brasil, a única em prata, troca a roda escurecida de fábrica por um aro HRE P200 claro, e a decisão do dono só era possível por causa do cubo central</p>
@@ -446,7 +469,7 @@
         <p class="flex items-center gap-2 px-4 pt-3 font-display text-sm font-bold uppercase tracking-[0.14em] text-amarelo"><span class="inline-block h-2.5 w-2.5 bg-amarelo" aria-hidden="true"></span>Resumo da apuração EB</p>
         <blockquote class="capsula-eb resumo-apuracao-eb px-4 pb-4 pt-2 text-[16px] leading-relaxed text-ink" cite="https://www.exoticsbrazil.com.br/revista/porsche-911-turbo-s-cabriolet-991-2-hre-p200-sao-paulo/" data-source="Exotics Brazil (@exoticsbrazil) - https://www.exoticsbrazil.com.br"><p>Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 6 Porsche 911 Turbo S Cabriolet (991.2) no Brasil, e esta, flagrada em São Paulo, é a única em prata, com capota vermelha, pinças amarelas do freio cerâmico e rodas HRE P200 de cubo rápido em lugar das escurecidas de fábrica.</p></blockquote>
       </aside>
-      <figure class="mt-10 border-2 border-ink bg-black mx-auto max-w-xl">
+      <figure class="mt-10 border border-white/15 bg-black mx-auto max-w-xl">
         <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="0" data-capa="1" aria-label="Ampliar a foto de capa, foto 1 de 12">
           <img src="/assets/img/carros/porsche-911-turbo-s-cabriolet-991-2-sao-paulo-exotics-brazil-8.jpg" width="1125" height="2000" alt="Porsche 911 Turbo S Cabriolet (991.2) prata de capota vermelha e rodas claras HRE P200, vista em três quartos frontal sob a cobertura de um posto em São Paulo" class="foto-carro">
           <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
@@ -518,7 +541,7 @@
       </div>
 
 
-      <section class="galeria-eb mt-14 border-t-4 border-ink pt-4" aria-label="Galeria de fotos">
+      <section class="galeria-eb mt-14 border-t border-white/15 pt-4" aria-label="Galeria de fotos">
         <div class="flex items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight">Galeria</h2><p class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-500">7 fotos · toque para ampliar</p></div>
         <div class="mt-6 columns-1 gap-4 sm:columns-2">
           <figure class="mb-4 break-inside-avoid">
@@ -657,32 +680,38 @@
     })();
   </script>
     </article>
-    <section class="border-t-4 border-ink bg-ink" aria-label="Mais da Revista">
+    <section class="border-t border-white/15 bg-carbon" aria-label="Mais da Revista">
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div class="flex flex-wrap items-end justify-between gap-4"><h2 class="font-display text-4xl font-black uppercase tracking-tight text-white">Mais da Revista</h2><a href="/revista/" class="font-display text-lg font-bold uppercase tracking-wide text-zinc-300 hover:text-white">Todas as reportagens →</a></div>
-        <div class="mt-8 grid border-l-2 border-t-2 border-ink bg-ink sm:grid-cols-3">
-          <a href="/revista/lamborghini-gallardo-lp550-2-valentino-balboni-arancio-borealis-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
+        <div class="grade-editorial-eb mt-8 sm:grid-cols-3">
+          <a href="/revista/lamborghini-gallardo-lp550-2-valentino-balboni-arancio-borealis-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/lamborghini-gallardo-lp550-2-valentino-balboni-brasilia-frente-tres-quartos-exotics-brazil.jpg" width="1512" height="2016" loading="lazy" decoding="async" alt="Lamborghini Gallardo LP 550-2 Valentino Balboni laranja em vista frontal de três quartos, com faixa branca e dourada sobre o capô, em estacionamento subterrâneo de Brasília, DF"></div>
-            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 14 de novembro de 2026</span></p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Lamborghini Gallardo LP 550-2 Valentino Balboni em Arancio Borealis, uma das 7 do Brasil, aparece em Brasília</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
+            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
+              <div>
+                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-amarela-eb">Flagras<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">14.11.2026</span></p>
+                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">Lamborghini Gallardo LP 550-2 Valentino Balboni em Arancio Borealis, uma das 7 do Brasil, aparece em Brasília</h3>
+              </div>
+              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 3 min</p>
             </div>
           </a>
-          <a href="/revista/porsche-911-gt3-touring-992-2-cream-white-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
+          <a href="/revista/porsche-911-gt3-touring-992-2-cream-white-brasilia/" data-editoria="Flagras" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/porsche-911-gt3-touring-992-2-cream-white-brasilia-exotics-brazil-4.jpg" width="1500" height="2000" loading="lazy" decoding="async" alt="Porsche 911 GT3 Touring 992.2 em Cream White com rodas douradas, em três quartos frontais diante de um painel Porsche, Brasília, DF"></div>
-            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 14 de novembro de 2026</span></p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Porsche 911 GT3 Touring (992.2) em PTS Cream White, um branco discreto, aparece em Brasília</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 3 min</p>
+            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
+              <div>
+                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-amarela-eb">Flagras<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">14.11.2026</span></p>
+                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">Porsche 911 GT3 Touring (992.2) em PTS Cream White, um branco discreto, aparece em Brasília</h3>
+              </div>
+              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 3 min</p>
             </div>
           </a>
-          <a href="/revista/ferrari-f40-museu-carde-raduno-ferrari-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 border border-zinc-800 bg-paper p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
+          <a href="/revista/ferrari-f40-museu-carde-raduno-ferrari-sao-paulo/" data-editoria="Flagras" class="cartao-revista group flex gap-4 p-3 [overflow-wrap:anywhere] sm:flex-col sm:gap-0 sm:p-0 ">
             <div class="miniatura-eb aspect-[4/5] w-24 shrink-0 sm:w-full"><img src="/assets/img/carros/ferrari-f40-sao-paulo-exotics-brazil-8.jpg" width="1334" height="1999" loading="lazy" decoding="async" alt="Ferrari F40 vermelha em vista frontal três quartos, com adesivo branco número 45 na porta, rodas de cinco raios polidas e uma Ferrari amarela ao lado, em rua arborizada de São Paulo"></div>
-            <div class="flex min-w-0 flex-1 flex-col sm:p-6">
-              <p class="font-display text-xs font-bold uppercase tracking-[0.16em] editoria-amarela-eb">Flagras <span class="text-zinc-500">· 8 de novembro de 2026</span></p>
-              <h3 class="mt-2 font-display text-2xl font-black uppercase leading-[0.92] tracking-tight text-ink group-hover:text-amarelo sm:mt-3 sm:text-3xl">Ferrari F40 do Museu CARDE desfila de placa verde entre 64 Ferraris no Raduno de São Paulo</h3>
-              <p class="mt-auto pt-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 sm:pt-4">Pedro Ponchio · 4 min</p>
+            <div class="flex min-w-0 flex-1 flex-col justify-between sm:p-5 lg:p-6">
+              <div>
+                <p class="font-display text-[11px] font-bold uppercase tracking-[0.2em] editoria-amarela-eb">Flagras<span class="mx-1.5 text-white/25" aria-hidden="true">—</span><span class="text-zinc-500">08.11.2026</span></p>
+                <h3 class="mt-2 font-display text-xl font-bold uppercase leading-[1.06] tracking-[0.01em] text-ink transition-colors group-hover:text-amarelo sm:mt-3 sm:text-[22px]">Ferrari F40 do Museu CARDE desfila de placa verde entre 64 Ferraris no Raduno de São Paulo</h3>
+              </div>
+              <p class="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">Pedro Ponchio · 4 min</p>
             </div>
           </a>
         </div>
