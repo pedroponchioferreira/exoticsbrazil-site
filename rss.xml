@@ -6,7 +6,7 @@
     <atom:link href="https://www.exoticsbrazil.com.br/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Reportagens especiais, dossiês de censo nacional, história automotiva e análises técnicas assinadas pela redação do Exotics Brazil (@exoticsbrazil), que mantém o Censo EB.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Sat, 14 Nov 2026 18:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:00:00 -0300</lastBuildDate>
     <image><url>https://www.exoticsbrazil.com.br/assets/img/identidade/icone-192.png</url><title>Revista Exotics Brazil</title><link>https://www.exoticsbrazil.com.br/revista/</link></image>
     <item>
       <title>Lamborghini Gallardo LP 550-2 Valentino Balboni em Arancio Borealis, uma das 7 do Brasil, aparece em Brasília</title>
@@ -2436,7 +2436,7 @@
       <pubDate>Mon, 02 Nov 2026 09:00:00 -0300</pubDate>
       <dc:creator>Pedro Ponchio</dc:creator>
       <category>Flagras</category>
-      <description>Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico e já tem unidades emplacadas no país</description>
+      <description>Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico, e as duas unidades emplacadas no país, em Joinville, pertencem ao mesmo proprietário</description>
       <enclosure url="https://www.exoticsbrazil.com.br/assets/img/carros/chevrolet-corvette-zr1x-joinville-exotics-brazil.jpg" length="704212" type="image/jpeg"/>
       <content:encoded><![CDATA[<p>O Chevrolet Corvette ZR1-X existe no Brasil, e isso ainda é desconhecido de muita gente. É a versão mais potente da história do Corvette, um C8 de motor central com V8 5.5 biturbo atrás e um motor elétrico no eixo dianteiro, que somam 1.250 cv combinados. A Chevrolet nunca vendeu o modelo oficialmente no país, e as unidades que rodam por aqui chegaram por importação independente.</p>
 <h2>O que é o ZR1-X</h2>
@@ -2445,14 +2445,27 @@
 <p>O ZR1-X junta duas receitas que a Chevrolet já tinha separado na família C8. O V8 LT7 é a versão com dois turbos do V8 aspirado de virabrequim plano criado para o Z06, o mesmo tipo de virabrequim usado pelas Ferrari de motor central, que deixa o motor girar alto e soar agudo. O motor elétrico dianteiro vem do E-Ray, o primeiro Corvette híbrido, e transforma o carro num tração integral sem nenhum eixo cardã ligando a frente à traseira: quem coordena os dois lados é a eletrônica.</p>
 <p>Essa divisão explica um detalhe curioso dos números. O quarto de milha em 8,675 segundos termina a cerca de 256 km/h, logo abaixo do ponto em que o motor elétrico se desliga, então a arrancada inteira acontece com os dois motores puxando juntos.</p>
 <figure class="border-2 border-ink bg-black mx-auto max-w-md">
-  <img src="https://www.exoticsbrazil.com.br/assets/img/carros/chevrolet-corvette-zr1x-joinville-exotics-brazil-2.jpg" width="1500" height="1999" alt="Detalhe da asa traseira de fibra de carbono e da entrada de ar lateral" loading="lazy" class="foto-carro">
+  <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="6" aria-label="Ampliar foto: Detalhe da asa traseira de fibra de carbono e da entrada de ar lateral">
+    <img src="https://www.exoticsbrazil.com.br/assets/img/carros/chevrolet-corvette-zr1x-joinville-exotics-brazil-2.jpg" width="1500" height="1999" alt="Detalhe da asa traseira de fibra de carbono e da entrada de ar lateral" loading="lazy" class="foto-carro">
+    <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+  </button>
   <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Asa de carbono e entrada de ar lateral · 📷 <a href="https://www.instagram.com/exoticsjoinville/" target="_blank" rel="noopener">@exoticsjoinville</a></figcaption>
 </figure>
 <h2>A unidade das fotos</h2>
 <p>Flagrada em Joinville, SC, a unidade está pintada em Red Mist Metallic Tintcoat, um vermelho de tom vinho, e aparece de teto aberto, com asa traseira de fibra de carbono, entradas de ar laterais e divisor dianteiro também em carbono. As rodas são forjadas, pretas, calçadas com pneus Michelin Pilot Sport Cup 2 R, de uso em pista.</p>
+<h2>Os dois ZR1-X lado a lado</h2>
+<p>Os dois ZR1-X emplacados no país pertencem ao mesmo proprietário, e uma foto feita em Joinville mostra as duas unidades juntas, a Red Mist Metallic Tintcoat no meio e a laranja Sebring Orange Tintcoat à direita, com uma Ferrari 296 GTS preta à esquerda, sob um céu de nuvens carregadas. As duas têm a mesma frente baixa, com entradas de ar enormes, e só a cor separa uma da outra.</p>
+<figure class="border-2 border-ink bg-black mx-auto max-w-md">
+  <button type="button" class="galeria-foto relative block w-full cursor-zoom-in bg-black" data-indice="7" aria-label="Ampliar foto: Dois Chevrolet Corvette ZR1X, um vinho em Red Mist Metallic Tintcoat e um laranja em Sebring Orange Tintcoat, estacionados lado a lado ao lado de uma Ferrari 296 GTS preta, sob céu de nuvens carregadas, em Joinville, SC">
+    <img src="https://www.exoticsbrazil.com.br/assets/img/carros/chevrolet-corvette-zr1x-ferrari-296-gts-joinville-exotics-brazil.jpg" width="1549" height="1936" alt="Dois Chevrolet Corvette ZR1X, um vinho em Red Mist Metallic Tintcoat e um laranja em Sebring Orange Tintcoat, estacionados lado a lado ao lado de uma Ferrari 296 GTS preta, sob céu de nuvens carregadas, em Joinville, SC" loading="lazy" class="foto-carro">
+    <span class="selo-ampliar-eb pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-[0.14em]" aria-hidden="true">🔍 Toque para ampliar</span>
+  </button>
+  <figcaption class="bg-paper px-4 py-3 font-display text-xs font-semibold uppercase leading-relaxed tracking-[0.12em] text-zinc-600">Os dois ZR1-X do Brasil e uma Ferrari 296 GTS · Joinville, SC · 📷 <a href="https://www.instagram.com/tiago_hagedorn/" target="_blank" rel="noopener">@tiago_hagedorn</a></figcaption>
+</figure>
+<p>A Ferrari entra na conta por um motivo mecânico, porque os três carros são híbridos. Cada Corvette soma 1.250 cv e a 296 GTS entrega 830 cv combinados, o que dá 3.330 cv em três vagas seguidas. A diferença está na tomada: a Ferrari é um híbrido plug-in, e o ZR1-X dispensa o plugue, já que a bateria de 1,9 kWh se recarrega sozinha, na frenagem e pelo motor da frente.</p>
 <h2>De sonho antigo a carro de série</h2>
 <p>O motor central no Corvette é uma ideia quase tão antiga quanto o próprio carro. Zora Arkus-Duntov, o engenheiro que se tornou o pai do Corvette esportivo, defendeu durante décadas que o modelo deveria ter o motor atrás do motorista, e a Chevrolet construiu vários protótipos nessa direção. Um deles, o CERV III, de 1990, já tinha motor central, V8 biturbo e tração integral, mas nunca foi vendido. O sonho só virou carro de série em 2020, com a oitava geração, a C8, e o ZR1-X é a forma mais extrema dessa ideia, 36 anos depois do protótipo.</p>
-<p>O nome ZR1 também tem história: o ZR-1 da geração C4, de 1990, usava um V8 de quatro válvulas por cilindro desenvolvido com a Lotus e ganhou o apelido de rei da colina.</p>
+<p>O nome ZR1 também tem história. Ele nasceu como código de opcional do Corvette de terceira geração, sobre o motor LT-1, e só 53 carros saíram da fábrica com ele entre 1970 e 1972. O nome voltou em 1990, no ZR-1 da geração C4, que usava um V8 de quatro válvulas por cilindro desenvolvido com a Lotus e ganhou o apelido de rei da colina, e reapareceu em 2009, 2019 e 2025, sempre no topo da linha.</p>
 <h2>Contexto brasileiro</h2>
 <p>O Corvette é o líder da importação independente de esportivos no país, com 138 unidades emplacadas em 2025 e o 7º lugar entre os esportivos mais vendidos do Brasil. Sem rede oficial da Chevrolet, a reposição de peças e de pintura de fábrica depende de quem importou o carro.</p>
 <aside class="ficha border-2 border-ink bg-white" aria-label="Ficha técnica: Chevrolet Corvette ZR1-X">
@@ -2465,14 +2478,14 @@
     <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">0-100 km/h</dt><dd class="text-right">menos de 2s</dd></div>
     <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Tração</dt><dd class="text-right">AWD eletrificado</dd></div>
     <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Câmbio</dt><dd class="text-right">DCT 8 velocidades</dd></div>
-    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Cor</dt><dd class="text-right">Red Mist Metallic Tintcoat</dd></div>
+    <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Cor</dt><dd class="text-right">Red Mist Metallic Tintcoat e Sebring Orange Tintcoat</dd></div>
     <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Peso</dt><dd class="text-right">cerca de 1.775 kg</dd></div>
     <div class="flex justify-between gap-4 py-2 border-b border-zinc-200"><dt class="shrink-0 text-zinc-500">Produção</dt><dd class="text-right">2026–presente</dd></div>
     <div class="flex justify-between gap-4 py-2"><dt class="shrink-0 font-medium text-rosso">Peso/Potência</dt><dd class="text-right font-medium text-rosso">1,42kg/cv</dd></div>
   </dl>
 </aside>
 <h2>Quantas existem no país</h2>
-<p>Até 1º de novembro de 2026, o <a href="https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8">Censo EB</a> registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC: esta, em Red Mist Metallic Tintcoat, e outra em laranja Sebring Orange Tintcoat. Entre os esportivos americanos do levantamento, ele divide espaço com os 18 <a href="https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170">Dodge Challenger SRT Demon 170</a>, mostrados na reportagem sobre o <a href="https://www.exoticsbrazil.com.br/revista/dodge-challenger-srt-demon-170-rio-de-janeiro/">Demon 170 vermelho do Rio de Janeiro</a>, e com os 14 <a href="https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao">Camaro ZL1</a>, o outro Chevrolet de alto desempenho contado no Censo.</p>]]></content:encoded>
+<p>Até 16 de novembro de 2026, o <a href="https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8">Censo EB</a> registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC e do mesmo proprietário: uma em Red Mist Metallic Tintcoat e outra em laranja Sebring Orange Tintcoat. Entre os esportivos americanos do levantamento, ele divide espaço com os 18 <a href="https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170">Dodge Challenger SRT Demon 170</a>, mostrados na reportagem sobre o <a href="https://www.exoticsbrazil.com.br/revista/dodge-challenger-srt-demon-170-rio-de-janeiro/">Demon 170 vermelho do Rio de Janeiro</a>, e com os 14 <a href="https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao">Camaro ZL1</a>, o outro Chevrolet de alto desempenho contado no Censo.</p>]]></content:encoded>
     </item>
     <item>
       <title>BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília</title>

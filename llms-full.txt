@@ -83,7 +83,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Bugatti Chiron Sport: 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Único Bugatti moderno do Brasil. Em São Paulo, chegou em 2024 por importação independente. Fonte: https://www.exoticsbrazil.com.br/censo/#bugatti-chiron-sport
 - Cadillac CTS-V Coupé: 11 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe
 - Chevrolet Camaro ZL1 (quinta geração): 14 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-camaro-zl1-quinta-geracao
-- Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 1º de novembro de 2026, ambas em Joinville, SC: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
+- Chevrolet Corvette ZR1-X (C8): 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Duas unidades emplacadas no país em 16 de novembro de 2026, ambas em Joinville, SC e do mesmo proprietário: uma Red Mist Metallic Tintcoat e uma Sebring Orange Tintcoat. Fonte: https://www.exoticsbrazil.com.br/censo/#chevrolet-corvette-zr1-x-c8
 - Dodge Challenger SRT Demon 170: 18 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Importação independente, sem venda oficial no país. Número em 03/11/2026, ainda pode subir. Produção global de no máximo 3.300 unidades. Fonte: https://www.exoticsbrazil.com.br/censo/#dodge-challenger-srt-demon-170
 - Ferrari 296 Speciale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). A 8ª do Brasil é a unidade vermelha em Rosso Supercar, a cor de lançamento do F80, de São Paulo, chegada por importação oficial. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-296-speciale
 - Ferrari 360 Challenge Stradale: 8 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Sete em Rosso Scuderia e uma em Nero Daytona. Uma das vermelhas foi repintada de azul. Fonte: https://www.exoticsbrazil.com.br/censo/#ferrari-360-challenge-stradale
@@ -1572,9 +1572,9 @@ Ficha técnica do Aston Martin DBS 770 Ultimate Coupé, segundo a apuração do 
 ### Corvette ZR1-X: o híbrido de 1.250 cv da Chevrolet já roda no Brasil
 
 https://www.exoticsbrazil.com.br/revista/chevrolet-corvette-zr1x-joinville/ · Flagras · por Pedro Ponchio · publicado em 2 de novembro de 2026
-Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico e já tem unidades emplacadas no país
+Versão mais potente da história do Corvette, o ZR1-X combina V8 biturbo e motor elétrico, e as duas unidades emplacadas no país, em Joinville, pertencem ao mesmo proprietário
 
-Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Chevrolet Corvette ZR1-X, um C8 híbrido de 1.250 cv que a Chevrolet não vende oficialmente no Brasil, já roda no país. Em 1º de novembro de 2026 há duas unidades emplacadas, ambas em Joinville, SC.
+Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Chevrolet Corvette ZR1-X, um C8 híbrido de 1.250 cv que a Chevrolet não vende oficialmente no Brasil, já roda no país. Em 16 de novembro de 2026 há duas unidades emplacadas, ambas em Joinville, SC, e as duas pertencem ao mesmo proprietário.
 
 O Chevrolet Corvette ZR1-X existe no Brasil, e isso ainda é desconhecido de muita gente. É a versão mais potente da história do Corvette, um C8 de motor central com V8 5.5 biturbo atrás e um motor elétrico no eixo dianteiro, que somam 1.250 cv combinados. A Chevrolet nunca vendeu o modelo oficialmente no país, e as unidades que rodam por aqui chegaram por importação independente.
 
@@ -1592,11 +1592,17 @@ Essa divisão explica um detalhe curioso dos números. O quarto de milha em 8,67
 
 Flagrada em Joinville, SC, a unidade está pintada em Red Mist Metallic Tintcoat, um vermelho de tom vinho, e aparece de teto aberto, com asa traseira de fibra de carbono, entradas de ar laterais e divisor dianteiro também em carbono. As rodas são forjadas, pretas, calçadas com pneus Michelin Pilot Sport Cup 2 R, de uso em pista.
 
+## Os dois ZR1-X lado a lado
+
+Os dois ZR1-X emplacados no país pertencem ao mesmo proprietário, e uma foto feita em Joinville mostra as duas unidades juntas, a Red Mist Metallic Tintcoat no meio e a laranja Sebring Orange Tintcoat à direita, com uma Ferrari 296 GTS preta à esquerda, sob um céu de nuvens carregadas. As duas têm a mesma frente baixa, com entradas de ar enormes, e só a cor separa uma da outra.
+
+A Ferrari entra na conta por um motivo mecânico, porque os três carros são híbridos. Cada Corvette soma 1.250 cv e a 296 GTS entrega 830 cv combinados, o que dá 3.330 cv em três vagas seguidas. A diferença está na tomada: a Ferrari é um híbrido plug-in, e o ZR1-X dispensa o plugue, já que a bateria de 1,9 kWh se recarrega sozinha, na frenagem e pelo motor da frente.
+
 ## De sonho antigo a carro de série
 
 O motor central no Corvette é uma ideia quase tão antiga quanto o próprio carro. Zora Arkus-Duntov, o engenheiro que se tornou o pai do Corvette esportivo, defendeu durante décadas que o modelo deveria ter o motor atrás do motorista, e a Chevrolet construiu vários protótipos nessa direção. Um deles, o CERV III, de 1990, já tinha motor central, V8 biturbo e tração integral, mas nunca foi vendido. O sonho só virou carro de série em 2020, com a oitava geração, a C8, e o ZR1-X é a forma mais extrema dessa ideia, 36 anos depois do protótipo.
 
-O nome ZR1 também tem história: o ZR-1 da geração C4, de 1990, usava um V8 de quatro válvulas por cilindro desenvolvido com a Lotus e ganhou o apelido de rei da colina.
+O nome ZR1 também tem história. Ele nasceu como código de opcional do Corvette de terceira geração, sobre o motor LT-1, e só 53 carros saíram da fábrica com ele entre 1970 e 1972. O nome voltou em 1990, no ZR-1 da geração C4, que usava um V8 de quatro válvulas por cilindro desenvolvido com a Lotus e ganhou o apelido de rei da colina, e reapareceu em 2009, 2019 e 2025, sempre no topo da linha.
 
 ## Contexto brasileiro
 
@@ -1604,9 +1610,9 @@ O Corvette é o líder da importação independente de esportivos no país, com 
 
 ## Quantas existem no país
 
-Até 1º de novembro de 2026, o Censo EB registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC: esta, em Red Mist Metallic Tintcoat, e outra em laranja Sebring Orange Tintcoat. Entre os esportivos americanos do levantamento, ele divide espaço com os 18 Dodge Challenger SRT Demon 170, mostrados na reportagem sobre o Demon 170 vermelho do Rio de Janeiro, e com os 14 Camaro ZL1, o outro Chevrolet de alto desempenho contado no Censo.
+Até 16 de novembro de 2026, o Censo EB registra duas unidades do Corvette ZR1-X emplacadas no Brasil, as duas em Joinville, SC e do mesmo proprietário: uma em Red Mist Metallic Tintcoat e outra em laranja Sebring Orange Tintcoat. Entre os esportivos americanos do levantamento, ele divide espaço com os 18 Dodge Challenger SRT Demon 170, mostrados na reportagem sobre o Demon 170 vermelho do Rio de Janeiro, e com os 14 Camaro ZL1, o outro Chevrolet de alto desempenho contado no Censo.
 
-Ficha técnica do Chevrolet Corvette ZR1-X, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 5.5L biturbo LT7 (flat-plane) + elétrico no eixo dianteiro; Potência: 1.250cv combinados (1.064cv V8 + 186cv elétrico); Torque: 114,5 kgfm (V8) + 20,1 kgfm (elétrico); 0-100 km/h: menos de 2s; Tração: AWD eletrificado; Câmbio: DCT 8 velocidades; Cor: Red Mist Metallic Tintcoat; Peso: cerca de 1.775 kg; Produção: 2026–presente; Peso/Potência: 1,42kg/cv.
+Ficha técnica do Chevrolet Corvette ZR1-X, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: V8 5.5L biturbo LT7 (flat-plane) + elétrico no eixo dianteiro; Potência: 1.250cv combinados (1.064cv V8 + 186cv elétrico); Torque: 114,5 kgfm (V8) + 20,1 kgfm (elétrico); 0-100 km/h: menos de 2s; Tração: AWD eletrificado; Câmbio: DCT 8 velocidades; Cor: Red Mist Metallic Tintcoat e Sebring Orange Tintcoat; Peso: cerca de 1.775 kg; Produção: 2026–presente; Peso/Potência: 1,42kg/cv.
 
 ### BMW M3 Competition (G80) em Dravit Grey, flagrada em Brasília
 
