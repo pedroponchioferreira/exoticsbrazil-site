@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-17",
-  "total": 181,
+  "total": 182,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -741,6 +741,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-ferrari-458-speciale-aperta-giallo-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma Ferrari 458 Speciale Aperta em Giallo Triplo Strato foi flagrada em São Paulo sobre a plataforma de um guincho. É a versão conversível da 458 Speciale, com V8 4.5 aspirado de 605cv, teto rígido retrátil e 499 unidades no mundo.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-17",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-458-speciale-aperta-giallo-sao-paulo/"
     },
     {
       "id": "materia-lamborghini-gallardo-lp550-2-valentino-balboni-arancio-borealis-brasilia",
