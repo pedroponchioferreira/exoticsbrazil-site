@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-18",
-  "total": 704,
+  "total": 717,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -133,6 +133,14 @@
       "valor": 2,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#alfa-romeo-spider-type-939"
+    },
+    {
+      "id": "censo-alpina-xb7-g07",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Alpina XB7 (G07) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Mineral White Metallic.",
+      "entidade": "Alpina XB7 (G07)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#alpina-xb7-g07"
     },
     {
       "id": "censo-alpine-a110-pure",
@@ -752,7 +760,7 @@
     },
     {
       "id": "censo-bmw-m3-gts-e92",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do BMW M3 GTS (E92) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do BMW M3 GTS (E92) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Versão mais extrema da geração E92, série limitada a 150 exemplares no mundo, com V8 4.4 aspirado de 450cv e câmbio M DCT de 6 marchas. Uma das 3 do país é a unidade 047 da série, em Fire Orange II.",
       "entidade": "BMW M3 GTS (E92)",
       "valor": 3,
       "ano": 2026,
@@ -1135,6 +1143,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#cadillac-cts-v-coupe"
     },
     {
+      "id": "censo-cadillac-xlr",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Cadillac XLR no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black Raven e 1 Light Platinum.",
+      "entidade": "Cadillac XLR",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#cadillac-xlr"
+    },
+    {
       "id": "censo-chevrolet-camaro-zl1-6a-gen",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Chevrolet Camaro ZL1 (6ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Black e 1 Summit White.",
       "entidade": "Chevrolet Camaro ZL1 (6ª Gen)",
@@ -1295,6 +1311,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#chevrolet-hhr-ss"
     },
     {
+      "id": "censo-chrysler-crossfire-roadster-zh",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Chrysler Crossfire Roadster (ZH) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Blaze Red Crystal Pearl, 1 Black e 1 Sapphire Silver Blue.",
+      "entidade": "Chrysler Crossfire Roadster (ZH)",
+      "valor": 4,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#chrysler-crossfire-roadster-zh"
+    },
+    {
       "id": "censo-citroen-c2-vts",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Citroën C2 VTS no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black e 1 Poseidon Blue.",
       "entidade": "Citroën C2 VTS",
@@ -1384,7 +1408,7 @@
     },
     {
       "id": "censo-dodge-srt-viper",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Dodge SRT Viper no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Dodge SRT Viper no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único da linha Viper vendida sob a marca SRT, e não Dodge.",
       "entidade": "Dodge SRT Viper",
       "valor": 1,
       "ano": 2026,
@@ -1392,7 +1416,7 @@
     },
     {
       "id": "censo-dodge-srt-viper-gts-vx-i",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Dodge SRT Viper GTS (VX I) no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Dodge SRT Viper GTS (VX I) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Versão GTS da geração VX I do Viper, vendida sob a marca SRT, com 2 unidades no país.",
       "entidade": "Dodge SRT Viper GTS (VX I)",
       "valor": 2,
       "ano": 2026,
@@ -1464,7 +1488,7 @@
     },
     {
       "id": "censo-ferrari-296-gtb",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 106 unidades do Ferrari 296 GTB no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 106 unidades do Ferrari 296 GTB no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Com 106 unidades registradas, é a maior frota de Ferrari do Censo EB.",
       "entidade": "Ferrari 296 GTB",
       "valor": 106,
       "ano": 2026,
@@ -1656,7 +1680,7 @@
     },
     {
       "id": "censo-ferrari-488-pista",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 19 unidades do Ferrari 488 Pista no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 19 unidades do Ferrari 488 Pista no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Três unidades saíram de programas de personalização da fábrica: duas pelo Atelier, em Rosso Corsa e Verde British Racing, e uma pelo Tailor Made, em Alluminio Lucido.",
       "entidade": "Ferrari 488 Pista",
       "valor": 19,
       "ano": 2026,
@@ -1999,6 +2023,22 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-testarossa"
     },
     {
+      "id": "censo-fiat-barchetta",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Fiat Barchetta no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Arancio e 1 Verde Garden.",
+      "entidade": "Fiat Barchetta",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#fiat-barchetta"
+    },
+    {
+      "id": "censo-fisker-karma",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Fisker Karma no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor White Sand Pearl.",
+      "entidade": "Fisker Karma",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#fisker-karma"
+    },
+    {
       "id": "censo-ford-f-150-shelby-baja-raptor",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ford F-150 Shelby Baja Raptor no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Race Red.",
       "entidade": "Ford F-150 Shelby Baja Raptor",
@@ -2175,6 +2215,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ford-mustang-shelby-super-snake-s650"
     },
     {
+      "id": "censo-ford-thunderbird-11th-gen",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Ford Thunderbird (11th gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Ceramic White, 1 Evening Black, 1 Merlot, 1 Robins Egg Blue e 1 Silver Birch.",
+      "entidade": "Ford Thunderbird (11th gen)",
+      "valor": 5,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ford-thunderbird-11th-gen"
+    },
+    {
       "id": "censo-gmc-syclone",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 9 unidades do GMC Syclone no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Black (9).",
       "entidade": "GMC Syclone",
@@ -2189,6 +2237,14 @@
       "valor": 289,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#honda-civic-type-r-fl5"
+    },
+    {
+      "id": "censo-ineos-grenadier",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Ineos Grenadier no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Eldoret Blue, 1 Inky Black e 1 Sela Green.",
+      "entidade": "Ineos Grenadier",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ineos-grenadier"
     },
     {
       "id": "censo-infiniti-g35-coupe-v35",
@@ -2245,6 +2301,14 @@
       "valor": 4,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#jaguar-xkr-s"
+    },
+    {
+      "id": "censo-jeep-grand-cherokee-srt-wk2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 8 unidades do Jeep Grand Cherokee SRT (WK2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Brilliant Black Crystal (3), Bright White (2) e Bright Silver Metallic (1), além de exemplar único em Deep Cherry Red Crystal e Redline 2-Coat Pearl.",
+      "entidade": "Jeep Grand Cherokee SRT (WK2)",
+      "valor": 8,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#jeep-grand-cherokee-srt-wk2"
     },
     {
       "id": "censo-ktm-x-bow-gt-xr",
@@ -2775,6 +2839,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lotus-exige-s-club-racer"
     },
     {
+      "id": "censo-lucid-air-grand-touring",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Lucid Air Grand Touring no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Stellar White Metallic.",
+      "entidade": "Lucid Air Grand Touring",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lucid-air-grand-touring"
+    },
+    {
       "id": "censo-maserati-grancabrio-mc",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Maserati GranCabrio MC no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Bianco Fuji e 1 Nero Carbonio.",
       "entidade": "Maserati GranCabrio MC",
@@ -2792,7 +2864,7 @@
     },
     {
       "id": "censo-maserati-gransport-mc-victory",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Maserati GranSport MC Victory no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Maserati GranSport MC Victory no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Nero Carbonio.",
       "entidade": "Maserati GranSport MC Victory",
       "valor": 1,
       "ano": 2026,
@@ -2960,7 +3032,7 @@
     },
     {
       "id": "censo-mclaren-765lt-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 9 unidades do McLaren 765LT Coupé no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 9 unidades do McLaren 765LT Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Série de 765 exemplares numerados por carroceria, com o número de produção de cada um dos 9 cupês do país catalogado.",
       "entidade": "McLaren 765LT Coupé",
       "valor": 9,
       "ano": 2026,
@@ -2968,7 +3040,7 @@
     },
     {
       "id": "censo-mclaren-765lt-spider",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do McLaren 765LT Spider no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do McLaren 765LT Spider no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Série de 765 exemplares numerados por carroceria, com o número de produção de cada uma das 6 Spider do país catalogado.",
       "entidade": "McLaren 765LT Spider",
       "valor": 6,
       "ano": 2026,
@@ -3640,7 +3712,7 @@
     },
     {
       "id": "censo-nissan-gt-r-skyline-edition",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Nissan GT-R Skyline Edition no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Nissan GT-R Skyline Edition no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Série de 100 unidades feita só para os Estados Unidos, em Bayside Blue, com interior Sora Blue e rodas RAYS forjadas de 20 polegadas.",
       "entidade": "Nissan GT-R Skyline Edition",
       "valor": 1,
       "ano": 2026,
@@ -3648,7 +3720,7 @@
     },
     {
       "id": "censo-nissan-gt-r-t-spec",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Nissan GT-R T-spec no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Nissan GT-R T-spec no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Versão T-spec do GT-R de geração R35, com 5 unidades registradas no país.",
       "entidade": "Nissan GT-R T-spec",
       "valor": 5,
       "ano": 2026,
@@ -3693,6 +3765,14 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#pegaso-z-102-berlinetta-series-ii-by-saoutchik"
+    },
+    {
+      "id": "censo-peugeot-407-coupe",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Peugeot 407 Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Noir Obsidien, 1 Gris Dolomites e 1 Rouge Erythrée.",
+      "entidade": "Peugeot 407 Coupé",
+      "valor": 5,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#peugeot-407-coupe"
     },
     {
       "id": "censo-plymouth-prowler",
@@ -4576,7 +4656,7 @@
     },
     {
       "id": "censo-ram-1500-trx-havoc-edition",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Ram 1500 TRX Havoc Edition no Brasil.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Ram 1500 TRX Havoc Edition no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Série especial Havoc Edition do 1500 TRX, em linha própria no Censo ao lado das 60 TRX de linha.",
       "entidade": "Ram 1500 TRX Havoc Edition",
       "valor": 7,
       "ano": 2026,
@@ -4597,6 +4677,22 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#renault-megane-rs-265-d95-phase-ii"
+    },
+    {
+      "id": "censo-rivian-r1s-adventure",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Rivian R1S Adventure no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Forest Green e 1 LA Silver.",
+      "entidade": "Rivian R1S Adventure",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#rivian-r1s-adventure"
+    },
+    {
+      "id": "censo-rivian-r1t",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Rivian R1T no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 6 cores diferentes, entre elas El Cap Granite (2), Forest Green (2) e Glacier White (2), além de exemplar único em Compass Yellow e LA Silver.",
+      "entidade": "Rivian R1T",
+      "valor": 10,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#rivian-r1t"
     },
     {
       "id": "censo-rolls-royce-camargue",
@@ -4837,6 +4933,14 @@
       "valor": 6,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-golf-r32-mk5"
+    },
+    {
+      "id": "censo-volkswagen-jetta-gli-mk5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Volkswagen Jetta GLi (MK5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Campanella White.",
+      "entidade": "Volkswagen Jetta GLi (MK5)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-jetta-gli-mk5"
     },
     {
       "id": "censo-volkswagen-polo-gti-9n3",
@@ -5113,18 +5217,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
-      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
-    },
-    {
       "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
+    },
+    {
+      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
