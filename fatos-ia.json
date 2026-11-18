@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-17",
-  "total": 185,
+  "total": 187,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -325,6 +325,14 @@
       "valor": 2,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-touring-g99"
+    },
+    {
+      "id": "censo-bmw-m8-competition-gran-coupe-f93",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 17 de novembro de 2026, existem 48 unidades do BMW M8 Competition Gran Coupé (F93) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota de 48 unidades em 28 cores, com 22 cores em um único carro. Brands Hatch Grey tem 9 unidades, Frozen Black 8, Black Sapphire 4, Nardo Grey e Velvet Blue 2 cada. Uma delas, em tom vinho e com carbono pela carroceria, roda em São José do Rio Preto, SP.",
+      "entidade": "BMW M8 Competition Gran Coupé (F93)",
+      "valor": 48,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m8-competition-gran-coupe-f93"
     },
     {
       "id": "censo-bugatti-chiron-sport",
@@ -757,6 +765,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-bmw-m8-competition-gran-coupe-sao-jose-do-rio-preto",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 48 BMW M8 Competition Gran Coupé no Brasil, distribuídas em 28 cores diferentes, e 22 dessas cores aparecem em uma unidade só. Uma delas, em tom vinho e com carbono no capô, nos retrovisores e nas saias, foi flagrada em São José do Rio Preto, SP, pelo @speedriopreto.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-18",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/bmw-m8-competition-gran-coupe-sao-jose-do-rio-preto/"
     },
     {
       "id": "materia-porsche-911-turbo-s-992-1-antunes-custom-ac001-loro-piana-sao-paulo",
