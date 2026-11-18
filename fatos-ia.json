@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-18",
-  "total": 735,
+  "total": 736,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -693,6 +693,14 @@
       "valor": 256,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m2-competition-f87"
+    },
+    {
+      "id": "censo-bmw-m3-e90",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 65 unidades do BMW M3 (E90) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 6 cores diferentes, entre elas Alpine White III (24), Jet Black (21) e Jerez Black Metallic (10), além de Silverstone Metallic (8) e 2 cores com um único exemplar, Interlagos Blue Metallic e Space Grey Metallic.",
+      "entidade": "BMW M3 (E90)",
+      "valor": 65,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-e90"
     },
     {
       "id": "censo-bmw-m3-f80",
