@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-18",
-  "total": 743,
+  "total": 746,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -1703,6 +1703,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-488-gtb"
     },
     {
+      "id": "censo-ferrari-488-gtb-70th-anniversary",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), o Ferrari 488 GTB (70th Anniversary) já esteve no Brasil e não se encontra mais no país. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Era o único exemplar da série 70th Anniversary no Brasil, a 488 GTB Green Jewel na cor Verde Metalizzato, e foi exportado para a Suíça. Não se encontra mais no Brasil.",
+      "entidade": "Ferrari 488 GTB (70th Anniversary)",
+      "valor": 0,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-488-gtb-70th-anniversary"
+    },
+    {
       "id": "censo-ferrari-488-pista",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 19 unidades do Ferrari 488 Pista no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Três unidades saíram de programas de personalização da fábrica: duas pelo Atelier, em Rosso Corsa e Verde British Racing, e uma pelo Tailor Made, em Alluminio Lucido.",
       "entidade": "Ferrari 488 Pista",
@@ -1997,6 +2005,14 @@
       "valor": 10,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-roma-spider"
+    },
+    {
+      "id": "censo-ferrari-sa-aperta",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), o Ferrari SA Aperta já esteve no Brasil e não se encontra mais no país. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Era um exemplar único no Brasil, configurado na cor Rosso Fuoco, e saiu do país. Não se encontra mais no Brasil.",
+      "entidade": "Ferrari SA Aperta",
+      "valor": 0,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-sa-aperta"
     },
     {
       "id": "censo-ferrari-scuderia-spider-16m",
@@ -3640,11 +3656,19 @@
     },
     {
       "id": "censo-mercedes-benz-sls-amg-black-series",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Mercedes-Benz SLS AMG Black Series no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Mystic White II (5), Obsidian Black Metallic (3) e Imola Grey (1), além de exemplar único em Magno Alanite Grey.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Mercedes-Benz SLS AMG Black Series no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Mystic White II (5), Obsidian Black Metallic (3) e Imola Grey (1), além de exemplar único em Magno Alanite Grey. Uma unidade em Yosemite Blue Magno saiu do Brasil em 2025 e não entra na conta.",
       "entidade": "Mercedes-Benz SLS AMG Black Series",
       "valor": 10,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series"
+    },
+    {
+      "id": "censo-mercedes-benz-sls-amg-black-series-yosemite-blue-magno",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), o Mercedes-Benz SLS AMG Black Series (Yosemite Blue Magno) já esteve no Brasil e não se encontra mais no país. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar em Yosemite Blue Magno que saiu do Brasil em 2025. Não se encontra mais no país, e a linha do SLS AMG Black Series conta só as 10 unidades que ficaram.",
+      "entidade": "Mercedes-Benz SLS AMG Black Series (Yosemite Blue Magno)",
+      "valor": 0,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series-yosemite-blue-magno"
     },
     {
       "id": "censo-mercedes-benz-sls-amg-coupe",
