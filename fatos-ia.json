@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-18",
-  "total": 736,
+  "total": 743,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -1055,6 +1055,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m6-coupe-f13"
     },
     {
+      "id": "censo-bmw-m6-gran-coupe-f06",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 218 unidades do BMW M6 Gran Coupé (F06) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2013 e 2018.",
+      "entidade": "BMW M6 Gran Coupé (F06)",
+      "valor": 218,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m6-gran-coupe-f06"
+    },
+    {
       "id": "censo-bmw-m8-competition-gran-coupe-f93",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 48 unidades do BMW M8 Competition Gran Coupé (F93) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota de 48 unidades em 28 cores, com 22 cores em um único carro. Brands Hatch Grey tem 9 unidades, Frozen Black 8, Black Sapphire 4, Nardo Grey e Velvet Blue 2 cada. Uma delas é em tom vinho, com carbono pela carroceria.",
       "entidade": "BMW M8 Competition Gran Coupé (F93)",
@@ -1079,8 +1087,24 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-x3m-competition-g01"
     },
     {
+      "id": "censo-bmw-x5m-e70",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 74 unidades do BMW X5M (E70) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2009 e 2012.",
+      "entidade": "BMW X5M (E70)",
+      "valor": 74,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-x5m-e70"
+    },
+    {
+      "id": "censo-bmw-xm",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW XM no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, o primeiro M híbrido plug-in de produção em série.",
+      "entidade": "BMW XM",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-xm"
+    },
+    {
       "id": "censo-bmw-z1-e30",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do BMW Z1 (E30) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 4 Top Rot e 1 Urgrün Metallic.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do BMW Z1 (E30) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 4 em Top Rot, o vermelho, e 1 branco.",
       "entidade": "BMW Z1 (E30)",
       "valor": 5,
       "ano": 2026,
@@ -1679,14 +1703,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-488-gtb"
     },
     {
-      "id": "censo-ferrari-488-gtb-70th-anniversary",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ferrari 488 GTB (70th Anniversary) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Verde Metalizzato.",
-      "entidade": "Ferrari 488 GTB (70th Anniversary)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-488-gtb-70th-anniversary"
-    },
-    {
       "id": "censo-ferrari-488-pista",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 19 unidades do Ferrari 488 Pista no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Três unidades saíram de programas de personalização da fábrica: duas pelo Atelier, em Rosso Corsa e Verde British Racing, e uma pelo Tailor Made, em Alluminio Lucido.",
       "entidade": "Ferrari 488 Pista",
@@ -1983,14 +1999,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-roma-spider"
     },
     {
-      "id": "censo-ferrari-sa-aperta",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ferrari SA Aperta no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rosso Fuoco.",
-      "entidade": "Ferrari SA Aperta",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-sa-aperta"
-    },
-    {
       "id": "censo-ferrari-scuderia-spider-16m",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Ferrari Scuderia Spider 16M no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Rosso Scuderia.",
       "entidade": "Ferrari Scuderia Spider 16M",
@@ -2255,6 +2263,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#honda-civic-type-r-fl5"
     },
     {
+      "id": "censo-hyundai-veloster-turbo",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Hyundai Veloster Turbo no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Versão com motor turbo do cupê de três portas da Hyundai.",
+      "entidade": "Hyundai Veloster Turbo",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#hyundai-veloster-turbo"
+    },
+    {
       "id": "censo-ineos-grenadier",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Ineos Grenadier no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Eldoret Blue, 1 Inky Black e 1 Sela Green.",
       "entidade": "Ineos Grenadier",
@@ -2279,12 +2295,28 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#infiniti-g37-coupe-v36"
     },
     {
+      "id": "censo-jaguar-f-pace-svr",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 118 unidades do Jaguar F-Pace SVR no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Das 118 unidades registradas no país, 45 são da versão pré-Facelift.",
+      "entidade": "Jaguar F-Pace SVR",
+      "valor": 118,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#jaguar-f-pace-svr"
+    },
+    {
       "id": "censo-jaguar-f-type-svr-coupe",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Jaguar F-Type SVR Coupe no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Corris Grey (3), Firesand Orange (2) e Madagascar Orange (1), além de exemplar único em Santorini Black.",
       "entidade": "Jaguar F-Type SVR Coupe",
       "valor": 7,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#jaguar-f-type-svr-coupe"
+    },
+    {
+      "id": "censo-jaguar-s-type-r",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 38 unidades do Jaguar S-Type R no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2003 e 2008.",
+      "entidade": "Jaguar S-Type R",
+      "valor": 38,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#jaguar-s-type-r"
     },
     {
       "id": "censo-jaguar-xf-rs-x250-2",
@@ -3415,6 +3447,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-e63s-amg-w213-2"
     },
     {
+      "id": "censo-mercedes-benz-eqv",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz EQV no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Van elétrica da Mercedes-Benz.",
+      "entidade": "Mercedes-Benz EQV",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-eqv"
+    },
+    {
       "id": "censo-mercedes-benz-g63-amg-4x42",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Mercedes-Benz G63 AMG 4x4² no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Cardinal Red Magno, 1 Manganite Grey Magno, 1 Olive Green Metallic e 1 Platinum Black Metallic.",
       "entidade": "Mercedes-Benz G63 AMG 4x4²",
@@ -3600,9 +3640,9 @@
     },
     {
       "id": "censo-mercedes-benz-sls-amg-black-series",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 11 unidades do Mercedes-Benz SLS AMG Black Series no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Mystic White II (5), Obsidian Black Metallic (3) e Imola Grey (1), além de exemplar único em Magno Alanite Grey e Yosemite Blue Magno.",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Mercedes-Benz SLS AMG Black Series no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Mystic White II (5), Obsidian Black Metallic (3) e Imola Grey (1), além de exemplar único em Magno Alanite Grey.",
       "entidade": "Mercedes-Benz SLS AMG Black Series",
-      "valor": 11,
+      "valor": 10,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-sls-amg-black-series"
     },
@@ -5031,6 +5071,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-beetle-rsi"
     },
     {
+      "id": "censo-volkswagen-eos",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 126 unidades do Volkswagen Eos no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Cupê conversível com teto rígido retrátil.",
+      "entidade": "Volkswagen Eos",
+      "valor": 126,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-eos"
+    },
+    {
       "id": "censo-volkswagen-golf-gti-40th-anniversary-edition-mk8",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Volkswagen Golf GTI 40th Anniversary Edition (MK8) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Pomelo Yellow Metallic e 1 Tornado Red.",
       "entidade": "Volkswagen Golf GTI 40th Anniversary Edition (MK8)",
@@ -5085,6 +5133,14 @@
       "valor": 30,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-polo-gti-9n3"
+    },
+    {
+      "id": "censo-volkswagen-routan",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Volkswagen Routan no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Minivan que a Volkswagen vendeu nos Estados Unidos.",
+      "entidade": "Volkswagen Routan",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-routan"
     },
     {
       "id": "censo-volkswagen-scirocco-r",
