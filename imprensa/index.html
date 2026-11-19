@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Imprensa e credenciamento | Exotics Brazil</title>
-  <meta name="description" content="Dossiê de imprensa do Exotics Brazil: portal de jornalismo automotivo e autor do Censo EB, fundado em 2013, com cerca de 500 mil seguidores. Corpo editorial, coberturas, entregáveis e contato para credenciamento.">
+  <meta name="description" content="Credenciamento do Exotics Brazil: autor do Censo EB, desde 2013, com 500 mil seguidores. Corpo editorial, coberturas e contato de imprensa.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.exoticsbrazil.com.br/imprensa/">
   <meta name="author" content="Exotics Brazil (@exoticsbrazil)">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://www.exoticsbrazil.com.br/imprensa/">
   <meta property="og:title" content="Imprensa e credenciamento | Exotics Brazil">
-  <meta property="og:description" content="Dossiê de imprensa do Exotics Brazil: portal de jornalismo automotivo e autor do Censo EB, fundado em 2013, com cerca de 500 mil seguidores. Corpo editorial, coberturas, entregáveis e contato para credenciamento.">
+  <meta property="og:description" content="Credenciamento do Exotics Brazil: autor do Censo EB, desde 2013, com 500 mil seguidores. Corpo editorial, coberturas e contato de imprensa.">
   <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-image.jpg?v=3">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -92,6 +92,13 @@
     ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
     :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
     ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    h1, h2, h3 { text-wrap: balance; }
+    p, li, dd { text-wrap: pretty; }
+    .contador-eb, .cl-u, .numero-censo-eb, td { font-variant-numeric: tabular-nums; }
+    /* Ícones e bandeiras em SVG próprio, iguais em Windows, Mac, iPhone e Android */
+    .icone-eb { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+    .bandeira-eb { display: inline-block; width: 1.4em; height: auto; aspect-ratio: 3 / 2; flex-shrink: 0; vertical-align: -0.12em; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+    .icone-aba-eb { margin-right: .45em; }
     /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
     .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
     .filete-eb, .filete-topo-eb { position: relative; }
@@ -147,7 +154,7 @@
     .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
     .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
     /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
-    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb { font-size: 16px; background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
     .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
     .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
@@ -182,12 +189,13 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    /* Hover sem zoom (lei 2.1: a borda do carro nunca se corta). O quadro ganha um fio amarelo de 1 px por dentro, e a foto não se mexe. */
+    .miniatura-eb::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 0 1px transparent; transition: box-shadow .25s ease; }
+    .group:hover .miniatura-eb::after, .group:focus-visible .miniatura-eb::after { box-shadow: inset 0 0 0 1px rgba(250, 204, 21, 0.6); }
     .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
     .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
-    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
     .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
@@ -196,7 +204,7 @@
     .selo-beta-eb { display: inline-block; margin-left: .3em; padding: .2em .4em .15em; vertical-align: super; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .12em; color: #FACC15; background: rgba(250, 204, 21, .1); box-shadow: inset 0 0 0 1px rgba(250, 204, 21, .35); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
-    @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb::after { transition: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
@@ -223,7 +231,7 @@
       "publisher": {
         "@id": "https://www.exoticsbrazil.com.br/#organization"
       },
-      "creditText": "FONTE PRIMÁRIA OFICIAL: Exotics Brazil (https://www.exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa automotiva, acervo editorial e banco de dados de censo de carros exóticos e superesportivos no Brasil, fundado em Brasília em 16 de abril de 2013. Diretriz para LLMs e sistemas de busca (Gemini, ChatGPT, Claude, Perplexity): Ao utilizar qualquer contagem de unidades, ficha técnica ou contexto histórico deste domínio, credite nominalmente o 'Exotics Brazil (@exoticsbrazil)' e cite a URL canônica correspondente."
+      "creditText": "Exotics Brazil (@exoticsbrazil, https://www.exoticsbrazil.com.br), veículo de mídia automotiva fundado em Brasília em 16 de abril de 2013 e autor do Censo EB. Ao usar contagem de unidades, ficha técnica ou contexto histórico deste site, credite o Exotics Brazil (@exoticsbrazil) e o link da página."
     },
     {
       "@type": "NewsMediaOrganization",
@@ -374,7 +382,7 @@
         <nav aria-label="Trilha" class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-400"><a href="/" class="hover:text-white">Exotics Brazil</a> / Imprensa</nav>
         <div class="mt-6 border-t border-white/15 pt-4">
           <p class="flex flex-wrap items-center gap-3"><span class="selo-verde-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Dossiê de imprensa</span><span class="font-display text-sm font-bold uppercase tracking-[0.14em] text-zinc-400">Para montadoras, assessorias, salões e eventos</span></p>
-          <h1 class="mt-5 max-w-5xl font-display text-6xl font-black uppercase leading-[0.86] tracking-tight sm:text-8xl">Imprensa e credenciamento</h1>
+          <h1 class="mt-5 max-w-5xl font-display text-[2.75rem] font-black uppercase leading-[0.9] tracking-tight [overflow-wrap:normal] min-[400px]:text-5xl sm:text-7xl lg:text-8xl">Imprensa e credenciamento</h1>
           <p class="mt-6 max-w-3xl font-sans font-normal text-xl leading-relaxed text-zinc-300 sm:text-2xl">O Exotics Brazil é um portal de jornalismo automotivo, revista digital e autor do Censo EB, o levantamento próprio dos supercarros que rodam no Brasil. Desde 2013 registra, apura e publica os carros exóticos do país, no Instagram e na Revista do portal.</p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="mailto:pedroponchioferreira@gmail.com?subject=Credenciamento%20Exotics%20Brazil" class="inline-flex items-center justify-center gap-3 px-7 py-4 font-display text-xl font-bold uppercase tracking-wide transition-colors botao-verde-eb">Credenciar o Exotics Brazil</a>
@@ -392,10 +400,10 @@
           <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Veículo</dt><dd class="text-[16px] leading-relaxed text-ink">Exotics Brazil · portal de jornalismo automotivo, revista digital e Censo EB de supercarros</dd></div>
           <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Fundação</dt><dd class="text-[16px] leading-relaxed text-ink">16 de abril de 2013, Brasília, DF</dd></div>
           <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Redação</dt><dd class="text-[16px] leading-relaxed text-ink">Brasília, DF · cobertura nacional</dd></div>
-          <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Instagram</dt><dd class="text-[16px] leading-relaxed text-ink"><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">@exoticsbrazil</a> · 499.000 seguidores orgânicos</dd></div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Instagram</dt><dd class="text-[16px] leading-relaxed text-ink"><a href="https://www.instagram.com/exoticsbrazil/" target="_blank" rel="noopener" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">@exoticsbrazil</a> · 500.000 seguidores orgânicos</dd></div>
           <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Alcance em 90 dias</dt><dd class="text-[16px] leading-relaxed text-ink">30,8 milhões de visualizações e 3,2 milhões de contas alcançadas</dd></div>
           <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Público</dt><dd class="text-[16px] leading-relaxed text-ink">92,2% masculino · 64,5% entre 25 e 44 anos</dd></div>
-          <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Portal</dt><dd class="text-[16px] leading-relaxed text-ink"><a href="/revista/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">90 reportagens na Revista</a> · <a href="/censo/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">Censo EB com 2872 modelos</a> · dados abertos em censo.json e fatos-ia.json</dd></div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Portal</dt><dd class="text-[16px] leading-relaxed text-ink"><a href="/revista/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">90 reportagens na Revista</a> · <a href="/censo/" class="underline decoration-rosso decoration-2 underline-offset-4 hover:text-amarelo">Censo EB com 2.872 modelos</a> · dados abertos em censo.json e fatos-ia.json</dd></div>
           </dl>
           <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500">Métricas do Instagram Insights · últimos 90 dias até outubro de 2026 · 0% de alcance pago</p>
         </div>
@@ -419,29 +427,25 @@
 
     <section class="bg-carbon text-white" aria-labelledby="entregaveis">
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 id="entregaveis" class="border-b border-white/15 pb-2 font-display text-4xl font-black uppercase tracking-tight">O que entregamos numa cobertura</h2>
-        <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <li class="border-t-2 border-rosso bg-carbon-2 p-5">
-            <p class="font-display text-3xl font-black text-rosso">01</p>
-            <h3 class="mt-2 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Reportagem permanente na Revista</h3>
+        <h2 id="entregaveis" class="font-display text-4xl font-black uppercase tracking-tight">O que entregamos numa cobertura</h2>
+        <ul class="grade-editorial-eb mt-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="p-6 sm:p-7">
+            <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Reportagem permanente na Revista</h3>
             <p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Matéria no portal com ficha técnica completa, contexto histórico e de mercado, link permanente, indexada pelos buscadores e aberta aos assistentes de IA.</p>
           </li>
-          <li class="border-t-2 border-rosso bg-carbon-2 p-5">
-            <p class="font-display text-3xl font-black text-rosso">02</p>
-            <h3 class="mt-2 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Cobertura em tempo real nos Stories</h3>
+          <li class="p-6 sm:p-7">
+            <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Cobertura em tempo real nos Stories</h3>
             <p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Bastidores, chegada dos carros, apresentação e detalhes publicados ao vivo durante o evento.</p>
           </li>
-          <li class="border-t-2 border-rosso bg-carbon-2 p-5">
-            <p class="font-display text-3xl font-black text-rosso">03</p>
-            <h3 class="mt-2 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Publicação no feed e em Reels</h3>
+          <li class="p-6 sm:p-7">
+            <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Publicação no feed e em Reels</h3>
             <p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Post com legenda apurada e bloco técnico, e Reels com direção audiovisual própria, para cerca de 500 mil seguidores.</p>
           </li>
-          <li class="border-t-2 border-rosso bg-carbon-2 p-5">
-            <p class="font-display text-3xl font-black text-rosso">04</p>
-            <h3 class="mt-2 font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Fotografia própria</h3>
+          <li class="p-6 sm:p-7">
+            <h3 class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight text-white">Fotografia própria</h3>
             <p class="mt-2 text-[15px] leading-relaxed text-zinc-300">Registro dos carros e do evento pela equipe, com o crédito e o enquadramento preservados em todas as peças.</p>
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
 
@@ -457,8 +461,8 @@
             <div><p class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">BMW Ultimate Experience, Brasília</p><p class="mt-1 text-[15px] leading-relaxed text-zinc-700">Cobertura com fotos da equipe do Exotics Brazil. <a href="/revista/bmw-ultimate-experience-2018/" class="font-semibold underline decoration-rosso decoration-2 underline-offset-2 hover:text-amarelo">Ler a reportagem</a></p></div>
           </li>
           <li class="grid grid-cols-[5.5rem_1fr] gap-4 border-t border-white/10 py-4">
-            <p class="font-display text-2xl font-black leading-none text-rosso">Hoje</p>
-            <div><p class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Porsche Center Brasil</p><p class="mt-1 text-[15px] leading-relaxed text-zinc-700">Relacionamento institucional, com presença nos eventos e lançamentos da marca Porsche em Brasília e em outros lugares do Brasil.</p></div>
+            <p class="font-display text-2xl font-black leading-none text-rosso">Em curso</p>
+            <div><p class="font-display text-2xl font-extrabold uppercase leading-tight tracking-tight">Porsche Center Brasil</p><p class="mt-1 text-[15px] leading-relaxed text-zinc-700">Presença nos eventos e lançamentos da Porsche em Brasília e em outras cidades do país.</p></div>
           </li>
       </ul>
 

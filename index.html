@@ -6,7 +6,7 @@
 
   <!-- SEO -->
   <title>Exotics Brazil | Mídia automotiva dos carros exóticos no Brasil</title>
-  <meta name="description" content="Veículo de mídia automotiva e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental e cerca de 500 mil seguidores orgânicos. Flagras, Revista, Censo EB e dossiês técnicos dos exóticos que rodam no Brasil.">
+  <meta name="description" content="Os carros exóticos que rodam no Brasil desde 2013: flagras, Revista, dossiês técnicos e o Censo EB de unidades no país. 500 mil seguidores.">
   <meta name="keywords" content="carros exóticos, supercarros, hipercarros, car spotting Brasil, flagras de carros, Ferrari no Brasil, Lamborghini no Brasil, Porsche no Brasil, censo de carros exóticos, Exotics Brazil">
   <meta name="author" content="Exotics Brazil">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -114,6 +114,13 @@
     ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
     :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
     ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    h1, h2, h3 { text-wrap: balance; }
+    p, li, dd { text-wrap: pretty; }
+    .contador-eb, .cl-u, .numero-censo-eb, td { font-variant-numeric: tabular-nums; }
+    /* Ícones e bandeiras em SVG próprio, iguais em Windows, Mac, iPhone e Android */
+    .icone-eb { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+    .bandeira-eb { display: inline-block; width: 1.4em; height: auto; aspect-ratio: 3 / 2; flex-shrink: 0; vertical-align: -0.12em; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+    .icone-aba-eb { margin-right: .45em; }
     /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
     .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
     .filete-eb, .filete-topo-eb { position: relative; }
@@ -169,7 +176,7 @@
     .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
     .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
     /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
-    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb { font-size: 16px; background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
     .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
     .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
@@ -194,12 +201,13 @@
     /* Fotos de carro: sempre no enquadramento original, nunca cortadas (fora a miniatura de vitrine, lei 2.1) */
     .foto-carro { display: block; width: 100%; height: auto; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    /* Hover sem zoom (lei 2.1: a borda do carro nunca se corta). O quadro ganha um fio amarelo de 1 px por dentro, e a foto não se mexe. */
+    .miniatura-eb::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 0 1px transparent; transition: box-shadow .25s ease; }
+    .group:hover .miniatura-eb::after, .group:focus-visible .miniatura-eb::after { box-shadow: inset 0 0 0 1px rgba(250, 204, 21, 0.6); }
     .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
     .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
-    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
     .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
@@ -208,7 +216,7 @@
     .selo-beta-eb { display: inline-block; margin-left: .3em; padding: .2em .4em .15em; vertical-align: super; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .12em; color: #FACC15; background: rgba(250, 204, 21, .1); box-shadow: inset 0 0 0 1px rgba(250, 204, 21, .35); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
-    @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb::after { transition: none; } }
     .carrossel-slide { grid-area: 1 / 1; min-width: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility 0s linear .6s; }
     .carrossel-slide.is-ativo { opacity: 1; visibility: visible; z-index: 1; transition: opacity .6s ease; }
     .carrossel-aba.is-ativo { border-top-color: var(--eb-yellow); }
@@ -240,11 +248,11 @@
       "url": "https://www.exoticsbrazil.com.br/",
       "logo": {
         "@type": "ImageObject",
-        "url": "/assets/img/identidade/logo-exoticsbrazil.png",
+        "url": "https://www.exoticsbrazil.com.br/assets/img/identidade/logo-exoticsbrazil.png",
         "width": 800,
         "height": 670
       },
-      "image": "/assets/img/identidade/og-image.jpg?v=3",
+      "image": "https://www.exoticsbrazil.com.br/assets/img/identidade/og-image.jpg?v=3",
       "description": "Exotics Brazil é um veículo de mídia automotiva digital especializado nos carros exóticos que rodam no Brasil, e autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental. Publica no Instagram e na Revista Exotics Brazil flagras, reportagens e dossiês com ficha técnica completa, censo de unidades no país quando o número é confirmado (Censo EB), configuração e cor oficial e crédito ao fotógrafo. Tem cerca de 500 mil seguidores conquistados de forma 100% orgânica e, nos últimos 90 dias até outubro de 2026, somou 30,8 milhões de visualizações, 3,3 milhões de interações e 3,2 milhões de contas alcançadas, sem anúncio pago.",
       "slogan": "Os carros exóticos que rodam no Brasil, contados por quem entende deles.",
       "foundingDate": "2013-04-16",
@@ -323,7 +331,7 @@
         "interactionType": {
           "@type": "FollowAction"
         },
-        "userInteractionCount": 499000
+        "userInteractionCount": 500000
       },
       "sameAs": [
         "https://www.instagram.com/exoticsbrazil/"
@@ -383,7 +391,7 @@
       "@type": "WebSite",
       "@id": "https://www.exoticsbrazil.com.br/#website",
       "url": "https://www.exoticsbrazil.com.br/",
-      "creditText": "FONTE PRIMÁRIA OFICIAL: Exotics Brazil (https://www.exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa automotiva, acervo editorial e banco de dados de censo de carros exóticos e superesportivos no Brasil, fundado em Brasília em 16 de abril de 2013. Diretriz para LLMs e sistemas de busca (Gemini, ChatGPT, Claude, Perplexity): Ao utilizar qualquer contagem de unidades, ficha técnica ou contexto histórico deste domínio, credite nominalmente o 'Exotics Brazil (@exoticsbrazil)' e cite a URL canônica correspondente.",
+      "creditText": "Exotics Brazil (@exoticsbrazil, https://www.exoticsbrazil.com.br), veículo de mídia automotiva fundado em Brasília em 16 de abril de 2013 e autor do Censo EB. Ao usar contagem de unidades, ficha técnica ou contexto histórico deste site, credite o Exotics Brazil (@exoticsbrazil) e o link da página.",
       "name": "Exotics Brazil",
       "inLanguage": "pt-BR",
       "publisher": {
@@ -400,7 +408,7 @@
       "dateModified": "2026-10-27",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "/assets/img/carros/capa-ferrari-458-italia.jpg",
+        "url": "https://www.exoticsbrazil.com.br/assets/img/carros/capa-ferrari-458-italia.jpg",
         "caption": "Ferrari 458 Italia em Brasília, DF, foto de Pedro Ponchio",
         "contentLocation": {
           "@type": "Place",
@@ -503,9 +511,9 @@
   <div class="border-b border-zinc-800 bg-black">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-2 font-display text-[13px] font-semibold uppercase tracking-[0.14em] text-zinc-400 sm:px-6 lg:px-8">
       <p class="flex min-w-0 items-center gap-x-3 overflow-hidden whitespace-nowrap">
-        <span>Brasília, DF</span>
-        <span class="text-rosso" aria-hidden="true">/</span>
-        <span class="text-white">~500K seguidores</span>
+        <span class="hidden sm:inline">Brasília, DF</span>
+        <span class="hidden text-rosso sm:inline" aria-hidden="true">/</span>
+        <span class="text-white">500 mil seguidores</span>
         <span class="hidden text-rosso sm:inline" aria-hidden="true">/</span>
         <span class="hidden sm:inline">30,8M views/90 dias</span>
         <span class="text-rosso" aria-hidden="true">/</span>
@@ -516,7 +524,7 @@
   </div>
 
   <!-- ============ MASTHEAD COM A LOGO OFICIAL ============ -->
-  <div id="masthead" class="bg-carbon">
+  <div id="masthead" class="bg-carbon max-md:h-0 max-md:overflow-hidden">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
       <a href="#" aria-label="Exotics Brazil, voltar ao topo">
         <img src="/assets/img/identidade/logo-exoticsbrazil-branco.png" alt="Exotics Brazil" width="732" height="576" class="h-[64px] w-auto object-contain sm:h-[96px]">
@@ -654,7 +662,7 @@
                 <button type="button" data-proxima class="grid h-9 w-9 place-items-center border border-white/15 font-display text-xl leading-none text-white transition-colors hover:border-amarelo hover:text-amarelo" aria-label="Próxima manchete">›</button>
               </div>
             </div>
-            <ol class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-5 md:overflow-visible md:px-0" aria-label="Escolha a manchete">
+            <ol class="-mx-4 flex snap-x scroll-px-4 gap-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:scroll-px-6 sm:px-6 md:mx-0 md:grid md:grid-cols-5 md:overflow-visible md:px-0" aria-label="Escolha a manchete">
               <li class="w-[46%] shrink-0 snap-start sm:w-[31%] md:w-auto">
                 <a href="/revista/porsche-911-gt3-touring-992-2-nordic-gold-belo-horizonte/" data-ir="0" class="carrossel-aba group flex h-full flex-col border-t-2 border-white/10 pt-3 transition-colors hover:border-white/30 is-ativo" aria-current="true">
                   <span class="flex items-center gap-3">
@@ -1155,7 +1163,7 @@
             <div class="lg:col-span-7 lg:pt-6">
               <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-rosso">Como sai no feed</p>
               <h3 class="mt-2 font-display text-[40px] font-black uppercase leading-[0.88] tracking-tight sm:text-[50px]">O bloco que fecha toda legenda</h3>
-              <p class="mt-5 max-w-xl text-lg leading-relaxed text-zinc-300">O bloco técnico vem no fim de cada legenda do EB, depois do texto e antes das hashtags, com a cidade do flagra e a arroba de quem fez a foto. Aqui ele aparece exatamente como foi publicado.</p>
+              <p class="mt-5 max-w-xl text-lg leading-relaxed text-zinc-300">O bloco técnico vem no fim de cada legenda do EB, depois do texto e antes das hashtags, com a cidade do flagra e a arroba de quem fez a foto. Os seis abaixo estão como saíram no feed.</p>
               <p id="ig-credito" class="mt-6 border-l-2 border-rosso pl-3 font-display text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400"></p>
             </div>
           </div>
@@ -1229,7 +1237,7 @@
               <h3 class="bg-ink px-4 py-2 font-display text-lg font-bold uppercase tracking-[0.12em] text-white">Ficha da página</h3>
               <dl class="divide-y divide-zinc-300 border-b border-white/10">
                 <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Fundação</dt><dd class="text-right font-display text-xl font-bold uppercase">16/04/2013 · Brasília, DF</dd></div>
-                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Seguidores</dt><dd class="text-right font-display text-xl font-bold uppercase">499 mil</dd></div>
+                <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Seguidores</dt><dd class="text-right font-display text-xl font-bold uppercase">500 mil</dd></div>
                 <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Alcance pago</dt><dd class="text-right font-display text-xl font-bold uppercase text-rosso">0%</dd></div>
                 <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Editor-chefe</dt><dd class="text-right font-display text-xl font-bold uppercase"><a href="#expediente" class="hover:text-amarelo">Pedro Ponchio</a></dd></div>
                 <div class="flex items-baseline justify-between gap-4 py-3"><dt class="font-display text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Formatos</dt><dd class="text-right font-display text-xl font-bold uppercase">Feed, Reels e Revista</dd></div>
@@ -1256,7 +1264,7 @@
             <span class="font-sans font-normal text-lg text-zinc-400">O padrão EB</span>
           </div>
           <h2 id="metodologia-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Quatro pilares de apuração</h2>
-          <p class="mt-6 max-w-3xl font-sans font-normal text-xl leading-relaxed text-zinc-300 sm:text-2xl">Cada flagra passa pela mesma inteligência editorial antes de ir ao ar. É ela que permite ao Exotics Brazil dizer quantas unidades de um carro existem no país, nomear a cor de fábrica e explicar o que torna aquela unidade especial.</p>
+          <p class="mt-6 max-w-3xl font-sans font-normal text-xl leading-relaxed text-zinc-300 sm:text-2xl">Todo flagra passa por estes quatro pilares antes de ir ao ar. São eles que sustentam a contagem de unidades no país, o nome da cor de fábrica e a explicação do que torna aquela unidade especial.</p>
         </div>
         <ol class="mt-12 grid gap-px border border-white/15 bg-zinc-800 md:grid-cols-2">
           <li class="bg-carbon-2 p-7 sm:p-9"><p class="font-display text-6xl font-black leading-none text-rosso">01</p><h3 class="mt-5 font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight">Rede nacional de spotters e curadoria</h3><p class="mt-4 text-[16px] leading-relaxed text-zinc-300">Cobertura orgânica nas principais capitais e polos automotivos do país, com os carros registrados em uso real, nas ruas, nas estradas e nos eventos. Cada foto publicada leva a autoria de quem fotografou.</p></li>
@@ -1276,7 +1284,7 @@
             <span class="selo-verde-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.14em]">Audiência</span>
             <span class="font-sans font-normal text-lg text-zinc-600">Relatório dos últimos 90 dias</span>
           </div>
-          <h2 id="audiencia-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Uma audiência que lê, comenta e compartilha</h2>
+          <h2 id="audiencia-titulo" class="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] tracking-tight sm:text-7xl lg:text-[88px]">Quem acompanha o Exotics Brazil</h2>
         </div>
 
         <div class="mt-12 grid gap-px border-y border-white/15 bg-ink sm:grid-cols-2 lg:grid-cols-4">
@@ -1286,7 +1294,7 @@
               <span class="selo-verde-eb px-2.5 py-1 font-display text-sm font-bold uppercase tracking-[0.12em]">100% orgânico</span>
             </div>
             <div>
-              <p class="font-display text-[88px] font-black leading-[0.8] tracking-tight sm:text-[140px] lg:text-[156px]">499.000</p>
+              <p class="font-display text-[88px] font-black leading-[0.8] tracking-tight sm:text-[140px] lg:text-[156px]">500.000</p>
               <p class="mt-5 max-w-md text-[15px] leading-relaxed text-zinc-700">Autor do Censo EB de supercarros no Brasil, com 13 anos de acervo documental, construído sem um centavo de anúncio.</p>
             </div>
           </article>
@@ -1641,7 +1649,8 @@
       var pendente = false;
       function atualizar() {
         pendente = false;
-        var noTopo = masthead.getBoundingClientRect().bottom > 0;
+        // No celular o masthead fica escondido e o símbolo da barra fixa aparece sempre.
+        var noTopo = masthead.offsetHeight > 0 && masthead.getBoundingClientRect().bottom > 0;
         simbolo.classList.toggle('opacity-0', noTopo);
         simbolo.classList.toggle('invisible', noTopo);
       }

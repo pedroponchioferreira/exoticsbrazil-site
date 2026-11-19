@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EB Studio: anonimizador inteligente de placas | Exotics Brazil</title>
-  <meta name="description" content="Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <meta name="description" content="EB Studio: tira a placa das fotos de carros, aplica a sua marca na perspectiva do para-choque e borra rostos. Grátis, no navegador, sem enviar foto.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.exoticsbrazil.com.br/studio/">
   <meta name="author" content="Exotics Brazil (@exoticsbrazil)">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://www.exoticsbrazil.com.br/studio/">
   <meta property="og:title" content="EB Studio: anonimizador inteligente de placas | Exotics Brazil">
-  <meta property="og:description" content="Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.">
+  <meta property="og:description" content="EB Studio: tira a placa das fotos de carros, aplica a sua marca na perspectiva do para-choque e borra rostos. Grátis, no navegador, sem enviar foto.">
   <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/identidade/og-studio.jpg?v=3">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -41,6 +41,7 @@
     .st-tres { grid-template-columns: repeat(3, minmax(0, 1fr)); } .st-dois { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .st-cartao { background: var(--eb-bg-surface); border: 1px solid var(--eb-border-subtle); padding: 1rem; }
     .st-cartao + .st-cartao { margin-top: .75rem; }
+    .grid > .st-cartao + .st-cartao { margin-top: 0; }
     .st-campo { display: grid; grid-template-columns: 1fr; gap: .3rem; margin-top: .85rem; }
     .st-campo label, .st-campo .st-nome { font-size: .875rem; color: var(--eb-text-body); }
     .st-campo input[type="range"] { width: 100%; height: 32px; accent-color: var(--eb-yellow); }
@@ -136,6 +137,13 @@
     ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
     :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
     ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    h1, h2, h3 { text-wrap: balance; }
+    p, li, dd { text-wrap: pretty; }
+    .contador-eb, .cl-u, .numero-censo-eb, td { font-variant-numeric: tabular-nums; }
+    /* Ícones e bandeiras em SVG próprio, iguais em Windows, Mac, iPhone e Android */
+    .icone-eb { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+    .bandeira-eb { display: inline-block; width: 1.4em; height: auto; aspect-ratio: 3 / 2; flex-shrink: 0; vertical-align: -0.12em; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+    .icone-aba-eb { margin-right: .45em; }
     /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
     .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
     .filete-eb, .filete-topo-eb { position: relative; }
@@ -191,7 +199,7 @@
     .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
     .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
     /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
-    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb { font-size: 16px; background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
     .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
     .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
@@ -226,12 +234,13 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    /* Hover sem zoom (lei 2.1: a borda do carro nunca se corta). O quadro ganha um fio amarelo de 1 px por dentro, e a foto não se mexe. */
+    .miniatura-eb::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 0 1px transparent; transition: box-shadow .25s ease; }
+    .group:hover .miniatura-eb::after, .group:focus-visible .miniatura-eb::after { box-shadow: inset 0 0 0 1px rgba(250, 204, 21, 0.6); }
     .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
     .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
-    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
     .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
@@ -240,7 +249,7 @@
     .selo-beta-eb { display: inline-block; margin-left: .3em; padding: .2em .4em .15em; vertical-align: super; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .12em; color: #FACC15; background: rgba(250, 204, 21, .1); box-shadow: inset 0 0 0 1px rgba(250, 204, 21, .35); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
-    @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb::after { transition: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
@@ -252,7 +261,7 @@
   "@id": "https://www.exoticsbrazil.com.br/studio/#app",
   "name": "EB Studio",
   "url": "https://www.exoticsbrazil.com.br/studio/",
-  "description": "Ferramenta gratuita do Exotics Brazil que acha a placa nas fotos de carros, limpa os caracteres, aplica a marca na perspectiva do para-choque e borra rostos ao fundo. Roda no navegador e as fotos nunca saem do aparelho.",
+  "description": "EB Studio: tira a placa das fotos de carros, aplica a sua marca na perspectiva do para-choque e borra rostos. Grátis, no navegador, sem enviar foto.",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "Qualquer navegador moderno",
   "inLanguage": "pt-BR",
@@ -350,7 +359,7 @@
       <div class="mt-8 flex flex-col items-center gap-4">
         <button type="button" data-escolher class="botao-verde-eb st-grande inline-flex items-center gap-3 font-display uppercase tracking-wide">Escolher fotos</button>
         <p class="text-sm text-zinc-500">uma ou muitas de uma vez · ou arraste, solte ou cole nesta página</p>
-        <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
+        <p class="st-privado"><svg class="icone-eb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v2"/></svg><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
       </div>
       <ol class="mt-12 grid gap-4 text-left sm:grid-cols-3">
         <li class="st-cartao"><p class="font-display text-3xl font-black text-amarelo">01</p><h2 class="mt-1 font-display text-2xl font-extrabold uppercase leading-tight text-white">Escolha as fotos</h2><p class="mt-2 text-[15px] leading-relaxed text-zinc-300">O Studio procura a placa sozinho em cada foto, Mercosul ou cinza antiga. Placa de carro ao fundo entra em desfoque.</p></li>
@@ -361,8 +370,8 @@
 
     <section id="st-app" hidden>
       <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
-        <div><p class="st-rotulo">EB Studio · versão de testes</p><h1 class="font-display text-4xl font-black uppercase leading-none tracking-tight text-white">Tratar as fotos</h1></div>
-        <p class="st-privado"><span aria-hidden="true">🔒</span><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
+        <div><p class="st-rotulo">EB Studio · versão de testes</p><h2 class="font-display text-4xl font-black uppercase leading-none tracking-tight text-white">Tratar as fotos</h2></div>
+        <p class="st-privado"><svg class="icone-eb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v2"/></svg><span>Suas fotos nunca saem do seu aparelho. Processamento 100% local e privado.</span></p>
       </div>
       <div class="st-area">
         <div>

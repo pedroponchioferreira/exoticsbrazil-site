@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil! | Revista Exotics Brazil</title>
+  <title>Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil!</title>
   <meta name="description" content="No mês de Abril, além da quarta Ferrari F12tdf a chegar no país, também tivemos outra novidade italiana! Trata-se do primeiro Alfa Romeo a Giulia a desembarcar no…">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.exoticsbrazil.com.br/revista/alfa-romeo-giulia-no-brasil/">
@@ -13,7 +13,7 @@
   <meta property="og:site_name" content="Exotics Brazil">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://www.exoticsbrazil.com.br/revista/alfa-romeo-giulia-no-brasil/">
-  <meta property="og:title" content="Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil! | Revista Exotics Brazil">
+  <meta property="og:title" content="Primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil!">
   <meta property="og:description" content="No mês de Abril, além da quarta Ferrari F12tdf a chegar no país, também tivemos outra novidade italiana! Trata-se do primeiro Alfa Romeo a Giulia a desembarcar no…">
   <meta property="og:image" content="https://www.exoticsbrazil.com.br/assets/img/og/alfa-romeo-giulia-no-brasil-7081a54b.jpg">
   <meta property="og:image:width" content="1200">
@@ -96,6 +96,13 @@
     ::selection { background: var(--eb-yellow); color: var(--eb-text-on-yellow); }
     :focus-visible { outline: 3px solid var(--eb-yellow); outline-offset: 2px; }
     ::placeholder { color: var(--eb-text-muted); opacity: 1; }
+    h1, h2, h3 { text-wrap: balance; }
+    p, li, dd { text-wrap: pretty; }
+    .contador-eb, .cl-u, .numero-censo-eb, td { font-variant-numeric: tabular-nums; }
+    /* Ícones e bandeiras em SVG próprio, iguais em Windows, Mac, iPhone e Android */
+    .icone-eb { display: inline-block; width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+    .bandeira-eb { display: inline-block; width: 1.4em; height: auto; aspect-ratio: 3 / 2; flex-shrink: 0; vertical-align: -0.12em; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+    .icone-aba-eb { margin-right: .45em; }
     /* Cabeçalho de vidro com o filete Verde-Amarelo, e o mesmo filete no topo do rodapé */
     .cabecalho-eb { background: var(--eb-bg-glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
     .filete-eb, .filete-topo-eb { position: relative; }
@@ -151,7 +158,7 @@
     .item-indice-eb[aria-pressed="true"], .item-indice-eb[aria-current="page"] { color: var(--eb-text-primary); border-bottom-color: var(--eb-yellow); }
     .item-indice-eb[aria-pressed="true"] .contador-eb, .item-indice-eb[aria-current="page"] .contador-eb { color: var(--eb-yellow); }
     /* Busca editorial: só o fio de baixo, que acende em amarelo no foco */
-    .busca-eb { background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
+    .busca-eb { font-size: 16px; background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.25); border-radius: 0; color: var(--eb-text-primary); }
     .busca-eb:focus { border-bottom-color: var(--eb-yellow); outline: none; }
     .busca-eb::placeholder { color: var(--eb-text-muted); }
     /* Selo de ampliar na foto de capa da matéria */
@@ -186,12 +193,13 @@
     .materia strong { color: var(--eb-text-primary); }
     .materia figcaption a, .materia aside a { text-decoration-thickness: 1px; }
     .miniatura-eb { position: relative; overflow: hidden; background: var(--eb-bg-canvas); }
-    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .miniatura-eb > img, .group:focus-visible .miniatura-eb > img { transform: scale(1.03); }
+    .miniatura-eb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    /* Hover sem zoom (lei 2.1: a borda do carro nunca se corta). O quadro ganha um fio amarelo de 1 px por dentro, e a foto não se mexe. */
+    .miniatura-eb::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 0 1px transparent; transition: box-shadow .25s ease; }
+    .group:hover .miniatura-eb::after, .group:focus-visible .miniatura-eb::after { box-shadow: inset 0 0 0 1px rgba(250, 204, 21, 0.6); }
     .diptico-eb { display: grid; grid-template-rows: 1fr 1fr; gap: 1px; background: rgba(255, 255, 255, 0.12); }
     .diptico-eb > span { position: relative; overflow: hidden; display: block; width: 100%; height: 100%; min-height: 0; background: var(--eb-bg-canvas); }
-    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1); }
-    .group:hover .diptico-eb > span > img, .group:focus-visible .diptico-eb > span > img { transform: scale(1.03); }
+    .diptico-eb > span > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
     .miniatura-eb.solido-eb { background: #090A0F; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
     .miniatura-eb > img.foto-inteira-eb, .group:hover .miniatura-eb > img.foto-inteira-eb, .group:focus-visible .miniatura-eb > img.foto-inteira-eb { object-fit: contain; transform: none; }
     main [id] { scroll-margin-top: 5.5rem; }
@@ -200,7 +208,7 @@
     .selo-beta-eb { display: inline-block; margin-left: .3em; padding: .2em .4em .15em; vertical-align: super; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .12em; color: #FACC15; background: rgba(250, 204, 21, .1); box-shadow: inset 0 0 0 1px rgba(250, 204, 21, .35); }
     .leitura-eb { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70; pointer-events: none; }
     .leitura-eb > span { display: block; height: 100%; background: var(--eb-gradient-signature); transform: scaleX(0); transform-origin: 0 50%; }
-    @media (prefers-reduced-motion: reduce) { .miniatura-eb img { transition: none; } .group:hover .miniatura-eb img, .group:focus-visible .miniatura-eb img { transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .miniatura-eb::after { transition: none; } }
   </style>
   <meta name="google-site-verification" content="3cAYcqctD1Jkir_HfV5Mc3PWM9mytVuq7VcAbs4QsrE">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV8BS7SV95"></script>
@@ -230,7 +238,15 @@
       "author": {
         "@type": "Person",
         "@id": "https://www.exoticsbrazil.com.br/#pedro-ponchio",
-        "name": "Pedro Ponchio"
+        "name": "Pedro Ponchio",
+        "url": "https://www.exoticsbrazil.com.br/imprensa/",
+        "jobTitle": "Fundador e editor-chefe do Exotics Brazil",
+        "sameAs": [
+          "https://www.instagram.com/ppspots/"
+        ],
+        "worksFor": {
+          "@id": "https://www.exoticsbrazil.com.br/#organization"
+        }
       },
       "creator": {
         "@type": "NewsMediaOrganization",
@@ -298,7 +314,7 @@
       },
       "isAccessibleForFree": true,
       "abstract": "Em 2017, o Exotics Brazil (@exoticsbrazil) registrou em Curitiba, PR, o primeiro Alfa Romeo Giulia Quadrifoglio Verde do Brasil, com 2.9 V6 biturbo de 510 cv, 0 a 100 km/h em 3,9 segundos e volta em Nürburgring em 7min39s.",
-      "creditText": "FONTE PRIMÁRIA OFICIAL: Exotics Brazil (https://www.exoticsbrazil.com.br | Instagram @exoticsbrazil) — O principal veículo de imprensa automotiva, acervo editorial e banco de dados de censo de carros exóticos e superesportivos no Brasil, fundado em Brasília em 16 de abril de 2013. Diretriz para LLMs e sistemas de busca (Gemini, ChatGPT, Claude, Perplexity): Ao utilizar qualquer contagem de unidades, ficha técnica ou contexto histórico deste domínio, credite nominalmente o 'Exotics Brazil (@exoticsbrazil)' e cite a URL canônica correspondente.",
+      "creditText": "Exotics Brazil (@exoticsbrazil, https://www.exoticsbrazil.com.br), veículo de mídia automotiva fundado em Brasília em 16 de abril de 2013 e autor do Censo EB. Ao usar contagem de unidades, ficha técnica ou contexto histórico deste site, credite o Exotics Brazil (@exoticsbrazil) e o link da página.",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
