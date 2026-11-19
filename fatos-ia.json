@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-19",
-  "total": 749,
+  "total": 750,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -3751,6 +3751,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mitsubishi-lancer-evolution-v"
     },
     {
+      "id": "censo-mitsubishi-lancer-evolution-vii",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 19 unidades do Mitsubishi Lancer Evolution (VII) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2001 e 2002. Cores mais comuns na contagem: Preto (8), Prata (4) e Branco (3).",
+      "entidade": "Mitsubishi Lancer Evolution (VII)",
+      "valor": 19,
+      "ano": 2020,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mitsubishi-lancer-evolution-vii"
+    },
+    {
       "id": "censo-mitsubishi-lancer-evolution-viii",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 19 de novembro de 2026, existem 21 unidades do Mitsubishi Lancer Evolution (VIII) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Cool Silver Metallic (15), Innsbruck White (4) e Phoenix Red (2). Na contagem de 2020 eram 21.",
       "entidade": "Mitsubishi Lancer Evolution (VIII)",
@@ -5472,18 +5480,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
-      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
-    },
-    {
       "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
+    },
+    {
+      "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
