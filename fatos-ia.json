@@ -151,22 +151,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#alpine-a110-pure"
     },
     {
-      "id": "censo-aston-martin-db11-am5",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Aston Martin DB11 (AM5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Arden Green.",
-      "entidade": "Aston Martin DB11 (AM5)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-db11-am5"
-    },
-    {
-      "id": "censo-aston-martin-db12",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Aston Martin DB12 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Sem cor dominante: cada uma das 6 unidades tem a sua, como Iridescent Emerald, Magnetic Silver e Oberon Black.",
-      "entidade": "Aston Martin DB12",
-      "valor": 6,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-db12"
-    },
-    {
       "id": "censo-aston-martin-db6",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Aston Martin DB6 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black, 1 British Racing Green e 1 Silver Birch.",
       "entidade": "Aston Martin DB6",
@@ -199,6 +183,38 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-db9-volante"
     },
     {
+      "id": "censo-aston-martin-db11-am5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Aston Martin DB11 (AM5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Arden Green.",
+      "entidade": "Aston Martin DB11 (AM5)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-db11-am5"
+    },
+    {
+      "id": "censo-aston-martin-db12",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Aston Martin DB12 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Sem cor dominante: cada uma das 6 unidades tem a sua, como Iridescent Emerald, Magnetic Silver e Oberon Black.",
+      "entidade": "Aston Martin DB12",
+      "valor": 6,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-db12"
+    },
+    {
+      "id": "censo-aston-martin-dbs770-ultimate-volante",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Aston Martin DBS770 Ultimate Volante no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Buckinghamshire Green, 1 Minotaur Green e 1 Satin Xenon Grey.",
+      "entidade": "Aston Martin DBS770 Ultimate Volante",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs770-ultimate-volante"
+    },
+    {
+      "id": "censo-aston-martin-dbs-770-ultimate-coupe",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Aston Martin DBS 770 Ultimate Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 300 Coupés fabricados, numa série de 499 unidades. Uma delas é em Q Iridescent Emerald.",
+      "entidade": "Aston Martin DBS 770 Ultimate Coupé",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs-770-ultimate-coupe"
+    },
+    {
       "id": "censo-aston-martin-dbs-1a-geracao-20072012",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 11 unidades do Aston Martin DBS (1ª geração, 2007–2012) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Quantum Silver (3), Jet Black (2) e Bergwerk Black (1), além de 5 cores com um único exemplar.",
       "entidade": "Aston Martin DBS (1ª geração, 2007–2012)",
@@ -215,28 +231,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs-2a-geracao-20182023"
     },
     {
-      "id": "censo-aston-martin-dbs-770-ultimate-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Aston Martin DBS 770 Ultimate Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 300 Coupés fabricados, numa série de 499 unidades. Uma delas é em Q Iridescent Emerald.",
-      "entidade": "Aston Martin DBS 770 Ultimate Coupé",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs-770-ultimate-coupe"
-    },
-    {
       "id": "censo-aston-martin-dbs-volante",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Aston Martin DBS Volante no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Morning Frost White.",
       "entidade": "Aston Martin DBS Volante",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs-volante"
-    },
-    {
-      "id": "censo-aston-martin-dbs770-ultimate-volante",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Aston Martin DBS770 Ultimate Volante no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Buckinghamshire Green, 1 Minotaur Green e 1 Satin Xenon Grey.",
-      "entidade": "Aston Martin DBS770 Ultimate Volante",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-dbs770-ultimate-volante"
     },
     {
       "id": "censo-aston-martin-dbx",
@@ -261,38 +261,6 @@
       "valor": 14,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-rapide"
-    },
-    {
-      "id": "censo-aston-martin-v12-vantage-2022",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Aston Martin V12 Vantage (2022) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 333 fabricados no mundo.",
-      "entidade": "Aston Martin V12 Vantage (2022)",
-      "valor": 6,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022"
-    },
-    {
-      "id": "censo-aston-martin-v12-vantage-am6-1",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Aston Martin V12 Vantage (AM6.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 AM Racing Green, 1 Satin Concours Blue, 1 Satin Jet Black e 1 Solar Bronze.",
-      "entidade": "Aston Martin V12 Vantage (AM6.1)",
-      "valor": 4,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-am6-1"
-    },
-    {
-      "id": "censo-aston-martin-v12-vantage-roadster-am6-1",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Aston Martin V12 Vantage Roadster (AM6.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Satin Jet Black e 1 Satin Olive Green.",
-      "entidade": "Aston Martin V12 Vantage Roadster (AM6.1)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-roadster-am6-1"
-    },
-    {
-      "id": "censo-aston-martin-v12-vantage-s-am6",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Aston Martin V12 Vantage S (AM6) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Meteorite Silver.",
-      "entidade": "Aston Martin V12 Vantage S (AM6)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-s-am6"
     },
     {
       "id": "censo-aston-martin-v8-vantage",
@@ -365,6 +333,38 @@
       "valor": 5,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v8-vantage-s"
+    },
+    {
+      "id": "censo-aston-martin-v12-vantage-2022",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Aston Martin V12 Vantage (2022) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 333 fabricados no mundo.",
+      "entidade": "Aston Martin V12 Vantage (2022)",
+      "valor": 6,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-2022"
+    },
+    {
+      "id": "censo-aston-martin-v12-vantage-am6-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Aston Martin V12 Vantage (AM6.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 AM Racing Green, 1 Satin Concours Blue, 1 Satin Jet Black e 1 Solar Bronze.",
+      "entidade": "Aston Martin V12 Vantage (AM6.1)",
+      "valor": 4,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-am6-1"
+    },
+    {
+      "id": "censo-aston-martin-v12-vantage-roadster-am6-1",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Aston Martin V12 Vantage Roadster (AM6.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Satin Jet Black e 1 Satin Olive Green.",
+      "entidade": "Aston Martin V12 Vantage Roadster (AM6.1)",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-roadster-am6-1"
+    },
+    {
+      "id": "censo-aston-martin-v12-vantage-s-am6",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Aston Martin V12 Vantage S (AM6) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Meteorite Silver.",
+      "entidade": "Aston Martin V12 Vantage S (AM6)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#aston-martin-v12-vantage-s-am6"
     },
     {
       "id": "censo-aston-martin-valour",
@@ -455,6 +455,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-gt-spyder-type-42"
     },
     {
+      "id": "censo-audi-r8-spyder-v10-type-4s",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: O único R8 da \"última\" geração na configuração Spyder do Brasil.",
+      "entidade": "Audi R8 Spyder V10 (Type 4S)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s"
+    },
+    {
       "id": "censo-audi-r8-spyder-v10-type-42-facelift",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 25 unidades do Audi R8 Spyder V10 (Type 42 Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Daytona Grey Pearl (8), Ibis White (6) e Brilliant Red (5), além de exemplar único em Estoril Blue Crystal Effect.",
       "entidade": "Audi R8 Spyder V10 (Type 42 Facelift)",
@@ -463,12 +471,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-42-facelift"
     },
     {
-      "id": "censo-audi-r8-spyder-v10-type-4s",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Audi R8 Spyder V10 (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: O único R8 da \"última\" geração na configuração Spyder do Brasil.",
-      "entidade": "Audi R8 Spyder V10 (Type 4S)",
-      "valor": 1,
+      "id": "censo-audi-r8-v10-coupe-type-4s-facelift",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 66 unidades do Audi R8 V10 Coupé (Type 4S Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 17 cores diferentes, entre elas Vegas Yellow (8), Ascari Blue Metallic (7) e Kemora Grey Metallic (7), além de 4 cores com um único exemplar.",
+      "entidade": "Audi R8 V10 Coupé (Type 4S Facelift)",
+      "valor": 66,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-spyder-v10-type-4s"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-4s-facelift"
     },
     {
       "id": "censo-audi-r8-v10-coupe-type-42",
@@ -487,12 +495,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-42-2"
     },
     {
-      "id": "censo-audi-r8-v10-coupe-type-4s-facelift",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 66 unidades do Audi R8 V10 Coupé (Type 4S Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 17 cores diferentes, entre elas Vegas Yellow (8), Ascari Blue Metallic (7) e Kemora Grey Metallic (7), além de 4 cores com um único exemplar.",
-      "entidade": "Audi R8 V10 Coupé (Type 4S Facelift)",
-      "valor": 66,
+      "id": "censo-audi-r8-v10-plus-coupe-type-4s",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 36 unidades do Audi R8 V10 plus Coupé (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Dynamite Red (11), Ibis White (7) e Ara Blue Crystal (4), além de exemplar único em Nardo Grey.",
+      "entidade": "Audi R8 V10 plus Coupé (Type 4S)",
+      "valor": 36,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-coupe-type-4s-facelift"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-plus-coupe-type-4s"
     },
     {
       "id": "censo-audi-r8-v10-spyder-type-42",
@@ -501,14 +509,6 @@
       "valor": 34,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-spyder-type-42"
-    },
-    {
-      "id": "censo-audi-r8-v10-plus-coupe-type-4s",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 36 unidades do Audi R8 V10 plus Coupé (Type 4S) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Dynamite Red (11), Ibis White (7) e Ara Blue Crystal (4), além de exemplar único em Nardo Grey.",
-      "entidade": "Audi R8 V10 plus Coupé (Type 4S)",
-      "valor": 36,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-r8-v10-plus-coupe-type-4s"
     },
     {
       "id": "censo-audi-rs3-sportback-8p-2",
@@ -655,12 +655,92 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#audi-tt-rs-roadster-8j-2"
     },
     {
-      "id": "censo-bmw-135i-sauber-f1-team-edition-e82",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 12 unidades do BMW 135i Sauber F1 Team Edition (E82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Alpine White III (12).",
-      "entidade": "BMW 135i Sauber F1 Team Edition (E82)",
-      "valor": 12,
+      "id": "censo-bentley-bentayga-hybrid-v6-type-4v",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Bentayga Hybrid V6 (Type 4V) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Arctica White e 1 Onyx Pearl.",
+      "entidade": "Bentley Bentayga Hybrid V6 (Type 4V)",
+      "valor": 2,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-135i-sauber-f1-team-edition-e82"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-bentayga-hybrid-v6-type-4v"
+    },
+    {
+      "id": "censo-bentley-continental-gt-mulliner-4a-gen",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Bentley Continental GT Mulliner (4ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Onyx Pearl e 1 Cambrian Grey.",
+      "entidade": "Bentley Continental GT Mulliner (4ª Gen)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-mulliner-4a-gen"
+    },
+    {
+      "id": "censo-bentley-continental-gt-mulliner-w12-3a-ger",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Continental GT Mulliner W12 (3ª Ger) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black Crystal Metallic e 1 Grey Violet Purple.",
+      "entidade": "Bentley Continental GT Mulliner W12 (3ª Ger)",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-mulliner-w12-3a-ger"
+    },
+    {
+      "id": "censo-bentley-continental-gt-v8-s-2a-gen-facelift",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Bentley Continental GT V8 S (2ª Gen Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Glacier White, 2 Onyx Pearl e 1 Blue Crystal Pearl.",
+      "entidade": "Bentley Continental GT V8 S (2ª Gen Facelift)",
+      "valor": 5,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-v8-s-2a-gen-facelift"
+    },
+    {
+      "id": "censo-bentley-continental-gtc-mulliner",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC Mulliner no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Onyx Pearl.",
+      "entidade": "Bentley Continental GTC Mulliner",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-mulliner"
+    },
+    {
+      "id": "censo-bentley-continental-gtc-v8-3a-gen",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC V8 (3ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Silverlake.",
+      "entidade": "Bentley Continental GTC V8 (3ª Gen)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-v8-3a-gen"
+    },
+    {
+      "id": "censo-bentley-continental-gtc-v8-typ-3w",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC V8 (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Dark Sapphire Pearl.",
+      "entidade": "Bentley Continental GTC V8 (Typ 3W)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-v8-typ-3w"
+    },
+    {
+      "id": "censo-bentley-continental-supersports-typ-3w",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 9 unidades do Bentley Continental Supersports (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Entre as cores registradas, predominam Ice Pearl (3), Beluga Black (1) e Blue Crystal Metallic (1), além de 3 cores com um único exemplar.",
+      "entidade": "Bentley Continental Supersports (Typ 3W)",
+      "valor": 9,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-supersports-typ-3w"
+    },
+    {
+      "id": "censo-bentley-continental-supersports-convertible-typ-3w",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental Supersports Convertible (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Ice Pearl.",
+      "entidade": "Bentley Continental Supersports Convertible (Typ 3W)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-supersports-convertible-typ-3w"
+    },
+    {
+      "id": "censo-bentley-corniche-convertible",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Corniche Convertible no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black e 1 Brewster Green.",
+      "entidade": "Bentley Corniche Convertible",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-corniche-convertible"
+    },
+    {
+      "id": "censo-bentley-flying-spur-mulliner-3a-gen",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Flying Spur Mulliner (3ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Hallmark Metallic e 1 Magnetic Silver.",
+      "entidade": "Bentley Flying Spur Mulliner (3ª Gen)",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-flying-spur-mulliner-3a-gen"
     },
     {
       "id": "censo-bmw-1m-e82",
@@ -671,12 +751,36 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-1m-e82"
     },
     {
+      "id": "censo-bmw-135i-sauber-f1-team-edition-e82",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 12 unidades do BMW 135i Sauber F1 Team Edition (E82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Alpine White III (12).",
+      "entidade": "BMW 135i Sauber F1 Team Edition (E82)",
+      "valor": 12,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-135i-sauber-f1-team-edition-e82"
+    },
+    {
+      "id": "censo-bmw-i8-roadster-i15",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do BMW i8 Roadster (I15) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Crystal White Pearl Effect (5), E-Copper Metallic (2) e Frozen Donington Grey (2), além de exemplar único em Sophisto Grey Brilliant Effect.",
+      "entidade": "BMW i8 Roadster (I15)",
+      "valor": 10,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-i8-roadster-i15"
+    },
+    {
       "id": "censo-bmw-m2-f87",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 106 unidades do BMW M2 (F87) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Long Beach Blue Metallic (29), Black Sapphire (26) e Mineral Grey (26).",
       "entidade": "BMW M2 (F87)",
       "valor": 106,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m2-f87"
+    },
+    {
+      "id": "censo-bmw-m2-competition-f87",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 256 unidades do BMW M2 Competition (F87) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Sapphire Black Metallic (89), Hockenheim Silver Metallic (76) e Alpine White III (39).",
+      "entidade": "BMW M2 Competition (F87)",
+      "valor": 256,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m2-competition-f87"
     },
     {
       "id": "censo-bmw-m2-cs-f87",
@@ -687,12 +791,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m2-cs-f87"
     },
     {
-      "id": "censo-bmw-m2-competition-f87",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 256 unidades do BMW M2 Competition (F87) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Sapphire Black Metallic (89), Hockenheim Silver Metallic (76) e Alpine White III (39).",
-      "entidade": "BMW M2 Competition (F87)",
-      "valor": 256,
+      "id": "censo-bmw-m3-30-jahre-f80",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M3 30 Jahre (F80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Macao Blue Metallic.",
+      "entidade": "BMW M3 30 Jahre (F80)",
+      "valor": 2,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m2-competition-f87"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-30-jahre-f80"
     },
     {
       "id": "censo-bmw-m3-e90",
@@ -709,38 +813,6 @@
       "valor": 390,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-f80"
-    },
-    {
-      "id": "censo-bmw-m3-30-jahre-f80",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M3 30 Jahre (F80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Macao Blue Metallic.",
-      "entidade": "BMW M3 30 Jahre (F80)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-30-jahre-f80"
-    },
-    {
-      "id": "censo-bmw-m3-cs-f80",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M3 CS (F80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black Sapphire Metallic e 1 Frozen Dark Blue II.",
-      "entidade": "BMW M3 CS (F80)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-cs-f80"
-    },
-    {
-      "id": "censo-bmw-m3-cs-g80",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 17 unidades do BMW M3 CS (G80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Lote de 2024 no padrão europeu: 7 em Preto Safira, 6 em Cinza Brooklyn e 4 em Verde Signal.",
-      "entidade": "BMW M3 CS (G80)",
-      "valor": 17,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-cs-g80"
-    },
-    {
-      "id": "censo-bmw-m3-csl-e46",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW M3 CSL (E46) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Black Sapphire.",
-      "entidade": "BMW M3 CSL (E46)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-csl-e46"
     },
     {
       "id": "censo-bmw-m3-cabriolet-e93",
@@ -767,6 +839,30 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-competition-50-jahre-edition-g80"
     },
     {
+      "id": "censo-bmw-m3-cs-f80",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M3 CS (F80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black Sapphire Metallic e 1 Frozen Dark Blue II.",
+      "entidade": "BMW M3 CS (F80)",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-cs-f80"
+    },
+    {
+      "id": "censo-bmw-m3-cs-g80",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 17 unidades do BMW M3 CS (G80) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Lote de 2024 no padrão europeu: 7 em Preto Safira, 6 em Cinza Brooklyn e 4 em Verde Signal.",
+      "entidade": "BMW M3 CS (G80)",
+      "valor": 17,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-cs-g80"
+    },
+    {
+      "id": "censo-bmw-m3-csl-e46",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW M3 CSL (E46) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Black Sapphire.",
+      "entidade": "BMW M3 CSL (E46)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-csl-e46"
+    },
+    {
       "id": "censo-bmw-m3-gts-e92",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do BMW M3 GTS (E92) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Versão mais extrema da geração E92, série limitada a 150 exemplares no mundo, com V8 4.4 aspirado de 450cv e câmbio M DCT de 6 marchas. Uma das 3 do país é a unidade 047 da série, em Fire Orange II.",
       "entidade": "BMW M3 GTS (E92)",
@@ -789,30 +885,6 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-touring-g81"
-    },
-    {
-      "id": "censo-bmw-m4-cs-f82",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do BMW M4 CS (F82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 4 cores diferentes, entre elas Frozen Dark Blue II (2), Lime Rock Grey (2) e San Marino Blue (2), além de exemplar único em Sapphire Black.",
-      "entidade": "BMW M4 CS (F82)",
-      "valor": 7,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-cs-f82"
-    },
-    {
-      "id": "censo-bmw-m4-cs-g82",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 35 unidades do BMW M4 CS (G82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Black Sapphire Metallic (15), Brooklyn Grey Metallic (9) e Frozen Isle of Man Green Metallic (9).",
-      "entidade": "BMW M4 CS (G82)",
-      "valor": 35,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-cs-g82"
-    },
-    {
-      "id": "censo-bmw-m4-csl-g82",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW M4 CSL (G82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Sapphire Black Metallic.",
-      "entidade": "BMW M4 CSL (G82)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-csl-g82"
     },
     {
       "id": "censo-bmw-m4-cabrio-f83",
@@ -839,6 +911,30 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-coupe-f82"
     },
     {
+      "id": "censo-bmw-m4-cs-f82",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do BMW M4 CS (F82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 4 cores diferentes, entre elas Frozen Dark Blue II (2), Lime Rock Grey (2) e San Marino Blue (2), além de exemplar único em Sapphire Black.",
+      "entidade": "BMW M4 CS (F82)",
+      "valor": 7,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-cs-f82"
+    },
+    {
+      "id": "censo-bmw-m4-cs-g82",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 35 unidades do BMW M4 CS (G82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Black Sapphire Metallic (15), Brooklyn Grey Metallic (9) e Frozen Isle of Man Green Metallic (9).",
+      "entidade": "BMW M4 CS (G82)",
+      "valor": 35,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-cs-g82"
+    },
+    {
+      "id": "censo-bmw-m4-csl-g82",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW M4 CSL (G82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Sapphire Black Metallic.",
+      "entidade": "BMW M4 CSL (G82)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-csl-g82"
+    },
+    {
       "id": "censo-bmw-m4-dtm-champion-edition-f82",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do BMW M4 DTM Champion Edition (F82) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Alpine White III.",
       "entidade": "BMW M4 DTM Champion Edition (F82)",
@@ -853,6 +949,14 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m4-gts-f82"
+    },
+    {
+      "id": "censo-bmw-m5-25-jahre-e60",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do BMW M5 25 Jahre (E60) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 5 Frozen Grey Metallic.",
+      "entidade": "BMW M5 25 Jahre (E60)",
+      "valor": 5,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-25-jahre-e60"
     },
     {
       "id": "censo-bmw-m5-e39",
@@ -879,12 +983,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-f90"
     },
     {
-      "id": "censo-bmw-m5-25-jahre-e60",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do BMW M5 25 Jahre (E60) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 5 Frozen Grey Metallic.",
-      "entidade": "BMW M5 25 Jahre (E60)",
-      "valor": 5,
+      "id": "censo-bmw-m5-competition-edition-35-jahre-f90",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M5 Competition Edition 35 Jahre (F90) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 350 fabricados no mundo.",
+      "entidade": "BMW M5 Competition Edition 35 Jahre (F90)",
+      "valor": 2,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-25-jahre-e60"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-competition-edition-35-jahre-f90"
     },
     {
       "id": "censo-bmw-m5-cs-f90",
@@ -893,14 +997,6 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-cs-f90"
-    },
-    {
-      "id": "censo-bmw-m5-competition-edition-35-jahre-f90",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do BMW M5 Competition Edition 35 Jahre (F90) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De 350 fabricados no mundo.",
-      "entidade": "BMW M5 Competition Edition 35 Jahre (F90)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-m5-competition-edition-35-jahre-f90"
     },
     {
       "id": "censo-bmw-m5-touring-g99",
@@ -1021,102 +1117,6 @@
       "valor": 10,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-z8-e52"
-    },
-    {
-      "id": "censo-bmw-i8-roadster-i15",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do BMW i8 Roadster (I15) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Crystal White Pearl Effect (5), E-Copper Metallic (2) e Frozen Donington Grey (2), além de exemplar único em Sophisto Grey Brilliant Effect.",
-      "entidade": "BMW i8 Roadster (I15)",
-      "valor": 10,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bmw-i8-roadster-i15"
-    },
-    {
-      "id": "censo-bentley-bentayga-hybrid-v6-type-4v",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Bentayga Hybrid V6 (Type 4V) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Arctica White e 1 Onyx Pearl.",
-      "entidade": "Bentley Bentayga Hybrid V6 (Type 4V)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-bentayga-hybrid-v6-type-4v"
-    },
-    {
-      "id": "censo-bentley-continental-gt-mulliner-4a-gen",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Bentley Continental GT Mulliner (4ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Onyx Pearl e 1 Cambrian Grey.",
-      "entidade": "Bentley Continental GT Mulliner (4ª Gen)",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-mulliner-4a-gen"
-    },
-    {
-      "id": "censo-bentley-continental-gt-mulliner-w12-3a-ger",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Continental GT Mulliner W12 (3ª Ger) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black Crystal Metallic e 1 Grey Violet Purple.",
-      "entidade": "Bentley Continental GT Mulliner W12 (3ª Ger)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-mulliner-w12-3a-ger"
-    },
-    {
-      "id": "censo-bentley-continental-gt-v8-s-2a-gen-facelift",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Bentley Continental GT V8 S (2ª Gen Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Glacier White, 2 Onyx Pearl e 1 Blue Crystal Pearl.",
-      "entidade": "Bentley Continental GT V8 S (2ª Gen Facelift)",
-      "valor": 5,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gt-v8-s-2a-gen-facelift"
-    },
-    {
-      "id": "censo-bentley-continental-gtc-mulliner",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC Mulliner no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Onyx Pearl.",
-      "entidade": "Bentley Continental GTC Mulliner",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-mulliner"
-    },
-    {
-      "id": "censo-bentley-continental-gtc-v8-3a-gen",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC V8 (3ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Silverlake.",
-      "entidade": "Bentley Continental GTC V8 (3ª Gen)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-v8-3a-gen"
-    },
-    {
-      "id": "censo-bentley-continental-gtc-v8-typ-3w",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental GTC V8 (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Dark Sapphire Pearl.",
-      "entidade": "Bentley Continental GTC V8 (Typ 3W)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-gtc-v8-typ-3w"
-    },
-    {
-      "id": "censo-bentley-continental-supersports-typ-3w",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 9 unidades do Bentley Continental Supersports (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Entre as cores registradas, predominam Ice Pearl (3), Beluga Black (1) e Blue Crystal Metallic (1), além de 3 cores com um único exemplar.",
-      "entidade": "Bentley Continental Supersports (Typ 3W)",
-      "valor": 9,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-supersports-typ-3w"
-    },
-    {
-      "id": "censo-bentley-continental-supersports-convertible-typ-3w",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Bentley Continental Supersports Convertible (Typ 3W) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Ice Pearl.",
-      "entidade": "Bentley Continental Supersports Convertible (Typ 3W)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-continental-supersports-convertible-typ-3w"
-    },
-    {
-      "id": "censo-bentley-corniche-convertible",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Corniche Convertible no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Black e 1 Brewster Green.",
-      "entidade": "Bentley Corniche Convertible",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-corniche-convertible"
-    },
-    {
-      "id": "censo-bentley-flying-spur-mulliner-3a-gen",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Bentley Flying Spur Mulliner (3ª Gen) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Hallmark Metallic e 1 Magnetic Silver.",
-      "entidade": "Bentley Flying Spur Mulliner (3ª Gen)",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#bentley-flying-spur-mulliner-3a-gen"
     },
     {
       "id": "censo-bugatti-chiron-sport",
@@ -1367,20 +1367,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-charger-r-t-daytona-lx"
     },
     {
-      "id": "censo-dodge-charger-srt-hellcat-widebody-king-daytona-last-call",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Dodge Charger SRT Hellcat Widebody King Daytona Last Call no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Go Mango.",
-      "entidade": "Dodge Charger SRT Hellcat Widebody King Daytona Last Call",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-charger-srt-hellcat-widebody-king-daytona-last-call"
-    },
-    {
       "id": "censo-dodge-charger-scat-pack-widebody-super-bee-last-call-ld",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Dodge Charger Scat Pack Widebody Super Bee Last Call (LD) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Plum Crazy.",
       "entidade": "Dodge Charger Scat Pack Widebody Super Bee Last Call (LD)",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-charger-scat-pack-widebody-super-bee-last-call-ld"
+    },
+    {
+      "id": "censo-dodge-charger-srt-hellcat-widebody-king-daytona-last-call",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Dodge Charger SRT Hellcat Widebody King Daytona Last Call no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Go Mango.",
+      "entidade": "Dodge Charger SRT Hellcat Widebody King Daytona Last Call",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-charger-srt-hellcat-widebody-king-daytona-last-call"
     },
     {
       "id": "censo-dodge-durango-srt-hellcat-wd",
@@ -1431,6 +1431,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-srt-viper-gts-vx-i"
     },
     {
+      "id": "censo-dodge-viper-srt10-zb-ii",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Dodge Viper SRT10 (ZB II) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 5 cores diferentes, entre elas Viper Black (2), Viper Bright White (2) e Viper Blue (1), além de exemplar único em Viper Race Yellow e Viper Red.",
+      "entidade": "Dodge Viper SRT10 (ZB II)",
+      "valor": 7,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-viper-srt10-zb-ii"
+    },
+    {
       "id": "censo-dodge-viper-srt-10-acr",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Dodge Viper SRT-10 ACR no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Viper Red e 1 Viper White.",
       "entidade": "Dodge Viper SRT-10 ACR",
@@ -1453,14 +1461,6 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-viper-srt-10-convertible-mamba-edition-zb-i"
-    },
-    {
-      "id": "censo-dodge-viper-srt10-zb-ii",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Dodge Viper SRT10 (ZB II) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 5 cores diferentes, entre elas Viper Black (2), Viper Bright White (2) e Viper Blue (1), além de exemplar único em Viper Race Yellow e Viper Red.",
-      "entidade": "Dodge Viper SRT10 (ZB II)",
-      "valor": 7,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#dodge-viper-srt10-zb-ii"
     },
     {
       "id": "censo-ferrari-12cilindri",
@@ -1847,6 +1847,22 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-daytona-sp3"
     },
     {
+      "id": "censo-ferrari-f8-spider",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 42 unidades do Ferrari F8 Spider no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Corsa (19), Rosso Scuderia (4) e Bianco Avus (3), além de 10 cores com um único exemplar.",
+      "entidade": "Ferrari F8 Spider",
+      "valor": 42,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f8-spider"
+    },
+    {
+      "id": "censo-ferrari-f8-tributo",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 34 unidades do Ferrari F8 Tributo no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Corsa (20), Giallo Modena (3) e Rosso Fuoco (2), além de 7 cores com um único exemplar.",
+      "entidade": "Ferrari F8 Tributo",
+      "valor": 34,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f8-tributo"
+    },
+    {
       "id": "censo-ferrari-f12berlinetta",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 16 unidades do Ferrari F12berlinetta no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Scuderia (5), Rosso Corsa (3) e Rosso Berlinetta (2), além de 6 cores com um único exemplar.",
       "entidade": "Ferrari F12berlinetta",
@@ -1871,6 +1887,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f40"
     },
     {
+      "id": "censo-ferrari-f50",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ferrari F50 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rosso Corsa.",
+      "entidade": "Ferrari F50",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f50"
+    },
+    {
       "id": "censo-ferrari-f430",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 56 unidades do Ferrari F430 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Scuderia (30), Giallo Modena (9) e Nero Daytona (7), além de exemplar único em Argento Nürburgring e Bianco Avus.",
       "entidade": "Ferrari F430",
@@ -1887,36 +1911,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f430-spider"
     },
     {
-      "id": "censo-ferrari-f50",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ferrari F50 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rosso Corsa.",
-      "entidade": "Ferrari F50",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f50"
-    },
-    {
       "id": "censo-ferrari-f512m",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ferrari F512M no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rosso Corsa.",
       "entidade": "Ferrari F512M",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f512m"
-    },
-    {
-      "id": "censo-ferrari-f8-spider",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 42 unidades do Ferrari F8 Spider no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Corsa (19), Rosso Scuderia (4) e Bianco Avus (3), além de 10 cores com um único exemplar.",
-      "entidade": "Ferrari F8 Spider",
-      "valor": 42,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f8-spider"
-    },
-    {
-      "id": "censo-ferrari-f8-tributo",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 34 unidades do Ferrari F8 Tributo no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Corsa (20), Giallo Modena (3) e Rosso Fuoco (2), além de 7 cores com um único exemplar.",
-      "entidade": "Ferrari F8 Tributo",
-      "valor": 34,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-f8-tributo"
     },
     {
       "id": "censo-ferrari-ff",
@@ -1991,6 +1991,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-sa-aperta"
     },
     {
+      "id": "censo-ferrari-scuderia-spider-16m",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Ferrari Scuderia Spider 16M no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Rosso Scuderia.",
+      "entidade": "Ferrari Scuderia Spider 16M",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-scuderia-spider-16m"
+    },
+    {
       "id": "censo-ferrari-sf90-stradale",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 44 unidades do Ferrari SF90 Stradale no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Rosso Corsa (17), Grigio Ferro (3) e Blu Tour de France (2), além de 14 cores com um único exemplar.",
       "entidade": "Ferrari SF90 Stradale",
@@ -2013,14 +2021,6 @@
       "valor": 6,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-sf90xx-stradale"
-    },
-    {
-      "id": "censo-ferrari-scuderia-spider-16m",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Ferrari Scuderia Spider 16M no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Rosso Scuderia.",
-      "entidade": "Ferrari Scuderia Spider 16M",
-      "valor": 2,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ferrari-scuderia-spider-16m"
     },
     {
       "id": "censo-ferrari-testarossa",
@@ -2047,14 +2047,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#fisker-karma"
     },
     {
-      "id": "censo-ford-f-150-svt-raptor-6-2",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 66 unidades do Ford F-150 SVT Raptor (6.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2010 e 2014. Cores mais comuns na contagem: Preto (28), Branco (18) e Laranja (8).",
-      "entidade": "Ford F-150 SVT Raptor (6.2)",
-      "valor": 66,
-      "ano": 2020,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ford-f-150-svt-raptor-6-2"
-    },
-    {
       "id": "censo-ford-f-150-shelby-baja-raptor",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Ford F-150 Shelby Baja Raptor no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Race Red.",
       "entidade": "Ford F-150 Shelby Baja Raptor",
@@ -2069,6 +2061,14 @@
       "valor": 2,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ford-f-150-shelby-super-snake-13a-ger"
+    },
+    {
+      "id": "censo-ford-f-150-svt-raptor-6-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 66 unidades do Ford F-150 SVT Raptor (6.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2010 e 2014. Cores mais comuns na contagem: Preto (28), Branco (18) e Laranja (8).",
+      "entidade": "Ford F-150 SVT Raptor (6.2)",
+      "valor": 66,
+      "ano": 2020,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ford-f-150-svt-raptor-6-2"
     },
     {
       "id": "censo-ford-focus-rs",
@@ -2447,14 +2447,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-diablo"
     },
     {
-      "id": "censo-lamborghini-gallardo-lp-550-2-valentino-balboni",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Lamborghini Gallardo LP 550-2 Valentino Balboni no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De uma série de 250 unidades no mundo, a primeira Gallardo só com tração traseira. Uma delas é em Arancio Borealis.",
-      "entidade": "Lamborghini Gallardo LP 550-2 Valentino Balboni",
-      "valor": 7,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp-550-2-valentino-balboni"
-    },
-    {
       "id": "censo-lamborghini-gallardo-lp550-2",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Lamborghini Gallardo LP550-2 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Nero Noctis, 1 Arancio Borealis e 1 Giallo Midas.",
       "entidade": "Lamborghini Gallardo LP550-2",
@@ -2503,6 +2495,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp570-4-spyder-performante"
     },
     {
+      "id": "censo-lamborghini-gallardo-lp570-4-superleggera",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 17 unidades do Lamborghini Gallardo LP570-4 Superleggera no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Bianco Monocerus (5), Giallo Midas (3) e Arancio Borealis (2), além de 5 cores com um único exemplar.",
+      "entidade": "Lamborghini Gallardo LP570-4 Superleggera",
+      "valor": 17,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp570-4-superleggera"
+    },
+    {
       "id": "censo-lamborghini-gallardo-lp570-4-supertrofeo-stradale",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Lamborghini Gallardo LP570-4 SuperTrofeo Stradale no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Rosso Mars.",
       "entidade": "Lamborghini Gallardo LP570-4 SuperTrofeo Stradale",
@@ -2511,12 +2511,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp570-4-supertrofeo-stradale"
     },
     {
-      "id": "censo-lamborghini-gallardo-lp570-4-superleggera",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 17 unidades do Lamborghini Gallardo LP570-4 Superleggera no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Bianco Monocerus (5), Giallo Midas (3) e Arancio Borealis (2), além de 5 cores com um único exemplar.",
-      "entidade": "Lamborghini Gallardo LP570-4 Superleggera",
-      "valor": 17,
+      "id": "censo-lamborghini-gallardo-lp-550-2-valentino-balboni",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Lamborghini Gallardo LP 550-2 Valentino Balboni no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: De uma série de 250 unidades no mundo, a primeira Gallardo só com tração traseira. Uma delas é em Arancio Borealis.",
+      "entidade": "Lamborghini Gallardo LP 550-2 Valentino Balboni",
+      "valor": 7,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp570-4-superleggera"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-gallardo-lp-550-2-valentino-balboni"
     },
     {
       "id": "censo-lamborghini-gallardo-se",
@@ -2559,20 +2559,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo"
     },
     {
-      "id": "censo-lamborghini-huracan-evo-spyder",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 13 unidades do Lamborghini Huracan EVO Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 12 cores diferentes, entre elas Nero Helene (2), Arancio Borealis (1) e Giallo Inti (1), além de 9 cores com um único exemplar.",
-      "entidade": "Lamborghini Huracan EVO Spyder",
-      "valor": 13,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo-spyder"
-    },
-    {
-      "id": "censo-lamborghini-huracan-lp580-2-spyder",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Lamborghini Huracan LP580-2 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Grigio Lynx e 1 Nero Helene.",
-      "entidade": "Lamborghini Huracan LP580-2 Spyder",
+      "id": "censo-lamborghini-huracan-evo-fluo-capsule",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Lamborghini Huracán Evo Fluo Capsule no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Celeste Fedra e 1 Verde Shock.",
+      "entidade": "Lamborghini Huracán Evo Fluo Capsule",
       "valor": 2,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-lp580-2-spyder"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo-fluo-capsule"
     },
     {
       "id": "censo-lamborghini-huracan-evo-rwd",
@@ -2591,12 +2583,12 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo-rwd-spyder"
     },
     {
-      "id": "censo-lamborghini-huracan-evo-fluo-capsule",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Lamborghini Huracán Evo Fluo Capsule no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Celeste Fedra e 1 Verde Shock.",
-      "entidade": "Lamborghini Huracán Evo Fluo Capsule",
-      "valor": 2,
+      "id": "censo-lamborghini-huracan-evo-spyder",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 13 unidades do Lamborghini Huracan EVO Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 12 cores diferentes, entre elas Nero Helene (2), Arancio Borealis (1) e Giallo Inti (1), além de 9 cores com um único exemplar.",
+      "entidade": "Lamborghini Huracan EVO Spyder",
+      "valor": 13,
       "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo-fluo-capsule"
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-evo-spyder"
     },
     {
       "id": "censo-lamborghini-huracan-evo-spyder-60th-anniversary",
@@ -2613,6 +2605,14 @@
       "valor": 8,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-lp580-2"
+    },
+    {
+      "id": "censo-lamborghini-huracan-lp580-2-spyder",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Lamborghini Huracan LP580-2 Spyder no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Grigio Lynx e 1 Nero Helene.",
+      "entidade": "Lamborghini Huracan LP580-2 Spyder",
+      "valor": 2,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-lp580-2-spyder"
     },
     {
       "id": "censo-lamborghini-huracan-lp610-4",
@@ -2647,20 +2647,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-performante-spyder"
     },
     {
-      "id": "censo-lamborghini-huracan-sto",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 35 unidades do Lamborghini Huracán STO no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 26 cores diferentes, entre elas Blu Laufey (5), Verde Aries (3) e Blu Mehit (2), além de 21 cores com um único exemplar.",
-      "entidade": "Lamborghini Huracán STO",
-      "valor": 35,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-sto"
-    },
-    {
       "id": "censo-lamborghini-huracan-sterrato",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Lamborghini Huracán Sterrato no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Arancio Xanto, 1 Bianco Asopo Matt, 1 Bianco Monocerus, 1 Grigio Lynx e 1 Nero Noctis.",
       "entidade": "Lamborghini Huracán Sterrato",
       "valor": 5,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-sterrato"
+    },
+    {
+      "id": "censo-lamborghini-huracan-sto",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 35 unidades do Lamborghini Huracán STO no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 26 cores diferentes, entre elas Blu Laufey (5), Verde Aries (3) e Blu Mehit (2), além de 21 cores com um único exemplar.",
+      "entidade": "Lamborghini Huracán STO",
+      "valor": 35,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lamborghini-huracan-sto"
     },
     {
       "id": "censo-lamborghini-huracan-tecnica",
@@ -2759,20 +2759,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#land-rover-range-rover-sport-svr-l494-1"
     },
     {
-      "id": "censo-lexus-is-f",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Lexus IS-F no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Obsidian, 1 Matador Red Mica, 1 Smoky Granite Mica e 1 Starfire Pearl. Na contagem de 2020 eram 5.",
-      "entidade": "Lexus IS-F",
-      "valor": 5,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#lexus-is-f"
-    },
-    {
       "id": "censo-lexus-is500-f-sport-performance-xe30",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Lexus IS500 F Sport Performance (XE30) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Ultra White.",
       "entidade": "Lexus IS500 F Sport Performance (XE30)",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#lexus-is500-f-sport-performance-xe30"
+    },
+    {
+      "id": "censo-lexus-is-f",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 5 unidades do Lexus IS-F no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Obsidian, 1 Matador Red Mica, 1 Smoky Granite Mica e 1 Starfire Pearl. Na contagem de 2020 eram 5.",
+      "entidade": "Lexus IS-F",
+      "valor": 5,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#lexus-is-f"
     },
     {
       "id": "censo-lotus-carlton",
@@ -3143,14 +3143,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-g63-grand-edition-w463"
     },
     {
-      "id": "censo-mercedes-benz-amg-gt-c190",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Mercedes-Benz AMG GT (C190) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Selenite Grey Magno (4), Magnetite Black Metallic (2) e Selenite Grey (2), além de exemplar único em AMG Solarbeam Yellow e Fire Opal Red.",
-      "entidade": "Mercedes-Benz AMG GT (C190)",
-      "valor": 10,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-gt-c190"
-    },
-    {
       "id": "censo-mercedes-benz-amg-gt-63-pro-motorsport-collectors-edition-c192",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Mercedes-Benz AMG GT 63 PRO Motorsport Collectors Edition (C192) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Obsidian Black Metallic.",
       "entidade": "Mercedes-Benz AMG GT 63 PRO Motorsport Collectors Edition (C192)",
@@ -3165,6 +3157,14 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-gt-63-s-edition-1-x290"
+    },
+    {
+      "id": "censo-mercedes-benz-amg-gt-c190",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 10 unidades do Mercedes-Benz AMG GT (C190) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Selenite Grey Magno (4), Magnetite Black Metallic (2) e Selenite Grey (2), além de exemplar único em AMG Solarbeam Yellow e Fire Opal Red.",
+      "entidade": "Mercedes-Benz AMG GT (C190)",
+      "valor": 10,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-gt-c190"
     },
     {
       "id": "censo-mercedes-benz-amg-gt-black-series-c190",
@@ -3215,14 +3215,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-gts-c190"
     },
     {
-      "id": "censo-mercedes-benz-amg-s-65-coupe",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz AMG S 65 Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Duas facelift e uma pré-facelift, a única do país nessa versão.",
-      "entidade": "Mercedes-Benz AMG S 65 Coupé",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-s-65-coupe"
-    },
-    {
       "id": "censo-mercedes-benz-amg-s63-cabrio-a217",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Mercedes-Benz AMG S63 Cabrio (A217) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 6 cores diferentes, entre elas Diamond White Metallic (2), Iridium Silver Metallic (1) e Obsidian Black Metallic (1), além de 3 cores com um único exemplar.",
       "entidade": "Mercedes-Benz AMG S63 Cabrio (A217)",
@@ -3245,6 +3237,14 @@
       "valor": 6,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-s65l-w222-2"
+    },
+    {
+      "id": "censo-mercedes-benz-amg-s-65-coupe",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz AMG S 65 Coupé no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Duas facelift e uma pré-facelift, a única do país nessa versão.",
+      "entidade": "Mercedes-Benz AMG S 65 Coupé",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-amg-s-65-coupe"
     },
     {
       "id": "censo-mercedes-benz-c32-amg-touring-s203",
@@ -3415,20 +3415,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-e63s-amg-w213-2"
     },
     {
-      "id": "censo-mercedes-benz-g63-amg-w463",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 36 unidades do Mercedes-Benz G63 AMG (W463) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Obsidian Black Metallic (17), designo Graphite Metallic (4) e Polar White (2), além de 7 cores com um único exemplar.",
-      "entidade": "Mercedes-Benz G63 AMG (W463)",
-      "valor": 36,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-g63-amg-w463"
-    },
-    {
       "id": "censo-mercedes-benz-g63-amg-4x42",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 4 unidades do Mercedes-Benz G63 AMG 4x4² no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Cardinal Red Magno, 1 Manganite Grey Magno, 1 Olive Green Metallic e 1 Platinum Black Metallic.",
       "entidade": "Mercedes-Benz G63 AMG 4x4²",
       "valor": 4,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-g63-amg-4x42"
+    },
+    {
+      "id": "censo-mercedes-benz-g63-amg-w463",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 36 unidades do Mercedes-Benz G63 AMG (W463) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Obsidian Black Metallic (17), designo Graphite Metallic (4) e Polar White (2), além de 7 cores com um único exemplar.",
+      "entidade": "Mercedes-Benz G63 AMG (W463)",
+      "valor": 36,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-g63-amg-w463"
     },
     {
       "id": "censo-mercedes-benz-gls-600-maybach",
@@ -3455,14 +3455,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-r63-amg-w251"
     },
     {
-      "id": "censo-mercedes-benz-s500-maybach-x222",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz S500 Maybach (X222) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Anthracite Blue Metallic e 1 Magnetite Black Metallic.",
-      "entidade": "Mercedes-Benz S500 Maybach (X222)",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s500-maybach-x222"
-    },
-    {
       "id": "censo-mercedes-benz-s63-amg-w221-2",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 61 unidades do Mercedes-Benz S63 AMG (W221.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Obsidian Black (35), Iridium Silver Metallic (8) e Flint Grey Metallic (7), além de exemplar único em Chromit Black Metallic e Palladium Silver Metallic.",
       "entidade": "Mercedes-Benz S63 AMG (W221.2)",
@@ -3471,20 +3463,28 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s63-amg-w221-2"
     },
     {
-      "id": "censo-mercedes-benz-s650-cabriolet-maybach",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Mercedes-Benz S650 Cabriolet Maybach no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Obsidian Black Metallic.",
-      "entidade": "Mercedes-Benz S650 Cabriolet Maybach",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s650-cabriolet-maybach"
-    },
-    {
       "id": "censo-mercedes-benz-s65l-amg-w222",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 7 unidades do Mercedes-Benz S65L AMG (W222) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 5 cores diferentes, entre elas Black (2), Obsidian Black Metallic (2) e Anthracite Blue Metallic (1), além de exemplar único em Magnetite Black Metallic e Selenite Grey Metallic.",
       "entidade": "Mercedes-Benz S65L AMG (W222)",
       "valor": 7,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s65l-amg-w222"
+    },
+    {
+      "id": "censo-mercedes-benz-s500-maybach-x222",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz S500 Maybach (X222) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Anthracite Blue Metallic e 1 Magnetite Black Metallic.",
+      "entidade": "Mercedes-Benz S500 Maybach (X222)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s500-maybach-x222"
+    },
+    {
+      "id": "censo-mercedes-benz-s650-cabriolet-maybach",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Mercedes-Benz S650 Cabriolet Maybach no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Obsidian Black Metallic.",
+      "entidade": "Mercedes-Benz S650 Cabriolet Maybach",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s650-cabriolet-maybach"
     },
     {
       "id": "censo-mercedes-benz-s680-maybach",
@@ -3567,14 +3567,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-slk55-amg-r172"
     },
     {
-      "id": "censo-mercedes-benz-slr-mclaren-c199",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz SLR McLaren (C199) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Crystal Laurite Silver.",
-      "entidade": "Mercedes-Benz SLR McLaren (C199)",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-slr-mclaren-c199"
-    },
-    {
       "id": "censo-mercedes-benz-slr-mclaren-722-edition-c199",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Mercedes-Benz SLR McLaren 722 Edition (C199) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Crystal Cassiterite Black Metallic e 1 Crystal Digenite Blue Metallic.",
       "entidade": "Mercedes-Benz SLR McLaren 722 Edition (C199)",
@@ -3589,6 +3581,14 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-slr-mclaren-722-s-roadster-r199"
+    },
+    {
+      "id": "censo-mercedes-benz-slr-mclaren-c199",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Mercedes-Benz SLR McLaren (C199) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Crystal Laurite Silver.",
+      "entidade": "Mercedes-Benz SLR McLaren (C199)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-slr-mclaren-c199"
     },
     {
       "id": "censo-mercedes-benz-slr-mclaren-roadster-r199",
@@ -3935,14 +3935,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-50th-anniversary-edition-991-1"
     },
     {
-      "id": "censo-porsche-911-carrera-996-2",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Porsche 911 Carrera (996.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rainforest Green Metallic.",
-      "entidade": "Porsche 911 Carrera (996.2)",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-carrera-996-2"
-    },
-    {
       "id": "censo-porsche-911-carrera-4-991-1",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Porsche 911 Carrera 4 (991.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor White.",
       "entidade": "Porsche 911 Carrera 4 (991.1)",
@@ -4005,6 +3997,14 @@
       "valor": 2,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-carrera-4s-cabriolet-996-2"
+    },
+    {
+      "id": "censo-porsche-911-carrera-996-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Porsche 911 Carrera (996.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Rainforest Green Metallic.",
+      "entidade": "Porsche 911 Carrera (996.2)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-carrera-996-2"
     },
     {
       "id": "censo-porsche-911-carrera-black-edition-991-1",
@@ -4239,6 +4239,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-r-992-1"
     },
     {
+      "id": "censo-porsche-911-gt3-rs-4-0-997-2",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Porsche 911 GT3 RS 4.0 (997.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Carrara White e 1 Black.",
+      "entidade": "Porsche 911 GT3 RS 4.0 (997.2)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-4-0-997-2"
+    },
+    {
       "id": "censo-porsche-911-gt3-rs-991-1",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 19 unidades do Porsche 911 GT3 RS (991.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Lava Orange (6), Ultra Violet (5) e White (4), além de 1 unidade em cor de programa sob encomenda e exemplar único em PTS Miami Blue.",
       "entidade": "Porsche 911 GT3 RS (991.1)",
@@ -4287,14 +4295,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-997-2"
     },
     {
-      "id": "censo-porsche-911-gt3-rs-4-0-997-2",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Porsche 911 GT3 RS 4.0 (997.2) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 2 Carrara White e 1 Black.",
-      "entidade": "Porsche 911 GT3 RS 4.0 (997.2)",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-rs-4-0-997-2"
-    },
-    {
       "id": "censo-porsche-911-gt3-touring-992-1",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 15 unidades do Porsche 911 GT3 Touring (992.1) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 8 cores diferentes, entre elas Agate Grey Metallic (3), Black (3) e Chalk (2), além de 3 cores com um único exemplar.",
       "entidade": "Porsche 911 GT3 Touring (992.1)",
@@ -4311,20 +4311,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-gt3-touring-package-991-2"
     },
     {
-      "id": "censo-porsche-911-rs-america-964",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Porsche 911 RS America (964) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Black.",
-      "entidade": "Porsche 911 RS America (964)",
-      "valor": 3,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-rs-america-964"
-    },
-    {
       "id": "censo-porsche-911-reimagined-by-singer-classic-study-brazil-commission",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Porsche 911 Reimagined by Singer (Classic Study) “Brazil Commission” no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Dark Sapphire Metallic.",
       "entidade": "Porsche 911 Reimagined by Singer (Classic Study) “Brazil Commission”",
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-reimagined-by-singer-classic-study-brazil-commission"
+    },
+    {
+      "id": "censo-porsche-911-rs-america-964",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 3 unidades do Porsche 911 RS America (964) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 3 Black.",
+      "entidade": "Porsche 911 RS America (964)",
+      "valor": 3,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-911-rs-america-964"
     },
     {
       "id": "censo-porsche-911-s-t-992-1",
@@ -4719,14 +4719,6 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#porsche-taycan-turbo-gt-9j1-2"
     },
     {
-      "id": "censo-ruf-cr4-black-devil",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do RUF CR4 “Black Devil” no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Black.",
-      "entidade": "RUF CR4 “Black Devil”",
-      "valor": 1,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#ruf-cr4-black-devil"
-    },
-    {
       "id": "censo-ram-1500-trx",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 60 unidades do Ram 1500 TRX no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 12 cores diferentes, entre elas Diamond Black Crystal Pearl (11), Granite Crystal Metallic (9) e Baja Yellow (7), além de exemplar único em Anvil.",
       "entidade": "Ram 1500 TRX",
@@ -4911,6 +4903,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#rolls-royce-wraith-black-badge"
     },
     {
+      "id": "censo-ruf-cr4-black-devil",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do RUF CR4 “Black Devil” no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Black.",
+      "entidade": "RUF CR4 “Black Devil”",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ruf-cr4-black-devil"
+    },
+    {
       "id": "censo-spyker-c8-laviolette",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existe 1 unidade do Spyker C8 Laviolette no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Gun Metal.",
       "entidade": "Spyker C8 Laviolette",
@@ -5047,6 +5047,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-golf-gti-vr6-mk4"
     },
     {
+      "id": "censo-volkswagen-golf-r32-mk5",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Volkswagen Golf R32 (MK5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de United Grey Metallic (4), Candy White (1) e Deep Blue Metallic (1).",
+      "entidade": "Volkswagen Golf R32 (MK5)",
+      "valor": 6,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-golf-r32-mk5"
+    },
+    {
       "id": "censo-volkswagen-golf-r-mk6",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 2 unidades do Volkswagen Golf R (MK6) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota nacional composta por 1 Deep Black e 1 Shadow Blue.",
       "entidade": "Volkswagen Golf R (MK6)",
@@ -5061,14 +5069,6 @@
       "valor": 5,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-golf-r-mk8-0"
-    },
-    {
-      "id": "censo-volkswagen-golf-r32-mk5",
-      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 18 de novembro de 2026, existem 6 unidades do Volkswagen Golf R32 (MK5) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de United Grey Metallic (4), Candy White (1) e Deep Blue Metallic (1).",
-      "entidade": "Volkswagen Golf R32 (MK5)",
-      "valor": 6,
-      "ano": 2026,
-      "fonte": "https://www.exoticsbrazil.com.br/censo/#volkswagen-golf-r32-mk5"
     },
     {
       "id": "censo-volkswagen-jetta-gli-mk5",
@@ -5369,18 +5369,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-amg-g63-olive-metallic-sao-paulo/"
     },
     {
-      "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-05",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
-    },
-    {
       "id": "materia-porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 (992.2) com a carroceria dividida ao meio, preto fosco de um lado e amarelo do outro, foi fotografado num showroom de São Paulo pelo @vh.spotter. As rodas acompanham a divisão e a faixa do capô atravessa o carro até a asa fixa. O carro usa o 4.0 boxer aspirado de 510cv da geração 992.2, lançada em 2024.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-05",
       "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-992-2-dividido-preto-amarelo-sao-paulo/"
+    },
+    {
+      "id": "materia-mclaren-artura-coupe-lantana-purple-boa-vista",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), uma McLaren Artura Coupé em Lantana Purple foi registrada em Boa Vista, capital de Roraima, fora do eixo São Paulo, Curitiba, Belo Horizonte e Brasília, onde se concentra a maior parte dos flagras de exóticos no país. A Artura é o primeiro supercarro híbrido de série da McLaren, com V6 3.0 biturbo e 680cv combinados na configuração de lançamento.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-05",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mclaren-artura-coupe-lantana-purple-boa-vista/"
     },
     {
       "id": "materia-driver-experience-top-speed-2009-limeira",
