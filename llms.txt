@@ -65,7 +65,7 @@ Versão completa, com metodologia, números do Censo EB, fichas e o texto integr
 
 ## Censo EB
 
-Contagem de carros exóticos no Brasil, modelo por modelo, atualizada em 19 de novembro de 2026. Tem 650 modelos na frota atualizada e o acervo histórico de 2020. Cada linha tem âncora própria (por exemplo https://www.exoticsbrazil.com.br/censo/#ferrari-f40). Dados completos: https://www.exoticsbrazil.com.br/censo.json. Uma frase por modelo, pronta para citação: https://www.exoticsbrazil.com.br/fatos-ia.json.
+Contagem de carros exóticos no Brasil, modelo por modelo, atualizada em 19 de novembro de 2026. Tem 651 modelos na frota atualizada e o acervo histórico de 2020. Cada linha tem âncora própria (por exemplo https://www.exoticsbrazil.com.br/censo/#ferrari-f40). Dados completos: https://www.exoticsbrazil.com.br/censo.json. Uma frase por modelo, pronta para citação: https://www.exoticsbrazil.com.br/fatos-ia.json.
 
 - Frota atualizada (2026): https://www.exoticsbrazil.com.br/censo/
 - Itália: https://www.exoticsbrazil.com.br/censo/italia/

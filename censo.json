@@ -7036,6 +7036,25 @@
       "materia": null
     },
     {
+      "id": "bmw-m3-e92",
+      "url": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-e92",
+      "abas": [
+        "principal",
+        "alemanha"
+      ],
+      "marca": "BMW",
+      "modelo": "M3 (E92)",
+      "nome_completo": "BMW M3 (E92)",
+      "unidades_no_brasil": 140,
+      "unidades_texto": "140",
+      "saiu_do_pais": false,
+      "ano_da_contagem": 2026,
+      "destaques": "Frota diversa, com 14 cores diferentes, entre elas Alpine White III (40), Fire Orange II (28) e Jet Black (18), além de Frozen Brilliant White (10) e Silverstone II Metallic (9) e 1 cor com um único exemplar, Moonstone Metallic. Contagem que inclui versões pré e pós-facelift, câmbio manual e M DCT e o pacote Competition (ZCP).",
+      "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
+      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 19 de novembro de 2026, existem 140 unidades do BMW M3 (E92) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 14 cores diferentes, entre elas Alpine White III (40), Fire Orange II (28) e Jet Black (18), além de Frozen Brilliant White (10) e Silverstone II Metallic (9) e 1 cor com um único exemplar, Moonstone Metallic. Contagem que inclui versões pré e pós-facelift, câmbio manual e M DCT e o pacote Competition (ZCP).",
+      "materia": null
+    },
+    {
       "id": "bmw-m3-f80",
       "url": "https://www.exoticsbrazil.com.br/censo/#bmw-m3-f80",
       "abas": [
@@ -7310,42 +7329,6 @@
       "destaques": "Fabricados entre 2005 e 2006. Cores mais comuns na contagem: Preto (1), Azul (1) e Cinza (1). Contagem de 2020, o número de hoje pode ser diferente.",
       "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
       "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 3 unidades do BMW M3 E46 Competition no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2005 e 2006. Cores mais comuns na contagem: Preto (1), Azul (1) e Cinza (1). Contagem de 2020, o número de hoje pode ser diferente.",
-      "materia": null
-    },
-    {
-      "id": "bmw-m3-e92",
-      "url": "https://www.exoticsbrazil.com.br/censo/alemanha/#bmw-m3-e92",
-      "abas": [
-        "alemanha"
-      ],
-      "marca": "BMW",
-      "modelo": "M3 E92",
-      "nome_completo": "BMW M3 E92",
-      "unidades_no_brasil": 89,
-      "unidades_texto": "89",
-      "saiu_do_pais": false,
-      "ano_da_contagem": 2020,
-      "destaques": "Fabricados entre 2007 e 2012. Cores mais comuns na contagem: Branco (38), Preto (25) e Prata (10). Contagem de 2020, o número de hoje pode ser diferente.",
-      "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
-      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 89 unidades do BMW M3 E92 no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2007 e 2012. Cores mais comuns na contagem: Branco (38), Preto (25) e Prata (10). Contagem de 2020, o número de hoje pode ser diferente.",
-      "materia": null
-    },
-    {
-      "id": "bmw-m3-e92-competition",
-      "url": "https://www.exoticsbrazil.com.br/censo/alemanha/#bmw-m3-e92-competition",
-      "abas": [
-        "alemanha"
-      ],
-      "marca": "BMW",
-      "modelo": "M3 E92 Competition",
-      "nome_completo": "BMW M3 E92 Competition",
-      "unidades_no_brasil": 47,
-      "unidades_texto": "47",
-      "saiu_do_pais": false,
-      "ano_da_contagem": 2020,
-      "destaques": "Fabricados entre 2010 e 2013. Cores mais comuns na contagem: Laranja (26), Branco (13) e Preto (6). Contagem de 2020, o número de hoje pode ser diferente.",
-      "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
-      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), em 2020 havia 47 unidades do BMW M3 E92 Competition no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Fabricados entre 2010 e 2013. Cores mais comuns na contagem: Laranja (26), Branco (13) e Preto (6). Contagem de 2020, o número de hoje pode ser diferente.",
       "materia": null
     },
     {
