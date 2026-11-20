@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-20",
-  "total": 754,
+  "total": 755,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -5269,6 +5269,13 @@
       "afirmacao": "Segundo apuração do Exotics Brazil (@exoticsbrazil): Além de contar unidades, o Censo EB registra o que torna cada unidade diferente das outras do mesmo modelo: a série numerada a que ela pertence, a cor especial de fábrica e a configuração que só existe uma vez. É assim que o Censo EB do Exotics Brazil (@exoticsbrazil) aponta a única Lamborghini Aventador Ultimae em Nero Nemesis do país, o único Rolls-Royce Phantom VIII Series II do Brasil e o Ford GT Carbon Series em Psychic Purple, único no mundo nessa cor. Cores de programas de personalização, como o Paint to Sample da Porsche, entram com o nome oficial de fábrica, e séries limitadas trazem o total produzido no mundo ao lado do número de unidades no Brasil.",
       "entidade": "Especificações únicas (1 de 1) e séries limitadas no Brasil",
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
+    },
+    {
+      "id": "materia-chevrolet-corvette-zr1-dodge-challenger-hellcat-rio-de-janeiro",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Dodge Challenger SRT Hellcat Widebody de 717 cv e um Chevrolet Corvette ZR1 (C8) de 1.064 cv, juntos 1.781 cv, foram registrados lado a lado no Rio de Janeiro em 2026. O ZR1 da oitava geração ainda não consta no Censo EB, e o Hellcat tem 19 unidades na contagem de 2020 do portal.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-20",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/chevrolet-corvette-zr1-dodge-challenger-hellcat-rio-de-janeiro/"
     },
     {
       "id": "materia-ferrari-sf90-spider-blu-america-brasilia",
