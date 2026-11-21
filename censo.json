@@ -48889,6 +48889,25 @@
       "materia": null
     },
     {
+      "id": "ruf-rt-club",
+      "url": "https://www.exoticsbrazil.com.br/censo/#ruf-rt-club",
+      "abas": [
+        "principal",
+        "alemanha"
+      ],
+      "marca": "RUF",
+      "modelo": "RT Club",
+      "nome_completo": "RUF RT Club",
+      "unidades_no_brasil": 1,
+      "unidades_texto": "1",
+      "saiu_do_pais": false,
+      "ano_da_contagem": 2026,
+      "destaques": "Unidade 03 de 30 e única do Brasil, chegada por importação independente. Porsche 911 Carrera GTS (992.1) Coupé com câmbio manual de 7 marchas e carbono aparente no capô, no ducktail, no difusor e no acabamento das lanternas.",
+      "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
+      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existe 1 unidade do RUF RT Club no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Unidade 03 de 30 e única do Brasil, chegada por importação independente. Porsche 911 Carrera GTS (992.1) Coupé com câmbio manual de 7 marchas e carbono aparente no capô, no ducktail, no difusor e no acabamento das lanternas.",
+      "materia": "https://www.exoticsbrazil.com.br/revista/ruf-rt-club-porsche-911-carrera-gts-992-1-belo-horizonte/"
+    },
+    {
       "id": "saab-96",
       "url": "https://www.exoticsbrazil.com.br/censo/resto-do-mundo/#saab-96",
       "abas": [

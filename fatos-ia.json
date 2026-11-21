@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-21",
-  "total": 759,
+  "total": 761,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -5007,6 +5007,14 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#ruf-cr4-black-devil"
     },
     {
+      "id": "censo-ruf-rt-club",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existe 1 unidade do RUF RT Club no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Unidade 03 de 30 e única do Brasil, chegada por importação independente. Porsche 911 Carrera GTS (992.1) Coupé com câmbio manual de 7 marchas e carbono aparente no capô, no ducktail, no difusor e no acabamento das lanternas.",
+      "entidade": "RUF RT Club",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#ruf-rt-club"
+    },
+    {
       "id": "censo-spyker-c8-laviolette",
       "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existe 1 unidade do Spyker C8 Laviolette no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, configurado na cor Gun Metal.",
       "entidade": "Spyker C8 Laviolette",
@@ -5276,6 +5284,13 @@
       "autor": "Pedro Ponchio",
       "data": "2026-11-21",
       "fonte": "https://www.exoticsbrazil.com.br/revista/lamborghini-huracan-evo-spyder-laranja-sao-jose-do-rio-preto/"
+    },
+    {
+      "id": "materia-ruf-rt-club-porsche-911-carrera-gts-992-1-belo-horizonte",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o RUF RT Club fotografado em Belo Horizonte é a unidade 03 de 30 e a única do Brasil, um Porsche 911 Carrera GTS (992.1) Coupé de câmbio manual de 7 marchas e tração traseira convertido pela RUF, com capô, ducktail, difusor e acabamento das lanternas em carbono aparente.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-21",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/ruf-rt-club-porsche-911-carrera-gts-992-1-belo-horizonte/"
     },
     {
       "id": "materia-chevrolet-corvette-zr1-c7-sebring-orange-balneario-camboriu",
