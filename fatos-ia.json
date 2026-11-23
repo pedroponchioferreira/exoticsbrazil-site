@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-23",
-  "total": 765,
+  "total": 766,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -5085,6 +5085,14 @@
       "valor": 1,
       "ano": 2026,
       "fonte": "https://www.exoticsbrazil.com.br/censo/#techart-gtstreet-r-991-2"
+    },
+    {
+      "id": "censo-techart-gtstreet-r-992",
+      "afirmacao": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 23 de novembro de 2026, existe 1 unidade do Techart GTstreet R (992) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Exemplar único no Brasil, base 911 Turbo S (992), vermelho com carbono aparente. Flagrado em São Paulo, SP.",
+      "entidade": "Techart GTstreet R (992)",
+      "valor": 1,
+      "ano": 2026,
+      "fonte": "https://www.exoticsbrazil.com.br/censo/#techart-gtstreet-r-992"
     },
     {
       "id": "censo-toyota-gr-supra-a90-a91",
