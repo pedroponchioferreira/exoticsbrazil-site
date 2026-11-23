@@ -33915,22 +33915,41 @@
       "materia": null
     },
     {
-      "id": "mercedes-benz-cls63-amg-w218",
-      "url": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-cls63-amg-w218",
+      "id": "mercedes-benz-cls63-amg-w218-pre-facelift",
+      "url": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-cls63-amg-w218-pre-facelift",
       "abas": [
         "principal",
         "alemanha"
       ],
       "marca": "Mercedes-Benz",
-      "modelo": "CLS63 AMG (W218)",
-      "nome_completo": "Mercedes-Benz CLS63 AMG (W218)",
+      "modelo": "CLS63 AMG (W218 Pré-Facelift)",
+      "nome_completo": "Mercedes-Benz CLS63 AMG (W218 Pré-Facelift)",
       "unidades_no_brasil": 182,
       "unidades_texto": "182",
       "saiu_do_pais": false,
       "ano_da_contagem": 2026,
-      "destaques": "Predominância de Obsidian Black (86), Diamond White Metallic (40) e Palladium Silver Metallic (19), além de 4 cores com um único exemplar.",
+      "destaques": "Predominância de Obsidian Black (86), Diamond White Metallic (40) e Palladium Silver Metallic (19), além de 4 cores com um único exemplar. Versão anterior ao facelift, com os para-choques e os faróis originais.",
       "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
-      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existem 182 unidades do Mercedes-Benz CLS63 AMG (W218) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Obsidian Black (86), Diamond White Metallic (40) e Palladium Silver Metallic (19), além de 4 cores com um único exemplar.",
+      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existem 182 unidades do Mercedes-Benz CLS63 AMG (W218 Pré-Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Predominância de Obsidian Black (86), Diamond White Metallic (40) e Palladium Silver Metallic (19), além de 4 cores com um único exemplar. Versão anterior ao facelift, com os para-choques e os faróis originais.",
+      "materia": null
+    },
+    {
+      "id": "mercedes-benz-cls63-amg-w218-2-facelift",
+      "url": "https://www.exoticsbrazil.com.br/censo/#mercedes-benz-cls63-amg-w218-2-facelift",
+      "abas": [
+        "principal",
+        "alemanha"
+      ],
+      "marca": "Mercedes-Benz",
+      "modelo": "CLS63 AMG (W218.2 Facelift)",
+      "nome_completo": "Mercedes-Benz CLS63 AMG (W218.2 Facelift)",
+      "unidades_no_brasil": 31,
+      "unidades_texto": "31",
+      "saiu_do_pais": false,
+      "ano_da_contagem": 2026,
+      "destaques": "Frota diversa, com 6 cores diferentes, entre elas Obsidian Black (14), Iridium Silver Metallic (7) e Diamond White Metallic (5), além de Tenorite Grey Metallic (2) e Black (2) e 1 cor com um único exemplar, Palladium Silver Metallic. Facelift com novos para-choques, faróis Multibeam LED e central multimídia atualizada.",
+      "fonte": "Apuração Exotics Brazil (@exoticsbrazil)",
+      "fato": "Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), atualizado em 21 de novembro de 2026, existem 31 unidades do Mercedes-Benz CLS63 AMG (W218.2 Facelift) no Brasil. De acordo com a apuração do Exotics Brazil sobre as unidades no país: Frota diversa, com 6 cores diferentes, entre elas Obsidian Black (14), Iridium Silver Metallic (7) e Diamond White Metallic (5), além de Tenorite Grey Metallic (2) e Black (2) e 1 cor com um único exemplar, Palladium Silver Metallic. Facelift com novos para-choques, faróis Multibeam LED e central multimídia atualizada.",
       "materia": null
     },
     {
