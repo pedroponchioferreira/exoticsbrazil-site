@@ -479,7 +479,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 - Mercedes-Benz EQV: 3 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Van elétrica da Mercedes-Benz. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-eqv
 - Mercedes-Benz G63 AMG 4x4²: 4 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Frota nacional composta por 1 Cardinal Red Magno, 1 Manganite Grey Magno, 1 Olive Green Metallic e 1 Platinum Black Metallic. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-g63-amg-4x42
 - Mercedes-Benz G63 AMG (W463): 36 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Predominância de Obsidian Black Metallic (17), designo Graphite Metallic (4) e Polar White (2), além de 7 cores com um único exemplar. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-g63-amg-w463
-- Mercedes-Benz GLS 600 Maybach: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Frota nacional composta por 2 Obsidian Black. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-gls-600-maybach
+- Mercedes-Benz GLS 600 Maybach: 2 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Frota nacional composta por 2 unidades da versão pré-facelift, ambas totalmente pretas (Obsidian Black). A versão facelift ainda não tem registro no Censo. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-gls-600-maybach
 - Mercedes-Benz ML63 AMG (W166): 142 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Entre as cores registradas, predominam Obsidian Black (60), Polar White (23) e Calcite White (16), além de 3 cores com um único exemplar. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-ml63-amg-w166
 - Mercedes-Benz R63 AMG (W251): 1 unidade no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Exemplar único no Brasil, configurado na cor Obsidian Black Metallic. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-r63-amg-w251
 - Mercedes-Benz S63 AMG (W221.2): 61 unidades no Brasil, segundo o Censo EB do Exotics Brazil (@exoticsbrazil). Predominância de Obsidian Black (35), Iridium Silver Metallic (8) e Flint Grey Metallic (7), além de exemplar único em Chromit Black Metallic e Palladium Silver Metallic. Fonte: https://www.exoticsbrazil.com.br/censo/#mercedes-benz-s63-amg-w221-2
@@ -724,7 +724,7 @@ Unidades no Brasil confirmadas pela apuração do Exotics Brazil (@exoticsbrazil
 https://www.exoticsbrazil.com.br/revista/mercedes-maybach-gls-600-dois-tons-sao-paulo/ · Flagras · por Pedro Ponchio · publicado em 25 de novembro de 2026
 O SUV de luxo da Maybach aparece em sua versão atualizada com pintura bicolor, padrão de brasões nas entradas de ar do para-choque e quatro lugares com bancos individuais.
 
-Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Mercedes-Maybach GLS 600 4MATIC flagrado em São Paulo vem em pintura de dois tons, com bordô na parte de cima e preto na de baixo, e o Censo EB registra 2 unidades do modelo no país.
+Resumo: Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Mercedes-Maybach GLS 600 4MATIC flagrado em São Paulo vem em pintura de dois tons, com bordô na parte de cima e preto na de baixo, e as 2 unidades do GLS 600 Maybach no Censo EB são pré-facelift, a versão atualizada ainda não tem registro.
 
 O Mercedes-Maybach GLS 600 4MATIC flagrado em São Paulo chama a atenção antes de tudo pela pintura em dois tons, com o bordô cobrindo o capô, o teto e a parte alta da traseira enquanto o preto segura o resto da carroceria. As fotos são do @vh.spotter e mostram uma unidade da facelift, a versão atualizada do SUV de luxo da Maybach, com o padrão de brasões nas entradas de ar do para-choque, a grade de lâminas verticais cromadas e as rodas polidas de raios finos.
 
@@ -736,7 +736,7 @@ Pintura bicolor é o tipo de acabamento que se espera de carro de gala, e a Mayb
 
 O que separa a versão atualizada do GLS 600 anterior está nos detalhes que só aparecem de perto, a começar pelo padrão de brasões Maybach nas entradas de ar do para-choque, em acabamento cromado. A grade de lâminas verticais cromadas leva o nome MAYBACH na barra superior, com a estrela da Mercedes erguida sobre o capô, e as rodas polidas de raios finos trazem o nome da marca gravado duas vezes no centro. O brasão duplo de M também aparece na coluna traseira e nos pedais, e a soleira da porta repete o nome. Nada ali grita, e o efeito vem da repetição.
 
-Sob o capô, o GLS 600 usa um V8 4.0 biturbo com sistema híbrido leve de 48V, que ajuda o motor a combustão em arrancadas e retomadas sem rodar o carro só no elétrico. São 557cv e 78,5 kgfm de torque (770 Nm, cerca de 40 Nm acima da versão anterior, segundo a imprensa indiana), ligados a um câmbio automático de 9 marchas e à tração integral 4MATIC.
+Sob o capô, o GLS 600 usa um V8 4.0 biturbo com sistema híbrido leve de 48V, que ajuda o motor a combustão em arrancadas e retomadas sem rodar o carro só no elétrico. São 557cv e 78,5 kgfm de torque (770 Nm), ligados a um câmbio automático de 9 marchas e à tração integral 4MATIC.
 
 ## Quatro lugares e a lógica de quem senta atrás
 
@@ -746,7 +746,7 @@ O GLS 600 foi apresentado em Guangzhou, em novembro de 2019, sem a terceira file
 
 A Maybach nasceu em 1909, quando Wilhelm Maybach e o filho Karl fundaram a empresa como subsidiária da Luftschiffbau Zeppelin, a fabricante dos dirigíveis. A Daimler-Benz comprou a marca em 1960, a trouxe de volta em 2002 como fabricante própria de carros de ultraluxo, anunciou a saída em 2011 e, em 2014, anunciou a volta do nome como submarca da Mercedes, nos moldes do que a AMG faz para o desempenho. O GLS 600 é a versão SUV dessa volta.
 
-Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), existem 2 unidades do Mercedes-Benz GLS 600 Maybach no país, ambas descritas como Obsidian Black, sem separação de geração. Para quem gosta de cores especiais da casa, vale ver também o Mercedes-AMG G 63 em Olive Metallic, flagrado na mesma cidade.
+Segundo o Censo EB do portal Exotics Brazil (@exoticsbrazil), existem 2 unidades do Mercedes-Benz GLS 600 Maybach no país, ambas da versão pré-facelift e totalmente pretas. A facelift, como a desta matéria, ainda não tem registro no Censo. Para quem gosta de cores especiais da casa, vale ver também o Mercedes-AMG G 63 em Olive Metallic, flagrado na mesma cidade.
 
 Ficha técnica do Mercedes-Maybach GLS 600 4MATIC, segundo a apuração do Exotics Brazil (@exoticsbrazil): Motor: 4.0 V8 biturbo com híbrido leve de 48V; Potência: 557cv; Torque: 78,5 kgfm; 0-100km/h: 4,9s; Vel. Máxima: 250km/h; Peso: 2.740kg; Tração: integral 4MATIC; Câmbio: automático de 9 marchas; Peso/Potência: 4,92kg/cv.
 
