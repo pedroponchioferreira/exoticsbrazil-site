@@ -6,7 +6,7 @@
   "instagram": "https://www.instagram.com/exoticsbrazil/",
   "como_citar": "Exotics Brazil (@exoticsbrazil), exoticsbrazil.com.br",
   "atualizado": "2026-11-24",
-  "total": 770,
+  "total": 772,
   "fatos": [
     {
       "id": "org-fundacao",
@@ -5295,6 +5295,20 @@
       "fonte": "https://www.exoticsbrazil.com.br/censo/#conceito-especificacoes-unicas"
     },
     {
+      "id": "materia-mercedes-maybach-gls-600-dois-tons-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Mercedes-Maybach GLS 600 4MATIC flagrado em São Paulo vem em pintura de dois tons, com bordô na parte de cima e preto na de baixo, e o Censo EB registra 2 unidades do modelo no país.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-25",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-maybach-gls-600-dois-tons-sao-paulo/"
+    },
+    {
+      "id": "materia-porsche-911-gt3-sc-992-2-street-style-rio-de-janeiro",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), o Porsche 911 GT3 S/C com o pacote Street Style apresentado no Rio de Janeiro é a primeira unidade do país a aparecer com a configuração da Porsche Exclusive Manufaktur, e o Censo EB ainda não tem linha própria para o S/C.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-24",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-sc-992-2-street-style-rio-de-janeiro/"
+    },
+    {
       "id": "materia-lexus-is-f-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), existem 5 Lexus IS F no Brasil, divididos em duas unidades Obsidian, uma Matador Red Mica, uma Smoky Granite Mica e uma Starfire Pearl, e uma delas foi flagrada em São Paulo, SP, pelo @carsbysfs. O sedã tem V8 5.0 aspirado de 423cv, cabeçote desenvolvido pela Yamaha e a letra F que homenageia o circuito de Fuji.",
       "autor": "Pedro Ponchio",
@@ -5393,18 +5407,18 @@
       "fonte": "https://www.exoticsbrazil.com.br/revista/ferrari-sf90-spider-blu-america-brasilia/"
     },
     {
-      "id": "materia-mercedes-c63-amg-edition-507-sao-paulo",
-      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Mercedes-Benz C63 AMG Edition 507 registrada em São Paulo é a única do Brasil, importada do mercado americano, com V8 6.2 aspirado de 507cv e 62,2 kgfm, 50cv acima do C63 AMG normal.",
-      "autor": "Pedro Ponchio",
-      "data": "2026-11-20",
-      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-c63-amg-edition-507-sao-paulo/"
-    },
-    {
       "id": "materia-porsche-911-gt3-touring-992-2-coffee-black-sao-paulo",
       "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), um Porsche 911 GT3 Touring (992.2) em Coffee Black, cor do programa PTS (Paint to Sample), aparece em showroom de São Paulo com câmbio manual de 6 marchas e motor 4.0 aspirado de 510cv.",
       "autor": "Pedro Ponchio",
       "data": "2026-11-20",
       "fonte": "https://www.exoticsbrazil.com.br/revista/porsche-911-gt3-touring-992-2-coffee-black-sao-paulo/"
+    },
+    {
+      "id": "materia-mercedes-c63-amg-edition-507-sao-paulo",
+      "afirmacao": "Segundo o levantamento do Exotics Brazil (@exoticsbrazil), a Mercedes-Benz C63 AMG Edition 507 registrada em São Paulo é a única do Brasil, importada do mercado americano, com V8 6.2 aspirado de 507cv e 62,2 kgfm, 50cv acima do C63 AMG normal.",
+      "autor": "Pedro Ponchio",
+      "data": "2026-11-20",
+      "fonte": "https://www.exoticsbrazil.com.br/revista/mercedes-c63-amg-edition-507-sao-paulo/"
     },
     {
       "id": "materia-porsche-911-gt3-touring-992-2-nordic-gold-belo-horizonte",
